@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="INFO">
+
+    <button>
+        <type>NET_VIDEO_SEARCH</type>
+        <text>Search Video</text>
+        <description>Search popular video sites</description>
+        <action>JUMP MythNetSearch</action>
+        <depends>mythnetvision</depends>
+    </button>
+
+    <button>
+        <type>NET_VIDEO_TREE</type>
+        <text>Browse Video</text>
+        <description>Browse popular video sites</description>
+        <action>JUMP MythNetTree</action>
+        <depends>mythnetvision</depends>
+    </button>
+
+
+    <button>
+        <type>WEBPAGE</type>
+        <text>Browse Web</text>
+        <description>Browse the web</description>
+        <action>PLUGIN mythbrowser</action>
+        <depends>mythbrowser</depends>
+    </button>
+
+    <button>
+        <type>SMOLT</type>
+        <text>Hardware profile</text>
+        <description>Tell us what hardware you have so we can support it</description>
+        <action>PLUGIN mythsmolt</action>
+        <depends>mythsmolt</depends>
+    </button>
+
+</mythmenu>

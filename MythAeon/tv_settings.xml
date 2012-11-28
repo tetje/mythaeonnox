@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="TVSETUP">
+
+    <button>
+        <type>TV_SETTINGS_GENERAL</type>
+        <text>Recordings</text>
+        <description>Setup navigation and</description>
+        <action>SETTINGS GENERAL</action>
+    </button>
+
+    <button>
+        <type>TV_SETTINGS_PROGRAM_GUIDE</type>
+        <text>Guide</text>
+        <description>Setup behavior of the</description>
+        <action>SETTINGS EPG</action>
+    </button>
+
+    <button>
+        <type>TV_SETTINGS_PLAYBACK</type>
+        <text>Playback</text>
+        <description>Viewing and TV</description>
+        <action>SETTINGS PLAYBACK</action>
+    </button>
+
+    <button>
+        <type>TV_SETTINGS_PLAYBACK_OSD</type>
+        <text>OSD</text>
+        <description>Configure the skin and</description>
+        <action>SETTINGS OSD</action>
+    </button>
+
+    <button>
+        <type>TV_SETTINGS_PLAYBACK_GROUPS</type>
+        <text>Groups</text>
+        <description>Configure playback</description>
+        <action>SETTINGS PLAYGROUP</action>
+    </button>
+
+    <button>
+      <type>TV_SETTINGS_CHANNEL_GROUP</type>
+      <text>Channels</text>
+      <description>Group your favorite</description>
+      <action>SETTINGS CHANNELGROUPS</action>
+    </button>
+
+    <button>
+        <type>TV_RECPRIORITIES_SETTINGS_GENERAL</type>
+        <text>Priorities</text>
+        <description>Setup recording</description>
+        <action>SETTINGS GENERALRECPRIORITIES</action>
+    </button>
+
+</mythmenu>

@@ -1,0 +1,59 @@
+<mythmenu name="MAIN">
+
+   <button>
+     <type>SETUP_GENERAL</type>
+     <text>Settings</text>
+     <description>Configure mythtv core</description>
+     <action>GENERAL</action>
+   </button>
+
+   <button>
+     <type>SETUP_CAPTURE_CARDS</type>
+     <text>Cards</text>
+     <description>Configure your capture</description>
+     <action>CAPTURE CARDS</action>
+   </button>
+
+   <button>
+     <type>SETUP_VIDEO_SOURCES</type>
+     <text>Sources</text>
+     <description>Configure your video</description>
+     <action>VIDEO SOURCES</action>
+   </button>
+
+   <button>
+     <type>SETUP_INPUT_CONNECTIONS</type>
+     <text>Inputs</text>
+     <description>Connect your cards to</description>
+     <action>CARD INPUTS</action>
+   </button>
+
+   <button>
+     <type>SETUP_CHANNEL_EDITOR</type>
+     <text>Channels</text>
+     <description>Edit your</description>
+     <action>CHANNEL EDITOR</action>
+   </button>
+
+   <button>
+     <type>SETUP_STORAGE_GROUPS</type>
+     <text>Directories</text>
+     <description>Add your storage</description>
+     <action>STORAGE GROUPS</action>
+   </button>
+
+    <button>
+        <type>TV_SETTINGS_RECORDING_PROFILES</type>
+        <text>Profiles</text>
+        <description>Setup recordings</description>
+        <action>RECORDING PROFILE</action>
+    </button>
+
+   <button>
+     <type>SETUP_SYSTEM_EVENTS</type>
+     <text>Events</text>
+     <description>Setup your system</description>
+     <action>SYSTEMEVENTEDITOR</action>
+   </button>
+
+</mythmenu>

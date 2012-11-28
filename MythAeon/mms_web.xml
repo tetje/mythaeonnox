@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="WEB">
+
+    <button>
+        <type>WEBPAGE</type>
+        <text>Web</text>
+        <description>Browse the</description>
+        <action>PLUGIN mythbrowser</action>
+        <depends>mythbrowser</depends>
+    </button>
+
+    <button>
+        <type>NET_VIDEO_SEARCH</type>
+        <text>Search</text>
+        <description>Video sites you can</description>
+        <action>JUMP MythNetSearch</action>
+        <depends>mythnetvision</depends>
+    </button>
+
+    <button>
+        <type>NET_VIDEO_TREE</type>
+        <text>Browse</text>
+        <description>Video sites you can</description>
+        <action>JUMP MythNetTree</action>
+        <depends>mythnetvision</depends>
+    </button>
+
+    <button>
+        <type>NEWS</type>
+        <text>News</text>
+        <description>Read the</description>
+        <action>PLUGIN mythnews</action>
+        <depends>mythnews</depends>
+    </button>
+
+    <button>
+        <type>MUSIC_STREAM</type>
+        <text>Radio</text>
+        <description>Listen to Internet</description>
+        <action>JUMP Play radio stream</action>
+        <depends>mythmusic</depends>
+    </button>
+
+    <button>
+        <type>MYTHTWITTER_TIMELINE</type>
+        <text>Tweets</text>
+        <description>Send and receive</description>
+        <action>JUMP MythTwitter_Timeline</action>
+        <depends>mythtwitter</depends>
+    </button>
+
+    <button>
+        <type>SMOLT</type>
+        <text>Hardware profile</text>
+        <description>Share your</description>
+        <action>PLUGIN mythsmolt</action>
+        <depends>mythsmolt</depends>
+    </button>
+
+</mythmenu>

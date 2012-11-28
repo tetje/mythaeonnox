@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="MEDIA_SETUP">
+
+    <button>
+        <type>SETTINGS_MUSIC</type>
+        <text>Music</text>
+        <description>Configure playback of</description>
+        <action>CONFIGPLUGIN mythmusic</action>
+        <depends>mythmusic</depends>
+    </button>
+
+    <button>
+        <type>SETTINGS_VIDEO</type>
+        <text>Movies</text>
+        <description>Configure playback of</description>
+        <action>MENU video_settings.xml</action>
+    </button>
+
+    <button>
+        <type>SETTINGS_IMAGES</type>
+        <text>Pictures</text>
+        <description>Configure display of</description>
+        <action>CONFIGPLUGIN mythgallery</action>
+        <depends>mythgallery</depends>
+    </button>
+
+    <button>
+        <type>SETTINGS_GAME</type>
+        <text>Games</text>
+        <description>Configure playing of</description>
+        <action>CONFIGPLUGIN mythgame</action>
+        <depends>mythgame</depends>
+    </button>
+
+    <button>
+        <type>SETTINGS_STREAM</type>
+        <text>Streams</text>
+        <description>Configure playback of</description>
+        <action>CONFIGPLUGIN mythstream</action>
+        <depends>mythstream</depends>
+    </button>
+
+    <button>
+        <type>SETTINGS_ARCHIVE</type>
+        <text>Archives</text>
+        <description>Configure video and DVD</description>
+        <action>CONFIGPLUGIN mytharchive</action>
+        <depends>mytharchive</depends>
+    </button>
+
+</mythmenu>

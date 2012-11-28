@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="OPTICAL_DISK">
+
+    <button>
+        <type>DISC_PLAY</type>
+        <text>DVD</text>
+        <description>Play a film on</description>
+        <action>JUMP Play Disc</action>
+    </button>
+
+    <button>
+        <type>DISC_PLAY</type>
+        <text>Blu-ray</text>
+        <description>Play a film on</description>
+        <action>JUMP Play Disc</action>
+    </button>
+
+    <button>
+        <type>EJECT</type>
+        <text>Eject</text>
+        <description>Eject optical from drive</description>
+        <action>EJECT</action>
+    </button>
+
+</mythmenu>

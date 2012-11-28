@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="INFO_SETUP">
+
+    <button>
+        <type>SETTINGS_WEATHER</type>
+        <text>Weather</text>
+        <description>Location and sources for</description>
+        <action>CONFIGPLUGIN mythweather</action>
+        <depends>mythweather</depends>
+    </button>
+
+    <button>
+      <type>SETTINGS_WEATHER</type>
+      <text>Stations</text>
+        <description>Setup Weather</description>
+      <action>CONFIGPLUGIN mythwstation</action>
+      <depends>mythwstation</depends>
+    </button>
+
+    <button>
+        <type>SETTINGS_NEWS</type>
+        <text>News</text>
+        <description>Choose sources for your</description>
+        <action>CONFIGPLUGIN mythnews</action>
+        <depends>mythnews</depends>
+    </button>
+
+    <button>
+        <type>SETTINGS_WEBPAGE</type>
+        <text>Browser</text>
+        <action>CONFIGPLUGIN mythbrowser</action>
+        <description>Configure your web</description>
+        <depends>mythbrowser</depends>
+    </button>
+
+    <button>
+        <type>SETTINGS_RECIPE</type>
+        <text>Recipe</text>
+        <description>Settings for</description>
+        <action>CONFIGPLUGIN mythrecipe</action>
+        <depends>mythrecipe</depends>
+    </button>
+
+</mythmenu>
+

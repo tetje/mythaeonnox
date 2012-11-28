@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="ADVANCED">
+
+    <button>
+        <type>ARCHIVE</type>
+        <text>Videos</text>
+        <description>Import and Export</description>
+        <action>PLUGIN mytharchive</action>
+        <depends>mytharchive</depends>
+    </button>
+
+    <button>
+        <type>MUSIC_PLAYLIST</type>
+        <text>Tools</text>
+        <description>Use music</description>
+        <action>PLUGIN mythmusic</action>
+        <depends>mythmusic</depends>
+    </button>
+
+    <button>
+        <type>TV_STATUS</type>
+        <text>System</text>
+        <description>Info about your</description>
+        <action>TV_STATUS</action>
+    </button>
+
+    <button>
+        <type>ZONEMINDER</type>
+        <text>CCTV</text>
+        <description>Check your Surveillance</description>
+        <action>PLUGIN mythzoneminder</action>
+        <depends>mythzoneminder</depends>
+    </button>
+
+	 <button>
+	        <type>SMOLT</type>
+	        <text>Profile</text>
+	        <description>Upload your hardware</description>
+	        <action>PLUGIN mythsmolt</action>
+	        <depends>mythsmolt</depends>
+	 </button>
+
+</mythmenu>

@@ -1,0 +1,31 @@
+<mythmenu name="VIDEO_SETTINGS">
+
+   <button>
+      <type>VIDEO_SETTINGS_GENERAL</type>
+      <text>Settings</text>
+      <action>VIDEO_SETTINGS_GENERAL</action>
+      <description>General movie</description>
+   </button>
+
+   <button>
+      <type>VIDEO_SETTINGS_PLAYER</type>
+      <text>Player</text>
+      <action>VIDEO_SETTINGS_PLAYER</action>
+      <description>Setup your Movie</description>
+   </button>
+
+   <button>
+      <type>VIDEO_SETTINGS_METADATA</type>
+      <text>Grabber</text>
+      <action>VIDEO_SETTINGS_METADATA</action>
+      <description>Configure the metadata</description>
+   </button>
+
+   <button>
+      <type>VIDEO_FILE_TYPES</type>
+      <text>Types</text>
+      <action>VIDEO_SETTINGS_ASSOCIATIONS</action>
+      <description>Associate File</description>
+   </button>
+
+</mythmenu>

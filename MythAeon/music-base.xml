@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <!-- moving track statetype -->
+    <statetype name="basemovingtracksstate">
+        <position>0,0</position>
+        <state name="off"></state>
+        <state name="on">
+            <imagetype name="statusimage">
+                <area>0,0,16,32</area>
+                <filename>images/shared/ArrowUpDownFO.png</filename>
+            </imagetype>
+        </state>
+    </statetype>
+
+    <!-- current playlist button list -->
+
+     <buttonlist name="basecurrentplaylist" from="buttonlist_menu_details_permanent">
+         <position>740,260</position>
+         <searchposition>758,55</searchposition>
+         <statetype name="buttonitem">
+             <state name="active">
+                 <textarea name="title" from="textarea_base">
+                     <area>10,0,490,40</area>
+                     <alpha>128</alpha>
+                     <font state="error">normal_red</font>
+                     <font state="running">normal_amber</font>
+                     <align>left,vcenter</align>
+                     <template>%title% - %artist%</template>
+                 </textarea>
+             </state>
+             <state name="selectedactive">
+                 <textarea name="title" from="textarea_base">
+                     <area>10,0,350,40</area>
+                     <scroll direction="left" />
+                     <font state="error">normal_red</font>
+                     <font state="running">normal_amber</font>
+                     <align>left,vcenter</align>
+                     <template>%title% - %artist%</template>
+                 </textarea>
+                 <textarea name="length" from="title">
+                     <area>385,7,110,33</area>
+                     <font>verysmall</font>
+                     <font state="error">verysmall_red</font>
+                     <font state="running">verysmall_amber</font>
+                     <case>Normal</case>
+                     <align>left,vcenter</align>
+                     <template>%length%</template>
+                 </textarea>
+             </state>
+	          <state name="inactive" from="active">
+	              <alpha>192</alpha>
+	          </state>
+	          <state name="selectedinactive" from="selectedactive">
+	              <alpha>128</alpha>
+             </state>
+         </statetype>
+     </buttonlist>
+
+    <!-- current streamlist button list -->
+
+     <buttonlist name="basecurrentstreamlist" from="buttonlist_menu_details_permanent">
+         <position>740,260</position>
+         <searchposition>758,55</searchposition>
+         <statetype name="buttonitem">
+             <state name="active">
+                 <textarea name="station" from="textarea_base">
+                     <area>10,0,490,40</area>
+                     <alpha>128</alpha>
+                     <font state="error">normal_red</font>
+                     <font state="running">normal_amber</font>
+                     <align>left,vcenter</align>
+                     <template>%STATION% - %CHANNEL%</template>
+                 </textarea>
+             </state>
+             <state name="selectedactive">
+                 <textarea name="station" from="textarea_base">
+                     <area>10,0,350,40</area>
+                     <scroll direction="left" />
+                     <font state="error">normal_red</font>
+                     <font state="running">normal_amber</font>
+                     <align>left,vcenter</align>
+                     <template>%STATION% - %CHANNEL%</template>
+                 </textarea>
+                 <textarea name="genre" from="station">
+                     <area>385,7,120,33</area>
+                     <font>verysmall</font>
+                     <font state="error">verysmall_red</font>
+                     <font state="running">verysmall_amber</font>
+                     <case>Normal</case>
+                     <align>left,vcenter</align>
+                     <template>%genre%</template>
+                 </textarea>
+             </state>
+	          <state name="inactive" from="active">
+	              <alpha>192</alpha>
+	          </state>
+	          <state name="selectedinactive" from="selectedactive">
+	              <alpha>128</alpha>
+             </state>
+         </statetype>
+     </buttonlist>
+
+    <!-- playlist progress bar  -->
+    <progressbar name="baseplaylistprogress">
+        <position>0,0</position>
+        <layout>horizontal</layout>
+        <style>reveal</style>
+           <imagetype name="background">
+               <area>0,0,350,10</area>
+               <filename>images/shared/progressbar/progressbar_large_background.png</filename>
+               <preserveaspect>false</preserveaspect>
+           </imagetype>
+           <imagetype name="progressimage">
+               <area>0,0,350,10</area>
+               <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
+               <preserveaspect>false</preserveaspect>
+           </imagetype>
+    </progressbar>
+
+    <!-- track progress bar -->
+    <progressbar name="basetrackprogress">
+        <position>0,0</position>
+        <layout>horizontal</layout>
+        <style>reveal</style>
+        <imagetype name="background">
+            <area>0,0,150,10</area>
+            <filename>images/shared/progressbar/progressbar_large_background.png</filename>
+        </imagetype>
+        <imagetype name="progressimage">
+            <area>0,0,150,10</area>
+            <filename>images/shared/progressbar/progressbar_large_fill_blue.png</filename>
+        </imagetype>
+    </progressbar>
+    
+    <!-- repeat statetype -->
+    <statetype name="baserepeatstate">
+        <area>0,0,50,50</area>
+        <state name="off">
+            <imagetype name="OSDRepeatNF" >
+                <filename>images/shared/OSDRepeatNF.png</filename>
+            </imagetype>
+        </state>
+        <state name="track">
+            <imagetype name="OSDRepeatOneFO" >
+                <filename>images/shared/OSDRepeatOneFO.png</filename>
+            </imagetype>
+        </state>
+        <state name="all">
+            <imagetype name="OSDRepeatAllFO" >
+                <filename>images/shared/OSDRepeatAllFO.png</filename>
+            </imagetype>
+        </state>
+    </statetype>
+
+    <!-- shuffle statetype -->
+    <statetype name="baseshufflestate">
+        <area>0,0,50,50</area>
+        <state name="off">
+            <imagetype name="OSDRandomOffNF" >
+                <position>0,0</position>
+                <filename>images/shared/OSDRandomOffNF.png</filename>
+            </imagetype>
+        </state>
+        <state name="random">
+            <imagetype name="OSDRandomOffFO" >
+                <position>0,0</position>
+                <filename>images/shared/OSDRandomOffFO.png</filename>
+            </imagetype>
+        </state>
+        <state name="intelligent">
+            <imagetype name="OSDRandomOffFO" >
+                <position>0,0</position>
+                <filename>images/shared/OSDRandomOffFO.png</filename>
+            </imagetype>
+            <textarea name="shuffletext" from="textarea_base">
+                <area>0,30,50,50</area>
+                <font>tiny</font>
+                <align>allcenter</align>
+                <case>normal</case>
+                <value>smart</value>
+            </textarea>
+        </state>
+        <state name="album">
+            <imagetype name="OSDRandomOffFO" >
+                <position>0,0</position>
+                <filename>images/shared/OSDRandomOffFO.png</filename>
+            </imagetype>
+            <textarea name="shuffletext" from="textarea_base">
+                <area>0,30,50,50</area>
+                <font>tiny</font>
+                <align>allcenter</align>
+                <case>normal</case>
+                <value>album</value>
+            </textarea>
+        </state>
+        <state name="artist">
+            <imagetype name="OSDRandomOffFO" >
+                <position>0,0</position>
+                <filename>images/shared/OSDRandomOffFO.png</filename>
+            </imagetype>
+            <textarea name="shuffletext" from="textarea_base">
+                <area>0,30,50,50</area>
+                <font>tiny</font>
+                <align>allcenter</align>
+                <case>normal</case>
+                <value>artist</value>
+            </textarea>
+        </state>
+    </statetype>
+
+    <!-- mute statetype -->
+    <statetype name="basemutestate">
+        <area>0,0,50,50</area>
+        <state name="off">
+            <imagetype name="OSDAudioFO" >
+                <position>0,0</position>
+                <filename>images/shared/OSDAudioFO.png</filename>
+            </imagetype>
+        </state>
+        <state name="on">
+            <imagetype name="OSDAudioNF" >
+                <position>0,0</position>
+                <filename>images/shared/OSDAudioNF.png</filename>
+            </imagetype>
+        </state>
+    </statetype>
+
+    <!-- To Do -->
+    <!-- volume text -->
+    <textarea name="basevolume" from="basetextarea">
+        <area>70,667,250,25</area>
+        <font>basesmall</font>
+        <template>%VOLUMEPERCENT% %|(MUTE|)%</template>
+    </textarea>
+
+    <buttonlist name="basetreebuttonlist" from="basebuttonlist">
+        <searchposition>758,55</searchposition>
+    </buttonlist>
+
+    <buttonlist name="basegallerybuttonlist">
+        <area>0,0,950,450</area>
+        <layout>grid</layout>
+        <spacing>3</spacing>
+        <searchposition>758,55</searchposition>
+        <scrollstyle>free</scrollstyle>
+        <arrange>stack</arrange>
+        <align>left,top</align>
+        <wrapstyle>items</wrapstyle>
+        <showarrow>no</showarrow>
+        <buttonarea>0,0,950,450</buttonarea>
+        <statetype name="buttonitem">
+            <state name="active">
+                <imagetype name="buttonimage">
+                    <alpha>255</alpha>
+                    <area>0,0,105,105</area>
+                    <filename>images/music/MM_Music.png</filename>
+                </imagetype>
+                <statetype name="nodetype">
+                    <state name="default" />
+                    <state name="alltracks">
+                        <imagetype name="alltracks">
+                            <area>0,0,105,105</area>
+                            <filename>images/music/MM_Alltracks.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="genres">
+                        <imagetype name="genres">
+                            <area>0,0,105,105</area>
+                            <filename>images/music/MM_Genres.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="albums">
+                        <imagetype name="albums">
+                             <area>0,0,105,105</area>
+                             <filename>images/music/MM_Albums.png</filename>
+                       </imagetype>
+                    </state>
+                    <state name="artists">
+                        <imagetype name="artists">
+                            <area>0,0,105,105</area>
+                            <filename>images/music/MM_Artists.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="compartists">
+                        <imagetype name="compartists">
+                            <area>0,0,105,105</area>
+                            <filename>images/music/MM_Compartists.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="ratings">
+                        <imagetype name="ratings">
+                            <area>0,0,105,105</area>
+                            <filename>images/music/MM_Ratings.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="years">
+                        <imagetype name="years">
+                            <area>0,0,105,105</area>
+                            <filename>images/music/MM_Years.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="compilations">
+                        <imagetype name="compilations">
+                            <area>0,0,105,105</area>
+                            <filename>images/music/MM_Compilations.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="playlists">
+                        <imagetype name="playlists">
+                            <area>0,0,105,105</area>
+                            <filename>images/music/MM_Playlists.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="smartplaylists">
+                        <imagetype name="smartplaylists">
+                           <area>0,0,105,105</area>
+                            <filename>images/music/MM_Smartplaylists.png</filename>
+                        </imagetype>
+                    </state>
+                </statetype>
+                <imagetype name="buttontextbgd" >
+                    <area>0,0,105,105</area>
+                    <filename>images/shared/DiffuseMirrorBlackVertical.png</filename>
+                    <preserveaspect>no</preserveaspect>
+                </imagetype>
+                <statetype name="buttoncheck">
+                    <position>3,3</position>
+                    <showempty>yes</showempty>
+                    <state type="full">
+                        <imagetype name="marked">
+                            <filename>images/shared/LEDOn.png</filename>
+                        </imagetype>
+                    </state>
+                </statetype>
+                <textarea name="buttontext" from="textarea_base">
+                    <area>5,85,95,20</area>
+                    <alpha>128</alpha>
+                    <case>normal</case>
+                    <align>hcenter,vcenter</align>
+                    <font state="default">tiny</font>
+                    <font state="error">tiny_red</font>
+                    <font state="running">tiny_amber</font>
+                </textarea>	              
+            </state>
+            <state name="selectedactive">
+                <area>-20,-20,105,105</area>
+                <imagetype name="buttonimage">
+                    <area>0,0,145,145</area>
+                    <filename>images/music/MM_Music.png</filename>
+                </imagetype>
+                <statetype name="nodetype">
+                    <state name="default" />
+                    <state name="alltracks">
+                        <imagetype name="alltracks">
+                            <area>0,0,145,145</area>
+                            <filename>images/music/MM_Alltracks.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="genres">
+                        <imagetype name="genres">
+                            <area>0,0,145,145</area>
+                            <filename>images/music/MM_Genres.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="albums">
+                        <imagetype name="albums">
+                             <area>0,0,145,145</area>
+                             <filename>images/music/MM_Albums.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="artists">
+                        <imagetype name="artists">
+                            <area>0,0,145,145</area>
+                            <filename>images/music/MM_Artists.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="compartists">
+                        <imagetype name="compartists">
+                            <area>0,0,145,145</area>
+                            <filename>images/music/MM_Compartists.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="ratings">
+                        <imagetype name="ratings">
+                            <area>0,0,145,145</area>
+                            <filename>images/music/MM_Ratings.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="years">
+                        <imagetype name="years">
+                            <area>0,0,145,145</area>
+                            <filename>images/music/MM_Years.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="compilations">
+                        <imagetype name="compilations">
+                            <area>0,0,145,145</area>
+                            <filename>images/music/MM_Compilations.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="playlists">
+                        <imagetype name="playlists">
+                            <area>0,0,145,145</area>
+                            <filename>images/music/MM_Playlists.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="smartplaylists">
+                        <imagetype name="smartplaylists">
+                            <area>0,0,145,145</area>
+                            <filename>images/music/MM_Smartplaylists.png</filename>
+                        </imagetype>
+                    </state>
+                </statetype>
+                <statetype name="buttoncheck">
+                    <position>5,5</position>
+                    <showempty>yes</showempty>
+                    <state type="full">
+                        <imagetype name="marked">
+                            <filename>images/shared/LEDOn.png</filename>
+                        </imagetype>
+                    </state>
+                </statetype>
+                <imagetype name="buttontextbgd" >
+                    <area>0,120,145,26</area>
+                    <filename>images/shared/DiffuseMirrorBlackVertical.png</filename>
+                    <preserveaspect>no</preserveaspect>
+                </imagetype>
+                <textarea name="buttontext" from="textarea_base">
+                    <area>5,125,135,20</area>
+                    <alpha>255</alpha>
+                    <case>normal</case>
+                    <align>hcenter,vcenter</align>
+                    <scroll direction="left" />
+                    <font state="default">tiny</font>
+                    <font state="error">tiny_red</font>
+                    <font state="running">tiny_amber</font>
+                </textarea>	              
+            </state>
+        </statetype>
+    </buttonlist>
+
+    <group name="basemusiccontrols">
+        <area>0,0,350,40</area>
+
+        <button name="prev" from="baseprevbutton">
+            <position>0,0</position>
+        </button>
+
+        <button name="rew" from="baserewbutton">
+            <position>50,0</position>
+        </button>
+
+        <button name="pause" from="basepausebutton">
+            <position>100,0</position>
+        </button>
+
+        <button name="play" from="baseplaybutton">
+            <position>150,0</position>
+        </button>
+
+        <button name="stop" from="basestopbutton">
+            <position>200,0</position>
+        </button>
+
+        <button name="ff" from="baseffbutton">
+            <position>250,0</position>
+        </button>
+
+        <button name="next" from="basenextbutton">
+            <position>300,0</position>
+        </button>
+
+    </group>
+    
+    <group name="basestatusicons">
+        <area>0,0,350,50</area>
+        <statetype name="mutestate" from="basemutestate">
+            <position>0,0</position>
+        </statetype>
+        <statetype name="repeatstate" from="baserepeatstate">
+            <position>50,0</position>
+        </statetype>
+        <statetype name="shufflestate" from="baseshufflestate">
+            <position>100,0</position>
+        </statetype>
+        <statetype name="movingtracksstate" from="basemovingtracksstate">
+		      <position>167,9</position>
+		  </statetype>
+    </group>
+
+    <group name="baseinfopanel">
+        <area>0,0,360,300</area>
+
+         <textarea name="infolbl" from="textarea_base">
+            <area>0,0,355,30</area>
+            <alpha>128</alpha>
+            <value>Now playing</value>
+        </textarea>
+
+       <textarea name="title" from="textarea_base">
+            <area>0,25,355,40</area>
+            <font>title</font>
+            <multiline>no</multiline>
+            <cutdown>yes</cutdown>
+            <case>upper</case>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <textarea name="artist" from="textarea_base">
+            <area>0,60,355,30</area>
+            <case>upper</case>
+            <font>small</font>
+        </textarea>
+
+        <textarea name="album" from="artist">
+            <position>0,85</position>
+        </textarea>
+
+        <textarea name="genre" from="artist">
+            <position>0,110</position>
+        </textarea>
+
+        <textarea name="ratingslbl" from="artist">
+            <position>0,135</position>
+            <value>Rating</value>
+        </textarea>
+        
+       <statetype name="ratingstate" from="rating_base">
+            <position>60,130</position>
+        </statetype>
+
+        <textarea name="playedlbl" from="textarea_base">
+            <area>0,185,100,25</area>
+            <font>title_verysmall_blue</font>
+            <multiline>no</multiline>
+            <cutdown>yes</cutdown>
+            <alpha>255</alpha>
+            <case>upper</case>
+            <align>left,vcenter</align>
+            <value>Last</value>
+        </textarea>
+
+        <textarea name="usinglbl" from="playedlbl">
+            <position>0,215</position>
+            <value>Next</value>
+        </textarea>
+
+        <textarea name="lastplayed"  from="textarea_base">
+            <area>70,185,275,25</area>
+            <font>normal</font>
+            <case>normal</case>
+            <multiline>no</multiline>
+            <alpha>255</alpha>
+            <template>%lastplayed% (played: %playcount% times)</template>
+        </textarea>
+        
+        <textarea name="nexttitle" from="lastplayed">
+            <area>70,212,275,60</area>
+            <multiline>yes</multiline>
+            <align>top,left</align>
+            <template>%NEXTTITLE% by %NEXTARTIST%</template>
+        </textarea>
+
+        <group name="statusicons" from="basestatusicons">
+            <position>0,280</position>
+        </group>
+
+    </group>
+
+    <group name="baseinfostreampanel">
+        <area>0,0,360,300</area>
+
+         <textarea name="infolbl" from="textarea_base" depends="title">
+            <area>0,0,355,30</area>
+            <alpha>128</alpha>
+            <value>Now playing</value>
+        </textarea>
+
+       <textarea name="title" from="textarea_base">
+            <area>0,25,355,40</area>
+            <font>title</font>
+            <multiline>no</multiline>
+            <cutdown>yes</cutdown>
+            <case>upper</case>
+            <align>left,vcenter</align>
+        </textarea>
+
+        <textarea name="artist" from="textarea_base">
+            <area>0,60,355,30</area>
+            <case>upper</case>
+            <font>small</font>
+        </textarea>
+
+        <textarea name="channel" from="artist" depends="title">
+            <position>0,85</position>
+        </textarea>
+
+        <textarea name="genre" from="artist" depends="title">
+            <position>0,110</position>
+        </textarea>
+
+        <textarea name="playedlbl" from="textarea_base"> <!-- depends="playedtrackslist"> -->
+            <area>0,160,100,25</area>
+            <font>title_verysmall_blue</font>
+            <multiline>no</multiline>
+            <cutdown>yes</cutdown>
+            <alpha>255</alpha>
+            <case>upper</case>
+            <align>left,vcenter</align>
+            <value>Last</value>
+        </textarea>
+        
+        <buttonlist name="playedtrackslist">
+		       <area>70,160,300,90</area>
+		       <searchposition>758,55</searchposition>
+		       <align>top,hcenter</align>
+		       <layout>vertical</layout>
+		       <wrapstyle>selection</wrapstyle>
+		       <arrange>stack</arrange>
+		       <showarrow>no</showarrow>
+		       <buttonarea>0,0,300,90</buttonarea>
+		       <statetype name="buttonitem">
+		           <!--ACTIVE-->
+		           <state name="active">
+		               <textarea name="title" from="textarea_base">
+		                   <area>0,0,300,30</area>
+		                   <case>normal</case>
+		                   <cutdown>yes</cutdown>
+		                   <alpha>255</alpha>
+		                   <template>%title% by %artist%</template>
+		               </textarea>
+		           </state>
+		           <state name="selectedactive">
+		               <textarea name="title" from="textarea_base">
+		                   <area>0,0,300,30</area>
+		                   <case>normal</case>
+		                   <cutdown>yes</cutdown>
+		                   <alpha>128</alpha>
+		                   <template>%title% by %artist%</template>
+		               </textarea>
+		           </state>
+		           <state name="inactive" from="active"/>
+		           <state name="selectedinactive" from="active"/>
+		       </statetype>
+		  </buttonlist>
+
+        <group name="statusicons" from="basestatusicons">
+            <position>0,280</position>
+        </group>
+
+    </group>
+
+    <group name="baseplayliststatusgroup">
+        <area>0,0,360,110</area>
+
+        <textarea name="playlisttime" from="textarea_base">
+            <area>0,0,350,30</area>
+            <font>small</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <progressbar name="playlistprogress" from="baseplaylistprogress">
+            <position>0,30</position>
+        </progressbar>
+
+        <group name="musiccontrols" from="basemusiccontrols">
+            <position>0,50</position>
+        </group>
+
+    </group>
+
+    <group name="basestreamliststatusgroup">
+        <area>0,0,360,110</area>
+
+        <textarea name="bufferstatus" from="textarea_base">
+            <area>0,0,350,30</area>
+            <font>small</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <progressbar name="bufferprogress" from="baseplaylistprogress">
+            <position>0,30</position>
+        </progressbar>
+
+        <group name="musiccontrols" from="basemusiccontrols">
+            <position>0,50</position>
+        </group>
+
+    </group>
+
+    <group name="baseplaylistvisualizergroup">
+        <area>0,0,275,110</area>
+
+        <video name="visualizer">
+            <area>165,0,110,110,</area>
+        </video>
+
+        <textarea name="visualizername" from="textarea_base">
+            <area>0,0,150,30</area>
+            <case>normal</case>
+            <align>allcenter</align>
+            <font>small</font>
+        </textarea>
+
+        <statetype name="trackstate">
+            <position>0,25</position>
+            <state name="playing">
+		         <textarea name="playtext" from="textarea_base">
+		             <area>0,0,150,30</area>
+		             <font>small</font>
+                   <align>allcenter</align>
+		             <case>normal</case>
+		             <value>Playing</value>
+		         </textarea>
+            </state>
+            <state name="paused">
+		         <textarea name="pausedtext" from="textarea_base">
+		             <area>0,0,150,30</area>
+		             <font>small</font>
+                   <align>allcenter</align>
+		             <case>normal</case>
+		             <value>Paused</value>
+		         </textarea>
+            </state>
+            <state name="stopped">
+		         <textarea name="stoppedtext" from="textarea_base">
+		             <area>0,0,150,30</area>
+		             <font>small</font>
+                   <align>allcenter</align>
+		             <case>normal</case>
+		             <value>Stopped</value>
+		         </textarea>
+            </state>
+        </statetype>
+
+        <textarea name="time" from="textarea_base">
+            <area>0,70,150,30</area>
+            <font>small</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <progressbar name="progress" from="basetrackprogress">
+            <position>0,100</position>
+        </progressbar>
+
+    </group>
+
+    <group name="basesmallinfopanel">
+        <shape name="trackinfo_background" from="basebackground">
+            <area>15,0,1250,50</area>
+            <fill color="#000000" alpha="50" />
+        </shape>
+
+        <imagetype name="coverart">
+            <filename>mm_nothumb.png</filename>
+            <area>30,5,40,40</area>
+        </imagetype>
+
+        <textarea name="title" from="basetextarea">
+            <area>120,10,930,34</area>
+            <font>basemedium</font>
+            <template>Now Playing: %TITLE% by %ARTIST% on %ALBUM%</template>
+        </textarea>
+
+        <textarea name="time" from="basetextarea">
+            <area>1070,15,185,34</area>
+            <align>right</align>
+            <font>basesmall</font>
+        </textarea>
+    </group>
+
+    <group name="baseplaylistpanel">
+        <shape name="playlist_background" from="basebackground">
+            <area>15,0,1250,265</area>
+            <fill color="#000000" alpha="50" />
+        </shape>
+
+        <buttonlist name="currentplaylist" from="basebuttonlist2">
+            <area>30,15,1220,210</area>
+            <spacing>0</spacing>
+            <layout>vertical</layout>
+            <arrange>stack</arrange>
+            <showarrow>no</showarrow>
+            <buttonarea>0,0,1220,190</buttonarea>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,100%,46</area>
+
+                    <imagetype name="buttonimage">
+                        <area>5,5,36,36</area>
+                        <filename>mm_nothumb.png</filename>
+                    </imagetype>
+
+                    <statetype name="playstate">
+                        <position>1185,10</position>
+                        <state name="default">
+                        </state>
+                        <state name="playing">
+                            <imagetype name="animation">
+                                <position>0,0</position>
+                                <filepattern low="1" high="8">mm_playing_%1.png</filepattern>
+                                <delay>160</delay>
+                            </imagetype>
+                        </state>
+                        <state name="paused">
+                            <imagetype name="animation">
+                                <position>5,5</position>
+                                <filename>mm_pauseicon.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="stopped">
+                            <imagetype name="animation">
+                                <position>5,5</position>
+                                <filename>mm_stopicon.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                    <statetype name="movestate">
+                        <position>1190,15</position>
+                        <state name="off"></state>
+                        <state name="on">
+                            <imagetype name="statusimage">
+                                <filename>mm_updown.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+
+                    <textarea name="title" from="buttontext">
+                        <area>50,0,1090,46</area>
+                        <align>left,vcenter</align>
+                        <font>basesmall</font>
+                        <template>%TITLE% by %ARTIST% on %ALBUM%</template>
+                    </textarea>
+
+                </state>
+                <state name="selectedactive" from="active">
+                    <imagetype name="buttonimage">
+                        <area>5,5,36,36</area>
+                        <filename>mm_nothumb.png</filename>
+                    </imagetype>
+                    <shape name="selectbar">
+                        <area>0,0,1220,46</area>
+                    </shape>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <shape name="selectbar">
+                        <area>0,0,1220,46</area>
+                    </shape>
+                </state>
+            </statetype>
+            <statetype name="upscrollarrow">
+                <position>1160,185</position>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>1190,185</position>
+            </statetype>
+        </buttonlist>
+
+        <group name="playliststatuspanel" from="baseplayliststatusgroup">
+            <position>0,205</position>
+        </group>
+    </group>
+
+</mythuitheme>

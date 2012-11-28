@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="SETUP_TVRECPRIORITIES">
+
+    <button>
+        <type>TV_RECPRIORITIES</type>
+        <text>Shows</text>
+        <description>Set priorities for</description>
+        <action>TV_SET_RECPRIORITIES</action>
+    </button>
+
+    <button>
+        <type>TV_RECPRIORITIES_CHANNEL</type>
+        <text>Channels</text>
+        <description>Set Priorities for</description>
+        <action>SETTINGS CHANNELRECPRIORITIES</action>
+    </button>
+
+    <button>
+        <type>TV_RECPRIORITIES_CUSTOM</type>
+        <text>Recordings</text>
+        <description>Set Priorities for</description>
+        <action>SETTINGS CUSTOMPRIORITY</action>
+    </button>
+
+</mythmenu>
