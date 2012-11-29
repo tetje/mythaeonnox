@@ -31,7 +31,7 @@
     </fontdef>
 
     <fontdef name="Font_Title_Info" face="Aeon_Settings">
-        <pixelsize>60</pixelsize>
+        <pixelsize>65</pixelsize>
         <color>#ffffff</color>
     </fontdef>
     
@@ -43,6 +43,14 @@
     <fontdef name="Font_Info" face="Scout">
         <pixelsize>27</pixelsize>
         <color>#ececec</color>
+    </fontdef>
+
+    <fontdef name="Font_Info_Grey" from="Font_Info">
+        <color>#929292</color>
+    </fontdef>
+
+    <fontdef name="Font_Info_Grey_Big" from="Font_Info_Grey">
+        <pixelsize>55</pixelsize>
     </fontdef>
 
     <fontdef name="Font_Info_Small_White" from="Font_Info">
@@ -65,6 +73,10 @@
 
     <fontdef name="Font_Label_List_Selected" from="Font_Label_List">
         <color>#323232</color>
+    </fontdef>
+
+    <fontdef name="Font_Label_List_Grey" from="Font_Label_List">
+        <color>#929292</color>
     </fontdef>
 
     <fontdef name="Font_Plot" face="Aeon Player">
@@ -173,6 +185,87 @@
         </state>
     </statetype>
 
+    <statetype name="rating_base_big">
+        <area>0,0,302,64</area>
+        <showempty>yes</showempty>
+        <state name="0">
+            <imagetype name="rating0">
+                <area>0,0,302,64</area>
+                <filename>images/icons/ratings/rating0.png</filename>
+            </imagetype>
+        </state>
+        <state name="1">
+            <imagetype name="rating1">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating1.png</filename>
+            </imagetype>
+        </state>
+        <state name="2">
+            <imagetype name="rating2">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating1.png</filename>
+            </imagetype>
+        </state>
+        <state name="3">
+            <imagetype name="rating3">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating2.png</filename>
+            </imagetype>
+        </state>
+        <state name="4">
+            <imagetype name="rating4">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating2.png</filename>
+            </imagetype>
+        </state>
+        <state name="5">
+            <imagetype name="rating3">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating3.png</filename>
+            </imagetype>
+        </state>
+        <state name="6">
+            <imagetype name="rating3">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating3.png</filename>
+            </imagetype>
+        </state>
+        <state name="7">
+            <imagetype name="rating4">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating4.png</filename>
+            </imagetype>
+        </state>
+        <state name="8">
+            <imagetype name="rating4">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating4.png</filename>
+            </imagetype>
+        </state>
+        <state name="9">
+            <imagetype name="rating5">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating5.png</filename>
+            </imagetype>
+        </state>
+        <state name="10">
+            <imagetype name="rating5">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating5.png</filename>
+            </imagetype>
+        </state>
+    </statetype>
+
     <statetype name="videolevel_base">
         <area>0,0,72,18</area>
         <showempty>yes</showempty>
@@ -185,24 +278,28 @@
         <state name="lowest">
             <imagetype name="lowest">
                 <area>0,0,18,18</area>
+                <alpha>225</alpha>
                 <filename>images/icons/ratings/parentallevel_1_black.png</filename>
             </imagetype>
         </state>
         <state name="low">
             <imagetype name="low">
                 <area>0,0,36,18</area>
+                <alpha>225</alpha>
                 <filename>images/icons/ratings/parentallevel_2_black.png</filename>
             </imagetype>
         </state>
         <state name="medium">
             <imagetype name="medium">
                 <area>0,0,54,18</area>
+                <alpha>225</alpha>
                 <filename>images/icons/ratings/parentallevel_3_black.png</filename>
             </imagetype>
         </state>
         <state name="high">
             <imagetype name="high">
                 <area>0,0,72,18</area>
+                <alpha>225</alpha>
                 <filename>images/icons/ratings/parentallevel_4_black.png</filename>
             </imagetype>
         </state>
@@ -211,7 +308,7 @@
    <!-- Base MythAeon textarea definitions -->
    
    <textarea name="textarea_info">
-       <area>0,0,200,35</area>
+       <area>0,0,500,35</area>
        <font>Font_Info</font>
        <multiline>no</multiline>
        <cutdown>no</cutdown>
@@ -219,7 +316,13 @@
        <align>left,vcenter</align>
    </textarea>
    
+   <textarea name="textarea_info_big" from="textarea_info">
+       <area>0,0,500,60</area>
+       <font>Font_Info_Grey_Big</font>
+   </textarea>
+   
    <textarea name="textarea_info_small" from="textarea_info">
+       <area>0,0,500,20</area>
        <font>Font_Info_Small</font>
    </textarea>
    
@@ -760,6 +863,30 @@
         </statetype>
     </button>
 
+    <button name="button_info_panel">
+        <area>0,0,150,50</area>
+        <statetype name="buttonstate">
+           <state name="active">
+               <textarea name="text" from="textarea_list">
+                   <area>0,0,150,50</area>
+                   <font>Font_Label_List_Grey</font>
+                   <align>allcenter</align>
+               </textarea>
+           </state>
+           <state name="selected">
+               <textarea name="text" from="textarea_list">
+                   <area>0,0,150,50</area>
+                   <align>allcenter</align>
+                   <font>Font_List_Active</font>
+               </textarea>
+           </state>
+           <state name="disabled" from="active" />
+           <state name="pushed" from="active">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+    
     <!-- Base definition of a button -->
     <button name="basebutton">
         <position>0,0</position>
