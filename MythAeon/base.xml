@@ -23,7 +23,7 @@
     </fontdef>
 
     <fontdef name="Font_Title" face="Aeon_Settings">
-        <pixelsize>40</pixelsize>
+        <pixelsize>45</pixelsize>
 <!--
         <weight>bold</weight> 
 -->
@@ -36,7 +36,7 @@
     </fontdef>
     
     <fontdef name="Font_Title_Sub" from="Font_Title">
-        <pixelsize>30</pixelsize>
+        <pixelsize>35</pixelsize>
         <color>#000000</color>
     </fontdef>
 
@@ -337,7 +337,7 @@
    <textarea name="textarea_title" from="textarea_info">
        <area>0,0,500,55</area>
        <font>Font_Title</font>
-       <alpha>192</alpha>
+       <alpha>255</alpha>
    </textarea>
    
    <textarea name="textarea_title_info" from="textarea_info">
@@ -348,7 +348,7 @@
    
    <textarea name="textarea_title_sub" from="textarea_title">
        <font>Font_Title_Sub</font>
-       <alpha>128</alpha>
+       <alpha>192</alpha>
    </textarea>
    
    <textarea name="textarea_plot" from="textarea_info">
@@ -553,6 +553,156 @@
        
    </buttonlist>
 
+   <buttonlist name="buttonlist_multiplexmovie">
+       <area>0,0,1920,267</area>
+       <spacing>5</spacing>
+       <searchposition>758,55</searchposition>
+       <layout>horizontal</layout>
+       <scrollstyle>center</scrollstyle>
+       <arrange>stack</arrange>
+       <align>hcenter</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>yes</showarrow>
+       <buttonarea>113,0,1694,267</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <imagetype name="previewbgd">
+                   <area>-2,2,176,263</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_border.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="coverart">
+                   <area>7,10,160,247</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/defaultVideoBigPoster.png</filename>
+                   <mask>images/shared/multiplex_mask.png</mask>
+                   <preserveaspect>no</preserveaspect>
+                   <reflection shear="0" scale="50" length="16" spacing="0" />
+               </imagetype>
+               <imagetype name="previewglass">
+                   <area>7,10,160,247</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_glass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="previewlabel" depends="!coverart">
+                   <area>12,235,150,90</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_labelblock.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+<!--
+               <statetype name="nodetype">
+                   <area>0,0,110,159</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>80,129,25,25</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,110,159</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+               <textarea name="buttontext" from="textarea_plot" depends="!coverart">
+                   <area>17,235,140,50</area>
+                   <font>Font_Info_Small_White</font>
+                   <multiline>yes</multiline>
+                   <cutdown>yes</cutdown>
+                   <align>hcenter,vcenter</align>
+               </textarea>	  
+            
+           </state>
+           <state name="selectedactive">
+               <area>-8,-8,190,284</area>
+               <imagetype name="previewbgd">
+                   <area>-8,-8,190,284</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_border.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="coverart">
+                   <area>0,0,173,267</area>
+                   <alpha>255</alpha>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/defaultVideoBigPoster.png</filename>
+                   <mask>images/shared/multiplex_mask_big.png</mask>
+               </imagetype>
+               <imagetype name="previewglass">
+                   <area>0,0,173,267</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_glass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+<!--
+               <statetype name="nodetype">
+                   <area>-8,0,138,199</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>103,164,30,30</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,138,199</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->              
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>0</alpha>
+           </state>
+       </statetype>
+	    <statetype name="downscrollarrow">
+	        <position>50,70</position>
+	        <state type="off">
+	            <imagetype name="dnon">
+	                <filename>images/shared/multiplex_arrow2.png</filename>
+	                <alpha>90</alpha>
+	            </imagetype>
+	        </state>
+	        <state type="full">
+	            <imagetype name="dnoff">
+	                <filename>images/shared/multiplex_arrow2.png</filename>
+	            </imagetype>
+	        </state>
+	    </statetype>
+	    <statetype name="upscrollarrow">
+	        <position>1820,70</position>
+	        <state type="off">
+	            <imagetype name="dnon">
+	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <alpha>90</alpha>
+	            </imagetype>
+	        </state>
+	        <state type="full">
+	            <imagetype name="dnoff">
+	                <filename>images/shared/multiplex_arrow1.png</filename>
+	            </imagetype>
+	        </state>
+	    </statetype>
+       
+   </buttonlist>
+
    <buttonlist name="buttonlist_tvshowpanel">
        <area>0,0,1052,500</area>
        <layout>vertical</layout>
@@ -580,7 +730,7 @@
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
                <textarea name="buttontext" from="textarea_list">
-                   <area>70,0,993,50</area>
+                   <area>50,0,993,50</area>
                </textarea>
            </state>
            <state name="inactive" from="active"/>

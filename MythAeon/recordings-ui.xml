@@ -14,6 +14,12 @@
             <filename>images/shared/showcase_stage.png</filename>
         </imagetype>
         
+        <imagetype name="spotlightimg">
+            <area>0,875,1920,205</area>
+            <alpha>192</alpha>
+            <filename>images/shared/showcase_spot.png</filename>
+        </imagetype>
+        
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
@@ -30,6 +36,7 @@
 	               <textarea name="infotext" from="textarea_info_small">
 	                   <area>0,10,90,20</area>
 	                   <alpha>192</alpha>
+	                   <font>Font_Info_Small_White</font>
 	                   <case>normal</case>
 	                   <align>allcenter</align>
 	                   <value>Rec</value>
@@ -44,6 +51,7 @@
 	               <textarea name="infotext" from="textarea_info_small">
 	                   <area>0,10,90,20</area>
 	                   <alpha>192</alpha>
+	                   <font>Font_Info_Small_White</font>
 	                   <case>normal</case>
 	                   <align>allcenter</align>
 	                   <value>Flag</value>
@@ -58,6 +66,7 @@
 	               <textarea name="infotext" from="textarea_info_small">
 	                   <area>0,10,90,20</area>
 	                   <alpha>192</alpha>
+	                   <font>Font_Info_Small_White</font>
 	                   <case>normal</case>
 	                   <align>allcenter</align>
 	                   <value>Trans</value>
@@ -65,7 +74,7 @@
                </state>
            </statetype>
         </group> 
-        <group name="multiplextabletgroup">
+        <group name="multiplextablettvgroup">
            <area>113,70,1694,846</area>
 
 	        <animation trigger="AboutToShow">
@@ -111,7 +120,7 @@
 	               <state name="no"/>
 	           </statetype>
 		        
-	           <group name="additionalinfo">
+	           <group name="additionalrecordingsinfo">
 	              <area>38,85,567,270</area>
 			        <textarea name="channellbl" from="textarea_label" depends="channel">
 			            <area>0,140,567,30</area>
@@ -157,7 +166,7 @@
 
         </group>
 
-        <group name="multiplextabletlistgroup">
+        <group name="multiplextablettvlistgroup">
            <area>0,755,1920,325</area>
 
 	        <animation trigger="AboutToShow">
@@ -178,70 +187,64 @@
 	        <buttonlist name="groups" from="recordings"/>
 	
 	        <group name="statusinfo">
-	           <area>778,210,380,20</area>
+	           <area>270,249,240,50</area>
+	           <alpha>192</alpha>
+
 		        <statetype name="autoexpire">
 		            <state name="yes">
-		               <textarea name="infotext" from="textarea_info_small" depends="channel">
-		                   <area>0,0,90,20</area>
-		                   <alpha>192</alpha>
-		                   <case>normal</case>
-		                   <align>allcenter</align>
-		                   <value>Expired</value>
-		               </textarea>	  
+		                <imagetype name="autoexpireimg">
+		                    <area>0,0,50,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/autoexpire_black.png</filename>
+		                </imagetype>
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 		        <statetype name="commflagged">
 		            <state name="yes">
-		               <textarea name="infotext" from="textarea_info_small" depends="channel">
-		                   <area>90,0,90,20</area>
-		                   <alpha>192</alpha>
-		                   <case>normal</case>
-		                   <align>allcenter</align>
-		                   <value>Flagged</value>
-		               </textarea>	  
+		                <imagetype name="commflaggedimg">
+		                    <area>60,0,50,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/commflagged_black.png</filename>
+		                </imagetype>
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 		        <statetype name="bookmark">
 		            <state name="yes">
-		               <textarea name="infotext" from="textarea_info_small" depends="channel">
-		                   <area>180,0,90,20</area>
-		                   <alpha>192</alpha>
-		                   <case>normal</case>
-		                   <align>allcenter</align>
-		                   <value>Marked</value>
-		               </textarea>	  
+		                <imagetype name="bookmarkimg">
+		                    <area>120,0,50,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/bookmark_black.png</filename>
+		                </imagetype>
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 		        <statetype name="cutlist">
 		            <state name="yes">
-		               <textarea name="infotext" from="textarea_info_small" depends="channel">
-		                   <area>270,0,90,20</area>
-		                   <alpha>192</alpha>
-		                   <case>normal</case>
-		                   <align>allcenter</align>
-		                   <value>Cutlist</value>
-		               </textarea>	  
+		                <imagetype name="cutlistimg">
+		                    <area>180,0,50,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/cutlist_black.png</filename>
+		                </imagetype>
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 	        </group>
 	
 	        <textarea name="category" from="textarea_title_sub">
-	            <area>510,250,900,30</area>
+	            <area>510,230,900,30</area>
 	            <align>allcenter</align>
 	        </textarea>
 	
 	        <textarea name="title" from="textarea_title">
-	            <area>510,275,900,45</area>
+	            <area>510,265,900,45</area>
 	            <align>allcenter</align>
 	        </textarea>
 
 	        <group name="mediainfo" depends="category"> 
 	           <area>1400,224,390,100</area>
-	           <alpha>128</alpha>
+	           <alpha>192</alpha>
 	
 		        <statetype name="subtitletypes">
 		            <area>340,25,50,50</area>
@@ -316,7 +319,6 @@
 		                <imagetype name="default">
 		                    <area>0,25,130,50</area>
 		                    <preserveaspect>no</preserveaspect>
-		                    <alpha>225</alpha>
 		                    <filename>images/icons/resolution/576_black.png</filename>
 		                </imagetype>
 		            </state>
