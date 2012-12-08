@@ -258,12 +258,14 @@
                <area>62,860,800,30</area>
            </textarea>
 
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
 	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
 	            </section>
 	        </animation>       
-
+-->
         </group>
         
         <group name="listinfo">
@@ -345,12 +347,14 @@
 	
 	        </group>
 
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
 	                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
 	            </section>
 	        </animation>       
-
+-->
         </group>
 
     </window>
@@ -384,12 +388,15 @@
 	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
+
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
 	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
 	            </section>
 	        </animation>       
-
+-->
 	        <imagetype name="multiplextabletbgdimg">
 	            <area>0,0,1694,846</area>
 	            <filename>images/shared/multiplex_back.png</filename>
@@ -500,12 +507,15 @@
 	                <position start="1920,690" end="0,690" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
+
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
 	                <position start="0,690" end="-1920,690" easingcurve="OutInBack" />
 	            </section>
 	        </animation>       
-
+-->
 	        <buttonlist name="videos" from="buttonlist_multiplexmovie">
 	             <position>0,0</position>
 	        </buttonlist>
@@ -551,354 +561,247 @@
 	        </group>
 	     </group>
 	
-	
-<!--
-
-
-        <textarea name="##x##" from="basetextarea">
-            <area>560,45,100,100</area>
-            <multiline>yes</multiline>
-            <font>basemedium</font>
-        </textarea>
-
-        <imagetype name="coverart">
-            <area>30,90,203,311</area>
-            <preserveaspect>yes</preserveaspect>
-        </imagetype>
-
-        <textarea name="currentvideo" from="basetextarea">
-            <area>150,486,500,35</area>
-            <align>top,vcenter</align>
-        </textarea>
-
-        <textarea name="dirlbl" from="basetextarea">
-            <area>240,68,115,35</area>
-            <value>Directed by</value>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="director" from="basetextarea">
-            <area>360,66,350,35</area>
-            <font>basemedium</font>
-        </textarea>
-
-        <textarea name="description" from="basetextarea">
-            <area>245,97,523,145</area>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <textarea name="rating" from="basetextarea">
-            <area>245,257,533,90</area>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <textarea name="lenlbl" from="basetextarea">
-            <area>260,343,150,35</area>
-            <value>Runtime</value>
-        </textarea>
-
-        <textarea name="length" from="basetextarea">
-            <area>260,373,350,35</area>
-        </textarea>
-
-        <textarea name="yrlbl" from="basetextarea">
-            <area>470,343,90,35</area>
-            <value>Year</value>
-        </textarea>
-
-        <textarea name="year" from="basetextarea">
-            <area>470,373,100,35</area>
-        </textarea>
-
-        <textarea name="userratinglbl" from="basetextarea">
-            <area>620,343,150,35</area>
-            <align>right,top</align>
-            <value>User Rating</value>
-        </textarea>
-
-        <textarea name="userrating" from="basetextarea">
-            <area>670,373,100,35</area>
-            <align>hcenter,top</align>
-        </textarea>
-
-        <textarea name="position" from="basetextarea">
-            <area>320,410,160,38</area>
-            <align>hcenter,vcenter</align>
-            <font>basemedium</font>
-        </textarea>
-
-        <textarea name="novideos" from="basetextarea">
-            <area>250,130,540,70</area>
-            <multiline>yes</multiline>
-            <align>hcenter,vcenter</align>
-            <value>No videos in library, or no files found.  If you have configured a video directory, press "M" (or the MENU key) and select "Scan for Changes."</value>
-        </textarea>
-
-        <statetype name="parentallevel">
-            <position>740,20</position>
-            <state name="None">
-                <imagetype name="icon">
-                    <filename>mv_level_none.png</filename>
-                </imagetype>
-            </state>
-            <state name="Lowest">
-                <imagetype name="icon">
-                    <filename>mv_level_lowest.png</filename>
-                </imagetype>
-            </state>
-            <state name="Low">
-                <imagetype name="icon">
-                    <filename>mv_level_low.png</filename>
-                </imagetype>
-            </state>
-            <state name="Medium">
-                <imagetype name="icon">
-                    <filename>mv_level_medium.png</filename>
-                </imagetype>
-            </state>
-            <state name="High">
-                <imagetype name="icon">
-                    <filename>mv_level_high.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
--->        
     </window>
 
     <window name="gallery">
-        <textarea name="title" from="basetextarea">
-            <area>70,15,460,50</area>
-            <cutdown>yes</cutdown>
-            <font>baselarge</font>
-        </textarea>
 
-        <textarea name="subtitle" from="basetextarea">
-            <area>70,40,360,50</area>
-            <cutdown>yes</cutdown>
-            <font>basemedium</font>
-        </textarea>
+        <imagetype name="fanart">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/movies/</filename>
+        </imagetype>
 
-        <textarea name="##x##" from="basetextarea">
-            <area>440,40,70,50</area>
-            <cutdown>yes</cutdown>
-            <font>basemedium</font>
-        </textarea>
+        <imagetype name="showcasefloorimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/showcase_floor.png</filename>
+        </imagetype>        
 
-        <buttonlist name="videos">
-            <area>15,0,770,585</area>
-            <layout>grid</layout>
-            <spacing>5</spacing>
-            <buttonarea>0,65,770,520</buttonarea>
-            <statetype name="buttonitem">
-                <area>0,0,150,125</area>
-                <state name="active">
-                    <imagetype name="buttonbackground">
-                        <filename>shared/grid_back_reg.png</filename>
-                    </imagetype>
-                    <imagetype name="buttonimage">
-                        <area>10,8,130,90</area>
-                        <preserveaspect>true</preserveaspect>
-                        <filename>shared/grid_noimage.png</filename>
-                    </imagetype>
-                    <statetype name="nodetype">
-                        <position>80,55</position>
-                        <state name="subfolder">
-                            <imagetype name="icon">
-                                <area>0,0,50,50</area>
-                                <filename>shared/directory.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                        <state name="upfolder">
-                            <imagetype name="icon">
-                                <area>0,0,50,50</area>
-                                <filename>shared/updirectory.png</filename>
-                                <preserveaspect>yes</preserveaspect>
-                            </imagetype>
-                        </state>
-                    </statetype>
-                    <textarea name="buttontext">
-                        <area>5,98,140,25</area>
-                        <font>menufont</font>
-                        <align>hcenter,bottom</align>
-                    </textarea>
-                    <textarea name="childcount" from="basetextarea">
-                        <area>65,72,55,20</area>
-                        <font>basesmallblack</font>
-                        <align>right</align>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active">
-                    <imagetype name="buttonbackground">
-                        <filename>shared/grid_back_sel.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>640,20</position>
-                <showempty>yes</showempty>
-                <state type="full">
-                    <imagetype name="upon">
-                        <filename>up_arrow.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>700,20</position>
-                <showempty>yes</showempty>
-                <state type="full">
-                    <imagetype name="dnon">
-                        <filename>down_arrow.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
+        <imagetype name="showcaseimg" from="fanart">
+            <filename>images/shared/showcase_stage.png</filename>
+        </imagetype>
+        
+        <imagetype name="spotlightimg">
+            <area>0,875,1920,205</area>
+            <alpha>192</alpha>
+            <filename>images/shared/showcase_spot.png</filename>
+        </imagetype>
+        
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
+        </group>
 
-        <textarea name="position" from="basetextarea">
-            <area>530,15,110,40</area>
-            <align>hcenter,vcenter</align>
-            <font>basemedium</font>
-        </textarea>
+        <group name="moviewallgroup">
+           <area>0,55,1920,1020</area>
 
-        <textarea name="novideos" from="basetextarea">
-            <area>250,130,540,70</area>
-            <multiline>yes</multiline>
-            <align>hcenter,vcenter</align>
-            <value>No videos in library, or no files found.  If you have configured a video directory, press "M" (or the MENU key) and select "Scan for Changes."</value>
-        </textarea>
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="0,-1075" end="0,55" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
 
-        <!-- <textarea name="breadcrumbs" from="basetextarea">
-            <area>500,20,280,30</area>
-            <font>basemedium</font>
-            <align>right,vcenter</align>
-        </textarea> -->
+	        <buttonlist name="videos" from="buttonlist_wall">
+	            <position>104,0</position>
+	        </buttonlist>
 
-        <statetype name="parentallevel">
-            <position>20,20</position>
-            <state name="None">
-                <imagetype name="icon">
-                    <filename>mv_level_none.png</filename>
-                </imagetype>
-            </state>
-            <state name="Lowest">
-                <imagetype name="icon">
-                    <filename>mv_level_lowest.png</filename>
-                </imagetype>
-            </state>
-            <state name="Low">
-                <imagetype name="icon">
-                    <filename>mv_level_low.png</filename>
-                </imagetype>
-            </state>
-            <state name="Medium">
-                <imagetype name="icon">
-                    <filename>mv_level_medium.png</filename>
-                </imagetype>
-            </state>
-            <state name="High">
-                <imagetype name="icon">
-                    <filename>mv_level_high.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
+	        <textarea name="title" from="textarea_title">
+	            <area>510,970,900,45</area>
+	            <align>allcenter</align>
+	            <template>%title%% - |subtitle%</template>
+	        </textarea>
+
+	        <group name="wallinfodetails">
+	           <area>1500,960,250,60</area>
+		        <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
+		            <area>0,0,100,60</area>
+		            <align>top,hcenter</align>
+		            <value>Season</value>
+		        </textarea>
+	
+		        <textarea name="##x##" from="textarea_title_sub">
+		            <area>0,0,100,60</area>
+		            <align>bottom,hcenter</align>
+		        </textarea>
+
+		        <textarea name="videolevellbl" from="textarea_title_sub">
+		            <area>150,0,100,60</area>
+		            <align>top,hcenter</align>
+		            <value>Parental</value>
+		        </textarea>
+
+	           <imagetype name="videolevelbgd">
+	              <area>164,35,72,18</area>
+	              <filename>images/icons/ratings/parentallevel_bg.png</filename>
+	           </imagetype>
+
+			     <statetype name="videolevel" from="videolevel_base">
+			         <area>164,36,72,18</area>
+			     </statetype>
+	
+	        </group>
+	     </group>
+
+
     </window>
 
     <window name="tree">
 
-        <textarea name="breadcrumbs" from="basetextarea">
-            <area>50,20,700,40</area>
-            <font>basemedium</font>
-        </textarea>
-
-        <buttontree name="videos">
-            <area>40,50,720,260</area>
-            <numlists>3</numlists>
-            <spacing>10</spacing>
-            <buttonlist name="listtemplate" from="basebuttonlist" />
-        </buttontree>
-
-        <textarea name="title" from="basetextarea">
-            <area>40,330,530,40</area>
-            <font>baselarge</font>
-        </textarea>
-
-        <textarea name="subtitle" from="basetextarea">
-            <area>50,360,425,30</area>
-        </textarea>
-
-        <textarea name="##x##" from="basetextarea">
-            <area>500,360,80,30</area>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="director" from="basetextarea">
-            <area>50,390,450,30</area>
-        </textarea>
-
-        <textarea name="year" from="basetextarea">
-            <area>500,390,80,30</area>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="description" from="basetextarea">
-            <area>40,418,530,80</area>
-            <align>left,top</align>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-        </textarea>
-
-        <textarea name="cast" from="basetextarea">
-            <area>60,503,505,50</area>
-            <align>left,top</align>
-            <multiline>yes</multiline>
-            <cutdown>no</cutdown>
-        </textarea>
-
-        <textarea name="position" from="basetextarea">
-            <area>266,555,266,40</area>
-            <font>basemedium</font>
-            <align>hcenter,vcenter</align>
-        </textarea>
-
-        <imagetype name="coverart">
-            <area>624,335,140,212</area>
-            <preserveaspect>yes</preserveaspect>
+        <imagetype name="fanart">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/movies/</filename>
         </imagetype>
+        
+        <imagetype name="listfloorimg" from="fanart">
+            <area>0,473,1920,607</area>
+            <filename>images/shared/list_floor.png</filename>
+        </imagetype>
+        
+        <imagetype name="listfilterimg" from="fanart">
+            <filename>images/shared/list_filter.png</filename>
+        </imagetype>
+        
+        <imagetype name="spotlightimg" from="fanart">
+            <area>0,875,1920,205</area>
+            <filename>images/shared/list_spot.png</filename>
+        </imagetype>
+        
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
+        </group>
 
-        <textarea name="level_label" from="basetextarea">
-            <area>600,560,130,30</area>
-            <value>Parental Level</value>
-            <align>right,vcenter</align>
-        </textarea>
+        <group name="listpanel">
+           <area>88,110,1139,970</area>
+           
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="88,-1080" end="88,110" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
 
-        <statetype name="parentallevel">
-            <position>740,553</position>
-            <state name="None">
-                <imagetype name="icon">
-                    <filename>mv_level_none.png</filename>
-                </imagetype>
-            </state>
-            <state name="Lowest">
-                <imagetype name="icon">
-                    <filename>mv_level_lowest.png</filename>
-                </imagetype>
-            </state>
-            <state name="Low">
-                <imagetype name="icon">
-                    <filename>mv_level_low.png</filename>
-                </imagetype>
-            </state>
-            <state name="Medium">
-                <imagetype name="icon">
-                    <filename>mv_level_medium.png</filename>
-                </imagetype>
-            </state>
-            <state name="High">
-                <imagetype name="icon">
-                    <filename>mv_level_high.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
+	        <imagetype name="listpanelbgdblack">
+	            <area>0,0,1139,970</area>
+	            <filename>images/shared/listpanel_black.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+
+	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
+	            <filename>images/shared/listpanel_back.png</filename>
+	        </imagetype>
+        
+	        <imagetype name="listpaneldetailbgd">
+	            <area>912,12,148,850</area>
+	            <filename>images/shared/listpanel_detailwide.png</filename>
+	        </imagetype>
+        	
+	        <buttontree name="videos">
+               <area>12,50,1115,800</area>
+	            <numlists>2</numlists>
+	            <spacing>0</spacing>
+	            <buttonlist name="listtemplate" from="buttonlist_videomanager" />
+	        </buttontree>
+
+           <textarea name="position" from="textarea_label_list">
+               <area>62,860,800,30</area>
+           </textarea>
+
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
+        
+        <group name="listinfo">
+           <area>1264,150,545,930</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+	        <imagetype name="coverartframe">
+	            <area>0,0,545,791</area>
+	            <filename>images/shared/list_movieicon_frame.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+        
+	        <imagetype name="coverart">
+	            <area>13,13,519,766</area>
+	            <mask>images/shared/list_movieicon_mask.png</mask>
+	            <filename>images/shared/defaultVideoBigPoster.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+        
+	        <imagetype name="coverartglass">
+	            <area>13,13,519,766</area>
+	            <filename>images/shared/list_movieicon_glass.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	        
+           <statetype name="watchedstate">
+               <state name="yes">
+                   <imagetype name="yes">
+                       <area>457,100,76,71</area>
+                       <filename>images/shared/OverlayWatched.png</filename>
+                   </imagetype>
+               </state>
+               <state name="no"/>
+           </statetype>
+
+	        <group name="listinfodetails">
+	           <area>73,810,400,60</area>
+<!--
+		        <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
+		            <area>0,0,100,60</area>
+		            <align>top,hcenter</align>
+		            <value>Season</value>
+		        </textarea>
+	
+		        <textarea name="##x##" from="textarea_title_sub">
+		            <area>0,0,100,60</area>
+		            <align>bottom,hcenter</align>
+		        </textarea>
+-->
+		        <textarea name="ratinglbl" from="textarea_title_sub" depends="rating">
+		            <area>150,0,100,60</area>
+		            <align>top,hcenter</align>
+		            <value>Rating</value>
+		        </textarea>
+	
+		        <textarea name="rating" from="textarea_title_sub">
+		            <area>150,0,100,60</area>
+		            <align>bottom,hcenter</align>
+		        </textarea>
+
+		        <textarea name="videolevellbl" from="textarea_title_sub">
+		            <area>300,0,100,60</area>
+		            <align>top,hcenter</align>
+		            <value>Parental</value>
+		        </textarea>
+
+	           <imagetype name="videolevelbgd">
+	              <area>314,35,72,18</area>
+	              <filename>images/icons/ratings/parentallevel_bg.png</filename>
+	           </imagetype>
+
+			     <statetype name="videolevel" from="videolevel_base">
+			         <area>314,35,72,18</area>
+			     </statetype>
+	
+	        </group>
+
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
+
     </window>
 
     <window name="file_associations">

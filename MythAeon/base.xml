@@ -321,6 +321,11 @@
        <font>Font_Info_Grey_Big</font>
    </textarea>
    
+   <textarea name="textarea_mainmenu" from="textarea_info">
+       <area>0,0,500,142</area>
+       <font>Font_MainMenu</font>
+   </textarea>
+   
    <textarea name="textarea_info_small" from="textarea_info">
        <area>0,0,500,20</area>
        <font>Font_Info_Small</font>
@@ -804,6 +809,200 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_wall">
+       <spacing>0</spacing>
+       <area>0,0,1752,955</area>
+       <searchposition>758,55</searchposition>
+       <layout>grid</layout>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>top,left</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,1712,955</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>-3,-3,219,323</area>
+               <imagetype name="WallMovieBorder">
+                   <area>-3,-3,219,323</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_movie_nfborder.png</filename>
+               </imagetype>
+               <imagetype name="coverart">
+                   <area>3,3,208,311</area>
+                   <mask>images/shared/wall_movie_mask.png</mask>
+                   <filename>images/shared/defaultVideoBigPoster.png</filename>
+               </imagetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>3,3,208,311</area>
+                   <filename>images/shared/wall_movie_nfoverlay.png</filename>
+               </imagetype>
+<!-- 
+               <statetype name="nodetype">
+                   <area>0,0,153,220</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>123,190,25,25</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,153,220</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedactive">
+               <area>-12,-12,208,311</area>
+               <imagetype name="WallMovieBorder">
+                   <area>0,0,231,335</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_movie_fborder.png</filename>
+               </imagetype>
+               <imagetype name="coverart">
+                   <area>12,12,208,311</area>
+                   <mask>images/shared/wall_movie_mask.png</mask>
+                   <filename>images/shared/defaultVideoBigPoster.png</filename>
+               </imagetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>12,12,208,311</area>
+                   <filename>images/shared/wall_movie_nfoverlay.png</filename>
+               </imagetype>
+
+<!--
+               <statetype name="nodetype">
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>150,234,30,30</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,185,269</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>0</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_wall_small">
+       <spacing>0</spacing>
+       <area>0,0,1752,955</area>
+       <searchposition>758,55</searchposition>
+       <layout>grid</layout>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>top,left</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,1712,955</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>-3,-3,219,323</area>
+               <imagetype name="WallMovieBorder">
+                   <area>-3,-3,219,323</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_movie_nfborder.png</filename>
+               </imagetype>
+               <imagetype name="coverart">
+                   <area>3,3,208,311</area>
+                   <mask>images/shared/wall_movie_mask.png</mask>
+                   <filename>images/shared/defaultVideoBigPoster.png</filename>
+               </imagetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>3,3,208,311</area>
+                   <filename>images/shared/wall_movie_nfoverlay.png</filename>
+               </imagetype>
+<!-- 
+               <statetype name="nodetype">
+                   <area>0,0,153,220</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>123,190,25,25</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,153,220</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedactive">
+               <area>-12,-12,208,311</area>
+               <imagetype name="WallMovieBorder">
+                   <area>0,0,231,335</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_movie_fborder.png</filename>
+               </imagetype>
+               <imagetype name="coverart">
+                   <area>12,12,208,311</area>
+                   <mask>images/shared/wall_movie_mask.png</mask>
+                   <filename>images/shared/defaultVideoBigPoster.png</filename>
+               </imagetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>12,12,208,311</area>
+                   <filename>images/shared/wall_movie_nfoverlay.png</filename>
+               </imagetype>
+
+<!--
+               <statetype name="nodetype">
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>150,234,30,30</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,185,269</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>0</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
    <!-- Base Default buttonlist definitions -->
     <buttonlist name="basebuttonlist">
         <area>0,0,300,250</area>
@@ -1004,6 +1203,35 @@
                </imagetype>
                <textarea name="text" from="textarea_list">
                    <area>30,0,993,50</area>
+               </textarea>
+           </state>
+           <state name="disabled" from="active" />
+           <state name="pushed" from="active">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+
+    <button name="button_dialog">
+        <area>0,0,700,50</area>
+        <statetype name="buttonstate">
+           <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_nofocus.png</filename>
+               </imagetype>
+               <textarea name="text" from="textarea_list">
+                   <area>70,0,560,50</area>
+               </textarea>
+           </state>
+           <state name="selected">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_highlight.png</filename>
+               </imagetype>
+               <textarea name="text" from="textarea_list">
+                   <area>70,0,560,50</area>
+                   <font>Font_List_Active</font>
                </textarea>
            </state>
            <state name="disabled" from="active" />
@@ -1507,6 +1735,31 @@
         </textarea>
     </textedit>
 
+    <textedit name="textedit_dialog">
+        <area>0,0,700,50</area>
+        <statetype name="background">
+            <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_nofocus.png</filename>
+               </imagetype>
+            </state>
+            <state name="selected" from="active">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_highlight.png</filename>
+               </imagetype>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>cursor.png</filename>
+        </imagetype>
+        <textarea name="text" from="textarea_list">
+            <area>70,0,560,50</area>
+        </textarea>
+    </textedit>
+
     <!-- Base definition of a textedit -->
     <textedit name="basetextedit">
         <area>0,0,375,50</area>
@@ -1565,6 +1818,27 @@
     </shape>
 
     <!-- Popup Dialogue Box -->
+    <group name="basedialogwindow" >
+        <area>0,0,700,300</area>
+        <imagetype name="dialogtop">
+            <area>0,0,700,75</area>
+            <filename>images/shared/context_top.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogmid">
+            <area>1,75,700,150</area>
+            <filename>images/shared/context_middle.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogbottom">
+            <area>0,224,700,75</area>
+            <filename>images/shared/context_bottom.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        
+    </group>
+
+
     <window name="MythPopupBox">
         <area>0,0,1076,60</area>
 
@@ -1649,84 +1923,95 @@
     </window>
 
     <window name="MythBusyDialog">
-        <area>-1,-1,580,165</area>
-        <imagetype name="backimg">
-            <filename>mythprogressdialog-background.png</filename>
-        </imagetype>
-        <imagetype name="animation">
-            <position>40,40</position>
-            <filepattern low="0" high="24">busyimages/%1.png</filepattern>
-            <delay>250</delay>
-        </imagetype>
-        <textarea name="message" from="basetextarea">
-            <area>170,20,390,125</area>
+        <area>-1,-1,700,300</area>
+
+        <group name="confirmation_dialog_window" from="basedialogwindow">
+            <position>0,0</position>        
+        </group>
+
+        <textarea name="message" from="textarea_list">
+            <area>175,75,490,150</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
             <align>allcenter</align>
         </textarea>
+
+        <imagetype name="animation">
+            <position>70,95</position>
+            <filepattern low="0" high="24">images/busyimages/%1.png</filepattern>
+            <delay>250</delay>
+        </imagetype>
+
     </window>
 
     <window name="MythProgressDialog">
-        <area>-1,-1,580,165</area>
-        <imagetype name="backimg">
-            <filename>mythprogressdialog-background.png</filename>
-        </imagetype>
-        <textarea name="message" from="basetextarea">
-            <area>20,20,540,60</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
+        <area>-1,-1,700,300</area>
+
+        <group name="confirmation_dialog_window" from="basedialogwindow">
+            <position>0,0</position>        
+        </group>
+
+        <textarea name="message" from="textarea_list">
+            <area>70,75,560,50</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
         </textarea>
+
         <progressbar name="progressbar" from="baseprogressbar">
             <position>22,80</position>
         </progressbar>
+
         <textarea name="progresstext" from="basetextarea">
             <area>30,130,200,30</area>
             <align>left,top</align>
             <value>0%</value>
         </textarea>
+
     </window>
 
     <window name="MythConfirmationDialog">
-        <area>-1,-1,580,165</area>
+        <area>-1,-1,700,300</area>
 
-        <imagetype name="backimg">
-            <filename>mythprogressdialog-background.png</filename>
-        </imagetype>
+        <group name="confirmation_dialog_window" from="basedialogwindow">
+            <position>0,0</position>        
+        </group>
 
-        <textarea name="message" from="basetextarea">
-            <area>15,15,550,90</area>
-            <align>allcenter</align>
-            <multiline>yes</multiline>
+        <textarea name="message" from="textarea_list">
+            <area>70,75,560,50</area>
+            <multiline>no</multiline>
             <cutdown>no</cutdown>
         </textarea>
 
-        <button name="cancel" from="basebutton">
-            <position>90,110</position>
+        <button name="cancel" from="button_dialog">
+            <position>0,125</position>
             <value>Cancel</value>
         </button>
 
-        <button name="ok" from="basebutton">
-            <position>338,110</position>
+        <button name="ok" from="button_dialog">
+            <position>0,175</position>
             <value>OK</value>
         </button>
     </window>
 
     <window name="MythTextInputDialog">
-        <area>-1,-1,580,165</area>
+        <area>-1,-1,700,300</area>
 
-        <imagetype name="backimg">
-            <filename>mythprogressdialog-background.png</filename>
-        </imagetype>
+        <group name="confirmation_dialog_window" from="basedialogwindow">
+            <position>0,0</position>        
+        </group>
 
-        <textarea name="message" from="basetextarea">
-            <area>20,20,540,30</area>
-            <align>allcenter</align>
+        <textarea name="message" from="textarea_list">
+            <area>70,75,560,50</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
         </textarea>
 
-        <textedit name="input" from="basetextedit">
-            <position>102,50</position>
+        <textedit name="input" from="textedit_dialog">
+            <position>0,125</position>
         </textedit>
 
-        <button name="ok" from="basebutton">
-            <position>109,110</position>
+        <button name="ok" from="button_dialog">
+            <position>0,175</position>
             <value>OK</value>
         </button>
     </window>
@@ -1784,21 +2069,17 @@
     <window name="videowindow">
 
         <shape name="shape1">
-            <area>0,0,1280,720</area>
+            <area>0,0,1920,1080</area>
             <type>box</type>
             <fill color="#000000" alpha="255"></fill>
         </shape>
 
-        <textarea name="title" from="basetextarea">
-            <area>0,335,1280,50</area>
-            <font>baselarge</font>
+        <textarea name="title" from="textarea_mainmenu">
+            <area>0,0,1920,1080</area>
             <align>allcenter</align>
             <value>Please Wait...</value>
         </textarea>
 
-        <progressbar name="progress" from="baseprogressbar">
-            <position>372,425</position>
-        </progressbar>
     </window>
 
     <window name="MythMetadataResults">

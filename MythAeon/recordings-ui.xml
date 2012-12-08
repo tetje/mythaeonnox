@@ -82,11 +82,15 @@
 	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
+
+<!-- Fix me: This does not work will when a recording has played and one returns to the main recording screen
+
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
 	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
 	            </section>
 	        </animation>       
+-->
 
 	        <imagetype name="multiplextabletbgdimg">
 	            <area>0,0,1694,846</area>
@@ -174,12 +178,15 @@
 	                <position start="1920,755" end="0,755" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
+
+<!-- Fix me: This does not work will when a recording has played and one returns to the main recording screen
+	        
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
 	                <position start="0,755" end="-1920,755" easingcurve="OutInBack" />
 	            </section>
 	        </animation>       
-
+-->
 	        <buttonlist name="recordings" from="buttonlist_multiplextv">
 	             <position>0,0</position>
 	        </buttonlist>

@@ -7,13 +7,13 @@
            <!-- ########  mainmenu.xml  ########-->
            <state name="TV">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/livetv/</filename>
+                   <filename>images/backgrounds/livetv/livetv.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_WATCH_TV">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/livetv/</filename>
+                   <filename>images/backgrounds/livetv/livetv.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -25,67 +25,67 @@
            </state>
            <state name="MUSIC">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/</filename>
+                   <filename>images/backgrounds/music/music.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_PLAY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/</filename>
+                   <filename>images/backgrounds/music/music.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VIDEO_BROWSER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/movies/</filename>
+                   <filename>images/backgrounds/movies/movies.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VIDEO">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/movies/</filename>
+                   <filename>images/backgrounds/movies/movies.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_WATCH_RECORDINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvshows/</filename>
+                   <filename>images/backgrounds/tvshows/tv_shows8.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="DISC_PLAY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/play_disc/</filename>
+                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MENU_OPTICAL_DISKS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/play_disc/</filename>
+                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="IMAGES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/pictures/</filename>
+                   <filename>images/backgrounds/pictures/picturesfanart2.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="GAME">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/programs/</filename>
+                   <filename>images/backgrounds/programs/programs4.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="WEATHER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/weather/</filename>
+                   <filename>images/backgrounds/weather/weatherfanart4.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="NEWS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/network.jpg</filename>
+                   <filename>images/backgrounds/news/weatherfanart3.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -103,25 +103,25 @@
            </state>
            <state name="SETUP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/system/</filename>
+                   <filename>images/backgrounds/system/system.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_MENU">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/system/</filename>
+                   <filename>images/backgrounds/system/system.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SHUTDOWN">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/shutdown/</filename>
+                   <filename>images/backgrounds/shutdown/shutdown.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SCHEDULE_RECORDINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/</filename>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
