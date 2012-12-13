@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="SCHEDULE">
+
+    <button>
+        <type>TV_PROGRAM_GUIDE</type>
+        <text>Guide</text>
+        <description>View the</description>
+        <action>TV_SCHEDULE</action>
+    </button>
+
+    <button>
+        <type>TV_UPCOMING_RECORDINGS</type>
+        <text>Recordings</text>
+        <description>View upcoming</description>
+        <action>TV_FIX_CONFLICTS</action>
+    </button>
+
+    <button>
+        <type>TV_RECORDING_RULES</type>
+        <text>Rules</text>
+        <description>View your recording</description>
+        <action>TV_MANAGE_RECORDING_RULES</action>
+    </button>
+
+    <button>
+        <type>TV_PREVIOUS</type>
+        <text>Recorded</text>
+        <description>See what is previously</description>
+        <action>TV_PREVIOUS</action>
+    </button>
+
+    <button>
+        <type>TV_MANUAL_SCHEDULE</type>
+        <text>Manual</text>
+        <description>Schedule programs</description>
+        <action>TV_MANUALSCHEDULE</action>
+    </button>
+
+    <button>
+        <type>TV_RECPRIORITIES</type>
+        <text>Priorities</text>
+        <description>Set your recording</description>
+        <action>MENU recpriorities_settings.xml</action>
+    </button>
+
+    <button>
+        <type>TV_PROGFIND</type>
+        <text>Programs</text>
+        <description>Find your</description>
+        <action>MENU mms_guide_finder.xml</action>
+    </button>
+
+</mythmenu>

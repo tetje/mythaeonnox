@@ -830,6 +830,7 @@
                </imagetype>
                <imagetype name="coverart">
                    <area>3,3,208,311</area>
+                   <alpha>255</alpha>
                    <mask>images/shared/wall_movie_mask.png</mask>
                    <filename>images/shared/defaultVideoBigPoster.png</filename>
                </imagetype>
@@ -837,6 +838,16 @@
                    <area>3,3,208,311</area>
                    <filename>images/shared/wall_movie_nfoverlay.png</filename>
                </imagetype>
+	            <statetype name="watchedstate">
+	                <state name="yes">
+	                    <imagetype name="yes">
+	                        <area>174,33,37,35</area>
+	                        <filename>images/shared/OverlayWatched.png</filename>
+	                    </imagetype>
+	                </state>
+	                <state name="no"/>
+ 	            </statetype>        
+
 <!-- 
                <statetype name="nodetype">
                    <area>0,0,153,220</area>
@@ -873,11 +884,21 @@
                    <area>12,12,208,311</area>
                    <mask>images/shared/wall_movie_mask.png</mask>
                    <filename>images/shared/defaultVideoBigPoster.png</filename>
+                   <alphapulse min="128" max="255" change="3"/>
                </imagetype>
                <imagetype name="WallMovieOverlay">
                    <area>12,12,208,311</area>
                    <filename>images/shared/wall_movie_nfoverlay.png</filename>
                </imagetype>
+	            <statetype name="watchedstate">
+	                <state name="yes">
+	                    <imagetype name="yes">
+	                        <area>182,42,37,35</area>
+	                        <filename>images/shared/OverlayWatched.png</filename>
+	                    </imagetype>
+	                </state>
+	                <state name="no"/>
+ 	            </statetype>        
 
 <!--
                <statetype name="nodetype">
@@ -1373,16 +1394,16 @@
        <statetype name="background">
            <state name="active">
                <imagetype name="backgroundactive">
-                   <area>0,24,1000,50</area>
+                   <area>0,24,1052,50</area>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
            </state>
            <state name="selected">
                <imagetype name="backgroundselected">
-                   <area>0,24,1000,50</area>
+                   <area>0,24,1052,50</area>
                    <preserveaspect>no</preserveaspect>
-                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
            </state>
            <state name="disabled"/>
@@ -1404,6 +1425,42 @@
            <state type="full">
                <imagetype name="LEDOn">
                    <area>878,0,122,98</area>
+                   <filename>images/shared/settings_radiobuttononfocus.png</filename>
+               </imagetype>
+           </state>
+       </statetype>
+   </checkbox>
+
+   <checkbox name="checkbox_details">
+       <area>0,0,450,98</area>
+       <statetype name="background">
+           <state name="active"/>
+           <state name="selected">
+               <imagetype name="backgroundselected">
+                   <area>0,28,450,46</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+           </state>
+           <state name="disabled"/>
+       </statetype>
+       <statetype name="checkstate">
+           <state type="off">
+               <imagetype name="LEDOff">
+                   <area>328,0,122,98</area>
+                   <filename>images/shared/settings_radiobuttonon.png</filename>
+               </imagetype>
+           </state>
+           <state type="half">
+               <imagetype name="LEDOn">
+                   <area>328,0,122,98</area>
+                   <filename>images/shared/settings_radiobuttononfocus.png</filename>
+                   <alpha>128</alpha>
+               </imagetype>
+           </state>
+           <state type="full">
+               <imagetype name="LEDOn">
+                   <area>328,0,122,98</area>
                    <filename>images/shared/settings_radiobuttononfocus.png</filename>
                </imagetype>
            </state>
@@ -1449,7 +1506,7 @@
         <statetype name="buttonitem">
             <state name="active">
                <imagetype name="backgroundactive">
-                   <area>0,24,1000,50</area>
+                   <area>0,24,1052,50</area>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
@@ -1461,9 +1518,9 @@
             </state>
             <state name="selectedactive">
                <imagetype name="backgroundselected">
-                   <area>0,24,1000,50</area>
+                   <area>0,24,1052,50</area>
                    <preserveaspect>no</preserveaspect>
-                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
                <textarea name="buttontext" from="textarea_list">
                    <area>650,32,200,32</area>
@@ -1496,6 +1553,112 @@
             <state type="full">
                 <imagetype name="upoff">
                    <area>938,0,62,98</area>
+                   <filename>images/shared/spin-up-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </spinbox>
+
+    <spinbox name="spinbox_details">
+        <area>0,0,450,98</area>
+        <layout>horizontal</layout>
+        <statetype name="buttonitem">
+            <state name="active">
+               <textarea name="buttontext" from="textarea_info">
+                   <area>0,0,250,98</area>
+                   <align>right,vcenter</align>
+               </textarea>
+            </state>
+            <state name="selectedactive">
+               <imagetype name="backgroundselected">
+                   <area>0,28,450,46</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_info">
+                   <area>0,0,250,98</area>
+                   <align>right,vcenter</align>
+               </textarea>
+            </state>
+            <state name="selectedinactive" from="active" />
+        </statetype>
+        <statetype name="upscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>327,0,62,98</area>
+                   <filename>images/shared/spin-down.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnoff">
+                   <area>327,0,62,98</area>
+                   <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>388,0,62,98</area>
+                   <filename>images/shared/spin-up.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                   <area>388,0,62,98</area>
+                   <filename>images/shared/spin-up-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </spinbox>
+
+    <spinbox name="spinbox_details_big">
+        <area>0,0,260,98</area>
+        <layout>horizontal</layout>
+        <statetype name="buttonitem">
+            <state name="active">
+               <textarea name="buttontext" from="textarea_info_big">
+                   <area>20,0,125,98</area>
+                   <align>right,vcenter</align>
+               </textarea>
+            </state>
+            <state name="selectedactive">
+               <imagetype name="backgroundselected">
+                   <area>0,19,260,60</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_info_big">
+                   <area>20,0,125,98</area>
+                   <align>right,vcenter</align>
+               </textarea>
+            </state>
+            <state name="selectedinactive" from="active" />
+        </statetype>
+        <statetype name="upscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>137,0,62,98</area>
+                   <filename>images/shared/spin-down.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnoff">
+                   <area>137,0,62,98</area>
+                   <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>198,0,62,98</area>
+                   <filename>images/shared/spin-up.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                   <area>198,0,62,98</area>
                    <filename>images/shared/spin-up-focus.png</filename>
                 </imagetype>
             </state>
@@ -1574,6 +1737,62 @@
             <position>480,21</position>
         </statetype>
     </spinbox>
+
+    <!-- Aeon definition of a list in 'selector' configuration -->
+    <buttonlist name="selector_details">
+        <area>0,0,732,46</area>
+        <layout>horizontal</layout>
+        <buttonarea>0,0,600,46</buttonarea>
+        <statetype name="buttonitem">
+            <state name="active">
+                <textarea name="buttontext" from="textarea_info">
+                   <area>20,0,590,98</area>
+                   <align>left,vcenter</align>
+               </textarea>
+            </state>
+            <state name="selectedactive">
+                <imagetype name="backgroundselected">
+                   <area>0,28,732,46</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,0,590,98</area>
+                   <align>left,vcenter</align>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="active"/>
+        </statetype>
+        <statetype name="upscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>609,0,62,98</area>
+                   <filename>images/shared/spin-down.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnoff">
+                   <area>609,0,62,98</area>
+                   <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>670,0,62,98</area>
+                   <filename>images/shared/spin-up.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                   <area>670,0,62,98</area>
+                   <filename>images/shared/spin-up-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </buttonlist>
 
     <!-- Base definition of a list in 'selector' configuration -->
     <buttonlist name="baseselector">
@@ -1758,6 +1977,71 @@
         <textarea name="text" from="textarea_list">
             <area>70,0,560,50</area>
         </textarea>
+    </textedit>
+
+    <textedit name="textedit_details_title">
+        <area>0,0,900,75</area>
+        <statetype name="background">
+            <state name="active">
+            </state>
+            <state name="selected" from="active">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,900,75</area>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>cursor.png</filename>
+        </imagetype>
+        <textarea name="text" from="textarea_title_info">
+	            <area>0,10,900,65</area>
+        </textarea>
+    </textedit>
+
+    <textedit name="textedit_details_info">
+        <area>0,0,732,46</area>
+        <statetype name="background">
+            <state name="active">
+            </state>
+            <state name="selected" from="active">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,732,46</area>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>cursor.png</filename>
+        </imagetype>
+        <textarea name="text" from="textarea_info">
+	            <area>20,0,712,46</area>
+        </textarea>
+    </textedit>
+
+    <textedit name="textedit_details_info_long">
+        <area>0,0,900,322</area>
+        <statetype name="background">
+            <state name="active">
+            </state>
+            <state name="selected" from="active">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,900,317</area>
+                   <filename>images/shared/settings_radiobuttonofffocus_square.png</filename>
+               </imagetype>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>cursor.png</filename>
+        </imagetype>
+        <textarea name="text" from="textarea_plot">
+	         <area>0,0,900,312</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
+       </textarea>
     </textedit>
 
     <!-- Base definition of a textedit -->
@@ -1980,6 +2264,7 @@
             <area>70,75,560,50</area>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
+            <scroll direction="left"/>
         </textarea>
 
         <button name="cancel" from="button_dialog">

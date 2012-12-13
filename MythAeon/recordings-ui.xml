@@ -451,66 +451,66 @@
         </textarea>
 
         <checkbox name="titles" from="checkbox_menu">
-            <position>30,55</position>
+            <position>2,55</position>
         </checkbox>
 
         <textarea name="titlelabel" from="textarea_list">
-            <area>50,87,820,32</area>
+            <area>30,87,820,32</area>
             <font>Font_List_Active</font>
             <value>Show Titles</value>
         </textarea>
 
         <checkbox name="categories" from="checkbox_menu">
-            <position>30,105</position>
+            <position>2,105</position>
         </checkbox>
 
         <textarea name="catlabel" from="titlelabel">
-            <position>50,137</position>
+            <position>30,137</position>
             <value>Show Categories</value>
         </textarea>
 
         <checkbox name="recgroups" from="checkbox_menu">
-            <position>30,155</position>
+            <position>2,155</position>
         </checkbox>
 
         <textarea name="grouplabel" from="titlelabel">
-            <position>50,187</position>
+            <position>30,187</position>
             <value>Show Recording Groups</value>
         </textarea>
 
         <checkbox name="watchlist" from="checkbox_menu">
-            <position>30,205</position>
+            <position>2,205</position>
         </checkbox>
 
         <textarea name="watchlabel" from="titlelabel">
-            <position>50,237</position>
+            <position>30,237</position>
             <value>Show Watch List</value>
         </textarea>
 
         <checkbox name="searches" from="checkbox_menu">
-            <position>30,255</position>
+            <position>2,255</position>
         </checkbox>
 
         <textarea name="searchlabel" from="titlelabel">
-            <position>50,287</position>
+            <position>30,287</position>
             <value>Show Searches</value>
         </textarea>
 
         <checkbox name="livetv" from="checkbox_menu">
-            <position>30,305</position>
+            <position>2,305</position>
         </checkbox>
 
         <textarea name="livelabel" from="titlelabel">
-            <position>50,337</position>
+            <position>30,337</position>
             <value>Show LiveTV</value>
         </textarea>
 
         <checkbox name="watched" from="checkbox_menu">
-            <position>30,355</position>
+            <position>2,355</position>
         </checkbox>
 
         <textarea name="watchedlabel" from="titlelabel">
-            <position>50,387</position>
+            <position>30,387</position>
             <value>Show Watched Programs</value>
         </textarea>
 
@@ -642,20 +642,20 @@
         </textarea>
 
         <spinbox name="season" from="spinbox_menu">
-            <position>30,183</position>
+            <position>2,183</position>
         </spinbox>
 
         <textarea name="seaslabel" from="titlelabel">
-            <position>50,205</position>
+            <position>30,205</position>
             <value>Season:</value>
         </textarea>
 
         <spinbox name="episode" from="spinbox_menu">
-            <position>30,233</position>
+            <position>2,233</position>
         </spinbox>
 
         <textarea name="eplabel" from="titlelabel">
-            <position>50,255</position>
+            <position>30,255</position>
             <value>Episode:</value>
         </textarea>
 

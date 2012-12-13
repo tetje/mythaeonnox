@@ -867,191 +867,300 @@
 
     <window name="edit_metadata">
 
-        <textarea name="title" from="basetextarea">
-            <area>10,20,760,50</area>
-            <value>Edit Video Information</value>
-            <align>hcenter,vcenter</align>
-            <font>baselarge</font>
+        <area>0,0,1920,1080</area>
+
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+      
+        <imagetype name="coverart">
+            <area>0,0,730,1080</area>
+            <filename>images/shared/defaultVideoBigPoster.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+     
+        <statetype name="watchedstate">
+            <state name="yes">
+                <imagetype name="yes">
+                    <area>662,100,76,71</area>
+                    <filename>images/shared/OverlayWatched.png</filename>
+                </imagetype>
+            </state>
+            <state name="no"/>
+        </statetype>
+
+        <imagetype name="infopanelshade">
+            <area>728,0,1192,1080</area>
+            <filename>images/shared/movieinfogradient.png</filename>
+        </imagetype>
+       
+        <imagetype name="infopanel">
+            <area>728,0,1192,1080</area>
+            <filename>images/shared/info_rightpaneltop.png</filename>
+        </imagetype>
+			
+        <group name="infopaneldetails">
+           <area>878,70,1042,1010</area>   
+	        <imagetype name="infopanellines">
+	            <area>0,88,1042,853</area>
+	            <filename>images/shared/info_panellines.png</filename>
+	        </imagetype>
+
+	        <imagetype name="infopanel_hline1">
+	            <area>0,297,1042,4</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/info_panel_hline.png</filename>
+	        </imagetype>
+
+	        <imagetype name="infopanel_hline2">
+	            <area>0,341,1042,4</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/info_panel_hline.png</filename>
+	        </imagetype>
+
+	        <imagetype name="infopanel_hline3">
+	            <area>0,384,1042,4</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/info_panel_hline.png</filename>
+	        </imagetype>
+
+	        <imagetype name="infopanel_vline">
+	            <area>445,846,6,95</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/info_panel_vline.png</filename>
+	        </imagetype>
+
+	        <imagetype name="fanart">
+	            <area>287,90,139,78</area>
+	            <preserveaspect>no</preserveaspect>
+	            <mask>images/shared/multiplex_tvmask_tiny.png</mask>
+	        </imagetype>
+            <imagetype name="fanartglass">
+                <area>287,90,139,78</area>
+                <alpha>255</alpha>
+                <filename>images/shared/multiplex_tvglass.png</filename>
+                <preserveaspect>no</preserveaspect>
+            </imagetype>
+
+	        <imagetype name="banner">
+	            <area>450,90,422,78</area>
+	            <preserveaspect>no</preserveaspect>
+	            <mask>images/shared/multiplex_bannermask_tiny.png</mask>
+	        </imagetype>
+            <imagetype name="bannerglass">
+                <area>450,90,422,78</area>
+                <alpha>255</alpha>
+                <filename>images/shared/multiplex_tvglass.png</filename>
+                <preserveaspect>no</preserveaspect>
+            </imagetype>
+
+           <!-- labels -->
+	        <textarea name="subtitlelbl" from="textarea_label">
+	            <area>0,168,160,46</area>
+	            <value>Subtitle</value>
+	        </textarea>
+
+	        <textarea name="inet_reflbl" from="subtitlelbl">
+	            <position>0,212</position>
+	            <value>Movie/TV DB</value>
+	        </textarea>
+	        
+	        <textarea name="catagorylbl" from="subtitlelbl">
+	            <position>0,255</position>
+	            <value>Catagory</value>
+	        </textarea>
+
+	        <textarea name="childlbl" from="subtitlelbl">
+	            <position>0,298</position>
+	            <value>Play next</value>
+	        </textarea>
+
+	        <textarea name="parentallbl" from="subtitlelbl">
+	            <position>0,341</position>
+	            <value>Parental</value>
+	        </textarea>
+	        
+	        <textarea name="playercmdlbl" from="subtitlelbl">
+	            <position>0,383</position>
+	            <value>Player CMD</value>
+	        </textarea>
+	        	        
+	        <!-- widgets -->
+	        <textedit name="title_edit" from="textedit_details_title">
+	            <position>0,10</position>
+	        </textedit>
+
+	        <spinbox name="year_spin" from="spinbox_details_big">
+	            <position>0,80</position>
+	        </spinbox>
+
+	        <textedit name="subtitle_edit" from="textedit_details_info">
+	            <position>168,169</position>
+	        </textedit>
+	
+	        <textedit name="inetref_edit" from="textedit_details_info">
+	            <position>168,212</position>
+	        </textedit>
+	        
+	        <buttonlist name="category_select" from="selector_details">
+	            <position>168,229</position>
+	        </buttonlist>
+	
+	        <buttonlist name="child_select" from="selector_details">
+	            <position>168,272</position>
+	        </buttonlist>
+	
+	        <buttonlist name="level_select" from="selector_details">
+	            <position>168,315</position>
+	        </buttonlist>
+		
+	        <textedit name="player_edit" from="textedit_details_info">
+	            <position>168,386</position>
+	        </textedit>
+	        
+	        <textarea name="firstrowbuttonslbl" from="subtitlelbl">
+	            <position>0,435</position>
+	            <value>Net Search</value>
+	        </textarea>
+
+           <group name="firstrowbuttons">
+           
+              <area>243,430,1000,50</area>
+              
+		        <button name="net_coverart_button" from="button_info_panel">
+		            <value>Coverart</value>
+		            <position>0,0</position>
+		        </button>
+		
+		        <button name="net_fanart_button" from="button_info_panel">
+		            <value>Fanart</value>
+		            <position>150,0</position>
+		        </button>
+
+		        <button name="net_banner_button" from="button_info_panel">
+		            <value>Banner</value>
+		            <position>300,0</position>
+		        </button>
+
+		        <button name="net_screenshot_button" from="button_info_panel">
+		            <value>Screen</value>
+		            <position>450,0</position>
+		        </button>
+	        </group>
+      
+	        <textarea name="secondrowbuttonslbl" from="subtitlelbl">
+	            <position>0,475</position>
+	            <value>Local Search</value>
+	        </textarea>
+
+           <group name="secondrowbuttons">
+           
+              <area>168,470,1000,50</area>
+              
+		        <button name="coverart_button" from="button_info_panel">
+		            <value>Coverart</value>
+		            <position>0,0</position>
+		        </button>
+		
+		        <button name="fanart_button" from="button_info_panel">
+		            <value>Fanart</value>
+		            <position>150,0</position>
+		        </button>
+
+		        <button name="banner_button" from="button_info_panel">
+		            <value>Banner</value>
+		            <position>300,0</position>
+		        </button>
+
+		        <button name="screenshot_button" from="button_info_panel">
+		            <value>Screen</value>
+		            <position>450,0</position>
+		        </button>
+
+		        <button name="trailer_button" from="button_info_panel">
+		            <value>Trailer</value>
+		            <position>600,0</position>
+		        </button>
+
+	        </group>
+
+	        <textedit name="description_edit" from="textedit_details_info_long">
+	            <position>0,525</position>
+	        </textedit>
+	        
+	        <checkbox name="browse_check" from="checkbox_details">
+	            <position>0,819</position>
+	        </checkbox>
+	
+	        <textarea name="browselbl" from="textarea_info">
+	            <area>20,819,260,98</area>
+	            <value>Visible</value>
+	        </textarea>
+	
+	        <checkbox name="watched_check" from="checkbox_details">
+	            <position>0,867</position>
+	        </checkbox>
+	
+	        <textarea name="watchedlbl" from="browselbl">
+	            <position>20,867</position>
+	            <value>Watched</value>
+	        </textarea>
+	
+	        <spinbox name="season" from="spinbox_details">
+	            <position>450,819</position>
+	        </spinbox>
+
+	        <textarea name="seasonlbl" from="textarea_info">
+	            <area>470,819,260,98</area>
+	            <value>Season</value>
+	        </textarea>
+	
+	        <spinbox name="episode" from="spinbox_details">
+	            <position>450,867</position>
+	        </spinbox>
+	
+	        <textarea name="episodelbl" from="seasonlbl">
+	            <position>470,867</position>
+	            <value>Episode</value>
+	        </textarea>	
+	        
+	        <textarea name="navigationlbl" from="subtitlelbl">
+	            <position>0,940</position>
+	            <value>Navigate</value>
+	        </textarea>
+
+	        <button name="done_button" from="button_info_panel">
+	           <position>168,940</position>
+	           <value>Save</value>
+	        </button>
+     	
+        </group>
+
+         <!-- mandatory field which are not used in this theme -->
+        <textarea name="coverart_text" from="textarea_label">
+            <area>0,0,1,1</area>
+            <alpha>0</alpha>
+        </textarea>
+        <textarea name="screenshot_text" from="coverart_text">
+            <position>0,0</position>
+        </textarea>
+        <textarea name="banner_text" from="coverart_text">
+            <position>0,0</position>
+        </textarea>
+        <textarea name="fanart_text" from="coverart_text">
+            <position>0,0</position>
+        </textarea>
+        <textarea name="trailer_text" from="coverart_text">
+            <position>0,0</position>
         </textarea>
 
-        <!-- Labels  -->
-
-        <textarea name="title_text" from="basetextarea">
-            <area>50,70,250,40</area>
-            <value>Title:</value>
-            <align>right,top</align>
-        </textarea>
-
-        <textarea name="subtitle_text" from="basetextarea">
-            <area>50,128,250,40</area>
-            <value>Subtitle:</value>
-            <align>right,top</align>
-        </textarea>
-
-        <textarea name="season_text" from="basetextarea">
-            <area>50,175,250,40</area>
-            <value>Season:</value>
-            <align>right,top</align>
-        </textarea>
-
-        <textarea name="episode_text" from="basetextarea">
-            <area>370,175,150,40</area>
-            <value>Episode:</value>
-            <align>right,top</align>
-        </textarea>
-
-        <textarea name="category_text" from="title_text">
-            <area>370,222,150,40</area>
-            <align>right</align>
-            <value>Category:</value>
-        </textarea>
-
-        <textarea name="level_text" from="title_text">
-            <area>20,222,200,40</area>
-            <align>right</align>
-            <value>Parental Control:</value>
-        </textarea>
-
-        <textarea name="child_text" from="title_text">
-            <area>20,267,200,40</area>
-            <align>right</align>
-            <value>File to Always Play Next:</value>
-        </textarea>
-
-        <textarea name="browse_text" from="title_text">
-            <area>480,265,200,40</area>
-            <align>right</align>
-            <value>Visible:</value>
-        </textarea>
-
-        <textarea name="watched_text" from="title_text">
-            <area>480,304,200,40</area>
-            <align>right</align>
-            <value>Watched:</value>
-        </textarea>
-
-        <textarea name="trailer_text_label" from="title_text">
-            <position>450,434</position>
-            <value>Trailer:</value>
-        </textarea>
-
-        <textarea name="player_text" from="title_text">
-            <position>50,487</position>
-            <value>Unique Player Command:</value>
-        </textarea>
-
-        <!-- Widgets -->
-
-        <textedit name="title_edit" from="basetextedit">
-            <position>310,60</position>
-        </textedit>
-
-        <textedit name="subtitle_edit" from="basetextedit">
-            <position>310,116</position>
-        </textedit>
-
-        <spinbox name="season" from="basespinbox">
-            <position>310,171</position>
-        </spinbox>
-
-        <spinbox name="episode" from="basespinbox">
-            <position>530,171</position>
-        </spinbox>
-
-        <buttonlist name="level_select" from="baseselector">
-            <position>230,215</position>
-        </buttonlist>
-
-        <buttonlist name="category_select" from="baseselector">
-            <position>530,215</position>
-        </buttonlist>
-
-        <buttonlist name="child_select" from="baseselector">
-            <position>230,260</position>
-        </buttonlist>
-
-        <checkbox name="browse_check" from="basecheckbox">
-            <position>680,263</position>
-        </checkbox>
-
-        <checkbox name="watched_check" from="basecheckbox">
-            <position>680,302</position>
-        </checkbox>
-
-        <button name="net_coverart_button" from="basebutton">
-            <position>160,305</position>
-            <value>Coverart</value>
-        </button>
-
-        <button name="coverart_button" from="basesearchbutton">
-            <position>310,310</position>
-        </button>
-
-        <textarea name="coverart_text" from="basetextarea">
-            <area>350,314,250,40</area>
-            <value>/path/to/the/thing.jpg</value>
-        </textarea>
-
-        <button name="net_screenshot_button" from="basebutton">
-            <position>160,345</position>
-            <value>Screenshots</value>
-        </button>
-
-        <button name="screenshot_button" from="basesearchbutton">
-            <position>310,350</position>
-        </button>
-
-        <textarea name="screenshot_text" from="basetextarea">
-            <area>350,354,250,40</area>
-            <value>/path/to/the/thing.jpg</value>
-        </textarea>
-
-        <button name="net_banner_button" from="basebutton">
-            <position>160,385</position>
-            <value>Banners</value>
-        </button>
-
-        <button name="banner_button" from="basesearchbutton">
-            <position>310,390</position>
-        </button>
-
-        <textarea name="banner_text" from="basetextarea">
-            <area>350,394,250,40</area>
-            <value>/path/to/the/thing.jpg</value>
-        </textarea>
-
-        <button name="net_fanart_button" from="basebutton">
-            <position>160,425</position>
-            <value>Fanart</value>
-        </button>
-
-        <button name="fanart_button" from="basesearchbutton">
-            <position>310,430</position>
-        </button>
-
-        <textarea name="fanart_text" from="basetextarea">
-            <area>350,434,250,40</area>
-            <value>/path/to/the/thing.jpg</value>
-        </textarea>
-
-        <button name="trailer_button" from="basesearchbutton">
-            <position>710,430</position>
-        </button>
-
-        <textarea name="trailer_text" from="basetextarea">
-            <area>350,447,0,0</area>
-            <value>/path/to/the/thing.jpg</value>
-        </textarea>
-
-
-        <textedit name="player_edit" from="basetextedit">
-            <position>310,477</position>
-        </textedit>
-
-        <button name="done_button" from="basebutton">
-            <position>310,537</position>
-            <value>Done</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
