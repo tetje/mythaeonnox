@@ -258,7 +258,7 @@
                <area>62,860,800,30</area>
            </textarea>
 
-<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
 
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
@@ -347,7 +347,7 @@
 	
 	        </group>
 
-<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
 
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
@@ -389,7 +389,7 @@
 	            </section>
 	        </animation>
 
-<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
 
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
@@ -508,7 +508,7 @@
 	            </section>
 	        </animation>
 
-<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
 
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
@@ -590,26 +590,26 @@
         </group>
 
         <group name="moviewallgroup">
-           <area>0,55,1920,1020</area>
+           <area>0,30,1920,1020</area>
 
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="0,-1075" end="0,55" easingcurve="InOutBack" />
+	                <position start="0,-1075" end="0,30" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
-	        <buttonlist name="videos" from="buttonlist_wall">
-	            <position>104,0</position>
+	        <buttonlist name="videos" from="buttonlist_wall_small">
+	            <position>24,0</position>
 	        </buttonlist>
 
 	        <textarea name="title" from="textarea_title">
-	            <area>510,970,900,45</area>
+	            <area>510,985,900,45</area>
 	            <align>allcenter</align>
 	            <template>%title%% - |subtitle%</template>
 	        </textarea>
 
 	        <group name="wallinfodetails">
-	           <area>1500,960,250,60</area>
+	           <area>1500,975,250,60</area>
 		        <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
 		            <area>0,0,100,60</area>
 		            <align>top,hcenter</align>
@@ -805,6 +805,19 @@
     </window>
 
     <window name="file_associations">
+        <area>-1,-1,1850,1010</area>
+        
+        <imagetype name="settingpanelbgd">
+            <area>0,0,1850,1010</area>
+            <filename>images/shared/settings_panelback.png</filename>
+        </imagetype>
+
+        <imagetype name="settingpanelfnt">
+            <area>29,9,1792,975</area>
+            <filename>images/shared/settings_panelfront.png</filename>
+        </imagetype>
+
+
         <textarea name="title" from="basetextarea">
             <area>10,10,780,50</area>
             <value>MythVideo File Associations</value>
@@ -937,7 +950,7 @@
 	            <preserveaspect>no</preserveaspect>
 	            <mask>images/shared/multiplex_tvmask_tiny.png</mask>
 	        </imagetype>
-            <imagetype name="fanartglass">
+            <imagetype name="fanartglass" depends="fanart">
                 <area>287,90,139,78</area>
                 <alpha>255</alpha>
                 <filename>images/shared/multiplex_tvglass.png</filename>
@@ -949,7 +962,7 @@
 	            <preserveaspect>no</preserveaspect>
 	            <mask>images/shared/multiplex_bannermask_tiny.png</mask>
 	        </imagetype>
-            <imagetype name="bannerglass">
+            <imagetype name="bannerglass" depends="banner">
                 <area>450,90,422,78</area>
                 <alpha>255</alpha>
                 <filename>images/shared/multiplex_tvglass.png</filename>

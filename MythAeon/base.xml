@@ -3,6 +3,8 @@
 <mythuitheme>
 
     <!-- Base MythAeon Font Definitions -->
+    
+    <!-- Fonts for the main menu -->
     <fontdef name="Font_MainMenu" face="ScoutCond">
         <pixelsize>142</pixelsize>
         <color>#ffffff</color>
@@ -22,6 +24,8 @@
         <pixelsize>25</pixelsize>
     </fontdef>
 
+
+    <!-- Fonts for the main screens in recordings, video, music, etc -->
     <fontdef name="Font_Title" face="Aeon_Settings">
         <pixelsize>45</pixelsize>
 <!--
@@ -93,6 +97,27 @@
     <fontdef name="Font_List_Active" from="Font_List_Selected">
         <color>#ececec</color>
     </fontdef>
+
+    <!-- Fonts for all the settings dialog windows -->
+    <fontdef name="Font_Title_Settings" face="Aeon_Settings">
+        <pixelsize>40</pixelsize>
+        <color>#ffffff</color>
+    </fontdef>
+        
+    <fontdef name="Font_Button_Settings" face="ScoutCond">
+        <pixelsize>27</pixelsize>
+        <color>#ffffff</color>
+    </fontdef>
+    
+    <fontdef name="Font_Option_Settings" face="Aeon Title">
+        <pixelsize>27</pixelsize>
+        <color>#ffffff</color>
+    </fontdef>
+    
+    <fontdef name="Font_Label_Settings" from="Font_Button_Settings">
+        <weight>light</weight>
+    </fontdef>
+    
 
    <!-- Base MythAeon clock definition -->
    <group name="defaultclockup">
@@ -816,7 +841,7 @@
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
        <arrange>stack</arrange>
-       <align>top,left</align>
+       <align>bottom,left</align>
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <buttonarea>0,0,1712,955</buttonarea>
@@ -929,30 +954,30 @@
 
    <buttonlist name="buttonlist_wall_small">
        <spacing>0</spacing>
-       <area>0,0,1752,955</area>
+       <area>0,0,1872,942</area>
        <searchposition>758,55</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
        <arrange>stack</arrange>
-       <align>top,left</align>
+       <align>bottom,hcenter</align>
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
-       <buttonarea>0,0,1712,955</buttonarea>
+       <buttonarea>0,0,1872,945</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
-               <area>-3,-3,219,323</area>
+               <area>-2,-2,160,236</area>
                <imagetype name="WallMovieBorder">
-                   <area>-3,-3,219,323</area>
+                   <area>0,0,160,236</area>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/wall_movie_nfborder.png</filename>
                </imagetype>
                <imagetype name="coverart">
-                   <area>3,3,208,311</area>
-                   <mask>images/shared/wall_movie_mask.png</mask>
+                   <area>5,5,150,226</area>
+                   <mask>images/shared/wall_movie_mask_small.png</mask>
                    <filename>images/shared/defaultVideoBigPoster.png</filename>
                </imagetype>
                <imagetype name="WallMovieOverlay">
-                   <area>3,3,208,311</area>
+                   <area>5,5,150,226</area>
                    <filename>images/shared/wall_movie_nfoverlay.png</filename>
                </imagetype>
 <!-- 
@@ -981,19 +1006,20 @@
                <alpha>0</alpha>
            </state>
            <state name="selectedactive">
-               <area>-12,-12,208,311</area>
+               <area>-6,-6,168,244</area>
                <imagetype name="WallMovieBorder">
-                   <area>0,0,231,335</area>
+                   <area>0,0,168,244</area>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/wall_movie_fborder.png</filename>
                </imagetype>
                <imagetype name="coverart">
-                   <area>12,12,208,311</area>
-                   <mask>images/shared/wall_movie_mask.png</mask>
+                   <area>9,9,150,226</area>
+                   <mask>images/shared/wall_movie_mask_small.png</mask>
                    <filename>images/shared/defaultVideoBigPoster.png</filename>
+                   <alphapulse min="128" max="255" change="3"/>
                </imagetype>
                <imagetype name="WallMovieOverlay">
-                   <area>12,12,208,311</area>
+                   <area>9,9,150,226</area>
                    <filename>images/shared/wall_movie_nfoverlay.png</filename>
                </imagetype>
 
