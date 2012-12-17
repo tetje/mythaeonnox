@@ -1580,6 +1580,48 @@
        </statetype>
    </checkbox>
 
+   <checkbox name="checkbox_settings_halfwidth">
+       <area>0,0,700,72</area>
+       <statetype name="background">
+           <state name="active">
+               <imagetype name="backgroundactive">
+                   <area>0,22,700,50</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+           </state>
+           <state name="selected">
+               <imagetype name="backgroundselected">
+                   <area>0,0,700,72</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+           </state>
+           <state name="disabled"/>
+       </statetype>
+       <statetype name="checkstate">
+           <state type="off">
+               <imagetype name="LEDOff">
+                   <area>578,-13,122,98</area>
+                   <filename>images/shared/settings_radiobuttonon.png</filename>
+               </imagetype>
+           </state>
+           <state type="half">
+               <imagetype name="LEDOn">
+                   <area>578,-13,122,98</area>
+                   <filename>images/shared/settings_radiobuttononfocus.png</filename>
+                   <alpha>128</alpha>
+               </imagetype>
+           </state>
+           <state type="full">
+               <imagetype name="LEDOn">
+                   <area>578,-13,122,98</area>
+                   <filename>images/shared/settings_radiobuttononfocus.png</filename>
+               </imagetype>
+           </state>
+       </statetype>
+   </checkbox>
+
     <!-- Base definition of checkbox -->
     <checkbox name="basecheckbox">
         <position>0,0</position>
@@ -1838,6 +1880,66 @@
         </statetype>
     </spinbox>
 
+    <spinbox name="spinbox_settings_halfwidth">
+        <area>0,0,700,72</area>
+        <layout>horizontal</layout>
+        <statetype name="buttonitem">
+            <state name="active">
+               <imagetype name="backgroundactive">
+                   <area>0,22,700,50</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_settings_option">
+                   <area>350,0,200,72</area>
+                   <font>Font_List_Active</font>
+                   <align>right,vcenter</align>
+               </textarea>
+            </state>
+            <state name="selectedactive">
+               <imagetype name="backgroundselected">
+                   <area>0,0,700,72</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_settings_option">
+                   <area>350,0,200,72</area>
+                   <font>Font_List_Active</font>
+                   <align>right,vcenter</align>
+               </textarea>
+            </state>
+            <state name="selectedinactive" from="active" />
+        </statetype>
+        <statetype name="upscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>577,-13,62,98</area>
+                   <filename>images/shared/spin-down.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnoff">
+                   <area>577,-13,62,98</area>
+                   <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>638,-13,62,98</area>
+                   <filename>images/shared/spin-up.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                   <area>638,-13,62,98</area>
+                   <filename>images/shared/spin-up-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </spinbox>
+
    <!-- Base definition of a spinbox -->
     <spinbox name="basespinbox">
         <area>0,0,90,40</area>
@@ -2021,6 +2123,68 @@
             <state type="full">
                 <imagetype name="upoff">
                    <area>1338,-13,62,98</area>
+                   <filename>images/shared/spin-up-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </buttonlist>
+
+    <buttonlist name="selector_settings_halfwidth">
+        <area>0,0,700,72</area>
+        <layout>horizontal</layout>
+        <buttonarea>0,0,550,72</buttonarea>
+        <statetype name="buttonitem">
+            <state name="active">
+               <imagetype name="backgroundactive">
+                   <area>0,22,700,50</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_settings_option">
+                   <area>250,0,300,72</area>
+                   <align>left,vcenter</align>
+                   <cutdown>yes</cutdown>
+               </textarea>
+            </state>
+            <state name="selectedactive">
+                <imagetype name="backgroundselected">
+                   <area>0,0,700,72</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_settings_option">
+                   <area>250,0,300,72</area>
+                   <align>left,vcenter</align>
+                   <scroll direction="left"/>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="active"/>
+        </statetype>
+        <statetype name="upscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>577,-13,62,98</area>
+                   <filename>images/shared/spin-down.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnoff">
+                   <area>577,-13,62,98</area>
+                   <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>638,-13,62,98</area>
+                   <filename>images/shared/spin-up.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                   <area>638,-13,62,98</area>
                    <filename>images/shared/spin-up-focus.png</filename>
                 </imagetype>
             </state>
@@ -2302,6 +2466,30 @@
         </textarea>
     </textedit>
 
+    <textedit name="textedit_settings_halfwidth">
+        <area>0,0,700,72</area>
+        <statetype name="background">
+            <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,22,700,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+            </state>
+            <state name="selected" from="active">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,700,72</area>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>cursor.png</filename>
+        </imagetype>
+        <textarea name="text" from="textarea_settings_option">
+            <area>250,0,440,72</area>
+        </textarea>
+    </textedit>
 
     <!-- Base definition of a textedit -->
     <textedit name="basetextedit">
@@ -2377,10 +2565,21 @@
             <area>0,224,700,75</area>
             <filename>images/shared/context_bottom.png</filename>
             <preserveaspect>no</preserveaspect>
-        </imagetype>
-        
+        </imagetype>        
     </group>
 
+    <group name="basesettingswindow" >
+        <area>0,0,1850,1010</area>
+        <imagetype name="settingpanelbgd">
+            <area>0,0,1850,1010</area>
+            <filename>images/shared/settings_panelback.png</filename>
+        </imagetype>
+
+        <imagetype name="settingpanelfnt">
+            <area>29,9,1792,975</area>
+            <filename>images/shared/settings_panelfront.png</filename>
+        </imagetype>
+    </group>
 
     <window name="MythPopupBox">
         <area>0,0,1076,60</area>
