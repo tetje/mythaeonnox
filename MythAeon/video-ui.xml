@@ -817,65 +817,76 @@
             <filename>images/shared/settings_panelfront.png</filename>
         </imagetype>
 
+        <group name="settings_pannel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="titlepanel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Associate file extentions with player</value>
+	        </textarea>
+	
+	        <textarea name="extension_text" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Extension:</value>
+	        </textarea>
+	
+	        <textarea name="command_text" from="extension_text">
+	            <position>20,192</position>
+	            <value>Command:</value>
+	        </textarea>
+	
+	        <textarea name="default_text" from="extension_text">
+	            <position>20,264</position>
+	            <value>Use default player:</value>
+	        </textarea>
+	
+	        <textarea name="ignore_text" from="extension_text">
+	            <position>20,336</position>
+	            <value>Ignore:</value>
+	        </textarea>
+	
+	        <buttonlist name="extension_select" from="selector_settings">
+	            <position>0,120</position>
+	        </buttonlist>
+	
+	        <textedit name="command" from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+	
+	        <checkbox name="default_check" from="checkbox_settings">
+	            <position>0,264</position>
+	        </checkbox>
+	
+	        <checkbox name="ignore_check" from="checkbox_settings">
+	            <position>0,336</position>
+	        </checkbox>
+        </group>
 
-        <textarea name="title" from="basetextarea">
-            <area>10,10,780,50</area>
-            <value>MythVideo File Associations</value>
-            <font>baselarge</font>
-            <align>hcenter,vcenter</align>
-        </textarea>
+        <group name="settings_menu">
+           <area>30,28,324,952</area>
 
-        <textarea name="extension_text" from="basetextarea">
-            <area>90,200,200,40</area>
-            <value>Extension:</value>
-            <align>right,vcenter</align>
-        </textarea>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>File Types</value>
+	        </textarea>
+	
+	        <button name="new_button" from="button_settings">
+	            <position>0,120</position>
+	            <value>New</value>
+	        </button>
+	
+	        <button name="delete_button" from="button_settings">
+	            <position>0,192</position>
+	            <value>Delete</value>
+	        </button>
 
-        <textarea name="command_text" from="extension_text">
-            <position>90,260</position>
-            <value>Command:</value>
-        </textarea>
+	        <button name="done_button" from="button_settings">
+	            <position>0,264</position>
+	            <value>Done</value>
+	        </button>
+	
+        </group>
 
-        <textarea name="default_text" from="extension_text">
-            <position>90,320</position>
-            <value>Use default player:</value>
-        </textarea>
-
-        <textarea name="ignore_text" from="extension_text">
-            <position>90,380</position>
-            <value>Ignore:</value>
-        </textarea>
-
-        <buttonlist name="extension_select" from="baseselector">
-            <position>300,200</position>
-        </buttonlist>
-
-        <textedit name="command" from="basetextedit">
-            <position>300,255</position>
-        </textedit>
-
-        <checkbox name="default_check" from="basecheckbox">
-            <position>300,322</position>
-        </checkbox>
-
-        <checkbox name="ignore_check" from="basecheckbox">
-            <position>300,382</position>
-        </checkbox>
-
-        <button name="done_button" from="basebutton">
-            <position>600,520</position>
-            <value>Done</value>
-        </button>
-
-        <button name="new_button" from="basebutton">
-            <position>430,520</position>
-            <value>New</value>
-        </button>
-
-        <button name="delete_button" from="basebutton">
-            <position>50,520</position>
-            <value>Delete</value>
-        </button>
     </window>
 
     <window name="edit_metadata">
