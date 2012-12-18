@@ -1069,7 +1069,67 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_dialog_big">
+       <area>0,0,700,400</area>
+       <align>top,hcenter</align>
+       <layout>vertical</layout>
+       <wrapstyle>selection</wrapstyle>
+       <arrange>stack</arrange>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,700,400</buttonarea>
+       <statetype name="buttonitem">
+           <area>0,0,700,100</area>
+           <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,50,700,50</area>
+                   <filename>images/shared/context_nofocus.png</filename>
+               </imagetype>
+               <imagetype name="buttonimage">
+                   <area>32,0,178,100</area>
+                   <preserveaspect>yes</preserveaspect>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>230,0,460,100</area>
+                   <align>left,vcenter</align>
+               </textarea>
+               <textarea name="resolution" from="buttontext" depends="!buttontext"/>
+           </state>
+           <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,700,100</area>
+                   <filename>images/shared/context_highlight.png</filename>
+               </imagetype>
+               <imagetype name="buttonimage">
+                   <area>32,0,178,100</area>
+                   <preserveaspect>yes</preserveaspect>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>230,0,460,100</area>
+                   <font>Font_List_Active</font>
+                   <align>left,vcenter</align>
+               </textarea>
+               <textarea name="resolution" from="buttontext" depends="!buttontext"/>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
+    <!-- Base definition of a shape used as a background to many widgets -->
+    <shape name="basewidgetshape">
+        <area>0,0,100%,100%</area>
+        <type>roundbox</type>
+        <cornerradius>4</cornerradius>
+        <fill color="#CCCCCC" alpha="120" />
+        <line color="#FFFFFF" width="3" />
+    </shape>
+
+    <shape name="baseselectedwidgetshape" from="basewidgetshape">
+        <fill color="#43b038" alpha="200" />
+    </shape>
+   
    <!-- Base Default buttonlist definitions -->
+
     <buttonlist name="basebuttonlist">
         <area>0,0,300,250</area>
         <layout>vertical</layout>
@@ -1283,7 +1343,7 @@
         <statetype name="buttonstate">
            <state name="active">
                <imagetype name="Listpanelline">
-                   <area>0,0,700,50</area>
+                   <area>0,50,700,50</area>
                    <filename>images/shared/context_nofocus.png</filename>
                </imagetype>
                <textarea name="text" from="textarea_list">
@@ -1355,7 +1415,6 @@
            </state>
         </statetype>
     </button>
-
     
     <!-- Base definition of a button -->
     <button name="basebutton">
@@ -2568,6 +2627,25 @@
         </imagetype>        
     </group>
 
+    <group name="basedialogwindowbig" >
+        <area>0,0,700,550</area>
+        <imagetype name="dialogtop">
+            <area>0,0,700,75</area>
+            <filename>images/shared/context_top.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogmid">
+            <area>1,75,700,400</area>
+            <filename>images/shared/context_middle.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogbottom">
+            <area>0,474,700,75</area>
+            <filename>images/shared/context_bottom.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>        
+    </group>
+
     <group name="basesettingswindow" >
         <area>0,0,1850,1010</area>
         <imagetype name="settingpanelbgd">
@@ -2826,96 +2904,26 @@
     </window>
 
     <window name="MythMetadataResults">
-        <area>-1,-1,413,426</area>
+        <area>-1,-1,700,540</area>
 
-        <imagetype name="box">
-            <filename>mv_results_popup.png</filename>
-        </imagetype>
+        <group name="movie_selection_window" from="basedialogwindowbig">
+            <position>0,0</position>        
+        </group>
 
-        <buttonlist name="results" from="basebuttonlist">
-            <area>20,22,357,378</area>
-            <showarrow>no</showarrow>
+        <buttonlist name="results" from="buttonlist_dialog_big">
+            <position>0,75</position>
         </buttonlist>
     </window>
 
     <window name="MythArtworkResults">
-        <area>-1,-1,413,426</area>
+        <area>-1,-1,700,540</area>
 
-        <imagetype name="box">
-            <area>0,0,413,426</area>
-            <filename>mv_results_popup.png</filename>
-        </imagetype>
+        <group name="movie_selection_window" from="basedialogwindowbig">
+            <position>0,0</position>        
+        </group>
 
-        <buttonlist name="results">
-            <area>20,22,363,378</area>
-            <layout>vertical</layout>
-            <spacing>5</spacing>
-            <wrapstyle>selection</wrapstyle>
-            <buttonarea>0,0,100%,97%</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,100%,85</area>
-                    <shape name="buttonbackground">
-                        <area>0,0,100%,100%</area>
-                        <fill style="gradient">
-                            <gradient start="#505050" end="#000000" alpha="200" direction="vertical"  />
-                        </fill>
-                    </shape>
-                    <imagetype name="buttonimage">
-                        <area>5,2,150,80</area>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>
-                    <textarea name="resolution">
-                        <area>160,0,175,85</area>
-                        <font>basesmall</font>
-                        <cutdown>yes</cutdown>
-                        <align>left,vcenter</align>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="buttonbackground">
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="255" />
-                        </fill>
-                    </shape>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="buttonbackground">
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="100" />
-                        </fill>
-                    </shape>
-                    <textarea name="resolution">
-                        <font>basesmallpurple</font>
-                    </textarea>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>10,96%</position>
-                <state type="off">
-                    <imagetype name="upon">
-                        <filename>lb-uparrow-reg.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff">
-                        <filename>lb-uparrow-sel.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>40,96%</position>
-                <state type="off">
-                    <imagetype name="dnon">
-                        <filename>lb-dnarrow-reg.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="dnoff">
-                        <filename>lb-dnarrow-sel.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
+        <buttonlist name="results" from="buttonlist_dialog_big">
+            <position>0,75</position>
         </buttonlist>
     </window>
 

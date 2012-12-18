@@ -1335,7 +1335,9 @@
 	        </buttonlist>
 	
 	        <textarea name="numvideos_text" from="textarea_settings_option">
-	            <area>20,624,1400,72</area>
+	            <area>20,880,1400,72</area>
+	            <case>normal</case>
+	            <multiline>yes</multiline>
 	            <value></value>
 	        </textarea>
 	      </group>
@@ -1369,97 +1371,123 @@
     </window>
 
     <window name="playersettings">
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>20,40,760,40</area>
-            <value>Player Settings</value>
-            <align>hcenter,vcenter</align>
-            <font>baselarge</font>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="default_text" from="basetextarea">
-            <area>100,105,130,30</area>
-            <align>right</align>
-            <value>Default Player:</value>
-        </textarea>
+        <group name="settings_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Configure your player settings</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="default_text" from="basetextarea">
+	            <area>100,105,130,30</area>
+	            <align>right</align>
+	            <value>Default Player:</value>
+	        </textarea>
+	
+	        <textedit name="defaultplayer" from="basetextedit">
+	            <position>250,95</position>
+	        </textedit>
+	
+	        <textarea name="dvd_text" from="basetextarea">
+	            <area>100,155,130,30</area>
+	            <align>right</align>
+	            <value>DVD Player:</value>
+	        </textarea>
+	
+	        <textedit name="dvdplayer" from="basetextedit">
+	            <position>250,145</position>
+	        </textedit>
+	
+	        <textarea name="dvddrive_text" from="basetextarea">
+	            <area>100,205,130,30</area>
+	            <align>right</align>
+	            <value>DVD Drive:</value>
+	        </textarea>
+	
+	        <textedit name="dvddrive" from="basetextedit">
+	            <position>250,195</position>
+	        </textedit>
+	
+	        <textarea name="blu_text" from="basetextarea">
+	            <area>100,255,130,30</area>
+	            <align>right</align>
+	            <value>Blu-ray Mount:</value>
+	        </textarea>
+	
+	        <textedit name="bluraymount" from="basetextedit">
+	            <position>250,245</position>
+	        </textedit>
+	
+	        <textarea name="blureg_text" from="basetextarea">
+	            <area>100,305,130,30</area>
+	            <align>right</align>
+	            <value>Blu-ray Region:</value>
+	        </textarea>
+	
+	        <buttonlist name="blurayregionlist" from="basewideselector">
+	            <position>250,295</position>
+	        </buttonlist>
+	
+	        <checkbox name="altcheck" from="basecheckbox">
+	            <position>500,350</position>
+	        </checkbox>
+	
+	        <textarea name="altcheck_text" from="basetextarea">
+	            <area>300,350,300,30</area>
+	            <value>Enable Alternate Player:</value>
+	        </textarea>
+	
+	        <textarea name="alt_text" from="basetextarea">
+	            <area>100,405,130,30</area>
+	            <align>right</align>
+	            <value>Alternate Player:</value>
+	        </textarea>
+	
+	        <textedit name="altplayer" from="basetextedit">
+	            <position>250,395</position>
+	        </textedit>
 
-        <textedit name="defaultplayer" from="basetextedit">
-            <position>250,95</position>
-        </textedit>
+        </group>
 
-        <textarea name="dvd_text" from="basetextarea">
-            <area>100,155,130,30</area>
-            <align>right</align>
-            <value>DVD Player:</value>
-        </textarea>
+         <group name="settings_menu">
+           <area>30,28,324,952</area>
 
-        <textedit name="dvdplayer" from="basetextedit">
-            <position>250,145</position>
-        </textedit>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Movie Player</value>
+	        </textarea>
+	
+	        <button name="ok" from="button_settings">
+	            <position>0,120</position>
+	            <value>Save</value>
+	        </button>
+	
+	        <button name="cancel" from="button_settings">
+	            <position>0,192</position>
+	            <value>Cancel</value>
+	        </button>
+	
+        </group>
 
-        <textarea name="dvddrive_text" from="basetextarea">
-            <area>100,205,130,30</area>
-            <align>right</align>
-            <value>DVD Drive:</value>
-        </textarea>
-
-        <textedit name="dvddrive" from="basetextedit">
-            <position>250,195</position>
-        </textedit>
-
-        <textarea name="blu_text" from="basetextarea">
-            <area>100,255,130,30</area>
-            <align>right</align>
-            <value>Blu-ray Mount:</value>
-        </textarea>
-
-        <textedit name="bluraymount" from="basetextedit">
-            <position>250,245</position>
-        </textedit>
-
-        <textarea name="blureg_text" from="basetextarea">
-            <area>100,305,130,30</area>
-            <align>right</align>
-            <value>Blu-ray Region:</value>
-        </textarea>
-
-        <buttonlist name="blurayregionlist" from="basewideselector">
-            <position>250,295</position>
-        </buttonlist>
-
-        <checkbox name="altcheck" from="basecheckbox">
-            <position>500,350</position>
-        </checkbox>
-
-        <textarea name="altcheck_text" from="basetextarea">
-            <area>300,350,300,30</area>
-            <value>Enable Alternate Player:</value>
-        </textarea>
-
-        <textarea name="alt_text" from="basetextarea">
-            <area>100,405,130,30</area>
-            <align>right</align>
-            <value>Alternate Player:</value>
-        </textarea>
-
-        <textedit name="altplayer" from="basetextedit">
-            <position>250,395</position>
-        </textedit>
-
-        <textarea name="helptext" from="basetextarea">
-            <area>50,440,700,95</area>
-            <multiline>true</multiline>
-        </textarea>
-
-        <button name="ok" from="basebutton">
-            <position>200,520</position>
-            <value>OK</value>
-        </button>
-
-        <button name="cancel" from="basebutton">
-            <position>500,520</position>
-            <value>Cancel</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
