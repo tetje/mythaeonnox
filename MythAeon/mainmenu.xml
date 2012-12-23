@@ -4,28 +4,27 @@
     <button>
         <type>TV_WATCH_TV</type>
         <text>Television</text>
-        <description>Watch live</description>
         <action>TV_WATCH_LIVE</action>
     </button>
 
     <button>
         <type>TV_WATCH_RECORDINGS</type>
         <text>TV Shows</text>
-        <description>Watch your</description>
+        <description>Play any of your recorded programs</description>
         <action>TV_WATCH_RECORDING</action>
     </button>
 
     <button>
         <type>VIDEO_BROWSER</type>
         <text>Movies</text>
-        <description>Watch your</description>
+        <description>Browse your movie</description>
         <action>JUMP Video Default</action>
     </button>
 
     <button>
         <type>MUSIC_PLAY</type>
         <text>Music</text>
-        <description>Listen to</description>
+        <description>Browse your music library</description>
         <action>JUMP Play music</action>
         <depends>mythmusic</depends>
     </button>
@@ -33,14 +32,14 @@
     <button>
         <type>MENU_OPTICAL_DISKS</type>
         <text>Disks</text>
-        <description>Play Blu-ray and DVD</description>
+        <description>Play or import Blu-ray, DVD, and CDs</description>
         <action>MENU optical_menu.xml</action>
     </button>
 
     <button>
         <type>IMAGES</type>
         <text>Pictures</text>
-        <description>View your</description>
+        <description>browse your Pictures library</description>
         <action>PLUGIN mythgallery</action>
         <depends>mythgallery</depends>
     </button>
@@ -48,7 +47,7 @@
     <button>
         <type>GAME</type>
         <text>Games</text>
-        <description>Play your video</description>
+        <description>Browse your video games library</description>
         <action>PLUGIN mythgame</action>
         <depends>mythgame</depends>
     </button>
@@ -57,29 +56,27 @@
         <type>WEATHER</type>
         <text>Weather</text>
         <action>PLUGIN mythweather</action>
-        <description>Check the</description>
         <depends>mythweather</depends>
     </button>
 
     <button>
         <type>WEBPAGE</type>
         <text>Internet</text>
-        <description>Look what is on the</description>
+        <description>Search or browse popular video sites</description>
         <action>MENU mms_web.xml</action>
         <depends>mythbrowser</depends>
     </button>
 
     <button>
         <type>SETTINGS_GENERAL</type>
-        <text>Various</text>
-        <description>Information and Tools</description>
+        <text>Extras</text>
+        <description>Information about your System</description>
         <action>MENU mms_settings.xml</action>
     </button>
 
     <button>
         <type>SETUP_MENU</type>
         <text>Setup</text>
-        <description>MythTV</description>
         <action>MENU main_settings.xml</action>
         <password>SetupPinCode</password>
     </button>
@@ -87,7 +84,7 @@
     <button>
         <type>TV_SCHEDULE_RECORDINGS</type>
         <text>TV Guide</text>
-        <description>Use the</description>
+        <description>Pick programs to be recorded</description>
         <action>MENU mms_guide.xml</action>
     </button>
 

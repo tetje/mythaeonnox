@@ -2,13 +2,6 @@
 <mythmenu name="SCHEDULE">
 
     <button>
-        <type>TV_PROGRAM_GUIDE</type>
-        <text>Guide</text>
-        <description>View the</description>
-        <action>TV_SCHEDULE</action>
-    </button>
-
-    <button>
         <type>TV_UPCOMING_RECORDINGS</type>
         <text>Recordings</text>
         <description>View upcoming</description>
@@ -27,13 +20,6 @@
         <text>Recorded</text>
         <description>See what is previously</description>
         <action>TV_PREVIOUS</action>
-    </button>
-
-    <button>
-        <type>TV_MANUAL_SCHEDULE</type>
-        <text>Manual</text>
-        <description>Schedule programs</description>
-        <action>TV_MANUALSCHEDULE</action>
     </button>
 
     <button>

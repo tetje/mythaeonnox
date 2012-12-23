@@ -89,6 +89,11 @@
         <color>#ececec</color>
     </fontdef>
 
+    <fontdef name="Font_Plot_Grey" from="Font_Plot">
+        <color>#323232</color>
+    </fontdef>
+
+
     <fontdef name="Font_List_Selected" face="Scout">
         <pixelsize>32</pixelsize>
         <color>#323232</color>
@@ -107,6 +112,11 @@
     <fontdef name="Font_Button_Settings" face="ScoutCond">
         <pixelsize>32</pixelsize>
         <color>#ffffff</color>
+    </fontdef>
+    
+    <fontdef name="Font_Button_Settings_Black" face="ScoutCond">
+        <pixelsize>32</pixelsize>
+        <color>#000000</color>
     </fontdef>
     
     <fontdef name="Font_Button_Settings_Focus" from="Font_Button_Settings">
@@ -616,13 +626,13 @@
        <statetype name="buttonitem">
            <state name="active">
                <imagetype name="previewbgd">
-                   <area>-2,2,176,263</area>
+                   <area>-1,2,176,263</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_border.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
                <imagetype name="coverart">
-                   <area>7,10,160,247</area>
+                   <area>8,10,160,247</area>
                    <alpha>255</alpha>
                    <filename>images/shared/defaultVideoBigPoster.png</filename>
                    <mask>images/shared/multiplex_mask.png</mask>
@@ -630,7 +640,7 @@
                    <reflection shear="0" scale="50" length="16" spacing="0" />
                </imagetype>
                <imagetype name="previewglass">
-                   <area>7,10,160,247</area>
+                   <area>8,10,160,247</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_glass.png</filename>
                    <preserveaspect>no</preserveaspect>
@@ -672,22 +682,22 @@
             
            </state>
            <state name="selectedactive">
-               <area>-8,-8,190,284</area>
+               <area>-7,-7,200,305</area>
                <imagetype name="previewbgd">
-                   <area>-8,-8,190,284</area>
+                   <area>-7,-7,200,305</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_border.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
                <imagetype name="coverart">
-                   <area>0,0,173,267</area>
+                   <area>0,0,186,305</area>
                    <alpha>255</alpha>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/defaultVideoBigPoster.png</filename>
                    <mask>images/shared/multiplex_mask_big.png</mask>
                </imagetype>
                <imagetype name="previewglass">
-                   <area>0,0,173,267</area>
+                   <area>0,0,186,287</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_glass.png</filename>
                    <preserveaspect>no</preserveaspect>
@@ -1069,6 +1079,43 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_dialog">
+       <area>0,0,700,350</area>
+       <align>top,hcenter</align>
+       <layout>vertical</layout>
+       <wrapstyle>selection</wrapstyle>
+       <arrange>stack</arrange>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,700,350</buttonarea>
+       <statetype name="buttonitem">
+           <area>0,0,700,50</area>
+           <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_nofocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>50,0,600,50</area>
+                   <align>left,vcenter</align>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_highlight.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>50,0,600,50</area>
+                   <font>Font_List_Active</font>
+                   <scroll direction="left"/>
+                   <align>left,vcenter</align>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="active"/>
+       </statetype>
+   </buttonlist>
+
    <buttonlist name="buttonlist_dialog_big">
        <area>0,0,700,400</area>
        <align>top,hcenter</align>
@@ -1089,10 +1136,12 @@
                    <preserveaspect>yes</preserveaspect>
                </imagetype>
                <textarea name="buttontext" from="textarea_list">
-                   <area>230,0,460,100</area>
+                   <area>230,0,430,100</area>
                    <align>left,vcenter</align>
                </textarea>
-               <textarea name="resolution" from="buttontext" depends="!buttontext"/>
+               <textarea name="resolution" from="buttontext" depends="!buttontext">
+                   <value>no info available</value>
+               </textarea>
            </state>
            <state name="selectedactive">
                <imagetype name="Listpanel_selectbar">
@@ -1104,16 +1153,85 @@
                    <preserveaspect>yes</preserveaspect>
                </imagetype>
                <textarea name="buttontext" from="textarea_list">
-                   <area>230,0,460,100</area>
+                   <area>230,0,430,100</area>
                    <font>Font_List_Active</font>
+                   <scroll direction="left"/>
                    <align>left,vcenter</align>
                </textarea>
-               <textarea name="resolution" from="buttontext" depends="!buttontext"/>
+               <textarea name="resolution" from="buttontext" depends="!buttontext">
+                   <value>no info available</value>
+               </textarea>
            </state>
            <state name="inactive" from="active"/>
            <state name="selectedinactive" from="selectedactive"/>
        </statetype>
    </buttonlist>
+
+   <buttonlist name="buttonlist_settings_channels">
+       <area>0,0,324,648</area>
+       <align>top,hcenter</align>
+       <layout>vertical</layout>
+       <wrapstyle>selection</wrapstyle>
+       <arrange>stack</arrange>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,324,648</buttonarea>
+       <statetype name="buttonitem">
+           <area>0,0,324,72</area>
+           <state name="active">
+               <imagetype name="channeliconframe">
+                   <area>248,3,64,64</area>
+                   <mask>images/shared/wall_nfborder.png</mask>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="channelicon">
+                   <area>250,5,62,62</area>
+                   <mask>images/shared/wall_mask_tiny.png</mask>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="channeliconglass">
+                   <area>250,5,62,62</area>
+                   <mask>images/shared/wall_nfoverlay.png</mask>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <textarea name="buttontext"  from="textarea_settings_button">
+                   <area>0,0,240,72</area>
+                   <align>right,vcenter</align>
+               </textarea>
+           </state>
+           <state name="selectedactive" from="active"/>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="active"/>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_settings_timelist">
+       <area>0,0,1460,32</area>
+       <layout>horizontal</layout>
+       <buttonarea>0,0,1460,32</buttonarea>
+       <statetype name="buttonitem">
+           <area>0,0,365,32</area>
+           <state name="active">
+               <textarea name="buttontext" from="textarea_settings_button">
+                   <area>0,0,365,32</area>
+                   <align>left,vcenter</align>
+               </textarea>
+           </state>
+           <state name="selectedactive" from="active"/>
+           <state name="selectedinactive" from="active"/>
+       </statetype>
+   </buttonlist>
+
+
+
+    <!-- Aeon definitions of a shape -->
+     <shape name="baselabelbox">
+         <area>-5,-10,110,80</area>
+         <type>roundbox</type>
+         <cornerradius>4</cornerradius>
+         <line color="#000000" width="5" />
+         <alpha>192</alpha>
+     </shape>
+
 
     <!-- Base definition of a shape used as a background to many widgets -->
     <shape name="basewidgetshape">
@@ -2607,6 +2725,64 @@
         <cornerradius>12</cornerradius>
     </shape>
 
+    <!-- Aeon definitions of groups used on many screens -->
+     <group name="basegroupinfodetails">
+        <area>0,0,400,60</area>
+	
+	     <shape name="seasonlabelbox" from="baselabelbox" depends="##x##">
+	         <position>-5,-10</position>
+	     </shape>
+
+        <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
+            <area>0,0,100,60</area>
+            <align>top,hcenter</align>
+            <value>Season</value>
+        </textarea>
+
+        <textarea name="##x##" from="textarea_title_sub">
+            <area>0,0,100,60</area>
+            <font>Font_Button_Settings_Black</font>
+            <align>bottom,hcenter</align>
+        </textarea>
+
+	     <shape name="ratinglabelbox" from="baselabelbox" depends="rating">
+	         <position>145,-10</position>
+	     </shape>
+
+        <textarea name="ratinglbl" from="textarea_title_sub" depends="rating">
+            <area>150,0,100,60</area>
+            <align>top,hcenter</align>
+            <value>Rating</value>
+        </textarea>
+
+        <textarea name="rating" from="textarea_title_sub">
+            <area>150,0,100,60</area>
+            <font>Font_Button_Settings_Black</font>
+            <align>bottom,hcenter</align>
+        </textarea>
+
+	     <shape name="videolevellabelbox" from="baselabelbox">
+	         <area>285,-10,130,80</area>
+	     </shape>
+
+        <textarea name="videolevellbl" from="textarea_title_sub">
+            <area>300,0,100,60</area>
+            <align>top,hcenter</align>
+            <value>Parental</value>
+        </textarea>
+
+        <imagetype name="videolevelbgd">
+           <area>314,35,72,18</area>
+           <filename>images/icons/ratings/parentallevel_bg.png</filename>
+        </imagetype>
+
+	     <statetype name="videolevel" from="videolevel_base">
+	         <area>314,35,72,18</area>
+	     </statetype>
+
+     </group>
+
+
     <!-- Popup Dialogue Box -->
     <group name="basedialogwindow" >
         <area>0,0,700,300</area>
@@ -2904,7 +3080,7 @@
     </window>
 
     <window name="MythMetadataResults">
-        <area>-1,-1,700,540</area>
+        <area>-1,-1,700,550</area>
 
         <group name="movie_selection_window" from="basedialogwindowbig">
             <position>0,0</position>        
@@ -2916,7 +3092,7 @@
     </window>
 
     <window name="MythArtworkResults">
-        <area>-1,-1,700,540</area>
+        <area>-1,-1,700,550</area>
 
         <group name="movie_selection_window" from="basedialogwindowbig">
             <position>0,0</position>        

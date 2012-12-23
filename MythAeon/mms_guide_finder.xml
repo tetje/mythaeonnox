@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mythmenu name="SCHEDULE">
+
+    <button>
+        <type>TV_PROGRAM_GUIDE</type>
+        <text>Guide</text>
+        <description>View the</description>
+        <action>TV_SCHEDULE</action>
+    </button>
+
+    <button>
+        <type>TV_PROGFIND</type>
+        <text>Alphabet</text>
+        <description>Search on</description>
+        <action>TV_PROGFIND</action>
+    </button>
+
+    <button>
+        <type>TV_SEARCH_WORDS</type>
+        <text>Words</text>
+        <description>Search on</description>
+        <action>MENU tv_search.xml</action>
+    </button>
+
+    <button>
+        <type>TV_SEARCH_LISTS</type>
+        <text>Lists</text>
+        <description>Search on</description>
+        <action>MENU tv_lists.xml</action>
+    </button>
+
+    <button>
+        <type>TV_MANUAL_SCHEDULE</type>
+        <text>Manual</text>
+        <description>Schedule programs</description>
+        <action>TV_MANUALSCHEDULE</action>
+    </button>
+
+</mythmenu>

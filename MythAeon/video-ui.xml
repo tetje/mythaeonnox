@@ -4,37 +4,38 @@
 
     <!-- Popups -->
     <window name="castpopup">
-        <area>193,87,413,426</area>
+        <area>-1,-1,700,550</area>
 
-        <imagetype name="box">
-            <filename>mv_results_popup.png</filename>
-        </imagetype>
+        <group name="movie_selection_window" from="basedialogwindowbig">
+            <position>0,0</position>        
+        </group>
 
-        <buttonlist name="cast" from="basebuttonlist">
-            <area>18,18,360,325</area>
-            <showarrow>no</showarrow>
+        <buttonlist name="cast" from="buttonlist_dialog">
+            <position>0,75</position>
         </buttonlist>
 
-        <button name="ok" from="basebutton">
-            <position>119,350</position>
+        <button name="ok" from="button_dialog">
+            <position>0,425</position>
             <value>OK</value>
         </button>
     </window>
 
     <window name="descriptionpopup">
-        <area>193,87,413,426</area>
+        <area>-1,-1,700,550</area>
 
-        <imagetype name="box">
-            <filename>mv_results_popup.png</filename>
-        </imagetype>
+        <group name="movie_selection_window" from="basedialogwindowbig">
+            <position>0,0</position>        
+        </group>
 
-        <textarea name="description" from="basetextarea">
-            <area>18,18,360,325</area>
-            <multiline>yes</multiline>
+        <textarea name="description" from="textarea_plot">
+            <area>50,75,600,341</area>
+            <font>Font_Plot_Grey</font>
+            <scroll direction="vertical" />
+            <template>%"|SUBTITLE|"\n%%DESCRIPTION%</template>
         </textarea>
 
-        <button name="ok" from="basebutton">
-            <position>119,350</position>
+        <button name="ok" from="button_dialog">
+            <position>0,425</position>
             <value>OK</value>
         </button>
     </window>
@@ -306,46 +307,9 @@
                <state name="no"/>
            </statetype>
 
-	        <group name="listinfodetails">
-	           <area>73,810,400,60</area>
-		        <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
-		            <area>0,0,100,60</area>
-		            <align>top,hcenter</align>
-		            <value>Season</value>
-		        </textarea>
-	
-		        <textarea name="##x##" from="textarea_title_sub">
-		            <area>0,0,100,60</area>
-		            <align>bottom,hcenter</align>
-		        </textarea>
-
-		        <textarea name="ratinglbl" from="textarea_title_sub" depends="rating">
-		            <area>150,0,100,60</area>
-		            <align>top,hcenter</align>
-		            <value>Rating</value>
-		        </textarea>
-	
-		        <textarea name="rating" from="textarea_title_sub">
-		            <area>150,0,100,60</area>
-		            <align>bottom,hcenter</align>
-		        </textarea>
-
-		        <textarea name="videolevellbl" from="textarea_title_sub">
-		            <area>300,0,100,60</area>
-		            <align>top,hcenter</align>
-		            <value>Parental</value>
-		        </textarea>
-
-	           <imagetype name="videolevelbgd">
-	              <area>314,35,72,18</area>
-	              <filename>images/icons/ratings/parentallevel_bg.png</filename>
-	           </imagetype>
-
-			     <statetype name="videolevel" from="videolevel_base">
-			         <area>314,35,72,18</area>
-			     </statetype>
-	
-	        </group>
+	        <group name="listinfodetails" from="basegroupinfodetails">
+	           <position>73,810</position>
+			  </group>
 
 <!-- Fix me: This does not work when a movie has played and one returns to the main screen
 
@@ -408,8 +372,13 @@
 
 	        <group name="movieinfo">
 	           <area>0,0,1694,846</area>
+
+		        <imagetype name="screenshot">
+		            <area>729,58,949,538</area>
+		            <preserveaspect>no</preserveaspect>
+		        </imagetype>
 	           
-		        <imagetype name="fanart">
+		        <imagetype name="fanart" depends="!screenshot">
 		            <area>729,58,949,538</area>
 		            <preserveaspect>no</preserveaspect>
 		        </imagetype>
@@ -530,34 +499,8 @@
 	            <align>allcenter</align>
 	        </textarea>
 
-	        <group name="listinfodetails">
-	           <area>1400,314,390,60</area>
-		        <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
-		            <area>0,0,100,60</area>
-		            <align>top,hcenter</align>
-		            <value>Season</value>
-		        </textarea>
-	
-		        <textarea name="##x##" from="textarea_title_sub">
-		            <area>0,0,100,60</area>
-		            <align>bottom,hcenter</align>
-		        </textarea>
-
-		        <textarea name="videolevellbl" from="textarea_title_sub">
-		            <area>150,0,100,60</area>
-		            <align>top,hcenter</align>
-		            <value>Parental</value>
-		        </textarea>
-
-	           <imagetype name="videolevelbgd">
-	              <area>164,35,72,18</area>
-	              <filename>images/icons/ratings/parentallevel_bg.png</filename>
-	           </imagetype>
-
-			     <statetype name="videolevel" from="videolevel_base">
-			         <area>164,36,72,18</area>
-			     </statetype>
-	
+	        <group name="listinfodetails" from="basegroupinfodetails">
+	           <position>1400,300</position>
 	        </group>
 	     </group>
 	
@@ -608,34 +551,8 @@
 	            <template>%title%% - |subtitle%</template>
 	        </textarea>
 
-	        <group name="wallinfodetails">
-	           <area>1500,975,250,60</area>
-		        <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
-		            <area>0,0,100,60</area>
-		            <align>top,hcenter</align>
-		            <value>Season</value>
-		        </textarea>
-	
-		        <textarea name="##x##" from="textarea_title_sub">
-		            <area>0,0,100,60</area>
-		            <align>bottom,hcenter</align>
-		        </textarea>
-
-		        <textarea name="videolevellbl" from="textarea_title_sub">
-		            <area>150,0,100,60</area>
-		            <align>top,hcenter</align>
-		            <value>Parental</value>
-		        </textarea>
-
-	           <imagetype name="videolevelbgd">
-	              <area>164,35,72,18</area>
-	              <filename>images/icons/ratings/parentallevel_bg.png</filename>
-	           </imagetype>
-
-			     <statetype name="videolevel" from="videolevel_base">
-			         <area>164,36,72,18</area>
-			     </statetype>
-	
+	        <group name="wallinfodetails" from="basegroupinfodetails">
+	           <position>1430,975</position>
 	        </group>
 	     </group>
 
@@ -750,46 +667,8 @@
                <state name="no"/>
            </statetype>
 
-	        <group name="listinfodetails">
-	           <area>73,810,400,60</area>
-<!--
-		        <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
-		            <area>0,0,100,60</area>
-		            <align>top,hcenter</align>
-		            <value>Season</value>
-		        </textarea>
-	
-		        <textarea name="##x##" from="textarea_title_sub">
-		            <area>0,0,100,60</area>
-		            <align>bottom,hcenter</align>
-		        </textarea>
--->
-		        <textarea name="ratinglbl" from="textarea_title_sub" depends="rating">
-		            <area>150,0,100,60</area>
-		            <align>top,hcenter</align>
-		            <value>Rating</value>
-		        </textarea>
-	
-		        <textarea name="rating" from="textarea_title_sub">
-		            <area>150,0,100,60</area>
-		            <align>bottom,hcenter</align>
-		        </textarea>
-
-		        <textarea name="videolevellbl" from="textarea_title_sub">
-		            <area>300,0,100,60</area>
-		            <align>top,hcenter</align>
-		            <value>Parental</value>
-		        </textarea>
-
-	           <imagetype name="videolevelbgd">
-	              <area>314,35,72,18</area>
-	              <filename>images/icons/ratings/parentallevel_bg.png</filename>
-	           </imagetype>
-
-			     <statetype name="videolevel" from="videolevel_base">
-			         <area>314,35,72,18</area>
-			     </statetype>
-	
+	        <group name="listinfodetails" from="basegroupinfodetails">
+	           <position>73,810</position>
 	        </group>
 
 <!-- Fix me: This does not work will when a movie has played and one returns to the main screen
@@ -860,6 +739,14 @@
 	        <checkbox name="ignore_check" from="checkbox_settings">
 	            <position>0,336</position>
 	        </checkbox>
+
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1400,72</area>
+	            <case>normal</case>
+	            <multiline>yes</multiline>
+	            <align>bottom,left</align>
+	        </textarea>
+
         </group>
 
         <group name="settings_menu">
@@ -1334,10 +1221,11 @@
 	            <position>700,552</position>
 	        </buttonlist>
 	
-	        <textarea name="numvideos_text" from="textarea_settings_option">
-	            <area>20,880,1400,72</area>
+	        <textarea name="numvideos_text" from="textarea_plot">
+	            <area>20,860,1400,72</area>
 	            <case>normal</case>
 	            <multiline>yes</multiline>
+	            <align>bottom,left</align>
 	            <value></value>
 	        </textarea>
 	      </group>
@@ -1388,78 +1276,80 @@
 	
 	        <textarea name="title_panel" from="textarea_settings_title">
 	            <area>20,50,1360,50</area>
-	            <value>Configure your player settings</value>
+	            <value>Configure play options for your movies</value>
 	        </textarea>
 	
 	        <!-- Labels -->
-	        <textarea name="default_text" from="basetextarea">
-	            <area>100,105,130,30</area>
-	            <align>right</align>
+	        <textarea name="default_text" from="textarea_settings_option">
+	            <position>20,120</position>
 	            <value>Default Player:</value>
 	        </textarea>
 	
-	        <textedit name="defaultplayer" from="basetextedit">
-	            <position>250,95</position>
-	        </textedit>
-	
-	        <textarea name="dvd_text" from="basetextarea">
-	            <area>100,155,130,30</area>
-	            <align>right</align>
+	        <textarea name="dvd_text"  from="textarea_settings_option">
+	            <position>20,192</position>
 	            <value>DVD Player:</value>
 	        </textarea>
 	
-	        <textedit name="dvdplayer" from="basetextedit">
-	            <position>250,145</position>
-	        </textedit>
-	
-	        <textarea name="dvddrive_text" from="basetextarea">
-	            <area>100,205,130,30</area>
-	            <align>right</align>
+	        <textarea name="dvddrive_text" from="textarea_settings_option">
+	            <position>20,264</position>
 	            <value>DVD Drive:</value>
 	        </textarea>
 	
-	        <textedit name="dvddrive" from="basetextedit">
-	            <position>250,195</position>
-	        </textedit>
-	
-	        <textarea name="blu_text" from="basetextarea">
-	            <area>100,255,130,30</area>
-	            <align>right</align>
+	        <textarea name="blu_text" from="textarea_settings_option">
+	            <position>20,336</position>
 	            <value>Blu-ray Mount:</value>
 	        </textarea>
 	
-	        <textedit name="bluraymount" from="basetextedit">
-	            <position>250,245</position>
-	        </textedit>
-	
-	        <textarea name="blureg_text" from="basetextarea">
-	            <area>100,305,130,30</area>
-	            <align>right</align>
+	        <textarea name="blureg_text" from="textarea_settings_option">
+	            <position>20,408</position>
 	            <value>Blu-ray Region:</value>
 	        </textarea>
 	
-	        <buttonlist name="blurayregionlist" from="basewideselector">
-	            <position>250,295</position>
-	        </buttonlist>
-	
-	        <checkbox name="altcheck" from="basecheckbox">
-	            <position>500,350</position>
-	        </checkbox>
-	
-	        <textarea name="altcheck_text" from="basetextarea">
-	            <area>300,350,300,30</area>
+	        <textarea name="altcheck_text" from="textarea_settings_option">
+	            <position>20,480</position>
 	            <value>Enable Alternate Player:</value>
 	        </textarea>
 	
-	        <textarea name="alt_text" from="basetextarea">
-	            <area>100,405,130,30</area>
-	            <align>right</align>
+	        <textarea name="alt_text" from="textarea_settings_option">
+	            <position>20,552</position>
 	            <value>Alternate Player:</value>
 	        </textarea>
-	
-	        <textedit name="altplayer" from="basetextedit">
-	            <position>250,395</position>
+	        
+	        <!-- widgets -->
+	        <textedit name="defaultplayer" from="textedit_settings">
+	            <position>0,120</position>
 	        </textedit>
+	
+	        <textedit name="dvdplayer" from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+	
+	        <textedit name="dvddrive" from="textedit_settings">
+	            <position>0,264</position>
+	        </textedit>
+	
+	        <textedit name="bluraymount" from="textedit_settings">
+	            <position>0,336</position>
+	        </textedit>
+	
+	        <buttonlist name="blurayregionlist" from="selector_settings">
+	            <position>0,408</position>
+	        </buttonlist>
+	
+	        <checkbox name="altcheck" from="checkbox_settings">
+	            <position>0,480</position>
+	        </checkbox>
+	
+	        <textedit name="altplayer" from="textedit_settings">
+	            <position>0,552</position>
+	        </textedit>
+
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1400,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
         </group>
 
@@ -1468,7 +1358,7 @@
 
 	        <textarea name="title" from="textarea_settings_title">
 	            <area>30,50,284,50</area>
-	            <value>Movie Player</value>
+	            <value>Player</value>
 	        </textarea>
 	
 	        <button name="ok" from="button_settings">
@@ -1493,79 +1383,108 @@
 
     <window name="metadatasettings">
 
-        <textarea name="title" from="basetextarea">
-            <area>20,40,760,40</area>
-            <value>Video Metadata Settings</value>
-            <align>hcenter,vcenter</align>
-            <font>baselarge</font>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="helptext" from="basetextarea">
-            <area>50,350,700,280</area>
-            <multiline>yes</multiline>
-            <font>basesmall</font>
-            <align>allcenter</align>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="autometa_text" from="basetextarea">
-            <area>285,170,500,40</area>
-            <value>Perform metadata update after video scan</value>
-        </textarea>
+        <group name="settings_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Configure metadata options for your movies</value>
+	        </textarea>
+	
+	        <!-- Labels -->
 
-        <textarea name="trailercheck_text" from="basetextarea">
-            <area>285,230,400,40</area>
-            <value>Enable Random Trailer Playback</value>
-            <align>left,vcenter</align>
-        </textarea>
+	        <textarea name="autometa_text" from="textarea_settings_option">
+	            <area>20,120,700,72</area>
+	            <value>Perform metadata update after video scan</value>
+	        </textarea>
+	
+	        <textarea name="trailercheck_text" from="autometa_text">
+	            <position>20,192</position>
+	            <value>Enable Random Trailer Playback</value>
+	        </textarea>
+	
+	        <textarea name="unknownfilecheck_text" from="autometa_text">
+	            <position>20,264</position>
+	            <value>Display unknown file types</value>
+	        </textarea>
+	
+	        <textarea name="treeloadsmetacheck_text" from="autometa_text">
+	            <position>20,336</position>
+	            <value>Enable metadata in file browse mode</value>
+	        </textarea>
+	
+	        <textarea name="trailerplay_text" from="autometa_text">
+	            <position>20,408</position>
+	            <value>Trailers to Play:</value>
+	        </textarea>
 
-        <textarea name="unknownfilecheck_text" from="basetextarea">
-            <area>285,350,400,40</area>
-            <value>Display unknown file types</value>
-            <align>left,vcenter</align>
-        </textarea>
+           <!-- Widgets -->
+	        <checkbox name="autometaupdatecheck" from="checkbox_settings">
+	            <position>0,120</position>
+	        </checkbox>
+	
+	        <checkbox name="randomtrailercheck" from="checkbox_settings">
+	            <position>0,192</position>
+	        </checkbox>
+	
+	        <checkbox name="unknownfilecheck" from="checkbox_settings">
+	            <position>0,264</position>
+	        </checkbox>
+	
+	        <checkbox name="treeloadsmetacheck" from="checkbox_settings">
+	            <position>0,336</position>
+	        </checkbox>
 
-        <textarea name="treeloadsmetacheck_text" from="basetextarea">
-            <area>285,410,400,40</area>
-            <value>Enable metadata in file browse mode</value>
-            <align>left,vcenter</align>
-        </textarea>
+	        <spinbox name="trailernum" from="spinbox_settings">
+	            <position>0,408</position>
+	        </spinbox>
+	
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1400,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-        <textarea name="trailerplay_text" from="basetextarea">
-            <position>25,290</position>
-            <value>Trailers to Play:</value>
-        </textarea>
+        </group>
 
-    <!--Widgets-->
+        <group name="settings_menu">
+           <area>30,28,324,952</area>
 
-        <checkbox name="autometaupdatecheck" from="basecheckbox">
-            <position>245,167</position>
-        </checkbox>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Metadata</value>
+	        </textarea>
+	
+	        <button name="ok" from="button_settings">
+	            <position>0,120</position>
+	            <value>Save</value>
+	        </button>
+	
+	        <button name="cancel" from="button_settings">
+	            <position>0,192</position>
+	            <value>Cancel</value>
+	        </button>
+	
+        </group>
 
-        <checkbox name="randomtrailercheck" from="basecheckbox">
-            <position>245,232</position>
-        </checkbox>
-
-        <spinbox name="trailernum" from="basewidespinbox">
-            <position>205,287</position>
-        </spinbox>
-
-        <checkbox name="unknownfilecheck" from="basecheckbox">
-            <position>245,352</position>
-        </checkbox>
-
-        <checkbox name="treeloadsmetacheck" from="basecheckbox">
-            <position>245,412</position>
-        </checkbox>
-
-        <button name="cancel" from="basebutton">
-            <position>188,530</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="ok" from="basebutton">
-            <position>435,530</position>
-            <value>OK</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 

@@ -11,12 +11,6 @@
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
-           <state name="TV_WATCH_TV">
-               <imagetype name="watermark">
-                   <filename>images/backgrounds/livetv/livetv.jpg</filename>
-                   <area>0,0,1920,1080</area>
-               </imagetype>
-           </state>
            <state name="NET_VIDEO">
                <imagetype name="watermark">
                    <filename>images/backgrounds/network.jpg</filename>
@@ -128,174 +122,179 @@
            
 
            <!-- ########  tvmenu.xml  ########-->
-<!--
+
            <state name="TV_WATCH_TV">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv2.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/livetv/livetv.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SCHEDULE_RECORDINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_WATCH_RECORDINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamVideoBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvshows/tv_shows8.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_PREVIOUS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_STATUS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/systeminfo.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+
            <!-- ########  tv_schedule.xml  ########-->
 
-<!--
            <state name="TV_PROGRAM_GUIDE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv2.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_PROGFIND">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_WORDS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_LISTS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_CUSTOM_RECORD">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_MANUAL_SCHEDULE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_RECORDING_RULES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_CONFLICTS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/podium.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_RECPRIORITIES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/podium.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+           <state name="TV_UPCOMING_RECORDINGS">
+               <imagetype name="watermark">
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
+               </imagetype>
+           </state>
+
            <!-- ########  tv_search.xml  ########-->
-<!--
+
            <state name="TV_SEARCH_TITLES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_KEYWORDS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_PEOPLE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_POWER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_STORED">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+
            <!-- ########  tv_lists.xml  ########-->
-<!--
+
            <state name="TV_SEARCH_NEW_TITLES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_MOVIES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_CATEGORIES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_CHANNELS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_TIMES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_DESCRIPTIONS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_LISTINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+
            <!-- ########  tv_settings.xml  ########-->
 <!--
            <state name="TV_SETTINGS_GENERAL">
@@ -838,12 +837,6 @@
 -->
            <!-- ########  AltMenus Specific Icons  ########-->
 <!--
-           <state name="TV_UPCOMING_RECORDINGS">
-               <imagetype name="watermark">
-                   <filename>images/backgrounds/remotecontrol.png</filename>
-                   <area>0,0,1280,720</area>
-               </imagetype>
-           </state>
            <state name="SETTINGS_MEDIA">
                <imagetype name="watermark">
                    <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
@@ -1002,7 +995,7 @@
       <group name="date_clock" from="defaultclockdown">
           <position>1240,497</position>
       </group>
-
+      
        <!-- RSS bar -->
 <!-- -->
        <imagetype name="rss_bgd">
@@ -1091,6 +1084,32 @@
           <area>0,476,1920,225></area>
           <preserveaspect>no</preserveaspect>
        </imagetype>  
+
+      <group name="descriptiongroup">
+         <area>656,497,608,41></area>
+         
+	      <animation trigger="AboutToShow">
+	          <section duration="1200" centre="middle">
+	              <position start="-608,497" end="656,497" easingcurve="InOutBack" />
+	          </section>
+	      </animation>
+	      
+	      <imagetype name="description_bgd" depends="description">
+	          <filename>images/shared/timepanel_mid_menu.png</filename>
+	          <area>0,0,608,41></area>
+	          <preserveaspect>no</preserveaspect>
+	      </imagetype>
+	
+	       <textarea name="description">
+	           <area>24,5,560,40</area>
+	           <font>Font_Clock</font>
+	           <multiline>no</multiline>
+	           <align>hcenter,vcenter</align>
+	           <cutdown>yes</cutdown>
+	           <alpha>192</alpha>
+	       </textarea>
+       </group>
+
 
    </window>
 </mythuitheme>
