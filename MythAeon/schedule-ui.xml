@@ -88,13 +88,6 @@
 	                   <preserveaspect>no</preserveaspect>
 	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
 	               </imagetype>
-<!--
-	               <imagetype name="backgroundgridline9">
-	                   <area>0,576,1500,50</area>
-	                   <preserveaspect>no</preserveaspect>
-	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
-	               </imagetype>
--->
 	           </group>			
 
 		        <guidegrid name="guidegrid">
@@ -110,17 +103,13 @@
 		            <cutdown>no</cutdown>
 		            <multiline>yes</multiline>
 		            <textoffset>10,10</textoffset>
-		            <recordstatus type="SingleRecord" image="gg-rs-single.png"></recordstatus>
-		            <recordstatus type="TimeslotRecord" image="gg-rs-timeslot.png"></recordstatus>
-		            <recordstatus type="ChannelRecord" image="gg-rs-channel.png"></recordstatus>
-		            <recordstatus type="AllRecord" image="gg-rs-all.png"></recordstatus>
-		            <recordstatus type="WeekslotRecord" image="gg-rs-weekslot.png"></recordstatus>
-		            <recordstatus type="FindOneRecord" image="gg-rs-findone.png"></recordstatus>
-		            <recordstatus type="OverrideRecord" image="gg-rs-override.png"></recordstatus>
-<!--
-		            <arrow direction="left" image="gg-arrow-left.png"></arrow>
-		            <arrow direction="right" image="gg-arrow-right.png"></arrow>
--->		            
+		            <recordstatus type="SingleRecord" image="images/icons/guide/gg-rs-single.png"></recordstatus>
+		            <recordstatus type="TimeslotRecord" image="images/icons/guide/gg-rs-timeslot.png"></recordstatus>
+		            <recordstatus type="ChannelRecord" image="images/icons/guide/gg-rs-channel.png"></recordstatus>
+		            <recordstatus type="AllRecord" image="/images/icons/guide/gg-rs-all.png"></recordstatus>
+		            <recordstatus type="WeekslotRecord" image="images/icons/guide/gg-rs-weekslot.png"></recordstatus>
+		            <recordstatus type="FindOneRecord" image="images/icons/guide/gg-rs-findone.png"></recordstatus>
+		            <recordstatus type="OverrideRecord" image="images/icons/guide/gg-rs-override.png"></recordstatus>
 		            <font>Font_Plot</font>
 		        </guidegrid>
 		
@@ -211,23 +200,11 @@
 				      </statetype>
 				  </buttonlist>
 
-<!--
-		        <textarea name="rectypestatus" from="textarea_settings_button">
-		            <area>20,703,290,32</area>
-		            <align>right,vcenter</align>
-		        </textarea>
-
-              <imagetype name="backgroundgridlinelast">
-                  <area>15,688,295,50</area>
-                  <preserveaspect>no</preserveaspect>
-                  <filename>images/shared/settings_radiobuttonoff.png</filename>
-              </imagetype>
--->
 		        <clock name="time">
 		            <area>20,703,290,32</area>
 		            <align>right,vcenter</align>
 		            <font>Font_Button_Settings</font>
-		            <template>hh:mm AP</template>
+		            <template>%time%</template>
 		        </clock>
 		
 		        <imagetype name="channeliconframeactive" depends="channelicon">
@@ -254,217 +231,216 @@
 
     <window name="programguide-video">
 
-        <shape name="shape1">
-            <area>15,15,770,210</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="30" />
-            <cornerradius>15</cornerradius>
-        </shape>
+<!--
+ 	     <animation trigger="AboutToShow">
+            <section duration="1000" centre="middle">
+            <alpha start="0" end="255" easingcurve="InQuad" />
+            </section>
+        </animation>
+-->
+     
+        <imagetype name="backdropimg">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+        </imagetype>        
 
-        <shape name="shape2">
-            <area>25,135,530,80</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="30" />
-            <cornerradius>10</cornerradius>
-        </shape>
+        <group name="programguidewindow">
+	        <area>35,35,1850,1010</area>
+<!--
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="35,-1045" end="35,35" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+-->	
+	        <group name="settings_panel_bgd" from="basesettingswindow">
+	           <area>0,0,1850,1010</area>
+	        </group>
+	        	        
+	        <group name="settings_panel">
+	           <area>354,28,1460,952</area>
+	
+		        <textarea name="rectypestatus" from="textarea_settings_title">
+		            <area>20,50,1460,50</area>
+		            <align>left,vcenter</align>
+		            <template>%rectypestatus%  |  %timedate%  |  %lenmins%  |  card no %card%</template>
+		        </textarea>
+		        
+		        <group name="backgroundgrid">
+		            <area>-30,146,1500,650</area>
+	               <imagetype name="backgroundgridline1">
+	                   <area>0,0,1500,50</area>
+	                   <preserveaspect>no</preserveaspect>
+	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+	               </imagetype>
+					
+	               <imagetype name="backgroundgridline2">
+	                   <area>0,72,1500,50</area>
+	                   <preserveaspect>no</preserveaspect>
+	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+	               </imagetype>
 
-        <shape name="shape3">
-            <area>25,75,530,30</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="30" />
-            <cornerradius>10</cornerradius>
-        </shape>
+	               <imagetype name="backgroundgridline3">
+	                   <area>0,144,1500,50</area>
+	                   <preserveaspect>no</preserveaspect>
+	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+	               </imagetype>
 
-        <shape name="shape4">
-            <area>25,105,530,30</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="30" />
-            <cornerradius>10</cornerradius>
-        </shape>
+	               <imagetype name="backgroundgridline4">
+	                   <area>0,216,1500,50</area>
+	                   <preserveaspect>no</preserveaspect>
+	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+	               </imagetype>
 
-        <shape name="shape5">
-            <area>15,240,770,340</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="30" />
-            <cornerradius>15</cornerradius>
-        </shape>
+	               <imagetype name="backgroundgridline5">
+	                   <area>0,288,1500,50</area>
+	                   <preserveaspect>no</preserveaspect>
+	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+	               </imagetype>
 
-        <shape name="shape6">
-            <area>565,75,210,140</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="255" />
-            <cornerradius>6</cornerradius>
-        </shape>
+	               <imagetype name="backgroundgridline6">
+	                   <area>0,360,1500,50</area>
+	                   <preserveaspect>no</preserveaspect>
+	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+	               </imagetype>
 
-        <imagetype name="video">
-            <area>570,80,200,130</area>
-        </imagetype>
+	               <imagetype name="backgroundgridline7">
+	                   <area>0,432,1500,50</area>
+	                   <preserveaspect>no</preserveaspect>
+	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+	               </imagetype>
 
-        <textarea name="datetext" from="basetextarea">
-            <area>20,245,135,31</area>
-            <align>allcenter</align>
-        </textarea>
+	               <imagetype name="backgroundgridline8">
+	                   <area>0,504,1500,50</area>
+	                   <preserveaspect>no</preserveaspect>
+	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+	               </imagetype>
+	           </group>			
 
-        <guidegrid name="guidegrid">
-            <area>155,275,632,300</area>
-            <layout>horizontal</layout>
-            <channels>5</channels>
-            <timeslots>4</timeslots>
-            <solidcolor>#003256</solidcolor>
-            <selector type="roundbox" linecolor="#ffff33"></selector>
-            <showcategories>yes</showcategories>
-            <categoryalpha>60</categoryalpha>
-            <recordingcolor>#00aa00</recordingcolor>
-            <conflictingcolor>#ff6600</conflictingcolor>
-            <cutdown>no</cutdown>
-            <multiline>yes</multiline>
-            <textoffset>9,6</textoffset>
-            <recordstatus type="SingleRecord" image="gg-rs-single.png"></recordstatus>
-            <recordstatus type="TimeslotRecord" image="gg-rs-timeslot.png"></recordstatus>
-            <recordstatus type="ChannelRecord" image="gg-rs-channel.png"></recordstatus>
-            <recordstatus type="AllRecord" image="gg-rs-all.png"></recordstatus>
-            <recordstatus type="WeekslotRecord" image="gg-rs-weekslot.png"></recordstatus>
-            <recordstatus type="FindOneRecord" image="gg-rs-findone.png"></recordstatus>
-            <recordstatus type="OverrideRecord" image="gg-rs-override.png"></recordstatus>
-            <arrow direction="left" image="gg-arrow-left.png"></arrow>
-            <arrow direction="right" image="gg-arrow-right.png"></arrow>
-            <font>basesmall</font>
-        </guidegrid>
+		        <guidegrid name="guidegrid">
+		            <area>390,183,1460,576</area>
+		            <layout>horizontal</layout>
+		            <channels>8</channels>
+		            <timeslots>4</timeslots>
+		            <solidcolor>#000000</solidcolor>
+		            <selector type="box" linecolor="#ffffff" fillcolor="#929292"></selector>
+		            <categoryalpha>30</categoryalpha>
+		            <recordingcolor>#00aa00</recordingcolor>
+		            <conflictingcolor>#ff6600</conflictingcolor>
+		            <cutdown>no</cutdown>
+		            <multiline>yes</multiline>
+		            <textoffset>10,10</textoffset>
+		            <recordstatus type="SingleRecord" image="images/icons/guide/gg-rs-single.png"></recordstatus>
+		            <recordstatus type="TimeslotRecord" image="images/icons/guide/gg-rs-timeslot.png"></recordstatus>
+		            <recordstatus type="ChannelRecord" image="images/icons/guide/gg-rs-channel.png"></recordstatus>
+		            <recordstatus type="AllRecord" image="/images/icons/guide/gg-rs-all.png"></recordstatus>
+		            <recordstatus type="WeekslotRecord" image="images/icons/guide/gg-rs-weekslot.png"></recordstatus>
+		            <recordstatus type="FindOneRecord" image="images/icons/guide/gg-rs-findone.png"></recordstatus>
+		            <recordstatus type="OverrideRecord" image="images/icons/guide/gg-rs-override.png"></recordstatus>
+		            <font>Font_Plot</font>
+		        </guidegrid>
+		
+				  <buttonlist name="timelist">
+				      <area>10,703,1460,32</area>
+				      <layout>horizontal</layout>
+				      <buttonarea>0,0,1460,32</buttonarea>
+				      <statetype name="buttonitem">
+				          <area>0,0,365,32</area>
+				          <state name="active">
+				              <textarea name="buttontext" from="textarea_settings_button">
+				                  <area>0,0,365,32</area>
+				                  <align>left,vcenter</align>
+				              </textarea>
+				          </state>
+				          <state name="selectedactive" from="active"/>
+				          <state name="selectedinactive" from="active"/>
+				      </statetype>
+				  </buttonlist>
 
-        <buttonlist name="timelist">
-            <area>155,245,630,31</area>
-            <layout>horizontal</layout>
-            <spacing>0</spacing>
-            <buttonarea>0,0,634,31</buttonarea>
-            <statetype name="buttonitem">
-                <area>0,0,156,29</area>
-                <state name="active">
-                    <imagetype name="buttonbackground">
-                        <area>0,0,156,29</area>
-                        <filename>gg-times.png</filename>
-                    </imagetype>
-                    <textarea name="buttontext" from="basetextarea">
-                        <area>0,0,156,29</area>
-                        <font>basesmall</font>
-                        <align>allcenter</align>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active"/>
-                <state name="selectedinactive" from="active"/>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <state type="off">
-                    <imagetype name="dnon">
-                        <filename></filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="dnoff">
-                        <filename></filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <state type="off">
-                    <imagetype name="upon">
-                        <filename></filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff">
-                        <filename></filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
+		        <textarea name="titlesubtitle"from="textarea_plot">
+		            <area>20,770,1400,32</area>
+		        </textarea>
 
-        <buttonlist name="channellist">
-            <area>20,275,135,305</area>
-            <layout>vertical</layout>
-            <spacing>0</spacing>
-            <buttonarea>0,0,135,305</buttonarea>
-            <statetype name="buttonitem">
-                <area>0,0,135,74</area>
-                <state name="active">
-                    <imagetype name="buttonbackground">
-                        <area>0,0,135,60</area>
-                        <filename>gg-chans.png</filename>
-                    </imagetype>
-                    <imagetype name="channelicon">
-                        <area>5,15,40,40</area>
-                    </imagetype>
-                    <textarea name="buttontext" from="basetextarea">
-                        <area>45,0,85,60</area>
-                        <font>basesmall</font>
-                        <font state="favourite">basesmallyellow</font>
-                        <font state="unavailable">basesmallblue</font>
-                        <font state="favunavailable">basesmallpurple</font>
-                        <cutdown>no</cutdown>
-                        <align>allcenter</align>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active"/>
-                <state name="selectedinactive" from="active"/>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <state type="off">
-                    <imagetype name="dnon">
-                        <filename></filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="dnoff">
-                        <filename></filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <state type="off">
-                    <imagetype name="upon">
-                        <filename></filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff">
-                        <filename></filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
+              <imagetype name="backgroundgridline10">
+                  <area>-20,760,1460,50</area>
+                  <preserveaspect>no</preserveaspect>
+                  <filename>images/shared/settings_radiobuttonoff.png</filename>
+              </imagetype>
 
-        <clock name="time">
-            <area>655,12,120,60</area>
-            <align>right,vcenter</align>
-            <template>%TIME%</template>
-        </clock>
+		        <textarea name="description" from="textarea_plot">
+		            <area>20,820,1420,116</area>
+		            <case>normal</case>
+		            <align>top,justify</align>
+		            <multiline>yes</multiline>
+		            <template>%LONGREPEAT%%YEARSTARS| %%DESCRIPTION%</template>
+		        </textarea>
+		        
+		     </group>
+		     
+	        <group name="settings_menu">
+	           <area>30,28,324,952</area>
+	
+		        <textarea name="datetext" from="textarea_settings_title">
+		            <area>30,50,284,50</area>
+		            <align>right,vcenter</align>
+		        </textarea>
+		        
+				  <buttonlist name="channellist">
+				      <area>0,125,324,576</area>
+				      <align>top,hcenter</align>
+				      <layout>vertical</layout>
+				      <wrapstyle>selection</wrapstyle>
+				      <arrange>stack</arrange>
+				      <showarrow>no</showarrow>
+				      <buttonarea>0,0,324,576</buttonarea>
+				      <statetype name="buttonitem">
+				          <area>0,0,324,72</area>
+				          <state name="active">
+				              <imagetype name="channeliconframe" depends="channelicon">
+				                  <area>10,3,64,64</area>
+				                  <filename>images/shared/wall_nfborder.png</filename>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
+				              <imagetype name="channelicon">
+				                  <area>12,5,62,62</area>
+				                  <mask>images/shared/wall_mask_tiny.png</mask>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
+				              <imagetype name="channeliconglass" depends="channelicon">
+				                  <area>12,5,62,62</area>
+				                  <filename>images/shared/wall_nfoverlay.png</filename>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
+				              <imagetype name="backgroundgridline">
+				                  <area>0,22,310,50</area>
+				                  <preserveaspect>no</preserveaspect>
+				                  <filename>images/shared/settings_radiobuttonoff.png</filename>
+				              </imagetype>
+				              <textarea name="buttontext"  from="textarea_settings_button">
+				                  <area>90,0,230,72</area>
+				                  <align>left,vcenter</align>
+				              </textarea>
+				          </state>
+				          <state name="selectedactive" from="active"/>
+				          <state name="inactive" from="active"/>
+				          <state name="selectedinactive" from="active"/>
+				      </statetype>
+				  </buttonlist>
 
-        <imagetype name="channelicon">
-            <area>30,18,50,50</area>
-        </imagetype>
+		        <clock name="time">
+		            <area>20,703,290,32</area>
+		            <align>right,vcenter</align>
+		            <font>Font_Button_Settings</font>
+		            <template>%time%</template>
+		        </clock>
+		
+		        <imagetype name="video">
+		            <area>20,769,290,163</area>
+		        </imagetype>
+	
+		    </group>	
 
-        <textarea name="title" from="basetextarea">
-            <area>95,12,590,60</area>
-            <align>left,vcenter</align>
-            <font>baselarge</font>
-        </textarea>
-
-        <textarea name="subtitle" from="basetextarea">
-            <area>30,75,520,30</area>
-            <align>left,vcenter</align>
-            <font>basesmallpurple</font>
-        </textarea>
-
-        <textarea name="description"  from="basetextarea">
-            <area>30,140,520,80</area>
-            <multiline>yes</multiline>
-            <template>%LONGREPEAT%%YEARSTARS| %%DESCRIPTION%</template>
-        </textarea>
-
-        <textarea name="rectypestatus" from="basetextarea">
-            <area>30,105,520,30</area>
-            <align>left,vcenter</align>
-            <font>basesmallyellow</font>
-        </textarea>
+        </group>
 
     </window>
 
