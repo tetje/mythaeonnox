@@ -1228,7 +1228,7 @@
          <area>-5,-10,110,80</area>
          <type>roundbox</type>
          <cornerradius>4</cornerradius>
-         <line color="#000000" width="5" />
+         <line color="#000000" width="4" />
          <alpha>192</alpha>
      </shape>
 
@@ -2766,7 +2766,7 @@
 	     </shape>
 
         <textarea name="videolevellbl" from="textarea_title_sub">
-            <area>300,0,100,60</area>
+            <area>295,0,110,60</area>
             <align>top,hcenter</align>
             <value>Parental</value>
         </textarea>
@@ -2778,6 +2778,62 @@
 
 	     <statetype name="videolevel" from="videolevel_base">
 	         <area>314,35,72,18</area>
+	     </statetype>
+
+     </group>
+
+     <group name="basegroupinfodetailswall">
+        <area>0,0,1920,60</area>
+	
+	     <shape name="seasonlabelbox" from="baselabelbox" depends="##x##">
+	         <position>255,-10</position>
+	     </shape>
+
+        <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
+            <area>260,0,100,60</area>
+            <align>top,hcenter</align>
+            <value>Season</value>
+        </textarea>
+
+        <textarea name="##x##" from="textarea_title_sub">
+            <area>260,0,100,60</area>
+            <font>Font_Button_Settings_Black</font>
+            <align>bottom,hcenter</align>
+        </textarea>
+
+	     <shape name="ratinglabelbox" from="baselabelbox" depends="rating">
+	         <position>1525,-10</position>
+	     </shape>
+
+        <textarea name="ratinglbl" from="textarea_title_sub" depends="rating">
+            <area>1530,0,100,60</area>
+            <align>top,hcenter</align>
+            <value>Rating</value>
+        </textarea>
+
+        <textarea name="rating" from="textarea_title_sub">
+            <area>1530,0,100,60</area>
+            <font>Font_Button_Settings_Black</font>
+            <align>bottom,hcenter</align>
+        </textarea>
+
+	     <shape name="videolevellabelbox" from="baselabelbox">
+	         <area>1670,-10,130,80</area>
+	     </shape>
+
+        <textarea name="videolevellbl" from="textarea_title_sub">
+            <area>1680,0,110,60</area>
+            <align>top,hcenter</align>
+            <value>Parental</value>
+        </textarea>
+
+        <imagetype name="videolevelbgd">
+           <area>1694,35,72,18</area>
+           <filename>images/icons/ratings/parentallevel_bg.png</filename>
+        </imagetype>
+
+	     <statetype name="videolevel" from="videolevel_base">
+	         <area>1694,35,72,18</area>
 	     </statetype>
 
      </group>

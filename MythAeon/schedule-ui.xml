@@ -445,84 +445,109 @@
     </window>
 
     <window name="manualschedule">
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="pagetitle" from="basetextarea">
-            <area>20,5,570,40</area>
-            <font>baselarge</font>
-            <value>Manual Recording Schedule</value>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="titlelabel" from="basetextarea">
-            <area>40,130,250,30</area>
-            <font>basemedium</font>
-            <align>right</align>
-            <value>Title (Optional):</value>
-        </textarea>
+        <group name="settings_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="titlepanel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Manual Schedule your Recording</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="titlelabel" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Title (Optional):</value>
+	        </textarea>
+	
+	        <textarea name="channellabel"  from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Channel:</value>
+	        </textarea>
+	
+	        <textarea name="timelabel" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>Start Time:</value>
+	        </textarea>
+	
+	        <textarea name="hourlabel" from="textarea_settings_option">
+	            <position>20,336</position>
+	            <value>Start Hour:</value>
+	        </textarea>
+	
+	        <textarea name="minutelabel" from="textarea_settings_option">
+	            <position>20,408</position>
+	            <value>Start Minute:</value>
+	        </textarea>
+	
+	        <textarea name="durationlabel" from="textarea_settings_option">
+	            <position>20,480</position>
+	            <value>Duration:</value>
+	        </textarea>
+	
+	        <!-- widgets -->
+	        <textedit name="title" from="textedit_settings">
+	            <position>0,120</position>
+	        </textedit>
+	
+	        <buttonlist name="channel" from="selector_settings">
+	            <position>0,192</position>
+	        </buttonlist>
+	
+	        <buttonlist name="startdate" from="selector_settings">
+	            <position>0,264</position>
+	        </buttonlist>
+	
+	        <spinbox name="starthour" from="spinbox_settings">
+	            <position>0,336</position>
+	        </spinbox>
+	
+	        <spinbox name="startminute" from="spinbox_settings">
+	            <position>0,408</position>
+	        </spinbox>
+	
+	        <spinbox name="duration" from="spinbox_settings">
+	            <position>0,480</position>
+	        </spinbox>
+        </group>
+        
 
-        <textedit name="title" from="basetextedit">
-            <position>300,120</position>
-        </textedit>
+         <group name="settings_menu">
+           <area>30,28,324,952</area>
 
-        <textarea name="channellabel" from="titlelabel">
-            <position>40,208</position>
-            <value>Channel:</value>
-        </textarea>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Manual</value>
+	        </textarea>
+	
+	        <button name="next" from="button_settings">
+	            <position>0,120</position>
+	            <value>Next</value>
+	        </button>
+	
+	        <button name="cancel" from="button_settings">
+	            <position>0,192</position>
+	            <value>Cancel</value>
+	        </button>
+	
+        </group>
 
-        <buttonlist name="channel" from="basewideselector">
-            <position>300,200</position>
-        </buttonlist>
-
-        <textarea name="datelabel" from="titlelabel">
-            <position>40,288</position>
-            <value>Date, or day of week:</value>
-        </textarea>
-
-        <buttonlist name="startdate" from="basewideselector">
-            <position>300,280</position>
-        </buttonlist>
-
-        <textarea name="timelabel" from="titlelabel">
-            <area>40,368,160,30</area>
-            <value>Start Time:</value>
-        </textarea>
-
-        <textarea name="hourlabel" from="basetextarea">
-            <area>210,370,80,30</area>
-            <value>Hour</value>
-            <align>right</align>
-        </textarea>
-
-        <spinbox name="starthour" from="basespinbox">
-            <position>300,360</position>
-        </spinbox>
-
-        <textarea name="minutelabel" from="hourlabel">
-            <position>410,370</position>
-            <value>Minute</value>
-        </textarea>
-
-        <spinbox name="startminute" from="basespinbox">
-            <position>500,360</position>
-        </spinbox>
-
-        <textarea name="durationlabel" from="titlelabel">
-            <position>40,458</position>
-            <value>Duration:</value>
-        </textarea>
-
-        <spinbox name="duration" from="basespinbox">
-            <position>300,450</position>
-        </spinbox>
-
-        <button name="cancel" from="basebutton">
-            <position>20,530</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="next" from="basebutton">
-            <position>630,530</position>
-            <value>Next</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 

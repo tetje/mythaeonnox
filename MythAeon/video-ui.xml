@@ -499,8 +499,8 @@
 	            <align>allcenter</align>
 	        </textarea>
 
-	        <group name="listinfodetails" from="basegroupinfodetails">
-	           <position>1400,300</position>
+	        <group name="listinfodetails" from="basegroupinfodetailswall">
+	           <position>0,300</position>
 	        </group>
 	     </group>
 	
@@ -551,8 +551,8 @@
 	            <template>%title%% - |subtitle%</template>
 	        </textarea>
 
-	        <group name="wallinfodetails" from="basegroupinfodetails">
-	           <position>1430,975</position>
+	        <group name="wallinfodetails" from="basegroupinfodetailswall">
+	           <position>0,975</position>
 	        </group>
 	     </group>
 
