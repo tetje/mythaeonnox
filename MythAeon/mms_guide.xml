@@ -3,36 +3,36 @@
 
     <button>
         <type>TV_UPCOMING_RECORDINGS</type>
-        <text>Recordings</text>
-        <description>View upcoming</description>
+        <text>Upcoming</text>
+        <description>View upcoming recordings</description>
         <action>TV_FIX_CONFLICTS</action>
     </button>
 
     <button>
         <type>TV_RECORDING_RULES</type>
         <text>Rules</text>
-        <description>View your recording</description>
+        <description>View your recording rules</description>
         <action>TV_MANAGE_RECORDING_RULES</action>
     </button>
 
     <button>
         <type>TV_PREVIOUS</type>
         <text>Recorded</text>
-        <description>See what is previously</description>
+        <description>See what is previously recorded</description>
         <action>TV_PREVIOUS</action>
     </button>
 
     <button>
         <type>TV_RECPRIORITIES</type>
         <text>Priorities</text>
-        <description>Set your recording</description>
+        <description>Set your recording priorities</description>
         <action>MENU recpriorities_settings.xml</action>
     </button>
 
     <button>
         <type>TV_PROGFIND</type>
         <text>Programs</text>
-        <description>Find your</description>
+        <description>Find Television broadcasts</description>
         <action>MENU mms_guide_finder.xml</action>
     </button>
 

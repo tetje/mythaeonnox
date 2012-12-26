@@ -4,35 +4,35 @@
     <button>
         <type>TV_PROGRAM_GUIDE</type>
         <text>Guide</text>
-        <description>View the</description>
+        <description>Look at the TV Guide</description>
         <action>TV_SCHEDULE</action>
     </button>
 
     <button>
         <type>TV_PROGFIND</type>
         <text>Alphabet</text>
-        <description>Search on</description>
+        <description>Search programs with alphabetical sorted list</description>
         <action>TV_PROGFIND</action>
     </button>
 
     <button>
         <type>TV_SEARCH_WORDS</type>
         <text>Words</text>
-        <description>Search on</description>
+        <description>Search programs using words</description>
         <action>MENU tv_search.xml</action>
     </button>
 
     <button>
         <type>TV_SEARCH_LISTS</type>
         <text>Lists</text>
-        <description>Search on</description>
+        <description>Search programs using sorted lists</description>
         <action>MENU tv_lists.xml</action>
     </button>
 
     <button>
         <type>TV_MANUAL_SCHEDULE</type>
         <text>Manual</text>
-        <description>Schedule programs</description>
+        <description>Manually Schedule programs</description>
         <action>TV_MANUALSCHEDULE</action>
     </button>
 
