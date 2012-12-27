@@ -11,7 +11,7 @@
     <button>
         <type>TV_PROGFIND</type>
         <text>Alphabet</text>
-        <description>Search programs with alphabetical sorted list</description>
+        <description>All programs alphabetically sorted</description>
         <action>TV_PROGFIND</action>
     </button>
 

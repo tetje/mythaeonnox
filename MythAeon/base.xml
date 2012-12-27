@@ -863,6 +863,69 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_schedule" from="buttonlist_tvshowpanel">
+       <area>0,0,1115,800</area>
+       <buttonarea>0,0,1115,800</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,1115,113</area>
+               <imagetype name="Listpanelline">
+                   <area>0,63,1115,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="titlesubtitle" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+               </textarea>
+               <textarea name="starttime" from="textarea_list">
+                   <area>900,25,144,35</area>
+                   <align>hcenter,vcenter</align>
+                   <font>Font_List_Active</font>
+               </textarea>
+               <textarea name="channel" from="textarea_label_list">
+                   <area>50,55,850,30</area>
+                   <cutdown>yes</cutdown>
+                   <template>%shortstarttimedate% (%lenmins%) - %channel%</template>
+               </textarea>
+               <textarea name="card" from="textarea_label_list">
+                   <area>927,61,90,30</area>
+                   <cutdown>yes</cutdown>
+                   <template>Card: %card%</template>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <area>0,0,1115,113</area>
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,1115,113</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <textarea name="titlesubtitle" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <scroll direction="left" />
+               </textarea>
+               <textarea name="starttime" from="textarea_list">
+                   <area>900,25,144,35</area>
+                   <align>hcenter,vcenter</align>
+               </textarea>
+               <textarea name="channel" from="textarea_label_list">
+                   <area>50,55,850,30</area>
+                   <scroll direction="left" />
+                   <template>%shortstarttimedate% (%lenmins%) - %channel%</template>
+                   <font>Font_Label_List_Selected</font>
+               </textarea>
+               <textarea name="card" from="textarea_label_list">
+                   <area>927,61,90,30</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_Label_List_Selected</font>
+                   <template>Card: %card%</template>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
    <buttonlist name="buttonlist_wall">
        <spacing>0</spacing>
        <area>0,0,1752,955</area>
@@ -1220,8 +1283,6 @@
            <state name="selectedinactive" from="active"/>
        </statetype>
    </buttonlist>
-
-
 
     <!-- Aeon definitions of a shape -->
      <shape name="baselabelbox">
@@ -2835,6 +2896,62 @@
 	     <statetype name="videolevel" from="videolevel_base">
 	         <area>1694,35,72,18</area>
 	     </statetype>
+
+     </group>
+
+     <group name="basegroupscheduledetails">
+        <area>0,0,400,60</area>
+	
+	     <shape name="rectypelabelbox" from="baselabelbox" depends="rectypestatus">
+	         <position>-5,-10</position>
+	     </shape>
+
+        <textarea name="rectypelbl" from="textarea_title_sub" depends="rectypestatus">
+            <area>0,0,100,60</area>
+            <align>top,hcenter</align>
+            <value>Type</value>
+        </textarea>
+
+        <textarea name="rectypestatus" from="textarea_title_sub">
+            <area>0,24,100,36</area>
+            <font>Font_Info_Small</font>
+            <multiline>yes</multiline>           
+            <align>allcenter</align>
+        </textarea>
+
+	     <shape name="storagelabelbox" from="baselabelbox" depends="storagegroup">
+	         <position>145,-10</position>
+	     </shape>
+
+        <textarea name="storagelbl" from="textarea_title_sub" depends="storagegroup">
+            <area>150,0,100,60</area>
+            <align>top,hcenter</align>
+            <value>Storage</value>
+        </textarea>
+
+        <textarea name="storagegroup" from="textarea_title_sub">
+            <area>150,24,100,36</area>
+            <font>Font_Info_Small</font>
+            <multiline>yes</multiline>           
+            <align>allcenter</align>
+        </textarea>
+
+	     <shape name="repeatlabelbox" from="baselabelbox" depends="longrepeat">
+	         <area>285,-10,130,80</area>
+	     </shape>
+
+        <textarea name="repeatlbl" from="textarea_title_sub" depends="longrepeat">
+            <area>295,0,110,60</area>
+            <align>top,hcenter</align>
+            <value>Repeat</value>
+        </textarea>
+
+        <textarea name="longrepeat" from="textarea_title_sub">
+            <area>295,24,110,36</area>
+            <font>Font_Info_Small</font>
+            <multiline>yes</multiline>           
+            <align>allcenter</align>
+        </textarea>
 
      </group>
 

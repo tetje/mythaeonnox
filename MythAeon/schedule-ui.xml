@@ -553,24 +553,123 @@
 
     <window name="viewscheduled">
 
-        <textarea name="pagetitle">
-            <area>20,5,570,40</area>
-            <font>baselarge</font>
-            <value>Scheduled Recordings</value>
-        </textarea>
+        <imagetype name="fanart">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+        </imagetype>
+        
+        <imagetype name="listfloorimg" from="fanart">
+            <area>0,473,1920,607</area>
+            <filename>images/shared/list_floor.png</filename>
+        </imagetype>
+        
+        <imagetype name="listfilterimg" from="fanart">
+            <filename>images/shared/list_filter.png</filename>
+        </imagetype>
+        
+        <imagetype name="spotlightimg" from="fanart">
+            <area>0,875,1920,205</area>
+            <filename>images/shared/list_spot.png</filename>
+        </imagetype>
+        
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
+        </group>
 
-        <shape name="list_background" from="basebackground">
-            <area>15,44,770,270</area>
-        </shape>
+        <group name="listpanel">
+           <area>88,110,1139,970</area>
+           
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="88,-1080" end="88,110" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
 
-        <textarea name="status" from="basetextarea">
-            <area>400,10,380,30</area>
-            <align>right</align>
-            <font>basemedium</font>
-            <font state="warning">basemediumred</font>
-            <align>right</align>
-        </textarea>
+	        <imagetype name="listpanelbgdblack">
+	            <area>0,0,1139,970</area>
+	            <filename>images/shared/listpanel_black.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
 
+	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
+	            <filename>images/shared/listpanel_back.png</filename>
+	        </imagetype>
+        
+	        <imagetype name="listpaneldetailbgd">
+	            <area>912,12,148,850</area>
+	            <filename>images/shared/listpanel_detailwide.png</filename>
+	        </imagetype>
+        
+           <buttonlist name="schedules" from="buttonlist_schedule">
+               <position>12,50</position>
+           </buttonlist>
+           
+           <textarea name="status" from="textarea_label_list">
+               <area>62,860,800,30</area>
+           </textarea>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
+        
+        <group name="listinfo">
+           <area>1264,150,545,930</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+	        <imagetype name="coverartframe">
+	            <area>0,0,545,791</area>
+	            <filename>images/shared/list_movieicon_frame.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+        
+	        <imagetype name="coverart">
+	            <area>13,13,519,766</area>
+	            <mask>images/shared/list_movieicon_mask.png</mask>
+	            <filename>images/shared/defaultVideoBigPoster.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+
+	        <textarea name="description" from="textarea_plot" depends="!coverart">
+	            <area>40,40,475,140</area>
+	            <font>Font_Info_Small_White</font>
+	            <multiline>yes</multiline>
+	            <cutdown>yes</cutdown>
+	            <template>%DESCRIPTION%</template>
+	        </textarea>
+	       
+	        <imagetype name="coverartglass">
+	            <area>13,13,519,766</area>
+	            <filename>images/shared/list_movieicon_glass.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	        
+	        <group name="listscheduledetails" from="basegroupscheduledetails">
+	           <position>73,810</position>
+			  </group>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
+
+
+<!--
         <textarea name="filterlabel" from="basetextarea">
             <area>10,330,105,30</area>
             <value>Showing:</value>
@@ -644,6 +743,7 @@
             <value>(1) All  (2) Important</value>
             <align>center</align>
         </textarea>
+-->
     </window>
 
     <window name="channelrecpriority">
