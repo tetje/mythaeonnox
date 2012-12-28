@@ -1024,6 +1024,31 @@
        </imagetype>
 <!-- -->
   <!--   THE MENU ITEMS                                      -->
+      <group name="descriptiongroup">
+         <area>656,497,608,41></area>
+         
+	      <animation trigger="AboutToShow">
+	          <section duration="1200" centre="middle">
+	              <position start="-608,497" end="656,497" easingcurve="InOutBack" />
+	          </section>
+	      </animation>
+	      
+	      <imagetype name="description_bgd" depends="description">
+	          <filename>images/shared/timepanel_mid_menu.png</filename>
+	          <area>0,0,608,41></area>
+	          <preserveaspect>no</preserveaspect>
+	      </imagetype>
+	
+	       <textarea name="description">
+	           <area>24,5,560,40</area>
+	           <font>Font_Clock</font>
+	           <multiline>no</multiline>
+	           <align>hcenter,vcenter</align>
+	           <cutdown>yes</cutdown>
+	           <alpha>192</alpha>
+	       </textarea>
+       </group>
+
        <imagetype name="menu_bgd">
           <filename>images/shared/homemenu_back.png</filename>
           <area>0,476,1920,225></area>
@@ -1085,30 +1110,6 @@
           <preserveaspect>no</preserveaspect>
        </imagetype>  
 
-      <group name="descriptiongroup">
-         <area>656,497,608,41></area>
-         
-	      <animation trigger="AboutToShow">
-	          <section duration="1200" centre="middle">
-	              <position start="-608,497" end="656,497" easingcurve="InOutBack" />
-	          </section>
-	      </animation>
-	      
-	      <imagetype name="description_bgd" depends="description">
-	          <filename>images/shared/timepanel_mid_menu.png</filename>
-	          <area>0,0,608,41></area>
-	          <preserveaspect>no</preserveaspect>
-	      </imagetype>
-	
-	       <textarea name="description">
-	           <area>24,5,560,40</area>
-	           <font>Font_Clock</font>
-	           <multiline>no</multiline>
-	           <align>hcenter,vcenter</align>
-	           <cutdown>yes</cutdown>
-	           <alpha>192</alpha>
-	       </textarea>
-       </group>
 
 
    </window>

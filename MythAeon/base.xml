@@ -889,7 +889,7 @@
                    <template>%shortstarttimedate% (%lenmins%) - %channel%</template>
                </textarea>
                <textarea name="card" from="textarea_label_list">
-                   <area>927,61,90,30</area>
+                   <area>900,61,144,30</area>
                    <cutdown>yes</cutdown>
                    <template>Card: %card%</template>
                </textarea>
@@ -915,7 +915,7 @@
                    <font>Font_Label_List_Selected</font>
                </textarea>
                <textarea name="card" from="textarea_label_list">
-                   <area>927,61,90,30</area>
+                   <area>900,61,144,30</area>
                    <cutdown>yes</cutdown>
                    <font>Font_Label_List_Selected</font>
                    <template>Card: %card%</template>
