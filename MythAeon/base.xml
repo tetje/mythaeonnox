@@ -891,6 +891,7 @@
                <textarea name="card" from="textarea_label_list">
                    <area>900,61,144,30</area>
                    <cutdown>yes</cutdown>
+                   <align>allcenter</align>
                    <template>Card: %card%</template>
                </textarea>
            </state>
@@ -917,6 +918,7 @@
                <textarea name="card" from="textarea_label_list">
                    <area>900,61,144,30</area>
                    <cutdown>yes</cutdown>
+                   <align>allcenter</align>
                    <font>Font_Label_List_Selected</font>
                    <template>Card: %card%</template>
                </textarea>
