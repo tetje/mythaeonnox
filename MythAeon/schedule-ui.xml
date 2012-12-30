@@ -1290,7 +1290,6 @@
 
     <window name="programlist">
 
-
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
@@ -1814,166 +1813,229 @@
 
     <window name="scheduleeditor">
 
-        <shape name="details_background" from="basebackground">
-            <area>25,25,750,175</area>
-        </shape>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>50,35,700,45</area>
-            <font>baselarge</font>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="timedate" from="basetextarea">
-            <area>50,170,440,27</area>
-        </textarea>
+        <group name="scheduleeditor_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <template>%title%  |  %timedate%</template>
+	        </textarea>
+	
+	        <!-- Labels -->
 
-        <textarea name="channel" from="basetextarea">
-            <area>550,170,200,35</area>
-            <align>right</align>
-        </textarea>
+	        <textarea name="rulelbl" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Select the recording rule:</value>
+	        </textarea>
 
-        <textarea name="description" from="basetextarea">
-            <area>50,70,700,100</area>
-            <multiline>yes</multiline>
-            <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
-        </textarea>
+<!--	
+	        <textarea name="timedate" from="basetextarea">
+	            <area>50,170,440,27</area>
+	        </textarea>
+	
+	        <textarea name="channel" from="basetextarea">
+	            <area>550,170,200,35</area>
+	            <align>right</align>
+	        </textarea>
+	
+	        <textarea name="description" from="basetextarea">
+	            <area>50,70,700,100</area>
+	            <multiline>yes</multiline>
+	            <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
+	        </textarea>
 
-        <buttonlist name="rules" from="basewideselector">
-            <position>215,210</position>
-            <wrapstyle>selection</wrapstyle>
-            <helptext>Select the recording rule</helptext>
-        </buttonlist>
+-->
+	        
+	        <!-- Widgets -->
+	        <buttonlist name="rules" from="selector_settings">
+	            <position>0,120</position>
+	            <helptext>Select the recording rule</helptext>
+	        </buttonlist>
+	     </group>
 
-        <button name="schedoptions" from="baseverywidebutton">
-            <position>215,255</position>
-            <value>Schedule Options</value>
-            <helptext></helptext>
-        </button>
+        <group name="scheduleeditor_menu">
+           <area>30,28,324,952</area>
 
-        <button name="storeoptions" from="baseverywidebutton">
-            <position>215,300</position>
-            <value>Storage Options</value>
-            <helptext></helptext>
-        </button>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Editor</value>
+	        </textarea>
+	
+	        <button name="schedoptions" from="button_settings">
+	            <position>0,120</position>
+	            <value>Schedule Options</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="storeoptions" from="button_settings">
+	            <position>0,192</position>
+	            <value>Storage Options</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="postprocessing" from="button_settings">
+	            <position>0,264</position>
+	            <value>Post Processing</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="schedinfo" from="button_settings">
+	            <position>0,336</position>
+	            <value>Schedule Info</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="preview" from="button_settings">
+	            <position>0,408</position>
+	            <value>Preview</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="metadata" from="button_settings">
+	            <position>0,480</position>
+	            <value>Metadata</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="save" from="button_settings">
+	            <position>0,552</position>
+	            <value>Save</value>
+	        </button>
+	
+	        <button name="cancel" from="button_settings">
+	            <position>0,624</position>
+	            <value>Cancel</value>
+	        </button>
+	
+        </group>
 
-        <button name="postprocessing" from="baseverywidebutton">
-            <position>215,345</position>
-            <value>Post Processing</value>
-            <helptext></helptext>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
-        <button name="schedinfo" from="baseverywidebutton">
-            <position>215,390</position>
-            <value>Schedule Info</value>
-            <helptext></helptext>
-        </button>
-
-        <button name="preview" from="baseverywidebutton">
-            <position>215,435</position>
-            <value>Preview</value>
-            <helptext></helptext>
-        </button>
-
-        <button name="metadata" from="baseverywidebutton">
-            <position>215,480</position>
-            <value>Metadata Options</value>
-            <helptext></helptext>
-        </button>
-
-        <button name="cancel" from="basebutton">
-            <position>40,525</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="save" from="basebutton">
-            <position>540,525</position>
-            <value>Save</value>
-        </button>
     </window>
 
     <window name="scheduleoptionseditor">
 
-        <shape name="details_background" from="basebackground">
-            <area>25,25,750,175</area>
-        </shape>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>50,35,700,45</area>
-            <font>baselarge</font>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="timedate" from="basetextarea">
-            <area>50,170,440,27</area>
-        </textarea>
+        <group name="scheduleoptionseditor_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <template>%title%  |  %timedate%</template>
+	        </textarea>
+	
+	        <!-- Labels -->
 
-        <textarea name="channel" from="basetextarea">
-            <area>550,170,200,35</area>
-            <align>right</align>
-        </textarea>
+	        <textarea name="inputlbl" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Select card:</value>
+	        </textarea>
+	
+	        <textarea name="ruleactivelbl" from="textarea_settings_option">
+	            <position>20,552</position>
+	            <value>Recording Rule Active:</value>
+	        </textarea>
+	        
+	        <!-- Widgets -->
+	        <spinbox name="priority" from="spinbox_settings_wide">
+	            <position>0,120</position>
+	            <template type="negative">Reduce recording priority by %n</template>
+	            <template type="zero">Normal recording priority</template>
+	            <template type="positive">Raise recording priority by %n</template>
+	            <helptext></helptext>
+	        </spinbox>
+	
+	        <buttonlist name="input" from="selector_settings">
+	            <position>0,192</position>
+	            <helptext></helptext>
+	        </buttonlist>
+	
+	        <spinbox name="startoffset" from="spinbox_settings_wide">
+	            <position>0,264</position>
+	            <template type="negative">Start recording %n minute(s) late</template>
+	            <template type="zero">Start recording on time</template>
+	            <template type="positive">Start recording %n minute(s) early</template>
+	            <helptext></helptext>
+	        </spinbox>
+	
+	        <spinbox name="endoffset" from="spinbox_settings_wide">
+	            <position>0,336</position>
+	            <template type="negative">End recording %n minute(s) early</template>
+	            <template type="zero">End recording on time</template>
+	            <template type="positive">End recording %n minute(s) late</template>
+	            <helptext></helptext>
+	        </spinbox>
+	
+	        <buttonlist name="dupmethod" from="selector_settings_wide">
+	            <position>0,408</position>
+	            <helptext></helptext>
+	        </buttonlist>
+	
+	        <buttonlist name="dupscope" from="selector_settings_wide">
+	            <position>0,480</position>
+	            <helptext></helptext>
+	        </buttonlist>
+		
+	        <checkbox name="ruleactive"  from="checkbox_settings">
+	            <position>0,552</position>
+	        </checkbox>
+	        
+	     </group>
 
-        <textarea name="description" from="basetextarea">
-            <area>50,70,700,100</area>
-            <multiline>yes</multiline>
-            <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
-        </textarea>
-        <spinbox name="priority" from="basewidespinbox">
-            <position>215,210</position>
-            <template type="negative">Reduce priority by %n</template>
-            <template type="zero">Normal recording priority</template>
-            <template type="positive">Raise priority by %n</template>
-            <helptext></helptext>
-        </spinbox>
+        <group name="scheduleoptionseditor_menu">
+           <area>30,28,324,952</area>
 
-        <buttonlist name="input" from="basewideselector">
-            <position>215,255</position>
-            <helptext></helptext>
-        </buttonlist>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Options</value>
+	        </textarea>
+	
+	        <button name="filters" from="button_settings">
+	            <position>0,120</position>
+	            <value>Filters</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="back" from="button_settings">
+	            <position>0,192</position>
+	            <value>Back</value>
+	            <helptext></helptext>
+	        </button>	
+        </group>
 
-        <spinbox name="startoffset" from="basewidespinbox">
-            <position>215,300</position>
-            <template type="negative">Start recording %n minute(s) late</template>
-            <template type="zero">Start recording on time</template>
-            <template type="positive">Start recording %n minute(s) early</template>
-            <helptext></helptext>
-        </spinbox>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
-        <spinbox name="endoffset" from="basewidespinbox">
-            <position>215,345</position>
-            <template type="negative">End recording %n minute(s) early</template>
-            <template type="zero">End recording on time</template>
-            <template type="positive">End recording %n minute(s) late</template>
-            <helptext></helptext>
-        </spinbox>
-
-        <buttonlist name="dupmethod" from="basewideselector">
-            <position>215,390</position>
-            <helptext></helptext>
-        </buttonlist>
-
-        <buttonlist name="dupscope" from="basewideselector">
-            <position>215,435</position>
-            <helptext></helptext>
-        </buttonlist>
-
-        <button name="filters" from="basewidebutton">
-            <position>140,480</position>
-            <value>Schedule filters</value>
-            <helptext></helptext>
-        </button>
-
-        <checkbox name="ruleactive" from="basecheckbox">
-            <position>460,486</position>
-        </checkbox>
-
-        <textarea name="ruleactivelabel" from="basetextarea">
-            <area>500,490,300,30</area>
-            <value>Recording Rule Active</value>
-        </textarea>
-
-        <button name="back" from="basebutton">
-            <position>40,525</position>
-            <value>Back</value>
-        </button>
     </window>
 
     <window name="schedulefiltereditor">
