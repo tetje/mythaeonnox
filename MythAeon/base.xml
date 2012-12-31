@@ -3128,7 +3128,7 @@
         </imagetype>
 
         <imagetype name="settingpanelintframe_bottom">
-            <area>193,28,1730,953</area>
+            <area>193,26,1730,955</area>
             <filename>images/shared/settings_intframe_bottom.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>

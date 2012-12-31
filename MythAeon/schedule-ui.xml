@@ -39,7 +39,7 @@
 		        </imagetype>
 
 		        <imagetype name="settingpanelintframe">
-		            <area>193,28,1730,953</area>
+		            <area>193,26,1730,955</area>
 		            <filename>images/shared/settings_intframe.png</filename>
 		            <preserveaspect>no</preserveaspect>
 		        </imagetype>
