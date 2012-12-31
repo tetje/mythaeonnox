@@ -3126,6 +3126,13 @@
             <area>29,9,1792,975</area>
             <filename>images/shared/settings_panelfront.png</filename>
         </imagetype>
+
+        <imagetype name="settingpanelintframe_bottom">
+            <area>193,28,1730,953</area>
+            <filename>images/shared/settings_intframe_bottom.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+		
     </group>
 
     <window name="MythPopupBox">
