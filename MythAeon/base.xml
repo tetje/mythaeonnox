@@ -3029,11 +3029,11 @@
         <textarea name="rectypelbl" from="textarea_title_sub" depends="rectypestatus">
             <area>0,0,100,60</area>
             <align>top,hcenter</align>
-            <value>Type</value>
+            <value>Record</value>
         </textarea>
 
         <textarea name="rectypestatus" from="textarea_title_sub">
-            <area>0,24,100,36</area>
+            <area>0,22,100,40</area>
             <font>Font_Info_Small</font>
             <multiline>yes</multiline>           
             <align>allcenter</align>
@@ -3050,7 +3050,7 @@
         </textarea>
 
         <textarea name="storagegroup" from="textarea_title_sub">
-            <area>150,24,100,36</area>
+            <area>150,22,100,40</area>
             <font>Font_Info_Small</font>
             <multiline>yes</multiline>           
             <align>allcenter</align>
@@ -3067,7 +3067,7 @@
         </textarea>
 
         <textarea name="longrepeat" from="textarea_title_sub">
-            <area>295,24,110,36</area>
+            <area>295,22,110,40</area>
             <font>Font_Info_Small</font>
             <multiline>yes</multiline>           
             <align>allcenter</align>
