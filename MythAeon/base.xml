@@ -3135,6 +3135,26 @@
 		
     </group>
 
+     <group name="basesettingswindow_detail">
+        <area>0,0,1850,1010</area>
+        <imagetype name="settingpanelbgd">
+            <area>0,0,1850,1010</area>
+            <filename>images/shared/settings_panelback.png</filename>
+        </imagetype>
+
+        <imagetype name="settingpanelfnt">
+            <area>29,9,1792,975</area>
+            <filename>images/shared/settings_panelfront.png</filename>
+        </imagetype>
+
+        <imagetype name="settingpanelintframe">
+            <area>193,26,1730,955</area>
+            <filename>images/shared/settings_intframe.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+     </group>
+
     <window name="MythPopupBox">
         <area>0,0,1076,60</area>
 
@@ -3249,6 +3269,7 @@
 
         <textarea name="message" from="textarea_list">
             <area>70,75,560,50</area>
+            <scroll direction="horizontal"/>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
         </textarea>
@@ -3276,7 +3297,7 @@
             <area>70,75,560,50</area>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
-            <scroll direction="left"/>
+            <scroll direction="horizontal"/>
         </textarea>
 
         <button name="cancel" from="button_dialog">
@@ -3299,6 +3320,7 @@
 
         <textarea name="message" from="textarea_list">
             <area>70,75,560,50</area>
+            <scroll direction="horizontal"/>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
         </textarea>

@@ -741,7 +741,7 @@
 	        </checkbox>
 
 	        <textarea name="helptext" from="textarea_plot">
-	            <area>20,860,1400,72</area>
+	            <area>20,860,1375,72</area>
 	            <case>normal</case>
 	            <multiline>yes</multiline>
 	            <align>bottom,left</align>
@@ -1222,7 +1222,7 @@
 	        </buttonlist>
 	
 	        <textarea name="numvideos_text" from="textarea_plot">
-	            <area>20,860,1400,72</area>
+	            <area>20,860,1375,72</area>
 	            <case>normal</case>
 	            <multiline>yes</multiline>
 	            <align>bottom,left</align>
@@ -1345,7 +1345,7 @@
 	        </textedit>
 
 	        <textarea name="helptext" from="textarea_plot">
-	            <area>20,860,1400,72</area>
+	            <area>20,860,1375,72</area>
 	            <case>normal</case>
 	            <align>bottom,left</align>
 	            <multiline>yes</multiline>
@@ -1452,7 +1452,7 @@
 	        </spinbox>
 	
 	        <textarea name="helptext" from="textarea_plot">
-	            <area>20,860,1400,72</area>
+	            <area>20,860,1375,72</area>
 	            <case>normal</case>
 	            <align>bottom,left</align>
 	            <multiline>yes</multiline>

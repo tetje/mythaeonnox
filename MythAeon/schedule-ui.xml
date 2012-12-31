@@ -26,24 +26,8 @@
 	            </section>
 	        </animation>
 -->	
-	        <group name="settings_panel_bgd">
+	        <group name="settings_panel_bgd" from="basesettingswindow_detail">
 		        <area>0,0,1850,1010</area>
-		        <imagetype name="settingpanelbgd">
-		            <area>0,0,1850,1010</area>
-		            <filename>images/shared/settings_panelback.png</filename>
-		        </imagetype>
-		
-		        <imagetype name="settingpanelfnt">
-		            <area>29,9,1792,975</area>
-		            <filename>images/shared/settings_panelfront.png</filename>
-		        </imagetype>
-
-		        <imagetype name="settingpanelintframe">
-		            <area>193,26,1730,955</area>
-		            <filename>images/shared/settings_intframe.png</filename>
-		            <preserveaspect>no</preserveaspect>
-		        </imagetype>
-		
 	        </group>
 	        	        
 	        <group name="settings_panel">
@@ -269,72 +253,72 @@
 	            </section>
 	        </animation>
 -->	
-	        <group name="settings_panel_bgd" from="basesettingswindow">
-	           <area>0,0,1850,1010</area>
+	        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+		        <area>0,0,1850,1010</area>
 	        </group>
 	        	        
 	        <group name="settings_panel">
 	           <area>354,28,1460,952</area>
 	
 		        <textarea name="rectypestatus" from="textarea_settings_title">
-		            <area>20,50,1460,50</area>
+		            <area>20,50,1375,50</area>
 		            <align>left,vcenter</align>
-		            <template>%rectypestatus%  |  %timedate%  |  %lenmins%  |  card no %card%</template>
+		            <scroll direction="horizontal" />
+		            <template>%rectypestatus% | %timedate% (%lenmins%) on card %card%</template>
 		        </textarea>
 		        
 		        <group name="backgroundgrid">
 		            <area>-30,146,1500,650</area>
 	               <imagetype name="backgroundgridline1">
-	                   <area>0,0,1500,50</area>
+	                   <area>0,0,1440,50</area>
 	                   <preserveaspect>no</preserveaspect>
 	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
 	               </imagetype>
 					
 	               <imagetype name="backgroundgridline2">
-	                   <area>0,72,1500,50</area>
+	                   <area>0,72,1440,50</area>
 	                   <preserveaspect>no</preserveaspect>
 	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
 	               </imagetype>
 
 	               <imagetype name="backgroundgridline3">
-	                   <area>0,144,1500,50</area>
+	                   <area>0,144,1440,50</area>
 	                   <preserveaspect>no</preserveaspect>
 	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
 	               </imagetype>
 
 	               <imagetype name="backgroundgridline4">
-	                   <area>0,216,1500,50</area>
+	                   <area>0,216,1440,50</area>
 	                   <preserveaspect>no</preserveaspect>
 	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
 	               </imagetype>
 
 	               <imagetype name="backgroundgridline5">
-	                   <area>0,288,1500,50</area>
+	                   <area>0,288,1440,50</area>
 	                   <preserveaspect>no</preserveaspect>
 	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
 	               </imagetype>
 
 	               <imagetype name="backgroundgridline6">
-	                   <area>0,360,1500,50</area>
+	                   <area>0,360,1440,50</area>
 	                   <preserveaspect>no</preserveaspect>
 	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
 	               </imagetype>
 
 	               <imagetype name="backgroundgridline7">
-	                   <area>0,432,1500,50</area>
+	                   <area>0,432,1440,50</area>
 	                   <preserveaspect>no</preserveaspect>
 	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
 	               </imagetype>
 
 	               <imagetype name="backgroundgridline8">
-	                   <area>0,504,1500,50</area>
+	                   <area>0,504,1440,50</area>
 	                   <preserveaspect>no</preserveaspect>
 	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
 	               </imagetype>
 	           </group>			
-
 		        <guidegrid name="guidegrid">
-		            <area>390,183,1460,576</area>
+		            <area>390,183,1402,576</area>
 		            <layout>horizontal</layout>
 		            <channels>8</channels>
 		            <timeslots>4</timeslots>
@@ -357,14 +341,14 @@
 		        </guidegrid>
 		
 				  <buttonlist name="timelist">
-				      <area>10,703,1460,32</area>
+				      <area>10,703,1402,32</area>
 				      <layout>horizontal</layout>
-				      <buttonarea>0,0,1460,32</buttonarea>
+				      <buttonarea>0,0,1402,32</buttonarea>
 				      <statetype name="buttonitem">
 				          <area>0,0,365,32</area>
 				          <state name="active">
 				              <textarea name="buttontext" from="textarea_settings_button">
-				                  <area>0,0,365,32</area>
+				                  <area>0,0,350,32</area>
 				                  <align>left,vcenter</align>
 				              </textarea>
 				          </state>
@@ -374,17 +358,17 @@
 				  </buttonlist>
 
 		        <textarea name="titlesubtitle"from="textarea_plot">
-		            <area>20,770,1400,32</area>
+		            <area>20,770,1375,32</area>
 		        </textarea>
 
               <imagetype name="backgroundgridline10">
-                  <area>-20,760,1460,50</area>
+                  <area>-20,760,1440,50</area>
                   <preserveaspect>no</preserveaspect>
                   <filename>images/shared/settings_radiobuttonoff.png</filename>
               </imagetype>
 
 		        <textarea name="description" from="textarea_plot">
-		            <area>20,820,1420,116</area>
+		            <area>20,820,1375,116</area>
 		            <case>normal</case>
 		            <align>top,justify</align>
 		            <multiline>yes</multiline>
@@ -392,7 +376,7 @@
 		        </textarea>
 		        
 		     </group>
-		     
+		     		     
 	        <group name="settings_menu">
 	           <area>30,28,324,952</area>
 	
@@ -444,14 +428,25 @@
 				  </buttonlist>
 
 		        <clock name="time">
-		            <area>20,703,290,32</area>
+		            <area>20,704,290,32</area>
 		            <align>right,vcenter</align>
 		            <font>Font_Button_Settings</font>
 		            <template>%time%</template>
 		        </clock>
 		
+		        <imagetype name="videoborder">
+		            <area>12,763,310,180</area>
+		            <filename>images/shared/multiplex_tvborder.png</filename>
+		        </imagetype>
+	
 		        <imagetype name="video">
 		            <area>85,832,290,163</area>
+		            <mask>images/shared/multiplex_tvmask_video.png</mask>
+		        </imagetype>
+	
+		        <imagetype name="videoglass">
+		            <area>20,770,290,163</area>
+		            <filename>images/shared/multiplex_tvglass.png</filename>
 		        </imagetype>
 	
 		    </group>	
@@ -1846,7 +1841,8 @@
 	
 	        <textarea name="title" from="textarea_settings_title">
 	            <area>20,50,1360,50</area>
-	            <template>%title%  |  %timedate%</template>
+	            <scroll direction="horizontal"/>
+	            <template>%title%  |  %timedate% on %channel%</template>
 	        </textarea>
 	
 	        <!-- Labels -->
@@ -1856,24 +1852,6 @@
 	            <value>Select the recording rule:</value>
 	        </textarea>
 
-<!--	
-	        <textarea name="timedate" from="basetextarea">
-	            <area>50,170,440,27</area>
-	        </textarea>
-	
-	        <textarea name="channel" from="basetextarea">
-	            <area>550,170,200,35</area>
-	            <align>right</align>
-	        </textarea>
-	
-	        <textarea name="description" from="basetextarea">
-	            <area>50,70,700,100</area>
-	            <multiline>yes</multiline>
-	            <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
-	        </textarea>
-
--->
-	        
 	        <!-- Widgets -->
 	        <buttonlist name="rules" from="selector_settings">
 	            <position>0,120</position>
@@ -1964,16 +1942,12 @@
 	
 	        <textarea name="title" from="textarea_settings_title">
 	            <area>20,50,1360,50</area>
-	            <template>%title%  |  %timedate%</template>
+	            <scroll direction="horizontal"/>
+	            <template>%title%  |  %timedate% on %channel%</template>
 	        </textarea>
 	
 	        <!-- Labels -->
 
-	        <textarea name="inputlbl" from="textarea_settings_option">
-	            <position>20,192</position>
-	            <value>Select card:</value>
-	        </textarea>
-	
 	        <textarea name="ruleactivelbl" from="textarea_settings_option">
 	            <position>20,552</position>
 	            <value>Recording Rule Active:</value>
@@ -1988,7 +1962,7 @@
 	            <helptext></helptext>
 	        </spinbox>
 	
-	        <buttonlist name="input" from="selector_settings">
+	        <buttonlist name="input" from="selector_settings_wide">
 	            <position>0,192</position>
 	            <helptext></helptext>
 	        </buttonlist>
@@ -2019,7 +1993,7 @@
 	            <helptext></helptext>
 	        </buttonlist>
 		
-	        <checkbox name="ruleactive"  from="checkbox_settings">
+	        <checkbox name="ruleactive" from="checkbox_settings">
 	            <position>0,552</position>
 	        </checkbox>
 	        
@@ -2134,166 +2108,206 @@
 
     <window name="storageoptionseditor">
 
-        <shape name="details_background" from="basebackground">
-            <area>25,25,750,175</area>
-        </shape>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>50,35,700,45</area>
-            <font>baselarge</font>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="timedate" from="basetextarea">
-            <area>50,170,440,27</area>
-        </textarea>
+        <group name="storageoptionseditor_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <scroll direction="horizontal"/>
+	            <template>%title%  |  %timedate% on %channel%</template>
+	        </textarea>
+	
+	        <!-- Labels -->
 
-        <textarea name="channel" from="basetextarea">
-            <area>550,170,200,35</area>
-            <align>right</align>
-        </textarea>
+	        <textarea name="autoexpirelabel" from="textarea_settings_option">
+	            <position>20,552</position>
+	            <value>Allow recordings to expire:</value>
+	        </textarea>
 
-        <textarea name="description" from="basetextarea">
-            <area>50,70,700,100</area>
-            <multiline>yes</multiline>
-            <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
-        </textarea>
+	        <!-- Widgets -->
+	
+	        <buttonlist name="recprofile" from="selector_settings_wide">
+	            <position>0,120</position>
+	            <helptext></helptext>
+	        </buttonlist>
+	
+	        <buttonlist name="recgroup" from="selector_settings_wide">
+	            <position>0,192</position>
+	            <helptext></helptext>
+	        </buttonlist>
+	
+	        <buttonlist name="storagegroup" from="selector_settings_wide">
+	            <position>0,264</position>
+	            <helptext></helptext>
+	        </buttonlist>
+	
+	        <buttonlist name="playgroup" from="selector_settings_wide">
+	            <position>0,336</position>
+	            <helptext></helptext>
+	        </buttonlist>
+	
+	        <spinbox name="maxepisodes"  from="spinbox_settings_wide">
+	            <position>0,408</position>
+	            <template type="zero">No episode limit</template>
+	            <template type="positive">Keep at most %n episode(s)</template>
+	            <helptext></helptext>
+	        </spinbox>
+	
+	        <buttonlist name="maxnewest" from="selector_settings_wide">
+	            <position>0,480</position>
+	            <helptext></helptext>
+	        </buttonlist>
+	
+	        <checkbox name="autoexpire" from="checkbox_settings">
+	            <position>0,552</position>
+	        </checkbox>
+	
+	     </group>
 
-        <buttonlist name="recprofile" from="basewideselector">
-            <position>215,210</position>
-            <helptext></helptext>
-        </buttonlist>
+        <group name="storageoptionseditor_menu">
+           <area>30,28,324,952</area>
 
-        <buttonlist name="recgroup" from="basewideselector">
-            <position>215,255</position>
-            <helptext></helptext>
-        </buttonlist>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Storage</value>
+	        </textarea>
+	
+	        <button name="back" from="button_settings">
+	            <position>0,120</position>
+	            <value>Back</value>
+	            <helptext></helptext>
+	        </button>
+		
+        </group>
 
-        <buttonlist name="storagegroup" from="basewideselector">
-            <position>215,300</position>
-            <helptext></helptext>
-        </buttonlist>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
-        <buttonlist name="playgroup" from="basewideselector">
-            <position>215,345</position>
-            <helptext></helptext>
-        </buttonlist>
-
-        <spinbox name="maxepisodes" from="basewidespinbox">
-            <position>215,390</position>
-            <template type="zero">No episode limit</template>
-            <template type="positive">Keep at most %n episode(s)</template>
-            <helptext></helptext>
-        </spinbox>
-
-        <buttonlist name="maxnewest" from="basewideselector">
-            <position>215,435</position>
-            <helptext></helptext>
-        </buttonlist>
-
-        <checkbox name="autoexpire" from="basecheckbox">
-            <position>215,480</position>
-        </checkbox>
-
-        <textarea name="autoexpirelabel" from="basetextarea">
-            <area>260,485,300,30</area>
-            <value>Allow recordings to expire?</value>
-        </textarea>
-
-        <button name="back" from="basebutton">
-            <position>40,525</position>
-            <value>Back</value>
-        </button>
     </window>
 
     <window name="postproceditor">
 
-        <shape name="details_background" from="basebackground">
-            <area>25,25,750,175</area>
-        </shape>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>50,35,700,45</area>
-            <font>baselarge</font>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="timedate" from="basetextarea">
-            <area>50,170,440,27</area>
-        </textarea>
+        <group name="postproceditor_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <scroll direction="horizontal"/>
+	            <template>%title%  |  %timedate% on %channel%</template>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="autocommflaglabel" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Commercial Flag recordings:</value>
+	        </textarea>
+	
+	        <textarea name="autotranscodelabel" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Transcode new recordings:</value>
+	        </textarea>
+	
+	        <textarea name="userjob1label" from="textarea_settings_option">
+	            <position>20,336</position>
+	            <value>Run userjob #1:</value>
+	        </textarea>
+	
+	        <textarea name="userjob2label" from="textarea_settings_option">
+	            <position>20,408</position>
+	            <value>Run userjob #2:</value>
+	        </textarea>
+	
+	        <textarea name="userjob3label"  from="textarea_settings_option">
+	            <position>20,480</position>
+	            <value>Run userjob #3:</value>
+	        </textarea>
+	
+	        <textarea name="userjob4label" from="textarea_settings_option">
+	            <position>20,552</position>
+	            <value>Run userjob #4:</value>
+	        </textarea>
 
-        <textarea name="channel" from="basetextarea">
-            <area>550,170,200,35</area>
-            <align>right</align>
-        </textarea>
+	        <!-- Widgets -->	
+	        <checkbox name="autocommflag" from="checkbox_settings">
+	            <position>0,120</position>
+	        </checkbox>
+	
+	        <checkbox name="autotranscode" from="checkbox_settings">
+	            <position>0,192</position>
+	        </checkbox>
+	
+	        <buttonlist name="transcodeprofile" from="selector_settings_wide">
+	            <position>0,264</position>
+	            <helptext></helptext>
+	        </buttonlist>
+	
+	        <checkbox name="userjob1" from="checkbox_settings">
+	            <position>0,336</position>
+	        </checkbox>
+	
+	        <checkbox name="userjob2" from="checkbox_settings">
+	            <position>0,408</position>
+	        </checkbox>
+	
+	        <checkbox name="userjob3" from="checkbox_settings">
+	            <position>0,480</position>
+	        </checkbox>
+	
+	        <checkbox name="userjob4" from="checkbox_settings">
+	            <position>0,552</position>
+	        </checkbox>
+	
+	     </group>
 
-        <textarea name="description" from="basetextarea">
-            <area>50,70,700,100</area>
-            <multiline>yes</multiline>
-            <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
-        </textarea>
+        <group name="postproceditor_menu">
+           <area>30,28,324,952</area>
 
-        <checkbox name="autocommflag" from="basecheckbox">
-            <position>215,210</position>
-        </checkbox>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Post Processing</value>
+	        </textarea>
+	
+	        <button name="back" from="button_settings">
+	            <position>0,120</position>
+	            <value>Back</value>
+	            <helptext></helptext>
+	        </button>
+		
+        </group>
 
-        <textarea name="autocommflaglabel" from="basetextarea">
-            <area>260,217,300,30</area>
-            <value>Commercial Flag new recordings</value>
-        </textarea>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
-        <checkbox name="autotranscode" from="basecheckbox">
-            <position>215,255</position>
-        </checkbox>
-
-        <textarea name="autotranscodelabel" from="basetextarea">
-            <area>260,262,300,30</area>
-            <value>Transcode new recordings</value>
-        </textarea>
-
-        <buttonlist name="transcodeprofile" from="basewideselector">
-            <position>215,300</position>
-            <helptext></helptext>
-        </buttonlist>
-
-        <checkbox name="userjob1" from="basecheckbox">
-            <position>215,345</position>
-        </checkbox>
-
-        <textarea name="userjob1label" from="basetextarea">
-            <area>260,352,300,30</area>
-            <value>Transcode new recordings</value>
-        </textarea>
-
-        <checkbox name="userjob2" from="basecheckbox">
-            <position>215,390</position>
-        </checkbox>
-
-        <textarea name="userjob2label" from="basetextarea">
-            <area>260,397,300,30</area>
-            <value>Transcode new recordings</value>
-        </textarea>
-
-        <checkbox name="userjob3" from="basecheckbox">
-            <position>215,435</position>
-        </checkbox>
-
-        <textarea name="userjob3label" from="basetextarea">
-            <area>260,447,300,30</area>
-            <value>Transcode new recordings</value>
-        </textarea>
-
-        <checkbox name="userjob4" from="basecheckbox">
-            <position>215,480</position>
-        </checkbox>
-
-        <textarea name="userjob4label" from="basetextarea">
-            <area>260,487,300,30</area>
-            <value>Transcode new recordings</value>
-        </textarea>
-
-        <button name="back" from="basebutton">
-            <position>40,525</position>
-            <value>Back</value>
-        </button>
     </window>
 
     <window name="schedulediff">
