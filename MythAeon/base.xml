@@ -3113,7 +3113,7 @@
         </textarea>
 
         <textarea name="rectypestatus" from="textarea_title_sub">
-            <area>0,22,100,40</area>
+            <area>0,25,100,40</area>
             <font>Font_Info_Small</font>
             <multiline>yes</multiline>           
             <align>allcenter</align>
@@ -3130,7 +3130,7 @@
         </textarea>
 
         <textarea name="storagegroup" from="textarea_title_sub">
-            <area>150,22,100,40</area>
+            <area>150,25,100,40</area>
             <font>Font_Info_Small</font>
             <multiline>yes</multiline>           
             <align>allcenter</align>
@@ -3147,7 +3147,7 @@
         </textarea>
 
         <textarea name="longrepeat" from="textarea_title_sub">
-            <area>295,22,110,40</area>
+            <area>295,25,110,40</area>
             <font>Font_Info_Small</font>
             <multiline>yes</multiline>           
             <align>allcenter</align>
