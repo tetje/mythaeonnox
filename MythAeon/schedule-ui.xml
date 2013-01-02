@@ -687,6 +687,7 @@
 
     </window>
 
+<!-- To do --> 
     <window name="channelrecpriority">
 
         <textarea name="pagetitle">
@@ -791,6 +792,7 @@
 
     </window>
 
+<!-- To do --> 
     <window name="programrecpriority">
 
         <textarea name="pagetitle" from="basetextarea">
@@ -899,6 +901,7 @@
 
     </window>
 
+<!-- To do --> 
     <window name="managerecrules">
 
         <textarea name="pagetitle" from="basetextarea">
@@ -1034,6 +1037,7 @@
 
     </window>
 
+<!-- To do --> 
     <window name="custompriority">
 
         <textarea name="pagetitle" from="basetextarea">
@@ -1135,58 +1139,48 @@
     </window>
 
     <window name="phrasepopup">
-        <area>-1,-1,500,500</area>
+        <area>-1,-1,700,550</area>
 
-        <imagetype name="box">
-            <filename>mythdialogbox-background.png</filename>
-        </imagetype>
+        <group name="movie_selection_window" from="basedialogwindowbig">
+            <position>0,0</position>        
+        </group>
 
-        <textarea name="title_text" from="basetextarea">
-            <area>20,20,460,40</area>
-            <font>baselarge</font>
-            <align>hcenter,top</align>
-            <value>Phrase</value>
+        <textarea name="title_text" from="textarea_list">
+            <area>70,75,560,50</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
+            <value>Enter phrase to search for:</value>
         </textarea>
 
-        <buttonlist name="phrase_list" from="basebuttonlist">
-            <area>20,60,450,270</area>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="buttontext">
-                        <area>5,0,450,30</area>
-                    </textarea>
-                </state>
-                <state name="selectedinactive">
-                    <textarea name="buttontext">
-                        <area>5,0,450,30</area>
-                    </textarea>
-                </state>
-                <state name="selectedactive">
-                    <textarea name="buttontext">
-                        <area>5,0,450,30</area>
-                    </textarea>
-                </state>
-            </statetype>
+        <buttonlist name="phrase_list" from="buttonlist_dialog">
+		       <area>0,125,700,50</area>
+		       <align>top,hcenter</align>
+		       <buttonarea>0,0,700,50</buttonarea>
         </buttonlist>
 
-        <textedit name="phrase_edit" from="basetextedit">
-            <position>60,360</position>
+        <textedit name="phrase_edit" from="textedit_dialog">
+            <position>0,275</position>
         </textedit>
 
-        <button name="ok_button" from="basebutton">
-            <position>12,440</position>
+        <button name="ok_button" from="button_dialog">
+            <position>0,325</position>
+            <value>OK</value>
+        </button>
+        
+        <button name="delete_button" from="button_dialog">
+            <position>0,375</position>
+            <value>Delete</value>
         </button>
 
-        <button name="delete_button" from="basebutton">
-            <position>173,440</position>
-        </button>
-
-        <button name="record_button" from="basebutton">
-            <position>333,440</position>
+        <button name="record_button" from="button_dialog">
+            <position>0,425</position>
+            <value>Record</value>
         </button>
 
     </window>
 
+<!-- To do --> 
     <window name="powersearchpopup">
         <area>-1,-1,500,500</area>
 
@@ -1236,6 +1230,7 @@
 
     </window>
 
+<!-- To do --> 
     <window name="editpowersearchpopup">
         <area>-1,-1,500,550</area>
 
@@ -1502,6 +1497,7 @@
 -->
     </window>
 
+<!-- To do --> 
     <window name="progdetails">
 
         <textarea name="title" from="basetextarea">
@@ -1522,6 +1518,7 @@
         </webbrowser>
     </window>
 
+<!-- To do --> 
     <window name="searchpopup" from="MythTextInputDialog">
         <area>-1,10,580,165</area>
 
@@ -1546,6 +1543,7 @@
 
     </window>
 
+<!-- To do --> 
     <window name="programfind">
 
         <shape name="details_background" from="basebackground">
@@ -1702,6 +1700,7 @@
 
     </window>
 
+<!-- To do --> 
     <window name="customedit">
 
         <textarea name="pagetitle" from="basetextarea">
@@ -2286,6 +2285,7 @@
 
     </window>
 
+<!-- To do --> 
     <window name="schedulediff">
 
         <textarea name="sched" from="basetextarea">

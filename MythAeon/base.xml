@@ -1160,7 +1160,7 @@
                    <filename>images/shared/context_nofocus.png</filename>
                </imagetype>
                <textarea name="buttontext" from="textarea_list">
-                   <area>50,0,600,50</area>
+                   <area>70,0,600,50</area>
                    <align>left,vcenter</align>
                </textarea>
            </state>
@@ -1170,15 +1170,22 @@
                    <filename>images/shared/context_highlight.png</filename>
                </imagetype>
                <textarea name="buttontext" from="textarea_list">
-                   <area>50,0,600,50</area>
+                   <area>70,0,600,50</area>
                    <font>Font_List_Active</font>
                    <scroll direction="left"/>
                    <align>left,vcenter</align>
                </textarea>
            </state>
            <state name="inactive" from="active"/>
-           <state name="selectedinactive" from="active"/>
+           <state name="selectedinactive" from="active">
+               <textarea name="buttontext" from="textarea_list">
+                   <area>70,0,600,50</area>
+                   <font>Font_List_Active</font>
+                   <align>left,vcenter</align>
+               </textarea>
+           </state>
        </statetype>
+       
    </buttonlist>
 
    <buttonlist name="buttonlist_dialog_big">
@@ -1604,7 +1611,7 @@
         <statetype name="buttonstate">
            <state name="active">
                <imagetype name="Listpanelline">
-                   <area>0,50,700,50</area>
+                   <area>0,0,700,50</area>
                    <filename>images/shared/context_nofocus.png</filename>
                </imagetype>
                <textarea name="text" from="textarea_list">
@@ -3272,50 +3279,25 @@
     <!-- Fullscreen Dialogue Box -->
     <window name="MythDialogBox">
 
-        <shape name="background" from="basebackground">
-            <area>10,10,1260,700</area>
-            <fill color="#333333" alpha="255" />
-        </shape>
+        <area>-1,-1,700,550</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>20,15,1260,50</area>
-            <font>baselarge</font>
-            <align>allcenter</align>
-        </textarea>
+        <group name="movie_selection_window" from="basedialogwindowbig">
+            <position>0,0</position>        
+        </group>
 
-        <textarea name="messagearea" from="basetextarea">
-            <area>100,100,1080,210</area>
+        <textarea name="messagearea" from="textarea_list">
+            <area>70,75,560,190</area>
             <multiline>yes</multiline>
-            <font>basemedium</font>
-            <align>allcenter</align>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
         </textarea>
 
-        <buttonlist name="list" from="basebuttonlist">
-            <area>100,320,1080,350</area>
-            <drawfrombottom>yes</drawfrombottom>
-            <showarrow>no</showarrow>
-            <wrapstyle>selection</wrapstyle>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="buttontext">
-                        <area>0,0,100%,30</area>
-                        <align>allcenter</align>
-                    </textarea>
-                </state>
-                <state name="selectedinactive">
-                    <textarea name="buttontext">
-                        <area>0,0,100%,30</area>
-                        <align>allcenter</align>
-                    </textarea>
-                </state>
-                <state name="selectedactive">
-                    <textarea name="buttontext">
-                        <area>0,0,100%,30</area>
-                        <align>allcenter</align>
-                    </textarea>
-                </state>
-            </statetype>
+        <buttonlist name="list" from="buttonlist_dialog">
+		       <area>0,275,700,200</area>
+		       <align>bottom,hcenter</align>
+		       <buttonarea>0,0,700,200</buttonarea>
         </buttonlist>
+
     </window>
 
     <window name="MythBusyDialog">
@@ -3416,51 +3398,37 @@
     </window>
 
     <window name="MythSearchDialog">
-        <area>-1,-1,500,500</area>
-        <imagetype name="backimg">
-            <filename>mythdialogbox-background.png</filename>
-        </imagetype>
+        <area>-1,-1,700,550</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>12,20,470,60</area>
+        <group name="movie_selection_window" from="basedialogwindowbig">
+            <position>0,0</position>        
+        </group>
+
+        <textarea name="title" from="textarea_list">
+            <area>70,75,560,50</area>
             <multiline>yes</multiline>
-            <align>allcenter</align>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
         </textarea>
 
-        <textedit name="input" from="basetextedit">
-            <position>58,85</position>
+        <textedit name="input" from="textedit_dialog">
+            <position>0,125</position>
         </textedit>
 
-        <buttonlist name="itemlist" from="basebuttonlist">
-            <area>12,150,470,270</area>
-            <showarrow>no</showarrow>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="buttontext">
-                        <area>4,0,460,30</area>
-                    </textarea>
-                </state>
-                <state name="selectedinactive">
-                    <textarea name="buttontext">
-                        <area>5,0,460,30</area>
-                    </textarea>
-                </state>
-                <state name="selectedactive">
-                    <textarea name="buttontext">
-                        <area>5,0,460,30</area>
-                    </textarea>
-                </state>
-            </statetype>
+        <buttonlist name="itemlist" from="buttonlist_dialog">
+		       <area>0,175,700,200</area>
+		       <align>top,hcenter</align>
+		       <buttonarea>0,0,700,200</buttonarea>
         </buttonlist>
 
-        <button name="cancel" from="basebutton">
-            <position>30,435</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="ok" from="basebutton">
-            <position>315,435</position>
+        <button name="ok" from="button_dialog">
+            <position>0,375</position>
             <value>OK</value>
+        </button>
+        
+        <button name="cancel" from="button_dialog">
+            <position>0,425</position>
+            <value>Cancel</value>
         </button>
 
     </window>
