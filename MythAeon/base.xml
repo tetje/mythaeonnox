@@ -63,6 +63,11 @@
 
     <fontdef name="Font_Info_Small" from="Font_Info">
         <pixelsize>18</pixelsize>
+        <weight>bold</weight>
+        <stretch>extracondensed</stretch>
+        <italics>yes</italics>
+        <outlinecolor>#929292</outlinecolor>
+        <outlinesize>2</outlinesize>
         <color>#000000</color>
     </fontdef>
 
@@ -115,7 +120,11 @@
     </fontdef>
     
     <fontdef name="Font_Button_Settings_Black" face="ScoutCond">
-        <pixelsize>32</pixelsize>
+        <pixelsize>30</pixelsize>
+        <weight>bold</weight>
+        <italics>yes</italics>
+        <outlinecolor>#929292</outlinecolor>
+        <outlinesize>2</outlinesize>
         <color>#000000</color>
     </fontdef>
     
@@ -928,6 +937,71 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_rules" from="buttonlist_tvshowpanel">
+       <area>0,0,1115,800</area>
+       <buttonarea>0,0,1115,800</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,1115,113</area>
+               <imagetype name="Listpanelline">
+                   <area>0,63,1115,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="titlesubtitle" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+               </textarea>
+               <textarea name="rectypechar" from="textarea_list">
+                   <area>900,25,144,35</area>
+                   <align>hcenter,vcenter</align>
+                   <font>Font_List_Active</font>
+               </textarea>
+               <textarea name="channel" from="textarea_label_list">
+                   <area>50,55,850,30</area>
+                   <cutdown>yes</cutdown>
+                   <template>%shortstarttimedate% (%lenmins%) - %channel%</template>
+               </textarea>
+               <textarea name="finalpriority" from="textarea_label_list">
+                   <area>900,61,144,30</area>
+                   <cutdown>yes</cutdown>
+                   <align>allcenter</align>
+                   <template>Priority: %finalpriority%</template>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <area>0,0,1115,113</area>
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,1115,113</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <textarea name="titlesubtitle" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <scroll direction="left" />
+               </textarea>
+               <textarea name="rectypechar" from="textarea_list">
+                   <area>900,25,144,35</area>
+                   <align>hcenter,vcenter</align>
+               </textarea>
+               <textarea name="channel" from="textarea_label_list">
+                   <area>50,55,850,30</area>
+                   <scroll direction="left" />
+                   <template>%shortstarttimedate% (%lenmins%) - %channel%</template>
+                   <font>Font_Label_List_Selected</font>
+               </textarea>
+               <textarea name="finalpriority" from="textarea_label_list">
+                   <area>900,61,144,30</area>
+                   <cutdown>yes</cutdown>
+                   <align>allcenter</align>
+                   <font>Font_Label_List_Selected</font>
+                   <template>Priority: %finalpriority%</template>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
    <buttonlist name="buttonlist_wall">
        <spacing>0</spacing>
        <area>0,0,1752,955</area>
@@ -1375,13 +1449,20 @@
 
     <!-- Aeon definitions of a shape -->
      <shape name="baselabelbox">
-         <area>-5,-10,110,80</area>
+         <area>-10,-10,120,80</area>
          <type>roundbox</type>
-         <cornerradius>4</cornerradius>
-         <line color="#000000" width="4" />
-         <alpha>192</alpha>
+         <cornerradius>10</cornerradius>
+<!--         <line color="#111111" width="1" /> -->
+		   <fill style="gradient">
+		       <gradient direction="diagonal" alpha="255">
+		           <stop position="5" color="#cccccc" />
+		           <stop position="25" color="#929292" />
+		           <stop position="90" color="#323232" />
+		           <stop position="100" color="#000000" />
+		       </gradient>
+		   </fill>  
+         <alpha>255</alpha>
      </shape>
-
 
     <!-- Base definition of a shape used as a background to many widgets -->
     <shape name="basewidgetshape">
@@ -2969,18 +3050,18 @@
         </textarea>
     </textedit>
 
-    <!-- Base definition of a progressbar -->
+    <!-- Aeon definition of a progressbar -->
     <progressbar name="baseprogressbar">
-        <area>0,0,536,38</area>
+        <area>0,0,525,27</area>
         <layout>horizontal</layout>
         <style>reveal</style>
         <imagetype name="background">
             <area>0,0,100%,100%</area>
-            <filename>progressbar_background.png</filename>
+            <filename>images/shared/progress_back.png</filename>
         </imagetype>
         <imagetype name="progressimage">
             <area>0,0,100%,100%</area>
-            <filename>progressbar_fill.png</filename>
+            <filename>images/shared/progress_fill.png</filename>
         </imagetype>
     </progressbar>
 
@@ -2996,10 +3077,11 @@
     <!-- Aeon definitions of groups used on many screens -->
      <group name="basegroupinfodetails">
         <area>0,0,400,60</area>
-	
-	     <shape name="seasonlabelbox" from="baselabelbox" depends="##x##">
-	         <position>-5,-10</position>
-	     </shape>
+
+        <imagetype name="seasonlabelframeactive" depends="##x##">
+            <area>-10,-10,120,75</area>
+            <filename>images/shared/list_episodeicon_frame.png</filename>
+        </imagetype>
 
         <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
             <area>0,0,100,60</area>
@@ -3013,9 +3095,10 @@
             <align>bottom,hcenter</align>
         </textarea>
 
-	     <shape name="ratinglabelbox" from="baselabelbox" depends="rating">
-	         <position>145,-10</position>
-	     </shape>
+        <imagetype name="ratinglabelframeactive" depends="rating">
+            <area>140,-10,120,75</area>
+            <filename>images/shared/list_episodeicon_frame.png</filename>
+        </imagetype>
 
         <textarea name="ratinglbl" from="textarea_title_sub" depends="rating">
             <area>150,0,100,60</area>
@@ -3029,23 +3112,24 @@
             <align>bottom,hcenter</align>
         </textarea>
 
-	     <shape name="videolevellabelbox" from="baselabelbox">
-	         <area>285,-10,130,80</area>
-	     </shape>
+        <imagetype name="videolevellabelframeactive" >
+            <area>290,-10,120,75</area>
+            <filename>images/shared/list_episodeicon_frame.png</filename>
+        </imagetype>
 
         <textarea name="videolevellbl" from="textarea_title_sub">
-            <area>295,0,110,60</area>
+            <area>300,0,100,60</area>
             <align>top,hcenter</align>
             <value>Parental</value>
         </textarea>
 
         <imagetype name="videolevelbgd">
-           <area>314,35,72,18</area>
+           <area>314,30,72,18</area>
            <filename>images/icons/ratings/parentallevel_bg.png</filename>
         </imagetype>
 
 	     <statetype name="videolevel" from="videolevel_base">
-	         <area>314,35,72,18</area>
+	         <area>314,30,72,18</area>
 	     </statetype>
 
      </group>
@@ -3053,9 +3137,11 @@
      <group name="basegroupinfodetailswall">
         <area>0,0,1920,60</area>
 	
-	     <shape name="seasonlabelbox" from="baselabelbox" depends="##x##">
-	         <position>255,-10</position>
-	     </shape>
+        <imagetype name="seasonlabelframeactive" depends="##x##">
+            <area>250,-10,120,75</area>
+            <filename>images/shared/list_episodeicon_frame.png</filename>
+        </imagetype>
+
 
         <textarea name="seasonlbl" from="textarea_title_sub" depends="##x##">
             <area>260,0,100,60</area>
@@ -3069,9 +3155,10 @@
             <align>bottom,hcenter</align>
         </textarea>
 
-	     <shape name="ratinglabelbox" from="baselabelbox" depends="rating">
-	         <position>1525,-10</position>
-	     </shape>
+        <imagetype name="ratinglabelframeactive" depends="rating">
+            <area>1525,-10,120,75</area>
+            <filename>images/shared/list_episodeicon_frame.png</filename>
+        </imagetype>
 
         <textarea name="ratinglbl" from="textarea_title_sub" depends="rating">
             <area>1530,0,100,60</area>
@@ -3085,12 +3172,13 @@
             <align>bottom,hcenter</align>
         </textarea>
 
-	     <shape name="videolevellabelbox" from="baselabelbox">
-	         <area>1670,-10,130,80</area>
-	     </shape>
+        <imagetype name="videolevellabelframeactive">
+            <area>1670,-10,120,75</area>
+            <filename>images/shared/list_episodeicon_frame.png</filename>
+        </imagetype>
 
         <textarea name="videolevellbl" from="textarea_title_sub">
-            <area>1680,0,110,60</area>
+            <area>1680,0,100,60</area>
             <align>top,hcenter</align>
             <value>Parental</value>
         </textarea>
@@ -3107,28 +3195,31 @@
      </group>
 
      <group name="basegroupscheduledetails">
-        <area>0,0,400,60</area>
+        <area>0,0,400,100</area>
 	
-	     <shape name="rectypelabelbox" from="baselabelbox" depends="rectypestatus">
-	         <position>-5,-10</position>
-	     </shape>
+        <imagetype name="rectypelabelframeactive" depends="rectype">
+            <area>-10,-10,120,75</area>
+            <filename>images/shared/list_episodeicon_frame.png</filename>
+        </imagetype>
 
         <textarea name="rectypelbl" from="textarea_title_sub" depends="rectypestatus">
             <area>0,0,100,60</area>
             <align>top,hcenter</align>
-            <value>Record</value>
+            <value>Rule</value>
         </textarea>
 
         <textarea name="rectypestatus" from="textarea_title_sub">
             <area>0,25,100,40</area>
             <font>Font_Info_Small</font>
-            <multiline>yes</multiline>           
-            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>         
+            <align>top,hcenter</align>
         </textarea>
 
-	     <shape name="storagelabelbox" from="baselabelbox" depends="storagegroup">
-	         <position>145,-10</position>
-	     </shape>
+        <imagetype name="storagelabelframeactive" depends="storagegroup">
+            <area>140,-10,120,75</area>
+            <filename>images/shared/list_episodeicon_frame.png</filename>
+        </imagetype>
 
         <textarea name="storagelbl" from="textarea_title_sub" depends="storagegroup">
             <area>150,0,100,60</area>
@@ -3138,26 +3229,28 @@
 
         <textarea name="storagegroup" from="textarea_title_sub">
             <area>150,25,100,40</area>
-            <font>Font_Info_Small</font>
+            <font>Font_Button_Settings_Black</font>
             <multiline>yes</multiline>           
             <align>allcenter</align>
         </textarea>
 
-	     <shape name="repeatlabelbox" from="baselabelbox" depends="longrepeat">
-	         <area>285,-10,130,80</area>
-	     </shape>
+        <imagetype name="repeatlabelframeactive" depends="longrepeat">
+            <area>290,-10,120,75</area>
+            <filename>images/shared/list_episodeicon_frame.png</filename>
+        </imagetype>
 
         <textarea name="repeatlbl" from="textarea_title_sub" depends="longrepeat">
-            <area>295,0,110,60</area>
+            <area>300,0,100,60</area>
             <align>top,hcenter</align>
             <value>Repeat</value>
         </textarea>
 
         <textarea name="longrepeat" from="textarea_title_sub">
-            <area>295,25,110,40</area>
+            <area>300,25,100,40</area>
             <font>Font_Info_Small</font>
-            <multiline>yes</multiline>           
-            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <scroll direction="vertical"/>           
+            <align>top,hcenter</align>
         </textarea>
 
      </group>
@@ -3337,12 +3430,13 @@
         </textarea>
 
         <progressbar name="progressbar" from="baseprogressbar">
-            <position>22,80</position>
+            <area>70,175,560,30</area>
         </progressbar>
 
-        <textarea name="progresstext" from="basetextarea">
-            <area>30,130,200,30</area>
-            <align>left,top</align>
+        <textarea name="progresstext" from="textarea_submenu">
+            <area>70,155,560,30</area>
+            <font>Font_Info_Small</font>
+            <align>allcenter</align>
             <value>0%</value>
         </textarea>
 
