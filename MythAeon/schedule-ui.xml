@@ -566,7 +566,7 @@
 
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+            <filename>images/backgrounds/search/globalsearch2.jpg</filename>
         </imagetype>
         
         <imagetype name="listfloorimg" from="fanart">
@@ -901,7 +901,6 @@
 
     </window>
 
-<!-- To do --> 
     <window name="managerecrules">
 
         <imagetype name="fanart">
@@ -1425,7 +1424,7 @@
 
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+            <filename>images/backgrounds/search/globalsearch2.jpg</filename>
         </imagetype>
         
         <imagetype name="listfloorimg" from="fanart">

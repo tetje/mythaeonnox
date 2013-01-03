@@ -66,8 +66,8 @@
         <weight>bold</weight>
         <stretch>extracondensed</stretch>
         <italics>yes</italics>
-        <outlinecolor>#929292</outlinecolor>
-        <outlinesize>2</outlinesize>
+<!--        <outlinecolor>#929292</outlinecolor>
+        <outlinesize>2</outlinesize> -->
         <color>#000000</color>
     </fontdef>
 
@@ -123,8 +123,8 @@
         <pixelsize>30</pixelsize>
         <weight>bold</weight>
         <italics>yes</italics>
-        <outlinecolor>#929292</outlinecolor>
-        <outlinesize>2</outlinesize>
+<!--        <outlinecolor>#929292</outlinecolor>
+        <outlinesize>2</outlinesize> -->
         <color>#000000</color>
     </fontdef>
     
@@ -895,7 +895,7 @@
                <textarea name="channel" from="textarea_label_list">
                    <area>50,55,850,30</area>
                    <cutdown>yes</cutdown>
-                   <template>%shortstarttimedate% (%lenmins%) - %channel%</template>
+                   <template>%timedate% (%lenmins%) - %channel%</template>
                </textarea>
                <textarea name="card" from="textarea_label_list">
                    <area>900,61,144,30</area>
@@ -921,7 +921,7 @@
                <textarea name="channel" from="textarea_label_list">
                    <area>50,55,850,30</area>
                    <scroll direction="left" />
-                   <template>%shortstarttimedate% (%lenmins%) - %channel%</template>
+                   <template>%timedate% (%lenmins%) - %channel%</template>
                    <font>Font_Label_List_Selected</font>
                </textarea>
                <textarea name="card" from="textarea_label_list">
@@ -956,11 +956,12 @@
                    <area>900,25,144,35</area>
                    <align>hcenter,vcenter</align>
                    <font>Font_List_Active</font>
+                   <template>Status: %rectypechar%</template>
                </textarea>
                <textarea name="channel" from="textarea_label_list">
                    <area>50,55,850,30</area>
                    <cutdown>yes</cutdown>
-                   <template>%shortstarttimedate% (%lenmins%) - %channel%</template>
+                   <template>%timedate% (%lenmins%) - %channel%</template>
                </textarea>
                <textarea name="finalpriority" from="textarea_label_list">
                    <area>900,61,144,30</area>
@@ -982,11 +983,12 @@
                <textarea name="rectypechar" from="textarea_list">
                    <area>900,25,144,35</area>
                    <align>hcenter,vcenter</align>
+                   <template>Status: %rectypechar%</template>
                </textarea>
                <textarea name="channel" from="textarea_label_list">
                    <area>50,55,850,30</area>
                    <scroll direction="left" />
-                   <template>%shortstarttimedate% (%lenmins%) - %channel%</template>
+                   <template>%timedate% (%lenmins%) - %channel%</template>
                    <font>Font_Label_List_Selected</font>
                </textarea>
                <textarea name="finalpriority" from="textarea_label_list">
@@ -3197,43 +3199,43 @@
      <group name="basegroupscheduledetails">
         <area>0,0,400,100</area>
 	
-        <imagetype name="rectypelabelframeactive" depends="rectype">
-            <area>-10,-10,120,75</area>
+        <imagetype name="rectypeframeactive" depends="rectype">
+            <area>-10,-10,200,75</area>
             <filename>images/shared/list_episodeicon_frame.png</filename>
         </imagetype>
 
-        <textarea name="rectypelbl" from="textarea_title_sub" depends="rectypestatus">
-            <area>0,0,100,60</area>
+        <textarea name="rectypelbl" from="textarea_title_sub" depends="rectype">
+            <area>0,0,180,60</area>
             <align>top,hcenter</align>
-            <value>Rule</value>
+            <value>Status</value>
         </textarea>
 
-        <textarea name="rectypestatus" from="textarea_title_sub">
-            <area>0,25,100,40</area>
-            <font>Font_Info_Small</font>
-            <multiline>yes</multiline>
-            <scroll direction="vertical"/>         
-            <align>top,hcenter</align>
+        <textarea name="rectype" from="textarea_title_sub">
+            <area>0,0,180,60</area>
+            <font>Font_Button_Settings_Black</font>
+            <multiline>no</multiline>
+            <scroll direction="horizontal"/>         
+            <align>bottom,hcenter</align>
         </textarea>
 
         <imagetype name="storagelabelframeactive" depends="storagegroup">
-            <area>140,-10,120,75</area>
+            <area>220,-10,120,75</area>
             <filename>images/shared/list_episodeicon_frame.png</filename>
         </imagetype>
 
         <textarea name="storagelbl" from="textarea_title_sub" depends="storagegroup">
-            <area>150,0,100,60</area>
+            <area>230,0,100,60</area>
             <align>top,hcenter</align>
             <value>Storage</value>
         </textarea>
 
         <textarea name="storagegroup" from="textarea_title_sub">
-            <area>150,25,100,40</area>
+            <area>230,25,100,40</area>
             <font>Font_Button_Settings_Black</font>
             <multiline>yes</multiline>           
             <align>allcenter</align>
         </textarea>
-
+<!--
         <imagetype name="repeatlabelframeactive" depends="longrepeat">
             <area>290,-10,120,75</area>
             <filename>images/shared/list_episodeicon_frame.png</filename>
@@ -3252,7 +3254,7 @@
             <scroll direction="vertical"/>           
             <align>top,hcenter</align>
         </textarea>
-
+-->
      </group>
 
 
