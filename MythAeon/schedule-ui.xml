@@ -91,7 +91,7 @@
 	               </imagetype>
 	           </group>			
 		        <guidegrid name="guidegrid">
-		            <area>390,183,1402,576</area>
+		            <area>390,186,1402,576</area>
 		            <layout>horizontal</layout>
 		            <channels>8</channels>
 		            <timeslots>4</timeslots>
@@ -318,7 +318,7 @@
 	               </imagetype>
 	           </group>			
 		        <guidegrid name="guidegrid">
-		            <area>390,183,1402,576</area>
+		            <area>390,186,1402,576</area>
 		            <layout>horizontal</layout>
 		            <channels>8</channels>
 		            <timeslots>4</timeslots>
@@ -435,20 +435,20 @@
 		        </clock>
 		
 		        <imagetype name="videoborder">
-		            <area>12,763,310,180</area>
+		            <area>12,761,310,184</area>
 		            <filename>images/shared/multiplex_tvborder.png</filename>
 		        </imagetype>
 	
 		        <imagetype name="video">
-		            <area>85,832,290,163</area>
+		            <area>87,835,290,163</area>
 		            <mask>images/shared/multiplex_tvmask_video.png</mask>
 		        </imagetype>
 	
-		        <imagetype name="videoglass">
+<!--		        <imagetype name="videoglass">
 		            <area>20,770,290,163</area>
 		            <filename>images/shared/multiplex_tvglass.png</filename>
 		        </imagetype>
-	
+-->	
 		    </group>	
 
         </group>
