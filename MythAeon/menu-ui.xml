@@ -345,34 +345,34 @@
                    <area>0,0,1280,720</area>
                </imagetype>
            </state>
-           <state name="TV_SETTINGS_RECPRIORITIES">
-               <imagetype name="watermark">
-                   <filename>images/backgrounds/podium.jpg</filename>
-                   <area>0,0,1280,720</area>
-               </imagetype>
-           </state>
 -->
            <!-- ########  recpriorities_settings.xml  ########-->
-<!--
+
+           <state name="TV_SETTINGS_RECPRIORITIES">
+               <imagetype name="watermark">
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
+               </imagetype>
+           </state>
            <state name="TV_RECPRIORITIES_SETTINGS_GENERAL">
                <imagetype name="watermark">
-                    <filename>images/backgrounds/podium.jpg</filename>
-                    <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_RECPRIORITIES_CHANNEL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/podium.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_RECPRIORITIES_CUSTOM">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/podium.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+
            <!-- ########  dvd_settings.xml  ########-->
 <!--
            <state name="DVD_SETTINGS_GENERAL">

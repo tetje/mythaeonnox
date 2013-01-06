@@ -32,7 +32,7 @@
     <button>
         <type>TV_PROGFIND</type>
         <text>Programs</text>
-        <description>Find Television broadcasts</description>
+        <description>Find broadcasted programs</description>
         <action>MENU mms_guide_finder.xml</action>
     </button>
 

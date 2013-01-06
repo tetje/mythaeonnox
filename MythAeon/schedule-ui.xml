@@ -686,218 +686,299 @@
         </group>
 
     </window>
-
-<!-- To do --> 
+ 
     <window name="channelrecpriority">
 
-        <textarea name="pagetitle">
-            <area>20,5,570,40</area>
-            <font>baselarge</font>
-            <value>Channel Recording Priorities</value>
-        </textarea>
-
-        <shape name="list_background" from="basebackground">
-            <area>15,50,770,332</area>
-        </shape>
-
-        <buttonlist name="channels" from="basebuttonlist2">
-            <area>20,59,770,370</area>
-            <buttonarea>0,0,760,340</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <imagetype name="icon">
-                        <area>0,0,25,25</area>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>
-                    <statetype name="status">
-                        <position>30,0</position>
-                    </statetype>
-                    <textarea name="channum" from="buttontext">
-                        <area>60,1,50,24</area>
-                    </textarea>
-                    <textarea name="callsign" from="channum">
-                        <area>120,1,200,24</area>
-                    </textarea>
-                    <textarea name="name" from="channum">
-                        <area>330,1,300,24</area>
-                    </textarea>
-                    <textarea name="priority" from="channum">
-                        <area>720,1,30,24</area>
-                        <align>right</align>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active" />
-                <state name="selectedinactive" from="active" />
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>710,340</position>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>740,340</position>
-            </statetype>
-        </buttonlist>
-
-        <imagetype name="icon">
-            <area>30,405,200,150</area>
-            <preserveaspect>true</preserveaspect>
+        <imagetype name="fanart">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
         </imagetype>
+        
+        <imagetype name="listfloorimg" from="fanart">
+            <area>0,473,1920,607</area>
+            <filename>images/shared/list_floor.png</filename>
+        </imagetype>
+        
+        <imagetype name="listfilterimg" from="fanart">
+            <filename>images/shared/list_filter.png</filename>
+        </imagetype>
+        
+        <imagetype name="spotlightimg" from="fanart">
+            <area>0,875,1920,205</area>
+            <filename>images/shared/list_spot.png</filename>
+        </imagetype>
+        
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
+        </group>
 
-        <textarea name="channame" from="basetextarea">
-            <area>240,402,740,40</area>
-            <font>baselarge</font>
-        </textarea>
+        <group name="listpanel">
+           <area>88,110,1139,970</area>
+           
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="88,-1080" end="88,110" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
 
-        <textarea name="sourcelabel" from="basetextarea">
-            <area>240,445,100,30</area>
-            <value>Source:</value>
-        </textarea>
+	        <imagetype name="listpanelbgdblack">
+	            <area>0,0,1139,970</area>
+	            <filename>images/shared/listpanel_black.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
 
-        <textarea name="sourcename" from="basetextarea">
-            <area>360,445,400,30</area>
-        </textarea>
+	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
+	            <filename>images/shared/listpanel_back.png</filename>
+	        </imagetype>
+        
+	        <imagetype name="listpaneldetailbgd">
+	            <area>912,12,148,850</area>
+	            <filename>images/shared/listpanel_detailwide.png</filename>
+	        </imagetype>
+        
+           <buttonlist name="channels" from="buttonlist_rules">
+                <position>12,50</position>
+			       <statetype name="buttonitem">
+			           <state name="active">
+			               <area>0,0,1115,113</area>
+			               <textarea name="channelname " from="textarea_list">
+			                   <area>50,25,850,35</area>
+			                   <cutdown>yes</cutdown>
+			                   <font>Font_List_Active</font>
+			                   <value>Channel Name</value>
+			               </textarea>
+			               <textarea name="chanstr" from="textarea_list">
+			                   <area>900,25,144,35</area>
+			                   <align>hcenter,vcenter</align>
+			                   <font>Font_List_Active</font>
+			                   <template>%chanstr%</template>
+			               </textarea>
+			               <textarea name="callsign" from="textarea_label_list">
+			                   <area>50,55,850,30</area>
+			                   <cutdown>yes</cutdown>
+			                   <template>%callsign% - %channelsourcename%</template>
+			               </textarea>
+			               <textarea name="priority" from="textarea_label_list">
+			                   <area>900,61,144,30</area>
+			                   <cutdown>yes</cutdown>
+			                   <align>allcenter</align>
+			                   <template>Priority: %priority%</template>
+			               </textarea>
+			           </state>
+			           <state name="selectedactive">
+			               <area>0,0,1115,113</area>
+			               <textarea name="channelname " from="textarea_list">
+			                   <area>50,25,850,35</area>
+			                   <scroll direction="left" />
+			                   <value>Channel name</value>
+			               </textarea>
+			               <textarea name="chanstr" from="textarea_list">
+			                   <area>900,25,144,35</area>
+			                   <align>hcenter,vcenter</align>
+			                   <template>%chanstr%</template>
+			               </textarea>
+			               <textarea name="callsign" from="textarea_label_list">
+			                   <area>50,55,850,30</area>
+			                   <scroll direction="left" />
+			                   <font>Font_Label_List_Selected</font>
+			                   <template>%callsign% - %channelsourcename%</template>
+			               </textarea>
+			               <textarea name="priority" from="textarea_label_list">
+			                   <area>900,61,144,30</area>
+			                   <cutdown>yes</cutdown>
+			                   <align>allcenter</align>
+			                   <font>Font_Label_List_Selected</font>
+			                   <template>Priority: %priority%</template>
+			               </textarea>
+			           </state>
+			       </statetype>
+           </buttonlist>
+           
+           <textarea name="status" from="textarea_label_list">
+               <area>62,860,800,30</area>
+           </textarea>
 
-        <textarea name="callsignlabel" from="basetextarea">
-            <area>240,480,100,30</area>
-            <value>Callsign:</value>
-        </textarea>
+<!-- Fix me: This does not work when an other windows has been selected and one returns to the main screen
 
-        <textarea name="callsign" from="basetextarea">
-            <area>360,480,400,30</area>
-        </textarea>
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
+        
+        <group name="listinfo">
+           <area>1264,150,545,930</area>
 
-        <textarea name="recprioritylabel" from="basetextarea">
-            <area>240,515,100,30</area>
-            <value>Priority:</value>
-        </textarea>
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
 
-        <textarea name="priority" from="basetextarea">
-            <area>360,515,400,30</area>
-        </textarea>
+	        <imagetype name="iconframe">
+	            <area>-2,245,548,549</area>
+	            <filename>images/shared/list_musicicon_frame.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+        
+	        <imagetype name="icon">
+	            <area>13,260,518,519</area>
+	            <mask>images/shared/list_musicicon_mask.png</mask>
+	            <filename>images/shared/defaultVideoBigPoster.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+		
+	        <imagetype name="iconglass">
+	            <area>13,260,518,519</area>
+	            <filename>images/shared/list_musicicon_glass.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	        
+	        <group name="listscheduledetails" from="basegroupscheduledetails">
+	           <position>73,810</position>
+			  </group>
 
-        <textarea name="norecordings_info">
-            <area>0,110,800,70</area>
-            <font>basemedium</font>
-            <value>You Haven't Scheduled Any Programs To Be Recorded\n
-                To schedule a recording, exit this screen and
-                select 'Program Guide' or 'Program Finder'</value>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-        </textarea>
+<!-- Fix me: This does not work when an other windows has been selected and one returns to the main screen
 
-        <textarea name="helptext" from="basetextarea">
-            <area>0,570,800,30</area>
-            <value>(1) Channel (2) Priority</value>
-            <align>center</align>
-        </textarea>
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
 
     </window>
 
-<!-- To do --> 
     <window name="programrecpriority">
 
-        <textarea name="pagetitle" from="basetextarea">
-            <area>20,5,570,40</area>
-            <font>baselarge</font>
-            <value>Schedule Priorities</value>
-        </textarea>
+        <imagetype name="fanart">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+        </imagetype>
+        
+        <imagetype name="listfloorimg" from="fanart">
+            <area>0,473,1920,607</area>
+            <filename>images/shared/list_floor.png</filename>
+        </imagetype>
+        
+        <imagetype name="listfilterimg" from="fanart">
+            <filename>images/shared/list_filter.png</filename>
+        </imagetype>
+        
+        <imagetype name="spotlightimg" from="fanart">
+            <area>0,875,1920,205</area>
+            <filename>images/shared/list_spot.png</filename>
+        </imagetype>
+        
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
+        </group>
 
-        <shape name="list_background" from="basebackground">
-            <area>15,50,770,332</area>
-        </shape>
+        <group name="listpanel">
+           <area>88,110,1139,970</area>
+           
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="88,-1080" end="88,110" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
 
-        <textarea name="prioritylabel" from="basetextarea">
-            <area>585,15,95,40</area>
-            <value>Priority</value>
-            <align>right</align>
-        </textarea>
+	        <imagetype name="listpanelbgdblack">
+	            <area>0,0,1139,970</area>
+	            <filename>images/shared/listpanel_black.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
 
-        <textarea name="finalrecprioritylabel" from="basetextarea">
-            <area>680,15,95,40</area>
-            <value>Final</value>
-            <align>right</align>
-        </textarea>
+	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
+	            <filename>images/shared/listpanel_back.png</filename>
+	        </imagetype>
+        
+	        <imagetype name="listpaneldetailbgd">
+	            <area>912,12,148,850</area>
+	            <filename>images/shared/listpanel_detailwide.png</filename>
+	        </imagetype>
+        
+           <buttonlist name="programs" from="buttonlist_rules">
+                <position>12,50</position>
+           </buttonlist>
+                      
+           <textarea name="lastrecordeddate" from="textarea_label_list">
+               <area>62,860,800,30</area>
+               <template>Last recorded %lastrecordeddate%</template>
+           </textarea>
 
-        <buttonlist name="programs" from="basebuttonlist2">
-            <area>20,59,760,370</area>
-            <buttonarea>0,0,760,340</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="rectypechar" from="buttontext">
-                        <area>30,1,20,24</area>
-                        <align>allcenter</align>
-                    </textarea>
-                    <textarea name="titlesubtitle" from="buttontext">
-                        <area>60,1,550,24</area>
-                    </textarea>
-                    <textarea name="progpriority" from="buttontext">
-                        <area>620,1,40,24</area>
-                        <align>right,vcenter</align>
-                    </textarea>
-                    <textarea name="finalpriority" from="progpriority">
-                        <position>710,1</position>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active" />
-                <state name="selectedinactive" from="active" />
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>710,340</position>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>740,340</position>
-            </statetype>
-        </buttonlist>
+           <textarea name="nolastrecordeddate" from="lastrecordeddate" depends="!lastrecordeddate">
+               <value>not recorded yet</value>
+           </textarea>
 
-        <textarea name="title" from="basetextarea">
-            <area>30,400,740,40</area>
-            <font>basemedium</font>
-        </textarea>
+<!-- Fix me: This does not work when an other windows has been selected and one returns to the main screen
 
-        <textarea name="scheduleinfo" from="basetextarea">
-            <area>30,440,740,30</area>
-        </textarea>
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
+        
+        <group name="listinfo">
+           <area>1264,150,545,930</area>
 
-        <textarea name="rec_str" from="basetextarea">
-            <area>30,480,430,30</area>
-        </textarea>
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
 
-        <textarea name="recprioritylabel" from="basetextarea">
-            <area>500,440,170,30</area>
-            <value>Priority:</value>
-        </textarea>
+	        <imagetype name="coverartframe">
+	            <area>0,0,545,791</area>
+	            <filename>images/shared/list_movieicon_frame.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+        
+	        <imagetype name="coverart">
+	            <area>13,13,519,766</area>
+	            <mask>images/shared/list_movieicon_mask.png</mask>
+	            <filename>images/shared/defaultVideoBigPoster.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+		
+		     <shape name="descriptionbox" depends="description">
+		         <area>13,13,519,766</area>
+		         <type>roundbox</type>
+		         <cornerradius>15</cornerradius>
+		         <fill color="#323232" alpha="192" />
+		     </shape>
 
-        <textarea name="recpriority" from="basetextarea">
-            <area>670,440,40,30</area>
-            <align>right</align>
-        </textarea>
+	        <textarea name="description" from="textarea_plot" depends="!coverart">
+	            <area>40,40,475,700</area>
+	            <multiline>yes</multiline>
+	            <cutdown>yes</cutdown>
+	            <template>%DESCRIPTION%</template>
+	        </textarea>
+	       
+	        <imagetype name="coverartglass">
+	            <area>13,13,519,766</area>
+	            <filename>images/shared/list_movieicon_glass.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	        
+	        <group name="listscheduledetails" from="basegroupscheduledetails">
+	           <position>73,810</position>
+			  </group>
 
-        <textarea name="recpriorityB" from="recpriority">
-            <position>770,440</position>
-        </textarea>
+<!-- Fix me: This does not work when an other windows has been selected and one returns to the main screen
 
-        <textarea name="rectypeprioritylabel" from="recprioritylabel">
-            <position>500,470</position>
-            <value>Type Priority:</value>
-        </textarea>
-
-        <textarea name="rectypepriority" from="recpriority">
-            <position>670,470</position>
-        </textarea>
-
-        <textarea name="finalprioritylabel" from="recprioritylabel">
-            <position>500,500</position>
-            <value>Final Priority:</value>
-        </textarea>
-
-        <textarea name="finalpriority" from="recpriority">
-            <position>670,500</position>
-        </textarea>
-
-        <textarea name="keyinstr">
-            <area>0,570,800,30</area>
-            <value>(1) Title (2) Priority (4) Type</value>
-            <align>allcenter</align>
-        </textarea>
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
 
     </window>
 
@@ -1029,238 +1110,128 @@
 -->
         </group>
 
-<!--
-        <textarea name="pagetitle" from="basetextarea">
-            <area>20,5,410,40</area>
-            <font>baselarge</font>
-            <value>Manage Recording Rules</value>
-        </textarea>
-
-        <shape name="list_background" from="basebackground">
-            <area>15,50,770,332</area>
-        </shape>
-
-        <textarea name="callsignlabel" from="basetextarea">
-            <area>440,15,100,40</area>
-            <value>Channel</value>
-        </textarea>
-
-        <textarea name="lastrecordedlabel" from="basetextarea">
-            <area>550,15,150,40</area>
-            <value>Last Recorded</value>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="prioritylabel" from="basetextarea">
-            <area>710,15,95,40</area>
-            <value>Priority</value>
-        </textarea>
-
-        <buttonlist name="programs" from="basebuttonlist2">
-            <area>20,59,760,370</area>
-            <buttonarea>0,0,760,340</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="rectypechar" from="buttontext">
-                        <area>30,1,20,24</area>
-                        <align>hcenter</align>
-                    </textarea>
-                    <textarea name="title" from="buttontext">
-                        <area>60,1,350,24</area>
-                    </textarea>
-                    <textarea name="callsign" from="buttontext">
-                        <area>420,1,100,24</area>
-                    </textarea>
-                    <textarea name="lastrecordeddate" from="buttontext">
-                        <area>530,1,150,24</area>
-                        <align>right</align>
-                    </textarea>
-                    <textarea name="finalpriority" from="buttontext">
-                        <area>690,1,60,24</area>
-                        <align>right</align>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active" />
-                <state name="selectedinactive" from="active" />
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>710,340</position>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>740,340</position>
-            </statetype>
-        </buttonlist>
-
-        <textarea name="title" from="basetextarea">
-            <area>30,400,740,40</area>
-            <font>basemedium</font>
-        </textarea>
-
-        <textarea name="recordingtype" from="basetextarea">
-            <area>30,440,430,30</area>
-        </textarea>
-
-        <textarea name="scheduleinfo" from="basetextarea">
-            <area>30,470,740,30</area>
-        </textarea>
-
-        <textarea name="finalprioritylabel" from="basetextarea">
-            <area>630,440,90,30</area>
-            <value>Priority:</value>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="finalpriority" from="basetextarea">
-            <area>730,440,40,30</area>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="recordinggrouplabel" from="basetextarea">
-            <area>30,500,190,30</area>
-            <value>Recording Group:</value>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="recordinggroup" from="basetextarea">
-            <area>230,500,160,30</area>
-        </textarea>
-
-        <textarea name="categorylabel" from="basetextarea">
-            <area>30,530,190,30</area>
-            <value>Category:</value>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="category" from="basetextarea">
-            <area>230,530,160,30</area>
-        </textarea>
-
-        <textarea name="storagegrouplabel" from="basetextarea">
-            <area>400,500,190,30</area>
-            <value>Storage Group:</value>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="storagegroup" from="basetextarea">
-            <area>600,500,160,30</area>
-        </textarea>
-
-        <textarea name="recordingprofilelabel" from="basetextarea">
-            <area>400,530,190,30</area>
-            <value>Recording Profile:</value>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="recordingprofile" from="basetextarea">
-            <area>600,530,160,30</area>
-        </textarea>
-
-        <textarea name="keyinstr">
-            <area>0,570,800,30</area>
-            <value>(1) Title (2) Priority (4) Type</value>
-            <align>allcenter</align>
-        </textarea>
--->
     </window>
 
-<!-- To do --> 
     <window name="custompriority">
 
-        <textarea name="pagetitle" from="basetextarea">
-            <area>40,40,760,40</area>
-            <font>baselarge</font>
-            <value>Custom Priority Rules</value>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="ruleslabel" from="basetextarea">
-            <area>40,102,250,30</area>
-            <font>basemedium</font>
-            <align>right</align>
-            <value>Existing Rules:</value>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <buttonlist name="rules" from="basewideselector">
-            <position>300,100</position>
-        </buttonlist>
+        <group name="custompriority_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="paneltitle" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <scroll direction="horizontal"/>
+	            <value>Custom Priority Rules</value>
+	        </textarea>
+	
+	        <!-- Labels -->
 
-        <textarea name="titlelabel" from="ruleslabel">
-            <position>40,162</position>
-            <value>Rule Name:</value>
-        </textarea>
+	        <textarea name="ruleslbl" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Existing Rules:</value>
+	        </textarea>
 
-        <textedit name="title" from="basetextedit">
-            <position>300,155</position>
-        </textedit>
 
-        <textarea name="prioritylabel" from="ruleslabel">
-            <position>40,222</position>
-            <value>Priority Change:</value>
-        </textarea>
+	        <textarea name="titlelabel" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Rule Name:</value>
+	        </textarea>
+	
+	        <textarea name="prioritylabel" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>Priority Change:</value>
+	        </textarea>
+	
+	        <textarea name="clauseslabel" from="textarea_settings_option">
+	            <position>20,336</position>
+	            <value>Select a clause from the list:</value>
+	        </textarea>
+	
+	        <textarea name="ruleclauseslabel" from="textarea_settings_option">
+	            <position>20,408</position>
+	            <value>Rule Clause:</value>
+	        </textarea>
+	
+	        <!-- Widgets -->
+	        <buttonlist name="rules" from="selector_settings">
+	            <position>0,120</position>
+	            <helptext>Select the recording rule</helptext>
+	        </buttonlist>
 
-        <spinbox name="priority" from="basespinbox">
-            <position>300,220</position>
-        </spinbox>
+	        <textedit name="title"  from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+		
+	        <spinbox name="priority"  from="spinbox_settings">
+	            <position>0,264</position>
+	        </spinbox>
+	
+	        <buttonlist name="clauses" from="selector_settings">
+	            <position>0,336</position>
+	        </buttonlist>
+	
+	        <textedit name="description"  from="textedit_settings_long">
+	            <position>0,408</position>
+	        </textedit>
+		
+	     </group>
 
-        <textarea name="clauseslabel" from="ruleslabel">
-            <area>100,300,600,40</area>
-            <value>Select a clause from the list.</value>
-            <align>allcenter</align>
-        </textarea>
+        <group name="custompriority_menu">
+           <area>30,28,324,952</area>
 
-        <buttonlist name="clauses" from="basewideselector">
-            <position>120,350</position>
-        </buttonlist>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Priorities</value>
+	        </textarea>
+	
+	        <button name="add" from="button_settings">
+	            <position>0,120</position>
+	            <value>Add Clause</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="delete" from="button_settings">
+	            <position>0,192</position>
+	            <value>Delete Rule</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="test" from="button_settings">
+	            <position>0,264</position>
+	            <value>Test Rule</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="install" from="button_settings">
+	            <position>0,336</position>
+	            <value>Install Rule</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="cancel" from="button_settings">
+	            <position>0,408</position>
+	            <value>Cancel</value>
+	            <helptext></helptext>
+	        </button>
+	
+        </group>
 
-        <button name="add" from="basebutton">
-            <position>530,350</position>
-            <value>Add Clause</value>
-        </button>
-
-        <textedit name="description">
-            <area>100,400,600,100</area>
-            <statetype name="background">
-                <state name="active">
-                    <shape name="background">
-                        <area>0,0,600,100</area>
-                        <fill color="#FFFFFF"  alpha="180" />
-                    </shape>
-                </state>
-                <state name="selected" from="active">
-                    <shape name="background">
-                        <fill alpha="255" />
-                    </shape>
-                </state>
-                <state name="inactive" from="active" />
-            </statetype>
-            <imagetype name="cursor">
-                <filename>cursor.png</filename>
-            </imagetype>
-            <textarea name="text">
-                <area>12,13,575,75</area>
-                <font>basesmallblack</font>
-                <multiline>yes</multiline>
-            </textarea>
-        </textedit>
-
-        <button name="cancel" from="basebutton">
-            <position>20,530</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="delete" from="basebutton">
-            <position>220,530</position>
-            <value>Delete</value>
-        </button>
-
-        <button name="test" from="basebutton">
-            <position>420,530</position>
-            <value>Test</value>
-        </button>
-
-        <button name="install" from="basebutton">
-            <position>630,530</position>
-            <value>Install</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 

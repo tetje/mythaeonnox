@@ -2561,6 +2561,8 @@
                </imagetype>
                <textarea name="buttontext" from="textarea_settings_option">
                    <area>500,0,750,72</area>
+                   <cutdown>no</cutdown>
+                   <scroll direction="horizontal"/>
                    <align>left,vcenter</align>
                </textarea>
            </state>
@@ -2621,6 +2623,8 @@
                </imagetype>
                <textarea name="buttontext" from="textarea_settings_option">
                    <area>20,0,1230,72</area>
+                   <cutdown>no</cutdown>
+                   <scroll direction="horizontal"/>
                    <align>left,vcenter</align>
                </textarea>
            </state>
@@ -2682,6 +2686,8 @@
                </imagetype>
                <textarea name="buttontext" from="textarea_settings_option">
                    <area>250,0,300,72</area>
+                   <cutdown>no</cutdown>
+                   <scroll direction="horizontal"/>
                    <align>left,vcenter</align>
                    <scroll direction="left"/>
                </textarea>
@@ -2991,6 +2997,33 @@
         </imagetype>
         <textarea name="text" from="textarea_settings_option">
             <area>500,0,890,72</area>
+        </textarea>
+    </textedit>
+
+    <textedit name="textedit_settings_long">
+        <area>0,0,1400,216</area>
+        <statetype name="background">
+            <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,166,1400,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+            </state>
+            <state name="selected" from="active">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,1400,216</area>
+                   <filename>images/shared/settings_radiobuttonofffocus_square.png</filename>
+               </imagetype>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>cursor.png</filename>
+        </imagetype>
+        <textarea name="text" from="textarea_settings_option">
+            <area>500,20,890,176</area>
+            <align>left,top</align>
+            <multiline>yes</multiline>
         </textarea>
     </textedit>
 
