@@ -1124,15 +1124,16 @@
 
    <buttonlist name="buttonlist_wall_small">
        <spacing>0</spacing>
-       <area>0,0,1872,942</area>
+       <area>0,0,1920,942</area>
        <searchposition>758,55</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
-       <arrange>stack</arrange>
+       <arrange>fixed</arrange>
        <align>bottom,hcenter</align>
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
-       <buttonarea>0,0,1872,945</buttonarea>
+       <drawfrombottom>yes</drawfrombottom>
+       <buttonarea>0,0,1920,945</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
                <area>-2,-2,160,236</area>
@@ -1315,85 +1316,85 @@
        </statetype>
    </buttonlist>
 
-    <buttonlist name="buttonlist_settings_check">
-        <area>0,0,1400,952</area>
-        <align>top,hcenter</align>
-        <layout>vertical</layout>
-        <wrapstyle>selection</wrapstyle>
-        <arrange>stack</arrange>
-        <showarrow>no</showarrow>
-        <buttonarea>0,0,1400,952</buttonarea>
-        <statetype name="buttonitem">
-            <state name="active">
-               <imagetype name="backgroundactive">
-                   <area>0,22,1400,50</area>
-                   <preserveaspect>no</preserveaspect>
-                   <filename>images/shared/settings_radiobuttonoff.png</filename>
-               </imagetype>
-               <textarea name="buttontext" from="textarea_settings_option">
-                   <area>20,0,1230,72</area>
-                   <align>left,vcenter</align>
-               </textarea>
-		         <statetype name="buttoncheck">
-		            <area>1278,0,122,72</area>
-		            <state type="off">
-		                <imagetype name="LEDOff">
-		                    <area>0,0,122,72</area>
-		                    <filename>images/shared/settings_radiobuttonon_buttonlist.png</filename>
-		                </imagetype>
-		            </state>
-		            <state type="half">
-		                <imagetype name="LEDOn">
-		                    <area>0,0,122,72</area> 
-		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
-		                    <alpha>128</alpha>
-		                </imagetype>
-		            </state>
-		            <state type="full">
-		                <imagetype name="LEDOn">
-		                    <area>0,0,122,72</area>
-		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
-		                </imagetype>
-		            </state>
-		         </statetype>
-           </state>
-            <state name="selectedactive">
-                <imagetype name="backgroundselected">
-                   <area>0,0,1400,72</area>
-                   <preserveaspect>no</preserveaspect>
-                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
-               </imagetype>
-               <textarea name="buttontext" from="textarea_settings_option">
-                   <area>20,0,1230,72</area>
-                   <align>left,vcenter</align>
-               </textarea>
-		         <statetype name="buttoncheck">
-		            <area>1278,0,122,72</area>
-		            <state type="off">
-		                <imagetype name="LEDOff">
-		                    <area>0,0,122,72</area>
-		                    <filename>images/shared/settings_radiobuttonon_buttonlist.png</filename>
-		                </imagetype>
-		            </state>
-		            <state type="half">
-		                <imagetype name="LEDOn">
-		                    <area>0,0,122,72</area> 
-		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
-		                    <alpha>128</alpha>
-		                </imagetype>
-		            </state>
-		            <state type="full">
-		                <imagetype name="LEDOn">
-		                    <area>0,0,122,72</area>
-		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
-		                </imagetype>
-		            </state>
-		         </statetype>
-           </state>
-           <state name="inactive" from="active"/>
-           <state name="selectedinactive" from="active"/>
-        </statetype>
-    </buttonlist>
+   <buttonlist name="buttonlist_settings_check">
+     <area>0,0,1400,952</area>
+     <align>top,hcenter</align>
+     <layout>vertical</layout>
+     <wrapstyle>selection</wrapstyle>
+     <arrange>stack</arrange>
+     <showarrow>no</showarrow>
+     <buttonarea>0,0,1400,952</buttonarea>
+     <statetype name="buttonitem">
+         <state name="active">
+            <imagetype name="backgroundactive">
+                <area>0,22,1400,50</area>
+                <preserveaspect>no</preserveaspect>
+                <filename>images/shared/settings_radiobuttonoff.png</filename>
+            </imagetype>
+            <textarea name="buttontext" from="textarea_settings_option">
+                <area>20,0,1230,72</area>
+                <align>left,vcenter</align>
+            </textarea>
+	         <statetype name="buttoncheck">
+	            <area>1278,0,122,72</area>
+	            <state type="off">
+	                <imagetype name="LEDOff">
+	                    <area>0,0,122,72</area>
+	                    <filename>images/shared/settings_radiobuttonon_buttonlist.png</filename>
+	                </imagetype>
+	            </state>
+	            <state type="half">
+	                <imagetype name="LEDOn">
+	                    <area>0,0,122,72</area> 
+	                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
+	                    <alpha>128</alpha>
+	                </imagetype>
+	            </state>
+	            <state type="full">
+	                <imagetype name="LEDOn">
+	                    <area>0,0,122,72</area>
+	                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
+	                </imagetype>
+	            </state>
+	         </statetype>
+        </state>
+         <state name="selectedactive">
+             <imagetype name="backgroundselected">
+                <area>0,0,1400,72</area>
+                <preserveaspect>no</preserveaspect>
+                <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+            </imagetype>
+            <textarea name="buttontext" from="textarea_settings_option">
+                <area>20,0,1230,72</area>
+                <align>left,vcenter</align>
+            </textarea>
+	         <statetype name="buttoncheck">
+	            <area>1278,0,122,72</area>
+	            <state type="off">
+	                <imagetype name="LEDOff">
+	                    <area>0,0,122,72</area>
+	                    <filename>images/shared/settings_radiobuttonon_buttonlist.png</filename>
+	                </imagetype>
+	            </state>
+	            <state type="half">
+	                <imagetype name="LEDOn">
+	                    <area>0,0,122,72</area> 
+	                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
+	                    <alpha>128</alpha>
+	                </imagetype>
+	            </state>
+	            <state type="full">
+	                <imagetype name="LEDOn">
+	                    <area>0,0,122,72</area>
+	                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
+	                </imagetype>
+	            </state>
+	         </statetype>
+        </state>
+        <state name="inactive" from="active"/>
+        <state name="selectedinactive" from="active"/>
+     </statetype>
+   </buttonlist>
 
    <buttonlist name="buttonlist_settings_channels">
        <area>0,0,324,648</area>
@@ -1429,6 +1430,36 @@
            <state name="selectedactive" from="active"/>
            <state name="inactive" from="active"/>
            <state name="selectedinactive" from="active"/>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_settings_menu">
+       <area>0,0,324,648</area>
+       <align>top,hcenter</align>
+       <layout>vertical</layout>
+       <wrapstyle>selection</wrapstyle>
+       <arrange>stack</arrange>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,324,648</buttonarea>
+       <statetype name="buttonitem">
+           <area>0,0,324,72</area>
+           <state name="active">
+               <textarea name="buttontext"  from="textarea_settings_button">
+                   <area>30,0,264,72</area>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,324,72</area>
+                   <filename>images/shared/settings_leftmenufocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_settings_button">
+                   <area>60,0,264,72</area>
+                   <font>Font_Button_Settings_Focus</font>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
        </statetype>
    </buttonlist>
 

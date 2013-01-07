@@ -991,13 +991,13 @@
            </state>
 -->
        </statetype>    
-       <!-- The clock  -->
+ 
+      <!-- The clock  -->
       <group name="date_clock" from="defaultclockdown">
           <position>1240,497</position>
       </group>
       
        <!-- RSS bar -->
-<!-- -->
        <imagetype name="rss_bgd">
           <filename>images/shared/rssbar_mid.png</filename>
           <area>21,634,1899,87></area>

@@ -542,7 +542,7 @@
 	        </animation>
 
 	        <buttonlist name="videos" from="buttonlist_wall_small">
-	            <position>24,0</position>
+	            <position>9,15</position>
 	        </buttonlist>
 
 	        <textarea name="title" from="textarea_title">
