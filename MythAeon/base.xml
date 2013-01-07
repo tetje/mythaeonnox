@@ -1177,20 +1177,19 @@
                <alpha>0</alpha>
            </state>
            <state name="selectedactive">
-               <area>-6,-6,168,244</area>
+               <area>-36,-51,231,335</area>
                <imagetype name="WallMovieBorder">
-                   <area>0,0,168,244</area>
+                   <area>0,0,231,335</area>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/wall_movie_fborder.png</filename>
                </imagetype>
                <imagetype name="coverart">
-                   <area>9,9,150,226</area>
-                   <mask>images/shared/wall_movie_mask_small.png</mask>
+                   <area>12,12,208,311</area>
+                   <mask>images/shared/wall_movie_mask.png</mask>
                    <filename>images/shared/defaultVideoBigPoster.png</filename>
-                   <alphapulse min="128" max="255" change="3"/>
                </imagetype>
                <imagetype name="WallMovieOverlay">
-                   <area>9,9,150,226</area>
+                   <area>12,12,208,311</area>
                    <filename>images/shared/wall_movie_nfoverlay.png</filename>
                </imagetype>
 
@@ -1392,7 +1391,9 @@
 	         </statetype>
         </state>
         <state name="inactive" from="active"/>
-        <state name="selectedinactive" from="active"/>
+        <state name="selectedinactive" from="selectedactive">
+            <alpha>128</alpha>
+        </state>
      </statetype>
    </buttonlist>
 
@@ -1459,7 +1460,9 @@
                </textarea>
            </state>
            <state name="inactive" from="active"/>
-           <state name="selectedinactive" from="selectedactive"/>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>128</alpha>
+           </state>
        </statetype>
    </buttonlist>
 

@@ -1641,7 +1641,6 @@
 
     </window>
 
-<!-- To do --> 
     <window name="programfind">
 
         <area>-1,-1,1850,1010</area>
@@ -1705,11 +1704,16 @@
         </group>
         
         <group name="programfind_menu">
-           <area>30,28,324,952</area>
+           <area>29,28,324,952</area>
 
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Search List</value>
+	        </textarea>
+	
 	        <textarea name="title" from="textarea_settings_title">
 	            <area>30,50,284,50</area>
-	            <value>Search</value>
+               <alpha>0</alpha>	            
 	        </textarea>
 	
 	        <buttonlist name="alphabet" from="buttonlist_settings_menu">
@@ -1717,8 +1721,13 @@
 			       <buttonarea>0,0,324,576</buttonarea>
 	        </buttonlist>
 	
+	        <textarea name="Timeslbl" from="textarea_settings_title" depends="title">
+	            <area>30,715,284,50</area>
+	            <value>Search Times</value>
+	        </textarea>
+	
 	        <buttonlist name="times"  from="buttonlist_settings_menu">
-			       <area>0,761,324,184</area>
+			       <area>0,785,324,184</area>
 			       <buttonarea>0,0,324,184</buttonarea>
 	        </buttonlist>
 
