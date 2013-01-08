@@ -1277,117 +1277,140 @@
 
     </window>
 
-<!-- To do --> 
     <window name="powersearchpopup">
-        <area>-1,-1,500,500</area>
+        <area>-1,-1,700,550</area>
 
-        <imagetype name="box">
-            <filename>mythdialogbox-background.png</filename>
-        </imagetype>
+        <group name="movie_selection_window" from="basedialogwindowbig">
+            <position>0,0</position>        
+        </group>
 
-        <textarea name="title_text" from="basetextarea">
-            <area>20,20,460,40</area>
-            <font>baselarge</font>
-            <align>hcenter,top</align>
+        <textarea name="title_text" from="textarea_list">
+            <area>70,75,560,50</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
             <value>Select Search</value>
         </textarea>
 
-        <buttonlist name="phrase_list" from="basebuttonlist">
-            <area>20,60,450,350</area>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="buttontext">
-                        <area>5,0,450,30</area>
-                    </textarea>
-                </state>
-                <state name="selectedinactive">
-                    <textarea name="buttontext">
-                        <area>5,0,450,30</area>
-                    </textarea>
-                </state>
-                <state name="selectedactive">
-                    <textarea name="buttontext">
-                        <area>5,0,450,30</area>
-                    </textarea>
-                </state>
-            </statetype>
+        <buttonlist name="phrase_list" from="buttonlist_dialog">
+		       <area>0,125,700,200</area>
+		       <align>top,hcenter</align>
+		       <buttonarea>0,0,700,200</buttonarea>
         </buttonlist>
 
-        <button name="edit_button" from="basebutton">
-            <position>12,440</position>
+        <button name="edit_button" from="button_dialog">
+            <position>0,325</position>
         </button>
 
-        <button name="delete_button" from="basebutton">
-            <position>173,440</position>
+        <button name="delete_button" from="button_dialog">
+            <position>0,375</position>
         </button>
 
-        <button name="record_button" from="basebutton">
-            <position>333,440</position>
+        <button name="record_button" from="button_dialog">
+            <position>0,425</position>
         </button>
 
     </window>
 
-<!-- To do --> 
     <window name="editpowersearchpopup">
-        <area>-1,-1,500,550</area>
+        <area>-1,-1,1850,1010</area>
 
-        <imagetype name="box">
-            <area>0,0,500,550</area>
-            <filename>mythdialogbox-background.png</filename>
-        </imagetype>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="title_text" from="basetextarea">
-            <area>20,10,460,40</area>
-            <font>baselarge</font>
-            <align>hcenter,top</align>
-            <value>Edit Power Search Fields</value>
-        </textarea>
+        <group name="editpowersearchpopup_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="titlepanel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Edit Power Search Fields</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="titlelabel" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Optional title phrase:</value>
+	        </textarea>
+	
+	        <textarea name="subtitlelabel" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Optional subtitle phrase:</value>
+	        </textarea>
+	
+	        <textarea name="desclabel" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>Optional description phrase:</value>
+	        </textarea>
+	
+	        <textarea name="catlabel" from="textarea_settings_option">
+	            <position>20,336</position>
+	            <value>Category:</value>
+	        </textarea>
+	
+	        <textarea name="genrelabel" from="textarea_settings_option">
+	            <position>20,408</position>
+	            <value>Genre:</value>
+	        </textarea>
+	
+	        <textarea name="channellabel" from="textarea_settings_option">
+	            <position>20,480</position>
+	            <value>Channel:</value>
+	        </textarea>
+	
+	        <!-- widgets -->
+	        <textedit name="title_edit" from="textedit_settings">
+	            <position>0,120</position>
+	        </textedit>
+		
+	        <textedit name="subtitle_edit" from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+	
+	        <textedit name="desc_edit" from="textedit_settings">
+		            <position>0,264</position>
+	        </textedit>
+		
+	        <buttonlist name="category_list" from="selector_settings">
+	            <position>0,336</position>
+	        </buttonlist>
+	
+	        <buttonlist name="genre_list" from="selector_settings">
+	            <position>0,408</position>
+	        </buttonlist>
+	
+	        <buttonlist name="channel_list" from="selector_settings">
+	            <position>0,480</position>
+	        </buttonlist>
+	
+        </group>
+        
+         <group name="editpowersearchpopup_menu">
+           <area>30,28,324,952</area>
 
-        <textarea name="titlelabel" from="basetextarea">
-            <area>60,50,460,30</area>
-            <font>basesmall</font>
-            <value>Optional title phrase:</value>
-        </textarea>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Power Search</value>
+	        </textarea>
+	
+	        <button name="ok_button" from="button_settings">
+	            <position>0,120</position>
+	            <value>Search</value>
+	        </button>
+	
+        </group>
 
-        <textedit name="title_edit" from="basetextedit">
-            <position>60,80</position>
-        </textedit>
-
-        <textarea name="subtitlelabel" from="basetextarea">
-            <area>60,140,460,30</area>
-            <font>basesmall</font>
-            <value>Optional subtitle phrase:</value>
-        </textarea>
-
-        <textedit name="subtitle_edit" from="basetextedit">
-            <position>60,170</position>
-        </textedit>
-
-        <textarea name="desclabel" from="basetextarea">
-            <area>60,230,320,30</area>
-            <font>basesmall</font>
-            <value>Optional description phrase:</value>
-        </textarea>
-
-        <textedit name="desc_edit" from="basetextedit">
-            <position>60,260</position>
-        </textedit>
-
-        <buttonlist name="category_list" from="basewideselector">
-            <position>60,330</position>
-        </buttonlist>
-
-        <buttonlist name="genre_list" from="basewideselector">
-            <position>60,380</position>
-        </buttonlist>
-
-        <buttonlist name="channel_list" from="basewideselector">
-            <position>60,430</position>
-        </buttonlist>
-
-        <button name="ok_button" from="basebutton">
-            <position>170,490</position>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
@@ -1741,124 +1764,131 @@
 
     </window>
 
-<!-- To do --> 
     <window name="customedit">
 
-        <textarea name="pagetitle" from="basetextarea">
-            <area>54,30,600,40</area>
-            <font>baselarge</font>
-            <value>Custom Record Rules</value>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="ruleslabel" from="basetextarea">
-            <area>54,75,150,30</area>
-            <font>basemedium</font>
-            <align>right</align>
-            <value>Existing Rules:</value>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <buttonlist name="rules" from="basewideselector">
-            <position>250,75</position>
-            <wrapstyle>selection</wrapstyle>
-        </buttonlist>
+        <group name="customedit_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="paneltitle" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <scroll direction="horizontal"/>
+	            <value>Custom Recording Rules</value>
+	        </textarea>
+	
+	        <!-- Labels -->
 
-        <textarea name="titlelabel" from="ruleslabel">
-            <position>54,125</position>
-            <value>Rule Name:</value>
-        </textarea>
+	        <textarea name="ruleslbl" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Existing Rules:</value>
+	        </textarea>
 
-        <textedit name="title" from="basetextedit">
-            <position>250,130</position>
-        </textedit>
+	        <textarea name="titlelabel" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Rule Name:</value>
+	        </textarea>
+	
+	        <textarea name="clauseslabel" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>Select a clause from the list:</value>
+	        </textarea>
+	
+	        <textarea name="clausetextlabel" from="textarea_settings_option">
+	            <position>20,336</position>
+	            <value>Clause:</value>
+	        </textarea>
+		
+	        <textarea name="clausedesclabel" from="textarea_settings_option">
+	            <position>20,408</position>
+	            <value>Rule Clause:</value>
+	        </textarea>
+		
+	        <textarea name="subtitlelabel" from="textarea_settings_option">
+	            <position>20,624</position>
+	            <value>Additional Tables:</value>
+	        </textarea>
+	
+	        <!-- Widgets -->
+	        <buttonlist name="rules" from="selector_settings">
+	            <position>0,120</position>
+	            <helptext>Select the recording rule</helptext>
+	        </buttonlist>
 
-        <buttonlist name="clauses" from="basewideselector">
-            <position>54,200</position>
-            <wrapstyle>items</wrapstyle>
-        </buttonlist>
+	        <textedit name="title"  from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+		
+	        <buttonlist name="clauses" from="selector_settings">
+	            <position>0,264</position>
+	        </buttonlist>
+	
+	        <textarea name="clausetext" from="textarea_settings_option">
+	            <area>500,336,850,72</area>
+		         <cutdown>no</cutdown>
+		         <scroll direction="horizontal"/>
+	            <value>Clause:</value>
+	        </textarea>
+		
+	        <textedit name="description"  from="textedit_settings_long">
+	            <position>0,408</position>
+	        </textedit>
 
-        <textarea name="clausetext" from="ruleslabel">
-            <area>54,240,692,40</area>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
-        </textarea>
+	        <textedit name="subtitle"  from="textedit_settings_long">
+	            <position>0,624</position>
+	        </textedit>
 
-        <textedit name="description">
-            <area>54,290,692,130</area>
-            <statetype name="background">
-                <state name="active">
-                    <shape name="background">
-                        <area>0,0,692,130</area>
-                        <fill color="#FFFFFF" alpha="180" />
-                    </shape>
-                </state>
-                <state name="selected" from="active">
-                    <shape name="background">
-                        <fill alpha="255" />
-                    </shape>
-                </state>
-                <state name="inactive" from="active" />
-            </statetype>
-            <imagetype name="cursor">
-                <filename>cursor.png</filename>
-            </imagetype>
-            <textarea name="text">
-                <area>10,10,672,110</area>
-                <font>basesmallblack</font>
-                <multiline>yes</multiline>
-            </textarea>
-        </textedit>
+	     </group>
 
-        <textarea name="subtitlelabel" from="ruleslabel">
-            <area>54,430,240,75</area>
-            <value>Additional Tables:</value>
-            <align>left</align>
-        </textarea>
+        <group name="customedit_menu">
+           <area>30,28,324,952</area>
 
-        <textedit name="subtitle">
-            <area>250,430,496,75</area>
-            <statetype name="background">
-                <state name="active">
-                    <shape name="background">
-                        <area>0,0,496,75</area>
-                        <fill color="#FFFFFF" alpha="180" />
-                    </shape>
-                </state>
-                <state name="selected" from="active">
-                    <shape name="background">
-                        <fill alpha="255" />
-                    </shape>
-                </state>
-                <state name="inactive" from="active" />
-            </statetype>
-            <imagetype name="cursor">
-                <filename>cursor.png</filename>
-            </imagetype>
-            <textarea name="text">
-                <area>10,10,476,65</area>
-                <font>basesmallblack</font>
-                <multiline>yes</multiline>
-            </textarea>
-        </textedit>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Custom Edit</value>
+	        </textarea>
+	
+	        <button name="test" from="button_settings">
+	            <position>0,120</position>
+	            <value>Test Rule</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="store" from="button_settings">
+	            <position>0,192</position>
+	            <value>Store Rule</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="record" from="button_settings">
+	            <position>0,264</position>
+	            <value>Record</value>
+	            <helptext></helptext>
+	        </button>
+	
+	        <button name="cancel" from="button_settings">
+	            <position>0,336</position>
+	            <value>Cancel</value>
+	            <helptext></helptext>
+	        </button>
 
-        <button name="test" from="basebutton">
-            <position>54,510</position>
-            <value>Test</value>
-        </button>
+        </group>
 
-        <button name="record" from="basebutton">
-            <position>238,510</position>
-            <value>Record</value>
-        </button>
-
-        <button name="store" from="basebutton">
-            <position>422,510</position>
-            <value>Store</value>
-        </button>
-
-        <button name="cancel" from="basebutton">
-            <position>595,510</position>
-            <value>Cancel</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
