@@ -806,6 +806,38 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_listbase" from="buttonlist_tvshowpanel">
+       <area>0,0,1115,800</area>
+       <buttonarea>0,0,1115,800</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,1115,113</area>
+               <imagetype name="Listpanelline">
+                   <area>0,63,1115,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <area>0,0,1115,113</area>
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,1115,113</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <scroll direction="left" />
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
    <buttonlist name="buttonlist_videomanager" from="buttonlist_tvshowpanel">
        <area>0,0,1115,800</area>
        <buttonarea>0,0,1115,800</buttonarea>
