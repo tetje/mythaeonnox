@@ -4,35 +4,35 @@
     <button>
         <type>TV_SEARCH_NEW_TITLES</type>
         <text>Titles</text>
-        <description>View new</description>
+        <description>View new titles</description>
         <action>TV_SEARCH_NEW</action>
     </button>
 
     <button>
         <type>TV_SEARCH_MOVIES</type>
         <text>Movies</text>
-        <description>View all</description>
+        <description>View all movies</description>
         <action>TV_SEARCH_MOVIE</action>
     </button>
 
     <button>
         <type>TV_SEARCH_CATEGORIES</type>
         <text>Categories</text>
-        <description>Search by</description>
+        <description>Search by category</description>
         <action>TV_SEARCH_CATEGORY</action>
     </button>
 
     <button>
         <type>TV_SEARCH_CHANNELS</type>
         <text>Channels</text>
-        <description>Search by</description>
+        <description>Search by channel</description>
         <action>TV_SEARCH_CHANNEL</action>
     </button>
 
     <button>
         <type>TV_SEARCH_TIMES</type>
         <text>Time</text>
-        <description>Search on</description>
+        <description>Search on broadcast times</description>
         <action>TV_SEARCH_TIME</action>
     </button>
 

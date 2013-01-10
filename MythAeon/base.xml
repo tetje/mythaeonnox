@@ -15,6 +15,11 @@
         <color>#ffffff</color>
     </fontdef>
 
+    <fontdef name="Font_Clock_Bold" from="Font_Clock">
+        <weight>bold</weight>
+        <stretch>extracondensed</stretch>
+    </fontdef>
+
     <fontdef name="Font_RSS" from="Font_Clock">
         <pixelsize>26</pixelsize>
         <color>#000000</color>
@@ -65,9 +70,11 @@
         <pixelsize>18</pixelsize>
         <weight>bold</weight>
         <stretch>extracondensed</stretch>
+<!--
         <italics>yes</italics>
-<!--        <outlinecolor>#929292</outlinecolor>
-        <outlinesize>2</outlinesize> -->
+        <outlinecolor>#929292</outlinecolor>
+        <outlinesize>2</outlinesize> 
+-->
         <color>#000000</color>
     </fontdef>
 
@@ -122,9 +129,11 @@
     <fontdef name="Font_Button_Settings_Black" face="ScoutCond">
         <pixelsize>30</pixelsize>
         <weight>bold</weight>
+<!--
         <italics>yes</italics>
-<!--        <outlinecolor>#929292</outlinecolor>
-        <outlinesize>2</outlinesize> -->
+        <outlinecolor>#929292</outlinecolor>
+        <outlinesize>2</outlinesize> 
+-->
         <color>#000000</color>
     </fontdef>
     
@@ -141,12 +150,11 @@
         <weight>light</weight>
     </fontdef>
     
-
    <!-- Base MythAeon clock definition -->
    <group name="defaultclockup">
       <imagetype name="ClockBgd">
          <filename>images/shared/timepanel_mid.png</filename>
-         <area>0,0,683,41></area>
+         <area>0,0,683,41</area>
          <preserveaspect>no</preserveaspect>
       </imagetype>  
       <clock name="clock">
@@ -161,7 +169,7 @@
    <group name="defaultclockdown" from="defaultclockup">
       <imagetype name="ClockBgd">
          <filename>images/shared/timepanel_mid_flip.png</filename>
-         <area>0,0,683,41></area>
+         <area>0,0,683,41</area>
          <preserveaspect>no</preserveaspect>
       </imagetype>  
    </group>
@@ -699,7 +707,7 @@
                    <preserveaspect>no</preserveaspect>
                </imagetype>
                <imagetype name="coverart">
-                   <area>0,0,186,305</area>
+                   <area>0,0,186,287</area>
                    <alpha>255</alpha>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/defaultVideoBigPoster.png</filename>
@@ -1832,7 +1840,109 @@
            </state>
         </statetype>
     </button>
-    
+ 
+    <!-- Base MythAeon OSDbutton definitions -->
+
+     <imagetype name="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_nofocus.png</filename>
+        <area>0,0,146,144></area>
+        <preserveaspect>no</preserveaspect>
+     </imagetype>
+
+     <imagetype name="osd_button_focus_bgd" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_focus.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_play" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_play.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_pause" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_pause.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_stop" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_stop.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_ff" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_ff.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_rew" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_rew.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_skipfwd" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_skipfwd.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_skipbwd" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_skipbwd.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_book" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_book.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_playlist" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_playlist.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_audio" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_audio.png</filename>
+     </imagetype>
+
+     <imagetype name="osd_button_video" from="osd_button_nofocus_bgd">
+        <filename>images/osd/osd_button_video.png</filename>
+     </imagetype>
+
+     <group name="basebutton_play_img">
+         <area>0,0,146,144</area>
+         <imagetype name="osd_button_nofocus_img" from="osd_button_nofocus_bgd"/>
+         <imagetype name="osd_button_img" from="osd_button_play"/>
+     </group>
+
+     <group name="basebutton_pause_img" from="basebutton_play_img">
+         <imagetype name="osd_button_img" from="osd_button_pause"/>
+     </group>
+
+     <group name="basebutton_stop_img" from="basebutton_play_img">
+         <imagetype name="osd_button_img" from="osd_button_stop"/>
+     </group>
+
+     <group name="basebutton_ff_img" from="basebutton_play_img">
+         <imagetype name="osd_button_img" from="osd_button_ff"/>
+     </group>
+
+     <group name="basebutton_rew_img" from="basebutton_play_img">
+         <imagetype name="osd_button_img" from="osd_button_rew"/>
+     </group>
+
+     <group name="basebutton_skipfwd_img" from="basebutton_play_img">
+         <imagetype name="osd_button_img" from="osd_button_skipfwd"/>
+     </group>
+
+     <group name="basebutton_skipbwd_img" from="basebutton_play_img">
+         <imagetype name="osd_button_img" from="osd_button_skipbwd"/>
+     </group>
+
+     <group name="basebutton_book_img" from="basebutton_play_img">
+         <imagetype name="osd_button_img" from="osd_button_book"/>
+     </group>
+
+     <group name="basebutton_playlist_img" from="basebutton_play_img">
+         <imagetype name="osd_button_img" from="osd_button_playlist"/>
+     </group>
+
+     <group name="basebutton_audio_img" from="basebutton_play_img">
+         <imagetype name="osd_button_img" from="osd_button_audio"/>
+     </group>
+
+     <group name="basebutton_video_img" from="basebutton_play_img">
+         <imagetype name="osd_button_img" from="osd_button_video"/>
+     </group>
+  
     <!-- Base definition of a button -->
     <button name="basebutton">
         <position>0,0</position>
@@ -3329,10 +3439,11 @@
         </textarea>
 
         <textarea name="storagegroup" from="textarea_title_sub">
-            <area>230,25,100,40</area>
+            <area>230,0,100,60</area>
             <font>Font_Button_Settings_Black</font>
-            <multiline>yes</multiline>           
-            <align>allcenter</align>
+            <multiline>no</multiline>
+            <scroll direction="horizontal"/>         
+            <align>bottom,hcenter</align>
         </textarea>
 <!--
         <imagetype name="repeatlabelframeactive" depends="longrepeat">

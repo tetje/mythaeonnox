@@ -991,12 +991,6 @@
            </state>
 -->
        </statetype>    
- 
-      <!-- The clock  -->
-      <group name="date_clock" from="defaultclockdown">
-          <position>1240,497</position>
-      </group>
-      
        <!-- RSS bar -->
        <imagetype name="rss_bgd">
           <filename>images/shared/rssbar_mid.png</filename>
@@ -1022,25 +1016,50 @@
           <area>41,634,200,41></area>
           <preserveaspect>no</preserveaspect>
        </imagetype>
-<!-- -->
-  <!--   THE MENU ITEMS                                      -->
-      <group name="descriptiongroup">
-         <area>656,497,608,41></area>
-         
+
+      <group name="description_clock_bgd_group">
+         <area>613,444,2031,93></area>
+<!-- -->        
 	      <animation trigger="AboutToShow">
-	          <section duration="1200" centre="middle">
-	              <position start="-608,497" end="656,497" easingcurve="InOutBack" />
+	          <section duration="500" centre="middle">
+	              <position start="613,476" end="613,444" easingcurve="OutSine" />
 	          </section>
 	      </animation>
-	      
+<!-- -->		      
+	       <imagetype name="description_clock_bgd_long" depends="description">
+	          <filename>images/shared/rssbar_mid_flip.png</filename>
+	          <area>0,0,2031,93></area>
+	          <preserveaspect>no</preserveaspect>
+	       </imagetype>
+
+	       <imagetype name="description_clock_bgd_short" depends="!description">
+	          <filename>images/shared/rssbar_mid_flip.png</filename>
+	          <area>585,0,2031,93></area>
+	          <preserveaspect>no</preserveaspect>
+	       </imagetype>
+
+	      <imagetype name="ClockBgd">
+	         <filename>images/shared/timepanel_mid_flip.png</filename>
+	         <area>627,53,683,41</area>
+	         <preserveaspect>no</preserveaspect>
+	      </imagetype>  
+
+	      <clock name="clock">
+	         <area>667,58,620,36</area>
+	         <font>Font_Clock</font>
+	         <template>dddd,  MMMM dd,  yyyy  |  hh:mm AP</template>
+	         <align>right,vcenter</align>
+	         <alpha>192</alpha>
+	      </clock>
+	
 	      <imagetype name="description_bgd" depends="description">
 	          <filename>images/shared/timepanel_mid_menu.png</filename>
-	          <area>0,0,608,41></area>
+	          <area>43,53,608,41></area>
 	          <preserveaspect>no</preserveaspect>
 	      </imagetype>
-	
+		
 	       <textarea name="description">
-	           <area>24,5,560,40</area>
+	           <area>67,58,560,36</area>
 	           <font>Font_Clock</font>
 	           <multiline>no</multiline>
 	           <align>hcenter,vcenter</align>
@@ -1048,6 +1067,8 @@
 	           <alpha>192</alpha>
 	       </textarea>
        </group>
+
+  <!--   THE MENU ITEMS                                      -->
 
        <imagetype name="menu_bgd">
           <filename>images/shared/homemenu_back.png</filename>
