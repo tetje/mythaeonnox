@@ -33,9 +33,9 @@
     <!-- Fonts for the main screens in recordings, video, music, etc -->
     <fontdef name="Font_Title" face="Aeon_Settings">
         <pixelsize>45</pixelsize>
-<!--
+<!-- -->
         <weight>bold</weight> 
--->
+<!-- -->
         <color>#000000</color>
     </fontdef>
 
@@ -46,6 +46,7 @@
     
     <fontdef name="Font_Title_Sub" from="Font_Title">
         <pixelsize>35</pixelsize>
+        <weight>bold</weight> 
         <color>#000000</color>
     </fontdef>
 
@@ -1352,6 +1353,49 @@
            </state>
            <state name="inactive" from="active"/>
            <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_dialog_osd">
+       <area>0,0,700,350</area>
+       <align>top,hcenter</align>
+       <layout>vertical</layout>
+       <wrapstyle>selection</wrapstyle>
+       <arrange>stack</arrange>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,700,350</buttonarea>
+       <statetype name="buttonitem">
+           <area>0,0,700,50</area>
+           <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>10,0,680,50</area>
+                   <filename>images/osd/osd_settings_buttonnf.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>70,0,600,50</area>
+                   <align>left,vcenter</align>
+                   <font>Font_List_Active</font>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>10,0,680,50</area>
+                   <filename>images/osd/osd_settings_buttonf.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>70,0,600,50</area>
+                   <scroll direction="left"/>
+                   <align>left,vcenter</align>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="active">
+               <textarea name="buttontext" from="textarea_list">
+                   <area>70,0,600,50</area>
+                   <font>Font_List_Active</font>
+                   <align>left,vcenter</align>
+               </textarea>
+           </state>
        </statetype>
    </buttonlist>
 

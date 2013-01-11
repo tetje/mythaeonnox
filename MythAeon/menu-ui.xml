@@ -1019,13 +1019,19 @@
 
       <group name="description_clock_bgd_group">
          <area>613,444,2031,93></area>
-<!-- -->        
+<!--     
 	      <animation trigger="AboutToShow">
 	          <section duration="500" centre="middle">
 	              <position start="613,476" end="613,444" easingcurve="OutSine" />
 	          </section>
 	      </animation>
-<!-- -->		      
+-->		      
+	       <animation trigger="AboutToShow">
+	          <section duration="500" centre="middle">
+	              <alpha start="0" end="255" easingcurve="InQuad" />
+	          </section>
+	       </animation>
+      
 	       <imagetype name="description_clock_bgd_long" depends="description">
 	          <filename>images/shared/rssbar_mid_flip.png</filename>
 	          <area>0,0,2031,93></area>

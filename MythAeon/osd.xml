@@ -328,21 +328,21 @@
 	     </group>
 
         <group name="osd_coverart" depends="coverart">
-            <area>17,0,275,399</area>
+            <area>17,0,274,398</area>
 	         <imagetype name="previewbgd">
-	             <area>0,0,275,399</area>
+	             <area>0,0,274,398</area>
 	             <alpha>255</alpha>
 	             <filename>images/shared/list_movieicon_frame.png</filename>
 	             <preserveaspect>no</preserveaspect>
 	         </imagetype>
 	         <imagetype name="coverart">
-	             <area>8,8,261,385</area>
+	             <area>7,7,261,385</area>
 	             <alpha>255</alpha>
 	             <preserveaspect>no</preserveaspect>
 	             <mask>images/shared/list_movieicon_mask_small.png</mask>
 	         </imagetype>
 	         <imagetype name="previewglass">
-	             <area>8,8,261,385</area>
+	             <area>7,7,261,385</area>
 	             <alpha>255</alpha>
 	             <filename>images/shared/list_movieicon_glass.png</filename>
 	             <preserveaspect>no</preserveaspect>
@@ -352,20 +352,108 @@
         <group name="osd_icon" depends="!coverart">
             <area>17,124,275,275</area>
 	         <imagetype name="iconbgd">
-	             <area>0,0,275,275</area>
+	             <area>0,0,274,274</area>
 	             <alpha>255</alpha>
 	             <filename>images/shared/list_musicicon_frame.png</filename>
 	             <preserveaspect>no</preserveaspect>
 	         </imagetype>
 	         <imagetype name="iconpath">
-	             <area>8,8,261,261</area>
+	             <area>7,7,261,261</area>
 	             <alpha>255</alpha>
 	             <preserveaspect>no</preserveaspect>
 	             <filename>images/shared/defaultVideoCover.png</filename>
 	             <mask>images/shared/list_musicicon_mask_small.png</mask>
 	         </imagetype>
 	         <imagetype name="iconpreviewglass">
-	             <area>8,8,261,261</area>
+	             <area>7,7,261,261</area>
+	             <alpha>255</alpha>
+	             <filename>images/shared/list_musicicon_glass.png</filename>
+	             <preserveaspect>no</preserveaspect>
+	         </imagetype>
+	     </group>
+
+    </window>
+
+    <window name="browse_info">
+        <area>0,658,1920,422</area>
+
+        <group name="osd_info">
+           <area>0,184,1920,238</area>
+	        <imagetype name="osd_bgd" depends="description">
+	           <filename>images/osd/osd_back.png</filename>
+	           <area>0,0,1920,238></area>
+	           <alpha>192</alpha>
+	           <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	
+	        <textarea name="title">
+	            <font>Font_Clock_Bold</font>
+	            <area>310,25,800,40</area>
+	            <align>left,vcenter</align>
+	        </textarea>
+	
+	        <textarea name="starttime">
+	            <font>Font_Clock</font>
+	            <area>310,65,1200,40</area>
+	            <align>left,top</align>
+	            <template>%channum% - %callsign%  |  %STARTTIME%-%ENDTIME% (%LENMINS%)</template>
+	        </textarea>
+	        
+	        <clock name="clock">
+	            <area>1500,25,400,40</area>
+	            <font>Font_Clock_Bold</font>
+	            <template>hh:mm AP</template>
+	            <align>right,vcenter</align>
+	        </clock>
+	
+	        <textarea name="description">
+	            <font>Font_Plot</font>
+	            <area>310,100,1590,120</area>
+	            <multiline>yes</multiline>
+	            <align>left,top</align>
+	            <template>%"|SUBTITLE|"\n%%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
+	        </textarea>
+	     </group>
+
+        <group name="osd_coverart" depends="coverart">
+            <area>17,0,275,399</area>
+	         <imagetype name="previewbgd">
+	             <area>0,0,274,398</area>
+	             <alpha>255</alpha>
+	             <filename>images/shared/list_movieicon_frame.png</filename>
+	             <preserveaspect>no</preserveaspect>
+	         </imagetype>
+	         <imagetype name="coverart">
+	             <area>7,7,261,385</area>
+	             <alpha>255</alpha>
+	             <preserveaspect>no</preserveaspect>
+	             <mask>images/shared/list_movieicon_mask_small.png</mask>
+	         </imagetype>
+	         <imagetype name="previewglass">
+	             <area>7,7,261,385</area>
+	             <alpha>255</alpha>
+	             <filename>images/shared/list_movieicon_glass.png</filename>
+	             <preserveaspect>no</preserveaspect>
+	         </imagetype>
+	     </group>
+
+        <group name="osd_icon" depends="!coverart">
+            <area>17,124,274,274</area>
+	         <imagetype name="iconbgd">
+	             <area>0,0,275,275</area>
+	             <alpha>255</alpha>
+	             <filename>images/shared/list_musicicon_frame.png</filename>
+	             <preserveaspect>no</preserveaspect>
+	         </imagetype>
+	         <imagetype name="iconpath">
+	             <area>7,7,261,261</area>
+	             <alpha>255</alpha>
+	             <preserveaspect>no</preserveaspect>
+	             <filename>images/shared/defaultVideoCover.png</filename>
+	             <mask>images/shared/list_musicicon_mask_small.png</mask>
+	         </imagetype>
+	         <imagetype name="iconpreviewglass">
+	             <area>7,7,261,261</area>
 	             <alpha>255</alpha>
 	             <filename>images/shared/list_musicicon_glass.png</filename>
 	             <preserveaspect>no</preserveaspect>
@@ -373,73 +461,6 @@
 	     </group>
 
 <!--
-        <imagetype name="iconpath">
-            <area>19,117,81,83</area>
-        </imagetype>
--->
-<!--
-        <textarea name="starttime">
-            <font>smaller</font>
-            <area>6,42,290,25</area>
-            <align>left,top</align>
-            <template>%STARTTIME%-%ENDTIME% : %LENMINS%</template>
-        </textarea>
-        <textarea name="videowidth">
-            <font>smaller</font>
-            <area>300,42,300,25</area>
-            <template>%VIDEOWIDTH%x%VIDEOHEIGHT%, %VIDEOFRAMERATE%fps, %VIDEOCODECDESC%</template>
-            <align>left,top</align>
-        </textarea>
-        <clock name="clock">
-            <area>481,8,187,25</area>
-            <font>small</font>
-            <template>%TIME%</template>
-            <align>right,top</align>
-        </clock>
-        <textarea name="channum">
-            <font>small</font>
-            <area>12,83,94,25</area>
-            <align>hcenter,vcenter</align>
-        </textarea>
-        <imagetype name="iconpath">
-            <area>19,117,81,83</area>
-        </imagetype>
-        <textarea name="callsign">
-            <font>smaller</font>
-            <area>12,208,94,25</area>
-            <align>hcenter,vcenter</align>
-        </textarea>
-        <textarea name="description">
-            <font>small</font>
-            <area>125,83,537,150</area>
-            <align>left,top</align>
-            <multiline>yes</multiline>
-            <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
-        </textarea>
--->
-    </window>
-
-    <window name="browse_info">
-        <fontdef name="small" face="DejaVu Sans">
-            <pixelsize>18</pixelsize>
-            <color>#FFFFFF</color>
-            <shadowoffset>1,1</shadowoffset>
-            <shadowcolor>#000000</shadowcolor>
-        </fontdef>
-        <fontdef name="smaller" from="small">
-            <pixelsize>15</pixelsize>
-        </fontdef>
-        <fontdef name="medium" from="small">
-            <pixelsize>22</pixelsize>
-        </fontdef>
-        <area>62,301,675,249</area>
-        <shape name="background">
-            <area>0,0,100%,100%</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="200" />
-            <line color="#222222" alpha="255" width="2" />
-            <cornerradius>12</cornerradius>
-        </shape>
         <textarea name="title">
             <font>medium</font>
             <area>6,8,375,25</area>
@@ -477,6 +498,7 @@
             <multiline>yes</multiline>
             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
         </textarea>
+-->
     </window>
 
     <window name="ChannelEditor">
@@ -666,97 +688,22 @@
     </window>
 
     <window name="MythPopupBox">
-        <fontdef name="basesmall" face="DejaVu Sans">
-            <size>15</size>
-            <color>#FFFFFF</color>
-        </fontdef>
-        <fontdef name="basesmallgrey" from="basesmall">
-            <color>#bcbcbc</color>
-        </fontdef>
-        <area>-1,-1,312,416</area>
-        <shape name="basebackground">
-            <area>0,0,312,416</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="200" />
-            <line color="#222222" alpha="255" width="2" />
-            <cornerradius>12</cornerradius>
-        </shape>
-        <textarea name="messagearea">
-            <area>9,12,294,175</area>
-            <font>basesmall</font>
+        <area>-1,-1,700,550</area>
+
+        <group name="movie_selection_window" from="basedialogwindowbig">
+            <position>0,0</position>        
+        </group>
+        
+        <textarea name="messagearea" from="textarea_list">
+            <area>70,75,560,50</area>
             <multiline>yes</multiline>
-            <align>allcenter</align>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
         </textarea>
 
-        <buttonlist name="list">
-            <area>11,187,294,208</area>
-            <layout>vertical</layout>
-            <spacing>4</spacing>
-            <drawfrombottom>yes</drawfrombottom>
-            <showarrow>yes</showarrow>
-            <wrapstyle>selection</wrapstyle>
-            <buttonarea>0,0,100%,97%</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,100%,25</area>
-                    <shape name="buttonbackground">
-                        <type>roundbox</type>
-                        <area>0,0,99%,25</area>
-                        <fill color="#666666" alpha="50" />
-                        <cornerradius>15</cornerradius>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmallgrey</font>
-                        <cutdown>yes</cutdown>
-                        <align>allcenter</align>
-                        <area>0,0,100%,25</area>
-                    </textarea>
-                    <imagetype name="buttonarrow">
-                        <area>94%,6,10,13</area>
-                        <filename>lb-arrow.png</filename>
-                    </imagetype>
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="buttonbackground">
-                        <type>roundbox</type>
-                        <area>0,0,99%,25</area>
-                        <fill color="#ffffff" alpha="50" />
-                        <cornerradius>15</cornerradius>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="buttonbackground">
-                        <type>roundbox</type>
-                        <area>0,0,99%,25</area>
-                        <fill color="#ffffff" alpha="50" />
-                        <cornerradius>15</cornerradius>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmallgrey</font>
-                    </textarea>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>6,96%</position>
-                <state type="full">
-                    <imagetype name="upoff">
-                        <area>0,0,19,25</area>
-                        <filename>uparrow_alt.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>25,96%</position>
-                <state type="full">
-                    <imagetype name="dnoff">
-                        <area>0,0,19,25</area>
-                        <filename>downarrow_alt.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
+        <buttonlist name="list" from="buttonlist_dialog">
+		       <area>0,125,700,350</area>
+		       <buttonarea>0,0,700,350</buttonarea>
         </buttonlist>
 
     </window>
