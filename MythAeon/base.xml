@@ -3097,11 +3097,8 @@
         <imagetype name="cursor">
             <filename>cursor.png</filename>
         </imagetype>
-        <textarea name="text" from="textarea_list">
-            <area>302,10,730,200</area>
-            <font>Font_List_Active</font>
-            <align>left,top</align>
-            <multiline>yes</multiline>
+        <textarea name="text" from="textarea_plot">
+            <area>302,20,730,190</area>
         </textarea>
     </textedit>
 
@@ -3375,7 +3372,7 @@
         <textarea name="videolevellbl" from="textarea_title_sub">
             <area>300,0,100,60</area>
             <align>top,hcenter</align>
-            <value>Parental</value>
+            <value>Parent</value>
         </textarea>
 
         <imagetype name="videolevelbgd">
@@ -3435,7 +3432,7 @@
         <textarea name="videolevellbl" from="textarea_title_sub">
             <area>1680,0,100,60</area>
             <align>top,hcenter</align>
-            <value>Parental</value>
+            <value>Parent</value>
         </textarea>
 
         <imagetype name="videolevelbgd">
