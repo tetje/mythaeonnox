@@ -4,7 +4,7 @@
     <window name="osd_debug">
         <area>0,0,1920,188></area>
 
-        <imagetype name="osd_bgd" depends="description">
+        <imagetype name="osd_bgd">
            <filename>images/osd/codec_top.png</filename>
            <area>0,0,1920,188></area>
            <preserveaspect>no</preserveaspect>
@@ -98,7 +98,7 @@
 
     <window name="osd_message">
 
-        <imagetype name="osd_messagebgd" depends="description">
+        <imagetype name="osd_messagebgd">
            <filename>images/osd/fullscreen_top.png</filename>
            <area>0,0,1920,72></area>
            <preserveaspect>no</preserveaspect>
@@ -112,7 +112,7 @@
     </window>
 
     <window name="osd_input">
-        <imagetype name="osd_inputbgd" depends="description">
+        <imagetype name="osd_inputbgd">
            <filename>images/osd/fullscreen_top.png</filename>
            <area>0,0,1920,72></area>
            <preserveaspect>no</preserveaspect>
@@ -129,7 +129,7 @@
     <window name="osd_status">
         <area>0,842,1920,238</area>
 
-        <imagetype name="osd_statusbgd" depends="description">
+        <imagetype name="osd_statusbgd">
            <filename>images/osd/osd_back.png</filename>
            <area>0,0,1920,238></area>
            <alpha>192</alpha>
@@ -214,7 +214,7 @@
 
         <group name="osd_info">
            <area>0,184,1920,238</area>
-	        <imagetype name="osd_infobgd" depends="description">
+	        <imagetype name="osd_infobgd">
 	           <filename>images/osd/osd_back.png</filename>
 	           <area>0,0,1920,238></area>
 	           <alpha>192</alpha>
@@ -596,7 +596,7 @@
 
         <group name="osd_browse">
            <area>0,184,1920,238</area>
-	        <imagetype name="osd_browsebgd" depends="description">
+	        <imagetype name="osd_browsebgd">
 	           <filename>images/osd/osd_back.png</filename>
 	           <area>0,0,1920,238></area>
 	           <alpha>192</alpha>
@@ -766,7 +766,7 @@
     <window name="osd_program_editor">
         <area>0,842,1920,238</area>
 
-        <imagetype name="osd_editorbgd" depends="description">
+        <imagetype name="osd_editorbgd">
            <filename>images/osd/osd_back.png</filename>
            <area>0,0,1920,238></area>
            <alpha>192</alpha>

@@ -30,7 +30,7 @@
 	  -->
         <shape name="black_background" from="provider">
           <type>box</type>
-          <fill color="#000000" alpha="192" />
+          <fill color="#000000" alpha="0" />
         </shape>
 
 

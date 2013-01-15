@@ -336,7 +336,7 @@
         
         <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <alpha>192</alpha>
+            <alpha>128</alpha>
             <filename>images/shared/showcase_spot.png</filename>
         </imagetype>
         
@@ -524,7 +524,7 @@
         
         <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <alpha>192</alpha>
+            <alpha>128</alpha>
             <filename>images/shared/showcase_spot.png</filename>
         </imagetype>
         
