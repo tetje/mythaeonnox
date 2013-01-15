@@ -2,172 +2,103 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
     <window name="osd_debug">
-        <fontdef name="medium" face="DejaVu Sans">
-            <pixelsize>12</pixelsize>
-            <color>#FFFFFF</color>
-        </fontdef>
-        <fontdef name="file" from="medium">
-            <color>#CCCCFF</color>
-        </fontdef>
-        <area>31,41,737,87</area>
-        <shape name="background">
-            <area>0,0,100%,100%</area>
-            <fill color="#000000" alpha="200" />
-        </shape>
-        <textarea name="file">
-            <font>file</font>
-            <area>3,4,112,20</area>
-            <align>right,vcenter</align>
-            <value>Filename :</value>
-        </textarea>
-        <textarea name="filename">
-            <font>file</font>
-            <area>118,4,612,20</area>
-            <align>left,vcenter</align>
-        </textarea>
-        <textarea name="storage">
-            <font>medium</font>
-            <area>3,25,112,20</area>
-            <align>right,vcenter</align>
-            <value>Storage to Buffer :</value>
-        </textarea>
-        <textarea name="storagerate">
-            <font>medium</font>
-            <area>118,25,125,20</area>
-            <align>left,vcenter</align>
-        </textarea>
-        <textarea name="decoder">
-            <font>medium</font>
-            <area>3,45,112,20</area>
-            <align>right,vcenter</align>
-            <value>Buffer to Decoder :</value>
-        </textarea>
-        <textarea name="decoderrate">
-            <font>medium</font>
-            <area>118,45,378,20</area>
-            <align>left,vcenter</align>
-        </textarea>
-        <textarea name="buffer">
-            <font>medium</font>
-            <area>3,66,112,20</area>
-            <align>right,vcenter</align>
-            <value>Available Buffer :</value>
-        </textarea>
-        <textarea name="bufferavail">
-            <font>medium</font>
-            <area>118,66,378,20</area>
-            <align>left,vcenter</align>
-            <template>%BUFFERAVAIL% of %BUFFERSIZE%Mb</template>
-        </textarea>
+        <area>0,0,1920,188></area>
 
-        <textarea name="video">
-            <font>medium</font>
-            <area>176,25,93,20</area>
-            <align>right,vcenter</align>
-            <value>Video :</value>
-        </textarea>
-        <textarea name="videowidth">
-            <font>medium</font>
-            <area>273,25,156,20</area>
-            <align>left,vcenter</align>
-            <template>%VIDEOWIDTH%x%VIDEOHEIGHT%@%VIDEOFRAMERATE%fps</template>
-        </textarea>
-        <textarea name="vidcodec">
-            <font>medium</font>
-            <area>176,45,93,20</area>
-            <align>right,vcenter</align>
-            <value>Codec/Dec :</value>
-        </textarea>
-        <textarea name="videocodec">
-            <font>medium</font>
-            <area>273,45,93,20</area>
-            <align>left,vcenter</align>
-            <template>%VIDEOCODEC% %VIDEODECODER%</template>
-        </textarea>
-        <textarea name="cpuload">
-            <font>medium</font>
-            <area>176,66,93,20</area>
-            <align>right,vcenter</align>
-            <value>CPUs :</value>
-        </textarea>
-        <textarea name="load">
-            <font>medium</font>
-            <area>273,66,93,20</area>
-            <align>left,vcenter</align>
-        </textarea>
-
-        <textarea name="fps">
-            <font>medium</font>
-            <area>375,25,125,20</area>
-            <align>right,vcenter</align>
-            <value>FPS :</value>
-        </textarea>
-        <textarea name="framerate">
-            <font>medium</font>
-            <area>503,25,156,20</area>
-            <align>left,vcenter</align>
-        </textarea>
-        <textarea name="sync">
-            <font>medium</font>
-            <area>406,45,93,20</area>
-            <align>right,vcenter</align>
-            <value>A/V Sync :</value>
-        </textarea>
-        <textarea name="avsync">
-            <font>medium</font>
-            <area>503,45,93,20</area>
-            <align>left,vcenter</align>
-        </textarea>
-        <textarea name="frames">
-            <font>medium</font>
-            <area>365,66,135,20</area>
-            <align>right,vcenter</align>
-            <value>Frames decoded/free :</value>
-        </textarea>
-        <textarea name="videoframes">
-            <font>medium</font>
-            <area>503,66,156,20</area>
-            <align>left,vcenter</align>
-        </textarea>
-
-        <textarea name="audio">
-            <font>medium</font>
-            <area>540,25,93,20</area>
-            <align>right,vcenter</align>
-            <value>Audio :</value>
-        </textarea>
-        <textarea name="audiocodec">
-            <font>medium</font>
-            <area>637,25,156,20</area>
-            <align>left,vcenter</align>
-        </textarea>
-        <textarea name="channels">
-            <font>medium</font>
-            <area>540,45,93,20</area>
-            <align>right,vcenter</align>
-            <value>Channels :</value>
-        </textarea>
-        <textarea name="audiochannels">
-            <font>medium</font>
-            <area>637,45,93,20</area>
-            <align>left,vcenter</align>
-        </textarea>
-        <textarea name="audiorate">
-            <font>medium</font>
-            <area>540,66,93,20</area>
-            <align>right,vcenter</align>
-            <value>Sample rate :</value>
-        </textarea>
-        <textarea name="samplerate">
-            <font>medium</font>
-            <area>637,66,93,20</area>
-            <align>left,vcenter</align>
-        </textarea>
+        <imagetype name="osd_bgd" depends="description">
+           <filename>images/osd/codec_top.png</filename>
+           <area>0,0,1920,188></area>
+           <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <group name="osd_debug_group">
+           <area>100,10,1920,188></area>
+	        <textarea name="filename">
+	            <font>Font_Clock_Bold</font>
+	            <area>20,10,1880,40</area>
+	            <align>left,vcenter</align>
+	            <template>Filename: %filename%</template>
+	        </textarea>
+	
+	        <textarea name="storagerate">
+	            <font>Font_Clock</font>
+	            <area>20,50,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>Storage to Buffer: %storagerate%</template>
+	        </textarea>
+	        <textarea name="decoderrate">
+	            <font>Font_Clock</font>
+	            <area>20,90,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>Buffer to Decoder: %decoderrate%</template>
+	        </textarea>
+	        <textarea name="bufferavail">
+	            <font>Font_Clock</font>
+	            <area>20,130,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>Available Buffer: %BUFFERAVAIL% of %BUFFERSIZE%Mb</template>
+	        </textarea>
+	
+	        <textarea name="videowidth">
+	            <font>Font_Clock</font>
+	            <area>490,50,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>Video: %VIDEOWIDTH%x%VIDEOHEIGHT%@%VIDEOFRAMERATE%fps</template>
+	        </textarea>
+	        <textarea name="videocodec">
+	            <font>Font_Clock</font>
+	            <area>490,90,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>Codec/Dec: %VIDEOCODEC% %VIDEODECODER%</template>
+	        </textarea>
+	        <textarea name="load">
+	            <font>Font_Clock</font>
+	            <area>490,130,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>CPU load: %load%</template>
+	        </textarea>
+	
+	        <textarea name="framerate">
+	            <font>Font_Clock</font>
+	            <area>960,50,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>FPS: %framerate%</template>
+	        </textarea>
+	        <textarea name="avsync">
+	            <font>Font_Clock</font>
+	            <area>960,90,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>A/V Sync: %avsync%</template>
+	        </textarea>
+	        <textarea name="videoframes">
+	            <font>Font_Clock</font>
+	            <area>960,130,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>Frames decoded/free: %videoframes%</template>
+	        </textarea>
+	
+	        <textarea name="audiocodec">
+	            <font>Font_Clock</font>
+	            <area>1430,50,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>Audio: %audiocodec%</template>
+	        </textarea>
+	        <textarea name="audiochannels">
+	            <font>Font_Clock</font>
+	            <area>1430,90,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>Channels: %audiochannels%</template>
+	        </textarea>
+	        <textarea name="samplerate">
+	            <font>Font_Clock</font>
+	            <area>1430,130,450,40</area>
+	            <align>left,vcenter</align>
+	            <template>Sample rate: %samplerate%</template>
+	        </textarea>
+        </group>
     </window>
 
     <window name="osd_message">
 
-        <imagetype name="osd_bgd" depends="description">
+        <imagetype name="osd_messagebgd" depends="description">
            <filename>images/osd/fullscreen_top.png</filename>
            <area>0,0,1920,72></area>
            <preserveaspect>no</preserveaspect>
@@ -181,7 +112,7 @@
     </window>
 
     <window name="osd_input">
-        <imagetype name="osd_bgd" depends="description">
+        <imagetype name="osd_inputbgd" depends="description">
            <filename>images/osd/fullscreen_top.png</filename>
            <area>0,0,1920,72></area>
            <preserveaspect>no</preserveaspect>
@@ -198,7 +129,7 @@
     <window name="osd_status">
         <area>0,842,1920,238</area>
 
-        <imagetype name="osd_bgd" depends="description">
+        <imagetype name="osd_statusbgd" depends="description">
            <filename>images/osd/osd_back.png</filename>
            <area>0,0,1920,238></area>
            <alpha>192</alpha>
@@ -283,7 +214,7 @@
 
         <group name="osd_info">
            <area>0,184,1920,238</area>
-	        <imagetype name="osd_bgd" depends="description">
+	        <imagetype name="osd_infobgd" depends="description">
 	           <filename>images/osd/osd_back.png</filename>
 	           <area>0,0,1920,238></area>
 	           <alpha>192</alpha>
@@ -300,7 +231,7 @@
 	            <font>Font_Clock_Bold</font>
 	            <area>310,65,1200,40</area>
 	            <align>left,top</align>
-	            <template>%channum| - %%callsign|  |  %%STARTTIME| -%%ENDTIME| %(%LENMINS%)</template>
+	            <template>%channel|  |  %%STARTTIME| -%%ENDTIME| %(%LENMINS%)</template>
 	        </textarea>
 	        
 	        <clock name="clock">
@@ -663,9 +594,9 @@
     <window name="browse_info">
         <area>0,658,1920,422</area>
 
-        <group name="osd_info">
+        <group name="osd_browse">
            <area>0,184,1920,238</area>
-	        <imagetype name="osd_bgd" depends="description">
+	        <imagetype name="osd_browsebgd" depends="description">
 	           <filename>images/osd/osd_back.png</filename>
 	           <area>0,0,1920,238></area>
 	           <alpha>192</alpha>
@@ -749,122 +680,93 @@
     </window>
 
     <window name="ChannelEditor">
-        <fontdef name="small" face="DejaVu Sans">
-            <pixelsize>18</pixelsize>
-            <color>#FFFFFF</color>
-            <shadowoffset>1,1</shadowoffset>
-            <shadowcolor>#000000</shadowcolor>
-        </fontdef>
-        <fontdef name="smaller" from="small">
-            <pixelsize>15</pixelsize>
-        </fontdef>
-        <area>244,92,312,416</area>
-        <shape name="background">
-            <area>0,0,100%,100%</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="200" />
-            <line color="#222222" alpha="255" width="2" />
-            <cornerradius>12</cornerradius>
-        </shape>
-        <textarea name="title">
-            <font>small</font>
-            <area>9,12,294,125</area>
-            <align>allcenter</align>
-            <value>Channel Editor</value>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="callsign_label">
-            <font>small</font>
-            <area>6,150,81,42</area>
-            <align>allcenter</align>
-            <value>Callsign</value>
-        </textarea>
-        <textedit name="callsign">
-            <area>94,150,212,42</area>
-            <statetype name="background">
-                <state name="active">
-                    <shape name="textbackground">
-                        <fill color="#BBBBBB" alpha="255" />
-                    </shape>
-                </state>
-                <state name="selected" from="active">
-                    <shape name="textbackground">
-                        <fill color="#BBBBBB" alpha="200" />
-                    </shape>
-                </state>
-                <state name="inactive" from="active" />
-            </statetype>
-            <imagetype name="cursor">
-                <filename>cursor.png</filename>
-            </imagetype>
-            <textarea name="text">
-                <font>small</font>
-                <align>left,vcenter</align>
-            </textarea>
-        </textedit>
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="channum_label" from="callsign_label">
-            <area>6,208,81,42</area>
-            <value>Channel #</value>
-        </textarea>
-        <textedit name="channum" from="callsign">
-            <area>94,208,212,42</area>
-        </textedit>
+        <group name="settings_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Edit your television channels</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="callsign_label" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Callsign:</value>
+	        </textarea>
+	
+	        <textarea name="channum_label"  from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Channel number:</value>
+	        </textarea>
+	
+	        <textarea name="channame_label" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>Channel name:</value>
+	        </textarea>
+	
+	        <textarea name="xmltv_label" from="textarea_settings_option">
+	            <position>20,336</position>
+	            <value>XMLTV ID:</value>
+	        </textarea>
+	
+	        <!-- widgets -->
+	        <textedit name="callsign" from="textedit_settings">
+	            <position>0,120</position>
+	        </textedit>
+	
+	        <textedit name="channum" from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+	
+	        <textedit name="channame" from="textedit_settings">
+	            <position>0,264</position>
+	        </textedit>
+	
+	        <textedit name="XMLTV" from="textedit_settings">
+	            <position>0,336</position>
+	        </textedit>
+	
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-        <textarea name="channame_label" from="callsign_label">
-            <area>6,267,81,42</area>
-            <value>Channel Name</value>
-        </textarea>
-        <textedit name="channame" from="callsign">
-            <area>94,267,212,42</area>
-        </textedit>
+        </group>
 
-        <textarea name="xmltv_label" from="callsign_label">
-            <area>6,325,81,42</area>
-            <value>XMLTV ID</value>
-        </textarea>
-        <textedit name="XMLTV" from="callsign">
-            <area>94,325,212,42</area>
-        </textedit>
+         <group name="settings_menu">
+           <area>30,28,324,952</area>
 
-        <button name="probe">
-            <area>45,367,94,33</area>
-            <value>Probe</value>
-            <statetype name="buttonstate">
-                <state name="active">
-                <shape name="buttonbackground">
-                    <type>roundbox</type>
-                    <area>0,0,94,33</area>
-                <fill color="#666666" alpha="50" />
-                <cornerradius>20</cornerradius>
-                </shape>
-                    <textarea name="text">
-                        <area>4,4,87,25</area>
-                        <align>allcenter</align>
-                        <font>small</font>
-                        <font state="selected">small</font>
-                        <font state="disabled">small</font>
-                    </textarea>
-                </state>
-                <state name="selected" from="active">
-                <shape name="buttonbackground">
-                    <fill color="#ffffff" alpha="50" />
-                </shape>
-                </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="active" />
-            </statetype>
-        </button>
-        <button name="ok" from="probe">
-            <position>305,367</position>
-            <value>OK</value>
-        </button>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Channel Editor</value>
+	        </textarea>
+	
+	        <button name="probe" from="button_settings">
+	            <position>0,120</position>
+	            <value>Probe</value>
+	        </button>
+	
+	        <button name="ok" from="button_settings">
+	            <position>0,192</position>
+	            <value>Ok</value>
+	        </button>
+	
+        </group>
+
     </window>
 
     <window name="osd_program_editor">
         <area>0,842,1920,238</area>
 
-        <imagetype name="osd_bgd" depends="description">
+        <imagetype name="osd_editorbgd" depends="description">
            <filename>images/osd/osd_back.png</filename>
            <area>0,0,1920,238></area>
            <alpha>192</alpha>
@@ -947,7 +849,7 @@
         
         <textarea name="messagearea" from="textarea_list">
             <area>70,75,560,50</area>
-            <multiline>yes</multiline>
+            <multiline>no</multiline>
             <cutdown>no</cutdown>
             <scroll direction="vertical"/>
         </textarea>
