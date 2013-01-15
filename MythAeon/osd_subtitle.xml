@@ -38,9 +38,11 @@
             Subtitle type "text" generally comes from external text
             files like .srt or .txt files.
            -->
-        <fontdef name="text" face="Droid Sans" from="provider">
+        <fontdef name="text" face="Aeon RSS">
+        <pixelsize>40</pixelsize>
+        <color>#ffffff</color>
 	        <outlinecolor>#000000</outlinecolor>
-	        <outlinesize>2</outlinesize> 
+	        <outlinesize>5</outlinesize> 
         </fontdef>
 
         <shape   name="text" from="black_background">
