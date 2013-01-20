@@ -2,14 +2,6 @@
 <mythmenu name="ADVANCED">
 
     <button>
-        <type>ARCHIVE</type>
-        <text>Videos</text>
-        <description>Import and Export</description>
-        <action>PLUGIN mytharchive</action>
-        <depends>mytharchive</depends>
-    </button>
-
-    <button>
         <type>MUSIC_PLAYLIST</type>
         <text>Tools</text>
         <description>Use music</description>

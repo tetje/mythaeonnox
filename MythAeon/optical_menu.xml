@@ -4,15 +4,31 @@
     <button>
         <type>DISC_PLAY</type>
         <text>DVD</text>
-        <description>Play a film on</description>
+        <description>Play a film on a DVD</description>
         <action>JUMP Play Disc</action>
     </button>
 
     <button>
         <type>DISC_PLAY</type>
         <text>Blu-ray</text>
-        <description>Play a film on</description>
+        <description>Play a film on Blu-ray Disk</description>
         <action>JUMP Play Disc</action>
+    </button>
+
+    <button>
+        <type>MUSIC_RIP</type>
+        <text>CD</text>
+        <description>Import your music from CD</description>
+        <action>JUMP Rip CD</action>
+        <depends>mythmusic</depends>
+    </button>
+
+    <button>
+        <type>ARCHIVE</type>
+        <text>Videos</text>
+        <description>Import and Export your videos on Disk</description>
+        <action>PLUGIN mytharchive</action>
+        <depends>mytharchive</depends>
     </button>
 
     <button>

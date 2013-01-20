@@ -374,38 +374,38 @@
            </state>
 
            <!-- ########  dvd_settings.xml  ########-->
-<!--
+
            <state name="DVD_SETTINGS_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/dvd-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="DVD_SETTINGS_PLAY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/dvd-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="DVD_SETTINGS_RIP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/dvd-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/files.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="EJECT">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/eject-dvd.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+
            <!-- ########  dvdmenu.xml  ########-->
 <!--
            <state name="DVD_PLAY">
@@ -548,14 +548,14 @@
            </state>
            <state name="SETTINGS_AUDIOGENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_MUSIC">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_VIDEO">
@@ -644,77 +644,77 @@
            </state>
 -->
            <!-- ########  music_settings.xml  ########-->
-<!--
+
            <state name="MUSIC_SETTINGS_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_SETTINGS_PLAYER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_SETTINGS_RIP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_SETTINGS_RATING">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_SETTINGS_VISUALIZATION">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->           
+          
            <!-- ########  musicmenu.xml  ########-->
-<!--
+
            <state name="MUSIC_PLAY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/music.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_STREAM">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/radio-stream-bg.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_PLAYLIST">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/favourites/favourites.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_RIP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_SCAN">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamMusicBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/music.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_IMPORT">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/music.jpg</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+
            <!-- ########  netvisionmenu.xml  ########-->
 <!--
            <state name="NET_VIDEO_SEARCH">

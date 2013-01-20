@@ -3,14 +3,14 @@
    <button>
       <type>ARCHIVE_CREATE_DVD</type>
       <text>DVD</text>
-      <description>Create a</description>
+      <description>Create a DVD of your videos</description>
       <action>ARCHIVE_CREATE_DVD</action>
    </button>
 
    <button>
       <type>ARCHIVE_CREATE_ARCHIVE</type>
-      <text>Videos</text>
-      <description>Export your</description>
+      <text>Export</text>
+      <description>Export your videos</description>
       <action>ARCHIVE_CREATE_ARCHIVE</action>
   </button>
 
@@ -24,23 +24,16 @@
 
    <button>
        <type>ARCHIVE_IMPORT_VIDEO</type>
-       <text>Archive</text>
-       <description>Import an</description>
+       <text>Import</text>
+       <description>Import videos from an Archive</description>
        <action>ARCHIVE_IMPORT_VIDEO</action>
    </button>
 
    <button>
        <type>ARCHIVE_UTILITIES</type>
        <text>Utilities</text>
-       <description>Use archive</description>
+       <description>Tools & Utilities for archives</description>
        <action>MENU archiveutils.xml</action>
    </button>
-
-    <button>
-        <type>EJECT</type>
-        <text>Media</text>
-        <description>Eject your</description>
-        <action>EJECT</action>
-    </button>
 
 </mythmenu>

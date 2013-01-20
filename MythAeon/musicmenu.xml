@@ -3,38 +3,23 @@
    <button>
       <type>MUSIC_PLAYLIST</type>
       <text>Playlists</text>
-      <description>Create your</description>
+      <description>Create playlists with favorite music/description>
       <action>MUSIC_CREATE_PLAYLIST</action>
    </button>
 
    <button>
        <type>MUSIC_IMPORT</type>
-       <text>Files</text>      
-       <description>Import your Music</description>
+       <text>Import</text>      
+       <description>Import Music into the library</description>
        <action>MUSIC_IMPORT</action>
    </button>
 
    <button>
       <type>MUSIC_SCAN</type>
-      <text>Music</text>
-      <description>Scan for new</description>
+      <text>Scan</text>
+      <description>Scan for new Music</description>
       <action>SETTINGS_SCAN</action>
    </button>
-
-   <button>
-        <type>MUSIC_RIP</type>
-        <text>CD</text>
-        <description>Import your</description>
-        <action>JUMP Rip CD</action>
-        <depends>mythmusic</depends>
-    </button>
-
-    <button>
-        <type>EJECT</type>
-        <text>Media</text>
-        <description>Eject your</description>
-        <action>EJECT</action>
-    </button>
 
     <!-- Keep this in synch with mythtv/themes/defaultmenu/media_settings.xml -->
 <!--   <button>

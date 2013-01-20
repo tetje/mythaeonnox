@@ -38,8 +38,8 @@
             Subtitle type "text" generally comes from external text
             files like .srt or .txt files.
            -->
-        <fontdef name="text" face="Aeon RSS">
-        <pixelsize>40</pixelsize>
+        <fontdef name="text" face="08SeoulNamsan">
+        <pixelsize>50</pixelsize>
         <color>#ffffff</color>
 	        <outlinecolor>#000000</outlinecolor>
 	        <outlinesize>5</outlinesize> 
@@ -55,6 +55,8 @@
             captions.  A monospaced font should be used.
            -->
         <fontdef name="teletext" face="FreeMono" from="provider">
+	        <outlinecolor>#000000</outlinecolor>
+	        <outlinesize>2</outlinesize> 
         </fontdef>
 
 
