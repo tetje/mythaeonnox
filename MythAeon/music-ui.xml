@@ -53,11 +53,11 @@
 	        </imagetype>
 	
            <group name="trackinfo">
-              <area>518,85,700,515</area>
+              <area>38,85,450,515</area>
 
               <!-- Labels -->
 		        <textarea name="currentlyplayinglbl" from="textarea_label">
-		            <area>0,0,680,30</area>
+		            <area>0,0,420,30</area>
 		            <value>Currently Playing:</value>
 		        </textarea>
 	
@@ -71,24 +71,29 @@
 		            <value>Album:</value>
 		        </textarea>
 	
-		        <textarea name="yearlbl" from="currentlyplayinglbl">
-		            <position>0,210</position>
-		            <value>Year:</value>
-		        </textarea>
-	
 		        <textarea name="genrelbl" from="currentlyplayinglbl">
-		            <position>0,280</position>
+		            <position>0,210</position>
 		            <value>Genre:</value>
 		        </textarea>
 
 		        <textarea name="starslbl" from="currentlyplayinglbl">
-		            <position>0,350</position>
+		            <position>0,280</position>
 		            <value>Stars:</value>
 		        </textarea>
 		
+		        <textarea name="lengthlbl" from="currentlyplayinglbl">
+		            <position>0,350</position>
+		            <value>Length:</value>
+		        </textarea>
+		
+		        <textarea name="lastplayedlbl" from="currentlyplayinglbl">
+		            <position>0,420</position>
+		            <value>Last Played:</value>
+		        </textarea>
+	
               <!-- Widgets -->
 		        <textarea name="title" from="textarea_info">
-		            <area>0,25,680,30</area>
+		            <area>0,25,420,30</area>
 		            <scroll direction="horizontal" />
 		        </textarea>
 	
@@ -98,29 +103,155 @@
 	
 		        <textarea name="album" from="title">
 		            <position>0,165</position>
-		        </textarea>
-	
-		        <textarea name="year" from="title">
-		            <position>0,235</position>
+		            <template>%album% %(|year|)%</template>
 		        </textarea>
 	
 		        <textarea name="genre" from="title">
-		            <position>0,305</position>
+		            <position>0,235</position>
+		        </textarea>
+	
+		        <imagetype name="starsbgd">
+			         <area>0,310,90,18</area>
+			         <filename>images/icons/ratings/stars_bg.png</filename>
+			     </imagetype>
+
+		        <statetype name="ratingstate" from="rating_base">
+		            <position>0,310</position>
+		        </statetype>
+	
+		        <textarea name="length" from="title">
+		            <position>0,375</position>
+		        </textarea>
+	
+		        <textarea name="lastplayed" from="title">
+		            <position>0,445</position>
+		            <template>%lastplayed% (played: %playcount% times)</template>
 		        </textarea>
 	
 	        </group>
 		
+           <group name="playcontrol">
+              <area>484,85,736,515</area>
+              
+              <!-- Labels -->
+		        <textarea name="nexttitlelbl" from="textarea_label">
+		            <area>30,0,700,30</area>
+		            <value>Next Song:</value>
+		        </textarea>
+	
+		        <textarea name="playlistpositionlbl" from="nexttitlelbl">
+		            <position>30,70</position>
+		            <value>Playlist position:</value>
+		        </textarea>
+	
+              <!-- Widgets -->
+		        <textarea name="nexttitle" from="textarea_info">
+		            <area>30,25,700,30</area>
+		            <scroll direction="horizontal" />
+		        </textarea>
+	
+		        <textarea name="playlistposition" from="nexttitle">
+		            <position>30,95</position>
+		        </textarea>
+	
+		        <textarea name="playlistplayedtime" from="textarea_info">
+		            <area>0,305,736,30</area>
+		            <align>allcenter</align>
+                  <template>Playlist: %playlistplayedtime% of %playlisttotaltime%</template>
+		        </textarea>
+	
+		        <progressbar name="playlistprogress" from="baseprogressbar">
+		            <area>50,335,636,40</area>
+		        </progressbar>
+		
+              <group name="controlbuttons">
+                 <area>0,365,700,150</area>
+			        <button name="prev" from="button_skipbwd">
+			            <position>0,0</position>
+			            <value>Play</value>
+			        </button>
+		 
+			        <button name="rew" from="button_rew">
+			            <position>100,0</position>
+			            <value>Play</value>
+			        </button>
+		 
+			        <button name="pause" from="button_pause">
+			            <position>200,0</position>
+			            <value>Play</value>
+			        </button>
+		 
+			        <button name="play" from="button_play">
+			            <position>300,0</position>
+			            <value>Play</value>
+			        </button>
+		 
+			        <button name="stop" from="button_stop">
+			            <position>400,0</position>
+			            <value>Play</value>
+			        </button>
+		 
+			        <button name="ff" from="button_ff">
+			            <position>500,0</position>
+			            <value>Play</value>
+			        </button>
+		 
+			        <button name="next" from="button_skipfwd">
+			            <position>600,0</position>
+			            <value>Play</value>
+			        </button>
+		        </group>
+	 
+           </group>
+
+           <group name="playinfo">
+              <area>1222,58,455,540</area>
+
+		        <video name="visualizer">
+		            <area>0,0,455,455</area>
+		        </video>
+
+		        <textarea name="time" from="textarea_info">
+		            <area>30,465,395,30</area>
+		            <align>allcenter</align>
+                  <template>Track: %time%</template>
+		        </textarea>
+	
+		        <progressbar name="progress" from="baseprogressbar">
+		           <area>30,500,395,30</area>
+			        <layout>horizontal</layout>
+			        <style>reveal</style>
+			        <imagetype name="background">
+			            <area>0,0,100%,100%</area>
+			            <filename>images/shared/progress_back.png</filename>
+			        </imagetype>
+			        <imagetype name="progressimage">
+			            <area>0,0,100%,100%</area>
+			            <filename>images/shared/progress_fill.png</filename>
+			        </imagetype>
+		        </progressbar>
+		
+              
+              <!-- Labels -->
+<!--
+		        <textarea name="nexttitlelbl" from="textarea_label">
+		            <area>30,0,700,30</area>
+		            <value>Next Song:</value>
+		        </textarea>
+		     
+-->	
+           </group>
         </group>
 
         <group name="multiplextabletlistgroup">
            <area>0,687,1920,400</area>
-<!--
+
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="1920,715" end="0,715" easingcurve="InOutBack" />
+	                <position start="1920,687" end="0,687" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
--->
+
 <!-- Fix me: This does not work will when a recording has played and one returns to the main recording screen
 	        
 	        <animation trigger="AboutToHide">

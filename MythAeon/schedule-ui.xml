@@ -190,7 +190,7 @@
 				                  <filename>images/shared/settings_radiobuttonoff.png</filename>
 				              </imagetype>
 				              <textarea name="buttontext"  from="textarea_settings_button">
-				                  <area>90,0,230,72</area>
+				                  <area>90,0,210,72</area>
 				                  <align>left,vcenter</align>
 				              </textarea>
 				          </state>
@@ -417,7 +417,7 @@
 				                  <filename>images/shared/settings_radiobuttonoff.png</filename>
 				              </imagetype>
 				              <textarea name="buttontext"  from="textarea_settings_button">
-				                  <area>90,0,230,72</area>
+				                  <area>90,0,210,72</area>
 				                  <align>left,vcenter</align>
 				              </textarea>
 				          </state>

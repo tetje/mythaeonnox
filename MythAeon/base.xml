@@ -782,7 +782,7 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_multiplexmusic">
-       <spacing>5</spacing>
+       <spacing>4</spacing>
        <area>0,0,1920,400</area>
        <searchposition>758,55</searchposition>
        <layout>horizontal</layout>
@@ -897,7 +897,7 @@
 		             <align>allcenter</align>
 		         </textarea>
                <textarea name="title"  from="textarea_title">
-                   <area>-844,325,1918,45</area>
+                   <area>-844,330,1918,45</area>
                    <cutdown>no</cutdown>
 		             <align>allcenter</align>
 		             <template>%artist% - %title%</template>
@@ -905,10 +905,10 @@
                         
            </state>
            <state name="inactive" from ="active">
-               <alpha>0</alpha>
+               <alpha>255</alpha>
            </state>
            <state name="selectedinactive" from="selectedactive">
-               <alpha>0</alpha>
+               <alpha>255</alpha>
            </state>
        </statetype>
 	    <statetype name="downscrollarrow">
@@ -941,7 +941,6 @@
 	    </statetype>
        
    </buttonlist>
-
 
    <buttonlist name="buttonlist_tvshowpanel">
        <area>0,0,1052,500</area>
@@ -2052,7 +2051,7 @@
 
      <imagetype name="osd_button_nofocus_bgd">
         <filename>images/osd/osd_button_nofocus.png</filename>
-        <area>0,0,146,144></area>
+        <area>0,0,146,144</area>
         <preserveaspect>no</preserveaspect>
      </imagetype>
 
@@ -2150,6 +2149,230 @@
          <imagetype name="osd_button_img" from="osd_button_video"/>
      </group>
   
+    <button name="button_play">
+        <area>0,0,146,144</area>
+        <statetype name="buttonstate">
+           <state name="active">
+			     <imagetype name="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_nofocus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_play" from="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_play.png</filename>
+			     </imagetype>
+           </state>
+           <state name="pushed">
+			     <imagetype name="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_focus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_play" from="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_play.png</filename>
+			     </imagetype>
+           </state>
+           <state name="disabled" from="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selected" from="pushed">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+ 
+    <button name="button_pause">
+        <area>0,0,146,144</area>
+        <statetype name="buttonstate">
+           <state name="active">
+			     <imagetype name="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_nofocus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_pause" from="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_pause.png</filename>
+			     </imagetype>
+           </state>
+           <state name="pushed">
+			     <imagetype name="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_focus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_pause" from="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_pause.png</filename>
+			     </imagetype>
+           </state>
+           <state name="disabled" from="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selected" from="pushed">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+ 
+    <button name="button_stop">
+        <area>0,0,146,144</area>
+        <statetype name="buttonstate">
+           <state name="active">
+			     <imagetype name="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_nofocus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_stop" from="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_stop.png</filename>
+			     </imagetype>
+           </state>
+           <state name="pushed">
+			     <imagetype name="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_focus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_stop" from="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_stop.png</filename>
+			     </imagetype>
+           </state>
+           <state name="disabled" from="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selected" from="pushed">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+ 
+    <button name="button_ff">
+        <area>0,0,146,144</area>
+        <statetype name="buttonstate">
+           <state name="active">
+			     <imagetype name="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_nofocus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_ff" from="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_ff.png</filename>
+			     </imagetype>
+           </state>
+           <state name="pushed">
+			     <imagetype name="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_focus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_ff" from="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_ff.png</filename>
+			     </imagetype>
+           </state>
+           <state name="disabled" from="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selected" from="pushed">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+ 
+    <button name="button_rew">
+        <area>0,0,146,144</area>
+        <statetype name="buttonstate">
+           <state name="active">
+			     <imagetype name="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_nofocus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_rew" from="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_rew.png</filename>
+			     </imagetype>
+           </state>
+           <state name="pushed">
+			     <imagetype name="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_focus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_rew" from="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_rew.png</filename>
+			     </imagetype>
+           </state>
+           <state name="disabled" from="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selected" from="pushed">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+ 
+    <button name="button_skipfwd">
+        <area>0,0,146,144</area>
+        <statetype name="buttonstate">
+           <state name="active">
+			     <imagetype name="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_nofocus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_skipfwd" from="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_skipfwd.png</filename>
+			     </imagetype>
+           </state>
+           <state name="pushed">
+			     <imagetype name="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_focus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_skipfwd" from="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_skipfwd.png</filename>
+			     </imagetype>
+           </state>
+           <state name="disabled" from="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selected" from="pushed">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+ 
+    <button name="button_skipbwd">
+        <area>0,0,146,144</area>
+        <statetype name="buttonstate">
+           <state name="active">
+			     <imagetype name="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_nofocus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_skipbwd" from="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_skipbwd.png</filename>
+			     </imagetype>
+           </state>
+           <state name="pushed">
+			     <imagetype name="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_focus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_skipbwd" from="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_skipbwd.png</filename>
+			     </imagetype>
+           </state>
+           <state name="disabled" from="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selected" from="pushed">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+    
     <!-- Base definition of a button -->
     <button name="basebutton">
         <position>0,0</position>
