@@ -25,6 +25,81 @@
             <position>1240,0</position>
         </group>
 
+        <group name="playcontrolinfo">
+             <area>1270,0,120,40</area>
+			    <statetype name="shufflestate">
+			        <area>0,0,40,40</area>
+			        <state name="off">
+			            <imagetype name="shuffleoffimg" >
+			                <area>0,0,40,40</area>
+			                <filename>images/icons/music_shuffle_random.png</filename>
+			                <alpha>64</alpha>
+			            </imagetype>
+			        </state>
+			        <state name="random">
+			            <imagetype name="shufflerandomimg" >
+			                <area>0,0,40,40</area>
+			                <filename>images/icons/music_shuffle_random.png</filename>
+			            </imagetype>
+			        </state>
+			        <state name="intelligent">
+			            <imagetype name="shuffleintelimg" >
+			                <area>0,0,40,40</area>
+			                <filename>images/icons/music_shuffle_intelligent.png</filename>
+			            </imagetype>
+			        </state>
+			        <state name="album">
+			            <imagetype name="shufflealbumimg" >
+			                <area>0,0,40,40</area>
+			                <filename>images/icons/music_shuffle_album.png</filename>
+			            </imagetype>
+			        </state>
+			        <state name="artist">
+			            <imagetype name="shuffleartistimg" >
+			                <area>0,0,40,40</area>
+			                <filename>images/icons/music_shuffle_artist.png</filename>
+			            </imagetype>
+			        </state>
+			    </statetype>
+			    <statetype name="repeatstate">
+			        <area>40,0,40,40</area>
+			        <state name="off">
+			            <imagetype name="repeatoffimg" >
+			                <area>0,0,40,40</area>
+			                <filename>images/icons/music_repeat_all.png</filename>
+			                <alpha>64</alpha>
+			            </imagetype>
+			        </state>
+			        <state name="track">
+			            <imagetype name="repeattrackimg" >
+			                <area>0,0,40,40</area>
+			                <filename>images/icons/music_repeat_track.png</filename>
+			            </imagetype>
+			        </state>
+			        <state name="all">
+			            <imagetype name="repeatallimg" >
+			                <area>0,0,40,40</area>
+			                <filename>images/icons/music_repeat_all.png</filename>
+			            </imagetype>
+			        </state>
+			    </statetype>
+			    <statetype name="mutestate">
+			        <area>80,0,40,40</area>
+			        <state name="off">
+			            <imagetype name="muteoff" >
+			                <area>0,0,40,40</area>
+			                <filename>images/icons/music_volume_on.png</filename>
+			            </imagetype>
+			        </state>
+			        <state name="on">
+			            <imagetype name="muteon" >
+			                <area>0,0,40,40</area>
+			                <filename>images/icons/music_volume_off.png</filename>
+			            </imagetype>
+			        </state>
+			    </statetype>
+        </group> 
+
         <group name="multiplextabletgroup">
            <area>113,70,1694,846</area>
 
@@ -144,6 +219,26 @@
 		            <value>Playlist position:</value>
 		        </textarea>
 	
+		        <textarea name="volumelbl" from="nexttitlelbl">
+		            <position>30,140</position>
+		            <value>Audio volume:</value>
+		        </textarea>
+	
+		        <textarea name="playlisttimelbl" from="nexttitlelbl">
+		            <position>30,210</position>
+		            <value>Playlist duration:</value>
+		        </textarea>
+	
+		        <textarea name="playlistprogresslbl" from="nexttitlelbl">
+		            <position>30,280</position>
+		            <value>Playlist progress:</value>
+		        </textarea>
+	
+		        <textarea name="audiocontrolslbl" from="nexttitlelbl">
+		            <position>30,350</position>
+		            <value>Controls:</value>
+		        </textarea>
+	
               <!-- Widgets -->
 		        <textarea name="nexttitle" from="textarea_info">
 		            <area>30,25,700,30</area>
@@ -154,14 +249,28 @@
 		            <position>30,95</position>
 		        </textarea>
 	
-		        <textarea name="playlistplayedtime" from="textarea_info">
-		            <area>0,305,736,30</area>
-		            <align>allcenter</align>
-                  <template>Playlist: %playlistplayedtime% of %playlisttotaltime%</template>
+		        <textarea name="volume" from="nexttitle">
+		            <position>30,165</position>
+		            <template>%volume% %(|mute|)%</template>
+		        </textarea>
+	
+		        <textarea name="playlistplayedtime" from="nexttitle">
+		            <position>30,235</position>
+                  <template>%playlistplayedtime% of %playlisttotaltime%</template>
 		        </textarea>
 	
 		        <progressbar name="playlistprogress" from="baseprogressbar">
-		            <area>50,335,636,40</area>
+                 <area>30,310,676,30</area>
+			        <layout>horizontal</layout>
+			        <style>reveal</style>
+			        <imagetype name="background">
+			            <area>0,0,100%,100%</area>
+			            <filename>images/shared/progress_back.png</filename>
+			        </imagetype>
+			        <imagetype name="progressimage">
+			            <area>0,0,100%,100%</area>
+			            <filename>images/shared/progress_fill.png</filename>
+			        </imagetype>
 		        </progressbar>
 		
               <group name="controlbuttons">
