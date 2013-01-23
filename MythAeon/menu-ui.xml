@@ -1035,12 +1035,14 @@
 	       <imagetype name="description_clock_bgd_long" depends="description">
 	          <filename>images/shared/rssbar_mid_flip.png</filename>
 	          <area>0,0,2031,93></area>
+	          <alpha>128</alpha>
 	          <preserveaspect>no</preserveaspect>
 	       </imagetype>
 
 	       <imagetype name="description_clock_bgd_short" depends="!description">
 	          <filename>images/shared/rssbar_mid_flip.png</filename>
 	          <area>585,0,2031,93></area>
+	          <alpha>128</alpha>
 	          <preserveaspect>no</preserveaspect>
 	       </imagetype>
 

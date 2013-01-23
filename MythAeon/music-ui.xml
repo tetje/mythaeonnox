@@ -254,6 +254,10 @@
 		            <template>%volume% %(|mute|)%</template>
 		        </textarea>
 	
+		        <textarea name="novolumetext" from="volume" depends="!volume">
+                   <value>No volume controls configured"</value>
+		        </textarea>
+	
 		        <textarea name="playlistplayedtime" from="nexttitle">
 		            <position>30,235</position>
                   <template>%playlistplayedtime% of %playlisttotaltime%</template>
