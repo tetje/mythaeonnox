@@ -4412,10 +4412,10 @@
         <area>0,0,1850,1010</area>
         
 	     <shape name="basebackground">
-	         <area>0,0,1850,1010</area>
+	         <area>28,28,1794,954</area>
 	         <type>roundbox</type>
-	         <fill color="#000000" alpha="192" />
-	         <cornerradius>12</cornerradius>
+	         <fill color="#000000" alpha="228" />
+	         <cornerradius>20</cornerradius>
 	     </shape>
 
         <imagetype name="settingpanelbgd">

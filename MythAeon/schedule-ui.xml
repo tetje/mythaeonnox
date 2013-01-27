@@ -129,7 +129,7 @@
               </imagetype>
 
 		        <imagetype name="channeliconframeactive" depends="channelicon">
-		            <area>15,818,119,119</area>
+		            <area>16,818,119,119</area>
 		            <filename>images/shared/wall_fborder.png</filename>
 		        </imagetype>
 		
@@ -342,7 +342,7 @@
               </imagetype>
 
 		        <imagetype name="channeliconframeactive" depends="channelicon">
-		            <area>15,818,119,119</area>
+		            <area>16,818,119,119</area>
 		            <filename>images/shared/wall_fborder.png</filename>
 		        </imagetype>
 		
