@@ -1687,7 +1687,7 @@
 	
 	        <!-- widgets -->
 	        <buttonlist name="shows" from="buttonlist_settings_details">
-			     <area>0,120,1400,576</area>
+			     <area>-33,120,1400,576</area>
 			     <buttonarea>0,0,1400,576</buttonarea>
 	        </buttonlist>
 
