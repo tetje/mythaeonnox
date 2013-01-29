@@ -229,7 +229,7 @@
     </window>
 
     <!-- The playlist editor in gallery view mode -->
-    <window name="playlisteditorview_gallery" include="music-base.xml">
+    <window name="playlisteditorview_gallery">
 
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
@@ -274,6 +274,15 @@
 	            <spacing>0</spacing>
 	            <buttonlist name="listtemplate" from="buttonlist_wall_music" />
 	        </buttontree>
+
+	        <textarea name="breadcrumbs" from="textarea_title">
+	            <area>10,900,1900,45</area>
+	            <align>allcenter</align>
+	        </textarea>
+
+	        <group name="controlbuttons" from="basegroupcontrolbuttons">
+	           <area>610,925,700,150</area>
+	        </group>
 
 	     </group>
 
