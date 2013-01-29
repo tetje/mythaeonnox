@@ -4,7 +4,7 @@
 <mythuitheme>
 
     <!-- The main playback screen showing the current playlist -->
-    <window name="playlistview" include="music-base.xml">
+    <window name="playlistview">
 
         <imagetype name="backdropimg">
             <area>0,0,1920,1080</area>
@@ -153,7 +153,7 @@
 	        </group>
 		
 	        <buttontree name="playlist_tree">
-	            <area>485,85,736,515</area>
+	            <area>485,80,736,515</area>
 	            <numlists>1</numlists>
 	            <spacing>0</spacing>
 	            <buttonlist name="listtemplate" from="playlist_tree_base" />
@@ -231,44 +231,51 @@
     <!-- The playlist editor in gallery view mode -->
     <window name="playlisteditorview_gallery" include="music-base.xml">
 
-        <shape name="browser_background" from="basebackground">
-            <area>15,15,770,280</area>
-            <fill color="#000000" alpha="50" />
-        </shape>
+        <imagetype name="fanart">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/movies/</filename>
+        </imagetype>
 
-        <!-- optional - shows path to current item -->
-        <textarea name="breadcrumbs" from="basetextarea">
-            <area>30,15,500,40</area>
-            <font>basesmall</font>
-            <cutdown>left</cutdown>
-            <align>left,vcenter</align>
-        </textarea>
+        <imagetype name="showcasefloorimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/showcase_floor.png</filename>
+        </imagetype>        
 
-         <!-- optional - shows current position in grid eg '1 of 123' -->
-        <textarea name="position" from="basetextarea">
-            <area>580,15,180,40</area>
-            <align>right,vcenter</align>
-            <font>basesmall</font>
-        </textarea>
-
-        <buttontree name="playlist_tree">
-            <area>30,50,740,310</area>
-            <numlists>1</numlists>
-            <spacing>0</spacing>
-            <buttonlist name="listtemplate" from="basegallerybuttonlist" />
-        </buttontree>
-
-        <statetype name="movingtracksstate" from="basemovingtracksstate">
-            <position>1243,395</position>
-        </statetype>
-
-        <group name="playlistpanel" from="baseplaylistpanel">
-            <position>0,300</position>
+        <imagetype name="showcaseimg" from="fanart">
+            <filename>images/shared/showcase_stage.png</filename>
+        </imagetype>
+        
+        <imagetype name="spotlightimg">
+            <area>0,875,1920,205</area>
+            <alpha>128</alpha>
+            <filename>images/shared/showcase_spot.png</filename>
+        </imagetype>
+        
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
         </group>
 
-        <group name="smallinfopanel" from="basesmallinfopanel">
-            <position>0,540</position>
-        </group>
+        <group name="playcontrolinfo" from="basegroupplaycontrolinfo">
+             <area>1270,0,120,40</area>
+        </group> 
+
+        <group name="moviewallgroup">
+           <area>0,30,1920,1020</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="0,-1075" end="0,30" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+	        <buttontree name="playlist_tree">
+	            <area>8,60,1910,1020</area>
+	            <numlists>1</numlists>
+	            <spacing>0</spacing>
+	            <buttonlist name="listtemplate" from="buttonlist_wall_music" />
+	        </buttontree>
+
+	     </group>
 
     </window>
 

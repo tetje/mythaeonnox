@@ -60,6 +60,10 @@
         <color>#929292</color>
     </fontdef>
 
+    <fontdef name="Font_Info_Selected" from="Font_Info">
+        <color>#323232</color>
+    </fontdef>
+
     <fontdef name="Font_Info_Grey_Big" from="Font_Info_Grey">
         <pixelsize>55</pixelsize>
     </fontdef>
@@ -962,7 +966,7 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_tvshowpanel">
-       <area>0,0,1052,500</area>
+       <area>0,0,1052,560</area>
        <layout>vertical</layout>
        <spacing>0</spacing>
        <scrollstyle>free</scrollstyle>
@@ -970,25 +974,38 @@
        <align>left</align>
        <wrapstyle>selection</wrapstyle>
        <showarrow>no</showarrow>
-       <buttonarea>0,0,1052,500</buttonarea>
+       <buttonarea>0,0,1052,560</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
+               <area>0,0,1052,70</area>
+<!--
                <imagetype name="Listpanelline">
                    <area>0,0,1052,50</area>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
-               <textarea name="buttontext" from="textarea_list">
-                   <area>50,0,973,50</area>
-                   <font>Font_List_Active</font>
+-->
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,973,30</area>
+		             <value>List item:</value>
+		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,973,30</area>
                </textarea>
            </state>
            <state name="selectedactive">
                <imagetype name="Listpanel_selectbar">
-                   <area>0,0,1052,50</area>
+                   <area>0,0,1052,70</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
-               <textarea name="buttontext" from="textarea_list">
-                   <area>50,0,993,50</area>
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,993,30</area>
+		             <font>Font_Label_List_Selected</font>
+		             <value>List item:</value>
+		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,993,30</area>
+                   <font>Font_Info_Selected</font>
+                   <scroll direction="horizontal"/>
                </textarea>
            </state>
            <state name="inactive" from="active"/>
@@ -1032,37 +1049,49 @@
        </statetype>
    </buttonlist>
 
-   <buttonlist name="playlist_tree_base" from="buttonlist_tvshowpanel">
+   <buttonlist name="playlist_tree_base">
        <area>0,0,736,505</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
        <buttonarea>0,0,736,505</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
+<!--
                <imagetype name="Listpanelline">
-                   <area>0,22,736,50</area>
+                   <area>0,20,736,50</area>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
-               <textarea name="buttontext" from="textarea_list">
-                   <area>20,0,594,72</area>
-                   <font>Font_List_Active</font>
+-->
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,420,30</area>
+		             <value>Playlist item:</value>
+		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,594,30</area>
                </textarea>
 	 	         <statetype name="buttoncheck">
-		            <area>614,0,122,72</area>
+		            <area>614,0,122,70</area>
 		            <state type="off">
 		                <imagetype name="LEDOff">
-		                    <area>0,0,122,72</area>
+		                    <area>0,0,122,70</area>
 		                    <filename>images/shared/settings_radiobuttonon_buttonlist.png</filename>
 		                </imagetype>
 		            </state>
 		            <state type="half">
 		                <imagetype name="LEDOn">
-		                    <area>0,0,122,72</area> 
+		                    <area>0,0,122,70</area> 
 		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
 		                    <alpha>128</alpha>
 		                </imagetype>
 		            </state>
 		            <state type="full">
 		                <imagetype name="LEDOn">
-		                    <area>0,0,122,72</area>
+		                    <area>0,0,122,70</area>
 		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
 		                </imagetype>
 		            </state>
@@ -1070,31 +1099,37 @@
           </state>
            <state name="selectedactive">
                <imagetype name="Listpanel_selectbar">
-                   <area>0,0,736,72</area>
+                   <area>0,0,736,70</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
-               <textarea name="buttontext" from="textarea_list">
-                   <area>20,0,594,72</area>
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,420,30</area>
+		             <font>Font_Label_List_Selected</font>
+		             <value>Playlist item:</value>
+		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,594,30</area>
+                   <font>Font_Info_Selected</font>
                    <scroll direction="horizontal"/>
                </textarea>
 	 	         <statetype name="buttoncheck">
-		            <area>614,0,122,72</area>
+		            <area>614,0,122,70</area>
 		            <state type="off">
 		                <imagetype name="LEDOff">
-		                    <area>0,0,122,72</area>
+		                    <area>0,0,122,70</area>
 		                    <filename>images/shared/settings_radiobuttonon_buttonlist.png</filename>
 		                </imagetype>
 		            </state>
 		            <state type="half">
 		                <imagetype name="LEDOn">
-		                    <area>0,0,122,72</area> 
+		                    <area>0,0,122,70</area> 
 		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
 		                    <alpha>128</alpha>
 		                </imagetype>
 		            </state>
 		            <state type="full">
 		                <imagetype name="LEDOn">
-		                    <area>0,0,122,72</area>
+		                    <area>0,0,122,70</area>
 		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
 		                </imagetype>
 		            </state>
@@ -1490,6 +1525,157 @@
                <imagetype name="WallMovieOverlay">
                    <area>12,12,208,311</area>
                    <filename>images/shared/wall_movie_nfoverlay.png</filename>
+               </imagetype>
+
+<!--
+               <statetype name="nodetype">
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>150,234,30,30</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,185,269</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>0</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_wall_music">
+       <spacing>0</spacing>
+       <area>0,0,1920,942</area>
+       <searchposition>758,55</searchposition>
+       <layout>grid</layout>
+       <scrollstyle>free</scrollstyle>
+       <arrange>fixed</arrange>
+       <align>bottom,hcenter</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <drawfrombottom>yes</drawfrombottom>
+       <buttonarea>0,0,1920,945</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>,0,160,160</area>
+               <imagetype name="WallMusicBorder">
+                   <area>0,0,160,160</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_movie_nfborder.png</filename>
+               </imagetype>
+               <imagetype name="buttonimage">
+                   <area>3,3,154,154</area>
+                   <mask>images/shared/wall_music_mask_small.png</mask>
+                   <filename>images/shared/defaultAlbumCover.png</filename>
+               </imagetype>
+               <statetype name="nodetype">
+                   <area>3,3,154,154</area>
+                    <state name="default" />
+                    <state name="alltracks">
+                        <imagetype name="alltracks">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/defaultAlbumCover.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="genres">
+                        <imagetype name="genres">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/defaultAlbumCover.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="albums">
+                        <imagetype name="albums">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/defaultAlbumCover.png</filename>
+                       </imagetype>
+                    </state>
+                    <state name="artists">
+                        <imagetype name="artists">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/DefaultArtist.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="compartists">
+                        <imagetype name="compartists">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/defaultAlbumCover.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="ratings">
+                        <imagetype name="ratings">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/defaultAlbumCover.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="years">
+                        <imagetype name="years">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/defaultAlbumCover.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="compilations">
+                        <imagetype name="compilations">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/defaultAlbumCover.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="playlists">
+                        <imagetype name="playlists">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/DefaultMusicPlaylists.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="smartplaylists">
+                        <imagetype name="smartplaylists">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/DefaultMusicPlaylists.png</filename>
+                        </imagetype>
+                    </state>
+               </statetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>5,5,154,154</area>
+                   <filename>images/shared/wall_nfoverlay.png</filename>
+               </imagetype>
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedactive">
+               <area>-36,-36,230,230</area>
+               <imagetype name="WallMovieBorder">
+                   <area>0,0,230,230</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_fborder.png</filename>
+               </imagetype>
+               <imagetype name="buttonimage">
+                   <area>9,9,213,213</area>
+                   <mask>images/shared/wall_music_mask.png</mask>
+                   <filename>images/shared/defaultAlbumCover.png</filename>
+               </imagetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>9,9,213,213</area>
+                   <filename>images/shared/wall_nfoverlay.png</filename>
                </imagetype>
 
 <!--
@@ -2119,25 +2305,38 @@
 
     <!-- Aeon definition of a button -->
     <button name="button_tvshow_panel">
-        <area>0,0,1052,50</area>
+        <area>0,0,1052,70</area>
         <statetype name="buttonstate">
            <state name="active">
+               <area>0,0,1052,70</area>
+<!--
                <imagetype name="Listpanelline">
                    <area>0,0,1052,50</area>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
-               <textarea name="text" from="textarea_list">
-                   <area>30,0,993,50</area>
-                   <font>Font_List_Active</font>
+-->
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,993,30</area>
+		             <value>Navigation control:</value>
+		         </textarea>	
+               <textarea name="text"  from="textarea_info">
+                   <area>20,32,993,30</area>
                </textarea>
            </state>
            <state name="selected">
                <imagetype name="Listpanel_selectbar">
-                   <area>0,0,1052,50</area>
+                   <area>0,0,1052,70</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
-               <textarea name="text" from="textarea_list">
-                   <area>30,0,993,50</area>
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,993,30</area>
+		             <font>Font_Label_List_Selected</font>
+		             <value>Navigation control:</value>
+		         </textarea>	
+               <textarea name="text" from="textarea_info">
+                   <area>20,32,993,30</area>
+                   <font>Font_Info_Selected</font>
+                   <scroll direction="horizontal"/>
                </textarea>
            </state>
            <state name="disabled" from="active" />
@@ -2658,15 +2857,17 @@
        <area>0,0,1000,98</area>
        <statetype name="background">
            <state name="active">
+<!--           
                <imagetype name="backgroundactive">
                    <area>0,24,1052,50</area>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
+-->
            </state>
            <state name="selected">
                <imagetype name="backgroundselected">
-                   <area>0,24,1052,50</area>
+                   <area>0,14,1052,70</area>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
@@ -2854,25 +3055,27 @@
         <layout>horizontal</layout>
         <statetype name="buttonitem">
             <state name="active">
+<!--
                <imagetype name="backgroundactive">
                    <area>0,24,1052,50</area>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
-               <textarea name="buttontext" from="textarea_list">
-                   <area>650,32,200,32</area>
-                   <font>Font_List_Active</font>
+-->
+               <textarea name="buttontext" from="textarea_info">
+                   <area>650,14,200,70</area>
                    <align>right,vcenter</align>
                </textarea>
             </state>
             <state name="selectedactive">
                <imagetype name="backgroundselected">
-                   <area>0,24,1052,50</area>
+                   <area>0,14,1052,70</area>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
-               <textarea name="buttontext" from="textarea_list">
-                   <area>650,32,200,32</area>
+               <textarea name="buttontext" from="textarea_info">
+                   <area>650,14,200,70</area>
+                   <font>Font_Info_Selected</font>
                    <align>right,vcenter</align>
                </textarea>
             </state>
@@ -3616,17 +3819,19 @@
 
     <!-- Aeon definitions of a textedit -->
     <textedit name="textedit_tvshow_panel">
-        <area>0,0,1052,50</area>
+        <area>0,0,1052,70</area>
         <statetype name="background">
             <state name="active">
+<!--
                <imagetype name="Listpanelline">
                    <area>0,0,1052,50</area>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
+-->
             </state>
             <state name="selected" from="active">
                <imagetype name="Listpanel_selectbar">
-                   <area>0,0,1052,50</area>
+                   <area>0,0,1052,70</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
             </state>
@@ -3635,24 +3840,25 @@
         <imagetype name="cursor">
             <filename>cursor.png</filename>
         </imagetype>
-        <textarea name="text" from="textarea_list">
-            <area>302,0,740,50</area>
-            <font>Font_List_Active</font>
+        <textarea name="text" from="textarea_info">
+            <area>302,32,740,30</area>
         </textarea>
     </textedit>
 
     <textedit name="textedit_tvshow_panel_long">
-        <area>0,0,1052,215</area>
+        <area>0,0,1052,160</area>
         <statetype name="background">
             <state name="active">
+<!--
                <imagetype name="Listpanelline">
                    <area>0,160,1052,50</area>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
+-->
             </state>
             <state name="selected" from="active">
                <imagetype name="Listpanel_selectbar">
-                   <area>0,0,1052,215</area>
+                   <area>0,0,1052,160</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
             </state>
@@ -3662,7 +3868,7 @@
             <filename>cursor.png</filename>
         </imagetype>
         <textarea name="text" from="textarea_plot">
-            <area>302,20,730,190</area>
+            <area>24,40,1007,110</area>
         </textarea>
     </textedit>
 

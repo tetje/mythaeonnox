@@ -405,13 +405,13 @@
         </imagetype>
 
         <textarea name="label" from="textarea_label">
-            <area>30,25,993,30</area>
+            <area>-590,-32,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
         </textarea>
 
         <buttonlist name="groups" from="buttonlist_tvshowpanel">
-            <position>2,55</position>
+            <position>2,25</position>
         </buttonlist>
 
     </window>
@@ -444,78 +444,106 @@
         </imagetype>
 
         <textarea name="title" from="textarea_label">
-            <area>30,25,993,30</area>
+            <area>-590,-32,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
             <value>Change View</value>
         </textarea>
 
         <checkbox name="titles" from="checkbox_menu">
-            <position>2,55</position>
+            <position>2,10</position>
         </checkbox>
 
-        <textarea name="titlelabel" from="textarea_list">
-            <area>30,87,820,32</area>
-            <font>Font_List_Active</font>
-            <value>Show Titles</value>
+        <textarea name="lbl1" from="textarea_label">
+            <area>25,30,820,30</area>
+            <value>Show:</value>
         </textarea>
 
+        <textarea name="titlelbl" from="textarea_info">
+            <area>25,55,820,30</area>
+            <value>Titles</value>
+        </textarea>
+		
         <checkbox name="categories" from="checkbox_menu">
-            <position>2,105</position>
+            <position>2,80</position>
         </checkbox>
 
-        <textarea name="catlabel" from="titlelabel">
-            <position>30,137</position>
-            <value>Show Categories</value>
+        <textarea name="lbl2" from="lbl1">
+            <position>25,100</position>
         </textarea>
 
+        <textarea name="categorylbl" from="titlelbl">
+            <position>25,125</position>
+            <value>Categories</value>
+        </textarea>
+		
         <checkbox name="recgroups" from="checkbox_menu">
-            <position>2,155</position>
+            <position>2,150</position>
         </checkbox>
 
-        <textarea name="grouplabel" from="titlelabel">
-            <position>30,187</position>
-            <value>Show Recording Groups</value>
+        <textarea name="lbl3" from="lbl1">
+            <position>25,170</position>
         </textarea>
 
+        <textarea name="reclbl" from="titlelbl">
+            <position>25,195</position>
+            <value>Recording Groups</value>
+        </textarea>
+		
         <checkbox name="watchlist" from="checkbox_menu">
-            <position>2,205</position>
+            <position>2,220</position>
         </checkbox>
 
-        <textarea name="watchlabel" from="titlelabel">
-            <position>30,237</position>
-            <value>Show Watch List</value>
+        <textarea name="lbl4" from="lbl1">
+            <position>25,240</position>
         </textarea>
 
+        <textarea name="watchlbl" from="titlelbl">
+            <position>25,265</position>
+            <value>Watch List</value>
+        </textarea>
+		
         <checkbox name="searches" from="checkbox_menu">
-            <position>2,255</position>
+            <position>2,290</position>
         </checkbox>
 
-        <textarea name="searchlabel" from="titlelabel">
-            <position>30,287</position>
-            <value>Show Searches</value>
+        <textarea name="lbl5" from="lbl1">
+            <position>25,310</position>
         </textarea>
 
+        <textarea name="searchlbl" from="titlelbl">
+            <position>25,335</position>
+            <value>Searches</value>
+        </textarea>
+		
         <checkbox name="livetv" from="checkbox_menu">
-            <position>2,305</position>
+            <position>2,360</position>
         </checkbox>
 
-        <textarea name="livelabel" from="titlelabel">
-            <position>30,337</position>
-            <value>Show LiveTV</value>
+        <textarea name="lbl6" from="lbl1">
+            <position>25,380</position>
+        </textarea>
+
+        <textarea name="livelbl" from="titlelbl">
+            <position>25,405</position>
+            <value>Live TV</value>
         </textarea>
 
         <checkbox name="watched" from="checkbox_menu">
-            <position>2,355</position>
+            <position>2,430</position>
         </checkbox>
 
-        <textarea name="watchedlabel" from="titlelabel">
-            <position>30,387</position>
-            <value>Show Watched Programs</value>
+        <textarea name="lbl7" from="lbl1">
+            <position>25,450</position>
+        </textarea>
+
+        <textarea name="watchedlbl" from="titlelbl">
+            <position>25,475</position>
+            <value>Watched Programs</value>
         </textarea>
 
         <button name="save" from="button_tvshow_panel">
-            <position>2,430</position>
+            <position>2,520</position>
             <value>Save</value>
         </button>
     </window>
@@ -548,33 +576,41 @@
         </imagetype>
 
         <textarea name="label" from="textarea_label">
-            <area>30,25,993,30</area>
+            <area>-590,-32,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
             <value>Change Recording Group Password</value>
         </textarea>
 
         <textedit name="oldpassword" from="textedit_tvshow_panel">
-            <position>2,55</position>
+            <position>2,25</position>
         </textedit>
 
-        <textarea name="oldpasslabel" from="textarea_list">
-            <area>30,55,500,50</area>
-            <font>Font_List_Active</font>
-            <value>Old Password:</value>
+        <textarea name="lbl1" from="textarea_label">
+            <area>25,30,820,30</area>
+            <value>Enter:</value>
         </textarea>
 
+        <textarea name="oldpasslbl" from="textarea_info">
+            <area>25,55,820,30</area>
+            <value>Old Password</value>
+        </textarea>
+		
         <textedit name="newpassword" from="textedit_tvshow_panel">
-            <position>2,105</position>
+            <position>2,95</position>
         </textedit>
 
-        <textarea name="newpasslabel" from="oldpasslabel">
-            <position>30,105</position>
-            <value>New Password:</value>
+        <textarea name="lbl2" from="lbl1">
+            <position>25,100</position>
         </textarea>
 
+        <textarea name="newpasslbl" from="oldpasslbl">
+            <position>25,125</position>
+            <value>New Password</value>
+        </textarea>
+		
         <button name="ok" from="button_tvshow_panel">
-            <position>2,155</position>
+            <position>2,170</position>
             <value>Save</value>
         </button>
     </window>
@@ -607,69 +643,89 @@
         </imagetype>
 
         <textarea name="label" from="textarea_label">
-            <area>30,25,993,30</area>
+            <area>-590,-32,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
             <value>Edit Recording Metadata</value>
         </textarea>
 
         <textedit name="title" from="textedit_tvshow_panel">
-            <position>2,55</position>
+            <position>2,25</position>
         </textedit>
 
-        <textarea name="titlelabel" from="textarea_list">
-            <area>30,55,500,50</area>
-            <font>Font_List_Active</font>
-            <value>Title:</value>
+        <textarea name="lbl1" from="textarea_label">
+            <area>25,30,820,30</area>
+            <value>Enter:</value>
         </textarea>
 
+        <textarea name="titlelbl" from="textarea_info">
+            <area>25,55,820,30</area>
+            <value>Title</value>
+        </textarea>
+		
         <textedit name="subtitle" from="textedit_tvshow_panel">
-            <position>2,105</position>
+            <position>2,95</position>
         </textedit>
 
-        <textarea name="subtitlelabel" from="titlelabel">
-            <position>30,105</position>
-            <value>Subtitle:</value>
+        <textarea name="lbl2" from="lbl1">
+            <position>25,100</position>
+        </textarea>
+
+        <textarea name="subtitlelbl" from="titlelbl">
+            <position>25,125</position>
+            <value>Subtitle</value>
         </textarea>
 
         <textedit name="inetref" from="textedit_tvshow_panel">
-            <position>2,155</position>
+            <position>2,165</position>
         </textedit>
 
-        <textarea name="inetreflabel" from="titlelabel">
-            <position>30,155</position>
-            <value>Inetref:</value>
+        <textarea name="lbl3" from="lbl1">
+            <position>25,170</position>
+        </textarea>
+
+        <textarea name="inetreflbl" from="titlelbl">
+            <position>25,195</position>
+            <value>Movie/TV DB</value>
         </textarea>
 
         <spinbox name="season" from="spinbox_menu">
-            <position>2,183</position>
+            <position>2,221</position>
         </spinbox>
 
-        <textarea name="seaslabel" from="titlelabel">
-            <position>30,205</position>
-            <value>Season:</value>
+        <textarea name="lbl4" from="lbl1">
+            <position>25,240</position>
+        </textarea>
+
+        <textarea name="seasonlbl" from="titlelbl">
+            <position>25,265</position>
+            <value>season</value>
         </textarea>
 
         <spinbox name="episode" from="spinbox_menu">
-            <position>2,233</position>
+            <position>2,291</position>
         </spinbox>
 
-        <textarea name="eplabel" from="titlelabel">
-            <position>30,255</position>
-            <value>Episode:</value>
+        <textarea name="lbl5" from="lbl1">
+            <position>25,310</position>
+        </textarea>
+
+        <textarea name="episodelbl" from="titlelbl">
+            <position>25,335</position>
+            <value>Episode</value>
         </textarea>
 
         <textedit name="description" from="textedit_tvshow_panel_long">
-            <position>2,300</position>
+            <position>2,370</position>
         </textedit>
 
-        <textarea name="descriptionlabel" from="titlelabel">
-            <position>30,305</position>
-            <value>Plot:</value>
+        <textarea name="lbl6" from="lbl1">
+            <position>25,380</position>
+            <value>Enter plot:</value>
         </textarea>
 
         <button name="ok" from="button_tvshow_panel">
-            <position>2,510</position>
+            <position>2,520</position>
             <value>Save</value>
         </button>
     </window>
