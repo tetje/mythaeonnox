@@ -1013,8 +1013,15 @@
        </statetype>
    </buttonlist>
 
-   <buttonlist name="buttonlist_listbase" from="buttonlist_tvshowpanel">
+   <buttonlist name="buttonlist_listbase">
        <area>0,0,1115,800</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
        <buttonarea>0,0,1115,800</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
@@ -1140,8 +1147,15 @@
        </statetype>
    </buttonlist>
 
-   <buttonlist name="buttonlist_videomanager" from="buttonlist_tvshowpanel">
+   <buttonlist name="buttonlist_videomanager">
        <area>0,0,1115,800</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
        <buttonarea>0,0,1115,800</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
@@ -1206,8 +1220,15 @@
        </statetype>
    </buttonlist>
 
-   <buttonlist name="buttonlist_schedule" from="buttonlist_tvshowpanel">
+   <buttonlist name="buttonlist_schedule">
        <area>0,0,1115,800</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
        <buttonarea>0,0,1115,800</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
@@ -1271,8 +1292,15 @@
        </statetype>
    </buttonlist>
 
-   <buttonlist name="buttonlist_rules" from="buttonlist_tvshowpanel">
+   <buttonlist name="buttonlist_rules">
        <area>0,0,1115,800</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
        <buttonarea>0,0,1115,800</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
@@ -2854,7 +2882,7 @@
 
     <!-- Aeon definition of checkbox -->
    <checkbox name="checkbox_menu">
-       <area>0,0,1000,98</area>
+       <area>0,0,1052,98</area>
        <statetype name="background">
            <state name="active">
 <!--           

@@ -21,7 +21,7 @@
     </version>
 
     <detail>
-        <thumbnail name="preview">preview.jpg</thumbnail>
+        <thumbnail name="preview">Recordings.png</thumbnail>
         <description>Inspired by Aeon: The theme has been made to look like the original XBMC skin were posible. Looks best with the matching menu called 'MythAeon' as this menu lay-out and items are tailored for this particular theme.</description>
         <errata>Plugins to do: MythMusic, MythNetVision, MythWeather, MythNews, MythGallery, MythGame, MythZoneminder</errata>
     </detail>

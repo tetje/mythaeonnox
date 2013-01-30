@@ -452,95 +452,199 @@
 
         <checkbox name="titles" from="checkbox_menu">
             <position>2,10</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <value>Show:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,46,820,30</area>
+				            <value>Titles</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Show:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,46,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Titles</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </checkbox>
 
-        <textarea name="lbl1" from="textarea_label">
-            <area>25,30,820,30</area>
-            <value>Show:</value>
-        </textarea>
-
-        <textarea name="titlelbl" from="textarea_info">
-            <area>25,55,820,30</area>
-            <value>Titles</value>
-        </textarea>
-		
         <checkbox name="categories" from="checkbox_menu">
             <position>2,80</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <value>Show:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,46,820,30</area>
+				            <value>Categories</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Show:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,46,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Categories</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </checkbox>
 
-        <textarea name="lbl2" from="lbl1">
-            <position>25,100</position>
-        </textarea>
-
-        <textarea name="categorylbl" from="titlelbl">
-            <position>25,125</position>
-            <value>Categories</value>
-        </textarea>
-		
         <checkbox name="recgroups" from="checkbox_menu">
             <position>2,150</position>
-        </checkbox>
+ 	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <value>Show:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,46,820,30</area>
+				            <value>Recording Groups</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Show:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,46,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Recording Groups</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
+       </checkbox>
 
-        <textarea name="lbl3" from="lbl1">
-            <position>25,170</position>
-        </textarea>
-
-        <textarea name="reclbl" from="titlelbl">
-            <position>25,195</position>
-            <value>Recording Groups</value>
-        </textarea>
-		
         <checkbox name="watchlist" from="checkbox_menu">
             <position>2,220</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <value>Show:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,46,820,30</area>
+				            <value>Watch List</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Show:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,46,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Watch List</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </checkbox>
 
-        <textarea name="lbl4" from="lbl1">
-            <position>25,240</position>
-        </textarea>
-
-        <textarea name="watchlbl" from="titlelbl">
-            <position>25,265</position>
-            <value>Watch List</value>
-        </textarea>
-		
         <checkbox name="searches" from="checkbox_menu">
             <position>2,290</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <value>Show:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,46,820,30</area>
+				            <value>Searches</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Show:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,46,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Searches</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </checkbox>
 
-        <textarea name="lbl5" from="lbl1">
-            <position>25,310</position>
-        </textarea>
-
-        <textarea name="searchlbl" from="titlelbl">
-            <position>25,335</position>
-            <value>Searches</value>
-        </textarea>
-		
         <checkbox name="livetv" from="checkbox_menu">
             <position>2,360</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <value>Show:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,46,820,30</area>
+				            <value>Live Television</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Show:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,46,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Live Television</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </checkbox>
-
-        <textarea name="lbl6" from="lbl1">
-            <position>25,380</position>
-        </textarea>
-
-        <textarea name="livelbl" from="titlelbl">
-            <position>25,405</position>
-            <value>Live TV</value>
-        </textarea>
 
         <checkbox name="watched" from="checkbox_menu">
             <position>2,430</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <value>Show:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,46,820,30</area>
+				            <value>Watched Programs</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Show:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,46,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Watched Programs</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </checkbox>
-
-        <textarea name="lbl7" from="lbl1">
-            <position>25,450</position>
-        </textarea>
-
-        <textarea name="watchedlbl" from="titlelbl">
-            <position>25,475</position>
-            <value>Watched Programs</value>
-        </textarea>
 
         <button name="save" from="button_tvshow_panel">
             <position>2,520</position>
@@ -584,31 +688,60 @@
 
         <textedit name="oldpassword" from="textedit_tvshow_panel">
             <position>2,25</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,7,820,30</area>
+				            <value>Enter:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,32,820,30</area>
+				            <value>Old Password</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,7,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Enter:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,32,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Old Password</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </textedit>
 
-        <textarea name="lbl1" from="textarea_label">
-            <area>25,30,820,30</area>
-            <value>Enter:</value>
-        </textarea>
-
-        <textarea name="oldpasslbl" from="textarea_info">
-            <area>25,55,820,30</area>
-            <value>Old Password</value>
-        </textarea>
-		
         <textedit name="newpassword" from="textedit_tvshow_panel">
             <position>2,95</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,7,820,30</area>
+				            <value>Enter:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,32,820,30</area>
+				            <value>New Password</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,7,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Enter:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,32,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>New Password</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </textedit>
 
-        <textarea name="lbl2" from="lbl1">
-            <position>25,100</position>
-        </textarea>
-
-        <textarea name="newpasslbl" from="oldpasslbl">
-            <position>25,125</position>
-            <value>New Password</value>
-        </textarea>
-		
         <button name="ok" from="button_tvshow_panel">
             <position>2,170</position>
             <value>Save</value>
@@ -651,78 +784,149 @@
 
         <textedit name="title" from="textedit_tvshow_panel">
             <position>2,25</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,7,820,30</area>
+				            <value>Enter:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,32,820,30</area>
+				            <value>Title</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,7,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Enter:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,32,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Title</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </textedit>
 
-        <textarea name="lbl1" from="textarea_label">
-            <area>25,30,820,30</area>
-            <value>Enter:</value>
-        </textarea>
-
-        <textarea name="titlelbl" from="textarea_info">
-            <area>25,55,820,30</area>
-            <value>Title</value>
-        </textarea>
-		
         <textedit name="subtitle" from="textedit_tvshow_panel">
             <position>2,95</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,7,820,30</area>
+				            <value>Enter:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,32,820,30</area>
+				            <value>Subtitle</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,7,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Enter:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,32,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Subtitle</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </textedit>
-
-        <textarea name="lbl2" from="lbl1">
-            <position>25,100</position>
-        </textarea>
-
-        <textarea name="subtitlelbl" from="titlelbl">
-            <position>25,125</position>
-            <value>Subtitle</value>
-        </textarea>
 
         <textedit name="inetref" from="textedit_tvshow_panel">
             <position>2,165</position>
+	         <statetype name="background">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,7,820,30</area>
+				            <value>Enter:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,32,820,30</area>
+				            <value>Movie/TV DB</value>
+				        </textarea>	
+				    </state>
+	             <state name="selected">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,7,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Enter:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,32,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Movie/TV DB</value>
+			           </textarea>		
+				    </state>
+				</statetype>	
         </textedit>
-
-        <textarea name="lbl3" from="lbl1">
-            <position>25,170</position>
-        </textarea>
-
-        <textarea name="inetreflbl" from="titlelbl">
-            <position>25,195</position>
-            <value>Movie/TV DB</value>
-        </textarea>
 
         <spinbox name="season" from="spinbox_menu">
             <position>2,221</position>
+	         <statetype name="buttonitem">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <value>Enter:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,46,820,30</area>
+				            <value>Season</value>
+				        </textarea>	
+				    </state>
+	             <state name="selectedactive">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Enter:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,46,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Season</value>
+			           </textarea>		
+				    </state>
+                <state name="inactive" from="active" />
+				</statetype>	
         </spinbox>
-
-        <textarea name="lbl4" from="lbl1">
-            <position>25,240</position>
-        </textarea>
-
-        <textarea name="seasonlbl" from="titlelbl">
-            <position>25,265</position>
-            <value>season</value>
-        </textarea>
 
         <spinbox name="episode" from="spinbox_menu">
             <position>2,291</position>
+	         <statetype name="buttonitem">
+	             <state name="active">
+				        <textarea name="lblactive" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <value>Enter:</value>
+				        </textarea>		
+				        <textarea name="titlelblactive" from="textarea_info">
+				            <area>20,46,820,30</area>
+				            <value>Episode</value>
+				        </textarea>	
+				    </state>
+	             <state name="selectedactive">
+		  		        <textarea name="lblselected" from="textarea_label">
+				            <area>20,21,820,30</area>
+				            <font>Font_Label_List_Selected</font>
+				            <value>Enter:</value>
+				        </textarea>		
+			           <textarea name="titlelblselected" from="textarea_info">
+		                  <area>20,46,820,30</area>
+			               <font>Font_Info_Selected</font>
+			               <value>Episode</value>
+			           </textarea>		
+				    </state>
+                <state name="inactive" from="active" />
+				</statetype>	
         </spinbox>
-
-        <textarea name="lbl5" from="lbl1">
-            <position>25,310</position>
-        </textarea>
-
-        <textarea name="episodelbl" from="titlelbl">
-            <position>25,335</position>
-            <value>Episode</value>
-        </textarea>
 
         <textedit name="description" from="textedit_tvshow_panel_long">
             <position>2,370</position>
         </textedit>
-
-        <textarea name="lbl6" from="lbl1">
-            <position>25,380</position>
-            <value>Enter plot:</value>
-        </textarea>
 
         <button name="ok" from="button_tvshow_panel">
             <position>2,520</position>
