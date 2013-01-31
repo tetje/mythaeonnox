@@ -687,7 +687,7 @@
         </textarea>
 
         <textedit name="oldpassword" from="textedit_tvshow_panel">
-            <position>2,25</position>
+            <area>2,25,1052,70</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -700,6 +700,10 @@
 				        </textarea>	
 				    </state>
 	             <state name="selected">
+		              <imagetype name="Listpanel_selectbar">
+		                  <area>0,0,1052,70</area>
+		                  <filename>images/shared/listpanel_selectbar.png</filename>
+		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
 				            <area>20,7,820,30</area>
 				            <font>Font_Label_List_Selected</font>
@@ -711,11 +715,18 @@
 			               <value>Old Password</value>
 			           </textarea>		
 				    </state>
+                <state name="inactive"/>
 				</statetype>	
+	         <imagetype name="cursor">
+	             <filename>cursor.png</filename>
+	         </imagetype>
+	         <textarea name="text" from="textarea_info">
+	             <area>302,32,740,30</area>
+	         </textarea>
         </textedit>
 
-        <textedit name="newpassword" from="textedit_tvshow_panel">
-            <position>2,95</position>
+        <textedit name="newpassword">
+            <area>2,95,1052,70</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -728,6 +739,10 @@
 				        </textarea>	
 				    </state>
 	             <state name="selected">
+		              <imagetype name="Listpanel_selectbar">
+		                  <area>0,0,1052,70</area>
+		                  <filename>images/shared/listpanel_selectbar.png</filename>
+		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
 				            <area>20,7,820,30</area>
 				            <font>Font_Label_List_Selected</font>
@@ -739,7 +754,14 @@
 			               <value>New Password</value>
 			           </textarea>		
 				    </state>
+                <state name="inactive"/>
 				</statetype>	
+	         <imagetype name="cursor">
+	             <filename>cursor.png</filename>
+	         </imagetype>
+	         <textarea name="text" from="textarea_info">
+	             <area>302,32,740,30</area>
+	         </textarea>
         </textedit>
 
         <button name="ok" from="button_tvshow_panel">
@@ -782,8 +804,8 @@
             <value>Edit Recording Metadata</value>
         </textarea>
 
-        <textedit name="title" from="textedit_tvshow_panel">
-            <position>2,25</position>
+        <textedit name="title">
+            <area>2,25,1052,70</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -796,6 +818,10 @@
 				        </textarea>	
 				    </state>
 	             <state name="selected">
+		              <imagetype name="Listpanel_selectbar">
+		                  <area>0,0,1052,70</area>
+		                  <filename>images/shared/listpanel_selectbar.png</filename>
+		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
 				            <area>20,7,820,30</area>
 				            <font>Font_Label_List_Selected</font>
@@ -807,11 +833,18 @@
 			               <value>Title</value>
 			           </textarea>		
 				    </state>
+                <state name="inactive"/>
 				</statetype>	
+	         <imagetype name="cursor">
+	             <filename>cursor.png</filename>
+	         </imagetype>
+	         <textarea name="text" from="textarea_info">
+	             <area>302,32,740,30</area>
+	         </textarea>
         </textedit>
 
-        <textedit name="subtitle" from="textedit_tvshow_panel">
-            <position>2,95</position>
+        <textedit name="subtitle">
+            <area>2,95,1052,70</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -824,6 +857,10 @@
 				        </textarea>	
 				    </state>
 	             <state name="selected">
+		              <imagetype name="Listpanel_selectbar">
+		                  <area>0,0,1052,70</area>
+		                  <filename>images/shared/listpanel_selectbar.png</filename>
+		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
 				            <area>20,7,820,30</area>
 				            <font>Font_Label_List_Selected</font>
@@ -835,11 +872,18 @@
 			               <value>Subtitle</value>
 			           </textarea>		
 				    </state>
+                <state name="inactive"/>
 				</statetype>	
+	         <imagetype name="cursor">
+	             <filename>cursor.png</filename>
+	         </imagetype>
+	         <textarea name="text" from="textarea_info">
+	             <area>302,32,740,30</area>
+	         </textarea>
         </textedit>
 
-        <textedit name="inetref" from="textedit_tvshow_panel">
-            <position>2,165</position>
+        <textedit name="inetref">
+            <area>2,165,1052,70</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -852,6 +896,10 @@
 				        </textarea>	
 				    </state>
 	             <state name="selected">
+		              <imagetype name="Listpanel_selectbar">
+		                  <area>0,0,1052,70</area>
+		                  <filename>images/shared/listpanel_selectbar.png</filename>
+		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
 				            <area>20,7,820,30</area>
 				            <font>Font_Label_List_Selected</font>
@@ -863,69 +911,52 @@
 			               <value>Movie/TV DB</value>
 			           </textarea>		
 				    </state>
+                <state name="inactive"/>
 				</statetype>	
+	         <imagetype name="cursor">
+	             <filename>cursor.png</filename>
+	         </imagetype>
+	         <textarea name="text" from="textarea_info">
+	             <area>302,32,740,30</area>
+	         </textarea>
         </textedit>
 
-        <spinbox name="season" from="spinbox_menu">
-            <position>2,221</position>
-	         <statetype name="buttonitem">
-	             <state name="active">
-				        <textarea name="lblactive" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <value>Enter:</value>
-				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,46,820,30</area>
-				            <value>Season</value>
-				        </textarea>	
-				    </state>
-	             <state name="selectedactive">
-		  		        <textarea name="lblselected" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <font>Font_Label_List_Selected</font>
-				            <value>Enter:</value>
-				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,46,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>Season</value>
-			           </textarea>		
-				    </state>
-                <state name="inactive" from="active" />
-				</statetype>	
+        <spinbox name="season" from="spinbox_menu_season">
+            <area>2,221,1052,98</area>
         </spinbox>
 
-        <spinbox name="episode" from="spinbox_menu">
+        <spinbox name="episode" from="spinbox_menu_episode">
             <position>2,291</position>
-	         <statetype name="buttonitem">
+        </spinbox>
+
+        <textedit name="description">
+            <area>2,370,1052,160</area>
+	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
 				            <area>20,21,820,30</area>
-				            <value>Enter:</value>
+				            <value>Enter Plot:</value>
 				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,46,820,30</area>
-				            <value>Episode</value>
-				        </textarea>	
 				    </state>
-	             <state name="selectedactive">
+	             <state name="selected">
+		              <imagetype name="Listpanel_selectbar">
+		                  <area>0,0,1052,160</area>
+		                  <filename>images/shared/listpanel_selectbar.png</filename>
+		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
 				            <area>20,21,820,30</area>
 				            <font>Font_Label_List_Selected</font>
-				            <value>Enter:</value>
+				            <value>Enter Plot:</value>
 				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,46,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>Episode</value>
-			           </textarea>		
 				    </state>
-                <state name="inactive" from="active" />
+                <state name="inactive"/>
 				</statetype>	
-        </spinbox>
-
-        <textedit name="description" from="textedit_tvshow_panel_long">
-            <position>2,370</position>
+	         <imagetype name="cursor">
+	             <filename>cursor.png</filename>
+	         </imagetype>
+	         <textarea name="text" from="textarea_plot">
+	             <area>20,45,1007,105</area>
+	         </textarea>
         </textedit>
 
         <button name="ok" from="button_tvshow_panel">

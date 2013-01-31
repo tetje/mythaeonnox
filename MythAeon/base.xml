@@ -3078,22 +3078,23 @@
     </checkbox>
 
     <!-- Aeon definition of a spinbox -->
-    <spinbox name="spinbox_menu">
+    <spinbox name="spinbox_menu_season">
         <area>0,0,1000,98</area>
         <layout>horizontal</layout>
         <statetype name="buttonitem">
             <state name="active">
-<!--
-               <imagetype name="backgroundactive">
-                   <area>0,24,1052,50</area>
-                   <preserveaspect>no</preserveaspect>
-                   <filename>images/shared/settings_radiobuttonoff.png</filename>
-               </imagetype>
--->
                <textarea name="buttontext" from="textarea_info">
                    <area>650,14,200,70</area>
                    <align>right,vcenter</align>
                </textarea>
+		         <textarea name="lblactive" from="textarea_label">
+		             <area>20,21,820,30</area>
+		             <value>Change:</value>
+		         </textarea>		
+		         <textarea name="titlelblactive" from="textarea_info">
+		             <area>20,46,820,30</area>
+		             <value>Season</value>
+		         </textarea>	
             </state>
             <state name="selectedactive">
                <imagetype name="backgroundselected">
@@ -3101,6 +3102,88 @@
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
+  		         <textarea name="lblselected" from="textarea_label">
+		             <area>20,21,820,30</area>
+		             <font>Font_Label_List_Selected</font>
+		             <value>Change:</value>
+		         </textarea>		
+	            <textarea name="titlelblselected" from="textarea_info">
+                   <area>20,46,820,30</area>
+	                <font>Font_Info_Selected</font>
+	                <value>Season</value>
+	            </textarea>		
+               <textarea name="buttontext" from="textarea_info">
+                   <area>650,14,200,70</area>
+                   <font>Font_Info_Selected</font>
+                   <align>right,vcenter</align>
+               </textarea>
+            </state>
+            <state name="selectedinactive" from="active" />
+        </statetype>
+        <statetype name="upscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>876,0,62,98</area>
+                   <filename>images/shared/spin-down.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnoff">
+                   <area>876,0,62,98</area>
+                   <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>938,0,62,98</area>
+                   <filename>images/shared/spin-up.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                   <area>938,0,62,98</area>
+                   <filename>images/shared/spin-up-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </spinbox>
+
+    <spinbox name="spinbox_menu_episode">
+        <area>0,0,1000,98</area>
+        <layout>horizontal</layout>
+        <statetype name="buttonitem">
+            <state name="active">
+               <textarea name="buttontext" from="textarea_info">
+                   <area>650,14,200,70</area>
+                   <align>right,vcenter</align>
+               </textarea>
+		         <textarea name="lblactive" from="textarea_label">
+		             <area>20,21,820,30</area>
+		             <value>Change:</value>
+		         </textarea>		
+		         <textarea name="titlelblactive" from="textarea_info">
+		             <area>20,46,820,30</area>
+		             <value>Episode</value>
+		         </textarea>	
+            </state>
+            <state name="selectedactive">
+               <imagetype name="backgroundselected">
+                   <area>0,14,1052,70</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+  		         <textarea name="lblselected" from="textarea_label">
+		             <area>20,21,820,30</area>
+		             <font>Font_Label_List_Selected</font>
+		             <value>Change:</value>
+		         </textarea>		
+	            <textarea name="titlelblselected" from="textarea_info">
+                   <area>20,46,820,30</area>
+	                <font>Font_Info_Selected</font>
+	                <value>Episode</value>
+	            </textarea>		
                <textarea name="buttontext" from="textarea_info">
                    <area>650,14,200,70</area>
                    <font>Font_Info_Selected</font>
@@ -3849,21 +3932,12 @@
     <textedit name="textedit_tvshow_panel">
         <area>0,0,1052,70</area>
         <statetype name="background">
-            <state name="active">
-<!--
-               <imagetype name="Listpanelline">
-                   <area>0,0,1052,50</area>
-                   <filename>images/shared/settings_radiobuttonoff.png</filename>
-               </imagetype>
--->
-            </state>
-            <state name="selected" from="active">
+            <state name="selected">
                <imagetype name="Listpanel_selectbar">
                    <area>0,0,1052,70</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
             </state>
-            <state name="inactive" from="active" />
         </statetype>
         <imagetype name="cursor">
             <filename>cursor.png</filename>
@@ -3876,21 +3950,14 @@
     <textedit name="textedit_tvshow_panel_long">
         <area>0,0,1052,160</area>
         <statetype name="background">
-            <state name="active">
-<!--
-               <imagetype name="Listpanelline">
-                   <area>0,160,1052,50</area>
-                   <filename>images/shared/settings_radiobuttonoff.png</filename>
-               </imagetype>
--->
-            </state>
-            <state name="selected" from="active">
+            <state name="active"/>
+            <state name="selected">
                <imagetype name="Listpanel_selectbar">
                    <area>0,0,1052,160</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
             </state>
-            <state name="inactive" from="active" />
+            <state name="inactive"/>
         </statetype>
         <imagetype name="cursor">
             <filename>cursor.png</filename>
