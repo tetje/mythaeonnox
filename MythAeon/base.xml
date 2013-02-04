@@ -499,7 +499,7 @@
        <buttonarea>113,0,1694,213</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
-               <imagetype name="previewbgd">
+               <imagetype name="previewbgd" depends="preview">
                    <area>0,5,314,176</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvborder.png</filename>
@@ -508,15 +508,34 @@
                <imagetype name="preview">
                    <area>8,11,300,168</area>
                    <alpha>255</alpha>
-                   <filename>images/shared/defaultVideoCover.png</filename>
                    <mask>images/shared/multiplex_tvmask_small.png</mask>
                    <preserveaspect>no</preserveaspect>
                    <reflection shear="0" scale="50" length="33" spacing="0" />
                </imagetype>
-               <imagetype name="previewglass">
+               <imagetype name="previewglass" depends="preview">
                    <area>8,11,300,168</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvglass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="previewbgdsquare" depends="!preview">
+                   <area>71,5,176,176</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_frame.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="nopreviewimage" depends="!preview">
+                   <area>76,10,166,166</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/DefaultTVShows.png</filename>
+                   <mask>images/shared/list_musicicon_mask_multiplex_small.png</mask>
+                   <preserveaspect>no</preserveaspect>
+                   <reflection shear="0" scale="50" length="33" spacing="0" />
+               </imagetype>
+               <imagetype name="previewglasssquare" depends="!preview">
+                   <area>76,10,166,166</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_glass.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
                <imagetype name="previewlabel" depends="!preview">
@@ -525,38 +544,16 @@
                    <filename>images/shared/multiplex_labelblock.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
-<!--
-               <statetype name="nodetype">
-                   <area>0,0,110,159</area>
-                   <state name="subfolder">
-                       <imagetype name="icon">
-                           <area>80,129,25,25</area>
-                           <alpha>128</alpha>
-                           <filename>images/shared/DefaultFolderTransparent.png</filename>
-                           <preserveaspect>yes</preserveaspect>
-                       </imagetype>
-                   </state>
-                   <state name="upfolder">
-                       <imagetype name="icon">
-                           <area>0,0,110,159</area>
-                           <alpha>255</alpha>
-                           <filename>images/shared/DefaultFolderBack.png</filename>
-                           <preserveaspect>no</preserveaspect>
-                       </imagetype>
-                   </state>
-               </statetype>
--->
                <textarea name="buttontext" from="textarea_plot" depends="!preview">
                    <area>24,203,268,50</area>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
-               </textarea>	  
-            
+               </textarea>	          
            </state>
            <state name="selectedactive">
                <area>-9,-9,398,231</area>
-               <imagetype name="previewbgd">
+               <imagetype name="previewbgd" depends="preview">
                    <area>-9,-9,398,231</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvborder.png</filename>
@@ -566,36 +563,33 @@
                    <area>0,0,380,213</area>
                    <alpha>255</alpha>
                    <preserveaspect>no</preserveaspect>
-                   <filename>images/shared/defaultVideoCover.png</filename>
                    <mask>images/shared/multiplex_tvmask.png</mask>
                </imagetype>
-               <imagetype name="previewglass">
+               <imagetype name="previewglass" depends="preview">
                    <area>0,0,380,213</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvglass.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
-<!--
-               <statetype name="nodetype">
-                   <area>-8,0,138,199</area>
-                   <state name="subfolder">
-                       <imagetype name="icon">
-                           <area>103,164,30,30</area>
-                           <alpha>255</alpha>
-                           <filename>images/shared/DefaultFolderTransparent.png</filename>
-                           <preserveaspect>yes</preserveaspect>
-                       </imagetype>
-                   </state>
-                   <state name="upfolder">
-                       <imagetype name="icon">
-                           <area>0,0,138,199</area>
-                           <alpha>255</alpha>
-                           <filename>images/shared/DefaultFolderBack.png</filename>
-                           <preserveaspect>no</preserveaspect>
-                       </imagetype>
-                   </state>
-               </statetype>
--->              
+               <imagetype name="previewbgdsquare" depends="!preview">
+                   <area>82,-9,231,231</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_frame.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="nopreviewimage" depends="!preview">
+                   <area>90,-2,217,217</area>
+                   <alpha>255</alpha>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/DefaultTVShows.png</filename>
+                   <mask>images/shared/list_musicicon_mask_multiplex.png</mask>
+               </imagetype>
+               <imagetype name="previewglasssquare" depends="!preview">
+                   <area>90,-2,217,217</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_glass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
            </state>
            <state name="inactive" from ="active">
                <alpha>0</alpha>
@@ -657,7 +651,7 @@
                <imagetype name="coverart">
                    <area>8,10,160,247</area>
                    <alpha>255</alpha>
-                   <filename>images/shared/defaultVideoBigPoster.png</filename>
+                   <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
                    <mask>images/shared/multiplex_mask.png</mask>
                    <preserveaspect>no</preserveaspect>
                    <reflection shear="0" scale="50" length="16" spacing="0" />
@@ -724,7 +718,7 @@
                    <area>0,0,186,287</area>
                    <alpha>255</alpha>
                    <preserveaspect>no</preserveaspect>
-                   <filename>images/shared/defaultVideoBigPoster.png</filename>
+                   <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
                    <mask>images/shared/multiplex_mask_big.png</mask>
                </imagetype>
                <imagetype name="previewglass">
@@ -815,7 +809,7 @@
                <imagetype name="coverart">
                    <area>5,10,166,166</area>
                    <alpha>255</alpha>
-                   <filename>images/shared/defaultAlbumCover.png</filename>
+                   <filename>images/shared/DefaultAlbumCover.png</filename>
                    <mask>images/shared/list_musicicon_mask_multiplex_small.png</mask>
                    <preserveaspect>no</preserveaspect>
                    <reflection shear="0" scale="50" length="33" spacing="0" />
@@ -874,7 +868,7 @@
                    <area>8,-2,217,217</area>
                    <alpha>255</alpha>
                    <preserveaspect>no</preserveaspect>
-                   <filename>images/shared/defaultAlbumCover.png</filename>
+                   <filename>images/shared/DefaultAlbumCover.png</filename>
                    <mask>images/shared/list_musicicon_mask_multiplex.png</mask>
                </imagetype>
                <imagetype name="previewglass">
@@ -1507,7 +1501,7 @@
                <imagetype name="coverart">
                    <area>5,5,150,226</area>
                    <mask>images/shared/wall_movie_mask_small.png</mask>
-                   <filename>images/shared/defaultVideoBigPoster.png</filename>
+                   <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
                </imagetype>
                <imagetype name="WallMovieOverlay">
                    <area>5,5,150,226</area>
@@ -1548,7 +1542,7 @@
                <imagetype name="coverart">
                    <area>12,12,208,311</area>
                    <mask>images/shared/wall_movie_mask.png</mask>
-                   <filename>images/shared/defaultVideoBigPoster.png</filename>
+                   <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
                </imagetype>
                <imagetype name="WallMovieOverlay">
                    <area>12,12,208,311</area>
@@ -1605,7 +1599,7 @@
                <imagetype name="buttonimage">
                    <area>3,3,154,154</area>
                    <mask>images/shared/wall_music_mask_small.png</mask>
-                   <filename>images/shared/defaultAlbumCover.png</filename>
+                   <filename>images/shared/DefaultAlbumCover.png</filename>
                </imagetype>
                <statetype name="nodetype">
                    <area>3,3,154,154</area>
@@ -1614,56 +1608,56 @@
                         <imagetype name="alltracks">
 			                   <area>0,0,154,154</area>
 			                   <mask>images/shared/wall_music_mask_small.png</mask>
-			                   <filename>images/shared/defaultAlbumCover.png</filename>
+			                   <filename>images/shared/DefaultMusicSongs.png</filename>
                         </imagetype>
                     </state>
                     <state name="genres">
                         <imagetype name="genres">
 			                   <area>0,0,154,154</area>
 			                   <mask>images/shared/wall_music_mask_small.png</mask>
-			                   <filename>images/shared/defaultAlbumCover.png</filename>
+			                   <filename>images/shared/DefaultMusicGenres.png</filename>
                         </imagetype>
                     </state>
                     <state name="albums">
                         <imagetype name="albums">
 			                   <area>0,0,154,154</area>
 			                   <mask>images/shared/wall_music_mask_small.png</mask>
-			                   <filename>images/shared/defaultAlbumCover.png</filename>
+			                   <filename>images/shared/DefaultMusicAlbum.png</filename>
                        </imagetype>
                     </state>
                     <state name="artists">
                         <imagetype name="artists">
 			                   <area>0,0,154,154</area>
 			                   <mask>images/shared/wall_music_mask_small.png</mask>
-			                   <filename>images/shared/DefaultArtist.png</filename>
+			                   <filename>images/shared/DefaultMusicArtists.png</filename>
                         </imagetype>
                     </state>
                     <state name="compartists">
                         <imagetype name="compartists">
 			                   <area>0,0,154,154</area>
 			                   <mask>images/shared/wall_music_mask_small.png</mask>
-			                   <filename>images/shared/defaultAlbumCover.png</filename>
+			                   <filename>images/shared/DefaultMusicVideos.png</filename>
                         </imagetype>
                     </state>
                     <state name="ratings">
                         <imagetype name="ratings">
 			                   <area>0,0,154,154</area>
 			                   <mask>images/shared/wall_music_mask_small.png</mask>
-			                   <filename>images/shared/defaultAlbumCover.png</filename>
+			                   <filename>images/shared/DefaultMusicTop100.png</filename>
                         </imagetype>
                     </state>
                     <state name="years">
                         <imagetype name="years">
 			                   <area>0,0,154,154</area>
 			                   <mask>images/shared/wall_music_mask_small.png</mask>
-			                   <filename>images/shared/defaultAlbumCover.png</filename>
+			                   <filename>images/shared/DefaultMusicYears.png</filename>
                         </imagetype>
                     </state>
                     <state name="compilations">
                         <imagetype name="compilations">
 			                   <area>0,0,154,154</area>
 			                   <mask>images/shared/wall_music_mask_small.png</mask>
-			                   <filename>images/shared/defaultAlbumCover.png</filename>
+			                   <filename>images/shared/DefaultMusicCompilations.png</filename>
                         </imagetype>
                     </state>
                     <state name="playlists">
@@ -1677,10 +1671,20 @@
                         <imagetype name="smartplaylists">
 			                   <area>0,0,154,154</area>
 			                   <mask>images/shared/wall_music_mask_small.png</mask>
-			                   <filename>images/shared/DefaultMusicPlaylists.png</filename>
+			                   <filename>images/shared/DefaultMusicRecentlyAdded.png</filename>
                         </imagetype>
                     </state>
                </statetype>
+	            <statetype name="buttoncheck">
+		             <area>3,3,154,154</area>
+		             <showempty>yes</showempty>
+	                <state type="full">
+	                    <imagetype name="yes">
+	                        <area>121,20,33,31</area>
+	                        <filename>images/shared/OverlayWatched.png</filename>
+	                    </imagetype>
+	                </state>
+	            </statetype>
                <imagetype name="WallMovieOverlay">
                    <area>5,5,154,154</area>
                    <filename>images/shared/wall_nfoverlay.png</filename>
@@ -1699,33 +1703,96 @@
                <imagetype name="buttonimage">
                    <area>9,9,213,213</area>
                    <mask>images/shared/wall_music_mask.png</mask>
-                   <filename>images/shared/defaultAlbumCover.png</filename>
+                   <filename>images/shared/DefaultAlbumCover.png</filename>
                </imagetype>
+               <statetype name="nodetype">
+                   <area>9,9,213,213</area>
+                    <state name="default" />
+                    <state name="alltracks">
+                        <imagetype name="alltracks">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultMusicSongs.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="genres">
+                        <imagetype name="genres">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultMusicGenres.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="albums">
+                        <imagetype name="albums">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultMusicAlbum.png</filename>
+                       </imagetype>
+                    </state>
+                    <state name="artists">
+                        <imagetype name="artists">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultMusicArtists.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="compartists">
+                        <imagetype name="compartists">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultMusicVideos.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="ratings">
+                        <imagetype name="ratings">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultMusicTop100.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="years">
+                        <imagetype name="years">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultMusicYears.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="compilations">
+                        <imagetype name="compilations">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultMusicCompilations.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="playlists">
+                        <imagetype name="playlists">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultMusicPlaylists.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="smartplaylists">
+                        <imagetype name="smartplaylists">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultMusicRecentlyAdded.png</filename>
+                        </imagetype>
+                    </state>
+               </statetype>
                <imagetype name="WallMovieOverlay">
                    <area>9,9,213,213</area>
                    <filename>images/shared/wall_nfoverlay.png</filename>
                </imagetype>
-
-<!--
-               <statetype name="nodetype">
-                   <state name="subfolder">
-                       <imagetype name="icon">
-                           <area>150,234,30,30</area>
-                           <alpha>128</alpha>
-                           <filename>images/shared/DefaultFolderTransparent.png</filename>
-                           <preserveaspect>yes</preserveaspect>
-                       </imagetype>
-                   </state>
-                   <state name="upfolder">
-                       <imagetype name="icon">
-                           <area>0,0,185,269</area>
-                           <alpha>255</alpha>
-                           <filename>images/shared/DefaultFolderBack.png</filename>
-                           <preserveaspect>no</preserveaspect>
-                       </imagetype>
-                   </state>
-               </statetype>
--->
+	            <statetype name="buttoncheck">
+		             <area>9,9,213,213</area>
+		             <showempty>yes</showempty>
+	                <state type="full">
+	                    <imagetype name="yes">
+	                        <area>168,30,46,43</area>
+	                        <filename>images/shared/OverlayWatched.png</filename>
+	                    </imagetype>
+	                </state>
+	            </statetype>
            </state>
            <state name="selectedinactive" from="selectedactive">
                <alpha>0</alpha>
@@ -4370,6 +4437,74 @@
             <scroll direction="vertical"/>           
             <align>top,hcenter</align>
         </textarea>
+-->
+     </group>
+
+     <group name="basegroupschedulelistinfo">
+        <area>0,0,545,930</area>
+
+        <animation trigger="AboutToShow">
+            <section duration="1200" centre="middle">
+                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
+            </section>
+        </animation>
+
+        <imagetype name="TVShowsframe">
+            <area>-2,245,548,549</area>
+            <filename>images/shared/list_musicicon_frame.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+     
+        <imagetype name="TVShowsRecentlyPlayed">
+            <area>13,260,518,519</area>
+            <mask>images/shared/list_musicicon_mask.png</mask>
+            <filename>images/shared/DefaultTVShowsRecentlyPlayed.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+	
+	     <shape name="descriptionbox" depends="description">
+	         <area>13,260,518,519</area>
+	         <type>roundbox</type>
+	         <cornerradius>15</cornerradius>
+	         <fill color="#323232" alpha="210" />
+	     </shape>
+
+        <textarea name="titlesubtitle" from="textarea_settings_button">
+            <area>40,287,475,32</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
+            <template>%TITLESUBTITLE% - %shorttimedate%</template>
+        </textarea>
+       
+        <textarea name="description" from="textarea_plot">
+            <area>40,325,475,440</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <template>%DESCRIPTION%</template>
+        </textarea>
+       
+        <textarea name="nodescription" from="description" depends="!description">
+            <value>No description available.</value>
+        </textarea>
+       
+        <imagetype name="TVShowsglass">
+            <area>13,260,518,519</area>
+            <filename>images/shared/list_musicicon_glass.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <group name="listscheduledetails" from="basegroupscheduledetails">
+           <position>73,810</position>
+		  </group>
+
+<!-- Fix me: This does not work when an other windows has been selected and one returns to the main screen
+
+        <animation trigger="AboutToHide">
+            <section duration="1200" centre="middle">
+                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
+            </section>
+        </animation>       
 -->
      </group>
 
