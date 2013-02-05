@@ -499,7 +499,7 @@
        <buttonarea>113,0,1694,213</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
-               <imagetype name="previewbgd" depends="preview">
+               <imagetype name="previewbgd">
                    <area>0,5,314,176</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvborder.png</filename>
@@ -509,33 +509,14 @@
                    <area>8,11,300,168</area>
                    <alpha>255</alpha>
                    <mask>images/shared/multiplex_tvmask_small.png</mask>
+                   <filename>images/shared/DefaultVideoBigPoster.png</filename>
                    <preserveaspect>no</preserveaspect>
                    <reflection shear="0" scale="50" length="33" spacing="0" />
                </imagetype>
-               <imagetype name="previewglass" depends="preview">
+               <imagetype name="previewglass">
                    <area>8,11,300,168</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvglass.png</filename>
-                   <preserveaspect>no</preserveaspect>
-               </imagetype>
-               <imagetype name="previewbgdsquare" depends="!preview">
-                   <area>71,5,176,176</area>
-                   <alpha>255</alpha>
-                   <filename>images/shared/list_musicicon_frame.png</filename>
-                   <preserveaspect>no</preserveaspect>
-               </imagetype>
-               <imagetype name="nopreviewimage" depends="!preview">
-                   <area>76,10,166,166</area>
-                   <alpha>255</alpha>
-                   <filename>images/shared/DefaultTVShows.png</filename>
-                   <mask>images/shared/list_musicicon_mask_multiplex_small.png</mask>
-                   <preserveaspect>no</preserveaspect>
-                   <reflection shear="0" scale="50" length="33" spacing="0" />
-               </imagetype>
-               <imagetype name="previewglasssquare" depends="!preview">
-                   <area>76,10,166,166</area>
-                   <alpha>255</alpha>
-                   <filename>images/shared/list_musicicon_glass.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
                <imagetype name="previewlabel" depends="!preview">
@@ -553,7 +534,7 @@
            </state>
            <state name="selectedactive">
                <area>-9,-9,398,231</area>
-               <imagetype name="previewbgd" depends="preview">
+               <imagetype name="previewbgd">
                    <area>-9,-9,398,231</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvborder.png</filename>
@@ -564,38 +545,20 @@
                    <alpha>255</alpha>
                    <preserveaspect>no</preserveaspect>
                    <mask>images/shared/multiplex_tvmask.png</mask>
+                   <filename>images/shared/DefaultVideoBigPoster.png</filename>
                </imagetype>
-               <imagetype name="previewglass" depends="preview">
+               <imagetype name="previewglass">
                    <area>0,0,380,213</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvglass.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
-               <imagetype name="previewbgdsquare" depends="!preview">
-                   <area>82,-9,231,231</area>
-                   <alpha>255</alpha>
-                   <filename>images/shared/list_musicicon_frame.png</filename>
-                   <preserveaspect>no</preserveaspect>
-               </imagetype>
-               <imagetype name="nopreviewimage" depends="!preview">
-                   <area>90,-2,217,217</area>
-                   <alpha>255</alpha>
-                   <preserveaspect>no</preserveaspect>
-                   <filename>images/shared/DefaultTVShows.png</filename>
-                   <mask>images/shared/list_musicicon_mask_multiplex.png</mask>
-               </imagetype>
-               <imagetype name="previewglasssquare" depends="!preview">
-                   <area>90,-2,217,217</area>
-                   <alpha>255</alpha>
-                   <filename>images/shared/list_musicicon_glass.png</filename>
-                   <preserveaspect>no</preserveaspect>
-               </imagetype>
            </state>
            <state name="inactive" from ="active">
-               <alpha>0</alpha>
+               <alpha>255</alpha>
            </state>
            <state name="selectedinactive" from="selectedactive">
-               <alpha>0</alpha>
+               <alpha>255</alpha>
            </state>
        </statetype>
 	    <statetype name="downscrollarrow">
@@ -972,12 +935,6 @@
        <statetype name="buttonitem">
            <state name="active">
                <area>0,0,1052,70</area>
-<!--
-               <imagetype name="Listpanelline">
-                   <area>0,0,1052,50</area>
-                   <filename>images/shared/settings_radiobuttonoff.png</filename>
-               </imagetype>
--->
 		         <textarea name="listitemlbl" from="textarea_label">
 		             <area>20,7,973,30</area>
 		             <value>List item:</value>
@@ -1004,6 +961,52 @@
            </state>
            <state name="inactive" from="active"/>
            <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_tvshowpanel_group">
+       <area>0,0,615,352</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,615,352</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,615,70</area>
+		         <textarea name="lbl" from="textarea_label">
+		             <area>20,7,575,30</area>
+		             <value>Grouplist item:</value>
+		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,575,30</area>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,615,70</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+		         <textarea name="lbl" from="textarea_label">
+		             <area>20,7,575,30</area>
+		             <font>Font_Label_List_Selected</font>
+		             <value>Grouplist item:</value>
+		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,575,30</area>
+                   <font>Font_Info_Selected</font>
+                   <scroll direction="horizontal"/>
+               </textarea>
+           </state>
+           <state name="inactive" from="active">
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>0</alpha>
+           </state>
        </statetype>
    </buttonlist>
 

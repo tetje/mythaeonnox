@@ -104,7 +104,7 @@
 	        <group name="recordingsinfo">
 	           <area>0,0,1694,846</area>
 	           
-		        <imagetype name="fanart">
+		        <imagetype name="fanart" > <!-- depends="filesize_str"> -->
 		            <area>632,58,1046,604</area>
 		            <preserveaspect>no</preserveaspect>
 		        </imagetype>
@@ -125,7 +125,7 @@
 	           </statetype>
 		        
 	           <group name="additionalrecordingsinfo">
-	              <area>38,85,567,270</area>
+	              <area>30,85,567,270</area>
 			        <textarea name="channellbl" from="textarea_label" depends="channel">
 			            <area>0,140,567,30</area>
 			            <value>Channel:</value>
@@ -158,14 +158,43 @@
 			        <textarea name="freereport" from="textarea_info" depends="!filesize_str">
 			            <area>0,25,567,30</area>
 			        </textarea>
+
+			        <textarea name="usagelbl" from="channellbl" depends="!filesize_str">
+			            <position>0,70</position>
+			            <value>Usage overview:</value>
+			        </textarea>
+
+			        <progressbar name="usedbar" from="baseprogressbar" depends="!filesize_str">
+			           <area>0,100,583,30</area>
+				        <layout>horizontal</layout>
+				        <style>reveal</style>
+				        <imagetype name="background">
+				            <area>0,0,100%,100%</area>
+				            <filename>images/shared/progress_back.png</filename>
+				        </imagetype>
+				        <imagetype name="progressimage">
+				            <area>0,0,100%,100%</area>
+				            <filename>images/shared/progress_fill.png</filename>
+				        </imagetype>
+			        </progressbar>
+
+			        <textarea name="rec_countlbl" from="channellbl" depends="!filesize_str">
+			            <position>0,140</position>
+			            <value>Number of Recordings:</value>
+			        </textarea>
+
+			        <textarea name="rec_count" from="textarea_info" depends="!filesize_str">
+			            <area>0,165,567,30</area>
+			            <template>%n in current group</template>
+			        </textarea>
+
 		        </group>
-	
-	
-		        <textarea name="description" from="textarea_plot">
+		
+		        <textarea name="description" from="textarea_plot" depends="filesize_str">
 		            <area>38,320,567,350</area>
 		            <template>%00x00| - %%"|SUBTITLE|"\n%%|YEARSTARS| - %%DESCRIPTION%</template>
 		        </textarea>
-	
+
 	        </group>
 
         </group>
@@ -191,7 +220,9 @@
 	             <position>0,0</position>
 	        </buttonlist>
 	
-	        <buttonlist name="groups" from="recordings"/>
+	        <buttonlist name="groups" from="buttonlist_tvshowpanel_group">
+	            <position>126,-365</position>
+	        </buttonlist>
 	
 	        <group name="statusinfo">
 	           <area>270,249,240,50</area>
