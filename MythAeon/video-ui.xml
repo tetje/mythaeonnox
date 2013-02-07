@@ -542,17 +542,17 @@
 	        </animation>
 
 	        <buttonlist name="videos" from="buttonlist_wall_small">
-	            <position>9,15</position>
+	            <position>9,160</position>
 	        </buttonlist>
 
 	        <textarea name="title" from="textarea_title">
-	            <area>510,985,900,45</area>
+	            <area>510,945,900,45</area>
 	            <align>allcenter</align>
 	            <template>%title%% - |subtitle%</template>
 	        </textarea>
 
 	        <group name="wallinfodetails" from="basegroupinfodetailswall">
-	           <position>0,975</position>
+	           <position>0,935</position>
 	        </group>
 	     </group>
 

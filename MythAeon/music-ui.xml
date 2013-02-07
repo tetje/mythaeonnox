@@ -156,7 +156,7 @@
 	            <area>485,80,736,515</area>
 	            <numlists>1</numlists>
 	            <spacing>0</spacing>
-	            <buttonlist name="listtemplate" from="playlist_tree_base" />
+	            <buttonlist name="listtemplate" from="buttonlist_musicshowpanel" />
 	        </buttontree>
 
 	        <textarea name="breadcrumbs" from="textarea_label">
@@ -345,16 +345,51 @@
               <area>38,85,450,515</area>
 	        </group>
 		
-        <buttonlist name="field_list" from="baseselector">
-            <position>25,30</position>
-        </buttonlist>
-
-        <textedit name="criteria_edit" from="basetextedit">
-            <position>250,25</position>
-        </textedit>
-
-	        <buttonlist name="tracks_list" from="playlist_tree_base">
-	            <area>485,80,736,515</area>
+	        <buttonlist name="field_list" from="selector_musicshowpanel">
+	            <position>485,85</position>
+	        </buttonlist>
+	
+	        <textedit name="criteria_edit">
+	            <area>485,155,736,70</area>
+		         <statetype name="background">
+		             <state name="active">
+					        <textarea name="lblactive" from="textarea_label">
+					            <area>20,7,696,30</area>
+					            <value>Enter:</value>
+					        </textarea>		
+					        <textarea name="titlelblactive" from="textarea_info">
+					            <area>20,32,696,30</area>
+					            <value>Search string</value>
+					        </textarea>	
+					    </state>
+		             <state name="selected">
+			              <imagetype name="Listpanel_selectbar">
+			                  <area>0,0,736,70</area>
+			                  <filename>images/shared/listpanel_selectbar.png</filename>
+			              </imagetype>
+			  		        <textarea name="lblselected" from="textarea_label">
+					            <area>20,7,696,30</area>
+					            <font>Font_Label_List_Selected</font>
+					            <value>Enter:</value>
+					        </textarea>		
+				           <textarea name="titlelblselected" from="textarea_info">
+			                  <area>20,32,300,30</area>
+				               <font>Font_Info_Selected</font>
+				               <value>Search String</value>
+				           </textarea>		
+					    </state>
+	                <state name="inactive"/>
+					</statetype>	
+		         <imagetype name="cursor">
+		             <filename>cursor.png</filename>
+		         </imagetype>
+		         <textarea name="text" from="textarea_info">
+		             <area>340,32,376,30</area>
+		         </textarea>
+	        </textedit>
+	
+	        <buttonlist name="tracks_list" from="buttonlist_musicshowpanel">
+	            <position>485,225</position>
 	        </buttonlist>
 
 	        <textarea name="breadcrumbs" from="textarea_label">
