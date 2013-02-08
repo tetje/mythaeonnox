@@ -559,7 +559,7 @@
 	        </imagetype>
 
 	        <buttonlist name="videos" from="buttonlist_wall_panel">
-	            <position>17,58</position>
+	            <position>11,58</position>
 	        </buttonlist>
 
 	     </group>   
