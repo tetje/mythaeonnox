@@ -392,9 +392,9 @@
 	            <position>485,225</position>
 	        </buttonlist>
 
-	        <textarea name="breadcrumbs" from="textarea_label">
+	        <textarea name="matches_text" from="textarea_label">
 	            <area>38,22,1600,30</area>
-	            <template>Path: %breadcrumbs%</template>
+	            <template>Number of songs found: %n</template>
 	        </textarea>
 
            <group name="playinfo" from="basegroupplayinfo">

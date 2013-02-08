@@ -1077,10 +1077,11 @@
 		         </textarea>	
                <textarea name="buttontext" from="textarea_info">
                    <area>20,32,594,30</area>
+                   <cutdown>yes</cutdown>
                </textarea>
                <textarea name="title" from="buttontext">
                    <area>20,32,696,30</area>
-                   <template>%TITLE% - %ARTIST%</template>
+                   <template>%TITLE% - %ARTIST% %(|ALBUM|)%</template>
                </textarea>
 	 	         <statetype name="buttoncheck">
 		            <area>614,0,122,70</area>
@@ -1122,7 +1123,7 @@
                </textarea>
                <textarea name="title" from="buttontext">
                    <area>20,32,696,30</area>
-                   <template>%TITLE% - %ARTIST%</template>
+                   <template>%TITLE% - %ARTIST% %(|ALBUM|)%</template>
                </textarea>
 	 	         <statetype name="buttoncheck">
 		            <area>614,0,122,70</area>
@@ -1491,7 +1492,7 @@
 
    <buttonlist name="buttonlist_wall_small">
        <spacing>0</spacing>
-       <area>0,0,1920,710</area>
+       <area>0,0,1600,710</area>
        <searchposition>758,55</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
@@ -1500,7 +1501,7 @@
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <drawfrombottom>yes</drawfrombottom>
-       <buttonarea>0,0,1920,710</buttonarea>
+       <buttonarea>0,0,1600,710</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
                <area>-2,-2,160,236</area>
@@ -1515,7 +1516,7 @@
                    <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
                </imagetype>
                <textarea name="buttontext" from="textarea_plot" depends="!coverart">
-                   <area>10,0,130,50</area>
+                   <area>10,-2,130,50</area>
                    <font>Font_Info_Small_White</font>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
@@ -1523,6 +1524,111 @@
                </textarea>	  
                <imagetype name="WallMovieOverlay">
                    <area>5,5,150,226</area>
+                   <filename>images/shared/wall_movie_nfoverlay.png</filename>
+               </imagetype>
+<!-- 
+               <statetype name="nodetype">
+                   <area>0,0,153,220</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>123,190,25,25</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,153,220</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>255</alpha>
+           </state>
+           <state name="selectedactive">
+               <area>-36,-51,231,335</area>
+               <imagetype name="WallMovieBorder">
+                   <area>0,0,231,335</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_movie_fborder.png</filename>
+               </imagetype>
+               <imagetype name="coverart">
+                   <area>12,12,208,311</area>
+                   <mask>images/shared/wall_movie_mask.png</mask>
+                   <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
+               </imagetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>12,12,208,311</area>
+                   <filename>images/shared/wall_movie_nfoverlay.png</filename>
+               </imagetype>
+
+<!--
+               <statetype name="nodetype">
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>150,234,30,30</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,185,269</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>255</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_wall_panel">
+       <spacing>0</spacing>
+       <area>0,0,1680,744</area>
+       <searchposition>758,55</searchposition>
+       <layout>grid</layout>
+       <scrollstyle>free</scrollstyle>
+       <arrange>fixed</arrange>
+       <align>bottom,hcenter</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <drawfrombottom>yes</drawfrombottom>
+       <buttonarea>0,0,1680,744</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,167,245</area>
+               <imagetype name="WallMovieBorder">
+                   <area>0,0,167,245</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_movie_nfborder.png</filename>
+               </imagetype>
+               <imagetype name="coverart">
+                   <area>5,5,158,236</area>
+                   <mask>images/shared/wall_movie_mask_small_panel.png</mask>
+                   <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_plot" depends="!coverart">
+                   <area>10,0,138,50</area>
+                   <font>Font_Info_Small_White</font>
+                   <multiline>yes</multiline>
+                   <cutdown>yes</cutdown>
+                   <align>hcenter,vcenter</align>
+               </textarea>	  
+               <imagetype name="WallMovieOverlay">
+                   <area>5,5,158,236</area>
                    <filename>images/shared/wall_movie_nfoverlay.png</filename>
                </imagetype>
 <!-- 

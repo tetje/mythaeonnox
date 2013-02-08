@@ -532,30 +532,70 @@
             <position>1240,0</position>
         </group>
 
-        <group name="moviewallgroup">
-           <area>0,30,1920,1020</area>
+        <group name="multiplextabletmoviegroup">
+           <area>113,70,1694,846</area>
 
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="0,-1075" end="0,30" easingcurve="InOutBack" />
+	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
-	        <buttonlist name="videos" from="buttonlist_wall_small">
-	            <position>9,160</position>
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+	        <imagetype name="multiplextabletbgdimg">
+	            <area>0,0,1694,846</area>
+	            <filename>images/shared/multiplex_back.png</filename>
+	        </imagetype>
+	        
+	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
+	            <filename>images/shared/multiplex_tablet_nolines.png</filename>
+	        </imagetype>
+
+	        <buttonlist name="videos" from="buttonlist_wall_panel">
+	            <position>17,58</position>
 	        </buttonlist>
 
-	        <textarea name="title" from="textarea_title">
-	            <area>510,945,900,45</area>
+	     </group>   
+
+        <group name="multiplextabletmoviewallgroup">
+           <area>0,670,1920,410</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="1920,670" end="0,670" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="0,690" end="-1920,690" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+	        <textarea name="genres" from="textarea_title_sub">
+	            <area>510,295,900,30</area>
 	            <align>allcenter</align>
-	            <template>%title%% - |subtitle%</template>
+	        </textarea>
+	
+	        <textarea name="title" from="textarea_title">
+	            <area>510,329,900,45</area>
+	            <align>allcenter</align>
+	            <template>%TITLE%% - |SUBTITLE%</template>
 	        </textarea>
 
-	        <group name="wallinfodetails" from="basegroupinfodetailswall">
-	           <position>0,935</position>
+	        <group name="listinfodetails" from="basegroupinfodetailswall">
+	           <position>0,300</position>
 	        </group>
 	     </group>
-
 
     </window>
 
