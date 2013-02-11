@@ -233,7 +233,7 @@
 
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/movies/</filename>
+            <filename>images/backgrounds/music/</filename>
         </imagetype>
 
         <imagetype name="showcasefloorimg">
@@ -260,28 +260,49 @@
         </group> 
 
         <group name="moviewallgroup">
-           <area>0,30,1920,1020</area>
+           <area>113,70,1694,846</area>
 
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="0,-1075" end="0,30" easingcurve="InOutBack" />
+	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+	        <imagetype name="multiplextabletbgdimg">
+	            <area>0,0,1694,846</area>
+	            <filename>images/shared/multiplex_back.png</filename>
+	        </imagetype>
+	        
+	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
+	            <filename>images/shared/multiplex_tablet_nolines.png</filename>
+	        </imagetype>
+<!--
+	        <buttonlist name="videos" from="buttonlist_wall_panel">
+	            <position>11,58</position>
+	        </buttonlist>
+-->
 	        <buttontree name="playlist_tree">
-	            <area>8,60,1910,1020</area>
+	            <area>52,27,1680,744</area>
 	            <numlists>1</numlists>
 	            <spacing>0</spacing>
 	            <buttonlist name="listtemplate" from="buttonlist_wall_music" />
 	        </buttontree>
 
 	        <textarea name="breadcrumbs" from="textarea_title">
-	            <area>10,900,1900,45</area>
+	            <area>0,862,1694,45</area>
 	            <align>allcenter</align>
 	        </textarea>
 
 	        <group name="controlbuttons" from="basegroupcontrolbuttons">
-	           <area>610,925,700,150</area>
+	           <area>477,885,700,150</area>
 	        </group>
 
 	     </group>

@@ -226,7 +226,7 @@
 	
 	        <group name="statusinfo">
 	           <area>270,249,240,50</area>
-	           <alpha>192</alpha>
+	           <alpha>255</alpha>
 
 		        <statetype name="autoexpire">
 		            <state name="yes">
@@ -282,7 +282,7 @@
 
 	        <group name="mediainfo" depends="category"> 
 	           <area>1400,224,390,100</area>
-	           <alpha>192</alpha>
+	           <alpha>255</alpha>
 	
 		        <statetype name="subtitletypes">
 		            <area>340,25,50,50</area>

@@ -156,6 +156,34 @@
         <weight>light</weight>
     </fontdef>
     
+    <!-- Fonts for all the generated icons -->
+    <fontdef name="Font_Icon_Base" face="Aeon Info CY">
+        <pixelsize>28</pixelsize>
+        <color>#FFFFFF</color>
+        <weight>bold</weight>
+        <stretch>extraexpanded</stretch>
+    </fontdef>
+        
+    <fontdef name="Font_Icon_Base_Black" from="Font_Icon_Base">
+        <color>#000000</color>
+    </fontdef>
+        
+    <fontdef name="Font_Icon_Base_Green" from="Font_Icon_Base">
+        <color>#00FF00</color>
+    </fontdef>
+        
+    <fontdef name="Font_Icon_Base_Yellow" from="Font_Icon_Base">
+        <color>#FFFF00</color>
+    </fontdef>
+        
+    <fontdef name="Font_Icon_Base_Orange" from="Font_Icon_Base">
+        <color>#FF8000</color>
+    </fontdef>
+        
+    <fontdef name="Font_Icon_Base_Red" from="Font_Icon_Base">
+        <color>#FF0000</color>
+    </fontdef>
+        
    <!-- Base MythAeon clock definition -->
    <group name="defaultclockup">
       <imagetype name="ClockBgd">
@@ -328,45 +356,6 @@
         </state>
     </statetype>
 
-    <statetype name="videolevel_base">
-        <area>0,0,72,18</area>
-        <showempty>yes</showempty>
-        <state name="none">
-             <imagetype name="none">
-                <area>0,0,72,18</area>
-                <filename>images/icons/ratings/parentallevel_bg.png</filename>
-            </imagetype>
-        </state>
-        <state name="lowest">
-            <imagetype name="lowest">
-                <area>0,0,18,18</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/parentallevel_1_black.png</filename>
-            </imagetype>
-        </state>
-        <state name="low">
-            <imagetype name="low">
-                <area>0,0,36,18</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/parentallevel_2_black.png</filename>
-            </imagetype>
-        </state>
-        <state name="medium">
-            <imagetype name="medium">
-                <area>0,0,54,18</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/parentallevel_3_black.png</filename>
-            </imagetype>
-        </state>
-        <state name="high">
-            <imagetype name="high">
-                <area>0,0,72,18</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/parentallevel_4_black.png</filename>
-            </imagetype>
-        </state>
-    </statetype>
-
    <!-- Base MythAeon textarea definitions -->
    
    <textarea name="textarea_info">
@@ -453,6 +442,56 @@
        <area>0,0,460,72</area>
        <font>Font_Option_Settings</font>
    </textarea>
+
+   <textarea name="textarea_icon">
+       <area>0,0,63,46</area>
+       <font>Font_Icon_Base</font>
+       <multiline>no</multiline>
+       <cutdown>no</cutdown>
+       <case>upper</case>
+       <align>allcenter</align>
+   </textarea>
+   
+    <!-- Aeon definition of a parental level -->
+    <statetype name="videolevel_base">
+        <area>0,0,62,50</area>
+        <showempty>yes</showempty>
+        <state name="none">
+           <textarea name="none" from="textarea_icon">
+               <area>0,0,63,50</area>
+               <font>Font_Icon_Base_Black</font>
+               <value>0</value>
+           </textarea>           
+        </state>
+        <state name="lowest">
+           <textarea name="lowest" from="textarea_icon">
+               <area>0,0,62,50</area>
+               <font>Font_Icon_Base_Green</font>
+               <value>1</value>
+           </textarea>           
+        </state>
+        <state name="low">
+           <textarea name="low" from="textarea_icon">
+               <area>0,0,62,50</area>
+               <font>Font_Icon_Base_Yellow</font>
+               <value>2</value>
+           </textarea>           
+        </state>
+        <state name="medium">
+           <textarea name="medium" from="textarea_icon">
+               <area>0,0,62,50</area>
+               <font>Font_Icon_Base_Orange</font>
+               <value>3</value>
+           </textarea>           
+        </state>
+        <state name="high">
+           <textarea name="high" from="textarea_icon">
+               <area>0,0,62,50</area>
+               <font>Font_Icon_Base_Red</font>
+               <value>4</value>
+           </textarea>           
+        </state>
+    </statetype>
 
    <!-- Base MythAeon buttonlist definitions -->
    <buttonlist name="buttonlist_submenu">
@@ -1054,7 +1093,7 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_musicshowpanel">
-       <area>0,0,736,350</area>
+       <area>0,0,736,490</area>
        <layout>vertical</layout>
        <spacing>0</spacing>
        <scrollstyle>freeplaylist</scrollstyle>
@@ -1062,7 +1101,7 @@
        <align>left</align>
        <wrapstyle>selection</wrapstyle>
        <showarrow>no</showarrow>
-       <buttonarea>0,0,736,350</buttonarea>
+       <buttonarea>0,0,736,490</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
 <!--
@@ -1702,7 +1741,7 @@
 
    <buttonlist name="buttonlist_wall_music">
        <spacing>0</spacing>
-       <area>0,0,1920,942</area>
+       <area>0,0,1600,800</area>
        <searchposition>758,55</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
@@ -1711,7 +1750,7 @@
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <drawfrombottom>yes</drawfrombottom>
-       <buttonarea>0,0,1920,945</buttonarea>
+       <buttonarea>0,0,1600,800</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
                <area>,0,160,160</area>

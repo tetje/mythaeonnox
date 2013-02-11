@@ -287,7 +287,7 @@
 	        <imagetype name="coverart">
 	            <area>13,13,519,766</area>
 	            <mask>images/shared/list_movieicon_mask.png</mask>
-	            <filename>images/shared/defaultVideoBigPoster.png</filename>
+	            <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
                <preserveaspect>no</preserveaspect>
 	        </imagetype>
         
@@ -307,10 +307,101 @@
                <state name="no"/>
            </statetype>
 
+           <group name="defaultinfoiconseason">
+              <area>5,810,200,52</area>
+	           <shape name="defaulticonborder">
+	               <area>0,0,200,48</area>
+	               <type>roundbox</type>
+	               <cornerradius>5</cornerradius>
+	               <line color="#000000" alpha="255" width="2" />
+	           </shape>
+	           <shape name="defaulticonfill">
+	               <area>2,2,62,46</area>
+	               <type>roundbox</type>
+	               <cornerradius>5</cornerradius>
+	               <fill color="#000000" alpha="255" />
+	           </shape>
+	           <shape name="defaulticonfilledge">
+	               <area>62,2,2,46</area>
+	               <type>box</type>
+	               <cornerradius>5</cornerradius>
+	               <fill color="#000000" alpha="255" />
+	           </shape>
+	           <textarea name="icontextlbl" from="textarea_icon">
+	               <area>2,2,60,50</area>
+	               <value>SE</value>
+	           </textarea>
+	           <textarea name="##x##" from="textarea_icon">
+	               <area>65,2,134,50</area>
+	               <font>Font_Icon_Base_Black</font>
+	               <value>0x00</value>
+	           </textarea>           
+           </group>
+
+           <group name="defaultinfoiconrating">
+              <area>220,810,200,52</area>
+	           <shape name="defaulticonborder">
+	               <area>0,0,200,48</area>
+	               <type>roundbox</type>
+	               <cornerradius>5</cornerradius>
+	               <line color="#000000" alpha="255" width="2" />
+	           </shape>
+	           <shape name="defaulticonfill">
+	               <area>2,2,62,46</area>
+	               <type>roundbox</type>
+	               <cornerradius>5</cornerradius>
+	               <fill color="#000000" alpha="255" />
+	           </shape>
+	           <shape name="defaulticonfilledge">
+	               <area>62,2,2,46</area>
+	               <type>box</type>
+	               <cornerradius>5</cornerradius>
+	               <fill color="#000000" alpha="255" />
+	           </shape>
+	           <textarea name="icontextlbl" from="textarea_icon">
+	               <area>2,2,60,50</area>
+	               <value>RA</value>
+	           </textarea>
+	           <textarea name="rating" from="textarea_icon">
+	               <area>65,2,134,50</area>
+	               <font>Font_Icon_Base_Black</font>
+	               <value>0</value>
+	           </textarea>           
+           </group>
+
+           <group name="defaultinfoiconparental">
+              <area>435,810,128,52</area>
+	           <shape name="defaulticonborder">
+	               <area>0,0,128,48</area>
+	               <type>roundbox</type>
+	               <cornerradius>5</cornerradius>
+	               <line color="#000000" alpha="255" width="2" />
+	           </shape>
+	           <shape name="defaulticonfill">
+	               <area>2,2,62,46</area>
+	               <type>roundbox</type>
+	               <cornerradius>5</cornerradius>
+	               <fill color="#000000" alpha="255" />
+	           </shape>
+	           <shape name="defaulticonfilledge">
+	               <area>62,2,2,46</area>
+	               <type>box</type>
+	               <cornerradius>5</cornerradius>
+	               <fill color="#000000" alpha="255" />
+	           </shape>
+	           <textarea name="icontextlbl" from="textarea_icon">
+	               <area>2,2,60,50</area>
+	               <value>PA</value>
+	           </textarea>
+			     <statetype name="videolevel" from="videolevel_base">
+			         <position>65,2</position>
+			     </statetype>
+           </group>
+<!--
 	        <group name="listinfodetails" from="basegroupinfodetails">
 	           <position>73,810</position>
 			  </group>
-
+-->
 <!-- Fix me: This does not work when a movie has played and one returns to the main screen
 
 	        <animation trigger="AboutToHide">
