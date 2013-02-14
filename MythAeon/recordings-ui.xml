@@ -225,51 +225,108 @@
 	        </buttonlist>
 	
 	        <group name="statusinfo">
-	           <area>270,249,240,50</area>
-	           <alpha>255</alpha>
+	           <area>200,250,314,50</area>
+	           <alpha>228</alpha>
 
 		        <statetype name="autoexpire">
 		            <state name="yes">
-		                <imagetype name="autoexpireimg">
-		                    <area>0,0,50,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/autoexpire_black.png</filename>
-		                </imagetype>
+						  <area>0,0,64,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+						  <shape name="defaultshape1">
+						      <area>12,5,40,40</area>
+						      <type>ellipse</type>
+						      <line color="#FFFFFF" alpha="255" width="3" />
+						  </shape>
+						  <shape name="defaultshape2">
+						      <area>30,13,3,13</area>
+						      <type>box</type>
+						      <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaultshape3" from="defaultshape2">
+						      <area>30,26,10,3</area>
+						  </shape>
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 		        <statetype name="commflagged">
 		            <state name="yes">
-		                <imagetype name="commflaggedimg">
-		                    <area>60,0,50,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/commflagged_black.png</filename>
-		                </imagetype>
+						  <area>84,0,64,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+						  <shape name="defaultshape1">
+						      <area>12,5,40,40</area>
+						      <type>box</type>
+						      <line color="#FFFFFF" alpha="255" width="3" />
+						  </shape>
+						  <shape name="defaultshape4">
+						      <area>9,22,15,8</area>
+						      <type>box</type>
+						      <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaultshape5" from="defaultshape4">
+						      <position>40,22</position>
+						  </shape>
+						  <shape name="defaultshape6" from="defaultshape4">
+						      <area>23,18,3,16</area>
+						  </shape>
+						  <shape name="defaultshape7" from="defaultshape6">
+						      <position>37,18</position>
+						  </shape>
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 		        <statetype name="bookmark">
 		            <state name="yes">
-		                <imagetype name="bookmarkimg">
-		                    <area>120,0,50,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/bookmark_black.png</filename>
-		                </imagetype>
+						  <area>166,0,64,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+						  <shape name="defaultshape1">
+						      <area>12,8,40,37</area>
+						      <type>box</type>
+						      <line color="#FFFFFF" alpha="255" width="3" />
+						  </shape>
+						  <shape name="defaultshape2">
+						      <area>35,7,8,14</area>
+						      <type>box</type>
+						      <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaultshape3" from="defaultshape2">
+						      <area>35,7,2,17</area>
+						  </shape>
+						  <shape name="defaultshape4" from="defaultshape2">
+						      <area>40,7,2,17</area>
+						  </shape>
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 		        <statetype name="cutlist">
 		            <state name="yes">
-		                <imagetype name="cutlistimg">
-		                    <area>180,0,50,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/cutlist_black.png</filename>
-		                </imagetype>
+						  <area>250,0,64,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+						  <shape name="defaultshape1">
+						      <area>12,5,40,40</area>
+						      <type>box</type>
+						      <line color="#FFFFFF" alpha="255" width="3" />
+						  </shape>
+						  <shape name="defaultshape2">
+						      <area>29,11,17,15</area>
+						      <type>ellipse</type>
+						      <line color="#FFFFFF" alpha="255" width="3" />
+						  </shape>
+						  <shape name="defaultshape3" from="defaultshape2">
+						      <position>29,25</position>
+						  </shape>
+						  <shape name="defaultshape4">
+						      <area>9,20,35,3</area>
+						      <type>box</type>
+						      <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaultshape5" from="defaultshape4">
+						      <position>9,26</position>
+						  </shape>
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 	        </group>
-	
+
 	        <textarea name="category" from="textarea_title_sub">
 	            <area>510,230,900,30</area>
 	            <align>allcenter</align>
@@ -281,126 +338,358 @@
 	        </textarea>
 
 	        <group name="mediainfo" depends="category"> 
-	           <area>1400,224,390,100</area>
-	           <alpha>255</alpha>
+	           <area>1400,250,390,100</area>
+	           <alpha>228</alpha>
 	
 		        <statetype name="subtitletypes">
-		            <area>340,25,50,50</area>
+		            <area>333,0,165,50</area>
 		            <state name="cc">
-		                <imagetype name="cc">
-		                    <area>0,0,50,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/subtitles/cc_black.png</filename>
-		                </imagetype>
+						  <area>0,0,165,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
+						  <shape name="defaulttvborder">
+						      <area>15,10,36,24</area>
+						      <type>roundbox</type>
+						      <cornerradius>2</cornerradius>
+						      <line color="#FFFFFF" alpha="255" width="2" />
+						  </shape>
+						  <shape name="defaulttvmid">
+						      <area>28,34,10,6</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvbottom">
+						      <area>20,37,24,3</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvsubline1">
+						      <area>20,24,24,2</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
+						      <position>20,28</position>
+						  </shape>
+						  <textarea name="sub_text" from="textarea_icon">
+						      <area>65,2,95,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>CC</value>
+						  </textarea>           
 		            </state>
 		            <state name="subtitles">
-		                <imagetype name="subtitles">
-		                    <area>0,0,50,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/subtitles/subs_black.png</filename>
-		                </imagetype>
+						  <area>0,0,165,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
+						  <shape name="defaulttvborder">
+						      <area>15,10,36,24</area>
+						      <type>roundbox</type>
+						      <cornerradius>2</cornerradius>
+						      <line color="#FFFFFF" alpha="255" width="2" />
+						  </shape>
+						  <shape name="defaulttvmid">
+						      <area>28,34,10,6</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvbottom">
+						      <area>20,37,24,3</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvsubline1">
+						      <area>20,24,24,2</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
+						      <position>20,28</position>
+						  </shape>
+						  <textarea name="sub_text" from="textarea_icon">
+						      <area>65,2,95,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>SUB</value>
+						  </textarea>           
 		            </state>
 		            <state name="onscreensub">
-		                <imagetype name="onscreensub">
-		                    <area>0,0,50,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/subtitles/osd_black.png</filename>
-		                </imagetype>
+						  <area>0,0,165,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
+						  <shape name="defaulttvborder">
+						      <area>15,10,36,24</area>
+						      <type>roundbox</type>
+						      <cornerradius>2</cornerradius>
+						      <line color="#FFFFFF" alpha="255" width="2" />
+						  </shape>
+						  <shape name="defaulttvmid">
+						      <area>28,34,10,6</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvbottom">
+						      <area>20,37,24,3</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvsubline1">
+						      <area>20,24,24,2</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
+						      <position>20,28</position>
+						  </shape>
+						  <textarea name="sub_text" from="textarea_icon">
+						      <area>65,2,95,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>OSD</value>
+						  </textarea>           
 		            </state>
 		            <state name="default">
-		                <imagetype name="default">
-		                    <area>0,0,50,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename></filename>
-		                </imagetype>
 		            </state>
-		       </statetype>
-		       
+		        </statetype>
+	       
 		        <statetype name="videoprops">
-	              <area>185,0,130,96</area>
+	              <area>148,0,165,50</area>
 		            <state name="hd1080">
-		                <imagetype name="hd1080">
-		                    <area>0,0,128,96</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/video/hdtv_1080_black.png</filename>
-		                </imagetype>
+						  <area>0,0,165,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
+						  <textarea name="icontextlbl" from="textarea_icon">
+						      <area>2,2,60,50</area>
+						      <value>HD</value>
+						  </textarea>
+						  <textarea name="HD_text" from="textarea_icon">
+						      <area>65,2,95,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>1080</value>
+						  </textarea>           
 		            </state>
 		            <state name="hd720">
-		                <imagetype name="hd720">
-		                    <area>0,0,128,96</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/video/hdtv_720_black.png</filename>
-		                </imagetype>
+						  <area>0,0,165,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
+						  <textarea name="icontextlbl" from="textarea_icon">
+						      <area>2,2,60,50</area>
+						      <value>HD</value>
+						  </textarea>
+						  <textarea name="HD_text" from="textarea_icon">
+						      <area>65,2,95,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>720</value>
+						  </textarea>           
 		            </state>
 		            <state name="hdtv">
-		                <imagetype name="hdtv">
-		                    <area>0,0,128,96</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/video/hdtv_black.png</filename>
-		                </imagetype>
+						  <area>0,0,165,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
+						  <textarea name="icontextlbl" from="textarea_icon">
+						      <area>2,2,60,38</area>
+						      <value>HD</value>
+						  </textarea>
+						  <textarea name="icontextlbl2" from="textarea_icon">
+						      <area>2,33,60,15</area>
+						      <font>Font_Icon_Base_Small</font>
+						      <value>Television</value>
+						  </textarea>
+						  <textarea name="HD_text" from="textarea_icon">
+						      <area>65,2,95,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>1080</value>
+						  </textarea>           
 		            </state>
 		            <state name="avchd">
-		                <imagetype name="avchd">
-		                    <area>0,0,128,96</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/video/hdtv_h264_black.png</filename>
-		                </imagetype>
+						  <area>0,0,165,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
+						  <textarea name="icontextlbl" from="textarea_icon">
+						      <area>2,2,60,50</area>
+						      <value>HD</value>
+						  </textarea>
+						  <textarea name="HD_text" from="textarea_icon">
+						      <area>65,2,95,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>H264</value>
+						  </textarea>           
 		            </state>
 		            <state name="widescreen">
-		                <imagetype name="widescreen">
-		                    <area>0,0,128,96</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/video/hdtv_wide_black.png</filename>
-		                </imagetype>
+						  <area>0,0,165,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
+						  <textarea name="icontextlbl" from="textarea_icon">
+						      <area>2,2,60,38</area>
+						      <value>SD</value>
+						  </textarea>
+						  <textarea name="icontextlbl2" from="textarea_icon">
+						      <area>2,33,60,15</area>
+						      <font>Font_Icon_Base_Small</font>
+						      <value>wide</value>
+						  </textarea>
+						  <textarea name="SD_text" from="textarea_icon">
+						      <area>65,2,95,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>576</value>
+						  </textarea>           
 		            </state>
 		            <state name="default">
-		                <imagetype name="default">
-		                    <area>0,25,130,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/resolution/576_black.png</filename>
-		                </imagetype>
+						  <area>0,0,165,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
+						  <textarea name="icontextlbl" from="textarea_icon">
+						      <area>2,2,60,50</area>
+						      <value>SD</value>
+						  </textarea>
+						  <textarea name="SD_text" from="textarea_icon">
+						      <area>65,2,95,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>576</value>
+						  </textarea>           
 		            </state>
 		        </statetype>
 		        
 		        <statetype name="audioprops">
-		            <area>0,25,175,50</area>
+		            <area>0,0,128,50</area>
 		            <showempty>yes</showempty>
 		            <state name="stereo">
-		                <imagetype name="stereo">
-		                    <area>0,0,175,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/audio/dolby_2.0_black.png</filename>
-		                </imagetype>
+						  <area>0,0,128,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
+						  <shape name="defaultsoundborder">
+						      <area>17,10,30,30</area>
+						      <type>box</type>
+						      <line color="#FFFFFF" alpha="255" width="2" />
+						  </shape>
+						  <shape name="defaultsoundspeaker1">
+						      <area>14,9,10,10</area>
+						      <type>box</type>
+						      <fill color="#0000FF" alpha="255" />
+						  </shape>
+						  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
+						      <position>39,9</position>
+						  </shape>
+						  <textarea name="2_0_text" from="textarea_icon">
+						      <area>63,2,63,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>2.0</value>
+						  </textarea>           
 		            </state>
 		            <state name="surround">
-		                <imagetype name="surround">
-		                    <area>0,0,175,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/audio/dolby_5.1_black.png</filename>
-		                </imagetype>
+						  <area>0,0,128,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
+						  <shape name="defaultsoundborder">
+						      <area>17,10,30,30</area>
+						      <type>box</type>
+						      <line color="#FFFFFF" alpha="255" width="2" />
+						  </shape>
+						  <shape name="defaultsoundspeaker1">
+						      <area>26,9,10,10</area>
+						      <type>box</type>
+						      <fill color="#00FF00" alpha="255" />
+						  </shape>
+						  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
+						      <position>14,9</position>
+						  </shape>
+						  <shape name="defaultsoundspeaker3" from="defaultsoundspeaker1">
+						      <position>39,9</position>
+						  </shape>
+						  <shape name="defaultsoundspeaker4" from="defaultsoundspeaker1">
+						      <position>14,35</position>
+						  </shape>
+						  <shape name="defaultsoundspeaker5" from="defaultsoundspeaker1">
+						      <position>39,35</position>
+						  </shape>
+						  <shape name="defaultsoundspeaker6" from="defaultsoundspeaker1">
+						      <position>26,23</position>
+						  </shape>
+						  <textarea name="5_1_text" from="textarea_icon">
+						      <area>63,2,63,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>5.1</value>
+						  </textarea>           
 		            </state>
 		            <state name="dolby">
-		                <imagetype name="dolby">
-		                    <area>0,0,175,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/audio/dolby_unknown_black.png</filename>
-		                </imagetype>
+						  <area>0,0,128,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
+						  <shape name="defaultshape1">
+						      <area>5,10,26,30</area>
+						      <type>box</type>
+						      <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaultshape2">
+						      <area>2,13,26,26</area>
+						      <type>ellipse</type>
+						      <fill color="#000000" alpha="255" />
+						  </shape>
+						  <shape name="defaultshape3">
+						      <area>2,8,10,34</area>
+						      <type>box</type>
+						      <fill color="#000000" alpha="255" />
+						  </shape>
+						  <shape name="defaultshape4">
+						      <area>10,10,4,30</area>
+						      <type>box</type>
+						      <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaultshape5" from="defaultshape1">
+						      <position>34,10</position>
+						  </shape>
+						  <shape name="defaultshape6" from="defaultshape2">
+						      <position>37,13</position>
+						  </shape>
+						  <shape name="defaultshape7" from="defaultshape3">
+						      <position>54,8</position>
+						  </shape>
+						  <shape name="defaultshape8" from="defaultshape4">
+						      <position>51,10</position>
+						  </shape>
+						  <textarea name="dolby_text" from="textarea_icon">
+						      <area>63,2,63,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>2.0</value>
+						  </textarea>           
 		            </state>
 		            <state name="mono">
-		                <imagetype name="mono">
-		                    <area>0,0,175,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/audio/dolby_1.0_black.png</filename>
-		                </imagetype>
+						  <area>0,0,128,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
+						  <shape name="defaultsoundborder">
+						      <area>17,10,30,30</area>
+						      <type>box</type>
+						      <line color="#FFFFFF" alpha="255" width="2" />
+						  </shape>
+						  <shape name="defaultsoundspeaker1">
+						      <area>27,9,10,10</area>
+						      <type>box</type>
+						      <fill color="#FF0000" alpha="255" />
+						  </shape>
+						  <textarea name="1_0_text" from="textarea_icon">
+						      <area>63,2,63,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>1.0</value>
+						  </textarea>           
 		            </state>
 		            <state name="default">
-		                <imagetype name="default">
-		                    <area>22,0,130,50</area>
-		                    <preserveaspect>no</preserveaspect>
-		                    <filename>images/icons/audio/2.0._black.png</filename>
-		                </imagetype>
+						  <area>0,0,128,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
+						  <shape name="defaultsoundborder">
+						      <area>17,10,30,30</area>
+						      <type>box</type>
+						      <line color="#FFFFFF" alpha="255" width="2" />
+						  </shape>
+						  <shape name="defaultsoundspeaker1">
+						      <area>14,9,10,10</area>
+						      <type>box</type>
+						      <fill color="#0000FF" alpha="255" />
+						  </shape>
+						  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
+						      <position>39,9</position>
+						  </shape>
+						  <textarea name="2_0_text" from="textarea_icon">
+						      <area>63,2,63,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>2.0</value>
+						  </textarea>           
 		            </state>
 		        </statetype>
+
 	        </group>
         
         </group>  
