@@ -231,7 +231,7 @@
 		            <state name="yes">
 						  <area>0,0,64,50</area>
 		              <imagetype name="iconbgd">
-		                  <area>-7,-7,76,60</area>
+		                  <area>-6,-5,76,60</area>
 		                  <alpha>255</alpha>
 		                  <filename>images/shared/musicinfoshadow.png</filename>
 		                  <preserveaspect>no</preserveaspect>
@@ -263,7 +263,7 @@
 		            <state name="yes">
 						  <area>84,0,64,50</area>
 		              <imagetype name="iconbgd">
-		                  <area>-7,-7,76,60</area>
+		                  <area>-6,-5,76,60</area>
 		                  <alpha>255</alpha>
 		                  <filename>images/shared/musicinfoshadow.png</filename>
 		                  <preserveaspect>no</preserveaspect>
@@ -301,7 +301,7 @@
 		            <state name="yes">
 						  <area>166,0,64,50</area>
 		              <imagetype name="iconbgd">
-		                  <area>-7,-7,76,60</area>
+		                  <area>-6,-5,76,60</area>
 		                  <alpha>255</alpha>
 		                  <filename>images/shared/musicinfoshadow.png</filename>
 		                  <preserveaspect>no</preserveaspect>
@@ -336,7 +336,7 @@
 		            <state name="yes">
 						  <area>250,0,64,50</area>
 		              <imagetype name="iconbgd">
-		                  <area>-7,-7,76,60</area>
+		                  <area>-6,-5,76,60</area>
 		                  <alpha>255</alpha>
 		                  <filename>images/shared/musicinfoshadow.png</filename>
 		                  <preserveaspect>no</preserveaspect>
@@ -391,7 +391,7 @@
 		        <statetype name="subtitletypes">
 		            <area>333,0,165,50</area>
 	               <imagetype name="iconbgd">
-	                   <area>-18,-7,198,60</area>
+	                   <area>-18,-5,198,60</area>
 	                   <alpha>255</alpha>
 	                   <filename>images/shared/musicinfoshadow.png</filename>
 	                   <preserveaspect>no</preserveaspect>
@@ -418,13 +418,13 @@
 						     <fill color="#FFFFFF" alpha="255" />
 						  </shape>
 						  <shape name="defaulttvsubline1">
-						      <area>20,24,24,2</area>
+						      <area>22,21,22,2</area>
 						      <type>box</type>
 						      <cornerradius>3</cornerradius>
 						     <fill color="#FFFFFF" alpha="255" />
 						  </shape>
 						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
-						      <position>20,28</position>
+						      <position>22,26</position>
 						  </shape>
 						  <textarea name="sub_text" from="textarea_icon">
 						      <area>65,2,95,50</area>
@@ -454,13 +454,13 @@
 						     <fill color="#FFFFFF" alpha="255" />
 						  </shape>
 						  <shape name="defaulttvsubline1">
-						      <area>20,24,24,2</area>
+						      <area>22,21,22,2</area>
 						      <type>box</type>
 						      <cornerradius>3</cornerradius>
 						     <fill color="#FFFFFF" alpha="255" />
 						  </shape>
 						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
-						      <position>20,28</position>
+						      <position>22,26</position>
 						  </shape>
 						  <textarea name="sub_text" from="textarea_icon">
 						      <area>65,2,95,50</area>
@@ -490,13 +490,13 @@
 						     <fill color="#FFFFFF" alpha="255" />
 						  </shape>
 						  <shape name="defaulttvsubline1">
-						      <area>20,24,24,2</area>
+						      <area>22,21,22,2</area>
 						      <type>box</type>
 						      <cornerradius>3</cornerradius>
 						     <fill color="#FFFFFF" alpha="255" />
 						  </shape>
 						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
-						      <position>20,28</position>
+						      <position>22,26</position>
 						  </shape>
 						  <textarea name="sub_text" from="textarea_icon">
 						      <area>65,2,95,50</area>
@@ -505,6 +505,40 @@
 						  </textarea>           
 		            </state>
 		            <state name="default">
+						  <area>0,0,165,50</area>
+						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+						  <shape name="defaulttvborder">
+						      <area>15,10,36,24</area>
+						      <type>roundbox</type>
+						      <cornerradius>2</cornerradius>
+						      <line color="#FFFFFF" alpha="255" width="2" />
+						  </shape>
+						  <shape name="defaulttvmid">
+						      <area>28,34,10,6</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvbottom">
+						      <area>20,37,24,3</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvsubline1">
+						      <area>22,21,22,2</area>
+						      <type>box</type>
+						      <cornerradius>3</cornerradius>
+						     <fill color="#FFFFFF" alpha="255" />
+						  </shape>
+						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
+						      <position>22,26</position>
+						  </shape>
+						  <textarea name="sub_text" from="textarea_icon">
+						      <area>65,2,95,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>No</value>
+						  </textarea>           
 		            </state>
 	               <imagetype name="iconglass">
 	                   <area>0,0,63,50</area>
@@ -517,7 +551,7 @@
 		        <statetype name="videoprops">
 	              <area>148,0,165,50</area>
 	               <imagetype name="iconbgd">
-	                   <area>-18,-7,198,60</area>
+	                   <area>-18,-5,198,60</area>
 	                   <alpha>255</alpha>
 	                   <filename>images/shared/musicinfoshadow.png</filename>
 	                   <preserveaspect>no</preserveaspect>
@@ -621,7 +655,7 @@
 		        <statetype name="audioprops">
 		            <area>0,0,128,50</area>
 	               <imagetype name="iconbgd">
-	                   <area>-13,-7,154,60</area>
+	                   <area>-13,-5,154,60</area>
 	                   <alpha>255</alpha>
 	                   <filename>images/shared/musicinfoshadow.png</filename>
 	                   <preserveaspect>no</preserveaspect>
@@ -631,17 +665,17 @@
 						  <area>0,0,128,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaultsoundborder">
-						      <area>17,10,30,30</area>
+						      <area>17,10,31,30</area>
 						      <type>box</type>
-						      <line color="#FFFFFF" alpha="255" width="2" />
+						      <line color="#FFFFFF" alpha="255" width="3" />
 						  </shape>
 						  <shape name="defaultsoundspeaker1">
-						      <area>14,9,10,10</area>
+						      <area>14,8,10,10</area>
 						      <type>box</type>
-						      <fill color="#0000FF" alpha="255" />
+						      <fill color="#FFFFFF" alpha="255" />
 						  </shape>
 						  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
-						      <position>39,9</position>
+						      <position>40,8</position>
 						  </shape>
 						  <textarea name="2_0_text" from="textarea_icon">
 						      <area>63,2,63,50</area>
@@ -653,29 +687,29 @@
 						  <area>0,0,128,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaultsoundborder">
-						      <area>17,10,30,30</area>
+						      <area>17,10,31,30</area>
 						      <type>box</type>
-						      <line color="#FFFFFF" alpha="255" width="2" />
+						      <line color="#FFFFFF" alpha="255" width="3" />
 						  </shape>
 						  <shape name="defaultsoundspeaker1">
-						      <area>26,9,10,10</area>
+						      <area>27,8,10,10</area>
 						      <type>box</type>
-						      <fill color="#00FF00" alpha="255" />
+						      <fill color="#FFFFFF" alpha="255" />
 						  </shape>
 						  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
-						      <position>14,9</position>
+						      <position>14,8</position>
 						  </shape>
 						  <shape name="defaultsoundspeaker3" from="defaultsoundspeaker1">
-						      <position>39,9</position>
+						      <position>40,8</position>
 						  </shape>
 						  <shape name="defaultsoundspeaker4" from="defaultsoundspeaker1">
-						      <position>14,35</position>
+						      <position>14,34</position>
 						  </shape>
 						  <shape name="defaultsoundspeaker5" from="defaultsoundspeaker1">
-						      <position>39,35</position>
+						      <position>40,34</position>
 						  </shape>
 						  <shape name="defaultsoundspeaker6" from="defaultsoundspeaker1">
-						      <position>26,23</position>
+						      <position>27,22</position>
 						  </shape>
 						  <textarea name="5_1_text" from="textarea_icon">
 						      <area>63,2,63,50</area>
@@ -728,14 +762,14 @@
 						  <area>0,0,128,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaultsoundborder">
-						      <area>17,10,30,30</area>
+						      <area>17,10,31,30</area>
 						      <type>box</type>
-						      <line color="#FFFFFF" alpha="255" width="2" />
+						      <line color="#FFFFFF" alpha="255" width="3" />
 						  </shape>
 						  <shape name="defaultsoundspeaker1">
-						      <area>27,9,10,10</area>
+						      <area>27,8,10,10</area>
 						      <type>box</type>
-						      <fill color="#FF0000" alpha="255" />
+						      <fill color="#FFFFFF" alpha="255" />
 						  </shape>
 						  <textarea name="1_0_text" from="textarea_icon">
 						      <area>63,2,63,50</area>
@@ -747,17 +781,17 @@
 						  <area>0,0,128,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaultsoundborder">
-						      <area>17,10,30,30</area>
+						      <area>17,10,31,30</area>
 						      <type>box</type>
-						      <line color="#FFFFFF" alpha="255" width="2" />
+						      <line color="#FFFFFF" alpha="255" width="3" />
 						  </shape>
 						  <shape name="defaultsoundspeaker1">
-						      <area>14,9,10,10</area>
+						      <area>14,8,10,10</area>
 						      <type>box</type>
-						      <fill color="#0000FF" alpha="255" />
+						      <fill color="#FFFFFF" alpha="255" />
 						  </shape>
 						  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
-						      <position>39,9</position>
+						      <position>40,8</position>
 						  </shape>
 						  <textarea name="2_0_text" from="textarea_icon">
 						      <area>63,2,63,50</area>
