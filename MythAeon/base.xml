@@ -4525,7 +4525,7 @@
 		  <shape name="defaulticonborder">
 		      <area>0,0,64,50</area>
 		      <type>roundbox</type>
-		      <cornerradius>5</cornerradius>
+		      <cornerradius>2</cornerradius>
 		      <line color="#000000" alpha="255" width="2" />
 		      <fill color="#000000" alpha="255" />
 		  </shape>
