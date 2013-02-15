@@ -390,12 +390,12 @@
 	
 		        <statetype name="subtitletypes">
 		            <area>333,0,165,50</area>
-	               <imagetype name="iconbgd">
-	                   <area>-18,-5,198,60</area>
-	                   <alpha>255</alpha>
-	                   <filename>images/shared/musicinfoshadow.png</filename>
-	                   <preserveaspect>no</preserveaspect>
-	               </imagetype>
+		              <imagetype name="iconbgd">
+		                  <area>-6,-5,76,60</area>
+		                  <alpha>255</alpha>
+		                  <filename>images/shared/musicinfoshadow.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		              </imagetype>
 		            <state name="cc">
 						  <area>0,0,165,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
@@ -426,11 +426,6 @@
 						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
 						      <position>22,26</position>
 						  </shape>
-						  <textarea name="sub_text" from="textarea_icon">
-						      <area>65,2,95,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>CC</value>
-						  </textarea>           
 		            </state>
 		            <state name="subtitles">
 						  <area>0,0,165,50</area>
@@ -462,11 +457,6 @@
 						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
 						      <position>22,26</position>
 						  </shape>
-						  <textarea name="sub_text" from="textarea_icon">
-						      <area>65,2,95,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>SUB</value>
-						  </textarea>           
 		            </state>
 		            <state name="onscreensub">
 						  <area>0,0,165,50</area>
@@ -498,47 +488,19 @@
 						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
 						      <position>22,26</position>
 						  </shape>
-						  <textarea name="sub_text" from="textarea_icon">
-						      <area>65,2,95,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>OSD</value>
-						  </textarea>           
 		            </state>
 		            <state name="default">
 						  <area>0,0,165,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
-						  <shape name="defaulttvborder">
-						      <area>15,10,36,24</area>
-						      <type>roundbox</type>
-						      <cornerradius>2</cornerradius>
-						      <line color="#FFFFFF" alpha="255" width="2" />
-						  </shape>
-						  <shape name="defaulttvmid">
-						      <area>28,34,10,6</area>
-						      <type>box</type>
-						      <cornerradius>3</cornerradius>
-						     <fill color="#FFFFFF" alpha="255" />
-						  </shape>
-						  <shape name="defaulttvbottom">
-						      <area>20,37,24,3</area>
-						      <type>box</type>
-						      <cornerradius>3</cornerradius>
-						     <fill color="#FFFFFF" alpha="255" />
-						  </shape>
-						  <shape name="defaulttvsubline1">
-						      <area>22,21,22,2</area>
-						      <type>box</type>
-						      <cornerradius>3</cornerradius>
-						     <fill color="#FFFFFF" alpha="255" />
-						  </shape>
-						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
-						      <position>22,26</position>
-						  </shape>
-						  <textarea name="sub_text" from="textarea_icon">
-						      <area>65,2,95,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>No</value>
-						  </textarea>           
+							  <textarea name="icontextlbl" from="textarea_icon">
+							      <area>2,2,60,38</area>
+							      <value>NO</value>
+							  </textarea>
+							  <textarea name="icontextlbl2" from="textarea_icon">
+							      <area>2,33,60,15</area>
+							      <font>Font_Icon_Base_Small</font>
+							      <value>Subtitles</value>
+							  </textarea>
 		            </state>
 	               <imagetype name="iconglass">
 	                   <area>0,0,63,50</area>
