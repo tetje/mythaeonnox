@@ -4553,7 +4553,13 @@
 
 	  <group name="defaultinfoiconseason">
 		  <area>0,0,200,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdlong" depends="##x##"/>
+        <imagetype name="iconbgd" depends="##x##">
+            <area>-6,-5,212,60</area>
+            <alpha>255</alpha>
+            <filename>images/shared/musicinfoshadow.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="##x##"/>
 		  <textarea name="icontextlbl" from="textarea_icon" depends="##x##">
 		      <area>2,2,60,38</area>
 		      <value>S</value>
@@ -4567,11 +4573,23 @@
 		      <area>65,2,134,50</area>
 		      <font>Font_Icon_Base_Black</font>
 		  </textarea>           
+        <imagetype name="iconglass" depends="##x##">
+            <area>0,0,63,50</area>
+            <alpha>255</alpha>
+            <filename>images/shared/list_musicicon_glass.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
 	  </group>
 	
 	  <group name="defaultinfoiconrating">
 		  <area>0,0,200,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdlong" depends="rating"/>
+        <imagetype name="iconbgd" depends="##x##">
+            <area>-6,-5,212,60</area>
+            <alpha>255</alpha>
+            <filename>images/shared/musicinfoshadowlong.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="rating"/>
 		  <textarea name="icontextlbl" from="textarea_icon" depends="rating">
 		      <area>2,2,60,38</area>
 		      <value>R</value>
@@ -4585,16 +4603,28 @@
 		      <area>65,2,134,50</area>
 		      <font>Font_Icon_Base_Black</font>
 		  </textarea>           
+        <imagetype name="iconglass" depends="rating">
+            <area>0,0,63,50</area>
+            <alpha>255</alpha>
+            <filename>images/shared/list_musicicon_glass.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
 	  </group>
 	
 	  <group name="defaultinfoiconparental">
 		  <area>0,0,128,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
+        <imagetype name="iconbgd">
+            <area>-13,-5,154,60</area>
+            <alpha>255</alpha>
+            <filename>images/shared/musicinfoshadow.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+		  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 		  <textarea name="icontextlbl" from="textarea_icon">
 		      <area>2,2,60,38</area>
 		      <value>P</value>
 		  </textarea>
-		  <textarea name="icontextlbl2" from="textarea_icon" depends="rating">
+		  <textarea name="icontextlbl2" from="textarea_icon">
 		      <area>2,33,60,15</area>
 		      <font>Font_Icon_Base_Small</font>
 		      <value>Level</value>
@@ -4602,16 +4632,28 @@
 		  <statetype name="videolevel" from="videolevel_base">
 		      <position>65,2</position>
 		  </statetype>
+        <imagetype name="iconglass">
+            <area>0,0,63,50</area>
+            <alpha>255</alpha>
+            <filename>images/shared/list_musicicon_glass.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
 	  </group>
 	
 	  <group name="defaultinfoiconrectype">
 		  <area>0,0,128,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
+        <imagetype name="iconbgd">
+            <area>-13,-5,154,60</area>
+            <alpha>255</alpha>
+            <filename>images/shared/musicinfoshadow.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+		  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 		  <textarea name="icontextlbl" from="textarea_icon">
 		      <area>2,2,60,38</area>
 		      <value>R</value>
 		  </textarea>
-		  <textarea name="icontextlbl2" from="textarea_icon" depends="rating">
+		  <textarea name="icontextlbl2" from="textarea_icon">
 		      <area>2,33,60,15</area>
 		      <font>Font_Icon_Base_Small</font>
 		      <value>Status</value>
@@ -4620,11 +4662,23 @@
 		      <area>65,2,63,50</area>
 		      <font>Font_Icon_Base_Black</font>
 		  </textarea>           
+        <imagetype name="iconglass">
+            <area>0,0,63,50</area>
+            <alpha>255</alpha>
+            <filename>images/shared/list_musicicon_glass.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
 	  </group>
 	
 	  <group name="defaultinfoiconrecpriority">
 		  <area>0,0,128,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgd" depends="recpriority"/>
+        <imagetype name="iconbgd" depends="recpriority">
+            <area>-13,-5,154,60</area>
+            <alpha>255</alpha>
+            <filename>images/shared/musicinfoshadow.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="recpriority"/>
 		  <textarea name="icontextlbl" from="textarea_icon" depends="recpriority">
 		      <area>2,2,60,38</area>
 		      <value>!</value>
@@ -4638,398 +4692,66 @@
 		      <area>65,2,63,50</area>
 		      <font>Font_Icon_Base_Black</font>
 		  </textarea>           
+        <imagetype name="iconglass" depends="recpriority">
+            <area>0,0,63,50</area>
+            <alpha>255</alpha>
+            <filename>images/shared/list_musicicon_glass.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
 	  </group>
 	
 	  <group name="defaultinfoicon1_0">
 		  <area>0,0,128,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
-		  <shape name="defaultsoundborder">
-		      <area>17,10,30,30</area>
-		      <type>box</type>
-		      <line color="#FFFFFF" alpha="255" width="2" />
-		  </shape>
-		  <shape name="defaultsoundspeaker1">
-		      <area>27,9,10,10</area>
-		      <type>box</type>
-		      <fill color="#FF0000" alpha="255" />
-		  </shape>
-		  <textarea name="1_0_text" from="textarea_icon">
-		      <area>63,2,63,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>1.0</value>
-		  </textarea>           
 	  </group>
 	
 	  <group name="defaultinfoicon2_0">
 		  <area>0,0,128,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
-		  <shape name="defaultsoundborder">
-		      <area>17,10,30,30</area>
-		      <type>box</type>
-		      <line color="#FFFFFF" alpha="255" width="2" />
-		  </shape>
-		  <shape name="defaultsoundspeaker1">
-		      <area>14,9,10,10</area>
-		      <type>box</type>
-		      <fill color="#0000FF" alpha="255" />
-		  </shape>
-		  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
-		      <position>39,9</position>
-		  </shape>
-		  <textarea name="2_0_text" from="textarea_icon">
-		      <area>63,2,63,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>2.0</value>
-		  </textarea>           
 	  </group>
 	
 	  <group name="defaultinfoicon5_1">
 		  <area>0,0,128,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
-		  <shape name="defaultsoundborder">
-		      <area>17,10,30,30</area>
-		      <type>box</type>
-		      <line color="#FFFFFF" alpha="255" width="2" />
-		  </shape>
-		  <shape name="defaultsoundspeaker1">
-		      <area>26,9,10,10</area>
-		      <type>box</type>
-		      <fill color="#00FF00" alpha="255" />
-		  </shape>
-		  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
-		      <position>14,9</position>
-		  </shape>
-		  <shape name="defaultsoundspeaker3" from="defaultsoundspeaker1">
-		      <position>39,9</position>
-		  </shape>
-		  <shape name="defaultsoundspeaker4" from="defaultsoundspeaker1">
-		      <position>14,35</position>
-		  </shape>
-		  <shape name="defaultsoundspeaker5" from="defaultsoundspeaker1">
-		      <position>39,35</position>
-		  </shape>
-		  <shape name="defaultsoundspeaker6" from="defaultsoundspeaker1">
-		      <position>26,23</position>
-		  </shape>
-		  <textarea name="5_1_text" from="textarea_icon">
-		      <area>63,2,63,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>5.1</value>
-		  </textarea>           
 	  </group>
 	
 	  <group name="defaultinfoicondolby">
 		  <area>0,0,128,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgd"/>
-		  <shape name="defaultshape1">
-		      <area>5,10,26,30</area>
-		      <type>box</type>
-		      <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaultshape2">
-		      <area>2,13,26,26</area>
-		      <type>ellipse</type>
-		      <fill color="#000000" alpha="255" />
-		  </shape>
-		  <shape name="defaultshape3">
-		      <area>2,8,10,34</area>
-		      <type>box</type>
-		      <fill color="#000000" alpha="255" />
-		  </shape>
-		  <shape name="defaultshape4">
-		      <area>10,10,4,30</area>
-		      <type>box</type>
-		      <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaultshape5" from="defaultshape1">
-		      <position>34,10</position>
-		  </shape>
-		  <shape name="defaultshape6" from="defaultshape2">
-		      <position>37,13</position>
-		  </shape>
-		  <shape name="defaultshape7" from="defaultshape3">
-		      <position>54,8</position>
-		  </shape>
-		  <shape name="defaultshape8" from="defaultshape4">
-		      <position>51,10</position>
-		  </shape>
-		  <textarea name="dolby_text" from="textarea_icon">
-		      <area>63,2,63,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>2.0</value>
-		  </textarea>           
 	  </group>
 
 	  <group name="defaultinfoiconvideo1080">
 		  <area>0,0,165,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
-		  <textarea name="icontextlbl" from="textarea_icon">
-		      <area>2,2,60,50</area>
-		      <value>HD</value>
-		  </textarea>
-		  <textarea name="HD_text" from="textarea_icon">
-		      <area>65,2,95,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>1080</value>
-		  </textarea>           
 	  </group>
 
 	  <group name="defaultinfoiconvideo720">
 		  <area>0,0,165,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
-		  <textarea name="icontextlbl" from="textarea_icon">
-		      <area>2,2,60,50</area>
-		      <value>HD</value>
-		  </textarea>
-		  <textarea name="HD_text" from="textarea_icon">
-		      <area>65,2,95,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>720</value>
-		  </textarea>           
 	  </group>
 	
 	  <group name="defaultinfoiconvideoavchd">
 		  <area>0,0,165,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
-		  <textarea name="icontextlbl" from="textarea_icon">
-		      <area>2,2,60,50</area>
-		      <value>HD</value>
-		  </textarea>
-		  <textarea name="HD_text" from="textarea_icon">
-		      <area>65,2,95,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>H264</value>
-		  </textarea>           
 	  </group>
 	
 	  <group name="defaultinfoiconvideohdtv">
 		  <area>0,0,165,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
-		  <textarea name="icontextlbl" from="textarea_icon">
-		      <area>2,2,60,38</area>
-		      <value>HD</value>
-		  </textarea>
-		  <textarea name="icontextlbl2" from="textarea_icon">
-		      <area>2,33,60,15</area>
-		      <font>Font_Icon_Base_Small</font>
-		      <value>Television</value>
-		  </textarea>
-		  <textarea name="HD_text" from="textarea_icon">
-		      <area>65,2,95,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>1080</value>
-		  </textarea>           
 	  </group>
 	
 	  <group name="defaultinfoiconvideowide">
 		  <area>0,0,165,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
-		  <textarea name="icontextlbl" from="textarea_icon">
-		      <area>2,2,60,38</area>
-		      <value>SD</value>
-		  </textarea>
-		  <textarea name="icontextlbl2" from="textarea_icon">
-		      <area>2,33,60,15</area>
-		      <font>Font_Icon_Base_Small</font>
-		      <value>wide</value>
-		  </textarea>
-		  <textarea name="SD_text" from="textarea_icon">
-		      <area>65,2,95,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>576</value>
-		  </textarea>           
 	  </group>
 	
 	  <group name="defaultinfoiconvideo576">
 		  <area>0,0,165,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
-		  <textarea name="icontextlbl" from="textarea_icon">
-		      <area>2,2,60,50</area>
-		      <value>SD</value>
-		  </textarea>
-		  <textarea name="SD_text" from="textarea_icon">
-		      <area>65,2,95,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>576</value>
-		  </textarea>           
 	  </group>
 	
 	  <group name="defaultinfoiconcc">
 		  <area>0,0,165,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
-		  <shape name="defaulttvborder">
-		      <area>15,10,36,24</area>
-		      <type>roundbox</type>
-		      <cornerradius>2</cornerradius>
-		      <line color="#FFFFFF" alpha="255" width="2" />
-		  </shape>
-		  <shape name="defaulttvmid">
-		      <area>28,34,10,6</area>
-		      <type>box</type>
-		      <cornerradius>3</cornerradius>
-		     <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaulttvbottom">
-		      <area>20,37,24,3</area>
-		      <type>box</type>
-		      <cornerradius>3</cornerradius>
-		     <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaulttvsubline1">
-		      <area>20,24,24,2</area>
-		      <type>box</type>
-		      <cornerradius>3</cornerradius>
-		     <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaulttvsubline2" from="defaulttvsubline1">
-		      <position>20,28</position>
-		  </shape>
-		  <textarea name="sub_text" from="textarea_icon">
-		      <area>65,2,95,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>CC</value>
-		  </textarea>           
 	  </group>
 	
 	  <group name="defaultinfoiconsub">
 		  <area>0,0,165,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
-		  <shape name="defaulttvborder">
-		      <area>15,10,36,24</area>
-		      <type>roundbox</type>
-		      <cornerradius>2</cornerradius>
-		      <line color="#FFFFFF" alpha="255" width="2" />
-		  </shape>
-		  <shape name="defaulttvmid">
-		      <area>28,34,10,6</area>
-		      <type>box</type>
-		      <cornerradius>3</cornerradius>
-		     <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaulttvbottom">
-		      <area>20,37,24,3</area>
-		      <type>box</type>
-		      <cornerradius>3</cornerradius>
-		     <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaulttvsubline1">
-		      <area>20,24,24,2</area>
-		      <type>box</type>
-		      <cornerradius>3</cornerradius>
-		     <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaulttvsubline2" from="defaulttvsubline1">
-		      <position>20,28</position>
-		  </shape>
-		  <textarea name="sub_text" from="textarea_icon">
-		      <area>65,2,95,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>SUB</value>
-		  </textarea>           
 	  </group>
 	
 	  <group name="defaultinfoiconosd">
 		  <area>0,0,165,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdmid"/>
-		  <shape name="defaulttvborder">
-		      <area>15,10,36,24</area>
-		      <type>roundbox</type>
-		      <cornerradius>2</cornerradius>
-		      <line color="#FFFFFF" alpha="255" width="2" />
-		  </shape>
-		  <shape name="defaulttvmid">
-		      <area>28,34,10,6</area>
-		      <type>box</type>
-		      <cornerradius>3</cornerradius>
-		     <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaulttvbottom">
-		      <area>20,37,24,3</area>
-		      <type>box</type>
-		      <cornerradius>3</cornerradius>
-		     <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaulttvsubline1">
-		      <area>20,24,24,2</area>
-		      <type>box</type>
-		      <cornerradius>3</cornerradius>
-		     <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaulttvsubline2" from="defaulttvsubline1">
-		      <position>20,28</position>
-		  </shape>
-		  <textarea name="sub_text" from="textarea_icon">
-		      <area>65,2,95,50</area>
-		      <font>Font_Icon_Base_Black</font>
-		      <value>OSD</value>
-		  </textarea>           
 	  </group>
-	
-	  <group name="defaultinfoiconexpire">
-		  <area>270,250,64,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
-		  <shape name="defaultshape1">
-		      <area>12,5,40,40</area>
-		      <type>ellipse</type>
-		      <line color="#FFFFFF" alpha="255" width="3" />
-		  </shape>
-		  <shape name="defaultshape2">
-		      <area>30,13,3,13</area>
-		      <type>box</type>
-		      <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaultshape3" from="defaultshape2">
-		      <area>30,26,10,3</area>
-		  </shape>
-	  </group>
-	
-	  <group name="defaultinfoiconbookmark">
-		  <area>350,250,64,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
-		  <shape name="defaultshape1">
-		      <area>12,8,40,37</area>
-		      <type>box</type>
-		      <line color="#FFFFFF" alpha="255" width="3" />
-		  </shape>
-		  <shape name="defaultshape2">
-		      <area>35,7,8,14</area>
-		      <type>box</type>
-		      <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaultshape3" from="defaultshape2">
-		      <area>35,7,2,17</area>
-		  </shape>
-		  <shape name="defaultshape4" from="defaultshape2">
-		      <area>40,7,2,17</area>
-		  </shape>
-	  </group>
-	
-	  <group name="defaultinfoiconcutlist">
-		  <area>430,250,64,50</area>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
-		  <shape name="defaultshape1">
-		      <area>12,5,40,40</area>
-		      <type>box</type>
-		      <line color="#FFFFFF" alpha="255" width="3" />
-		  </shape>
-		  <shape name="defaultshape2">
-		      <area>29,11,17,15</area>
-		      <type>ellipse</type>
-		      <line color="#FFFFFF" alpha="255" width="3" />
-		  </shape>
-		  <shape name="defaultshape3" from="defaultshape2">
-		      <position>29,25</position>
-		  </shape>
-		  <shape name="defaultshape4">
-		      <area>9,20,35,3</area>
-		      <type>box</type>
-		      <fill color="#FFFFFF" alpha="255" />
-		  </shape>
-		  <shape name="defaultshape5" from="defaultshape4">
-		      <position>9,26</position>
-		  </shape>
-	  </group>	
-	
+		
     <!-- Aeon definitions of groups used on many screens -->
      <group name="basegroupinfodetails">
         <area>0,0,568,50</area>
