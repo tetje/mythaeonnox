@@ -555,54 +555,69 @@
 
     <!-- used in the visualiser screen to show some track details after a track change -->
     <window name="trackinfo_popup">
-        <area>-1,380,750,190</area>
-
-        <shape name="background" from="basebackground">
-            <area>0,0,750,190</area>
-            <type>roundbox</type>
-            <fill color="#303030" alpha="100" />
-            <line color="#FFFFFF" alpha="50" width="2" />
-            <cornerradius>12</cornerradius>
-        </shape>
+        <area>25,670,778,391</area>
 
         <imagetype name="mm_blackhole_border">
-            <filename>mm_blackhole_border.png</filename>
-            <area>20,20,148,148</area>
+            <area>0,0,391,391</area>
+            <filename>images/shared/nowplaying_back.png</filename>
+            <preserveaspect>no</preserveaspect>
         </imagetype>
 
-        <textarea name="title" from="basetextarea">
-            <area>180,15,550,34</area>
-            <font>baselarge</font>
-        </textarea>
-
-        <textarea name="artist" from="basetextarea">
-            <area>180,50,550,35</area>
-            <font>basemedium</font>
-        </textarea>
-
-        <textarea name="album" from="basetextarea">
-            <area>180,80,550,35</area>
-            <font>basemedium</font>
-        </textarea>
-
-        <statetype name="ratingstate" from="baseratingstate">
-            <position>180,115</position>
-        </statetype>
-
-<!--
-        <textarea name="length" from="basetextarea">
-            <area>170,125,185,25</area>
-        </textarea>
--->
-        <textarea name="nexttitle" from="basetextarea">
-            <area>180,145,550,25</area>
-            <template>Next: %NEXTTITLE% by %NEXTARTIST%</template>
-        </textarea>
+        <imagetype name="mm_info_border">
+            <area>376,64,387,263</area>
+            <filename>images/shared/nowplaying_info.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
 
         <imagetype name="coverart">
-            <filename>mm_nothumb.png</filename>
-            <area>22,22,144,144</area>
+            <area>15,15,362,362</area>
+            <filename>images/shared/DefaultAlbumCover.png</filename>
+            <mask>images/shared/nowplaying_mask.png</mask>
+            <preserveaspect>no</preserveaspect>
         </imagetype>
+
+        <imagetype name="coverartoverlay">
+            <area>15,15,362,362</area>
+            <filename>images/shared/nowplaying_overlay.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <group name="track_infogroup">
+           <area>420,25,387,362</area>
+	        <textarea name="artist" from="textarea_mini_player">
+	            <area>0,0,360,35</area>
+	        </textarea>
+	
+	        <textarea name="album" from="textarea_mini_player_small">
+	            <area>0,45,360,35</area>
+	        </textarea>
+	
+	        <statetype name="ratingstate" from="rating_base">
+	            <position>0,80</position>
+	        </statetype>
+	
+	<!--
+	        <textarea name="length" from="textarea_mini_player_small">
+	            <area>0,115,360,35</area>
+	        </textarea>
+	-->
+	        <textarea name="titlelbl" from="textarea_mini_player_small">
+	            <area>0,222,360,35</area>
+	            <alpha>192</alpha>
+	            <value>Now Playing</value>
+	        </textarea>
+
+	        <textarea name="title" from="textarea_mini_player">
+	            <area>0,257,360,35</area>
+	            <scroll direction="horizontal"/>
+	        </textarea>
+	
+	        <textarea name="nexttitle" from="textarea_mini_player_small">
+	            <area>0,292,360,35</area>
+	            <template>Next: %NEXTTITLE% by %NEXTARTIST%</template>
+	        </textarea>
+
+        </group>
 
     </window>
 

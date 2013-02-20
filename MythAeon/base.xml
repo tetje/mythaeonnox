@@ -104,13 +104,23 @@
     <fontdef name="Font_Plot" face="Aeon Player">
         <pixelsize>29</pixelsize>
         <weight>light</weight>
-        <color>#ececec</color>
+        <color>#ECECEC</color>
     </fontdef>
 
     <fontdef name="Font_Plot_Grey" from="Font_Plot">
         <color>#323232</color>
     </fontdef>
 
+    <fontdef name="Font_Mini_Player" face="Aeon Player CAPS">
+        <pixelsize>35</pixelsize>
+        <weight>normal</weight>
+        <color>#FFFFFF</color>
+    </fontdef>
+
+    <fontdef name="Font_Mini_Player_Small" from="Font_Mini_Player">
+        <pixelsize>29</pixelsize>
+        <color>#ECECEC</color>
+    </fontdef>
 
     <fontdef name="Font_List_Selected" face="Scout">
         <pixelsize>32</pixelsize>
@@ -457,6 +467,16 @@
        <cutdown>no</cutdown>
        <case>upper</case>
        <align>allcenter</align>
+   </textarea>
+   
+   <textarea name="textarea_mini_player" from="textarea_info"> 
+       <area>0,0,360,35</area>
+       <font>Font_Mini_Player</font>
+   </textarea>
+   
+   <textarea name="textarea_mini_player_small" from="textarea_mini_player"> 
+       <area>0,0,360,35</area>
+       <font>Font_Mini_Player_Small</font>
    </textarea>
    
     <!-- Aeon definition of a parental level -->
@@ -4583,7 +4603,7 @@
 	
 	  <group name="defaultinfoiconrating">
 		  <area>0,0,200,50</area>
-        <imagetype name="iconbgd" depends="##x##">
+        <imagetype name="iconbgd" depends="rating">
             <area>-6,-5,212,60</area>
             <alpha>255</alpha>
             <filename>images/shared/musicinfoshadowlong.png</filename>
