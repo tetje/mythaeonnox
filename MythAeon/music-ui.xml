@@ -646,150 +646,150 @@
            <area>0,0,1850,1010</area>
         </group>
 
-       <group name="cdripper_panel">
-           <area>354,28,1460,952</area>
+        <group name="cdripper_panel">
+            <area>354,28,1460,952</area>
+	 
+	         <textarea name="titlepanel" from="textarea_settings_title">
+	             <area>20,50,1360,50</area>
+	             <value>Copy your CD into the Music Library</value>
+	         </textarea>
 	
-	        <textarea name="titlepanel" from="textarea_settings_title">
-	            <area>20,50,1360,50</area>
-	            <value>Copy your CD into the Music Library</value>
-	        </textarea>
+	         <!-- Labels -->
+	         <textarea name="quality_label" from="textarea_settings_option">
+	             <position>20,120</position>
+	             <value>Rip quality:</value>
+            </textarea>
 	
-	        <!-- Labels -->
-	        <textarea name="quality_label" from="textarea_settings_option">
-	            <position>20,120</position>
-	            <value>Rip quality:</value>
-	        </textarea>
+	         <textarea name="artist_label"  from="textarea_settings_option">
+	             <position>20,192</position>
+	             <value>Artist:</value>
+	         </textarea>
 	
-	        <textarea name="artist_label"  from="textarea_settings_option">
-	            <position>20,192</position>
-	            <value>Artist:</value>
-	        </textarea>
+	         <textarea name="album_label" from="textarea_settings_option">
+	             <position>20,264</position>
+	             <value>Album:</value>
+	         </textarea>
 	
-	        <textarea name="album_label" from="textarea_settings_option">
-	            <position>20,264</position>
-	            <value>Album:</value>
-	        </textarea>
+	         <textarea name="genre_text" from="textarea_settings_option">
+	             <position>20,336</position>
+	             <value>Genre:</value>
+	         </textarea>
 	
-	        <textarea name="genre_text" from="textarea_settings_option">
-	            <position>20,336</position>
-	            <value>Genre:</value>
-	        </textarea>
+	         <textarea name="comp_label" from="textarea_settings_option">
+	             <position>20,408</position>
+	             <value>Multi Artist:</value>
+	         </textarea>
 	
-	        <textarea name="comp_label" from="textarea_settings_option">
-	            <position>20,408</position>
-	            <value>Multi Artist:</value>
-	        </textarea>
+	         <textarea name="year_label" from="textarea_settings_option">
+	             <position>20,480</position>
+	             <value>Year:</value>
+	         </textarea>
 	
-	        <textarea name="year_label" from="textarea_settings_option">
-	            <position>20,480</position>
-	            <value>Year:</value>
-	        </textarea>
+	         <textarea name="tracks_label" from="textarea_settings_option">
+	             <position>20,552</position>
+	             <value>Select tracks to rip:</value>
+	         </textarea>
 	
-	        <textarea name="tracks_label" from="textarea_settings_option">
-	            <position>20,552</position>
-	            <value>Select tracks to rip:</value>
-	        </textarea>
+	         <!-- widgets -->
+	         <buttonlist name="quality" from="selector_settings">
+	             <position>0,120</position>
+	         </buttonlist>
 	
-	        <!-- widgets -->
-	        <buttonlist name="quality" from="selector_settings">
-	            <position>0,120</position>
-	        </buttonlist>
+	         <textedit name="artist" from="textedit_settings">
+	             <position>0,192</position>
+	         </textedit>
 	
-	        <textedit name="artist" from="textedit_settings">
-	            <position>0,192</position>
-	        </textedit>
+	         <textedit name="album" from="textedit_settings">
+	             <position>0,264</position>
+	         </textedit>
 	
-	        <textedit name="album" from="textedit_settings">
-	            <position>0,264</position>
-	        </textedit>
+	         <textedit name="genre" from="textedit_settings">
+	             <position>0,336</position>
+	         </textedit>
 	
-	        <textedit name="genre" from="textedit_settings">
-	            <position>0,336</position>
-	        </textedit>
+            <checkbox name="compilation" from="checkbox_settings">
+	             <position>0,408</position>
+	         </checkbox>
 	
-           <checkbox name="compilation" from="checkbox_settings">
-	            <position>0,408</position>
-	        </checkbox>
+	         <textedit name="year" from="textedit_settings">
+	             <position>0,480</position>
+	         </textedit>
 	
-	        <textedit name="year" from="textedit_settings">
-	            <position>0,480</position>
-	        </textedit>
-	
-	        <buttonlist name="tracks" from="buttonlist_settings_check">
-	           <area>0,624,1400,300</area>
-	           <buttonarea>0,0,1400,300</buttonarea>
-	           <statetype name="buttonitem">
-	               <state name="active">
-			            <textarea name="buttontext" from="textarea_settings_option">
-			                <area>20,0,1230,72</area>
-			                <align>left,vcenter</align>
-			            </textarea>
-	                  <textarea name="track" from="buttontext">
+	         <buttonlist name="tracks" from="buttonlist_settings_check">
+	            <area>0,624,1400,300</area>
+	            <buttonarea>0,0,1400,300</buttonarea>
+	            <statetype name="buttonitem">
+	                <state name="active">
+			             <textarea name="buttontext" from="textarea_settings_option">
+			                 <area>20,0,1230,72</area>
+			                 <align>left,vcenter</align>
+			             </textarea>
+	                   <textarea name="track" from="buttontext">
 	                       <template>%track% - %title% - %artist% (%length)</template>
-	                  </textarea>
-	               </state>
-	               <state name="selectedactive">
-			            <textarea name="buttontext" from="textarea_settings_option">
-			                <area>20,0,1230,72</area>
-			                <align>left,vcenter</align>
-			            </textarea>
-	                  <textarea name="track" from="buttontext">
-	                      <scroll direction="horizontal"/>
-	                      <template>%track% - %title% - %artist% (%length)</template>
-	                  </textarea>
- 	               </state>
-	               <state name="selectedinactive" from="active" />
-	           </statetype>
-	        </buttonlist>
+	                   </textarea>
+	                </state>
+	                <state name="selectedactive">
+			             <textarea name="buttontext" from="textarea_settings_option">
+			                 <area>20,0,1230,72</area>
+			                 <align>left,vcenter</align>
+			             </textarea>
+	                   <textarea name="track" from="buttontext">
+	                       <scroll direction="horizontal"/>
+	                       <template>%track% - %title% - %artist% (%length)</template>
+	                   </textarea>
+ 	                </state>
+	                <state name="selectedinactive" from="active" />
+	            </statetype>
+	         </buttonlist>
 
-       </group>
+        </group>
         
 
-         <group name="cdripper_menu">
-           <area>30,28,324,952</area>
+      <group name="cdripper_menu">
+        <area>30,28,324,952</area>
 
-	        <textarea name="title" from="textarea_settings_title">
-	            <area>30,50,284,50</area>
-	            <value>CD Ripper</value>
-	        </textarea>
-	
-	        <button name="scan" from="button_settings">
-	            <position>0,120</position>
-	            <value>Scan CD</value>
-	        </button>
+        <textarea name="title" from="textarea_settings_title">
+            <area>30,50,284,50</area>
+            <value>CD Ripper</value>
+        </textarea>
 
-	        <button name="searchartist" from="button_settings">
-	            <position>0,192</position>
-	            <value>Search Artist</value>
-	        </button>
-	
-	        <button name="searchalbum" from="button_settings">
-	            <position>0,264</position>
-	            <value>Search Album</value>
-	        </button>
-	
-	        <button name="searchgenre" from="button_settings">
-	            <position>0,336</position>
-	            <value>Search Genre</value>
-	        </button>
-	
-	        <button name="switch" from="button_settings">
-	            <position>0,408</position>
-	            <value>Switch Titles</value>
-	        </button>
-	
-	        <button name="rip" from="button_settings">
-	            <position>0,480</position>
-	            <value>Rip CD</value>
-	        </button>
-	
-        </group>
+        <button name="scan" from="button_settings">
+            <position>0,120</position>
+            <value>Scan CD</value>
+        </button>
 
-	     <animation trigger="AboutToHide">
-	        <section duration="1000" centre="middle">
-	            <alpha start="255" end="0" easingcurve="InQuad" />
-	        </section>
-	     </animation>
+        <button name="searchartist" from="button_settings">
+            <position>0,192</position>
+            <value>Search Artist</value>
+        </button>
+
+        <button name="searchalbum" from="button_settings">
+            <position>0,264</position>
+            <value>Search Album</value>
+        </button>
+
+        <button name="searchgenre" from="button_settings">
+            <position>0,336</position>
+            <value>Search Genre</value>
+        </button>
+
+        <button name="switch" from="button_settings">
+            <position>0,408</position>
+            <value>Switch Titles</value>
+        </button>
+
+        <button name="rip" from="button_settings">
+            <position>0,480</position>
+            <value>Rip CD</value>
+        </button>
+
+     </group>
+
+     <animation trigger="AboutToHide">
+        <section duration="1000" centre="middle">
+            <alpha start="255" end="0" easingcurve="InQuad" />
+        </section>
+     </animation>
 
     </window>
 
@@ -801,46 +801,52 @@
             <position>0,0</position>        
         </group>
 
-        <textarea name="overall_label" from="basetextarea">
-            <area>80,110,700,40</area>
+        <textarea name="messagelbl" from="textarea_list">
+            <area>70,75,560,50</area>
+            <scroll direction="horizontal"/>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
             <value>Importing CD</value>
         </textarea>
 
-        <textarea name="overall" from="overall_label">
-            <position>50,150</position>
-            <align>hcenter</align>
+        <textarea name="overall" from="messagelbl">
+            <area>70,175,560,50</area>
         </textarea>
 
-        <textarea name="track_label" from="overall_label">
-            <position>80,320</position>
-            <value>Encoding Track</value>
+        <textarea name="status" from="messagelbl">
+            <area>70,225,560,50</area>
         </textarea>
 
-        <textarea name="track" from="overall">
-            <position>80,350</position>
-        </textarea>
-
-        <textarea name="status" from="overall">
-            <position>50,500</position>
+        <textarea name="overallpct" from="textarea_submenu">
+            <area>70,255,560,30</area>
+            <font>Font_Info_Small</font>
+            <align>allcenter</align>
+            <value>0%</value>
         </textarea>
 
         <progressbar name="overall_progress" from="baseprogressbar">
-            <position>160,190</position>
+            <area>70,275,560,30</area>
         </progressbar>
 
-        <textarea name="overallpct" from="basetextarea">
-            <area>350,230,100,30</area>
-            <align>hcenter</align>
+        <textarea name="track_label" from="messagelbl">
+            <area>70,375,560,50</area>
+            <value>Encoding Track</value>
+        </textarea>
+
+        <textarea name="track" from="messagelbl">
+            <area>70,425,560,50</area>
+        </textarea>
+
+        <textarea name="trackpct" from="textarea_submenu">
+            <area>70,455,560,30</area>
+            <font>Font_Info_Small</font>
+            <align>allcenter</align>
+            <value>0%</value>
         </textarea>
 
         <progressbar name="track_progress" from="baseprogressbar">
-            <position>160,400</position>
+            <area>70,475,560,30</area>
         </progressbar>
-
-        <textarea name="trackpct" from="basetextarea">
-            <area>350,440,100,30</area>
-            <align>hcenter</align>
-        </textarea>
 
     </window>
 
@@ -1293,62 +1299,7 @@
 	        </textarea>
 
         </group>
-<!--
-        <area>-1,5,590,190</area>
-        <imagetype name="track_info_background">
-            <filename>miniplayer_background.png</filename>
-            <area>10,10,569,170</area>
-        </imagetype>
 
-        <imagetype name="mm_blackhole_border">
-            <filename>mm_blackhole_border.png</filename>
-            <area>20,20,148,148</area>
-        </imagetype>
-
-        <textarea name="title" from="basetextarea">
-            <area>170,15,400,35</area>
-            <font>baselarge</font>
-        </textarea>
-
-        <textarea name="artist" from="basetextarea">
-            <area>170,55,400,35</area>
-            <font>basemedium</font>
-        </textarea>
-
-        <textarea name="album" from="basetextarea">
-            <area>170,90,400,35</area>
-            <font>basemedium</font>
-        </textarea>
-
-        <statetype name="ratings_state">
-        </statetype>
-
-        <textarea name="info" from="basetextarea">
-            <area>170,125,250,25</area>
-        </textarea>
-
-        <textarea name="time" from="basetextarea">
-            <area>385,125,185,25</area>
-            <align>right</align>
-        </textarea>
-
-        <imagetype name="coverart">
-            <filename>mm_nothumb.png</filename>
-            <area>22,22,144,144</area>
-        </imagetype>
-
-        <progressbar name="progress">
-            <area>170,150,10,10</area>
-            <layout>horizontal</layout>
-            <style>reveal</style>
-            <imagetype name="background">
-                <filename>mm_progress-bg.png</filename>
-            </imagetype>
-            <imagetype name="progressimage">
-                <filename>mm_progress-fg.png</filename>
-            </imagetype>
-        </progressbar>
--->
     </window>
 
     <window name="volume_popup">
@@ -2131,7 +2082,7 @@
     <!-- The metadata editor - allows you edit a tracks metadata -->
     <window name="editmetadata">
 
-         <area>-1,-1,1850,1010</area>
+       <area>-1,-1,1850,1010</area>
 
 	     <animation trigger="AboutToShow">
 	        <section duration="1000" centre="middle">
@@ -2296,53 +2247,52 @@
             </button>
 
        </group>
-        
+     
+      <group name="editmetadata_menu">
+        <area>30,28,324,952</area>
 
-         <group name="editmetadata_menu">
-           <area>30,28,324,952</area>
+        <textarea name="title" from="textarea_settings_title">
+            <area>30,50,284,50</area>
+            <value>Metadata</value>
+        </textarea>
 
-	        <textarea name="title" from="textarea_settings_title">
-	            <area>30,50,284,50</area>
-	            <value>Metadata</value>
-	        </textarea>
-	
-	        <button name="searchcompartistbutton" from="button_settings">
-	            <position>0,120</position>
-	            <value>Search Comp Artist</value>
-	        </button>
+        <button name="searchcompartistbutton" from="button_settings">
+            <position>0,120</position>
+            <value>Search Comp Artist</value>
+        </button>
 
-	        <button name="searchartistbutton" from="button_settings">
-	            <position>0,192</position>
-	            <value>Search Artist</value>
-	        </button>
-	
-	        <button name="searchalbumbutton" from="button_settings">
-	            <position>0,264</position>
-	            <value>Search Album</value>
-	        </button>
-	
-	        <button name="searchgenrebutton" from="button_settings">
-	            <position>0,336</position>
-	            <value>Search Genre</value>
-	        </button>
-	
-	        <button name="albumartbutton" from="button_settings">
-	            <position>0,408</position>
-	            <value>Edit Album Art</value>
-	        </button>
-	
-	        <button name="donebutton" from="button_settings">
-	            <position>0,480</position>
-	            <value>Done</value>
-	        </button>
-	
-        </group>
+        <button name="searchartistbutton" from="button_settings">
+            <position>0,192</position>
+            <value>Search Artist</value>
+        </button>
 
-	     <animation trigger="AboutToHide">
-	        <section duration="1000" centre="middle">
-	            <alpha start="255" end="0" easingcurve="InQuad" />
-	        </section>
-	     </animation>
+        <button name="searchalbumbutton" from="button_settings">
+            <position>0,264</position>
+            <value>Search Album</value>
+        </button>
+
+        <button name="searchgenrebutton" from="button_settings">
+            <position>0,336</position>
+            <value>Search Genre</value>
+        </button>
+
+        <button name="albumartbutton" from="button_settings">
+            <position>0,408</position>
+            <value>Edit Album Art</value>
+        </button>
+
+        <button name="donebutton" from="button_settings">
+            <position>0,480</position>
+            <value>Done</value>
+        </button>
+
+     </group>
+
+     <animation trigger="AboutToHide">
+        <section duration="1000" centre="middle">
+            <alpha start="255" end="0" easingcurve="InQuad" />
+        </section>
+     </animation>
 
     </window>
 
