@@ -4574,7 +4574,7 @@
 	  <group name="defaultinfoiconseason">
 		  <area>0,0,200,50</area>
         <imagetype name="iconbgd" depends="##x##">
-            <area>-11,-5,212,60</area>
+            <area>-9,-5,210,60</area>
             <alpha>255</alpha>
             <filename>images/shared/musicinfoshadow.png</filename>
             <preserveaspect>no</preserveaspect>
@@ -4604,7 +4604,7 @@
 	  <group name="defaultinfoiconrating">
 		  <area>0,0,200,50</area>
         <imagetype name="iconbgd" depends="rating">
-            <area>-11,-5,212,60</area>
+            <area>-9,-5,210,60</area>
             <alpha>255</alpha>
             <filename>images/shared/musicinfoshadowlong.png</filename>
             <preserveaspect>no</preserveaspect>
