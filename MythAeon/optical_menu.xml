@@ -26,7 +26,7 @@
     <button>
         <type>ARCHIVE</type>
         <text>Videos</text>
-        <description>Import and Export your videos on Disk</description>
+        <description>Import and Export your videos</description>
         <action>PLUGIN mytharchive</action>
         <depends>mytharchive</depends>
     </button>
