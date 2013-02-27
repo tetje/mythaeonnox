@@ -2709,6 +2709,65 @@
         </statetype>
     </button>
  
+    <button name="button_settings_panel_left">
+        <area>0,0,1400,72</area>
+        <statetype name="buttonstate">
+            <state name="active">
+                <imagetype name="backgroundactive">
+                    <area>0,22,1400,50</area>
+                    <preserveaspect>no</preserveaspect>
+                    <filename>images/shared/settings_radiobuttonoff.png</filename>
+                </imagetype>
+                <imagetype name="dnon">
+                    <area>1277,-13,62,98</area>
+                    <filename>images/shared/spin-down.png</filename>
+                </imagetype>
+            </state>
+            <state name="selected">
+                <imagetype name="backgroundselected">
+                    <area>0,0,1400,72</area>
+                    <preserveaspect>no</preserveaspect>
+                    <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+                </imagetype>
+                <imagetype name="dnoff">
+                    <area>1277,-13,62,98</area>
+                    <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+            <state name="disabled" from="active" />
+            <state name="pushed" from="active"/>
+        </statetype>
+    </button>
+ 
+	 <button name="button_settings_panel_right">
+	      <area>0,0,1400,72</area>
+	      <statetype name="buttonstate">
+	          <state name="active">
+	              <imagetype name="dnon">
+	                  <area>1338,-13,62,98</area>
+	                  <filename>images/shared/spin-up.png</filename>
+	              </imagetype>
+	          </state>
+	          <state name="selected">
+	              <imagetype name="backgroundselected">
+	                  <area>0,0,1400,72</area>
+	                  <preserveaspect>no</preserveaspect>
+	                  <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+	              </imagetype>
+	              <imagetype name="dnon">
+	                  <area>1277,-13,62,98</area>
+	                  <filename>images/shared/spin-down.png</filename>
+	              </imagetype>
+	              <imagetype name="upoff">
+	                 <area>1338,-13,62,98</area>
+	                 <filename>images/shared/spin-up-focus.png</filename>
+	              </imagetype>
+	          </state>
+	          <state name="disabled" from="active" />
+	          <state name="pushed" from="active"/>
+	      </statetype>
+	  </button>
+
     <!-- Base MythAeon OSDbutton definitions -->
 
      <imagetype name="osd_button_nofocus_bgd">

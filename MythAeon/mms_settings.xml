@@ -4,7 +4,7 @@
     <button>
         <type>MUSIC_PLAYLIST</type>
         <text>Tools</text>
-        <description>Use music</description>
+        <description>Tools for your music library</description>
         <action>PLUGIN mythmusic</action>
         <depends>mythmusic</depends>
     </button>
@@ -12,14 +12,14 @@
     <button>
         <type>TV_STATUS</type>
         <text>System</text>
-        <description>Info about your</description>
+        <description>Info about your system</description>
         <action>TV_STATUS</action>
     </button>
 
     <button>
         <type>ZONEMINDER</type>
         <text>CCTV</text>
-        <description>Check your Surveillance</description>
+        <description>Check your Surveillance Cameras</description>
         <action>PLUGIN mythzoneminder</action>
         <depends>mythzoneminder</depends>
     </button>
@@ -27,7 +27,7 @@
 	 <button>
 	        <type>SMOLT</type>
 	        <text>Profile</text>
-	        <description>Upload your hardware</description>
+	        <description>Upload your hardware profile</description>
 	        <action>PLUGIN mythsmolt</action>
 	        <depends>mythsmolt</depends>
 	 </button>

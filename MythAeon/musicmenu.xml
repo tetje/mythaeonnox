@@ -1,16 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <mythmenu name="MUSIC">
 
    <button>
       <type>MUSIC_PLAYLIST</type>
       <text>Playlists</text>
-      <description>Create playlists with favorite music/description>
+      <description>Create playlists with favorite music</description>
       <action>MUSIC_CREATE_PLAYLIST</action>
    </button>
 
    <button>
        <type>MUSIC_IMPORT</type>
        <text>Import</text>      
-       <description>Import Music into the library</description>
+       <description>Import Music into your library</description>
        <action>MUSIC_IMPORT</action>
    </button>
 

@@ -745,51 +745,51 @@
         </group>
         
 
-      <group name="cdripper_menu">
-        <area>30,28,324,952</area>
+	     <group name="cdripper_menu">
+	         <area>30,28,324,952</area>
+	
+	         <textarea name="title" from="textarea_settings_title">
+	             <area>30,50,284,50</area>
+	             <value>CD Ripper</value>
+	         </textarea>
+	
+	         <button name="scan" from="button_settings">
+	             <position>0,120</position>
+	             <value>Scan CD</value>
+	         </button>
+	
+	         <button name="searchartist" from="button_settings">
+	             <position>0,192</position>
+	             <value>Search Artist</value>
+	         </button>
+	
+	         <button name="searchalbum" from="button_settings">
+	             <position>0,264</position>
+	             <value>Search Album</value>
+	         </button>
+	
+	         <button name="searchgenre" from="button_settings">
+	             <position>0,336</position>
+	             <value>Search Genre</value>
+	         </button>
+	
+	         <button name="switch" from="button_settings">
+	             <position>0,408</position>
+	             <value>Switch Titles</value>
+	         </button>
+	
+	         <button name="rip" from="button_settings">
+	             <position>0,480</position>
+	             <value>Rip CD</value>
+	         </button>
+	
+	     </group>
 
-        <textarea name="title" from="textarea_settings_title">
-            <area>30,50,284,50</area>
-            <value>CD Ripper</value>
-        </textarea>
-
-        <button name="scan" from="button_settings">
-            <position>0,120</position>
-            <value>Scan CD</value>
-        </button>
-
-        <button name="searchartist" from="button_settings">
-            <position>0,192</position>
-            <value>Search Artist</value>
-        </button>
-
-        <button name="searchalbum" from="button_settings">
-            <position>0,264</position>
-            <value>Search Album</value>
-        </button>
-
-        <button name="searchgenre" from="button_settings">
-            <position>0,336</position>
-            <value>Search Genre</value>
-        </button>
-
-        <button name="switch" from="button_settings">
-            <position>0,408</position>
-            <value>Switch Titles</value>
-        </button>
-
-        <button name="rip" from="button_settings">
-            <position>0,480</position>
-            <value>Rip CD</value>
-        </button>
-
-     </group>
-
-     <animation trigger="AboutToHide">
-        <section duration="1000" centre="middle">
-            <alpha start="255" end="0" easingcurve="InQuad" />
-        </section>
-     </animation>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
@@ -853,186 +853,228 @@
     <!-- The import music screen -->
     <window name="import_music">
 
-        <shape name="bgimage1">
-            <area>195,150,525,35</area>
-            <type>roundbox</type>
-            <fill color="#000000" alpha="60" />
-            <cornerradius>3</cornerradius>
-        </shape>
+        <area>-1,-1,1850,1010</area>
 
-        <shape name="bgimage2" from="bgimage1">
-            <area>195,230,525,35</area>
-        </shape>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <shape name="bgimage3" from="bgimage1">
-            <area>195,270,525,35</area>
-        </shape>
+        <group name="import_music_panel">
+            <area>354,28,1460,952</area>
+	 
+	         <textarea name="titlepanel" from="textarea_settings_title">
+	             <area>20,50,1360,50</area>
+	             <value>Import Music files into your Library</value>
+	         </textarea>
+	
+	         <!--gridlines -->
+            <imagetype name="Listpanelline1">
+                <area>0,214,1400,50</area>
+                <filename>images/shared/settings_radiobuttonoff.png</filename>
+            </imagetype>
 
-        <shape name="bgimage4" from="bgimage1">
-            <area>195,310,525,35</area>
-        </shape>
+            <imagetype name="Listpanelline2" from="Listpanelline1">
+                <position>0,358</position>
+            </imagetype>
 
-        <shape name="bgimage5" from="bgimage1">
-            <area>195,350,525,35</area>
-        </shape>
+            <imagetype name="Listpanelline3" from="Listpanelline1">
+                <position>0,430</position>
+            </imagetype>
 
-        <shape name="bgimage6" from="bgimage1">
-            <area>195,390,525,35</area>
-        </shape>
+            <imagetype name="Listpanelline4" from="Listpanelline1">
+                <position>0,502</position>
+            </imagetype>
 
-        <shape name="bgimage7" from="bgimage1">
-            <area>195,430,175,35</area>
-        </shape>
+            <imagetype name="Listpanelline5" from="Listpanelline1">
+                <position>0,574</position>
+            </imagetype>
 
-        <shape name="bgimage8" from="bgimage1">
-            <area>545,430,175,35</area>
-        </shape>
+            <imagetype name="Listpanelline6" from="Listpanelline1">
+                <position>0,646</position>
+            </imagetype>
 
-        <shape name="bgimage9" from="bgimage1">
-            <area>275,490,250,40</area>
-        </shape>
+            <imagetype name="Listpanelline7" from="Listpanelline1">
+                <position>0,718</position>
+            </imagetype>
 
-        <shape name="bgimage10" from="bgimage1">
-            <area>250,540,300,40</area>
-        </shape>
+            <imagetype name="Listpanelline8" from="Listpanelline1">
+                <position>0,790</position>
+            </imagetype>
 
-        <textarea name="screentitle">
-            <area>15,5,800,50</area>
-            <font>baselarge</font>
-            <value>Import Music</value>
-        </textarea>
+	         <!-- Labels -->
+	         <textarea name="location_label" from="textarea_settings_option">
+	             <position>20,120</position>
+	             <value>Location:</value>
+            </textarea>
+	
+	         <textarea name="filename_label"  from="textarea_settings_option">
+	             <position>20,192</position>
+	             <value>Filename:</value>
+	         </textarea>
+	
+	         <textarea name="compilation_label" from="textarea_settings_option">
+	             <position>20,264</position>
+	             <value>Multi Artist:</value>
+	         </textarea>
+	
+	         <textarea name="compilation_artist_label" from="textarea_settings_option">
+	             <position>20,336</position>
+	             <value>Compilation Artist:</value>
+	         </textarea>
+	
+	         <textarea name="artist_label" from="textarea_settings_option">
+	             <position>20,408</position>
+	             <value>Artist:</value>
+	         </textarea>
+	
+	         <textarea name="album_label" from="textarea_settings_option">
+	             <position>20,480</position>
+	             <value>Album:</value>
+	         </textarea>
+	
+	         <textarea name="title_text" from="textarea_settings_option">
+	             <position>20,552</position>
+	             <value>Title:</value>
+	         </textarea>
+	
+	         <textarea name="genre_label" from="textarea_settings_option">
+	             <position>20,624</position>
+	             <value>Genre:</value>
+	         </textarea>
+	
+	         <textarea name="year_label" from="textarea_settings_option">
+	             <position>20,696</position>
+	             <value>Year:</value>
+	         </textarea>
+	
+	         <textarea name="track_label" from="textarea_settings_option">
+	             <position>20,768</position>
+	             <value>Track Number:</value>
+	         </textarea>
+	
+	         <textarea name="position" from="textarea_settings_option">
+	             <position>20,840</position>
+	             <value>Position:</value>
+	         </textarea>
 
-        <!-- Labels -->
+	         <!-- widgets -->
+	         <textedit name="location" from="textedit_settings">
+	             <position>0,120</position>
+	         </textedit>
 
-        <textarea name="location_label" from="basetextarea">
-            <area>15,55,170,30</area>
-            <value>Location:</value>
-        </textarea>
+	         <textarea name="filename" from="textarea_settings_option">
+	             <area>500,192,840,72</area>
+	             <scroll direction="horizontal"/>
+	         </textarea>
 
-        <textarea name="filename_label" from="location_label">
-            <position>15,155</position>
-            <value>Filename:</value>
-        </textarea>
+	         <checkbox name="compilation" from="checkbox_settings">
+	             <position>0,264</position>
+	         </checkbox>
 
-        <textarea name="compilation_label" from="location_label">
-            <position>15,195</position>
-            <value>Compilation:</value>
-        </textarea>
+	         <textarea name="compartist" from="textarea_settings_option">
+	             <area>500,336,840,72</area>
+	         </textarea>
 
-        <textarea name="compilation_artist_label" from="location_label">
-            <position>15,235</position>
-            <value>Comp. Artist:</value>
-        </textarea>
+	         <textarea name="artist" from="textarea_settings_option">
+	             <area>500,408,840,72</area>
+	         </textarea>
+	
+	         <textarea name="album" from="textarea_settings_option">
+	             <area>500,480,840,72</area>
+	         </textarea>
+	
+	         <textarea name="title" from="textarea_settings_option">
+	             <area>500,552,840,72</area>
+	         </textarea>
+	
+	         <textarea name="genre" from="textarea_settings_option">
+	             <area>500,624,840,72</area>
+	         </textarea>
+	
+	         <textarea name="year" from="textarea_settings_option">
+	             <area>500,696,840,72</area>
+	         </textarea>
+	
+	         <textarea name="track" from="textarea_settings_option">
+	             <area>500,768,840,72</area>
+	         </textarea>
+	
+            <button name="prev" from="button_settings_panel_left">
+                <position>0,840</position>
+            </button>
+            
+            <button name="next" from="button_settings_panel_right">
+                <position>0,840</position>
+            </button>
+            
+	         <textarea name="track" from="textarea_settings_option">
+	             <area>500,768,840,72</area>
+	         </textarea>
+	
+	         <textarea name="status" from="textarea_settings_option">
+	             <area>500,840,840,72</area>
+	         </textarea>
+	
+        </group>
+        
+	     <group name="import_music_menu">
+	         <area>30,28,324,952</area>
+	
+	         <textarea name="title_menu" from="textarea_settings_title">
+	             <area>30,50,284,50</area>
+	             <value>Music Tools</value>
+	         </textarea>
+	
+	         <button name="directoryfinder" from="button_settings">
+	             <position>0,120</position>
+	             <value>Select folder</value>
+	         </button>
+	
+	         <button name="scan" from="button_settings">
+	             <position>0,192</position>
+	            <value>Scan current location</value>
+	         </button>
+	
+	         <button name="coverart" from="button_settings">
+	             <position>0,264</position>
+	             <value>Import Cover Art</value>
+	         </button>
+	
+	         <button name="play" from="button_settings">
+	             <position>0,336</position>
+	             <value>Play file</value>
+	         </button>
+	
+	         <button name="add" from="button_settings">
+	             <position>0,408</position>
+	             <value>Add file</value>
+	         </button>
+	
+	         <button name="nextnew" from="button_settings">
+		          <position>0,480</position>
+	             <value>Next new file</value>
+	         </button>
 
-        <textarea name="artist_label" from="location_label">
-            <position>15,275</position>
-            <value>Artist:</value>
-        </textarea>
+	         <button name="addallnew" from="button_settings">
+		          <position>0,552</position>
+	             <value>Add All New files</value>
+	         </button>
+	
+	     </group>
 
-        <textarea name="album_label" from="location_label">
-            <position>15,315</position>
-            <value>Album:</value>
-        </textarea>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
-        <textarea name="title_text" from="location_label">
-            <position>15,355</position>
-            <value>Title:</value>
-        </textarea>
-
-        <textarea name="genre_label" from="location_label">
-            <position>15,395</position>
-            <value>Genre:</value>
-        </textarea>
-
-        <textarea name="year_label" from="location_label">
-            <position>15,435</position>
-            <value>Year:</value>
-        </textarea>
-
-        <textarea name="track_label" from="location_label">
-            <position>385,435</position>
-            <value>Track No.:</value>
-        </textarea>
-
-        <textarea name="position" from="basetextarea">
-            <area>250,500,300,30</area>
-            <align>hcenter</align>
-        </textarea>
-
-        <textarea name="status" from="position">
-            <position>250,550</position>
-            <value>Already in database</value>
-        </textarea>
-
-        <!-- data fields -->
-
-        <textedit name="location" from="basetextedit">
-            <position>195,45</position>
-        </textedit>
-
-        <button name="directoryfinder" from="basesearchbutton">
-            <position>590,55</position>
-        </button>
-
-        <button name="scan" from="basebutton">
-            <position>195,100</position>
-            <value>Search</value>
-        </button>
-
-        <button name="coverart" from="basebutton">
-            <position>570,100</position>
-            <value>Cover Art</value>
-        </button>
-
-        <textarea name="filename" from="basetextarea">
-            <area>200,155,515,30</area>
-            <cutdown>left</cutdown>
-            <align>right</align>
-        </textarea>
-
-        <checkbox name="compilation" from="basecheckbox">
-            <position>195,190</position>
-        </checkbox>
-
-        <textarea name="compartist" from="basetextarea">
-            <area>200,235,515,30</area>
-        </textarea>
-
-        <textarea name="artist" from="basetextarea">
-            <area>200,275,515,30</area>
-        </textarea>
-
-        <textarea name="album" from="basetextarea">
-            <area>200,315,515,30</area>
-        </textarea>
-
-        <textarea name="title" from="basetextarea">
-            <area>200,355,515,30</area>
-        </textarea>
-
-        <textarea name="genre" from="basetextarea">
-            <area>200,395,515,30</area>
-        </textarea>
-
-        <textarea name="year" from="basetextarea">
-            <area>200,435,165,30</area>
-        </textarea>
-
-        <textarea name="track" from="basetextarea">
-            <area>550,435,165,30</area>
-        </textarea>
-
-        <!-- Push buttons -->
-
-        <button name="play" from="basebutton">
-            <position>35,490</position>
-            <value>Play</value>
-        </button>
-
-        <button name="add" from="basebutton">
-            <position>35,540</position>
-            <value>Add</value>
-        </button>
+<!--
 
         <button name="prev">
             <area>230,480,60,60</area>
@@ -1078,16 +1120,7 @@
             </statetype>
         </button>
 
-        <button name="nextnew" from="basebutton">
-            <position>620,490</position>
-            <value>Next New</value>
-        </button>
-
-        <button name="addallnew" from="basebutton">
-            <position>620,540</position>
-            <value>Add All New</value>
-        </button>
-
+-->
     </window>
 
    <!-- The import coverart screen (available from the import music screen) -->
@@ -2442,8 +2475,7 @@
 				    </statetype>
 			       
 			   </buttonlist>
-
-        	
+       	
         </group>
         
         <group name="editalbumart_menu">
