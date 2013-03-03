@@ -84,6 +84,18 @@
         <color>#000000</color>
     </fontdef>
 
+    <fontdef name="Font_Info_Small_Grey" from="Font_Info">
+        <pixelsize>20</pixelsize>
+        <weight>bold</weight>
+        <stretch>extracondensed</stretch>
+<!--
+        <italics>yes</italics>
+        <outlinecolor>#929292</outlinecolor>
+        <outlinesize>2</outlinesize> 
+-->
+        <color>#ECECEC</color>
+    </fontdef>
+
     <fontdef name="Font_Label" from="Font_Info">
         <weight>light</weight>
         <color>#929292</color>
@@ -1876,7 +1888,7 @@
 	                </state>
 	            </statetype>
                <imagetype name="WallMovieOverlay">
-                   <area>5,5,154,154</area>
+                   <area>3,3,154,154</area>
                    <filename>images/shared/wall_nfoverlay.png</filename>
                </imagetype>
            </state>
@@ -4494,6 +4506,31 @@
         </textarea>
     </textedit>
 
+    <textedit name="textedit_settings_details">
+        <area>0,0,1340,72</area>
+        <statetype name="background">
+            <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,22,1340,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+            </state>
+            <state name="selected" from="active">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,1340,72</area>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>cursor.png</filename>
+        </imagetype>
+        <textarea name="text" from="textarea_settings_option">
+            <area>20,0,1300,72</area>
+        </textarea>
+    </textedit>
+
     <textedit name="textedit_settings_halfwidth">
         <area>0,0,700,72</area>
         <statetype name="background">
@@ -5562,6 +5599,255 @@
         <buttonlist name="results" from="buttonlist_dialog_big">
             <position>0,75</position>
         </buttonlist>
+    </window>
+
+    <!-- Popup search dialog used to search button lists -->
+    <window name="MythSearchListDialog">
+        <area>-1,-1,620,165</area>
+        <imagetype name="backimg">
+            <area>0,0,620,165</area>
+            <filename>mythprogressdialog-background.png</filename>
+        </imagetype>
+
+        <textarea name="title" from="basetextarea">
+            <area>5,10,600,30</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+            <value>Search List</value>
+        </textarea>
+
+        <textedit name="searchedit" from="basetextedit">
+            <position>120,40</position>
+        </textedit>
+
+        <button name="prevbutton" from="basebutton">
+            <position>20,105</position>
+            <value>Previous</value>
+        </button>
+
+        <button name="nextbutton" from="basebutton">
+            <position>445,105</position>
+            <value>Next</value>
+        </button>
+
+        <statetype name="searchstate">
+            <area>210,120,200,30</area>
+            <state name="found">
+                <textarea name="statustext" from="basetextarea">
+                    <area>0,0,200,30</area>
+                    <align>allcenter</align>
+                    <font>basesmallgreen</font>
+                    <value>Found</value>
+                </textarea>
+            </state>
+            <state name="notfound">
+                <textarea name="statustext" from="basetextarea">
+                    <area>0,0,200,30</area>
+                    <align>allcenter</align>
+                    <font>basesmallred</font>
+                    <value>Not Found</value>
+                </textarea>
+            </state>
+        </statetype>
+    </window>
+
+    <window name="MythFileBrowser">
+        <area>-1,-1,1850,1010</area>
+
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+	        <area>0,0,1850,1010</area>
+        </group>
+	        	        
+        <group name="filebrowser_panel">
+           <area>414,28,1400,952</area>
+
+	        <textarea name="panel_title" from="textarea_settings_title">
+	            <area>20,50,1315,50</area>
+	            <align>left,vcenter</align>
+	            <scroll direction="horizontal" />
+	            <value>Search for files on your local disks</value>
+	        </textarea>
+	        	
+	        <!-- Labels -->
+<!--	        
+	        <textarea name="titlelabel" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Title (Optional):</value>
+	        </textarea>
+-->
+	
+	        <!-- widgets -->
+	        <buttonlist name="filelist">
+	            <area>20,120,1340,555</area>
+	            <spacing>5</spacing>
+	            <layout>grid</layout>
+	            <buttonarea>0,0,1340,555</buttonarea>
+	            <statetype name="buttonitem">
+	                <state name="active">
+			              <area>0,0,160,180</area>
+	                    <statetype name="nodetype">
+	                        <state name="folder">
+	                            <imagetype name="icon">
+	                                <area>16,16,128,128</area>
+	                                <filename>images/icons/Blank-Folder.png</filename>
+	                             <!--   <mask>images/shared/wall_music_mask_small.png</mask> -->
+	                                <preserveaspect>yes</preserveaspect>
+	                            </imagetype>
+	                        </state>
+	                        <state name="upfolder" from="folder">
+	                            <imagetype name="icon">
+	                                <filename>images/icons/uploads.png</filename>
+	                            </imagetype>
+	                        </state>
+	                        <state name="executable" from="folder">
+	                            <imagetype name="icon">
+	                                <filename>images/icons/binary.png</filename>
+	                            </imagetype>
+	                        </state>
+	                        <state name="file" from="folder">
+	                            <imagetype name="icon">
+	                                <filename>images/icons/file.png</filename>
+	                            </imagetype>
+	                        </state>
+	                    </statetype>
+	                    <imagetype name="buttonimage">
+	                        <area>3,3,154,154</area>
+	                        <preserveaspect>true</preserveaspect>
+	                    </imagetype>
+<!--
+			              <imagetype name="WallMovieOverlay">
+			                  <area>3,3,154,154</area>
+			                  <filename>images/shared/list_musicicon_glass.png</filename>
+			              </imagetype>
+-->
+	                    <textarea name="buttontext"from="textarea_plot">
+			                  <font>Font_Info_Small_Grey</font>
+	                        <area>10,150,140,30</area>
+	                        <align>allcenter</align>
+	                    </textarea>
+	                </state>
+	                <state name="selectedinactive" from="active" />
+	                <state name="selectedactive" from="active">
+			              <imagetype name="WallMusicBorder">
+			                  <area>-5,-8,169,190</area>
+			                  <preserveaspect>no</preserveaspect>
+			                  <filename>images/shared/wall_fborder.png</filename>
+			              </imagetype>
+	                    <textarea name="buttontext"from="textarea_plot">
+			                  <font>Font_Info_Small_White</font>
+	                        <area>10,150,140,30</area>
+	                        <align>allcenter</align>
+	                    </textarea>
+			              <imagetype name="WallMovieOverlay">
+			                  <area>5,-2,154,176</area>
+			                  <filename>images/shared/list_musicicon_glass.png</filename>
+			              </imagetype>
+	                </state>
+	            </statetype>
+	        </buttonlist>
+	
+	        <textedit name="location" from="textedit_settings_details">
+	            <position>-5,750</position>
+	        </textedit>
+	
+	        <textarea name="info" from="basetextarea">
+	            <area>20,830,1300,116</area>
+	            <case>normal</case>
+	            <align>top,justify</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+        	
+        </group>
+        
+        <group name="filebrowser_menu">
+           <area>29,28,324,952</area>
+
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>File browser</value>
+	        </textarea>
+	
+	        <button name="back" from="button_settings">
+	            <position>0,120</position>
+	            <value>Up Level</value>
+	        </button>
+
+	        <button name="home" from="button_settings">
+	            <position>0,192</position>
+	            <value>Home</value>
+	        </button>
+	
+	        <button name="cancel" from="button_settings">
+	            <position>0,264</position>
+	            <value>Cancel</value>
+	        </button>
+	
+	        <button name="ok" from="button_settings">
+	            <position>0,336</position>
+	            <value>OK</value>
+	        </button>
+<!--	
+	        <imagetype name="videoborder">
+	            <area>12,761,310,184</area>
+	            <filename>images/shared/multiplex_tvborder.png</filename>
+	        </imagetype>
+-->
+	        <textarea name="previewlbl" from="textarea_settings_title" depends="preview">
+	            <area>30,470,284,50</area>
+	            <value>Preview</value>
+	        </textarea>
+	
+	        <imagetype name="preview">
+	            <area>22,520,290,420</area>
+	            <preserveaspect>true</preserveaspect>
+	        </imagetype>
+
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+
+<!--
+-->
+    </window>
+
+    <window name="MythTimeInputDialog">
+        <area>-1,-1,580,165</area>
+
+        <imagetype name="box">
+            <filename>mythprogressdialog-background.png</filename>
+        </imagetype>
+
+        <textarea name="message" from="basetextarea">
+            <area>10,8,560,50</area>
+            <font>basemedium</font>
+            <align>allcenter</align>
+            <value>Select Time &amp; Date</value>
+            <multiline>true</multiline>
+        </textarea>
+
+        <buttonlist name="dates" from="baseselector">
+            <position>40,65</position>
+        </buttonlist>
+
+        <buttonlist name="times" from="baseselector">
+            <position>330,65</position>
+        </buttonlist>
+
+        <button name="ok" from="basebutton">
+            <position>220,115</position>
+            <value>OK</value>
+        </button>
+
     </window>
 
 </mythuitheme>

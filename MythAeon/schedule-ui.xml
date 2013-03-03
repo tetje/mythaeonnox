@@ -865,61 +865,10 @@
 -->
         </group>
         
-        <group name="listinfo">
+        <group name="listinfo" from="basegroupschedulelistinfo">
            <area>1264,150,545,930</area>
-
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
-
-	        <imagetype name="coverartframe">
-	            <area>0,0,545,791</area>
-	            <filename>images/shared/list_movieicon_frame.png</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-        
-	        <imagetype name="coverart">
-	            <area>13,13,519,766</area>
-	            <mask>images/shared/list_movieicon_mask.png</mask>
-	            <filename>images/shared/defaultVideoBigPoster.png</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-		
-		     <shape name="descriptionbox" depends="description">
-		         <area>13,13,519,766</area>
-		         <type>roundbox</type>
-		         <cornerradius>15</cornerradius>
-		         <fill color="#323232" alpha="192" />
-		     </shape>
-
-	        <textarea name="description" from="textarea_plot" depends="!coverart">
-	            <area>40,40,475,700</area>
-	            <multiline>yes</multiline>
-	            <cutdown>yes</cutdown>
-	            <template>%DESCRIPTION%</template>
-	        </textarea>
-	       
-	        <imagetype name="coverartglass">
-	            <area>13,13,519,766</area>
-	            <filename>images/shared/list_movieicon_glass.png</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-	        
-	        <group name="listscheduledetails" from="basegroupscheduledetails">
-	           <position>73,810</position>
-			  </group>
-
-<!-- Fix me: This does not work when an other windows has been selected and one returns to the main screen
-
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
         </group>
+
 
     </window>
 

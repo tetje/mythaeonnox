@@ -834,7 +834,7 @@
       
         <imagetype name="coverart">
             <area>0,0,730,1080</area>
-            <filename>images/shared/defaultVideoBigPoster.png</filename>
+            <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
      

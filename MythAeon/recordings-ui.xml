@@ -111,6 +111,7 @@
 		        
 		        <imagetype name="preview" depends="!fanart">
 		            <area>632,58,1046,604</area>
+		            <filename>images/backgrounds/fallback_tvshows.jpg</filename>
 		            <preserveaspect>no</preserveaspect>
 		        </imagetype>
 		        
