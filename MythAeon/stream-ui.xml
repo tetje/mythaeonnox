@@ -124,7 +124,7 @@
 		        </textarea>
 		
 		        <textarea name="novolumetext" from="volume" depends="!volume">
-		             <value>No volume controls configured"</value>
+		             <value>No volume controls configured</value>
 		        </textarea>
 
 		        <textarea name="playlistposition" from="title">
@@ -172,7 +172,7 @@
 					           </textarea>	
 			                 <textarea name="tracknum" from="textarea_info">
 			                     <area>20,32,696,30</area>
-			                     <template>%TRACKNUM% - %TITLE% - %ARTIST% %(|LENGTH|)%</template>
+			                     <template>%TRACKNUM% - %TITLE% %(|LENGTH|)%</template>
 			                 </textarea>
 			            </state>
 			            <state name="selectedactive">
@@ -250,224 +250,276 @@
 	        
         </group>             
 
-
-<!--
-        <shape name="streamlist_background" from="basebackground">
-            <area>15,15,1250,265</area>
-        </shape>
-
-        <shape name="playlist_background" from="basebackground">
-            <area>15,290,1250,170</area>
-        </shape>
-
-        <shape name="track_info_background" from="basebackground">
-            <area>15,470,1250,230</area>
-        </shape>
-
-        <textarea name="nostreams" from="basetextarea">
-            <area>25,25,1225,250</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-            <value>Press MENU to add some radio streams to play.</value>
-        </textarea>
-
-
-        <textarea name="title" from="basetextarea">
-            <area>230,485,900,34</area>
-            <font>baselarge</font>
-        </textarea>
-
-        <textarea name="artist" from="basetextarea">
-            <area>230,525,900,34</area>
-            <font>basemedium</font>
-        </textarea>
-
-        <textarea name="channel" from="basetextarea">
-            <area>230,560,900,34</area>
-            <font>basemedium</font>
-            <template>%STATION% - %CHANNEL%</template>
-        </textarea>
-
-        <textarea name="filename" from="basetextarea">
-            <font>basesmall</font>
-            <area>230,595,840,35</area>
-        </textarea>
-
-        <progressbar name="bufferprogress">
-            <position>230,670</position>
-            <layout>horizontal</layout>
-           <style>reveal</style>
-            <imagetype name="background">
-                <filename>mm_progress-bg.png</filename>
-            </imagetype>
-            <imagetype name="progressimage">
-                <filename>mm_progress-fg.png</filename>
-            </imagetype>
-        </progressbar>
-
-        <textarea name="bufferstatus" from="basetextarea">
-            <area>230,645,400,35</area>
-            <font>basesmall</font>
-            <value></value>
-        </textarea>
-
-        <imagetype name="visualizer_border">
-            <filename>mm_blackhole_border.png</filename>
-            <area>1082,489,162,162,</area>
-        </imagetype>
-
-        <video name="visualizer">
-            <area>1085,493,156,155,</area>
-        </video>
-
-        <textarea name="visualizername" from="basetextarea">
-            <area>1085,650,156,35</area>
-            <font>basesmall</font>
-            <align>center</align>
-        </textarea>
-
-        <textarea name="volume" from="basevolume">
-            <position>70,667</position>
-        </textarea>
-
-        <statetype name="mutestate" from="basemutestate">
-            <position>30,670</position>
-        </statetype>
-
-        <imagetype name="coverart">
-            <filename>mm_nothumb.png</filename>
-            <area>35,493,156,155</area>
-        </imagetype>
-
-        <button name="play" from="baseplaybutton">
-            <position>840,650</position>
-        </button>
-
-        <button name="stop" from="basestopbutton">
-            <position>885,650</position>
-        </button>
--->
     </window>
 
     <window name="editstreammetadata">
 
-        <textarea name="title" from="basetextarea">
-            <area>15,5,800,50</area>
-            <font>baselarge</font>
-            <value>Add/Edit Music Stream</value>
-        </textarea>
+       <area>-1,-1,1850,1010</area>
 
-        <textarea name="stationlabel" >
-            <area>164,106,250,50</area>
-            <font>basemedium</font>
-            <align>right,vcenter</align>
-            <value>Station:</value>
-        </textarea>
-        <textedit name="stationedit" from="basetextedit">
-            <position>424,106</position>
-        </textedit>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <button name="searchbutton" from="basewidebutton">
-            <position>840,108</position>
-            <value>Search for Stream</value>
-        </button>
+        <group name="editstreammetadata_panel">
+            <area>354,28,1460,952</area>
+	 
+	         <textarea name="titlepanel" from="textarea_settings_title">
+	             <area>20,50,1360,50</area>
+	             <value>Edit metadata of the radio stream</value>
+	         </textarea>
+	
+	         <!-- Labels -->
+	         <textarea name="stationlabel" from="textarea_settings_option">
+	             <position>20,120</position>
+	             <value>Station:</value>
+            </textarea>
+	
+	         <textarea name="channellabel"  from="textarea_settings_option">
+	             <position>20,192</position>
+	             <value>Channel:</value>
+	         </textarea>
+	
+	         <textarea name="urllabel" from="textarea_settings_option">
+	             <position>20,264</position>
+	             <value>URL:</value>
+	         </textarea>
+	
+	         <textarea name="logourllabel" from="textarea_settings_option">
+	             <position>20,336</position>
+	             <value>URL Logo:</value>
+	         </textarea>
+	
+	         <textarea name="genrelabel" from="textarea_settings_option">
+	             <position>20,408</position>
+	             <value>Genre:</value>
+	         </textarea>
+	
+	         <textarea name="formatlabel" from="textarea_settings_option">
+	             <position>20,480</position>
+	             <value>Metadata Format:</value>
+	         </textarea>
+	
+	         <!-- widgets -->
 
-        <textarea name="channellabel" from="stationlabel">
-            <position>164,166</position>
-            <value>Channel:</value>
-        </textarea>
-        <textedit name="channeledit" from="stationedit">
-            <position>424,166</position>
-        </textedit>
+	        <textedit name="stationedit" from="textedit_settings">
+	            <position>0,120</position>
+	        </textedit>
+	
+	        <textedit name="channeledit" from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+	
+	        <textedit name="urledit" from="textedit_settings">
+	            <position>0,264</position>
+	        </textedit>
+	
+	        <textedit name="logourledit" from="textedit_settings">
+	            <position>0,336</position>
+	        </textedit>
+	
+	        <textedit name="genreedit" from="textedit_settings">
+	            <position>0,408</position>
+	        </textedit>
+	
+	        <textedit name="formatedit" from="textedit_settings">
+	            <position>0,480</position>
+	        </textedit>
 
-        <textarea name="urllabel" from="stationlabel">
-            <position>164,226</position>
-            <value>URL:</value>
-        </textarea>
-        <textedit name="urledit" from="stationedit">
-            <area>424,226,700,50</area>
-        </textedit>
+        </group>
+        
 
-        <textarea name="logourllabel" from="stationlabel">
-            <position>164,286</position>
-            <value>Logo URL:</value>
-        </textarea>
-        <textedit name="logourledit" from="urledit">
-            <position>424,286</position>
-        </textedit>
+	     <group name="editstreammetadata_menu">
+	         <area>30,28,324,952</area>
+	
+	         <textarea name="title" from="textarea_settings_title">
+	             <area>30,50,284,50</area>
+	             <value>Stream Metadata</value>
+	         </textarea>
+	
+	         <button name="searchbutton" from="button_settings">
+	             <position>0,120</position>
+	             <value>Search for Stream</value>
+	         </button>
+	
+	         <button name="cancelbutton" from="button_settings">
+	             <position>0,192</position>
+	             <value>Cancel</value>
+	         </button>
+	
+	         <button name="savebutton" from="button_settings">
+	             <position>0,264</position>
+	             <value>Save</value>
+	         </button>
+	
+	     </group>
 
-        <textarea name="genrelabel" from="stationlabel">
-            <position>164,346</position>
-            <value>Genres:</value>
-        </textarea>
-        <textedit name="genreedit" from="urledit">
-            <position>424,346</position>
-        </textedit>
-
-        <textarea name="formatlabel" from="stationlabel">
-            <position>164,406</position>
-            <value>Metadata Format:</value>
-        </textarea>
-        <textedit name="formatedit" from="stationedit">
-            <position>424,406</position>
-        </textedit>
-
-        <button name="cancelbutton" from="basebutton">
-            <position>100,650</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="savebutton" from="basebutton">
-            <position>1000,650</position>
-            <value>Save</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
     <window name="searchstream">
 
-        <textarea name="title" from="basetextarea">
-            <area>15,5,800,50</area>
-            <font>baselarge</font>
-            <value>Search for Music Stream</value>
-        </textarea>
+       <area>-1,-1,1850,1010</area>
 
-        <textarea name="stationlabel" >
-            <area>164,53,250,50</area>
-            <font>basemedium</font>
-            <align>right,vcenter</align>
-            <value>Station:</value>
-        </textarea>
-        <buttonlist name="stationlist" from="basemediumselector">
-            <position>420,56</position>
-        </buttonlist>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="genrelabel" from="stationlabel">
-            <position>164,108</position>
-            <value>Genre:</value>
-        </textarea>
-        <buttonlist name="genrelist" from="basemediumselector">
-            <position>420,111</position>
-        </buttonlist>
+        <group name="searchstream_panel">
+            <area>354,28,1460,952</area>
+	 
+	         <textarea name="titlepanel" from="textarea_settings_title">
+	             <area>20,50,1360,50</area>
+	             <value>Search for Radio Streams</value>
+	         </textarea>
+	
+	         <!-- Labels -->
+	         <textarea name="stationlabel" from="textarea_settings_option">
+	             <position>20,120</position>
+	             <value>Station:</value>
+            </textarea>
+	
+	         <textarea name="channellabel"  from="textarea_settings_option">
+	             <position>20,192</position>
+	             <value>Channel:</value>
+	         </textarea>
+	
+	         <textarea name="genrelabel" from="textarea_settings_option">
+	             <position>20,264</position>
+	             <value>Genre:</value>
+	         </textarea>
+	
+	         <!-- widgets -->
 
-        <textarea name="channellabel" from="stationlabel">
-            <position>164,166</position>
-            <value>Channel:</value>
-        </textarea>
-        <textedit name="channeledit" from="basetextedit">
-            <position>420,166</position>
-        </textedit>
+	        <buttonlist name="stationlist" from="selector_settings">
+	             <position>0,120</position>
+	        </buttonlist>
+	
+	        <textedit name="channeledit" from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+	
+	        <buttonlist name="genrelist" from="selector_settings">
+	             <position>0,264</position>
+	        </buttonlist>
+	
+			  <buttonlist name="streamlist">
+			    <area>0,336,1400,576</area>
+			    <align>top,hcenter</align>
+			    <layout>vertical</layout>
+			    <wrapstyle>selection</wrapstyle>
+			    <arrange>stack</arrange>
+			    <showarrow>no</showarrow>
+			    <buttonarea>0,0,1400,576</buttonarea>
+			    <statetype name="buttonitem">
+			        <state name="active">
+			           <imagetype name="backgroundactive">
+			               <area>0,22,1400,50</area>
+			               <preserveaspect>no</preserveaspect>
+			               <filename>images/shared/settings_radiobuttonoff.png</filename>
+			           </imagetype>
+		              <imagetype name="channeliconframe" depends="channelicon">
+		                  <area>10,3,64,64</area>
+		                  <filename>images/shared/wall_nfborder.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		              </imagetype>
+		              <imagetype name="buttonimage">
+		                  <area>12,5,62,62</area>
+		                  <mask>images/shared/wall_mask_tiny.png</mask>
+		                  <filename>images/shared/DefaultMusicPlugins.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		              </imagetype>
+		              <imagetype name="channeliconglass" depends="channelicon">
+		                  <area>12,5,62,62</area>
+		                  <filename>images/shared/wall_nfoverlay.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		              </imagetype>
+			           <textarea name="station" from="textarea_settings_option">
+			               <area>95,0,1295,72</area>
+			               <align>left,vcenter</align>
+			               <template>%STATION% - %Channel%  | %genre%</template>
+			           </textarea>
+			        </state>
+			        <state name="selectedactive">
+			            <imagetype name="backgroundselected">
+			               <area>0,0,1400,72</area>
+			               <preserveaspect>no</preserveaspect>
+			               <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+			            </imagetype>
+		               <imagetype name="channeliconframe" depends="channelicon">
+		                  <area>10,3,64,64</area>
+		                  <filename>images/shared/wall_nfborder.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		               </imagetype>
+		               <imagetype name="buttonimage">
+		                  <area>12,5,62,62</area>
+		                  <mask>images/shared/wall_mask_tiny.png</mask>
+		                  <filename>images/shared/DefaultMusicPlugins.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		               </imagetype>
+		               <imagetype name="channeliconglass" depends="channelicon">
+		                  <area>12,5,62,62</area>
+		                  <filename>images/shared/wall_nfoverlay.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		               </imagetype>
+			            <textarea name="station" from="textarea_settings_option">
+			               <area>95,0,1295,72</area>
+			               <align>left,vcenter</align>
+			               <template>%STATION% - %Channel%  | %genre%</template>
+			            </textarea>
+			        </state>
+			        <state name="inactive" from="active"/>
+			        <state name="selectedinactive" from="active">
+			            <alpha>128</alpha>
+			        </state>
+			     </statetype>
+			  </buttonlist>
 
-        <textarea name="matcheslable" from="stationlabel">
-            <area>820,166,150,50</area>
-            <align>right,vcenter</align>
-            <value>Matches:</value>
-        </textarea>
+        </group>
+        
 
-        <textarea name="matchestext" from="stationlabel">
-            <area>990,166,150,50</area>
-            <align>left,vcenter</align>
-        </textarea>
+	     <group name="searchstream_menu">
+	         <area>30,28,324,952</area>
+	
+	         <textarea name="title" from="textarea_settings_title">
+	             <area>30,50,284,50</area>
+	             <value>Search Stream</value>
+	         </textarea>
+
+	         <textarea name="matcheslabel" from="textarea_settings_button">
+                 <area>50,120,264,72</area>
+	             <value>Matches</value>
+            </textarea>
+	
+	         <textarea name="matchestext" from="textarea_settings_button">
+                 <area>160,120,154,72</area>
+            </textarea>
+	
+	     </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+
+<!--
 
         <buttonlist name="streamlist" from="basebuttonlist2">
             <area>30,225,1220,480</area>
@@ -533,7 +585,7 @@
                 <position>1190,465</position>
             </statetype>
         </buttonlist>
-
+-->
 
     </window>
 

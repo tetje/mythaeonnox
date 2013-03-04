@@ -951,11 +951,11 @@
 				    </statetype>
 
 		         <textarea name="genre" from="textarea_title_sub">
-		             <area>-844,280,1918,30</area>
+		             <area>-844,310,1918,30</area>
 		             <align>allcenter</align>
 		         </textarea>
                <textarea name="title"  from="textarea_title">
-                   <area>-844,320,1918,45</area>
+                   <area>-844,345,1918,45</area>
                    <cutdown>no</cutdown>
 		             <align>allcenter</align>
 		             <template>%artist% - %title%</template>
@@ -5397,7 +5397,7 @@
         </textarea>
 
         <textarea name="novolumetext" from="volume" depends="!volume">
-             <value>No volume controls configured"</value>
+             <value>No volume controls configured</value>
         </textarea>
 
         <textarea name="playlistplayedtime" from="nexttitle">
