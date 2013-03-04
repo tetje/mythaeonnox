@@ -1000,6 +1000,178 @@
        
    </buttonlist>
 
+   <buttonlist name="buttonlist_multiplexstream">
+       <spacing>4</spacing>
+       <area>0,0,1920,400</area>
+       <searchposition>758,55</searchposition>
+       <layout>horizontal</layout>
+       <scrollstyle>center</scrollstyle>
+       <arrange>stack</arrange>
+       <align>hcenter</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>yes</showarrow>
+       <buttonarea>113,0,1694,400</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <imagetype name="previewbgd">
+                   <area>0,5,176,176</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_frame.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="buttonimage">
+                   <area>5,10,166,166</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/DefaultMusicPlugins.png</filename>
+                   <mask>images/shared/list_musicicon_mask_multiplex_small.png</mask>
+                   <preserveaspect>no</preserveaspect>
+                   <reflection shear="0" scale="50" length="33" spacing="0" />
+               </imagetype>
+               <imagetype name="previewglass">
+                   <area>5,10,166,166</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_glass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="previewlabel">
+                   <area>12,225,150,90</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_labelblock.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+<!--
+               <statetype name="nodetype">
+                   <area>0,0,110,159</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>80,129,25,25</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,110,159</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+               <textarea name="channel" from="textarea_plot">
+                   <area>17,225,140,50</area>
+                   <font>Font_Info_Small_White</font>
+                   <multiline>yes</multiline>
+                   <cutdown>yes</cutdown>
+                   <align>hcenter,vcenter</align>
+               </textarea>	  
+                        
+           </state>
+           <state name="selectedactive">
+               <area>-844,-9,231,320</area>
+               <imagetype name="previewbgd">
+                   <area>0,-9,231,231</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_frame.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="buttonimage">
+                   <area>8,-2,217,217</area>
+                   <alpha>255</alpha>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/DefaultMusicPlugins.png</filename>
+                   <mask>images/shared/list_musicicon_mask_multiplex.png</mask>
+               </imagetype>
+               <imagetype name="previewglass">
+                   <area>8,-2,217,217</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_glass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+<!--
+               <statetype name="nodetype">
+                   <area>-8,0,138,199</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>103,164,30,30</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,138,199</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->              
+				    <statetype name="basemovingtracksstate">
+				        <position>-18,240</position>
+				        <state name="off"></state>
+				        <state name="on">
+				            <imagetype name="statusimage">
+				                <area>0,0,36,36</area>
+				                <filename>images/icons/move_black.png</filename>
+				            </imagetype>
+				        </state>
+				    </statetype>
+
+		         <textarea name="genre" from="textarea_title_sub">
+		             <area>-844,310,1918,30</area>
+		             <align>allcenter</align>
+		         </textarea>
+               <textarea name="station"  from="textarea_title">
+                   <area>-844,345,1918,45</area>
+                   <cutdown>no</cutdown>
+		             <align>allcenter</align>
+		             <template>%station% - %channel%</template>
+               </textarea>	  
+                        
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>255</alpha>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>255</alpha>
+           </state>
+       </statetype>
+	    <statetype name="downscrollarrow">
+	        <position>50,70</position>
+	        <state type="off">
+	            <imagetype name="dnon">
+	                <filename>images/shared/multiplex_arrow2.png</filename>
+	                <alpha>90</alpha>
+	            </imagetype>
+	        </state>
+	        <state type="full">
+	            <imagetype name="dnoff">
+	                <filename>images/shared/multiplex_arrow2.png</filename>
+	            </imagetype>
+	        </state>
+	    </statetype>
+	    <statetype name="upscrollarrow">
+	        <position>1820,70</position>
+	        <state type="off">
+	            <imagetype name="dnon">
+	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <alpha>90</alpha>
+	            </imagetype>
+	        </state>
+	        <state type="full">
+	            <imagetype name="dnoff">
+	                <filename>images/shared/multiplex_arrow1.png</filename>
+	            </imagetype>
+	        </state>
+	    </statetype>
+       
+   </buttonlist>
+
    <buttonlist name="buttonlist_tvshowpanel">
        <area>0,0,1052,560</area>
        <layout>vertical</layout>
@@ -5058,6 +5230,7 @@
 		        </state>
 		    </statetype>
      </group> 
+     
      <group name="basegrouptrackinfo">
         <area>0,0,450,515</area>
 
