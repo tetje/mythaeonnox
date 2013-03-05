@@ -735,10 +735,11 @@
 			             </textarea>
 	                   <textarea name="track" from="buttontext">
 	                       <scroll direction="horizontal"/>
-	                       <template>%track% - %title% - %artist% (%length)</template>
+	                       <template>%track% - %title% - %artist% (%length%)</template>
 	                   </textarea>
  	                </state>
 	                <state name="selectedinactive" from="active" />
+	                <state name="inactive" from="active" />
 	            </statetype>
 	         </buttonlist>
 
@@ -829,23 +830,23 @@
         </progressbar>
 
         <textarea name="track_label" from="messagelbl">
-            <area>70,375,560,50</area>
+            <area>70,325,560,50</area>
             <value>Encoding Track</value>
         </textarea>
 
         <textarea name="track" from="messagelbl">
-            <area>70,425,560,50</area>
+            <area>70,375,560,50</area>
         </textarea>
 
         <textarea name="trackpct" from="textarea_submenu">
-            <area>70,455,560,30</area>
+            <area>70,405,560,30</area>
             <font>Font_Info_Small</font>
             <align>allcenter</align>
             <value>0%</value>
         </textarea>
 
         <progressbar name="track_progress" from="baseprogressbar">
-            <area>70,475,560,30</area>
+            <area>70,425,560,30</area>
         </progressbar>
 
     </window>
