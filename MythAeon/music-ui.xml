@@ -725,7 +725,7 @@
 			                 <align>left,vcenter</align>
 			             </textarea>
 	                   <textarea name="track" from="buttontext">
-	                       <template>%track% - %title% - %artist% (%length)</template>
+	                       <template>%track% - %title% - %artist% (%length%)</template>
 	                   </textarea>
 	                </state>
 	                <state name="selectedactive">
