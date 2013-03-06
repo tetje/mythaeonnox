@@ -650,7 +650,7 @@
         	
 	        <buttontree name="videos">
                <area>12,50,1115,800</area>
-	            <numlists>2</numlists>
+	            <numlists>1</numlists>
 	            <spacing>0</spacing>
 	            <buttonlist name="listtemplate" from="buttonlist_videomanager" />
 	        </buttontree>

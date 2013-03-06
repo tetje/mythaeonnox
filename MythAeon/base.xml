@@ -1952,7 +1952,7 @@
 
    <buttonlist name="buttonlist_wall_music">
        <spacing>0</spacing>
-       <area>0,0,1600,800</area>
+       <area>0,0,1600,480</area>
        <searchposition>758,55</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
@@ -1961,7 +1961,7 @@
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <drawfrombottom>yes</drawfrombottom>
-       <buttonarea>0,0,1600,800</buttonarea>
+       <buttonarea>0,0,1600,480</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
                <area>,0,160,160</area>
@@ -2032,6 +2032,13 @@
 			                   <area>0,0,154,154</area>
 			                   <mask>images/shared/wall_music_mask_small.png</mask>
 			                   <filename>images/shared/DefaultMusicCompilations.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="directory">
+                        <imagetype name="directory">
+			                   <area>0,0,154,154</area>
+			                   <mask>images/shared/wall_music_mask_small.png</mask>
+			                   <filename>images/shared/DefaultFolder.png</filename>
                         </imagetype>
                     </state>
                     <state name="playlists">
@@ -2136,6 +2143,13 @@
 			                   <area>0,0,213,213</area>
 			                   <mask>images/shared/wall_music_mask.png</mask>
 			                   <filename>images/shared/DefaultMusicCompilations.png</filename>
+                        </imagetype>
+                    </state>
+                    <state name="directory">
+                        <imagetype name="directory">
+			                   <area>0,0,213,213</area>
+			                   <mask>images/shared/wall_music_mask.png</mask>
+			                   <filename>images/shared/DefaultFolder.png</filename>
                         </imagetype>
                     </state>
                     <state name="playlists">
