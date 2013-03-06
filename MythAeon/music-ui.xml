@@ -1067,7 +1067,6 @@
    <!-- The import coverart screen (available from the import music screen) -->
     <window name="import_coverart">
 
-
         <area>-1,-1,1850,1010</area>
 
 	     <animation trigger="AboutToShow">
@@ -1269,42 +1268,47 @@
     </window>
 
     <window name="volume_popup">
-        <area>-1,-1,620,165</area>
-        <imagetype name="backimg">
-            <area>0,0,620,165</area>
-            <filename>mythprogressdialog-background.png</filename>
-        </imagetype>
+        <area>-1,-1,700,300</area>
 
-        <textarea name="message" from="basetextarea">
-            <area>20,20,540,60</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
+        <group name="confirmation_dialog_window" from="basedialogwindow">
+            <position>0,0</position>        
+        </group>
+
+        <textarea name="message" from="textarea_list">
+            <area>70,75,560,50</area>
+            <scroll direction="horizontal"/>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
             <value>Volume</value>
         </textarea>
 
-        <statetype name="mutestate">
-            <position>20,90</position>
-            <state name="off">
-                <imagetype name="statusimage">
-                    <filename>mm_volume.png</filename>
-                </imagetype>
-            </state>
-            <state name="on">
-                <imagetype name="statusimage">
-                    <filename>mm_volume_muted.png</filename>
-                </imagetype>
-            </state>
-        </statetype>
+		  <statetype name="mutestate">
+		      <area>70,170,40,40</area>
+		      <state name="off">
+		          <imagetype name="muteoff" >
+		              <area>0,0,40,40</area>
+		              <filename>images/icons/music_volume_on.png</filename>
+		          </imagetype>
+		      </state>
+		      <state name="on">
+		          <imagetype name="muteon" >
+		              <area>0,0,40,40</area>
+		              <filename>images/icons/music_volume_off.png</filename>
+		          </imagetype>
+		      </state>
+		  </statetype>
 
         <progressbar name="volumeprogress" from="baseprogressbar">
-            <position>60,80</position>
+            <area>130,175,500,30</area>
         </progressbar>
 
-        <textarea name="volume" from="basetextarea">
-            <area>70,120,300,30</area>
-            <align>left,top</align>
+        <textarea name="volume" from="textarea_submenu">
+            <area>130,155,500,30</area>
+            <font>Font_Info_Small</font>
+            <align>allcenter</align>
             <template>%VOLUMEPERCENT%</template>
         </textarea>
+
     </window>
 
    <!-- this is the main smartplaylist editor screen -->

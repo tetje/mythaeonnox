@@ -536,7 +536,7 @@
    <buttonlist name="buttonlist_submenu">
        <spacing>0</spacing>
        <area>0,0,1076,60</area>
-       <searchposition>758,55</searchposition>
+       <searchposition>610,340</searchposition>
        <layout>horizontal</layout>
        <scrollstyle>free</scrollstyle>
        <arrange>stack</arrange>
@@ -567,7 +567,7 @@
    <buttonlist name="buttonlist_multiplextv">
        <spacing>5</spacing>
        <area>0,0,1920,213</area>
-       <searchposition>758,55</searchposition>
+       <searchposition>610,340</searchposition>
        <layout>horizontal</layout>
        <scrollstyle>center</scrollstyle>
        <arrange>stack</arrange>
@@ -673,7 +673,7 @@
    <buttonlist name="buttonlist_multiplexmovie">
        <area>0,0,1920,267</area>
        <spacing>5</spacing>
-       <searchposition>758,55</searchposition>
+       <searchposition>610,340</searchposition>
        <layout>horizontal</layout>
        <scrollstyle>center</scrollstyle>
        <arrange>stack</arrange>
@@ -831,7 +831,7 @@
    <buttonlist name="buttonlist_multiplexmusic">
        <spacing>4</spacing>
        <area>0,0,1920,400</area>
-       <searchposition>758,55</searchposition>
+       <searchposition>610,340</searchposition>
        <layout>horizontal</layout>
        <scrollstyle>center</scrollstyle>
        <arrange>stack</arrange>
@@ -1003,7 +1003,7 @@
    <buttonlist name="buttonlist_multiplexstream">
        <spacing>4</spacing>
        <area>0,0,1920,400</area>
-       <searchposition>758,55</searchposition>
+       <searchposition>610,340</searchposition>
        <layout>horizontal</layout>
        <scrollstyle>center</scrollstyle>
        <arrange>stack</arrange>
@@ -1625,7 +1625,7 @@
    <buttonlist name="buttonlist_wall">
        <spacing>0</spacing>
        <area>0,0,1752,955</area>
-       <searchposition>758,55</searchposition>
+       <searchposition>610,340</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
        <arrange>stack</arrange>
@@ -1743,7 +1743,7 @@
    <buttonlist name="buttonlist_wall_small">
        <spacing>0</spacing>
        <area>0,0,1600,710</area>
-       <searchposition>758,55</searchposition>
+       <searchposition>610,340</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
        <arrange>fixed</arrange>
@@ -1848,7 +1848,7 @@
    <buttonlist name="buttonlist_wall_panel">
        <spacing>0</spacing>
        <area>0,0,1680,744</area>
-       <searchposition>758,55</searchposition>
+       <searchposition>610,340</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
        <arrange>fixed</arrange>
@@ -1953,7 +1953,7 @@
    <buttonlist name="buttonlist_wall_music">
        <spacing>0</spacing>
        <area>0,0,1600,480</area>
-       <searchposition>758,55</searchposition>
+       <searchposition>610,340</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
        <arrange>fixed</arrange>
@@ -5488,6 +5488,25 @@
         </imagetype>        
     </group>
 
+    <group name="basedialogwindowmid" >
+        <area>0,0,700,400</area>
+        <imagetype name="dialogtop">
+            <area>0,0,700,75</area>
+            <filename>images/shared/context_top.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogmid">
+            <area>1,75,700,250</area>
+            <filename>images/shared/context_middle.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogbottom">
+            <area>0,324,700,75</area>
+            <filename>images/shared/context_bottom.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>        
+    </group>
+
     <group name="basedialogwindowbig" >
         <area>0,0,700,550</area>
         <imagetype name="dialogtop">
@@ -5790,53 +5809,59 @@
 
     <!-- Popup search dialog used to search button lists -->
     <window name="MythSearchListDialog">
-        <area>-1,-1,620,165</area>
-        <imagetype name="backimg">
-            <area>0,0,620,165</area>
-            <filename>mythprogressdialog-background.png</filename>
-        </imagetype>
+        <area>-1,-1,700,400</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>5,10,600,30</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
+        <group name="MythSearchListDialog_dialog_window" from="basedialogwindowmid">
+            <position>0,0</position>        
+        </group>
+
+        <textarea name="title" from="textarea_list">
+            <area>70,75,560,50</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
             <value>Search List</value>
         </textarea>
 
-        <textedit name="searchedit" from="basetextedit">
-            <position>120,40</position>
-        </textedit>
-
-        <button name="prevbutton" from="basebutton">
-            <position>20,105</position>
-            <value>Previous</value>
-        </button>
-
-        <button name="nextbutton" from="basebutton">
-            <position>445,105</position>
-            <value>Next</value>
-        </button>
+        <textarea name="Resultlbl" from="textarea_list">
+            <area>70,125,560,50</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
+            <value>Result:</value>
+        </textarea>
 
         <statetype name="searchstate">
-            <area>210,120,200,30</area>
+            <area>180,125,450,50</area>
             <state name="found">
-                <textarea name="statustext" from="basetextarea">
-                    <area>0,0,200,30</area>
-                    <align>allcenter</align>
-                    <font>basesmallgreen</font>
+                <textarea name="statustext" from="textarea_list">
+                    <area>0,0,560,50</area>
                     <value>Found</value>
                 </textarea>
             </state>
             <state name="notfound">
-                <textarea name="statustext" from="basetextarea">
-                    <area>0,0,200,30</area>
-                    <align>allcenter</align>
-                    <font>basesmallred</font>
+                <textarea name="statustext" from="textarea_list">
+                    <area>0,0,560,50</area>
                     <value>Not Found</value>
                 </textarea>
             </state>
         </statetype>
-    </window>
+
+        <textedit name="searchedit" from="textedit_dialog">
+            <position>0,175</position>
+        </textedit>
+
+        <button name="prevbutton" from="button_dialog">
+            <position>0,225</position>
+            <value>Previous</value>
+        </button>
+        
+        <button name="nextbutton" from="button_dialog">
+            <position>0,275</position>
+            <value>Next</value>
+        </button>
+
+   </window>
 
     <window name="MythFileBrowser">
         <area>-1,-1,1850,1010</area>
@@ -5862,12 +5887,6 @@
 	        </textarea>
 	        	
 	        <!-- Labels -->
-<!--	        
-	        <textarea name="titlelabel" from="textarea_settings_option">
-	            <position>20,120</position>
-	            <value>Title (Optional):</value>
-	        </textarea>
--->
 	
 	        <!-- widgets -->
 	        <buttonlist name="filelist">
@@ -5907,12 +5926,6 @@
 	                        <area>3,3,154,154</area>
 	                        <preserveaspect>true</preserveaspect>
 	                    </imagetype>
-<!--
-			              <imagetype name="WallMovieOverlay">
-			                  <area>3,3,154,154</area>
-			                  <filename>images/shared/list_musicicon_glass.png</filename>
-			              </imagetype>
--->
 	                    <textarea name="buttontext"from="textarea_plot">
 			                  <font>Font_Info_Small_Grey</font>
 	                        <area>10,150,140,30</area>
@@ -5979,12 +5992,7 @@
 	            <position>0,336</position>
 	            <value>OK</value>
 	        </button>
-<!--	
-	        <imagetype name="videoborder">
-	            <area>12,761,310,184</area>
-	            <filename>images/shared/multiplex_tvborder.png</filename>
-	        </imagetype>
--->
+
 	        <textarea name="previewlbl" from="textarea_settings_title" depends="preview">
 	            <area>30,470,284,50</area>
 	            <value>Preview</value>
@@ -6003,8 +6011,6 @@
 	        </section>
 	     </animation>
 
-<!--
--->
     </window>
 
     <window name="MythTimeInputDialog">
