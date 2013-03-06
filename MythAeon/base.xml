@@ -4406,6 +4406,63 @@
         </statetype>
    </buttonlist>
 
+    <buttonlist name="selector_dialog">
+        <area>0,0,700,50</area>
+        <layout>horizontal</layout>
+        <buttonarea>0,0,700,50</buttonarea>
+        <statetype name="buttonitem">
+            <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_nofocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>70,0,455,50</area>
+               </textarea>
+            </state>
+            <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_highlight.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>70,0,455,50</area>
+                   <font>Font_List_Active</font>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="active"/>
+        </statetype>
+        <statetype name="upscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>546,-24,62,98</area>
+                   <filename>images/shared/spin-down.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnoff">
+                   <area>546,-24,62,98</area>
+                   <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>608,-24,62,98</area>
+                   <filename>images/shared/spin-up.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                   <area>608,-24,62,98</area>
+                   <filename>images/shared/spin-up-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </buttonlist>
+
     <!-- Base definition of a list in 'selector' configuration -->
     <buttonlist name="baseselector">
         <area>0,0,220,40</area>
@@ -6014,30 +6071,30 @@
     </window>
 
     <window name="MythTimeInputDialog">
-        <area>-1,-1,580,165</area>
+        <area>-1,-1,700,400</area>
 
-        <imagetype name="box">
-            <filename>mythprogressdialog-background.png</filename>
-        </imagetype>
+        <group name="MythSearchListDialog_dialog_window" from="basedialogwindowmid">
+            <position>0,0</position>        
+        </group>
 
-        <textarea name="message" from="basetextarea">
-            <area>10,8,560,50</area>
-            <font>basemedium</font>
-            <align>allcenter</align>
+        <textarea name="message" from="textarea_list">
+            <area>70,75,560,100</area>
+            <multiline>yes</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
             <value>Select Time &amp; Date</value>
-            <multiline>true</multiline>
         </textarea>
 
-        <buttonlist name="dates" from="baseselector">
-            <position>40,65</position>
+        <buttonlist name="dates" from="selector_dialog">
+            <position>0,175</position>
         </buttonlist>
 
-        <buttonlist name="times" from="baseselector">
-            <position>330,65</position>
+        <buttonlist name="times" from="selector_dialog">
+            <position>0,225</position>
         </buttonlist>
 
-        <button name="ok" from="basebutton">
-            <position>220,115</position>
+        <button name="ok" from="button_dialog">
+            <position>0,275</position>
             <value>OK</value>
         </button>
 
