@@ -2928,7 +2928,7 @@
                     <filename>images/shared/settings_radiobuttonofffocus.png</filename>
                 </imagetype>
                 <imagetype name="dnoff">
-                    <area>1277,-13,62,98</area>
+                    <area>1276,-13,62,98</area>
                     <filename>images/shared/spin-down-focus.png</filename>
                 </imagetype>
             </state>
@@ -3762,13 +3762,13 @@
         <statetype name="upscrollarrow">
             <state type="off">
                <imagetype name="dnon">
-                   <area>327,0,62,98</area>
+                   <area>326,0,62,98</area>
                    <filename>images/shared/spin-down.png</filename>
                </imagetype>
             </state>
             <state type="full">
                 <imagetype name="dnoff">
-                   <area>327,0,62,98</area>
+                   <area>326,0,62,98</area>
                    <filename>images/shared/spin-down-focus.png</filename>
                 </imagetype>
             </state>
@@ -3815,13 +3815,13 @@
         <statetype name="upscrollarrow">
             <state type="off">
                <imagetype name="dnon">
-                   <area>137,0,62,98</area>
+                   <area>136,0,62,98</area>
                    <filename>images/shared/spin-down.png</filename>
                </imagetype>
             </state>
             <state type="full">
                 <imagetype name="dnoff">
-                   <area>137,0,62,98</area>
+                   <area>136,0,62,98</area>
                    <filename>images/shared/spin-down-focus.png</filename>
                 </imagetype>
             </state>
@@ -3875,13 +3875,13 @@
         <statetype name="upscrollarrow">
             <state type="off">
                <imagetype name="dnon">
-                   <area>1277,-13,62,98</area>
+                   <area>1276,-13,62,98</area>
                    <filename>images/shared/spin-down.png</filename>
                </imagetype>
             </state>
             <state type="full">
                 <imagetype name="dnoff">
-                   <area>1277,-13,62,98</area>
+                   <area>1276,-13,62,98</area>
                    <filename>images/shared/spin-down-focus.png</filename>
                 </imagetype>
             </state>
@@ -3933,13 +3933,13 @@
         <statetype name="upscrollarrow">
             <state type="off">
                <imagetype name="dnon">
-                   <area>1277,-13,62,98</area>
+                   <area>1276,-13,62,98</area>
                    <filename>images/shared/spin-down.png</filename>
                </imagetype>
             </state>
             <state type="full">
                 <imagetype name="dnoff">
-                   <area>1277,-13,62,98</area>
+                   <area>1276,-13,62,98</area>
                    <filename>images/shared/spin-down-focus.png</filename>
                 </imagetype>
             </state>
@@ -3993,13 +3993,13 @@
         <statetype name="upscrollarrow">
             <state type="off">
                <imagetype name="dnon">
-                   <area>577,-13,62,98</area>
+                   <area>576,-13,62,98</area>
                    <filename>images/shared/spin-down.png</filename>
                </imagetype>
             </state>
             <state type="full">
                 <imagetype name="dnoff">
-                   <area>577,-13,62,98</area>
+                   <area>576,-13,62,98</area>
                    <filename>images/shared/spin-down-focus.png</filename>
                 </imagetype>
             </state>

@@ -687,7 +687,7 @@
 	        <imagetype name="coverart">
 	            <area>13,13,519,766</area>
 	            <mask>images/shared/list_movieicon_mask.png</mask>
-	            <filename>images/shared/defaultVideoBigPoster.png</filename>
+	            <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
                <preserveaspect>no</preserveaspect>
 	        </imagetype>
         
