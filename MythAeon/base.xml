@@ -4020,6 +4020,61 @@
         </statetype>
     </spinbox>
 
+    <spinbox name="spinbox_dialog">
+        <area>0,0,700,50</area>
+        <layout>horizontal</layout>
+        <statetype name="buttonitem">
+            <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_nofocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>70,0,455,50</area>
+               </textarea>
+            </state>
+            <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_highlight.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>70,0,455,50</area>
+                   <font>Font_List_Active</font>
+               </textarea>
+            </state>
+            <state name="selectedinactive" from="active" />
+        </statetype>
+        <statetype name="upscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>546,-24,62,98</area>
+                   <filename>images/shared/spin-down.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnoff">
+                   <area>546,-24,62,98</area>
+                   <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>608,-24,62,98</area>
+                   <filename>images/shared/spin-up.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                   <area>608,-24,62,98</area>
+                   <filename>images/shared/spin-up-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </spinbox>
+
    <!-- Base definition of a spinbox -->
     <spinbox name="basespinbox">
         <area>0,0,90,40</area>
@@ -5583,6 +5638,25 @@
         </imagetype>        
     </group>
 
+    <group name="basedialogwindow600" >
+        <area>0,0,700,600</area>
+        <imagetype name="dialogtop">
+            <area>0,0,700,75</area>
+            <filename>images/shared/context_top.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogmid">
+            <area>1,75,700,450</area>
+            <filename>images/shared/context_middle.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogbottom">
+            <area>0,524,700,75</area>
+            <filename>images/shared/context_bottom.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>        
+    </group>
+
     <group name="basesettingswindow" >
         <area>0,0,1850,1010</area>
         
@@ -5797,7 +5871,7 @@
 
         <textarea name="title" from="textarea_list">
             <area>70,75,560,50</area>
-            <multiline>yes</multiline>
+            <multiline>no</multiline>
             <cutdown>no</cutdown>
             <scroll direction="horizontal"/>
         </textarea>
@@ -6079,7 +6153,7 @@
 
         <textarea name="message" from="textarea_list">
             <area>70,75,560,100</area>
-            <multiline>yes</multiline>
+            <multiline>no</multiline>
             <cutdown>no</cutdown>
             <scroll direction="horizontal"/>
             <value>Select Time &amp; Date</value>

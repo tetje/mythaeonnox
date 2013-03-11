@@ -1314,212 +1314,199 @@
    <!-- this is the main smartplaylist editor screen -->
      <window name="smartplaylisteditor">
 
-        <textarea name="title" from="basetextarea">
-            <area>15,5,600,40</area>
-            <font>baselarge</font>
-            <value>Smart Playlist Editor</value>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="categorylbl"  from="basetextarea">
-            <area>20,50,170,50</area>
-            <align>right,vcenter</align>
-            <value>Category:</value>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <buttonlist name="categoryselector" from="basewideselector">
-            <position>200,50</position>
-        </buttonlist>
+        <group name="smartplaylisteditor_panel">
+            <area>354,28,1460,952</area>
+	 
+	         <textarea name="titlepanel" from="textarea_settings_title">
+	             <area>20,50,1360,50</area>
+	             <value>Edit your smart playlist</value>
+	         </textarea>
+	
+	         <!--gridlines -->
+            <imagetype name="Listpanelline1">
+                <area>0,790,1400,50</area>
+                <filename>images/shared/settings_radiobuttonoff.png</filename>
+            </imagetype>
 
+	         <!-- Labels -->
+	         <textarea name="categorylbl" from="textarea_settings_option">
+	             <position>20,120</position>
+	             <value>Category:</value>
+            </textarea>
+	
+	         <textarea name="titlelbl"  from="textarea_settings_option">
+	             <position>20,192</position>
+	             <value>Title:</value>
+	         </textarea>
+	
+	         <textarea name="matchlbl" from="textarea_settings_option">
+	             <position>20,264</position>
+	             <value>Match:</value>
+	         </textarea>
+	
+	         <textarea name="match2lbl" from="textarea_settings_option">
+	             <position>20,336</position>
+	             <value>Of The Following Conditions</value>
+	         </textarea>
+	
+	         <textarea name="orderbylbl" from="textarea_settings_option">
+	             <position>20,696</position>
+	             <value>Order by:</value>
+	         </textarea>
+	
+	         <textarea name="matcheslbl" from="textarea_settings_option">
+	             <position>20,768</position>
+	             <value>Matches:</value>
+	         </textarea>
+	
+	         <textarea name="limitlbl" from="textarea_settings_option">
+	             <position>20,840</position>
+	             <value>Limit:</value>
+	         </textarea>
+	
+	         <!-- widgets -->
+	         <buttonlist name="categoryselector" from="selector_settings">
+	             <position>0,120</position>
+	         </buttonlist>
+	         
+	         <textedit name="titleedit" from="textedit_settings">
+	             <position>0,192</position>
+	         </textedit>
+	
+	         <buttonlist name="matchselector" from="selector_settings">
+	             <position>0,264</position>
+	         </buttonlist>
+	         
+	         <buttonlist name="criterialist" from="buttonlist_settings_check">
+	            <area>0,408,1400,288</area>
+	            <buttonarea>0,0,1400,288</buttonarea>
+	            <statetype name="buttonitem">
+	                <state name="active">
+			             <textarea name="buttontext" from="textarea_settings_option">
+			                 <area>20,0,1230,72</area>
+			                 <align>left,vcenter</align>
+			             </textarea>
+	                </state>
+	                <state name="selectedactive">
+			             <textarea name="buttontext" from="textarea_settings_option">
+			                 <area>20,0,1230,72</area>
+			                 <align>left,vcenter</align>
+			             </textarea>
+ 	                </state>
+	                <state name="selectedinactive" from="active" />
+	                <state name="inactive" from="active" />
+	            </statetype>
+	         </buttonlist>
 
-        <button name="categorybutton" from="basesearchbutton">
-            <position>610,55</position>
-        </button>
+	         <buttonlist name="orderbyselector" from="selector_settings">
+	             <position>0,696</position>
+	         </buttonlist>
+	         
+	         <textarea name="matchestext" from="textarea_settings_option">
+	             <area>500,768,840,72</area>
+	         </textarea>
+	
+	         <spinbox name="limitspin" from="spinbox_settings">
+	             <position>0,840</position>
+	         </spinbox>
+	
+        </group>
+        
 
-        <textarea name="titlelbl"  from="categorylbl">
-            <position>20,100</position>
-            <value>Title:</value>
-        </textarea>
+	     <group name="smartplaylisteditor_menu">
+	         <area>30,28,324,952</area>
+	
+	         <textarea name="title" from="textarea_settings_title">
+	             <area>30,50,284,50</area>
+	             <value>Smart Playlist</value>
+	         </textarea>
+		
+	         <button name="categorybutton" from="button_settings">
+	             <position>0,120</position>
+	             <value>Search Category</value>
+	         </button>
+	
+	         <button name="orderbybutton" from="button_settings">
+	             <position>0,192</position>
+	             <value>Search Order</value>
+	         </button>
+	
+	         <button name="showresultsbutton" from="button_settings">
+	             <position>0,264</position>
+	             <value>Show Results</value>
+	         </button>
+	
+	         <button name="cancelbutton" from="button_settings">
+	             <position>0,336</position>
+	             <value>Cancel</value>
+	         </button>
+	
+	         <button name="savebutton" from="button_settings">
+	             <position>0,408</position>
+	             <value>Save</value>
+	         </button>
+	
+	     </group>
 
-        <textedit name="titleedit" from="basetextedit">
-            <area>200,100,675,50</area>
-        </textedit>
-
-        <shape name="tracklist_background" from="basebackground">
-            <area>15,160,770,280</area>
-            <fill color="#000000" alpha="50" />
-        </shape>
- 
-        <textarea name="matchlbl"  from="categorylbl">
-            <position>20,180</position>
-            <value>Match</value>
-        </textarea>
-
-        <buttonlist name="matchselector" from="baseselector">
-            <position>200,185</position>
-        </buttonlist>
-
-        <textarea name="match2lbl"  from="categorylbl">
-            <area>330,180,400,50</area>
-            <value>Of The Following Conditions</value>
-        </textarea>
-
-        <buttonlist name="criterialist" from="basebuttonlist2">
-            <area>25,240,750,210</area>
-            <spacing>0</spacing>
-            <layout>vertical</layout>
-            <arrange>stack</arrange>
-            <showarrow>no</showarrow>
-            <buttonarea>0,0,750,190</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,750,40</area>
-
-                    <imagetype name="buttonimage">
-                        <area>3,3,34,34</area>
-                        <filename>mm_nothumb.png</filename>
-                    </imagetype>
-
-                    <textarea name="buttontext">
-                        <area>50,0,700,40</area>
-                        <align>left,vcenter</align>
-                        <font>basesmall</font>
-                    </textarea>
-
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="selectbar">
-                        <area>0,0,750,40</area>
-                    </shape>
-                    <imagetype name="buttonimage">
-                        <area>3,3,34,34</area>
-                        <filename>mm_nothumb.png</filename>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <area>50,0,700,40</area>
-                        <align>left,vcenter</align>
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="selectbar">
-                        <area>0,0,750,40</area>
-                    </shape>
-                    <imagetype name="buttonimage">
-                        <area>3,3,34,34</area>
-                        <filename>mm_nothumb.png</filename>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <area>50,0,700,40</area>
-                        <align>left,vcenter</align>
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>690,170</position>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>720,170</position>
-            </statetype>
-        </buttonlist>
-
-        <textarea name="orderbylbl"  from="categorylbl">
-            <position>20,450</position>
-            <value>Order By:</value>
-        </textarea>
-
-        <buttonlist name="orderbyselector" from="basewideselector">
-            <position>200,450</position>
-        </buttonlist>
-
-        <button name="orderbybutton" from="basesearchbutton">
-            <area>610,455,32,32</area>
-        </button>
-
-        <textarea name="matcheslbl"  from="categorylbl">
-            <position>20,500</position>
-            <value>Matches:</value>
-        </textarea>
-
-        <shape name="matchesbackground">
-            <area>200,503,100,40</area>
-            <type>roundbox</type>
-            <line color="#000000" alpha="100" width="1" />
-            <fill color="#000000" alpha="50" />
-            <cornerradius>4</cornerradius>
-        </shape>
-
-        <textarea name="matchestext"  from="basetextarea">
-            <area>200,510,100,30</area>
-            <align>allcenter</align>
-        </textarea>
-
-        <textarea name="limitlbl"  from="categorylbl">
-            <position>310,500</position>
-            <value>Limit:</value>
-        </textarea>
-
-        <spinbox name="limitspin" from="basespinbox">
-            <position>490,505</position>
-            <!--<template type="zero">No Limit</template> -->
-        </spinbox>
-
-        <!-- Push buttons -->
-        <button name="cancelbutton" from="basebutton">
-            <position>50,550</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="showresultsbutton" from="basewidebutton">
-            <position>250,550</position>
-            <value>Show Results</value>
-        </button>
-
-        <button name="savebutton" from="basebutton">
-            <position>590,550</position>
-            <value>Save</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
    <!-- popup to edit a smartplaylist criteria row -->
     <window name="criteriaroweditor">
-        <area>-1,-1,500,500</area>
+        <area>-1,-1,700,600</area>
 
-        <imagetype name="box">
-            <position>0,0</position>
-            <filename>mythdialogbox-background.png</filename>
-        </imagetype>
+        <group name="criteriaroweditor_window" from="basedialogwindow600">
+            <position>0,0</position>        
+        </group>
 
-        <textarea name="title" from="basetextarea">
-            <area>5,5,460,40</area>
-            <font>basemedium</font>
-            <align>allcenter</align>
-            <value>Edit Criteria</value>
+        <textarea name="title" from="textarea_list">
+           <area>70,75,560,50</area>
+           <multiline>no</multiline>
+           <cutdown>no</cutdown>
+           <scroll direction="horizontal"/>
+           <value>Edit Criteria</value>
         </textarea>
 
-        <buttonlist name="fieldselector" from="basewideselector">
-            <position>40,60</position>
+        <buttonlist name="fieldselector" from="selector_dialog">
+            <position>0,125</position>
         </buttonlist>
 
-        <buttonlist name="operatorselector" from="basewideselector">
-            <position>40,130</position>
+        <buttonlist name="operatorselector" from="selector_dialog">
+            <position>0,175</position>
         </buttonlist>
 
-        <textedit name="value1edit" from="basetextedit">
-            <position>40,200</position>
+        <textedit name="value1edit" from="textedit_dialog">
+            <position>0,225</position>
         </textedit>
 
-        <buttonlist name="value1selector" from="basewideselector">
-            <position>40,203</position>
+        <buttonlist name="value1selector" from="selector_dialog">
+            <position>0,225</position>
         </buttonlist>
 
-        <spinbox name="value1spinbox" from="basespinbox">
-            <position>40,203</position>
+        <spinbox name="value1spinbox" from="spinbox_dialog">
+            <position>0,225</position>
         </spinbox>
 
-        <button name="value1button" from="basesearchbutton">
-            <position>435,210</position>
+        <button name="value1button" from="button_dialog">
+            <position>0,275</position>
+            <value>Search First Value</value>
         </button>
 <!--
         <textarea name="andlbl"  from="basetextarea">
@@ -1528,35 +1515,37 @@
             <value>And</value>
         </textarea>
         -->
-        <textedit name="value2edit" from="basetextedit">
-            <position>40,270</position>
+        <textedit name="value2edit" from="value1edit">
+            <position>0,325</position>
         </textedit>
 
-        <buttonlist name="value2selector" from="basewideselector">
-            <position>40,273</position>
+        <buttonlist name="value2selector" from="value1selector">
+            <position>0,325</position>
         </buttonlist>
 
-        <spinbox name="value2spinbox" from="basespinbox">
-            <position>40,273</position>
+        <spinbox name="value2spinbox" from="value1spinbox">
+            <position>0,325</position>
         </spinbox>
 
-        <button name="value2button" from="basesearchbutton">
-            <position>435,280</position>
+        <button name="value2button" from="value1button">
+            <position>0,375</position>
+            <value>Search Second Value</value>
         </button>
 
         <!-- Push buttons -->
-        <button name="cancelbutton" from="basebutton">
-            <position>20,430</position>
+        <button name="cancelbutton" from="button_dialog">
+            <position>0,425</position>
             <value>Cancel</value>
         </button>
 
-        <button name="savebutton" from="basebutton">
-            <position>320,430</position>
+        <button name="savebutton" from="button_dialog">
+            <position>0,475</position>
             <value>Save</value>
         </button>
 
     </window>
 
+    <!-- to do, can't find this screen in MythMusic -->
     <!-- popup to edit the date in a smartplaylist criteria row -->
     <window name="dateeditordialog">
         <area>-1,-1,500,500</area>
@@ -1660,20 +1649,125 @@
 
     <!-- popup to edit the smartplaylist order by clause-->
     <window name="orderbydialog">
-        <area>-1,-1,470,500</area>
+        <area>-1,-1,1850,1010</area>
 
-        <imagetype name="box">
-            <area>0,0,470,500</area>
-            <filename>mythdialogbox-background.png</filename>
-        </imagetype>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="title" from="basetextarea">
-            <area>5,5,460,40</area>
-            <font>basemedium</font>
-            <align>allcenter</align>
-            <value>Order By Fields</value>
-        </textarea>
+        <group name="smartplaylisteditor_panel">
+            <area>354,28,1460,952</area>
+	 
+	         <textarea name="titlepanel" from="textarea_settings_title">
+	             <area>20,50,1360,50</area>
+	             <value>Order By Fields</value>
+	         </textarea>
+	
+	         <!--gridlines -->
+	         <!-- Labels -->
+	         <textarea name="fieldlistlbl"  from="textarea_settings_option">
+	             <position>20,120</position>
+	             <value>Smartlist order fields:</value>
+	         </textarea>
+	
+	         <textarea name="fieldlbl" from="textarea_settings_option">
+	             <position>20,840</position>
+	             <value>Selected Field:</value>
+            </textarea>
+	
+	         <!-- widgets -->
+	         <buttonlist name="fieldlist" from="buttonlist_settings_check">
+	            <area>0,192,1400,288</area>
+	            <buttonarea>0,0,1400,288</buttonarea>
+	            <statetype name="buttonitem">
+	                <state name="active">
+			             <textarea name="buttontext" from="textarea_settings_option">
+			                 <area>20,0,1230,72</area>
+			                 <align>left,vcenter</align>
+			             </textarea>
+	                </state>
+	                <state name="selectedactive">
+			             <textarea name="buttontext" from="textarea_settings_option">
+			                 <area>20,0,1230,72</area>
+			                 <align>left,vcenter</align>
+			             </textarea>
+ 	                </state>
+	                <state name="selectedinactive" from="active" />
+	                <state name="inactive" from="active" />
+	            </statetype>
+	         </buttonlist>
 
+ 	         <buttonlist name="fieldselector" from="selector_settings">
+	             <position>0,840</position>
+	         </buttonlist>
+	         
+       </group>
+        
+
+	     <group name="smartplaylisteditor_menu">
+	         <area>30,28,324,952</area>
+	
+	         <textarea name="title" from="textarea_settings_title">
+	             <area>30,50,284,50</area>
+	             <value>Smart Playlist</value>
+	         </textarea>
+		
+	        <!-- Push buttons -->
+	        <button name="addbutton" from="button_settings">
+	            <position>0,120</position>
+	            <value>Add</value>
+	        </button>
+	
+	        <button name="deletebutton" from="button_settings">
+	            <position>0,192</position>
+	            <value>Delete</value>
+	        </button>
+	
+	        <button name="moveupbutton" from="button_settings">
+	            <position>0,264</position>
+	            <value>Move Up</value>
+	        </button>
+	
+	        <button name="movedownbutton" from="button_settings">
+	            <position>0,336</position>
+	            <value>Move Down</value>
+	        </button>
+	
+	        <button name="ascendingbutton" from="button_settings">
+	            <position>0,408</position>
+	            <value>Ascending</value>
+	        </button>
+	
+	        <button name="descendingbutton" from="button_settings">
+	            <position>0,480</position>
+	            <value>Descending</value>
+	        </button>
+	
+	        <button name="cancelbutton" from="button_settings">
+	            <position>0,552</position>
+	            <value>Cancel</value>
+	        </button>
+	
+	        <button name="okbutton" from="button_settings">
+	            <position>0,624</position>
+	            <value>Save</value>
+	        </button>
+
+	     </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+
+<!--
         <buttonlist name="fieldlist">
             <area>20,50,420,210</area>
             <spacing>0</spacing>
@@ -1795,120 +1889,137 @@
         </buttonlist>
 
 
-        <!-- Push buttons -->
-        <button name="addbutton" from="basebutton">
-            <area>50,280,200,44</area>
-            <value>Add</value>
-        </button>
-
-        <button name="deletebutton" from="addbutton">
-            <position>260,280</position>
-            <value>Delete</value>
-        </button>
-
-        <button name="moveupbutton" from="addbutton">
-            <position>50,330</position>
-            <value>Move Up</value>
-        </button>
-
-        <button name="movedownbutton" from="addbutton">
-            <position>260,330</position>
-            <value>Move Down</value>
-        </button>
-
-        <button name="ascendingbutton" from="addbutton">
-            <position>50,380</position>
-            <value>Ascending</value>
-        </button>
-
-        <button name="descendingbutton" from="addbutton">
-            <position>260,380</position>
-            <value>Descending</value>
-        </button>
-
-        <button name="cancelbutton" from="addbutton">
-            <position>50,430</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="okbutton" from="addbutton">
-            <position>260,430</position>
-            <value>Save</value>
-        </button>
-
+-->
     </window>
 
    <!-- shows some information for the currently selected or playing track -->
     <window name="smartplresultviewer">
-        <textarea name="title" from="basetextarea">
-            <area>15,5,600,50</area>
-            <font>baselarge</font>
-            <value>Smart Playlist Result Viewer</value>
-        </textarea>
 
-         <!-- optional - shows current position in the list eg '1 of 123' -->
-        <textarea name="position" from="basetextarea">
-            <area>580,15,200,40</area>
-            <align>right,vcenter</align>
-            <font>basemedium</font>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <shape name="tracklist_background" from="basebackground">
-            <area>15,50,770,535</area>
-            <fill color="#000000" alpha="50" />
-        </shape>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <buttonlist name="tracklist" from="basebuttonlist2">
-            <area>30,60,740,500</area>
-            <spacing>2</spacing>
-            <layout>vertical</layout>
-            <arrange>stack</arrange>
-            <showarrow>no</showarrow>
-            <buttonarea>0,0,740,530</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,100%,40</area>
+        <group name="smartplresultviewer_panel">
+            <area>354,28,1460,952</area>
+	 
+	         <textarea name="titlepanel" from="textarea_settings_title">
+	             <area>20,50,1360,50</area>
+	             <value>Results of the smartplaylist criteria</value>
+	         </textarea>
+	
+	         <!-- gridlines -->
+	         <!-- Labels -->
+	         <!-- widgets -->
+			  <buttonlist name="tracklist">
+			    <area>0,120,1400,792</area>
+			    <align>top,hcenter</align>
+			    <layout>vertical</layout>
+			    <wrapstyle>selection</wrapstyle>
+			    <arrange>stack</arrange>
+			    <showarrow>no</showarrow>
+			    <buttonarea>0,0,1400,792</buttonarea>
+			    <statetype name="buttonitem">
+			        <state name="active">
+			           <imagetype name="backgroundactive">
+			               <area>0,22,1400,50</area>
+			               <preserveaspect>no</preserveaspect>
+			               <filename>images/shared/settings_radiobuttonoff.png</filename>
+			           </imagetype>
+		              <imagetype name="channeliconframe" depends="channelicon">
+		                  <area>10,3,64,64</area>
+		                  <filename>images/shared/wall_nfborder.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		              </imagetype>
+		              <imagetype name="buttonimage">
+		                  <area>12,5,62,62</area>
+		                  <mask>images/shared/wall_mask_tiny.png</mask>
+		                  <filename>images/shared/DefaultMusicPlugins.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		              </imagetype>
+		              <imagetype name="channeliconglass" depends="channelicon">
+		                  <area>12,5,62,62</area>
+		                  <filename>images/shared/wall_nfoverlay.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		              </imagetype>
+			           <textarea name="title" from="textarea_settings_option">
+			               <area>95,0,1295,72</area>
+			               <align>left,vcenter</align>
+			                <template>%TITLE% by %ARTIST% on %ALBUM% (%length%)</template>
+			           </textarea>
+			        </state>
+			        <state name="selectedactive">
+			            <imagetype name="backgroundselected">
+			               <area>0,0,1400,72</area>
+			               <preserveaspect>no</preserveaspect>
+			               <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+			            </imagetype>
+		               <imagetype name="channeliconframe" depends="channelicon">
+		                  <area>10,3,64,64</area>
+		                  <filename>images/shared/wall_nfborder.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		               </imagetype>
+		               <imagetype name="buttonimage">
+		                  <area>12,5,62,62</area>
+		                  <mask>images/shared/wall_mask_tiny.png</mask>
+		                  <filename>images/shared/DefaultMusicPlugins.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		               </imagetype>
+		               <imagetype name="channeliconglass" depends="channelicon">
+		                  <area>12,5,62,62</area>
+		                  <filename>images/shared/wall_nfoverlay.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		               </imagetype>
+			            <textarea name="title" from="textarea_settings_option">
+			               <area>95,0,1295,72</area>
+			               <align>left,vcenter</align>
+			               <template>%TITLE% by %ARTIST% on %ALBUM% (%length%)</template>
+			            </textarea>
+			        </state>
+			        <state name="inactive" from="active"/>
+			        <state name="selectedinactive" from="active">
+			            <alpha>128</alpha>
+			        </state>
+			     </statetype>
+			  </buttonlist>
 
-                    <imagetype name="buttonimage">
-                        <area>3,3,34,34</area>
-                        <filename>mm_nothumb.png</filename>
-                    </imagetype>
+       </group>
+        
 
-                    <textarea name="title">
-                        <area>50,0,600,40</area>
-                        <align>left,vcenter</align>
-                        <font>basesmall</font>
-                        <template>%TITLE% by %ARTIST% on %ALBUM%</template>
-                    </textarea>
+	     <group name="smartplresultviewer_menu">
+	         <area>30,28,324,952</area>
+	
+	         <textarea name="title" from="textarea_settings_title">
+	             <area>30,50,284,50</area>
+	             <value>Smart Playlist</value>
+	         </textarea>
+		
+	        <!-- Push buttons -->
+	         <textarea name="matcheslabel" from="textarea_settings_button">
+                 <area>50,120,264,72</area>
+	             <value>Position</value>
+            </textarea>
+	
+	         <textarea name="position" from="textarea_settings_button">
+                 <area>153,120,144,72</area>
+                 <template>Position: %position%</template>
+            </textarea>
+	
 
-                    <textarea name="length">
-                        <area>630,0,100,40</area>
-                        <align>right,vcenter</align>
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active">
-                    <imagetype name="buttonimage">
-                        <area>3,3,34,34</area>
-                        <filename>mm_nothumb.png</filename>
-                    </imagetype>
-                    <shape name="selectbar">
-                        <area>0,0,740,40</area>
-                    </shape>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="selectbar">
-                        <area>0,0,740,40</area>
-                    </shape>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>680,500</position>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>710,500</position>
-            </statetype>
-        </buttonlist>
+	     </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 

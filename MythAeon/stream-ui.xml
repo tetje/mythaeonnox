@@ -5,7 +5,6 @@
 
     <window name="streamview">
 
-
         <imagetype name="backdropimg">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/music/</filename>
