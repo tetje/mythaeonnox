@@ -2025,51 +2025,186 @@
 
     <!-- shows some information for the currently selected or playing track -->
     <window name="trackdetail_popup">
-        <area>-1,-1,780,580</area>
+        <area>0,0,1920,1080</area>
 
-        <shape name="background" from="basebackground">
-            <area>0,0,780,580</area>
-            <type>roundbox</type>
-            <fill color="#303030" alpha="255" />
-            <line color="#FFFFFF" alpha="255" width="2" />
-            <cornerradius>12</cornerradius>
-        </shape>
-
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+      
         <imagetype name="coverart">
-            <area>15,40,150,150</area>
-            <filename>mm_nothumb.png</filename>
-            <preserveaspect>true</preserveaspect>
+            <area>0,350,730,730</area>
+            <filename>images/shared/DefaultMusicAlbum.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+     
+        <imagetype name="artisticon">
+            <area>0,0,365,350</area>
+            <filename>images/shared/DefaultMusicArtists.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+     
+        <imagetype name="genericon">
+            <area>365,0,365,350</area>
+            <filename>images/shared/DefaultMusicGenresFlip.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+     
+        <statetype name="watchedstate">
+            <state name="yes">
+                <imagetype name="yes">
+                    <area>662,100,76,71</area>
+                    <filename>images/shared/OverlayWatched.png</filename>
+                </imagetype>
+            </state>
+            <state name="no"/>
+        </statetype>
+
+        <imagetype name="infopanelshade">
+            <area>728,0,1192,1080</area>
+            <filename>images/shared/movieinfogradient.png</filename>
+        </imagetype>
+       
+        <imagetype name="infopanel">
+            <area>728,0,1192,1080</area>
+            <filename>images/shared/info_rightpaneltop.png</filename>
         </imagetype>
 
-        <textarea name="titlelbl" from="basetextarea">
-            <area>160,40,150,35</area>
-            <font>basemediumyellow</font>
-            <value>Title:</value>
-            <align>right</align>
-        </textarea>
+        <group name="infopaneldetails">
+           <area>878,70,1042,1010</area>   
+	        <imagetype name="infopanellines">
+	            <area>0,88,1042,853</area>
+	            <filename>images/shared/info_panellines.png</filename>
+	        </imagetype>
 
-        <textarea name="title" from="basetextarea">
-            <area>320,40,465,35</area>
-            <font>basemedium</font>
-        </textarea>
+	        <imagetype name="infopanel_hline1">
+	            <area>0,297,1042,4</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/info_panel_hline.png</filename>
+	        </imagetype>
 
-        <textarea name="artistlbl" from="titlelbl">
-            <area>160,80,150,35</area>
-            <value>Artist:</value>
-        </textarea>
+	        <imagetype name="infopanel_hline2">
+	            <area>0,341,1042,4</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/info_panel_hline.png</filename>
+	        </imagetype>
 
-        <textarea name="artist" from="title">
-            <area>320,80,465,35</area>
-        </textarea>
+	        <imagetype name="infopanel_hline3">
+	            <area>0,384,1042,4</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/info_panel_hline.png</filename>
+	        </imagetype>
 
-        <textarea name="albumlbl" from="titlelbl">
-            <area>160,120,150,35</area>
-            <value>Album:</value>
-        </textarea>
+	        <textarea name="title" from="textarea_title_info">
+	            <area>0,20,900,65</area>
+	            <multiline>no</multiline>
+	            <scroll direction="left" /> 
+	            <cutdown>no</cutdown>
+	        </textarea>
+	
+	        <textarea name="dateaddedlbl" from="textarea_info" depends="rating">
+	            <area>0,105,270,30</area>
+               <font>Font_Info_Grey</font>
+	            <align>top,hcenter</align>
+	            <value>Date added:</value>
+	        </textarea>
 
-        <textarea name="album" from="title">
-            <area>320,120,465,35</area>
-        </textarea>
+	        <textarea name="dateadded" from="textarea_info">
+	            <area>0,125,270,30</area>
+               <font>Font_Info_Grey</font>
+	            <align>bottom,hcenter</align>
+	        </textarea>
+
+	        <textarea name="year" from="textarea_info_big">
+	            <area>270,100,165,60</area>
+	            <align>allcenter</align>
+	        </textarea>
+
+	        <textarea name="genre" from="textarea_info">
+	            <area>455,100,445,60</area>
+               <font>Font_Info_Grey</font>
+               <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="artistlbl" from="textarea_label">
+	            <area>0,166,140,46</area>
+	            <value>Artist</value>
+	        </textarea>
+	        
+	        <textarea name="albumlbl" from="artistlbl">
+	            <position>0,212</position>
+	            <value>Album</value>
+	        </textarea>
+
+	        <textarea name="lenlbl" from="artistlbl">
+	            <position>0,254</position>
+	            <value>Duration</value>
+	        </textarea>
+
+	        <textarea name="tracknumlbl" from="artistlbl">
+	            <position>0,298</position>
+	            <value>Track NO</value>
+	        </textarea>
+
+	        <textarea name="lastplaylbl" from="artistlbl">
+	            <position>0,341</position>
+	            <value>Last Played</value>
+	        </textarea>
+	        
+	        <textarea name="playcountlbl" from="artistlbl">
+	            <position>0,383</position>
+	            <value>Play count</value>
+	        </textarea>
+	        	        
+	        <textarea name="artist" from="textarea_info">
+	            <area>190,166,750,46</area>
+	        </textarea>
+	        
+	        <textarea name="album" from="artist">
+	            <position>190,212</position>
+	        </textarea>
+	        
+	        <textarea name="length" from="artist">
+	            <position>190,254</position>
+	        </textarea>
+	        
+	        <textarea name="tracknum" from="artist">
+	            <position>190,298</position>
+	        </textarea>
+	        
+	        <textarea name="lastplayed" from="artist">
+	            <position>190,341</position>
+	        </textarea>
+	        
+	        <textarea name="playcount" from="artist">
+	            <position>190,383</position>
+	            <template>%playcount% times</template>
+	        </textarea>
+	        
+	        <textarea name="filenamelbl" from="artistlbl">
+	            <position>0,435</position>
+	            <value>Filename</value>
+	        </textarea>
+
+	        <textarea name="filename" from="artist">
+	            <area>190,440,710,174</area>
+	            <multiline>yes</multiline>
+               <cutdown>yes</cutdown>	            
+	            <align>top,left</align>
+	            <value>Unknown</value>
+	        </textarea>
+	        
+		     <imagetype name="starsbgd_big">
+		         <area>0,860,302,64</area>
+		         <filename>images/icons/ratings/rating0.png</filename>
+		     </imagetype>
+		     
+		     <statetype name="rating_state" from="rating_base_big">
+		         <area>0,860,302,64</area>
+		     </statetype>
+
+<!--
 
         <textarea name="tracknumlbl" from="titlelbl">
             <area>510,160,150,35</area>
@@ -2078,53 +2213,6 @@
 
         <textarea name="tracknum" from="title">
             <area>680,160,100,35</area>
-        </textarea>
-
-        <textarea name="lenlbl" from="titlelbl">
-            <area>160,160,150,35</area>
-            <value>Length:</value>
-        </textarea>
-
-        <textarea name="length" from="title">
-            <area>320,160,177,35</area>
-        </textarea>
-
-        <textarea name="yearlbl" from="titlelbl">
-            <area>160,200,150,35</area>
-            <value>Year:</value>
-        </textarea>
-
-        <textarea name="year" from="title">
-            <area>320,200,80,35</area>
-        </textarea>
-
-        <textarea name="genrelbl" from="titlelbl">
-            <area>160,240,150,35</area>
-            <value>Genre:</value>
-        </textarea>
-
-        <textarea name="genre" from="title">
-            <area>320,240,465,35</area>
-        </textarea>
-
-        <textarea name="ratinglbl" from="titlelbl">
-            <area>160,280,150,35</area>
-            <align>right,top</align>
-            <value>Rating:</value>
-        </textarea>
-
-        <statetype name="rating_state" from="baseratingstate">
-            <position>320,285</position>
-        </statetype>
-
-        <textarea name="dateaddedlbl" from="titlelbl">
-            <area>100,320,210,35</area>
-            <value>Date Added:</value>
-        </textarea>
-
-        <textarea name="dateadded" from="title">
-            <area>320,320,465,35</area>
-            <value>Last Value</value>
         </textarea>
 
         <textarea name="lastplaylbl" from="titlelbl">
@@ -2147,16 +2235,8 @@
             <template>%playcount% times</template>
         </textarea>
 
-        <textarea name="filenamelbl" from="titlelbl">
-            <area>160,440,150,35</area>
-            <value>Filename:</value>
-        </textarea>
-
-        <textarea name="filename" from="title">
-            <area>320,440,465,120</area>
-            <font>basesmall</font>
-            <multiline>yes</multiline>
-        </textarea>
+-->
+        </group>
 
     </window>
 
