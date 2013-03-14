@@ -1,0 +1,498 @@
+<mythuitheme>
+
+    <window name="keyboard">
+
+       <area>0,0,547,256</area>
+
+        <animation trigger="AboutToShow">
+            <section duration="400" centre="middle">
+                <zoom start="10" end="100" easingcurve="InOutBack" />
+            </section>
+        </animation>
+        <animation trigger="AboutToHide">
+            <section duration="400" centre="middle">
+                <zoom start="100" end="10" easingcurve="InOutBack" />
+            </section>
+        </animation>
+
+        <imagetype name="backimg">
+            <area>-15,-22,708,302</area>
+            <filename>keyboard/keyboard_back.png</filename>
+        </imagetype>
+<!--
+        <group name="keys_group">
+        <area>20,30,738,288</area>
+-->
+     <!-- Fonts for all the keyboard  -->
+	    <fontdef name="key_base" face="Aeon Player">
+	        <pixelsize>29</pixelsize>
+	        <weight>normal</weight>
+	        <color>#FFFFFF</color>
+	    </fontdef>
+	             
+	     <fontdef name="key_grey" from="key_base">
+	        <weight>light</weight>
+	        <color>#CECECE</color>
+	    </fontdef>
+	
+	     <fontdef name="key_blue" from="key_base">
+	        <weight>normal</weight>
+	        <color>#105B8F</color>
+	    </fontdef>
+	
+	     <fontdef name="key_amber" from="key_base">
+	        <weight>normal</weight>
+	        <color>#E0991A</color>
+	    </fontdef>
+
+        <!-- top row -->
+        <button name="key_1">
+            <position>22,0</position>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <imagetype name="background">
+                        <area>-12,-12,68,68</area>
+                        <filename>keyboard/keyboard_singlenf.png</filename>
+                    </imagetype>
+                    <textarea name="text">
+                        <area>0,0,44,44</area>
+                        <align>allcenter</align>
+                        <font>key_base</font>
+                        <font state="selected">key_base</font>
+                        <font state="disabled">key_grey</font>
+                    </textarea>
+                </state>
+                <state name="selected">
+                    <imagetype name="background">
+                        <area>-12,-12,68,68</area>
+                        <filename>keyboard/keyboard_singlef.png</filename>
+                    </imagetype>
+                    <textarea name="text">
+                        <area>0,0,44,44</area>
+                        <align>allcenter</align>
+                        <font>key_base</font>
+                        <font state="selected">key_blue</font>
+                        <font state="disabled">key_grey</font>
+                    </textarea>
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                    <textarea name="text">
+                        <area>0,0,44,44</area>
+                        <align>allcenter</align>
+                        <font>key_amber</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </button>
+
+        <button name="key_2" from="key_1">
+            <position>66,0</position>
+        </button>
+        <button name="key_3" from="key_1">
+            <position>110,0</position>
+        </button>
+        <button name="key_4" from="key_1">
+            <position>154,0</position>
+        </button>
+        <button name="key_5" from="key_1">
+            <position>198,0</position>
+        </button>
+        <button name="key_6" from="key_1">
+            <position>242,0</position>
+        </button>
+        <button name="key_7" from="key_1">
+            <position>286,0</position>
+        </button>
+        <button name="key_8" from="key_1">
+            <position>330,0</position>
+        </button>
+        <button name="key_9" from="key_1">
+            <position>374,0</position>
+        </button>
+        <button name="key_0" from="key_1">
+            <position>418,0</position>
+        </button>
+        <button name="key_-" from="key_1">
+            <position>462,0</position>
+        </button>
+        <button name="key_=" from="key_1">
+            <position>506,0</position>
+        </button>
+        <button name="key_#" from="key_1">
+            <position>550,0</position>
+        </button>
+        <button name="key_`" from="key_1">
+            <position>594,0</position>
+        </button>
+
+        <!-- row 2 -->
+        <button name="key_q" from="key_1">
+            <position>44,44</position>
+        </button>
+        <button name="key_w" from="key_1">
+            <position>88,44</position>
+        </button>
+        <button name="key_e" from="key_1">
+            <position>132,44</position>
+        </button>
+        <button name="key_r" from="key_1">
+            <position>176,44</position>
+        </button>
+        <button name="key_t" from="key_1">
+            <position>220,44</position>
+        </button>
+        <button name="key_y" from="key_1">
+            <position>264,44</position>
+        </button>
+        <button name="key_u" from="key_1">
+            <position>308,44</position>
+        </button>
+        <button name="key_i" from="key_1">
+            <position>352,44</position>
+        </button>
+        <button name="key_o" from="key_1">
+            <position>396,44</position>
+        </button>
+        <button name="key_p" from="key_1">
+            <position>440,44</position>
+        </button>
+        <button name="key_[" from="key_1">
+            <position>484,44</position>
+        </button>
+        <button name="key_]" from="key_1">
+            <position>528,44</position>
+        </button>-->
+        <button name="key_back">
+            <position>572,44</position>
+                    <statetype name="buttonstate">
+                <state name="active">
+                    <imagetype name="background">
+                        <area>-12,-12,110,68</area>
+                        <filename>keyboard/keyboard_doublenf.png</filename>
+                    </imagetype>
+                    <textarea name="text">
+                        <area>0,0,88,44</area>
+                        <align>allcenter</align>
+                        <font>key_base</font>
+                        <font state="selected">key_base</font>
+                        <font state="disabled">key_grey</font>
+                    </textarea>
+                </state>
+                <state name="selected">
+                    <imagetype name="background">
+                        <area>-12,-12,110,68</area>
+                        <filename>keyboard/keyboard_doublef.png</filename>
+                    </imagetype>
+                    <textarea name="text">
+                        <area>0,0,88,44</area>
+                        <align>allcenter</align>
+                        <font>key_base</font>
+                        <font state="selected">key_base</font>
+                        <font state="disabled">key_grey</font>
+                    </textarea>
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                    <textarea name="text">
+                        <area>0,0,88,44</area>
+                        <align>allcenter</align>
+                        <font>key_amber</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </button>
+
+
+        <!-- row 3 -->
+        <button name="key_a" from="key_1">
+            <position>66,88</position>
+        </button>
+        <button name="key_s" from="key_1">
+            <position>110,88</position>
+        </button>
+        <button name="key_d" from="key_1">
+            <position>154,88</position>
+        </button>
+        <button name="key_f" from="key_1">
+            <position>198,88</position>
+        </button>
+        <button name="key_g" from="key_1">
+            <position>242,88</position>
+        </button>
+        <button name="key_h" from="key_1">
+            <position>286,88</position>
+        </button>
+        <button name="key_j" from="key_1">
+            <position>330,88</position>
+        </button>
+        <button name="key_k" from="key_1">
+            <position>374,88</position>
+        </button>
+        <button name="key_l" from="key_1">
+            <position>418,88</position>
+        </button>
+        <button name="key_;" from="key_1">
+            <position>462,88</position>
+        </button>
+        <button name="key_'" from="key_1">
+            <position>506,88</position>
+        </button>
+        <button name="key_done">
+            <position>550,88</position>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <imagetype name="background">
+                        <area>-12,-12,130,68</area>
+                        <filename>keyboard/keyboard_triplenf.png</filename>
+                    </imagetype>
+                    <imagetype name="arrow">
+                        <area>5,5,34,34</area>
+                        <filename>keyboard/enter.png</filename>
+                    </imagetype>
+                </state>
+                    <textarea name="text">
+                        <area>44,0,88,44</area>
+                        <align>allcenter</align>
+                        <font>key_base</font>
+                        <font state="selected">key_base</font>
+                        <font state="disabled">key_grey</font>
+                    </textarea>
+                <state name="selected">
+                    <imagetype name="background">
+                        <area>-12,-12,130,68</area>
+                        <filename>keyboard/keyboard_triplef.png</filename>
+                    </imagetype>
+                    <imagetype name="arrow">
+                        <area>5,5,34,34</area>
+                        <filename>keyboard/enter.png</filename>
+                    </imagetype>
+                </state>
+                    <textarea name="text">
+                        <area>44,0,88,44</area>
+                        <align>allcenter</align>
+                        <font>key_base</font>
+                        <font state="selected">key_base</font>
+                        <font state="disabled">key_grey</font>
+                    </textarea>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                    <imagetype name="arrow">
+                        <position>20,10</position>
+                        <filename>keyboard/enter.png</filename>
+                    </imagetype>
+                    <textarea name="text">
+                        <area>44,0,88,44</area>
+                        <align>allcenter</align>
+                        <font>key_amber</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </button>
+
+
+        <!-- row 4 -->
+        <button name="key_\" from="key_1">
+            <position>44,132</position>
+        </button>
+        <button name="key_z" from="key_1">
+            <position>88,132</position>
+        </button>
+        <button name="key_x" from="key_1">
+            <position>132,132</position>
+        </button>
+        <button name="key_c" from="key_1">
+            <position>176,132</position>
+        </button>
+        <button name="key_v" from="key_1">
+            <position>220,132</position>
+        </button>
+        <button name="key_b" from="key_1">
+            <position>264,132</position>
+        </button>
+        <button name="key_n" from="key_1">
+            <position>308,132</position>
+        </button>
+        <button name="key_m" from="key_1">
+            <position>352,132</position>
+        </button>
+        <button name="key_," from="key_1">
+            <position>396,132</position>
+        </button>
+        <button name="key_." from="key_1">
+            <position>440,132</position>
+        </button>
+        <button name="key_/" from="key_1">
+            <position>484,132</position>
+        </button>
+        <button name="key_comp" from="key_1">
+            <position>528,132</position>
+        </button>
+        <button name="key_del" from="key_back">
+            <position>572,132</position>
+        </button>
+
+        <!-- row 5 -->
+        <button name="key_lshift" from="key_back">
+            <position>22,176</position>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <imagetype name="arrow">
+                        <position>20,10</position>
+                        <filename>keyboard/shiftarrow.png</filename>
+                    </imagetype>
+                    <imagetype name="Ledoff">
+                        <position>51,0</position>
+                        <filename>keyboard/LEDOff.png</filename>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <imagetype name="arrow">
+                        <position>20,10</position>
+                        <filename>keyboard/shiftarrow.png</filename>
+                    </imagetype>
+                    <imagetype name="Ledoff">
+                        <position>51,0</position>
+                        <filename>keyboard/LEDOff.png</filename>
+                    </imagetype>
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                    <imagetype name="arrow">
+                        <position>20,10</position>
+                        <filename>keyboard/shiftarrow.png</filename>
+                    </imagetype>
+                    <imagetype name="LedOn">
+                        <position>51,0</position>
+                        <filename>keyboard/LEDOn.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </button>
+
+        <button name="key_lock" from="key_back">
+            <position>110,176</position>
+        </button>
+
+        <button name="key_space">
+            <position>198,176</position>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <imagetype name="background">
+                        <area>-12,-12,222,68</area>
+                        <filename>keyboard/keyboard_spacenf.png</filename>
+                    </imagetype>
+                    <textarea name="text">
+                        <area>0,0,198,44</area>
+                        <align>allcenter</align>
+                        <font>key_base</font>
+                        <font state="selected">key_base</font>
+                        <font state="disabled">key_grey</font>
+                        <value>Space</value>
+                    </textarea>
+                </state>
+                <state name="selected">
+                    <imagetype name="background">
+                        <area>-12,-12,222,68</area>
+                        <filename>keyboard/keyboard_spacef.png</filename>
+                    </imagetype>
+                    <textarea name="text">
+                        <area>0,0,198,44</area>
+                        <align>allcenter</align>
+                        <font>key_base</font>
+                        <font state="selected">key_base</font>
+                        <font state="disabled">key_grey</font>
+                        <value>Space</value>
+                    </textarea>
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                    <textarea name="text">
+                        <area>0,0,198,44</area>
+                        <align>allcenter</align>
+                        <font>key_amber</font>
+                        <value>Space</value>
+                    </textarea>
+                </state>
+            </statetype>
+        </button>
+
+        <button name="key_alt" from="key_lock">
+            <position>396,176</position>
+        </button>
+
+        <button name="key_moveleft">
+            <position>484,176</position>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <imagetype name="background">
+                        <area>-12,-12,68,68</area>
+                        <filename>keyboard/keyboard_singlenf.png</filename>
+                    </imagetype>
+                    <imagetype name="arrow">
+                        <area>10,10,24,24</area>
+                        <filename>keyboard/ArrowLeftFO.png</filename>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <imagetype name="background">
+                        <area>-12,-12,68,68</area>
+                        <filename>keyboard/keyboard_singlef.png</filename>
+                    </imagetype>
+                    <imagetype name="arrow">
+                        <area>10,10,24,24</area>
+                        <filename>keyboard/ArrowLeftFO.png</filename>
+                    </imagetype>
+                </state>
+                <state name="pushed" from="active">
+                    <imagetype name="arrow">
+                        <area>10,10,24,24</area>
+                        <filename>keyboard/ArrowLeftAmber.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </button>
+
+        <button name="key_moveright">
+            <position>528,176</position>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <imagetype name="background">
+                        <area>-12,-12,68,68</area>
+                        <filename>keyboard/keyboard_singlenf.png</filename>
+                    </imagetype>
+                    <imagetype name="arrow">
+                        <area>10,10,24,24</area>
+                        <filename>keyboard/ArrowRightFO.png</filename>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <imagetype name="background">
+                        <area>-12,-12,68,68</area>
+                        <filename>keyboard/keyboard_singlef.png</filename>
+                    </imagetype>
+                    <imagetype name="arrow">
+                        <area>10,10,24,24</area>
+                        <filename>keyboard/ArrowRightFO.png</filename>
+                    </imagetype>
+                </state>
+                <state name="pushed" from="active">
+                    <imagetype name="arrow">
+                        <area>10,10,24,24</area>
+                        <filename>keyboard/ArrowRightAmber.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </button>
+
+        <button name="key_rshift" from="key_lshift">
+            <position>572,176</position>
+        </button>
+
+<!--
+        </group>
+-->        
+
+    </window>
+
+</mythuitheme>

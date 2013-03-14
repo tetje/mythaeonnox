@@ -212,7 +212,7 @@
     <fontdef name="Font_Icon_Base_Red" from="Font_Icon_Base">
         <color>#FF0000</color>
     </fontdef>
-        
+
    <!-- Base MythAeon clock definition -->
    <group name="defaultclockup">
       <imagetype name="ClockBgd">
