@@ -4,7 +4,7 @@
     <button>
         <type>SETTINGS_MUSIC</type>
         <text>Music</text>
-        <description>Configure playback of</description>
+        <description>Configure playback of Music</description>
         <action>CONFIGPLUGIN mythmusic</action>
         <depends>mythmusic</depends>
     </button>
@@ -12,14 +12,14 @@
     <button>
         <type>SETTINGS_VIDEO</type>
         <text>Movies</text>
-        <description>Configure playback of</description>
+        <description>Configure playback of Video</description>
         <action>MENU video_settings.xml</action>
     </button>
 
     <button>
         <type>SETTINGS_IMAGES</type>
         <text>Pictures</text>
-        <description>Configure display of</description>
+        <description>Configure display of Pictures</description>
         <action>CONFIGPLUGIN mythgallery</action>
         <depends>mythgallery</depends>
     </button>
@@ -27,7 +27,7 @@
     <button>
         <type>SETTINGS_GAME</type>
         <text>Games</text>
-        <description>Configure playing of</description>
+        <description>Configure playing of Games</description>
         <action>CONFIGPLUGIN mythgame</action>
         <depends>mythgame</depends>
     </button>
@@ -35,7 +35,7 @@
     <button>
         <type>SETTINGS_STREAM</type>
         <text>Streams</text>
-        <description>Configure playback of</description>
+        <description>Configure playback of media streams</description>
         <action>CONFIGPLUGIN mythstream</action>
         <depends>mythstream</depends>
     </button>
@@ -43,7 +43,7 @@
     <button>
         <type>SETTINGS_ARCHIVE</type>
         <text>Archives</text>
-        <description>Configure video and DVD</description>
+        <description>Configure video and DVD archives</description>
         <action>CONFIGPLUGIN mytharchive</action>
         <depends>mytharchive</depends>
     </button>

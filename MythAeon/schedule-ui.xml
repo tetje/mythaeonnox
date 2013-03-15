@@ -14,7 +14,7 @@
      
         <imagetype name="backdropimg">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+            <filename>images/backgrounds/tvguide/</filename>
         </imagetype>        
 
         <group name="programguidewindow">
@@ -229,7 +229,7 @@
      
         <imagetype name="backdropimg">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+            <filename>images/backgrounds/tvguide/</filename>
         </imagetype>        
 
         <group name="programguidewindow">
@@ -559,7 +559,7 @@
 
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/search/globalsearch2.jpg</filename>
+            <filename>images/backgrounds/search/</filename>
         </imagetype>
         
         <imagetype name="listfloorimg" from="fanart">
@@ -632,7 +632,7 @@
 
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+            <filename>images/backgrounds/tvguide/</filename>
         </imagetype>
         
         <imagetype name="listfloorimg" from="fanart">
@@ -797,7 +797,7 @@
 
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+            <filename>images/backgrounds/tvguide/</filename>
         </imagetype>
         
         <imagetype name="listfloorimg" from="fanart">
@@ -876,7 +876,7 @@
 
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+            <filename>images/backgrounds/tvguide/</filename>
         </imagetype>
         
         <imagetype name="listfloorimg" from="fanart">
@@ -1256,7 +1256,7 @@
 
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/search/globalsearch2.jpg</filename>
+            <filename>images/backgrounds/search/</filename>
         </imagetype>
         
         <imagetype name="listfloorimg" from="fanart">
@@ -2069,7 +2069,7 @@
 
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+            <filename>images/backgrounds/tvguide/</filename>
         </imagetype>
         
         <imagetype name="listfloorimg" from="fanart">

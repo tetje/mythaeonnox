@@ -468,7 +468,7 @@
    </textarea>
 
    <textarea name="textarea_settings_option" from="textarea_info">
-       <area>0,0,460,72</area>
+       <area>0,0,560,72</area>
        <font>Font_Option_Settings</font>
    </textarea>
 

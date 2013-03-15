@@ -7,115 +7,115 @@
            <!-- ########  mainmenu.xml  ########-->
            <state name="TV">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/livetv/livetv.jpg</filename>
+                   <filename>images/backgrounds/livetv/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="NET_VIDEO">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/network.jpg</filename>
+                   <filename>images/backgrounds/network/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/music.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_PLAY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/music.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VIDEO_BROWSER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/movies/movies.jpg</filename>
+                   <filename>images/backgrounds/movies/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VIDEO">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/movies/movies.jpg</filename>
+                   <filename>images/backgrounds/movies/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_WATCH_RECORDINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvshows/tv_shows8.jpg</filename>
+                   <filename>images/backgrounds/tvshows/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="DISC_PLAY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <filename>images/backgrounds/play_disc/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MENU_OPTICAL_DISKS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <filename>images/backgrounds/play_disc/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="IMAGES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/pictures/picturesfanart2.jpg</filename>
+                   <filename>images/backgrounds/pictures/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="GAME">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/programs/programs4.jpg</filename>
+                   <filename>images/backgrounds/programs/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="WEATHER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/weather/weatherfanart4.jpg</filename>
+                   <filename>images/backgrounds/weather/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="NEWS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/news/weatherfanart3.jpg</filename>
+                   <filename>images/backgrounds/news/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="WEBPAGE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/network.jpg</filename>
+                   <filename>images/backgrounds/network/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/systeminfo.jpg</filename>
+                   <filename>images/backgrounds/system/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/system/system.jpg</filename>
+                   <filename>images/backgrounds/system/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_MENU">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/system/system.jpg</filename>
+                   <filename>images/backgrounds/system/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SHUTDOWN">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/shutdown/shutdown.jpg</filename>
+                   <filename>images/backgrounds/shutdown/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SCHEDULE_RECORDINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -125,31 +125,31 @@
 
            <state name="TV_WATCH_TV">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/livetv/livetv.jpg</filename>
+                   <filename>images/backgrounds/livetv/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SCHEDULE_RECORDINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_WATCH_RECORDINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvshows/tv_shows8.jpg</filename>
+                   <filename>images/backgrounds/tvshows/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_PREVIOUS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_STATUS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/systeminfo.jpg</filename>
+                   <filename>images/backgrounds/info/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -158,61 +158,61 @@
 
            <state name="TV_PROGRAM_GUIDE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_PROGFIND">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_WORDS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_LISTS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_CUSTOM_RECORD">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_MANUAL_SCHEDULE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_RECORDING_RULES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_CONFLICTS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_RECPRIORITIES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/g</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_UPCOMING_RECORDINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -221,31 +221,31 @@
 
            <state name="TV_SEARCH_TITLES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_KEYWORDS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_PEOPLE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_POWER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_STORED">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -254,43 +254,43 @@
 
            <state name="TV_SEARCH_NEW_TITLES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_MOVIES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_CATEGORIES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_CHANNELS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_TIMES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_DESCRIPTIONS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SEARCH_LISTINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/search.jpg</filename>
+                   <filename>images/backgrounds/search/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -350,25 +350,25 @@
 
            <state name="TV_SETTINGS_RECPRIORITIES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_RECPRIORITIES_SETTINGS_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_RECPRIORITIES_CHANNEL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_RECPRIORITIES_CUSTOM">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/tvguide.jpg</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -377,31 +377,31 @@
 
            <state name="DVD_SETTINGS_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <filename>images/backgrounds/play_disc/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="DVD_SETTINGS_PLAY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <filename>images/backgrounds/play_disc/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="DVD_SETTINGS_RIP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <filename>images/backgrounds/play_disc/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/system/files.jpg</filename>
+                   <filename>images/backgrounds/files/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="EJECT">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <filename>images/backgrounds/play_disc/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -515,163 +515,163 @@
            </state>
 -->
            <!-- ########  main_settings.xml  ########-->
-<!--
+<!-- -->
            <state name="SETTINGS_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/music/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_APPEARANCE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/appearance/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_THEMECHOOSER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/skin/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SCREENSETUPWIZARD">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_TV">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/livetv/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_AUDIOGENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_MUSIC">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_VIDEO">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/video-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/movies/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_GRABBERS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/dvd.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/comics/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_DVD">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/dvd-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_FM">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/default.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/radio/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_IMAGES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/images-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/pictures/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_ARCHIVE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/dvd-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/files/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_GAME">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/gameconsole.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/games/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_WEATHER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamWeatherBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/weather/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="WEATHER_SETTINGS_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamWeatherBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/weather/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="WEATHER_SETTINGS_SCREEN">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamWeatherBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/weather/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="WEATHER_SETTINGS_SOURCE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamWeatherBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/weather/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_NEWS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/news.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/news/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_WEBPAGE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/web.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/network/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_XBOX">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/dvd-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/games/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+
            <!-- ########  music_settings.xml  ########-->
 
            <state name="MUSIC_SETTINGS_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_SETTINGS_PLAYER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_SETTINGS_RIP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_SETTINGS_RATING">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_SETTINGS_VISUALIZATION">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -680,37 +680,37 @@
 
            <state name="MUSIC_PLAY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/music.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_STREAM">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/musicfanart2.jpg</filename>
+                   <filename>images/backgrounds/radio/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_PLAYLIST">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/favourites/favourites.jpg</filename>
+                   <filename>images/backgrounds/favourites/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_RIP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+                   <filename>images/backgrounds/play_disc/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_SCAN">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/music.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MUSIC_IMPORT">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/music/music.jpg</filename>
+                   <filename>images/backgrounds/music/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -731,83 +731,83 @@
            </state>
 -->
            <!-- ########  setup.xml  ########-->
-<!--
+<!-- -->
            <state name="SETUP_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_STORAGE_GROUPS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/files/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_CAPTURE_CARDS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/network/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_VIDEO_SOURCES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/network/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_INPUT_CONNECTIONS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/network/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_CHANNEL_EDITOR">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvguide/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_KEYS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/keys.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_SYSTEM_EVENTS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+<!-- -->
            <!-- ########  video_settings.xml  ########-->
-<!--
+<!-- -->
            <state name="VIDEO_SETTINGS_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/video-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/movies/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VIDEO_SETTINGS_PLAYER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/video-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/movies/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VIDEO_SETTINGS_METADATA">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/video-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/movies/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VIDEO_FILE_TYPES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/video-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/movies/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+<!-- -->
            <!-- ########  videomenu.xml  ########-->
 <!--
            <state name="VIDEO_BROWSER">
