@@ -206,7 +206,7 @@
            </state>
            <state name="TV_RECPRIORITIES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tvguide/g</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -296,56 +296,56 @@
            </state>
 
            <!-- ########  tv_settings.xml  ########-->
-<!--
+<!-- -->
            <state name="TV_SETTINGS_GENERAL">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingslivetv/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SETTINGS_PROGRAM_GUIDE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingslivetv/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SETTINGS_PLAYBACK">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingslivetv/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SETTINGS_PLAYBACK_OSD">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingslivetv/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SETTINGS_OSD_MENU_EDITOR">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingslivetv/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SETTINGS_PLAYBACK_GROUPS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingslivetv/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SETTINGS_CHANNEL_GROUP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingslivetv/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="TV_SETTINGS_RECORDING_PROFILES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/tv-settings.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingslivetv/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+<!-- -->
            <!-- ########  recpriorities_settings.xml  ########-->
 
            <state name="TV_SETTINGS_RECPRIORITIES">
@@ -542,7 +542,7 @@
            </state>
            <state name="SETTINGS_TV">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/livetv/</filename>
+                   <filename>images/backgrounds/settingslivetv/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>
@@ -809,137 +809,131 @@
            </state>
 <!-- -->
            <!-- ########  videomenu.xml  ########-->
-<!--
+<!-- -->
            <state name="VIDEO_BROWSER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/chairs.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/movies/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VIDEO_LIST">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/chairs.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/movies/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VIDEO_GALLERY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/chairs.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/movies/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VIDEO_MANAGER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/chairs.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/movies/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+<!-- -->
            <!-- ########  AltMenus Specific Icons  ########-->
-<!--
+<!-- -->
            <state name="SETTINGS_MEDIA">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingsmedia/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_INFO_CENTER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingsinfo/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_SYSTEM_EVENTS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MENU_MEDIA_LIBRARY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/dvd.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/settingsmedia/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MENU_MANAGE_RECORDINGS">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamTVShowBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/tvshows/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MENU_INFO_CENTER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
-               </imagetype>
-           </state>
-           <state name="MENU_OPTICAL_DISKS">
-               <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamDVDBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/info/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="MENU_UTILITIES_SETUP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_FRONTEND">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_BACKEND">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETUP_MENU">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_SETUPWIZARD">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="NETFLIX">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/default.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_NETFLIX">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/default.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="NETFLIX_QUEUE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/default.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="NETFLIX_BROWSE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/default.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="NETFLIX_HISTORY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/default.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/system/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
--->
+<!-- -->
            <!-- ZONEMINDER -->
 <!--           <state name="ZM_CONSOLE">
                <imagetype name="watermark">
@@ -1071,7 +1065,8 @@
 	           <font>Font_Clock</font>
 	           <multiline>no</multiline>
 	           <align>hcenter,vcenter</align>
-	           <cutdown>yes</cutdown>
+	           <cutdown>no</cutdown>
+	           <scroll direction="horizontal"/>
 	           <alpha>192</alpha>
 	       </textarea>
        </group>

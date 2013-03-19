@@ -2,30 +2,30 @@
 
    <button>
       <type>VIDEO_SETTINGS_GENERAL</type>
-      <text>Settings</text>
+      <text>General</text>
       <action>VIDEO_SETTINGS_GENERAL</action>
-      <description>General movie</description>
+      <description>File Paths and general options</description>
    </button>
 
    <button>
       <type>VIDEO_SETTINGS_PLAYER</type>
       <text>Player</text>
       <action>VIDEO_SETTINGS_PLAYER</action>
-      <description>Setup your Movie</description>
+      <description>Player Applications and Optical Drives</description>
    </button>
 
    <button>
       <type>VIDEO_SETTINGS_METADATA</type>
-      <text>Grabber</text>
+      <text>Metadata</text>
       <action>VIDEO_SETTINGS_METADATA</action>
-      <description>Configure the metadata</description>
+      <description>Grabber Setup and display preferences</description>
    </button>
 
    <button>
       <type>VIDEO_FILE_TYPES</type>
-      <text>Types</text>
+      <text>File Types</text>
       <action>VIDEO_SETTINGS_ASSOCIATIONS</action>
-      <description>Associate File</description>
+      <description>Associate new file extensions</description>
    </button>
 
 </mythmenu>

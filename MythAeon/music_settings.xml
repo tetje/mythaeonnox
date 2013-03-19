@@ -1,39 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <mythmenu name="MUSIC_SETTINGS">
 
    <button>
       <type>MUSIC_SETTINGS_GENERAL</type>
-      <text>Settings</text>
+      <text>General</text>
       <action>SETTINGS_GENERAL</action>
-      <description>General settings for MythMusic</description>
+      <description>Music folders and general options</description>
    </button>
 
    <button>
       <type>MUSIC_SETTINGS_PLAYER</type>
       <text>Player</text>
       <action>SETTINGS_PLAYER</action>
-      <description>Setup you music player</description>
+      <description>Music playback options</description>
    </button>
 
    <button>
       <type>MUSIC_SETTINGS_RIP</type>
       <text>Ripper</text>
       <action>SETTINGS_IMPORT</action>
-      <description>Configure settings for CD ripper</description>
+      <description>CD copying options</description>
    </button>
 
    <button>
       <type>MUSIC_SETTINGS_RATING</type>
-      <text>Ratings</text>
+      <text>Rating</text>
       <action>SETTINGS_RATING</action>
-      <description>Setup your music ratings</description>
+      <description>Music rating options</description>
    </button>
 
    <button>
       <type>MUSIC_SETTINGS_VISUALIZATION</type>
       <text>Visualizer</text>
       <action>SETTINGS_VISUALIZATION</action>
-      <description>Configure visualizer settings</description>
+      <description>Music visualization options</description>
    </button>
 
 </mythmenu>

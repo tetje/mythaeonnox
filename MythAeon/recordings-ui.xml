@@ -111,7 +111,7 @@
 		        
 		        <imagetype name="preview" depends="!fanart">
 		            <area>632,58,1046,604</area>
-		            <filename>images/backgrounds/other/makingof6.jpg</filename>
+		            <filename>images/backgrounds/defaultfanart/</filename>
 		            <preserveaspect>no</preserveaspect>
 		        </imagetype>
 		        

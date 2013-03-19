@@ -3,51 +3,51 @@
 
     <button>
         <type>TV_SETTINGS_GENERAL</type>
-        <text>Recordings</text>
-        <description>Setup navigation and</description>
+        <text>General</text>
+        <description>General video and recording preferences</description>
         <action>SETTINGS GENERAL</action>
     </button>
 
     <button>
         <type>TV_SETTINGS_PROGRAM_GUIDE</type>
-        <text>Guide</text>
-        <description>Setup behavior of the</description>
+        <text>TVGuide</text>
+        <description>Guide appearance and behavior</description>
         <action>SETTINGS EPG</action>
     </button>
 
     <button>
         <type>TV_SETTINGS_PLAYBACK</type>
         <text>Playback</text>
-        <description>Viewing and TV</description>
+        <description>Settings for viewing and playing video content</description>
         <action>SETTINGS PLAYBACK</action>
     </button>
 
     <button>
         <type>TV_SETTINGS_PLAYBACK_OSD</type>
         <text>OSD</text>
-        <description>Configure the skin and</description>
+        <description>Settings for the On Screen Display</description>
         <action>SETTINGS OSD</action>
     </button>
 
     <button>
         <type>TV_SETTINGS_PLAYBACK_GROUPS</type>
         <text>Groups</text>
-        <description>Configure playback</description>
+        <description>Adjust settings for different playback styles</description>
         <action>SETTINGS PLAYGROUP</action>
     </button>
 
     <button>
       <type>TV_SETTINGS_CHANNEL_GROUP</type>
       <text>Channels</text>
-      <description>Group your favorite</description>
+      <description>Group your favorite channels together</description>
       <action>SETTINGS CHANNELGROUPS</action>
     </button>
 
     <button>
-        <type>TV_RECPRIORITIES_SETTINGS_GENERAL</type>
+        <type>TV_SETTINGS_RECPRIORITIES</type>
         <text>Priorities</text>
-        <description>Setup recording</description>
-        <action>SETTINGS GENERALRECPRIORITIES</action>
+        <description>Global recording priority and scheduling</description>
+        <action>MENU recpriorities_settings.xml</action>
     </button>
 
 </mythmenu>
