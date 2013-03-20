@@ -697,6 +697,7 @@
                    <preserveaspect>no</preserveaspect>
                    <reflection shear="0" scale="50" length="16" spacing="0" />
                </imagetype>
+<!--
                <textarea name="buttontext" from="textarea_plot" depends="!coverart">
                    <area>17,6,140,50</area>
                    <font>Font_Info_Small_White</font>
@@ -704,20 +705,20 @@
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
                </textarea>	  
+-->
                <imagetype name="previewglass">
                    <area>8,10,160,247</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_glass.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
-<!--
                <imagetype name="previewlabel" depends="!coverart">
-                   <area>12,275,150,90</area>
+                   <area>12,245,150,90</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_labelblock.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
-
+<!--
                <statetype name="nodetype">
                    <area>0,0,110,159</area>
                    <state name="subfolder">
@@ -737,15 +738,14 @@
                        </imagetype>
                    </state>
                </statetype>
-
+-->            
                <textarea name="buttontext" from="textarea_plot" depends="!coverart">
-                   <area>17,275,140,50</area>
+                   <area>17,245,140,50</area>
                    <font>Font_Info_Small_White</font>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
                </textarea>	  
--->            
            </state>
            <state name="selectedactive">
                <area>-7,-7,200,305</area>

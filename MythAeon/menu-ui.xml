@@ -305,7 +305,7 @@
            </state>
            <state name="TV_SETTINGS_PROGRAM_GUIDE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/settingslivetv/</filename>
+                   <filename>images/backgrounds/tvguide/</filename>
                    <area>0,0,1920,1080</area>
                </imagetype>
            </state>

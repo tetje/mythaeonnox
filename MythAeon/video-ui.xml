@@ -491,12 +491,12 @@
 	        </buttonlist>
 
 	        <textarea name="genres" from="textarea_title_sub">
-	            <area>510,295,900,30</area>
+	            <area>510,305,900,30</area>
 	            <align>allcenter</align>
 	        </textarea>
 	
 	        <textarea name="title" from="textarea_title">
-	            <area>510,329,900,45</area>
+	            <area>510,340,900,45</area>
 	            <align>allcenter</align>
 	        </textarea>
 
