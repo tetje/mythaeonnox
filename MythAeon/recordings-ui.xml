@@ -390,15 +390,15 @@
 	           <alpha>228</alpha>
 	
 		        <statetype name="subtitletypes">
-		            <area>333,0,165,50</area>
+		            <area>168,0,200,50</area>
+		            <state name="cc">
+						  <area>0,0,165,50</area>
 		              <imagetype name="iconbgd">
-		                  <area>-6,-5,76,60</area>
+		                  <area>-18,-5,198,60</area>
 		                  <alpha>255</alpha>
 		                  <filename>images/shared/musicinfoshadow.png</filename>
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
-		            <state name="cc">
-						  <area>0,0,165,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaulttvborder">
 						      <area>15,10,36,24</area>
@@ -427,71 +427,34 @@
 						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
 						      <position>22,26</position>
 						  </shape>
+						  <textarea name="subtitletxt" from="textarea_icon">
+						      <area>60,2,105,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>CC</value>
+						  </textarea>           
 		            </state>
-		            <state name="subtitles">
-						  <area>0,0,165,50</area>
-						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
-						  <shape name="defaulttvborder">
-						      <area>15,10,36,24</area>
-						      <type>roundbox</type>
-						      <cornerradius>2</cornerradius>
-						      <line color="#FFFFFF" alpha="255" width="2" />
-						  </shape>
-						  <shape name="defaulttvmid">
-						      <area>28,34,10,6</area>
-						      <type>box</type>
-						      <cornerradius>3</cornerradius>
-						     <fill color="#FFFFFF" alpha="255" />
-						  </shape>
-						  <shape name="defaulttvbottom">
-						      <area>20,37,24,3</area>
-						      <type>box</type>
-						      <cornerradius>3</cornerradius>
-						     <fill color="#FFFFFF" alpha="255" />
-						  </shape>
-						  <shape name="defaulttvsubline1">
-						      <area>22,21,22,2</area>
-						      <type>box</type>
-						      <cornerradius>3</cornerradius>
-						     <fill color="#FFFFFF" alpha="255" />
-						  </shape>
-						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
-						      <position>22,26</position>
-						  </shape>
+		            <state name="subtitles" from="cc">
+						  <textarea name="subtitletxt" from="textarea_icon">
+						      <area>60,2,105,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>SUB</value>
+						  </textarea>           
 		            </state>
-		            <state name="onscreensub">
-						  <area>0,0,165,50</area>
-						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
-						  <shape name="defaulttvborder">
-						      <area>15,10,36,24</area>
-						      <type>roundbox</type>
-						      <cornerradius>2</cornerradius>
-						      <line color="#FFFFFF" alpha="255" width="2" />
-						  </shape>
-						  <shape name="defaulttvmid">
-						      <area>28,34,10,6</area>
-						      <type>box</type>
-						      <cornerradius>3</cornerradius>
-						     <fill color="#FFFFFF" alpha="255" />
-						  </shape>
-						  <shape name="defaulttvbottom">
-						      <area>20,37,24,3</area>
-						      <type>box</type>
-						      <cornerradius>3</cornerradius>
-						     <fill color="#FFFFFF" alpha="255" />
-						  </shape>
-						  <shape name="defaulttvsubline1">
-						      <area>22,21,22,2</area>
-						      <type>box</type>
-						      <cornerradius>3</cornerradius>
-						     <fill color="#FFFFFF" alpha="255" />
-						  </shape>
-						  <shape name="defaulttvsubline2" from="defaulttvsubline1">
-						      <position>22,26</position>
-						  </shape>
+		            <state name="onscreensub" from="cc">
+						  <textarea name="subtitletxt" from="textarea_icon">
+						      <area>60,2,105,50</area>
+						      <font>Font_Icon_Base_Black</font>
+						      <value>OSD</value>
+						  </textarea>           
 		            </state>
 		            <state name="default">
-						  <area>0,0,165,50</area>
+						  <area>0,0,64,50</area>
+		              <imagetype name="iconbgd">
+	  	                  <area>-6,-5,76,60</area>
+		                  <alpha>255</alpha>
+		                  <filename>images/shared/musicinfoshadow.png</filename>
+		                  <preserveaspect>no</preserveaspect>
+		              </imagetype>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 							  <textarea name="icontextlbl" from="textarea_icon">
 							      <area>2,2,60,38</area>
@@ -512,9 +475,9 @@
 		        </statetype>
 	       
 		        <statetype name="videoprops">
-	              <area>148,0,165,50</area>
+	              <area>84,0,64,50</area>
 	               <imagetype name="iconbgd">
-	                   <area>-18,-5,198,60</area>
+  	                   <area>-6,-5,76,60</area>
 	                   <alpha>255</alpha>
 	                   <filename>images/shared/musicinfoshadow.png</filename>
 	                   <preserveaspect>no</preserveaspect>
@@ -523,40 +486,36 @@
 						  <area>0,0,165,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <textarea name="icontextlbl" from="textarea_icon">
-						      <area>2,2,60,38</area>
+						      <area>0,2,60,38</area>
+						      <font>Font_Icon_Base_Italic</font>
 						      <value>HD</value>
 						  </textarea>
 						  <textarea name="icontextlbl2" from="textarea_icon">
 						      <area>2,33,60,15</area>
-						      <font>Font_Icon_Base_Small</font>
-						      <value>Television</value>
+						      <font>Font_Icon_Base_Small_2</font>
+						      <value>1080p</value>
 						  </textarea>
-						  <textarea name="HD_text" from="textarea_icon">
-						      <area>65,2,95,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>1080</value>
-						  </textarea>           
 		            </state>
 		            <state name="hd720" from="hd1080">
-						  <textarea name="HD_text" from="textarea_icon">
-						      <area>65,2,95,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>720</value>
-						  </textarea>           
+						  <textarea name="icontextlbl2" from="textarea_icon">
+						      <area>2,33,60,15</area>
+						      <font>Font_Icon_Base_Small_2</font>
+						      <value>720p</value>
+						  </textarea>
 		            </state>
 		            <state name="hdtv" from="hd1080">
-						  <textarea name="HD_text" from="textarea_icon">
-						      <area>65,2,95,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>?</value>
-						  </textarea>           
+						  <textarea name="icontextlbl2" from="textarea_icon">
+						      <area>2,33,60,15</area>
+						      <font>Font_Icon_Base_Small</font>
+						      <value>television</value>
+						  </textarea>
 		            </state>
 		            <state name="avchd" from="hd1080">
-						  <textarea name="HD_text" from="textarea_icon">
-						      <area>65,2,95,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>H264</value>
-						  </textarea>           
+						  <textarea name="icontextlbl2" from="textarea_icon">
+						      <area>2,33,60,15</area>
+						      <font>Font_Icon_Base_Small_2</font>
+						      <value>h.264</value>
+						  </textarea>
 		            </state>
 		            <state name="widescreen">
 						  <area>0,0,165,50</area>
@@ -570,17 +529,12 @@
 						      <font>Font_Icon_Base_Small</font>
 						      <value>widescreen</value>
 						  </textarea>
-						  <textarea name="SD_text" from="textarea_icon">
-						      <area>65,2,95,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>576</value>
-						  </textarea>           
 		            </state>
 		            <state name="default" from="widescreen">
 						  <textarea name="icontextlbl2" from="textarea_icon">
 						      <area>2,33,60,15</area>
-						      <font>Font_Icon_Base_Small</font>
-						      <value>Television</value>
+						      <font>Font_Icon_Base_Small_2</font>
+						      <value>576p</value>
 						  </textarea>
 		            </state>
 	               <imagetype name="iconglass">
@@ -592,16 +546,16 @@
 		        </statetype>
 		        
 		        <statetype name="audioprops">
-		            <area>0,0,128,50</area>
+		            <area>0,0,64,50</area>
 	               <imagetype name="iconbgd">
-	                   <area>-13,-5,154,60</area>
+  	                   <area>-6,-5,76,60</area>
 	                   <alpha>255</alpha>
 	                   <filename>images/shared/musicinfoshadow.png</filename>
 	                   <preserveaspect>no</preserveaspect>
 	               </imagetype>
 		            <showempty>yes</showempty>
 		            <state name="stereo">
-						  <area>0,0,128,50</area>
+						  <area>0,0,64,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaultsoundborder">
 						      <area>17,10,31,30</area>
@@ -616,14 +570,9 @@
 						  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
 						      <position>40,8</position>
 						  </shape>
-						  <textarea name="2_0_text" from="textarea_icon">
-						      <area>63,2,63,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>2.0</value>
-						  </textarea>           
 		            </state>
 		            <state name="surround">
-						  <area>0,0,128,50</area>
+						  <area>0,0,64,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaultsoundborder">
 						      <area>17,10,31,30</area>
@@ -650,14 +599,9 @@
 						  <shape name="defaultsoundspeaker6" from="defaultsoundspeaker1">
 						      <position>27,22</position>
 						  </shape>
-						  <textarea name="5_1_text" from="textarea_icon">
-						      <area>63,2,63,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>5.1</value>
-						  </textarea>           
 		            </state>
 		            <state name="dolby">
-						  <area>0,0,128,50</area>
+						  <area>0,0,64,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaultshape1">
 						      <area>5,10,26,30</area>
@@ -691,14 +635,9 @@
 						  <shape name="defaultshape8" from="defaultshape4">
 						      <position>51,10</position>
 						  </shape>
-						  <textarea name="dolby_text" from="textarea_icon">
-						      <area>63,2,63,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>5.1</value>
-						  </textarea>           
 		            </state>
 		            <state name="mono">
-						  <area>0,0,128,50</area>
+						  <area>0,0,64,50</area>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaultsoundborder">
 						      <area>17,10,31,30</area>
@@ -710,34 +649,8 @@
 						      <type>box</type>
 						      <fill color="#FFFFFF" alpha="255" />
 						  </shape>
-						  <textarea name="1_0_text" from="textarea_icon">
-						      <area>63,2,63,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>1.0</value>
-						  </textarea>           
 		            </state>
-		            <state name="default">
-						  <area>0,0,128,50</area>
-						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
-						  <shape name="defaultsoundborder">
-						      <area>17,10,31,30</area>
-						      <type>box</type>
-						      <line color="#FFFFFF" alpha="255" width="3" />
-						  </shape>
-						  <shape name="defaultsoundspeaker1">
-						      <area>14,8,10,10</area>
-						      <type>box</type>
-						      <fill color="#FFFFFF" alpha="255" />
-						  </shape>
-						  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
-						      <position>40,8</position>
-						  </shape>
-						  <textarea name="2_0_text" from="textarea_icon">
-						      <area>63,2,63,50</area>
-						      <font>Font_Icon_Base_Black</font>
-						      <value>2.0</value>
-						  </textarea>           
-		            </state>
+		            <state name="default" from="stereo"/>
 	               <imagetype name="iconglass">
 	                   <area>0,0,63,50</area>
 	                   <alpha>255</alpha>
@@ -1528,19 +1441,17 @@
 				                  <filename>images/shared/list_musicicon_glass.png</filename>
 				                  <preserveaspect>no</preserveaspect>
 				              </imagetype>
-                        </state>                        
-                        <state name="inuse">
                         </state>
-                        <state name="transcoded">
-                        </state>
+                        <state name="inuse"/>
+                        <state name="transcoded"/>
                         <state name="mono">
-								  <area>0,0,128,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-13,-5,154,60</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/musicinfoshadow.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
+								  <area>0,0,64,50</area>
+				              <imagetype name="iconbgd">
+				                  <area>-6,-5,76,60</area>
+				                  <alpha>255</alpha>
+				                  <filename>images/shared/musicinfoshadow.png</filename>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaultsoundborder">
 								      <area>17,10,31,30</area>
@@ -1552,11 +1463,6 @@
 								      <type>box</type>
 								      <fill color="#FFFFFF" alpha="255" />
 								  </shape>
-								  <textarea name="1_0_text" from="textarea_icon">
-								      <area>63,2,63,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>1.0</value>
-								  </textarea>           
 			               <imagetype name="iconglass">
 			                   <area>0,0,63,50</area>
 			                   <alpha>255</alpha>
@@ -1565,13 +1471,13 @@
 			               </imagetype>
                         </state>
                         <state name="stereo">
-								  <area>0,0,128,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-13,-5,154,60</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/musicinfoshadow.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
+								  <area>0,0,64,50</area>
+				              <imagetype name="iconbgd">
+				                  <area>-6,-5,76,60</area>
+				                  <alpha>255</alpha>
+				                  <filename>images/shared/musicinfoshadow.png</filename>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaultsoundborder">
 								      <area>17,10,31,30</area>
@@ -1586,11 +1492,6 @@
 								  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
 								      <position>40,8</position>
 								  </shape>
-								  <textarea name="2_0_text" from="textarea_icon">
-								      <area>63,2,63,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>2.0</value>
-								  </textarea>           
 				               <imagetype name="iconglass">
 				                   <area>0,0,63,50</area>
 				                   <alpha>255</alpha>
@@ -1599,13 +1500,13 @@
 				               </imagetype>
                         </state>
                         <state name="surround">
-								  <area>0,0,128,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-13,-5,154,60</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/musicinfoshadow.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
+								  <area>0,0,64,50</area>
+				              <imagetype name="iconbgd">
+				                  <area>-6,-5,76,60</area>
+				                  <alpha>255</alpha>
+				                  <filename>images/shared/musicinfoshadow.png</filename>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaultsoundborder">
 								      <area>17,10,31,30</area>
@@ -1632,11 +1533,6 @@
 								  <shape name="defaultsoundspeaker6" from="defaultsoundspeaker1">
 								      <position>27,22</position>
 								  </shape>
-								  <textarea name="5_1_text" from="textarea_icon">
-								      <area>63,2,63,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>5.1</value>
-								  </textarea>           
 				               <imagetype name="iconglass">
 				                   <area>0,0,63,50</area>
 				                   <alpha>255</alpha>
@@ -1645,13 +1541,13 @@
 				               </imagetype>
                         </state>
                         <state name="dolby">
-								  <area>0,0,128,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-13,-5,154,60</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/musicinfoshadow.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
+								  <area>0,0,64,50</area>
+				              <imagetype name="iconbgd">
+				                  <area>-6,-5,76,60</area>
+				                  <alpha>255</alpha>
+				                  <filename>images/shared/musicinfoshadow.png</filename>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaultshape1">
 								      <area>5,10,26,30</area>
@@ -1685,11 +1581,6 @@
 								  <shape name="defaultshape8" from="defaultshape4">
 								      <position>51,10</position>
 								  </shape>
-								  <textarea name="dolby_text" from="textarea_icon">
-								      <area>63,2,63,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>5.1</value>
-								  </textarea>           
 				               <imagetype name="iconglass">
 				                   <area>0,0,63,50</area>
 				                   <alpha>255</alpha>
@@ -1698,9 +1589,9 @@
 				               </imagetype>
                         </state>
                         <state name="cc">
-								  <area>0,0,165,50</area>
+								 <area>0,0,165,50</area>
 				              <imagetype name="iconbgd">
-				                  <area>-6,-5,76,60</area>
+				                  <area>-18,-5,198,60</area>
 				                  <alpha>255</alpha>
 				                  <filename>images/shared/musicinfoshadow.png</filename>
 				                  <preserveaspect>no</preserveaspect>
@@ -1733,6 +1624,11 @@
 								  <shape name="defaulttvsubline2" from="defaulttvsubline1">
 								      <position>22,26</position>
 								  </shape>
+								  <textarea name="subtitletxt" from="textarea_icon">
+								      <area>60,2,105,50</area>
+								      <font>Font_Icon_Base_Black</font>
+								      <value>CC</value>
+								  </textarea>           
 				               <imagetype name="iconglass">
 				                   <area>0,0,63,50</area>
 				                   <alpha>255</alpha>
@@ -1740,19 +1636,32 @@
 				                   <preserveaspect>no</preserveaspect>
 				               </imagetype>
                         </state>
-                        <state name="subtitles" from="cc"/>
-                        <state name="onscreensub" from="cc"/>
+                        <state name="subtitles" from="cc">
+								  <textarea name="subtitletxt" from="textarea_icon">
+								      <area>60,2,105,50</area>
+								      <font>Font_Icon_Base_Black</font>
+								      <value>OSD</value>
+								  </textarea>           
+                        </state>
+                        <state name="onscreensub" from="cc">
+								  <textarea name="subtitletxt" from="textarea_icon">
+								      <area>60,2,105,50</area>
+								      <font>Font_Icon_Base_Black</font>
+								      <value>SUB</value>
+								  </textarea>           
+                        </state>
                         <state name="hdtv">
-								  <area>0,0,165,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-18,-5,198,60</area>
+								  <area>0,0,64,50</area>
+				              <imagetype name="iconbgd">
+				                  <area>-6,-5,76,60</area>
 				                   <alpha>255</alpha>
 				                   <filename>images/shared/musicinfoshadow.png</filename>
 				                   <preserveaspect>no</preserveaspect>
 				               </imagetype>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <textarea name="icontextlbl" from="textarea_icon">
-								      <area>2,2,60,38</area>
+								      <area>0,2,60,38</area>
+								      <font>Font_Icon_Base_Italic</font>
 								      <value>HD</value>
 								  </textarea>
 								  <textarea name="icontextlbl2" from="textarea_icon">
@@ -1760,11 +1669,6 @@
 								      <font>Font_Icon_Base_Small</font>
 								      <value>Television</value>
 								  </textarea>
-								  <textarea name="HD_text" from="textarea_icon">
-								      <area>65,2,95,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>?</value>
-								  </textarea>           
 			 	               <imagetype name="iconglass">
 				                   <area>0,0,63,50</area>
 				                   <alpha>255</alpha>
@@ -1773,37 +1677,30 @@
 				               </imagetype>
                        </state>
                         <state name="hd720" from="hdtv">
-								  <textarea name="HD_text" from="textarea_icon">
-								      <area>65,2,95,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>720</value>
-								  </textarea>           
+								  <textarea name="icontextlbl2" from="textarea_icon">
+								      <area>2,33,60,15</area>
+								      <font>Font_Icon_Base_Small_2</font>
+								      <value>720p</value>
+								  </textarea>
                         </state>
                         <state name="hd1080" from="hdtv">
-								  <textarea name="HD_text" from="textarea_icon">
-								      <area>65,2,95,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>1080</value>
-								  </textarea>           
+								  <textarea name="icontextlbl2" from="textarea_icon">
+								      <area>2,33,60,15</area>
+								      <font>Font_Icon_Base_Small_2</font>
+								      <value>1080p</value>
+								  </textarea>
                         </state>
                         <state name="avchd" from="hdtv">
-								  <textarea name="HD_text" from="textarea_icon">
-								      <area>65,2,95,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>H264</value>
-								  </textarea>           
+								  <textarea name="icontextlbl2" from="textarea_icon">
+								      <area>2,33,60,15</area>
+								      <font>Font_Icon_Base_Small_2</font>
+								      <value>h.264</value>
+								  </textarea>
                         </state>
-                        <state name="widescreen">
-								  <area>0,0,165,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-18,-5,198,60</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/musicinfoshadow.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
-								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+                        <state name="widescreen" from="hdtv">
 								  <textarea name="icontextlbl" from="textarea_icon">
 								      <area>2,2,60,38</area>
+								      <font>Font_Icon_Base</font>
 								      <value>SD</value>
 								  </textarea>
 								  <textarea name="icontextlbl2" from="textarea_icon">
@@ -1811,17 +1708,6 @@
 								      <font>Font_Icon_Base_Small</font>
 								      <value>widescreen</value>
 								  </textarea>
-								  <textarea name="SD_text" from="textarea_icon">
-								      <area>65,2,95,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>576</value>
-								  </textarea>           
- 			 	               <imagetype name="iconglass">
-				                   <area>0,0,63,50</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/list_musicicon_glass.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
                        </state>
                         <state name="watched">
 			                   <imagetype name="yes">
@@ -1983,19 +1869,17 @@
 				                  <filename>images/shared/list_musicicon_glass.png</filename>
 				                  <preserveaspect>no</preserveaspect>
 				              </imagetype>
-                        </state>                        
-                        <state name="inuse">
                         </state>
-                        <state name="transcoded">
-                        </state>
+                        <state name="inuse"/>
+                        <state name="transcoded"/>
                         <state name="mono">
-								  <area>0,0,128,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-13,-5,154,60</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/musicinfoshadow.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
+								  <area>0,0,64,50</area>
+				              <imagetype name="iconbgd">
+				                  <area>-6,-5,76,60</area>
+				                  <alpha>255</alpha>
+				                  <filename>images/shared/musicinfoshadow.png</filename>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaultsoundborder">
 								      <area>17,10,31,30</area>
@@ -2007,11 +1891,6 @@
 								      <type>box</type>
 								      <fill color="#FFFFFF" alpha="255" />
 								  </shape>
-								  <textarea name="1_0_text" from="textarea_icon">
-								      <area>63,2,63,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>1.0</value>
-								  </textarea>           
 			               <imagetype name="iconglass">
 			                   <area>0,0,63,50</area>
 			                   <alpha>255</alpha>
@@ -2020,13 +1899,13 @@
 			               </imagetype>
                         </state>
                         <state name="stereo">
-								  <area>0,0,128,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-13,-5,154,60</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/musicinfoshadow.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
+								  <area>0,0,64,50</area>
+				              <imagetype name="iconbgd">
+				                  <area>-6,-5,76,60</area>
+				                  <alpha>255</alpha>
+				                  <filename>images/shared/musicinfoshadow.png</filename>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaultsoundborder">
 								      <area>17,10,31,30</area>
@@ -2041,11 +1920,6 @@
 								  <shape name="defaultsoundspeaker2" from="defaultsoundspeaker1">
 								      <position>40,8</position>
 								  </shape>
-								  <textarea name="2_0_text" from="textarea_icon">
-								      <area>63,2,63,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>2.0</value>
-								  </textarea>           
 				               <imagetype name="iconglass">
 				                   <area>0,0,63,50</area>
 				                   <alpha>255</alpha>
@@ -2054,13 +1928,13 @@
 				               </imagetype>
                         </state>
                         <state name="surround">
-								  <area>0,0,128,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-13,-5,154,60</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/musicinfoshadow.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
+								  <area>0,0,64,50</area>
+				              <imagetype name="iconbgd">
+				                  <area>-6,-5,76,60</area>
+				                  <alpha>255</alpha>
+				                  <filename>images/shared/musicinfoshadow.png</filename>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaultsoundborder">
 								      <area>17,10,31,30</area>
@@ -2087,11 +1961,6 @@
 								  <shape name="defaultsoundspeaker6" from="defaultsoundspeaker1">
 								      <position>27,22</position>
 								  </shape>
-								  <textarea name="5_1_text" from="textarea_icon">
-								      <area>63,2,63,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>5.1</value>
-								  </textarea>           
 				               <imagetype name="iconglass">
 				                   <area>0,0,63,50</area>
 				                   <alpha>255</alpha>
@@ -2100,13 +1969,13 @@
 				               </imagetype>
                         </state>
                         <state name="dolby">
-								  <area>0,0,128,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-13,-5,154,60</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/musicinfoshadow.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
+								  <area>0,0,64,50</area>
+				              <imagetype name="iconbgd">
+				                  <area>-6,-5,76,60</area>
+				                  <alpha>255</alpha>
+				                  <filename>images/shared/musicinfoshadow.png</filename>
+				                  <preserveaspect>no</preserveaspect>
+				              </imagetype>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaultshape1">
 								      <area>5,10,26,30</area>
@@ -2140,11 +2009,6 @@
 								  <shape name="defaultshape8" from="defaultshape4">
 								      <position>51,10</position>
 								  </shape>
-								  <textarea name="dolby_text" from="textarea_icon">
-								      <area>63,2,63,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>5.1</value>
-								  </textarea>           
 				               <imagetype name="iconglass">
 				                   <area>0,0,63,50</area>
 				                   <alpha>255</alpha>
@@ -2153,9 +2017,9 @@
 				               </imagetype>
                         </state>
                         <state name="cc">
-								  <area>0,0,165,50</area>
+								 <area>0,0,165,50</area>
 				              <imagetype name="iconbgd">
-				                  <area>-6,-5,76,60</area>
+				                  <area>-18,-5,198,60</area>
 				                  <alpha>255</alpha>
 				                  <filename>images/shared/musicinfoshadow.png</filename>
 				                  <preserveaspect>no</preserveaspect>
@@ -2188,6 +2052,11 @@
 								  <shape name="defaulttvsubline2" from="defaulttvsubline1">
 								      <position>22,26</position>
 								  </shape>
+								  <textarea name="subtitletxt" from="textarea_icon">
+								      <area>60,2,105,50</area>
+								      <font>Font_Icon_Base_Black</font>
+								      <value>CC</value>
+								  </textarea>           
 				               <imagetype name="iconglass">
 				                   <area>0,0,63,50</area>
 				                   <alpha>255</alpha>
@@ -2195,19 +2064,32 @@
 				                   <preserveaspect>no</preserveaspect>
 				               </imagetype>
                         </state>
-                        <state name="subtitles" from="cc"/>
-                        <state name="onscreensub" from="cc"/>
+                        <state name="subtitles" from="cc">
+								  <textarea name="subtitletxt" from="textarea_icon">
+								      <area>60,2,105,50</area>
+								      <font>Font_Icon_Base_Black</font>
+								      <value>OSD</value>
+								  </textarea>           
+                        </state>
+                        <state name="onscreensub" from="cc">
+								  <textarea name="subtitletxt" from="textarea_icon">
+								      <area>60,2,105,50</area>
+								      <font>Font_Icon_Base_Black</font>
+								      <value>SUB</value>
+								  </textarea>           
+                        </state>
                         <state name="hdtv">
-								  <area>0,0,165,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-18,-5,198,60</area>
+								  <area>0,0,64,50</area>
+				              <imagetype name="iconbgd">
+				                  <area>-6,-5,76,60</area>
 				                   <alpha>255</alpha>
 				                   <filename>images/shared/musicinfoshadow.png</filename>
 				                   <preserveaspect>no</preserveaspect>
 				               </imagetype>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <textarea name="icontextlbl" from="textarea_icon">
-								      <area>2,2,60,38</area>
+								      <area>0,2,60,38</area>
+								      <font>Font_Icon_Base_Italic</font>
 								      <value>HD</value>
 								  </textarea>
 								  <textarea name="icontextlbl2" from="textarea_icon">
@@ -2215,11 +2097,6 @@
 								      <font>Font_Icon_Base_Small</font>
 								      <value>Television</value>
 								  </textarea>
-								  <textarea name="HD_text" from="textarea_icon">
-								      <area>65,2,95,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>?</value>
-								  </textarea>           
 			 	               <imagetype name="iconglass">
 				                   <area>0,0,63,50</area>
 				                   <alpha>255</alpha>
@@ -2228,37 +2105,30 @@
 				               </imagetype>
                        </state>
                         <state name="hd720" from="hdtv">
-								  <textarea name="HD_text" from="textarea_icon">
-								      <area>65,2,95,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>720</value>
-								  </textarea>           
+								  <textarea name="icontextlbl2" from="textarea_icon">
+								      <area>2,33,60,15</area>
+								      <font>Font_Icon_Base_Small_2</font>
+								      <value>720p</value>
+								  </textarea>
                         </state>
                         <state name="hd1080" from="hdtv">
-								  <textarea name="HD_text" from="textarea_icon">
-								      <area>65,2,95,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>1080</value>
-								  </textarea>           
+								  <textarea name="icontextlbl2" from="textarea_icon">
+								      <area>2,33,60,15</area>
+								      <font>Font_Icon_Base_Small_2</font>
+								      <value>1080p</value>
+								  </textarea>
                         </state>
                         <state name="avchd" from="hdtv">
-								  <textarea name="HD_text" from="textarea_icon">
-								      <area>65,2,95,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>H264</value>
-								  </textarea>           
+								  <textarea name="icontextlbl2" from="textarea_icon">
+								      <area>2,33,60,15</area>
+								      <font>Font_Icon_Base_Small_2</font>
+								      <value>h.264</value>
+								  </textarea>
                         </state>
-                        <state name="widescreen">
-								  <area>0,0,165,50</area>
-				               <imagetype name="iconbgd">
-				                   <area>-18,-5,198,60</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/musicinfoshadow.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
-								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+                        <state name="widescreen" from="hdtv">
 								  <textarea name="icontextlbl" from="textarea_icon">
 								      <area>2,2,60,38</area>
+								      <font>Font_Icon_Base</font>
 								      <value>SD</value>
 								  </textarea>
 								  <textarea name="icontextlbl2" from="textarea_icon">
@@ -2266,17 +2136,6 @@
 								      <font>Font_Icon_Base_Small</font>
 								      <value>widescreen</value>
 								  </textarea>
-								  <textarea name="SD_text" from="textarea_icon">
-								      <area>65,2,95,50</area>
-								      <font>Font_Icon_Base_Black</font>
-								      <value>576</value>
-								  </textarea>           
- 			 	               <imagetype name="iconglass">
-				                   <area>0,0,63,50</area>
-				                   <alpha>255</alpha>
-				                   <filename>images/shared/list_musicicon_glass.png</filename>
-				                   <preserveaspect>no</preserveaspect>
-				               </imagetype>
                        </state>
                         <state name="watched">
 			                   <imagetype name="yes">

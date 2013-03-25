@@ -186,13 +186,22 @@
         <stretch>extraexpanded</stretch>
     </fontdef>
 
+    <fontdef name="Font_Icon_Base_Italic" from="Font_Icon_Base">
+        <italics>yes</italics>
+    </fontdef>
+
     <fontdef name="Font_Icon_Base_Small" from="Font_Icon_Base">
         <pixelsize>13</pixelsize>
         <weight>light</weight>
         <stretch>condensed</stretch>
     </fontdef>
         
-        
+    <fontdef name="Font_Icon_Base_Small_2" from="Font_Icon_Base">
+        <pixelsize>13</pixelsize>
+        <weight>normal</weight>
+        <stretch>normal</stretch>
+    </fontdef>
+                
     <fontdef name="Font_Icon_Base_Black" from="Font_Icon_Base">
         <color>#000000</color>
     </fontdef>
