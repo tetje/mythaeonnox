@@ -17,7 +17,7 @@
     <button>
         <type>VIDEO_BROWSER</type>
         <text>Movies</text>
-        <description>Browse your movie</description>
+        <description>Browse your movie library</description>
         <action>JUMP Video Default</action>
     </button>
 

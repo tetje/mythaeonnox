@@ -1028,6 +1028,14 @@
       
 	       <imagetype name="description_clock_bgd_long" depends="description">
 	          <filename>images/shared/rssbar_mid_flip.png</filename>
+	          <area>-40,-7,2031,100></area>
+	          <alpha>255</alpha>
+	          <preserveaspect>no</preserveaspect>
+	       </imagetype>
+
+<!--
+	       <imagetype name="description_clock_bgd_long" depends="description">
+	          <filename>images/shared/rssbar_mid_flip.png</filename>
 	          <area>0,0,2031,93></area>
 	          <alpha>128</alpha>
 	          <preserveaspect>no</preserveaspect>
@@ -1039,10 +1047,11 @@
 	          <alpha>128</alpha>
 	          <preserveaspect>no</preserveaspect>
 	       </imagetype>
+-->
 
 	      <imagetype name="ClockBgd">
 	         <filename>images/shared/timepanel_mid_flip.png</filename>
-	         <area>627,53,683,41</area>
+	         <area>627,9,683,87</area>
 	         <preserveaspect>no</preserveaspect>
 	      </imagetype>  
 
@@ -1053,16 +1062,18 @@
 	         <align>right,vcenter</align>
 	         <alpha>192</alpha>
 	      </clock>
-	
+
+<!--	
 	      <imagetype name="description_bgd" depends="description">
 	          <filename>images/shared/timepanel_mid_menu.png</filename>
 	          <area>43,53,608,41></area>
 	          <preserveaspect>no</preserveaspect>
 	      </imagetype>
+-->
 		
 	       <textarea name="description">
 	           <area>67,58,560,36</area>
-	           <font>Font_Clock</font>
+	           <font>Font_Clock_Black</font>
 	           <multiline>no</multiline>
 	           <align>hcenter,vcenter</align>
 	           <cutdown>no</cutdown>

@@ -15,6 +15,10 @@
         <color>#ffffff</color>
     </fontdef>
 
+    <fontdef name="Font_Clock_Black" from="Font_Clock">
+        <color>#000000</color>
+    </fontdef>
+
     <fontdef name="Font_Clock_Bold" from="Font_Clock">
         <pixelsize>34</pixelsize>
         <weight>bold</weight>
@@ -226,7 +230,7 @@
    <group name="defaultclockup">
       <imagetype name="ClockBgd">
          <filename>images/shared/timepanel_mid.png</filename>
-         <area>0,0,683,41</area>
+         <area>-50,0,733,87</area>
          <preserveaspect>no</preserveaspect>
       </imagetype>  
       <clock name="clock">
@@ -241,7 +245,7 @@
    <group name="defaultclockdown" from="defaultclockup">
       <imagetype name="ClockBgd">
          <filename>images/shared/timepanel_mid_flip.png</filename>
-         <area>0,0,683,41</area>
+         <area>-50,0,733,87</area>
          <preserveaspect>no</preserveaspect>
       </imagetype>  
    </group>
@@ -5812,9 +5816,9 @@
         </animation>       
         
         <imagetype name="popupboxbgd">
-            <area>0,0,1076,60</area>
+            <area>0,0,1076,120</area>
             <preserveaspect>no</preserveaspect>
-            <filename>images/shared/submenubar_tv.png</filename>
+            <filename>images/shared/submenubar.png</filename>
         </imagetype>
 
         <textarea name="messagearea" from="textarea_info_small">
