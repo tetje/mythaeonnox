@@ -77,7 +77,7 @@
     <button>
         <type>SETUP_KEYS</type>
         <text>Keys</text>
-        <description>Setup your key bindings</description>
+        <description>Configure Mythtv key bindings</description>
         <action>SETUP_KEYS</action>
     </button>
 

@@ -3,70 +3,114 @@
 <mythuitheme>
 
     <window name="keygrabpopup">
-        <area>150,50,500,500</area>
-        <imagetype name="backimg">
-            <filename>mythdialogbox-background.png</filename>
-        </imagetype>
+        <area>-1,-1,700,300</area>
 
-        <textarea name="message" from="basetextarea">
-            <area>18,18,460,400</area>
-            <multiline>yes</multiline>
+        <group name="confirmation_dialog_window" from="basedialogwindow">
+            <position>0,0</position>        
+        </group>
+
+        <textarea name="message" from="textarea_list">
+            <area>70,75,560,50</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
         </textarea>
 
-        <button name="cancel" from="basebutton">
-            <position>85,420</position>
+        <button name="cancel" from="button_dialog">
+            <position>0,125</position>
             <value>Cancel</value>
         </button>
 
-        <button name="ok" from="basebutton">
-            <position>265,420</position>
+        <button name="ok" from="button_dialog">
+            <position>0,175</position>
             <value>OK</value>
         </button>
+
     </window>
 
     <window name="controls">
 
-        <textarea name="leftdesc" from="basetextarea">
-            <area>20,20,370,20</area>
-            <value>Contexts</value>
-            <align>center</align>
-        </textarea>
+         <area>-1,-1,1850,1010</area>
 
-        <buttonlist name="leftlist" from="basebuttonlist">
-            <area>20,50,370,410</area>
-            <showarrow>no</showarrow>
-        </buttonlist>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="rightdesc" from="leftdesc">
-            <area>410,20,370,20</area>
-            <value>Actions</value>
-        </textarea>
+        <group name="controls_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Configure Mythtv key bindings</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="leftdesc" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Contexts</value>
+	        </textarea>
+	
+	        <textarea name="rightdesc" from="textarea_settings_option">
+	            <position>770,120</position>
+	            <value>Actions</value>
+	        </textarea>
+	
+	        <!-- widgets -->
+	        <buttonlist name="leftlist" from="buttonlist_settings_half">
+			     <area>0,192,650,668</area>
+		        <buttonarea>0,0,650,668</buttonarea>
+	        </buttonlist>
+	
+	        <buttonlist name="rightlist" from="leftlist">
+			     <position>750,192</position>
+	        </buttonlist>
+	
+	        <textarea name="description" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-        <buttonlist name="rightlist" from="leftlist">
-            <area>410,50,370,410</area>
-        </buttonlist>
+        </group>
 
-        <button name="action_0" from="basebutton">
-            <position>40,480</position>
-        </button>
+        <group name="controls_menu">
+           <area>30,28,324,952</area>
 
-        <button name="action_1" from="action_0">
-            <position>220,480</position>
-        </button>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Key Bindings</value>
+	        </textarea>
+	
+	        <button name="action_0" from="button_settings">
+	            <position>0,120</position>
+	        </button>
+	
+	        <button name="action_1" from="button_settings">
+	            <position>0,192</position>
+	        </button>
+	
+	        <button name="action_2" from="button_settings">
+	            <position>0,264</position>
+	        </button>
+	
+	        <button name="action_3" from="button_settings">
+	            <position>0,336</position>
+	        </button>
+	
+        </group>
 
-        <button name="action_2" from="action_0">
-            <position>410,480</position>
-        </button>
-
-        <button name="action_3" from="action_0">
-            <position>600,480</position>
-        </button>
-
-        <textarea name="description" from="basetextarea">
-            <area>30,515,740,80</area>
-            <multiline>yes</multiline>
-            <align>center</align>
-        </textarea>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 </mythuitheme>
