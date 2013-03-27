@@ -1048,6 +1048,11 @@
 	          <preserveaspect>no</preserveaspect>
 	       </imagetype>
 -->
+	      <imagetype name="ClockBgd_dark" depends="description">
+	         <filename>images/shared/timepanel_mid_bgd.png</filename>
+	         <area>665,54,683,41</area>
+	         <preserveaspect>no</preserveaspect>
+	      </imagetype>  
 
 	      <imagetype name="ClockBgd">
 	         <filename>images/shared/timepanel_mid_flip.png</filename>
