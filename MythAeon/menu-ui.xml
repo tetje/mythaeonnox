@@ -1050,7 +1050,7 @@
 -->
 	      <imagetype name="ClockBgd_dark" depends="description">
 	         <filename>images/shared/timepanel_mid_bgd.png</filename>
-	         <area>667,54,683,41</area>
+	         <area>627,9,683,87</area>
 	         <preserveaspect>no</preserveaspect>
 	      </imagetype>  
 
