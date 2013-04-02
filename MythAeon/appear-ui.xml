@@ -3,42 +3,51 @@
 <mythuitheme>
     <window name="appearance">
 
-        <textarea name="part" from="basetextarea">
-            <font>baselarge</font>
-            <area>20,20,800,40</area>
-            <value>Appearance Wizard</value>
-            <align>center</align>
-        </textarea>
-
+        <imagetype name="backdropimg">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/system/</filename>
+        </imagetype>
+        
         <imagetype name="topleft">
             <position>0,0</position>
-            <filename>topleft.png</filename>
+            <filename>images/shared/calibrate-topleft-focus.png</filename>
         </imagetype>
 
-        <imagetype name="bottomright">
-            <position>800,600</position>
-            <filename>bottomright.png</filename>
+        <imagetype name="bottomright" from="topleft">
+            <filename>images/shared/calibrate-bottomright-focus.png</filename>
         </imagetype>
 
-        <textarea name="part1" from="basetextarea">
-            <font>basemedium</font>
-            <area>100,140,600,170</area>
-            <value>Move the selected arrow to the corner of the TV screen.  Press SELECT to edit the other arrow.  Press MENU for options and ESC to quit.</value>
-            <multiline>yes</multiline>
-        </textarea>
-
-        <textarea name="size" from="basetextarea">
-            <font>basemedium</font>
-            <area>100,270,500,50</area>
-        </textarea>
-
-        <textarea name="offsets" from="size">
-            <area>100,320,500,140</area>
-        </textarea>
-
-        <textarea name="changeamount" from="size">
-            <area>100,520,500,140</area>
-        </textarea>
+        <group name="appearance_dialog">
+           <area>299,179,1322,722</area>
+	        <imagetype name="dialogbgd">
+	            <area>0,0,1322,722</area>
+	            <filename>images/shared/select_back.png</filename>
+	        </imagetype>
+	        
+	        <textarea name="part" from="textarea_settings_title">
+	            <area>50,50,1222,50</area>
+	            <value>Appearance Wizard</value>
+	        </textarea>
+	
+	        <textarea name="part1" from="textarea_settings_option">
+	            <multiline>yes</multiline>
+	            <area>50,120,1222,144</area>
+	            <value>Move the selected arrow to the corner of the TV screen.  Press SELECT to edit the other arrow.  Press MENU for options and ESC to quit.</value>
+	            <multiline>yes</multiline>
+	        </textarea>
+	
+	        <textarea name="size" from="textarea_settings_option">
+	            <area>50,336,1222,72</area>
+	        </textarea>
+	
+	        <textarea name="offsets" from="size">
+	            <area>50,408,1222,72</area>
+	        </textarea>
+	
+	        <textarea name="changeamount" from="size">
+	            <area>50,480,1222,72</area>
+	        </textarea>
+	     </group>
 
     </window>
 </mythuitheme>
