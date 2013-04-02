@@ -37,7 +37,8 @@
 	
 	     <fontdef name="key_blue" from="key_base">
 	        <weight>bold</weight>
-	        <color>#105B8F</color>
+	        <color>#FFFFFF</color>
+<!--	        <color>#105B8F</color>  -->
 	    </fontdef>
 	
 	     <fontdef name="key_amber" from="key_base">
