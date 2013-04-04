@@ -10,49 +10,49 @@
    <button>
      <type>SETUP_CAPTURE_CARDS</type>
      <text>Cards</text>
-     <description>Configure your capture</description>
+     <description>Configure your capture cards</description>
      <action>CAPTURE CARDS</action>
    </button>
 
    <button>
      <type>SETUP_VIDEO_SOURCES</type>
      <text>Sources</text>
-     <description>Configure your video</description>
+     <description>Configure your video Sources</description>
      <action>VIDEO SOURCES</action>
    </button>
 
    <button>
      <type>SETUP_INPUT_CONNECTIONS</type>
      <text>Inputs</text>
-     <description>Connect your cards to</description>
+     <description>Connect your cards to video sources</description>
      <action>CARD INPUTS</action>
    </button>
 
    <button>
      <type>SETUP_CHANNEL_EDITOR</type>
      <text>Channels</text>
-     <description>Edit your</description>
+     <description>Edit your Channels</description>
      <action>CHANNEL EDITOR</action>
    </button>
 
    <button>
      <type>SETUP_STORAGE_GROUPS</type>
      <text>Directories</text>
-     <description>Add your storage</description>
+     <description>Add your storage Folders</description>
      <action>STORAGE GROUPS</action>
    </button>
 
     <button>
         <type>TV_SETTINGS_RECORDING_PROFILES</type>
         <text>Profiles</text>
-        <description>Setup recordings</description>
+        <description>Setup recordings profiles</description>
         <action>RECORDING PROFILE</action>
     </button>
 
    <button>
      <type>SETUP_SYSTEM_EVENTS</type>
      <text>Events</text>
-     <description>Setup your system</description>
+     <description>Setup your system events</description>
      <action>SYSTEMEVENTEDITOR</action>
    </button>
 
