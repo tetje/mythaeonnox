@@ -2,103 +2,188 @@
 <!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
 <mythuitheme>
     <window name="iconimport">
-        <textarea name="name" from="basetextarea">
-            <area>30,15,740,30</area>
-            <font>basemedium</font>
-            <align>hcenter</align>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <buttonlist name="icons">
-            <area>20,50,760,450</area>
-            <buttonarea>0,0,760,420</buttonarea>
-            <layout>grid</layout>
-            <spacing>5</spacing>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,250,60</area>
-                    <shape name="background">
-                        <area>0,0,250,60</area>
-                        <type>roundbox</type>
-                        <cornerradius>4</cornerradius>
-                        <fill style="gradient">
-                            <gradient start="#505050" end="#000000" alpha="200" direction="vertical" />
-                        </fill>
-                    </shape>
-                    <imagetype name="icon">
-                        <area>0,5,80,50</area>
-                        <preserveaspect>true</preserveaspect>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <area>100,5,140,50</area>
-                        <align>allcenter</align>
-                        <multiline>yes</multiline>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="background">
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="255" />
-                        </fill>
-                    </shape>
-                </state>
-                <state name="selectedinactive" from="selectedactive">
-                    <shape name="background">
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="175" />
-                        </fill>
-                    </shape>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>700,425</position>
-                <state type="off">
-                    <imagetype name="upon">
-                        <filename>lb-uparrow-reg.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff">
-                        <filename>lb-uparrow-sel.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>740,425</position>
-                <state type="off">
-                    <imagetype name="dnon">
-                        <filename>lb-dnarrow-reg.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="dnoff">
-                        <filename>lb-dnarrow-sel.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+	        <area>0,0,1850,1010</area>
+        </group>
+	        	        
+        <group name="iconimport_panel">
+           <area>414,28,1400,952</area>
 
-        <textarea name="status" from="basetextarea">
-            <area>30,480,600,25</area>
-        </textarea>
+	        <textarea name="name" from="textarea_settings_title">
+	            <area>20,50,1315,50</area>
+	            <align>left,vcenter</align>
+	            <scroll direction="horizontal" />
+	        </textarea>
+	        	
+	        <!-- Labels -->
+	        <textarea name="manuallabel" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Search Terms:</value>
+	        </textarea>
 
-        <textarea name="manuallabel" from="basetextarea">
-            <area>30,505,300,25</area>
-            <value>Search terms:</value>
-        </textarea>
+	        <!-- widgets -->
+	        <textedit name="manualsearch" from="textedit_settings_details">
+	            <position>0,120</position>
+	        </textedit>
 
-        <textedit name="manualsearch" from="basetextedit">
-            <position>30,535</position>
-        </textedit>
+	        <textarea name="status" from="textarea_settings_option">
+	            <area>20,192,1280,72</area>
+	            <cutdown>no</cutdown>
+	            <scroll direction="left"/>
+	        </textarea>
+	
+			   <buttonlist name="icons">
+			       <spacing>4</spacing>
+			       <area>0,745,1350,250</area>
+			       <searchposition>758,55</searchposition>
+			       <layout>horizontal</layout>
+			       <scrollstyle>center</scrollstyle>
+			       <arrange>stack</arrange>
+			       <align>hcenter</align>
+			       <wrapstyle>items</wrapstyle>
+			       <showarrow>yes</showarrow>
+			       <buttonarea>70,0,1230,250</buttonarea>
+			       <statetype name="buttonitem">
+			           <state name="active">
+			               <imagetype name="previewbgd">
+			                   <area>0,5,176,176</area>
+			                   <alpha>255</alpha>
+			                   <filename>images/shared/list_musicicon_frame.png</filename>
+			                   <preserveaspect>no</preserveaspect>
+			               </imagetype>
+			               <imagetype name="icon">
+			                   <area>5,10,166,166</area>
+			                   <alpha>255</alpha>
+			                   <filename>images/shared/DefaultRecentlyAddedEpisodes.png</filename>
+			                   <mask>images/shared/list_musicicon_mask_multiplex_small.png</mask>
+			                   <preserveaspect>no</preserveaspect>
+			               </imagetype>
+			               <imagetype name="previewglass">
+			                   <area>5,10,166,166</area>
+			                   <alpha>255</alpha>
+			                   <filename>images/shared/list_musicicon_glass.png</filename>
+			                   <preserveaspect>no</preserveaspect>
+			               </imagetype>
+			           </state>
+			           <state name="selectedactive">
+			               <area>-844,-9,231,320</area>
+			               <imagetype name="previewbgd">
+			                   <area>0,-9,231,231</area>
+			                   <alpha>255</alpha>
+			                   <filename>images/shared/list_musicicon_frame.png</filename>
+			                   <preserveaspect>no</preserveaspect>
+			               </imagetype>
+			               <imagetype name="icon">
+			                   <area>8,-2,217,217</area>
+			                   <alpha>255</alpha>
+			                   <preserveaspect>no</preserveaspect>
+			                   <filename>images/shared/DefaultRecentlyAddedEpisodes.png</filename>
+			                   <mask>images/shared/list_musicicon_mask_multiplex.png</mask>
+			               </imagetype>
+			               <imagetype name="previewglass">
+			                   <area>8,-2,217,217</area>
+			                   <alpha>255</alpha>
+			                   <filename>images/shared/list_musicicon_glass.png</filename>
+			                   <preserveaspect>no</preserveaspect>
+			               </imagetype>
+			           </state>
+			           <state name="inactive" from ="active">
+			               <alpha>255</alpha>
+			           </state>
+			           <state name="selectedinactive" from="selectedactive">
+			               <alpha>255</alpha>
+			           </state>
+			       </statetype>
+				    <statetype name="downscrollarrow">
+				        <position>0,70</position>
+				        <state type="off">
+				            <imagetype name="dnon">
+				                <filename>images/shared/multiplex_arrow2.png</filename>
+				                <alpha>90</alpha>
+				            </imagetype>
+				        </state>
+				        <state type="full">
+				            <imagetype name="dnoff">
+				                <filename>images/shared/multiplex_arrow2.png</filename>
+				            </imagetype>
+				        </state>
+				    </statetype>
+				    <statetype name="upscrollarrow">
+				        <position>1300,70</position>
+				        <state type="off">
+				            <imagetype name="dnon">
+				                <filename>images/shared/multiplex_arrow1.png</filename>
+				                <alpha>90</alpha>
+				            </imagetype>
+				        </state>
+				        <state type="full">
+				            <imagetype name="dnoff">
+				                <filename>images/shared/multiplex_arrow1.png</filename>
+				            </imagetype>
+				        </state>
+				    </statetype>
+			       
+			   </buttonlist>
+       	
+        </group>
+        
+        <group name="iconimport_menu">
+           <area>29,28,324,952</area>
 
-        <button name="search" from="basebutton">
-            <position>440,538</position>
-            <value>Search</value>
-        </button>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Download icons</value>
+	        </textarea>
+	
+	        <button name="search" from="button_settings">
+	            <position>0,120</position>
+	            <value>Search</value>
+	        </button>
 
-        <button name="skip" from="basebutton">
-            <position>620,538</position>
-            <value>Skip</value>
-        </button>
+	        <button name="skip" from="button_settings">
+	            <position>0,192</position>
+	            <value>Skip</value>
+	        </button>
+
+	        <textarea name="imagelbl" from="textarea_settings_title">
+	            <area>30,595,284,50</area>
+	            <value>Selected Image</value>
+	        </textarea>
+
+           <group name="musicicon_group">
+              <area>29,665,275,275</area>
+		        <imagetype name="channeliconframeactive" depends="channelicon">
+		            <area>0,0,275,275</area>
+		            <filename>images/shared/list_musicicon_frame.png</filename>
+		        </imagetype>
+		
+		        <imagetype name="icon">
+		            <area>7,7,261,261</area>
+		            <mask>images/shared/list_musicicon_mask_small.png</mask>
+	               <filename>images/shared/DefaultRecentlyAddedEpisodes.png</filename>
+		        </imagetype>
+		
+		        <imagetype name="channeliconglassactive" depends="channelicon">
+		            <area>7,7,261,261</area>
+		            <filename>images/shared/list_musicicon_glass.png</filename>
+		        </imagetype>
+	        </group>
+	
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 

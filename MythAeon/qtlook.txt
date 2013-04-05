@@ -3,7 +3,7 @@ str BackgroundColor=#000000
 # Color of lines, text, etc
 str ForegroundColor=#dddddd
 # Pixmap to use for the background
-str BackgroundPixmap=images/backgrounds/system/system.jpg
+str BackgroundPixmap=images/backgrounds/livetv/livetv.jpg
 str Font=Aeon Title
 
 # Colors for the different program categories
