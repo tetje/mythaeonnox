@@ -84,7 +84,7 @@
     <button>
         <type>SETTINGS_GRABBERS</type>
         <text>MetaData</text>
-        <description>Configure sources for metadata grabbers</description>
+        <description>Sources for metadata grabbers</description>
         <action>SETTINGS GRABBERS</action>
     </button>
 

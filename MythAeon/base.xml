@@ -481,7 +481,7 @@
    </textarea>
 
    <textarea name="textarea_settings_option" from="textarea_info">
-       <area>0,0,560,72</area>
+       <area>0,0,1300,72</area>
        <font>Font_Option_Settings</font>
    </textarea>
 
@@ -3509,7 +3509,7 @@
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
            </state>
-           <state name="disabled"/>
+           <state name="disabled" from="active"/>
        </statetype>
        <statetype name="checkstate">
            <state type="off">
@@ -3545,7 +3545,7 @@
                    <filename>images/shared/settings_radiobuttonofffocus.png</filename>
                </imagetype>
            </state>
-           <state name="disabled"/>
+           <state name="disabled" from="active"/>
        </statetype>
        <statetype name="checkstate">
            <state type="off">
@@ -3587,7 +3587,7 @@
                    <filename>images/shared/settings_radiobuttonofffocus.png</filename>
                </imagetype>
            </state>
-           <state name="disabled"/>
+           <state name="disabled" from="active"/>
        </statetype>
        <statetype name="checkstate">
            <state type="off">
@@ -3629,7 +3629,7 @@
                    <filename>images/shared/settings_radiobuttonofffocus.png</filename>
                </imagetype>
            </state>
-           <state name="disabled"/>
+           <state name="disabled" from="active"/>
        </statetype>
        <statetype name="checkstate">
            <state type="off">

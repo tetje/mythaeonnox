@@ -188,7 +188,6 @@
     </window>
 
     <window name="channeloverview">
-
         <area>-1,-1,1850,1010</area>
 
 	     <animation trigger="AboutToShow">
@@ -342,6 +341,7 @@
 
     </window>
 
+<!-- to do Can't find this window -->
     <window name="languageselection">
 
         <textarea name="countrylabel">
@@ -515,274 +515,392 @@
     </window>
 
     <window name="grabbersettings">
+         <area>-1,-1,1850,1010</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>20,40,760,40</area>
-            <value>Artwork and Metadata Sources</value>
-            <align>hcenter,vcenter</align>
-            <font>baselarge</font>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="helptext" from="basetextarea">
-            <area>50,350,700,280</area>
-            <multiline>yes</multiline>
-            <font>basesmall</font>
-            <align>allcenter</align>
-        </textarea>
+        <group name="grabbersettings_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Sources for metadata grabbers</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="moviegrabber_text" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Movie Metadata Source:</value>
+	        </textarea>
+	
+	        <textarea name="tvgrabber_text" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Television Metadata Source:</value>
+	        </textarea>
+	
+	        <textarea name="gamegrabber_text" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>Game Metadata Source:</value>
+	        </textarea>
+	
+	        <textarea name="dailyupdates_text" from="textarea_settings_option">
+	            <area>20,336,1380,72</area>
+	            <value>Perform daily updates of recording artwork:</value>
+	        </textarea>
+	
+	        <!-- widgets -->
+	        <buttonlist name="moviegrabber" from="selector_settings">
+	            <position>0,120</position>
+	        </buttonlist>
+	
+	        <buttonlist name="tvgrabber" from="selector_settings">
+	            <position>0,192</position>
+	        </buttonlist>
+	
+	        <buttonlist name="gamegrabber" from="selector_settings">
+	            <position>0,264</position>
+	        </buttonlist>
+	
+	        <checkbox name="dailyupdates" from="checkbox_settings">
+	            <position>0,336</position>
+	        </checkbox>
+	
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-        <textarea name="moviegrabber_text" from="basetextarea">
-            <area>75,173,225,30</area>
-            <font>basesmall</font>
-            <value>Movie Metadata Source:</value>
-        </textarea>
+        </group>
 
-        <textarea name="tvgrabber_text" from="basetextarea">
-            <area>75,238,225,30</area>
-            <font>basesmall</font>
-            <value>Television Metadata Source:</value>
-        </textarea>
+        <group name="grabbersettings_menu">
+           <area>30,28,324,952</area>
 
-        <textarea name="gamegrabber_text" from="basetextarea">
-            <area>75,303,225,30</area>
-            <font>basesmall</font>
-            <value>Game Metadata Source:</value>
-        </textarea>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Metadata</value>
+	        </textarea>
+	
+	        <button name="ok" from="button_settings">
+	            <position>0,120</position>
+	            <value>Save</value>
+	        </button>
+	
+	        <button name="cancel" from="button_settings">
+	            <position>0,192</position>
+	            <value>Cancel</value>
+	        </button>
+	
+        </group>
 
-        <textarea name="dailyupdates_text" from="basetextarea">
-            <area>330,365,500,40</area>
-            <value>Perform daily updates of recording artwork</value>
-            <align>left,vcenter</align>
-        </textarea>
-
-    <!--Widgets-->
-
-        <buttonlist name="moviegrabber" from="basewideselector">
-            <position>310,167</position>
-        </buttonlist>
-
-        <buttonlist name="tvgrabber" from="basewideselector">
-            <position>310,232</position>
-        </buttonlist>
-
-        <buttonlist name="gamegrabber" from="basewideselector">
-            <position>310,297</position>
-        </buttonlist>
-
-        <checkbox name="dailyupdates" from="basecheckbox">
-            <position>290,370</position>
-        </checkbox>
-
-        <button name="cancel" from="basebutton">
-            <position>188,530</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="ok" from="basebutton">
-            <position>435,530</position>
-            <value>OK</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
     <window name="generalwizard">
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>20,40,760,40</area>
-            <value>MythTV Configuration Wizard</value>
-            <align>hcenter,vcenter</align>
-            <font>baselarge</font>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+	        <area>0,0,1850,1010</area>
+        </group>
+	        	        
+        <group name="generalwizard_panel">
+           <area>414,28,1400,952</area>
 
-        <textarea name="helptext" from="basetextarea">
-            <area>30,470,740,50</area>
-            <multiline>yes</multiline>
-            <font>basesmall</font>
-            <align>allcenter</align>
-        </textarea>
+	        <textarea name="panel_title" from="textarea_settings_title">
+	            <area>20,770,1315,50</area>
+	            <align>left,vcenter</align>
+	            <scroll direction="horizontal" />
+	            <value>Basic configuration wizard</value>
+	        </textarea>
 
-    <!--Widgets-->
+	        <!-- Labels -->
 
-        <button name="submit" from="basewidebutton">
-            <position>250,167</position>
-            <value>Submit your hardware profile</value>
-        </button>
+	        <imagetype name="general_picture">
+	            <area>-5,25,1358,708</area>
+               <filename>images/backgrounds/info/</filename>
+	        </imagetype>
+	
+           <!-- Widgets -->      	
+ 	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,820,1375,72</area>
+	            <case>normal</case>
+	            <align>top,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-        <button name="view" from="basewidebutton">
-            <position>250,232</position>
-            <value>View your hardware profile</value>
-        </button>
+       </group>
+        
+        <group name="generalwizard_menu">
+           <area>29,28,324,952</area>
 
-        <button name="delete" from="basewidebutton">
-            <position>250,297</position>
-            <value>Delete your hardware profile</value>
-        </button>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Wizard</value>
+	        </textarea>
 
-        <button name="cancel" from="basebutton">
-            <position>188,530</position>
-            <value>Cancel</value>
-        </button>
+	        <button name="submit" from="button_settings">
+	            <position>0,120</position>
+	            <value>Submit system Profile</value>
+	        </button>
 
-        <button name="next" from="basebutton">
-            <position>435,530</position>
-            <value>Next</value>
-        </button>
+	        <button name="view" from="button_settings">
+	            <position>0,192</position>
+	            <value>View system Profile</value>
+	        </button>
+
+	        <button name="delete" from="button_settings">
+	            <position>0,264</position>
+	            <value>Delete system Profile</value>
+	        </button>
+
+	        <button name="next" from="button_settings">
+	            <position>0,336</position>
+	            <value>Next</value>
+	        </button>
+
+	        <button name="cancel" from="button_settings">
+	            <position>0,408</position>
+	            <value>Cancel</value>
+	        </button>
+
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
     <window name="audiowizard">
 
-        <textarea name="title" from="basetextarea">
-            <area>20,40,760,40</area>
-            <value>Audio Configuration</value>
-            <align>hcenter,vcenter</align>
-            <font>baselarge</font>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="helptext" from="basetextarea">
-            <area>30,470,740,50</area>
-            <multiline>yes</multiline>
-            <font>basesmall</font>
-            <align>allcenter</align>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="auddev_text" from="basetextarea">
-            <area>20,103,225,30</area>
-            <font>basesmall</font>
-            <align>right</align>
-            <value>Audio Device:</value>
-        </textarea>
+        <group name="audiowizard_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Setup Audio Configuration</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="auddev_text" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Audio Device:</value>
+	        </textarea>
+	
+	        <textarea name="ac3_text" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>My audio subsystem supports Dolby Digital:</value>
+	        </textarea>
+	
+	        <textarea name="dts_text" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>My audio subsystem supports DTS:</value>
+	        </textarea>
 
-        <textarea name="ac3_text" from="basetextarea">
-            <area>290,155,-20,30</area>
-            <font>basesmall</font>
-            <value>My audio subsystem supports Dolby Digital</value>
-        </textarea>
+	        <textarea name="eac3_text" from="textarea_settings_option">
+	            <position>20,336</position>
+	            <value>My audio subsystem supports E-AC-3:</value>
+	        </textarea>
 
-        <textarea name="dts_text" from="basetextarea">
-            <area>290,200,-20,30</area>
-            <font>basesmall</font>
-            <value>My audio subsystem supports DTS</value>
-        </textarea>
+	        <textarea name="truehd_text" from="textarea_settings_option">
+	            <position>20,408</position>
+	            <value>My audio subsystem supports TrueHD:</value>
+	        </textarea>
 
-        <textarea name="eac3_text" from="basetextarea">
-            <area>290,245,-20,30</area>
-            <font>basesmall</font>
-            <value>My audio subsystem supports E-AC-3</value>
-        </textarea>
+	        <textarea name="dtshd_text" from="textarea_settings_option">
+	            <position>20,480</position>
+	            <value>My audio subsystem supports DTS-HD:</value>
+	        </textarea>
 
-        <textarea name="truehd_text" from="basetextarea">
-            <area>290,290,-20,30</area>
-            <font>basesmall</font>
-            <value>My audio subsystem supports TrueHD</value>
-        </textarea>
+	        <textarea name="speaktext_text" from="textarea_settings_option">
+	            <position>20,552</position>
+	            <value>Number of Speakers:</value>
+	        </textarea>
 
-        <textarea name="dtshd_text" from="basetextarea">
-            <area>290,335,-20,30</area>
-            <font>basesmall</font>
-            <value>My audio subsystem supports DTS-HD</value>
-        </textarea>
+	        <!-- widgets -->
+	        <buttonlist name="audiodevices" from="selector_settings">
+	            <position>0,120</position>
+	        </buttonlist>
+	
+	        <checkbox name="ac3check" from="checkbox_settings">
+	            <position>0,192</position>
+	        </checkbox>
+	
+	        <checkbox name="dtscheck" from="checkbox_settings">
+	            <position>0,264</position>
+	        </checkbox>
+	
+	        <checkbox name="eac3check" from="checkbox_settings">
+	            <position>0,336</position>
+	        </checkbox>
+	
+	        <checkbox name="truehdcheck" from="checkbox_settings">
+	            <position>0,408</position>
+	        </checkbox>
+	
+	        <checkbox name="dtshdcheck" from="checkbox_settings">
+	            <position>0,480</position>
+	        </checkbox>
+	
+	        <buttonlist name="speakers" from="selector_settings">
+	            <position>0,552</position>
+	        </buttonlist>
+		
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-        <textarea name="speaktext_text" from="basetextarea">
-            <area>20,378,225,30</area>
-            <font>basesmall</font>
-            <align>right</align>
-            <value>Number of Speakers:</value>
-        </textarea>
+        </group>
 
-    <!--Widgets-->
+        <group name="audiowizard_menu">
+           <area>30,28,324,952</area>
 
-        <buttonlist name="audiodevices" from="basewideselector">
-            <position>250,97</position>
-        </buttonlist>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Wizard</value>
+	        </textarea>
+	
+	        <button name="testspeakers" from="button_settings">
+	            <position>0,120</position>
+	            <value>Test Speakers</value>
+	        </button>
+	
+	        <button name="next" from="button_settings">
+	            <position>0,192</position>
+	            <value>Next</value>
+	        </button>
+	
+	        <button name="previous" from="button_settings">
+	            <position>0,264</position>
+	            <value>Previous</value>
+	        </button>
+	
+        </group>
 
-        <checkbox name="ac3check" from="basecheckbox">
-            <position>250,153</position>
-        </checkbox>
-
-        <checkbox name="dtscheck" from="basecheckbox">
-            <position>250,198</position>
-        </checkbox>
-
-        <checkbox name="eac3check" from="basecheckbox">
-            <position>250,243</position>
-        </checkbox>
-
-        <checkbox name="truehdcheck" from="basecheckbox">
-            <position>250,288</position>
-        </checkbox>
-
-        <checkbox name="dtshdcheck" from="basecheckbox">
-            <position>250,333</position>
-        </checkbox>
-
-        <buttonlist name="speakers" from="basewideselector">
-            <position>250,372</position>
-        </buttonlist>
-
-        <button name="testspeakers" from="basewidebutton">
-            <position>250,422</position>
-        </button>
-
-        <button name="previous" from="basebutton">
-            <position>188,530</position>
-            <value>Previous</value>
-        </button>
-
-        <button name="next" from="basebutton">
-            <position>435,530</position>
-            <value>Next</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
     <window name="videowizard">
 
-        <textarea name="title" from="basetextarea">
-            <area>20,40,760,40</area>
-            <value>Video Configuration</value>
-            <align>hcenter,vcenter</align>
-            <font>baselarge</font>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="helptext" from="basetextarea">
-            <area>30,470,740,50</area>
-            <multiline>yes</multiline>
-            <font>basesmall</font>
-            <align>allcenter</align>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="prof_text" from="basetextarea">
-            <area>75,173,225,30</area>
-            <font>basesmall</font>
-            <value>Video Playback Profile:</value>
-        </textarea>
+        <group name="videowizard_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Setup Video Configuration</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="prof_text" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Video Playback Profile:</value>
+	        </textarea>
+	
+	        <!-- widgets -->
+	        <buttonlist name="playbackprofiles" from="selector_settings">
+	            <position>0,120</position>
+	        </buttonlist>
+	
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-    <!--Widgets-->
+        </group>
 
-        <buttonlist name="playbackprofiles" from="basewideselector">
-            <position>310,167</position>
-        </buttonlist>
+        <group name="videowizard_menu">
+           <area>30,28,324,952</area>
 
-        <button name="testsd" from="baseverywidebutton">
-            <position>310,232</position>
-            <value>Test Standard Definition</value>
-        </button>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Wizard</value>
+	        </textarea>
+	
+	        <button name="testsd" from="button_settings">
+	            <position>0,120</position>
+	            <value>Test SD Playback</value>
+	        </button>
+	
+	        <button name="testhd" from="button_settings">
+	            <position>0,192</position>
+	            <value>Test HD Playback</value>
+	        </button>
+	
+	        <button name="next" from="button_settings">
+	            <position>0,264</position>
+	            <value>Finish</value>
+	        </button>
+	
+	        <button name="previous" from="button_settings">
+	            <position>0,336</position>
+	            <value>Previous</value>
+	        </button>
+	
+        </group>
 
-        <button name="testhd" from="baseverywidebutton">
-            <position>310,297</position>
-            <value>Test High Definition</value>
-        </button>
-
-        <button name="previous" from="basebutton">
-            <position>188,530</position>
-            <value>Previous</value>
-        </button>
-
-        <button name="next" from="basebutton">
-            <position>435,530</position>
-            <value>Finish</value>
-        </button>
-
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+<!--
+-->
     </window>
 
     <window name="backendselection">
