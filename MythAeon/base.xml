@@ -4882,6 +4882,31 @@
         </textarea>
     </textedit>
 
+    <textedit name="textedit_settings_full">
+        <area>0,0,1400,72</area>
+        <statetype name="background">
+            <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,22,1400,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+            </state>
+            <state name="selected" from="active">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,1400,72</area>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>cursor.png</filename>
+        </imagetype>
+        <textarea name="text" from="textarea_settings_option">
+            <area>20,0,1370,72</area>
+        </textarea>
+    </textedit>
+
     <textedit name="textedit_settings_long">
         <area>0,0,1400,216</area>
         <statetype name="background">
