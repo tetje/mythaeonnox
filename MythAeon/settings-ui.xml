@@ -62,57 +62,175 @@
     </window>
 
     <window name="themechooser">
-        <area>0,0,800,600</area>
+        <area>-1,-1,1850,1010</area>
 
-        <shape name="background" from="basebackground">
-            <area>0,0,800,600</area>
-            <fill color="#000000" alpha="200" />
-        </shape>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+	        <area>0,0,1850,1010</area>
+        </group>
+	        	        
+        <group name="themechooser_panel">
+           <area>414,28,1400,952</area>
+<!--
+	        <textarea name="panel_title" from="textarea_settings_title">
+	            <area>20,770,1315,50</area>
+	            <align>left,vcenter</align>
+	            <scroll direction="horizontal" />
+	            <value>Select your theme</value>
+	        </textarea>
+-->
+	        <!-- Labels -->
 
-        <shape name="preview-shape">
-            <area>410,50,380,285</area>
-            <type>roundbox</type>
-            <fill color="#000000" />
-            <cornerradius>20</cornerradius>
-        </shape>
+	        <imagetype name="preview">
+	            <area>-5,25,1358,708</area>
+               <filename>images/backgrounds/skin/</filename>
+               <preserveaspect>yes</preserveaspect>
+	        </imagetype>
+	
+	        <imagetype name="preview_overlay">
+	            <area>-5,25,1358,708</area>
+               <filename>images/shared/wall_vignette.png</filename>
+	        </imagetype>
+	
+           <!-- Widgets -->      	
+	        <textarea name="name" from="textarea_settings_button">
+	            <area>20,770,1375,32</area>
+	            <template>%name%</template>
+	        </textarea>
 
-        <imagetype name="preview">
-            <area>425,65,350,260</area>
-            <filename />
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
+           <imagetype name="backgroundgridline10">
+               <area>-20,760,1380,50</area>
+               <preserveaspect>no</preserveaspect>
+               <filename>images/shared/settings_radiobuttonoff.png</filename>
+           </imagetype>
 
-        <textarea name="name" from="basetextarea">
-            <area>425,350,350,30</area>
-            <multiline>no</multiline>
-            <font>basemedium</font>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
-        </textarea>
+	        <textarea name="description" from="textarea_plot">
+	            <area>20,820,1315,116</area>
+	            <case>normal</case>
+	            <align>top,justify</align>
+	            <multiline>yes</multiline>
+	            <template>Resolution: %resolution% - %aspect| \n%%DESCRIPTION%</template>
+	        </textarea>
 
-        <textarea name="resolution" from="basetextarea">
-            <area>425,380,175,30</area>
-            <multiline>no</multiline>
-            <font>basesmall</font>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
-        </textarea>
+       </group>
+        
+        <group name="themechooser_menu">
+           <area>29,28,324,952</area>
 
-        <textarea name="aspect" from="basetextarea">
-            <area>600,380,175,30</area>
-            <multiline>no</multiline>
-            <font>basesmall</font>
-            <align>left,vcenter</align>
-            <cutdown>yes</cutdown>
-        </textarea>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Skins</value>
+	        </textarea>
 
-        <textarea name="description" from="basetextarea">
-            <area>425,410,350,350</area>
-            <multiline>yes</multiline>
-            <font>basesmall</font>
-            <align>left,top</align>
-            <cutdown>yes</cutdown>
-        </textarea>
+	        <buttonlist name="themes" from="buttonlist_settings_menu">
+			       <area>0,120,324,720</area>
+			       <buttonarea>0,0,324,720</buttonarea>
+			       <statetype name="buttonitem">
+			           <area>0,0,324,72</area>
+			           <state name="active">
+	                    <statetype name="themelocation">
+	                        <state name="local">
+					               <textarea name="localtxt"  from="textarea_settings_button">
+					                   <area>30,5,254,62</area>
+					                   <value>Local</value>
+					                   <align>left,top</align>
+					               </textarea>
+	                        </state>
+	                        <state name="remote">
+					               <textarea name="remotetxt"  from="textarea_settings_button">
+					                   <area>30,0,254,72</area>
+					                   <value>Remote</value>
+					                   <align>left,top</align>
+					               </textarea>
+	                        </state>
+	                    </statetype>
+	                    <statetype name="themestatus">
+	                        <state name="uptodate">
+						           <imagetype name="uptodateimg">
+						               <area>-5,40,25,25</area>
+						               <preserveaspect>no</preserveaspect>
+						               <filename>images/icons/selected.png</filename>
+						           </imagetype>
+	                        </state>
+	                        <state name="updateavailable">
+						           <imagetype name="uptodateimg">
+						               <area>-5,40,25,25</area>
+						               <preserveaspect>no</preserveaspect>
+						               <filename>images/icons/update.png</filename>
+						           </imagetype>
+	                        </state>
+	                    </statetype>
+			               <textarea name="buttontext"  from="textarea_settings_button">
+			                   <area>30,5,254,62</area>
+			                   <font>Font_Button_Settings_Small</font>
+			                   <align>left,bottom</align>
+			               </textarea>
+			           </state>
+			           <state name="selectedactive">
+			               <imagetype name="Listpanel_selectbar">
+			                   <area>0,0,324,72</area>
+			                   <filename>images/shared/settings_leftmenufocus.png</filename>
+			               </imagetype>
+	                    <statetype name="themelocation">
+	                        <state name="local">
+					               <textarea name="localtxt"  from="textarea_settings_button">
+					                   <area>60,5,254,62</area>
+					                   <font>Font_Button_Settings_Focus</font>
+					                   <value>Local</value>
+					                   <align>left,top</align>
+					               </textarea>
+	                        </state>
+	                        <state name="remote">
+					               <textarea name="remotetxt"  from="textarea_settings_button">
+					                   <area>60,0,254,72</area>
+					                   <font>Font_Button_Settings_Focus</font>
+					                   <value>Remote</value>
+					                   <align>left,top</align>
+					               </textarea>
+	                        </state>
+	                    </statetype>
+	                    <statetype name="themestatus">
+	                        <state name="uptodate">
+						           <imagetype name="uptodateimg">
+						               <area>25,40,25,25</area>
+						               <preserveaspect>no</preserveaspect>
+						               <filename>images/icons/selected_black.png</filename>
+						           </imagetype>
+	                        </state>
+	                        <state name="updateavailable">
+						           <imagetype name="uptodateimg">
+						               <area>25,40,25,25</area>
+						               <preserveaspect>no</preserveaspect>
+						               <filename>images/icons/update_black.png</filename>
+						           </imagetype>
+	                        </state>
+	                    </statetype>
+			               <textarea name="buttontext"  from="textarea_settings_button">
+			                   <area>60,5,254,62</area>
+			                   <font>Font_Button_Settings_Focus_Small</font>
+			                   <align>left,bottom</align>
+			               </textarea>
+			           </state>
+			           <state name="inactive" from="active"/>
+			           <state name="selectedinactive" from="selectedactive">
+			               <alpha>128</alpha>
+			           </state>
+			       </statetype>
+	        </buttonlist>
+	
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+<!--
 
         <buttonlist name="themes">
             <area>40,60,375,512</area>
@@ -142,6 +260,7 @@
                         <alpha>210</alpha>
                     </textarea>
 
+-->
 <!-- State to show whether a theme is locally installed or remotely downloadable
                     <statetype name="themelocation">
                         <area>0,0,30,30</area>
@@ -181,6 +300,7 @@
                         </state>
                     </statetype>
 -->
+<!--
                 </state>
 
                 <state name="selectedactive" from="active">
@@ -223,13 +343,13 @@
                 </state>
             </statetype>
         </buttonlist>
-
+-->
 <!-- a progressbar to display the progress of the theme download
         <progressbar name="downloadprogressbar" from="baseprogressbar">
             <area>40,540,375,20</area>
         </progressbar>
 -->
-
+<!--
         <statetype name="fullpreviewstate">
             <area>0,0,800,600</area>
             <state name="fullscreen">
@@ -252,7 +372,7 @@
                 </textarea>
             </state>
         </statetype>
-
+-->
     </window>
 
 </mythuitheme>

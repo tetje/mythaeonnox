@@ -158,6 +158,10 @@
         <color>#ffffff</color>
     </fontdef>
     
+    <fontdef name="Font_Button_Settings_Small" from="Font_Button_Settings">
+        <pixelsize>32</pixelsize>
+    </fontdef>
+    
     <fontdef name="Font_Button_Settings_Black" face="ScoutCond">
         <pixelsize>30</pixelsize>
         <weight>bold</weight>
@@ -171,6 +175,10 @@
     
     <fontdef name="Font_Button_Settings_Focus" from="Font_Button_Settings">
         <color>#000000</color>
+    </fontdef>
+    
+    <fontdef name="Font_Button_Settings_Focus_Small" from="Font_Button_Settings_Focus">
+        <pixelsize>32</pixelsize>
     </fontdef>
     
     <fontdef name="Font_Option_Settings" face="Aeon Title">
@@ -2635,6 +2643,7 @@
            <state name="active">
                <textarea name="buttontext"  from="textarea_settings_button">
                    <area>30,0,264,72</area>
+                   <cutdown>yes</cutdown>
                </textarea>
            </state>
            <state name="selectedactive">
@@ -2645,6 +2654,7 @@
                <textarea name="buttontext" from="textarea_settings_button">
                    <area>60,0,264,72</area>
                    <font>Font_Button_Settings_Focus</font>
+                   <scroll direction="horizontal"/>
                </textarea>
            </state>
            <state name="inactive" from="active"/>

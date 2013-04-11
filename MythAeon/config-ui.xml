@@ -341,19 +341,87 @@
 
     </window>
 
-<!-- to do Can't find this window -->
+<!-- to do: Can't find this window -->
     <window name="languageselection">
 
-        <textarea name="countrylabel">
-            <font>baselarge</font>
-            <area>40,20,330,30</area>
-            <value>Country</value>
-            <align>allcenter</align>
-        </textarea>
+         <area>-1,-1,1850,1010</area>
 
-        <shape name="countrybackground" from="basebackground">
-            <area>20,55,370,450</area>
-        </shape>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
+
+        <group name="languageselection_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Select country and language</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="countrylabel" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Country:</value>
+	        </textarea>
+	
+	        <textarea name="languagelabel" from="textarea_settings_option">
+	            <position>770,120</position>
+	            <value>Language:</value>
+	        </textarea>
+	
+	        <!-- widgets -->
+	        <buttonlist name="countries" from="buttonlist_settings_half">
+			     <area>0,192,650,668</area>
+		        <buttonarea>0,0,650,668</buttonarea>
+		        <helptext>Select the country in which you currently reside</helptext>
+	        </buttonlist>
+	
+	        <buttonlist name="languages" from="leftlist">
+			     <position>750,192</position>
+			     <helptext>Select your preferred language</helptext>
+	        </buttonlist>
+	
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+
+        </group>
+
+        <group name="languageselection_menu">
+           <area>30,28,324,952</area>
+
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Language</value>
+	        </textarea>
+	
+	        <button name="save" from="button_settings">
+	            <position>0,120</position>
+	            <value>Save</value>
+	        </button>
+	
+	        <button name="cancel" from="button_settings">
+	            <position>0,192</position>
+	            <value>Cancel</value>
+	        </button>
+	
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+<!--
 
         <buttonlist name="countries">
             <area>30,65,350,430</area>
@@ -380,7 +448,7 @@
                         <cutdown>yes</cutdown>
                         <align>left,vcenter</align>
                     </textarea>
-                    <textarea name="country" from="buttontext" /> <!-- Workaround for vanishing buttontext bug -->
+                    <textarea name="country" from="buttontext" /> 
                     <textarea name="nativecountry">
                         <area>70,30,95%,25</area>
                         <font>basesmallgrey</font>
@@ -422,15 +490,6 @@
             </statetype>
             <helptext>Select the country in which you currently reside</helptext>
         </buttonlist>
-
-        <textarea name="languagelabel" from="countrylabel">
-            <position>430,20</position>
-            <value>Language</value>
-        </textarea>
-
-        <shape name="languagebackground" from="basebackground">
-            <area>410,55,370,450</area>
-        </shape>
 
         <buttonlist name="languages">
             <area>420,65,350,430</area>
@@ -496,22 +555,7 @@
             <helptext>Select your preferred language</helptext>
         </buttonlist>
 
-        <textarea name="helptext" from="basetextarea">
-            <area>200,470,400,60</area>
-            <align>allcenter</align>
-            <multiline>true</multiline>
-        </textarea>
-
-        <button name="save" from="basebutton">
-            <position>610,530</position>
-            <value>Save</value>
-        </button>
-
-        <button name="cancel" from="basebutton">
-            <position>40,530</position>
-            <value>Cancel</value>
-        </button>
-
+-->
     </window>
 
     <window name="grabbersettings">
@@ -903,6 +947,7 @@
 -->
     </window>
 
+<!-- to do: Can't find this window -->
     <window name="backendselection">
 
         <textarea name="label">

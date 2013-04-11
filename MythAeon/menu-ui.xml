@@ -1002,7 +1002,7 @@
            <align>left,vcenter</align>
            <scroll direction="left" />
            <cutdown>no</cutdown>
-           <value>MythTV is a Free Open Source software digital video recorder (DVR) project distributed under the terms of the GNU GPL  -  It has been under heavy development since 2002  -  Now it contains most features one would expect from a good DVR and many new ones that you soon won't be able to live without  -  This theme has been made to look like the original XBMC skin were posible  -  Looks best with the matching menu called 'MythAeon' as the menu lay-out and items are tailored for this particular theme</value>
+           <value>MythTV is a Free Open Source software digital video recorder (DVR) project distributed under the terms of the GNU GPL  -  It has been under heavy development since 2002  -  Now it contains most features one would expect from a good DVR and many new ones that you soon won't be able to live without  -  This theme is based on and inspired by the original XBMC skin called Aeon by Duncan Harris  -  When using this theme you should select the customized menu called 'MythAeon' as this menu lay-out and items are tailored for this particular theme</value>
        </textarea>
     
        <imagetype name="rss_fade">
