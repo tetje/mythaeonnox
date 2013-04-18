@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="browser">
+
+        <imagetype name="backdropimg">
+            <area>0,0,1920,1080</area>
+            <filename>images/shared/wall_background_small.png</filename>
+        </imagetype>
+
+        <buttonlist name="pagelist" from="selector_settings_fullscreen">
+            <area>0,10,1920,72</area>
+	         <statetype name="buttonitem">
+	             <state name="active">
+                    <imagetype name="favicon">
+                        <area>10,15,35,35</area>
+                        <preserveaspect>no</preserveaspect>
+                    </imagetype>
+                    <statetype name="loadingstate">
+                        <state name="loading">
+                            <imagetype name="animation">
+                                <area>10,15,35,35</area>
+                                <filepattern low="0" high="24">images/busyimages/%1.png</filepattern>
+                                <delay>160</delay>
+                            </imagetype>
+                        </state>
+                    </statetype>
+		              <textarea name="buttontext" from="textarea_settings_option">
+		                  <area>60,0,1710,72</area>
+		                  <align>left,vcenter</align>
+		              </textarea>
+	             </state>
+	             <state name="selected">
+                    <imagetype name="favicon">
+                        <area>10,15,35,35</area>
+                        <filename>images/shared/DefaultNetwork.png</filename>
+                        <preserveaspect>no</preserveaspect>
+                    </imagetype>
+                    <statetype name="loadingstate">
+                        <state name="loading">
+                            <imagetype name="animation">
+                                <area>10,15,35,35</area>
+                                <filepattern low="0" high="24">images/busyimages/%1.png</filepattern>
+                                <delay>160</delay>
+                            </imagetype>
+                        </state>
+                    </statetype>
+		              <textarea name="buttontext" from="textarea_settings_option">
+		                  <area>60,0,1710,72</area>
+		                  <align>left,vcenter</align>
+		              </textarea>
+	             </state>
+	             <state name="selectedactive" from="active"/>
+	             <state name="selectedinactive" from="active"/>
+	         </statetype>
+        </buttonlist>
+        
+        <webbrowser name="webbrowser">
+            <area>0,90,1920,990</area>
+            <zoom>1.4</zoom>
+        </webbrowser>
+
+        <!-- these are optional -->
+<!--        
+        <progressbar name="progressbar" from="baseprogressbar">
+            <area>20,550,760,40</area>
+            <imagetype name="background">
+                <area>0,0,100%,100%</area>
+                <filename>mb_progressbar_background.png</filename>
+            </imagetype>
+            <imagetype name="progressimage">
+                <area>0,0,100%,100%</area>
+                <filename>mb_progressbar_fill.png</filename>
+            </imagetype>
+        </progressbar>
+
+        <textarea name="status" from="basetextarea">
+            <area>30,550,740,38</area>
+            <align>left,vcenter</align>
+        </textarea>
+-->
+    </window>
+
+    <window name="bookmarkmanager">
+        <area>-1,-1,1850,1010</area>
+
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
+
+        <group name="bookmarkmanager_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="heading" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Select bookmark or add a new one</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="eventlabel" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Select bookmark:</value>
+	        </textarea>
+
+	        <!-- widgets -->
+	        <buttonlist name="bookmarklist" from="buttonlist_settings_check">
+				   <area>0,192,1400,544</area>
+			      <buttonarea>0,0,1400,544</buttonarea>
+				    <statetype name="buttonitem">
+				        <state name="active">
+				           <textarea name="buttontext" from="textarea_settings_option">
+				               <area>20,0,1230,72</area>
+				               <align>left,vcenter</align>
+				           </textarea>
+				           <textarea name="name" from="buttontext">
+                           <template>%name% (%url%)</template>
+				           </textarea>
+				       </state>
+				       <state name="selectedactive">
+				           <textarea name="buttontext" from="textarea_settings_option">
+				               <area>20,0,1230,72</area>
+				               <align>left,vcenter</align>
+				           </textarea>
+				           <textarea name="name" from="buttontext">
+                           <template>%name% (%url%)</template>
+				           </textarea>
+				       </state>
+				       <state name="inactive" from="active"/>
+				       <state name="selectedinactive" from="selectedactive">
+				           <alpha>128</alpha>
+				       </state>
+				    </statetype>
+	        </buttonlist>
+	
+	        <textarea name="messagetext" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+
+        </group>
+
+        <group name="bookmarkmanager_menu">
+           <area>30,28,324,952</area>
+
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Bookmarks</value>
+	        </textarea>
+	
+	        <buttonlist name="grouplist" from="buttonlist_settings_menu">
+			       <area>0,120,324,720</area>
+			       <buttonarea>0,0,324,720</buttonarea>
+			  </buttonlist>
+
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+
+    </window>
+
+    <window name="bookmarkeditor">
+
+        <area>-1,-1,1850,1010</area>
+
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
+
+        <group name="bookmarkeditor_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Edit your bookmarks</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="categorylabel" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Category:</value>
+	        </textarea>
+
+	        <textarea name="namelabel" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Bookmark Name:</value>
+	        </textarea>
+
+	        <textarea name="urllabel" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>Bookmark URL:</value>
+	        </textarea>
+
+	        <!-- widgets -->
+	
+	        <textedit name="category" from="textedit_settings">
+	            <position>0,120</position>
+	        </textedit>
+	
+	        <textedit name="name" from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+	
+	        <textedit name="url" from="textedit_settings">
+	            <position>0,264</position>
+	        </textedit>
+	
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+
+        </group>
+
+        <group name="bookmarkeditor_menu">
+           <area>30,28,324,952</area>
+
+	        <textarea name="title_menu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Bookmarks</value>
+	        </textarea>
+	
+	        <button name="findcategory" from="button_settings">
+	            <position>0,120</position>
+	            <value>Find category</value>
+	        </button>
+	
+	        <button name="ok" from="button_settings">
+	            <position>0,192</position>
+	            <value>Save</value>
+	        </button>
+
+	        <button name="cancel" from="button_settings">
+	            <position>0,264</position>
+	            <value>Cancel</value>
+	        </button>
+	
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+
+    </window>
+
+    <window name="browserconfig">
+
+        <area>-1,-1,1850,1010</area>
+
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
+
+        <group name="browserconfig_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Configure web browser settings</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="commandlbl" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Browser command:</value>
+	        </textarea>
+
+	        <textarea name="zoomlbl" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Text size:</value>
+	        </textarea>
+
+	        <textarea name="pluginlbl" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>Enable browser plugins:</value>
+	        </textarea>
+
+	        <!-- widgets -->
+	
+	        <textedit name="command" from="textedit_settings">
+	            <position>0,120</position>
+	        </textedit>
+	
+	        <textedit name="zoom" from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+	
+	        <checkbox name="enablepluginscheck" from="checkbox_settings">
+	            <position>0,264</position>
+	        </checkbox>
+	
+	        <textarea name="description" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+
+        </group>
+
+        <group name="browserconfig_menu">
+           <area>30,28,324,952</area>
+
+	        <textarea name="title_menu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Browser</value>
+	        </textarea>
+	
+	        <button name="ok" from="button_settings">
+	            <position>0,120</position>
+	            <value>Save</value>
+	        </button>
+
+	        <button name="cancel" from="button_settings">
+	            <position>0,192</position>
+	            <value>Cancel</value>
+	        </button>
+	
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+
+    </window>
+
+</mythuitheme>

@@ -4,7 +4,7 @@
     <button>
         <type>WEBPAGE</type>
         <text>Web</text>
-        <description>Browse the</description>
+        <description>Browse the World Wide Web</description>
         <action>PLUGIN mythbrowser</action>
         <depends>mythbrowser</depends>
     </button>
@@ -12,7 +12,7 @@
     <button>
         <type>NET_VIDEO_SEARCH</type>
         <text>Search</text>
-        <description>Video sites you can</description>
+        <description>Search popular video sites</description>
         <action>JUMP MythNetSearch</action>
         <depends>mythnetvision</depends>
     </button>
@@ -20,7 +20,7 @@
     <button>
         <type>NET_VIDEO_TREE</type>
         <text>Browse</text>
-        <description>Video sites you can</description>
+        <description>Browse highlights and entire sites</description>
         <action>JUMP MythNetTree</action>
         <depends>mythnetvision</depends>
     </button>
@@ -28,7 +28,7 @@
     <button>
         <type>NEWS</type>
         <text>News</text>
-        <description>Read the</description>
+        <description>Read the news online</description>
         <action>PLUGIN mythnews</action>
         <depends>mythnews</depends>
     </button>
@@ -36,7 +36,7 @@
     <button>
         <type>MUSIC_STREAM</type>
         <text>Radio</text>
-        <description>Listen to Internet</description>
+        <description>Listen to Internet Radio Streams</description>
         <action>JUMP Play radio stream</action>
         <depends>mythmusic</depends>
     </button>
@@ -44,7 +44,7 @@
     <button>
         <type>MYTHTWITTER_TIMELINE</type>
         <text>Tweets</text>
-        <description>Send and receive</description>
+        <description>Send and receive tweets</description>
         <action>JUMP MythTwitter_Timeline</action>
         <depends>mythtwitter</depends>
     </button>
@@ -52,7 +52,7 @@
     <button>
         <type>SMOLT</type>
         <text>Hardware profile</text>
-        <description>Share your</description>
+        <description>Share your hardware profile</description>
         <action>PLUGIN mythsmolt</action>
         <depends>mythsmolt</depends>
     </button>

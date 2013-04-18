@@ -4433,6 +4433,68 @@
         </statetype>
     </buttonlist>
 
+    <buttonlist name="selector_settings_fullscreen">
+        <area>0,0,1920,72</area>
+        <layout>horizontal</layout>
+        <buttonarea>0,0,1777,72</buttonarea>
+        <statetype name="buttonitem">
+            <state name="active">
+               <imagetype name="backgroundactive">
+                   <area>0,22,1920,50</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_settings_option">
+                   <area>20,0,1750,72</area>
+                   <align>left,vcenter</align>
+               </textarea>
+            </state>
+            <state name="selectedactive">
+                <imagetype name="backgroundselected">
+                   <area>0,0,1920,72</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/settings_radiobuttonofffocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_settings_option">
+                   <area>20,0,1750,72</area>
+                   <cutdown>no</cutdown>
+                   <scroll direction="horizontal"/>
+                   <align>left,vcenter</align>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="active"/>
+        </statetype>
+        <statetype name="upscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>1797,-13,62,98</area>
+                   <filename>images/shared/spin-down.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnoff">
+                   <area>1797,-13,62,98</area>
+                   <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>1858,-13,62,98</area>
+                   <filename>images/shared/spin-up.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                   <area>1858,-13,62,98</area>
+                   <filename>images/shared/spin-up-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </buttonlist>
+
     <buttonlist name="selector_settings_halfwidth">
         <area>0,0,700,72</area>
         <layout>horizontal</layout>
