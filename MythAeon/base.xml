@@ -619,16 +619,17 @@
                    <preserveaspect>no</preserveaspect>
                </imagetype>
                <imagetype name="previewlabel" depends="!preview">
-                   <area>19,203,278,90</area>
+                   <area>19,185,278,90</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_labelblock.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
-               <textarea name="buttontext" from="textarea_plot" depends="!preview">
-                   <area>24,203,268,50</area>
+               <textarea name="title" from="textarea_plot" depends="!preview">
+                   <area>24,185,268,50</area>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
+                   <template>%title%</template>
                </textarea>	          
            </state>
            <state name="selectedactive">
