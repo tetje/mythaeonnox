@@ -692,6 +692,126 @@
        
    </buttonlist>
 
+   <buttonlist name="buttonlist_multiplexweb">
+       <spacing>5</spacing>
+       <area>0,0,1920,335</area>
+       <searchposition>610,340</searchposition>
+       <layout>horizontal</layout>
+       <scrollstyle>center</scrollstyle>
+       <arrange>stack</arrange>
+       <align>hcenter</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>yes</showarrow>
+       <buttonarea>113,0,1694,335</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <imagetype name="previewbgd">
+                   <area>0,5,314,176</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_tvborder.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="preview">
+                   <area>8,11,300,168</area>
+                   <alpha>255</alpha>
+                   <mask>images/shared/multiplex_tvmask_small.png</mask>
+                   <filename>images/shared/DefaultVideoBigPoster.png</filename>
+                   <preserveaspect>no</preserveaspect>
+                   <reflection shear="0" scale="50" length="33" spacing="0" />
+               </imagetype>
+               <imagetype name="buttonimage" from="preview"/>
+               <imagetype name="previewglass">
+                   <area>8,11,300,168</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_tvglass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="previewlabel" depends="!preview">
+                   <area>19,185,278,90</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_labelblock.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <textarea name="title" from="textarea_plot" depends="!preview">
+                   <area>24,185,268,50</area>
+                   <multiline>yes</multiline>
+                   <cutdown>yes</cutdown>
+                   <align>hcenter,vcenter</align>
+                   <template>%title%</template>
+               </textarea>	          
+           </state>
+           <state name="selectedactive">
+               <area>-648,-9,398,320</area>
+ <!--              <area>-9,-9,398,231</area> -->
+               <imagetype name="previewbgd">
+                   <area>0,-9,398,231</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_tvborder.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="preview">
+                   <area>9,0,380,213</area>
+                   <alpha>255</alpha>
+                   <preserveaspect>no</preserveaspect>
+                   <mask>images/shared/multiplex_tvmask.png</mask>
+                   <filename>images/shared/DefaultVideoBigPoster.png</filename>
+               </imagetype>
+               <imagetype name="buttonimage" from="preview"/>
+               <imagetype name="previewglass">
+                   <area>9,0,380,213</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_tvglass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+		         <textarea name="author" from="textarea_title_sub">
+		             <area>-648,245,1694,30</area>
+		             <align>allcenter</align>
+		         </textarea>
+               <textarea name="title" from="textarea_title">
+                   <area>-648,280,1694,45</area>
+                   <cutdown>no</cutdown>
+		             <align>allcenter</align>
+		             <template>%title%</template>
+               </textarea>	  
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>255</alpha>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>255</alpha>
+           </state>
+       </statetype>
+	    <statetype name="downscrollarrow">
+	        <position>50,70</position>
+	        <state type="off">
+	            <imagetype name="dnon">
+	                <filename>images/shared/multiplex_arrow2.png</filename>
+	                <alpha>90</alpha>
+	            </imagetype>
+	        </state>
+	        <state type="full">
+	            <imagetype name="dnoff">
+	                <filename>images/shared/multiplex_arrow2.png</filename>
+	            </imagetype>
+	        </state>
+	    </statetype>
+	    <statetype name="upscrollarrow">
+	        <position>1820,70</position>
+	        <state type="off">
+	            <imagetype name="dnon">
+	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <alpha>90</alpha>
+	            </imagetype>
+	        </state>
+	        <state type="full">
+	            <imagetype name="dnoff">
+	                <filename>images/shared/multiplex_arrow1.png</filename>
+	            </imagetype>
+	        </state>
+	    </statetype>
+       
+   </buttonlist>
+
    <buttonlist name="buttonlist_multiplexmovie">
        <area>0,0,1920,267</area>
        <spacing>5</spacing>
@@ -1272,6 +1392,30 @@
                    <font>Font_Info_Selected</font>
                    <scroll direction="horizontal"/>
                </textarea>
+           </state>
+           <state name="inactive" from="active">
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>0</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_webshowpanel_group" from="buttonlist_tvshowpanel_group">
+       <statetype name="buttonitem">
+           <state name="active">
+		         <textarea name="lbl" from="textarea_label">
+		             <area>20,7,575,30</area>
+		             <value>Searchlist item:</value>
+		         </textarea>	
+           </state>
+           <state name="selectedactive">
+		         <textarea name="lbl" from="textarea_label">
+		             <area>20,7,575,30</area>
+		             <font>Font_Label_List_Selected</font>
+		             <value>Searchlist item:</value>
+		         </textarea>	
            </state>
            <state name="inactive" from="active">
                <alpha>0</alpha>
