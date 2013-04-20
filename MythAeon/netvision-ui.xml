@@ -53,13 +53,13 @@
         <group name="searchinfo">
            <area>0,0,1694,846</area>
            
-	        <imagetype name="fanart" depends="!filesize_str">
+	        <imagetype name="fanart" depends="!length">
 	            <area>632,58,1046,604</area>
 	            <filename>images/backgrounds/defaultfanart/</filename>
 	            <preserveaspect>no</preserveaspect>
 	        </imagetype>
 	        
-	        <imagetype name="preview" depends="filesize_str">
+	        <imagetype name="preview" depends="length">
 	            <area>632,58,1046,604</area>
 	            <filename>images/backgrounds/defaultfanart/</filename>
 	            <preserveaspect>no</preserveaspect>
@@ -68,23 +68,22 @@
            <group name="additionalsearchinfo">
               <area>30,85,567,270</area>
               <!-- labels -->
-		        <textarea name="storagelbl" from="textarea_label" depends="filesize_str">
+		        <textarea name="lengthlbl" from="textarea_label" depends="length">
 		            <area>0,0,567,30</area>
-		            <value>Video size:</value>
+		            <value>Video length:</value>
 		        </textarea>
 	
-		        <textarea name="resolutionlbl" from="storagelbl" depends="filesize_str">
+		        <textarea name="resolutionlbl" from="lengthlbl" depends="length">
 		            <position>0,70</position>
 		            <value>Resolution:</value>
 		        </textarea>
 		        
 	           <!-- widgets -->
-		        <textarea name="filesize_str" from="textarea_info">
+		        <textarea name="length" from="textarea_info">
 		            <area>0,25,567,30</area>
-		            <template>%filesize_str%</template>
 		        </textarea>
 	
-		        <textarea name="resolution" from="textarea_info" depends="filesize_str">
+		        <textarea name="resolution" from="textarea_info" depends="length">
 		            <area>0,95,567,30</area>
 		            <value>Not available</value>
 		        </textarea>
@@ -121,7 +120,7 @@
 		
            </group>
 
-	        <textarea name="description" from="textarea_plot" depends="filesize_str">
+	        <textarea name="description" from="textarea_plot" depends="length">
 	            <area>38,320,567,350</area>
 	            <template>%00x00| - %%"|SUBTITLE|"\n%%|YEARSTARS| - %%DESCRIPTION%</template>
 	        </textarea>
