@@ -401,6 +401,8 @@
 		        
 	           <group name="additionalmovieinfo">
 	              <area>38,85,700,270</area>
+	              
+	              <!-- labels -->
 			        <textarea name="directorlbl" from="textarea_label">
 			            <area>0,0,340,30</area>
 			            <value>Directed by:</value>
@@ -415,19 +417,7 @@
 			            <position>0,140</position>
 			            <value>Duration:</value>
 			        </textarea>
-		
-			        <textarea name="director" from="textarea_info">
-			            <area>0,25,340,30</area>
-			        </textarea>
-		
-			        <textarea name="year" from="textarea_info">
-			            <area>0,95,340,30</area>
-			        </textarea>
-		
-			        <textarea name="length" from="textarea_info">
-			            <area>0,165,340,30</area>
-			        </textarea>
-		
+			        
 			        <textarea name="ratinglbl" from="textarea_label">
 			            <area>358,0,340,30</area>
 			            <value>Rating:</value>
@@ -441,6 +431,19 @@
 			        <textarea name="starslbl" from="directorlbl">
 			            <position>358,140</position>
 			            <value>Stars:</value>
+			        </textarea>
+		
+                 <!-- widgets -->		
+			        <textarea name="director" from="textarea_info">
+			            <area>0,25,340,30</area>
+			        </textarea>
+		
+			        <textarea name="year" from="textarea_info">
+			            <area>0,95,340,30</area>
+			        </textarea>
+		
+			        <textarea name="length" from="textarea_info">
+			            <area>0,165,340,30</area>
 			        </textarea>
 		
 			        <textarea name="rating" from="textarea_info">

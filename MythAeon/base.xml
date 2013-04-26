@@ -692,7 +692,7 @@
        
    </buttonlist>
 
-   <buttonlist name="buttonlist_multiplexweb">
+   <buttonlist name="buttonlist_multiplexwebsearch">
        <spacing>5</spacing>
        <area>0,0,1920,335</area>
        <searchposition>610,340</searchposition>
@@ -727,13 +727,13 @@
                    <preserveaspect>no</preserveaspect>
                </imagetype>
                <imagetype name="previewlabel" depends="!preview">
-                   <area>19,185,278,90</area>
+                   <area>19,225,278,90</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_labelblock.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
                <textarea name="title" from="textarea_plot" depends="!preview">
-                   <area>24,185,268,50</area>
+                   <area>24,225,268,50</area>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
@@ -741,7 +741,7 @@
                </textarea>	          
            </state>
            <state name="selectedactive">
-               <area>-648,-9,398,320</area>
+               <area>-648,-9,398,330</area>
  <!--              <area>-9,-9,398,231</area> -->
                <imagetype name="previewbgd">
                    <area>0,-9,398,231</area>
@@ -764,11 +764,11 @@
                    <preserveaspect>no</preserveaspect>
                </imagetype>
 		         <textarea name="author" from="textarea_title_sub">
-		             <area>-648,245,1694,30</area>
+		             <area>-648,295,1694,30</area>
 		             <align>allcenter</align>
 		         </textarea>
                <textarea name="title" from="textarea_title">
-                   <area>-648,280,1694,45</area>
+                   <area>-648,330,1694,45</area>
                    <cutdown>no</cutdown>
 		             <align>allcenter</align>
 		             <template>%title%</template>
@@ -1142,6 +1142,177 @@
        
    </buttonlist>
 
+   <buttonlist name="buttonlist_multiplexwebbrowse">
+       <spacing>4</spacing>
+       <area>0,0,1920,400</area>
+       <searchposition>610,340</searchposition>
+       <layout>horizontal</layout>
+       <scrollstyle>center</scrollstyle>
+       <arrange>stack</arrange>
+       <align>hcenter</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>yes</showarrow>
+       <buttonarea>113,0,1694,400</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <imagetype name="previewbgd">
+                   <area>0,5,176,176</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_frame.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="buttonimage">
+                   <area>5,10,166,166</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/DefaultMovies.png</filename>
+                   <mask>images/shared/list_musicicon_mask_multiplex_small.png</mask>
+                   <preserveaspect>no</preserveaspect>
+                   <reflection shear="0" scale="50" length="33" spacing="0" />
+               </imagetype>
+               <imagetype name="previewglass">
+                   <area>5,10,166,166</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_glass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="previewlabel">
+                   <area>12,225,150,90</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_labelblock.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+<!--
+               <statetype name="nodetype">
+                   <area>0,0,110,159</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>80,129,25,25</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,110,159</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+               <textarea name="title" from="textarea_plot">
+                   <area>17,225,140,50</area>
+                   <font>Font_Info_Small_White</font>
+                   <multiline>yes</multiline>
+                   <cutdown>yes</cutdown>
+                   <align>hcenter,vcenter</align>
+               </textarea>	  
+                        
+           </state>
+           <state name="selectedactive">
+               <area>-844,-9,231,320</area>
+               <imagetype name="previewbgd">
+                   <area>0,-9,231,231</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_frame.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="buttonimage">
+                   <area>8,-2,217,217</area>
+                   <alpha>255</alpha>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/DefaultMovies.png</filename>
+                   <mask>images/shared/list_musicicon_mask_multiplex.png</mask>
+               </imagetype>
+               <imagetype name="previewglass">
+                   <area>8,-2,217,217</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/list_musicicon_glass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+<!--
+               <statetype name="nodetype">
+                   <area>-8,0,138,199</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>103,164,30,30</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,138,199</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->              
+				    <statetype name="basemovingtracksstate">
+				        <position>-18,240</position>
+				        <state name="off"></state>
+				        <state name="on">
+				            <imagetype name="statusimage">
+				                <area>0,0,36,36</area>
+				                <filename>images/icons/move_black.png</filename>
+				            </imagetype>
+				        </state>
+				    </statetype>
+
+		         <textarea name="author" from="textarea_title_sub">
+		             <area>-844,310,1918,30</area>
+		             <align>allcenter</align>
+		         </textarea>
+               <textarea name="title"  from="textarea_title">
+                   <area>-844,345,1918,45</area>
+                   <cutdown>no</cutdown>
+		             <align>allcenter</align>
+               </textarea>	  
+                        
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>255</alpha>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>255</alpha>
+           </state>
+       </statetype>
+	    <statetype name="downscrollarrow">
+	        <position>50,70</position>
+	        <state type="off">
+	            <imagetype name="dnon">
+	                <filename>images/shared/multiplex_arrow2.png</filename>
+	                <alpha>90</alpha>
+	            </imagetype>
+	        </state>
+	        <state type="full">
+	            <imagetype name="dnoff">
+	                <filename>images/shared/multiplex_arrow2.png</filename>
+	            </imagetype>
+	        </state>
+	    </statetype>
+	    <statetype name="upscrollarrow">
+	        <position>1820,70</position>
+	        <state type="off">
+	            <imagetype name="dnon">
+	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <alpha>90</alpha>
+	            </imagetype>
+	        </state>
+	        <state type="full">
+	            <imagetype name="dnoff">
+	                <filename>images/shared/multiplex_arrow1.png</filename>
+	            </imagetype>
+	        </state>
+	    </statetype>
+       
+   </buttonlist>
+
    <buttonlist name="buttonlist_multiplexstream">
        <spacing>4</spacing>
        <area>0,0,1920,400</area>
@@ -1356,6 +1527,92 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_webshowpanel_check">
+       <area>0,0,956,545</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,956,545</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,956,70</area>
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,800,30</area>
+		             <value>Search item:</value>
+		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,800,30</area>
+               </textarea>
+	 	         <statetype name="buttoncheck">
+		            <area>810,0,122,70</area>
+		            <state type="off">
+		                <imagetype name="LEDOff">
+		                    <area>0,0,122,70</area>
+		                    <filename>images/shared/settings_radiobuttonon_buttonlist.png</filename>
+		                </imagetype>
+		            </state>
+		            <state type="half">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,70</area> 
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
+		                    <alpha>128</alpha>
+		                </imagetype>
+		            </state>
+		            <state type="full">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,70</area>
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
+		                </imagetype>
+		            </state>
+		         </statetype>
+           </state>
+           <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,956,70</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,800,30</area>
+		             <font>Font_Label_List_Selected</font>
+		             <value>Search item:</value>
+		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,800,30</area>
+                   <font>Font_Info_Selected</font>
+                   <scroll direction="horizontal"/>
+               </textarea>
+	 	         <statetype name="buttoncheck">
+		            <area>810,0,122,70</area>
+		            <state type="off">
+		                <imagetype name="LEDOff">
+		                    <area>0,0,122,70</area>
+		                    <filename>images/shared/settings_radiobuttonon_buttonlist.png</filename>
+		                </imagetype>
+		            </state>
+		            <state type="half">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,70</area> 
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
+		                    <alpha>128</alpha>
+		                </imagetype>
+		            </state>
+		            <state type="full">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,70</area>
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist.png</filename>
+		                </imagetype>
+		            </state>
+		         </statetype>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
    <buttonlist name="buttonlist_tvshowpanel_group">
        <area>0,0,615,352</area>
        <layout>vertical</layout>
@@ -1403,19 +1660,34 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_webshowpanel_group" from="buttonlist_tvshowpanel_group">
+       <area>0,0,726,282</area>
+       <buttonarea>0,0,726,282</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
+               <area>0,0,700,70</area>
 		         <textarea name="lbl" from="textarea_label">
-		             <area>20,7,575,30</area>
+		             <area>20,7,680,30</area>
 		             <value>Searchlist item:</value>
 		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,680,30</area>
+               </textarea>
            </state>
            <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,711,70</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
 		         <textarea name="lbl" from="textarea_label">
-		             <area>20,7,575,30</area>
+		             <area>20,7,680,30</area>
 		             <font>Font_Label_List_Selected</font>
 		             <value>Searchlist item:</value>
 		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,680,30</area>
+                   <font>Font_Info_Selected</font>
+                   <scroll direction="horizontal"/>
+               </textarea>
            </state>
            <state name="inactive" from="active">
                <alpha>0</alpha>
