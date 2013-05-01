@@ -1169,6 +1169,28 @@
                    <preserveaspect>no</preserveaspect>
                    <reflection shear="0" scale="50" length="33" spacing="0" />
                </imagetype>
+               <statetype name="nodetype">
+                   <state name="subfolder" >
+<!--
+                       <imagetype name="icon">
+                           <area>5,10,166,166</area>
+                           <filename>images/shared/DefaultFolder.png</filename>
+			                  <mask>images/shared/list_musicicon_mask_multiplex_small.png</mask>
+			                  <preserveaspect>no</preserveaspect>
+			                  <reflection shear="0" scale="50" length="33" spacing="0" />
+                       </imagetype>
+-->
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>5,10,166,166</area>
+                           <filename>images/shared/DefaultFolderBackList.png</filename>
+			                  <mask>images/shared/list_musicicon_mask_multiplex_small.png</mask>
+			                  <preserveaspect>no</preserveaspect>
+			                  <reflection shear="0" scale="50" length="33" spacing="0" />
+                       </imagetype>
+                   </state>
+               </statetype>
                <imagetype name="previewglass">
                    <area>5,10,166,166</area>
                    <alpha>255</alpha>
@@ -1181,35 +1203,13 @@
                    <filename>images/shared/multiplex_labelblock.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
-<!--
-               <statetype name="nodetype">
-                   <area>0,0,110,159</area>
-                   <state name="subfolder">
-                       <imagetype name="icon">
-                           <area>80,129,25,25</area>
-                           <alpha>128</alpha>
-                           <filename>images/shared/DefaultFolderTransparent.png</filename>
-                           <preserveaspect>yes</preserveaspect>
-                       </imagetype>
-                   </state>
-                   <state name="upfolder">
-                       <imagetype name="icon">
-                           <area>0,0,110,159</area>
-                           <alpha>255</alpha>
-                           <filename>images/shared/DefaultFolderBack.png</filename>
-                           <preserveaspect>no</preserveaspect>
-                       </imagetype>
-                   </state>
-               </statetype>
--->
                <textarea name="title" from="textarea_plot">
                    <area>17,225,140,50</area>
                    <font>Font_Info_Small_White</font>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
-               </textarea>	  
-                        
+               </textarea>	                          
            </state>
            <state name="selectedactive">
                <area>-844,-9,231,320</area>
@@ -1226,33 +1226,32 @@
                    <filename>images/shared/DefaultMovies.png</filename>
                    <mask>images/shared/list_musicicon_mask_multiplex.png</mask>
                </imagetype>
+               <statetype name="nodetype">
+                   <state name="subfolder">
+<!--
+                       <imagetype name="icon">
+                           <area>8,-2,217,217</area>
+                           <filename>images/shared/DefaultFolder.png</filename>
+                           <mask>images/shared/list_musicicon_mask_multiplex.png</mask>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+-->
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>8,-2,217,217</area>
+                           <filename>images/shared/DefaultFolderBackList.png</filename>
+                           <mask>images/shared/list_musicicon_mask_multiplex.png</mask>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
                <imagetype name="previewglass">
                    <area>8,-2,217,217</area>
                    <alpha>255</alpha>
                    <filename>images/shared/list_musicicon_glass.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
-<!--
-               <statetype name="nodetype">
-                   <area>-8,0,138,199</area>
-                   <state name="subfolder">
-                       <imagetype name="icon">
-                           <area>103,164,30,30</area>
-                           <alpha>255</alpha>
-                           <filename>images/shared/DefaultFolderTransparent.png</filename>
-                           <preserveaspect>yes</preserveaspect>
-                       </imagetype>
-                   </state>
-                   <state name="upfolder">
-                       <imagetype name="icon">
-                           <area>0,0,138,199</area>
-                           <alpha>255</alpha>
-                           <filename>images/shared/DefaultFolderBack.png</filename>
-                           <preserveaspect>no</preserveaspect>
-                       </imagetype>
-                   </state>
-               </statetype>
--->              
 				    <statetype name="basemovingtracksstate">
 				        <position>-18,240</position>
 				        <state name="off"></state>
@@ -1613,6 +1612,48 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_webshowpanel_list">
+       <area>0,0,712,280</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,712,280</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,670,70</area>
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,670,30</area>
+		             <value>List item:</value>
+		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,670,30</area>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,712,70</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,670,30</area>
+		             <font>Font_Label_List_Selected</font>
+		             <value>List item:</value>
+		         </textarea>	
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,670,30</area>
+                   <font>Font_Info_Selected</font>
+                   <scroll direction="horizontal"/>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
    <buttonlist name="buttonlist_tvshowpanel_group">
        <area>0,0,615,352</area>
        <layout>vertical</layout>
@@ -1908,6 +1949,77 @@
 			      <statetype name="userratingstate" from="rating_base">
 			          <area>927,61,90,18</area>
 			      </statetype>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_browsewebtree">
+       <area>0,0,1115,800</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,1115,800</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,1115,113</area>
+               <imagetype name="Listpanelline">
+                   <area>0,63,1115,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+               </textarea>
+               <textarea name="length" from="textarea_list">
+                   <area>900,25,144,35</area>
+                   <align>hcenter,vcenter</align>
+                   <font>Font_List_Active</font>
+                   <value>length</value>
+               </textarea>
+               <textarea name="author" from="textarea_label_list">
+                   <area>50,55,850,30</area>
+                   <cutdown>yes</cutdown>
+                   <value>author</value>
+               </textarea>
+               <textarea name="filesize_str" from="textarea_label_list">
+                   <area>900,61,144,30</area>
+                   <cutdown>yes</cutdown>
+                   <align>allcenter</align>
+                   <value>type</value>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <area>0,0,1115,113</area>
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,1115,113</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <scroll direction="left" />
+               </textarea>
+               <textarea name="length" from="textarea_list">
+                   <area>900,25,144,35</area>
+                   <align>hcenter,vcenter</align>
+               </textarea>
+               <textarea name="author" from="textarea_label_list">
+                   <area>50,55,850,30</area>
+                   <scroll direction="left" />
+                   <font>Font_Label_List_Selected</font>
+               </textarea>
+               <textarea name="filesize_str" from="textarea_label_list">
+                   <area>900,61,144,30</area>
+                   <cutdown>yes</cutdown>
+                   <align>allcenter</align>
+                   <font>Font_Label_List_Selected</font>
+               </textarea>
            </state>
            <state name="inactive" from="active"/>
            <state name="selectedinactive" from="selectedactive"/>
