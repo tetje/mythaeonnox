@@ -2717,10 +2717,6 @@
                         </imagetype>
                     </state>
                </statetype>
-               <imagetype name="WallMovieOverlay">
-                   <area>9,9,213,213</area>
-                   <filename>images/shared/wall_nfoverlay.png</filename>
-               </imagetype>
 	            <statetype name="buttoncheck">
 		             <area>9,9,213,213</area>
 		             <showempty>yes</showempty>
@@ -2731,6 +2727,108 @@
 	                    </imagetype>
 	                </state>
 	            </statetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>9,9,213,213</area>
+                   <filename>images/shared/wall_nfoverlay.png</filename>
+               </imagetype>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>255</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_wall_web">
+       <spacing>0</spacing>
+       <area>0,0,960,480</area>
+       <searchposition>610,340</searchposition>
+       <layout>grid</layout>
+       <scrollstyle>free</scrollstyle>
+       <arrange>fixed</arrange>
+       <align>bottom,hcenter</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <drawfrombottom>yes</drawfrombottom>
+       <buttonarea>0,0,960,480</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,160,160</area>
+               <imagetype name="WallMusicBorder">
+                   <area>0,0,160,160</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_movie_nfborder.png</filename>
+               </imagetype>
+               <imagetype name="buttonimage">
+                   <area>3,3,154,154</area>
+                   <mask>images/shared/wall_music_mask_small.png</mask>
+                   <filename>images/shared/DefaultMovies.png</filename>
+               </imagetype>
+               <statetype name="nodetype">
+                   <state name="subfolder">
+<!--                   
+                       <imagetype name="icon">
+                           <area>3,3,154,154</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+-->
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>3,3,154,154</area>
+                           <alpha>255</alpha>
+                           <mask>images/shared/wall_music_mask_small.png</mask>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>3,3,154,154</area>
+                   <filename>images/shared/wall_nfoverlay.png</filename>
+               </imagetype>
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>255</alpha>
+           </state>
+           <state name="selectedactive">
+               <area>-36,-36,230,230</area>
+               <imagetype name="WallMovieBorder">
+                   <area>0,0,230,230</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_fborder.png</filename>
+               </imagetype>
+               <imagetype name="buttonimage">
+                   <area>9,9,213,213</area>
+                   <mask>images/shared/wall_music_mask.png</mask>
+                   <filename>images/shared/DefaultMovies.png</filename>
+               </imagetype>
+               <statetype name="nodetype">
+                   <state name="subfolder">
+<!--                   
+                       <imagetype name="icon">
+                           <area>3,3,154,154</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+-->
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>9,9,213,213</area>
+                           <alpha>255</alpha>
+                           <mask>images/shared/wall_music_mask.png</mask>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>9,9,213,213</area>
+                   <filename>images/shared/wall_nfoverlay.png</filename>
+               </imagetype>
            </state>
            <state name="selectedinactive" from="selectedactive">
                <alpha>255</alpha>
