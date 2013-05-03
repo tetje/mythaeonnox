@@ -1419,7 +1419,7 @@
             <align>allcenter</align>
             <value>And</value>
         </textarea>
-        -->
+-->
         <textedit name="value2edit" from="value1edit">
             <position>0,325</position>
         </textedit>
@@ -1672,129 +1672,6 @@
 	        </section>
 	     </animation>
 
-<!--
-        <buttonlist name="fieldlist">
-            <area>20,50,420,210</area>
-            <spacing>0</spacing>
-            <layout>vertical</layout>
-            <arrange>stack</arrange>
-            <showarrow>no</showarrow>
-            <buttonarea>0,0,420,150</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,420,46</area>
-
-                    <statetype name="sortstate">
-                        <position>3,7</position>
-                        <state name="ascending">
-                            <imagetype name="statusimage">
-                                <filename>mm_ascending.png</filename>
-                            </imagetype>
-                        </state>
-                        <state name="descending">
-                            <imagetype name="statusimage">
-                                <filename>mm_descending.png</filename>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <textarea name="buttontext">
-                        <area>40,0,360,46</area>
-                        <align>left,vcenter</align>
-                        <font>basesmall</font>
-                    </textarea>
-
-                </state>
-                <state name="selectedactive">
-                    <area>0,0,420,46</area>
-                    <shape name="selectbar">
-                        <area>0,0,420,46</area>
-                        <type>roundbox</type>
-                        <line color="#00FF00" alpha="255" width="1" />
-                        <fill color="#43b038" alpha="128" />
-                        <cornerradius>4</cornerradius>
-                    </shape>
-                    <statetype name="sortstate">
-                        <position>3,7</position>
-                        <state name="ascending">
-                            <imagetype name="statusimage">
-                                <filename>mm_ascending.png</filename>
-                            </imagetype>
-                        </state>
-                        <state name="descending">
-                            <imagetype name="statusimage">
-                                <filename>mm_descending.png</filename>
-                            </imagetype>
-                        </state>
-                    </statetype>
-                    <textarea name="buttontext">
-                        <area>40,0,360,46</area>
-                        <align>left,vcenter</align>
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-                <state name="selectedinactive" from="selectedactive">
-                    <shape name="selectbar">
-                        <area>0,0,420,46</area>
-                        <type>roundbox</type>
-                        <line color="#00FF00" alpha="100" width="1" />
-                        <fill color="#43b038" alpha="50" />
-                        <cornerradius>4</cornerradius>
-                    </shape>
-                    <statetype name="sortstate">
-                        <position>3,7</position>
-                        <state name="ascending">
-                            <imagetype name="statusimage">
-                                <filename>mm_ascending.png</filename>
-                            </imagetype>
-                        </state>
-                        <state name="descending">
-                            <imagetype name="statusimage">
-                                <filename>mm_descending.png</filename>
-                            </imagetype>
-                        </state>
-                    </statetype>
-                    <textarea name="buttontext">
-                        <area>40,0,360,46</area>
-                        <align>left,vcenter</align>
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>360,145</position>
-                <state type="off">
-                    <imagetype name="upon">
-                        <filename>lb-uparrow-reg.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="upoff">
-                        <filename>lb-uparrow-sel.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>390,145</position>
-                <state type="off">
-                    <imagetype name="dnon">
-                        <filename>lb-dnarrow-reg.png</filename>
-                    </imagetype>
-                </state>
-                <state type="full">
-                    <imagetype name="dnoff">
-                        <filename>lb-dnarrow-sel.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
-
-        <buttonlist name="fieldselector" from="basewideselector">
-            <area>30,230,420,44</area>
-        </buttonlist>
-
-
--->
     </window>
 
    <!-- shows some information for the currently selected or playing track -->
