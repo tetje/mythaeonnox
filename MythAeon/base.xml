@@ -2752,14 +2752,14 @@
        <buttonarea>0,0,960,480</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
-               <area>0,0,160,160</area>
+               <area>-2,-2,160,160</area>
                <imagetype name="WallMusicBorder">
-                   <area>0,0,160,160</area>
+                   <area>-2,-2,160,160</area>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/wall_movie_nfborder.png</filename>
                </imagetype>
                <imagetype name="buttonimage">
-                   <area>3,3,154,154</area>
+                   <area>1,1,154,154</area>
                    <mask>images/shared/wall_music_mask_small.png</mask>
                    <filename>images/shared/DefaultMovies.png</filename>
                </imagetype>
@@ -2776,7 +2776,7 @@
                    </state>
                    <state name="upfolder">
                        <imagetype name="icon">
-                           <area>3,3,154,154</area>
+                           <area>1,1,154,154</area>
                            <alpha>255</alpha>
                            <mask>images/shared/wall_music_mask_small.png</mask>
                            <filename>images/shared/DefaultFolderBack.png</filename>
@@ -2785,7 +2785,7 @@
                    </state>
                </statetype>
                <imagetype name="WallMovieOverlay">
-                   <area>3,3,154,154</area>
+                   <area>1,1,154,154</area>
                    <filename>images/shared/wall_nfoverlay.png</filename>
                </imagetype>
            </state>
