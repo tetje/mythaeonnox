@@ -28,6 +28,13 @@
             <position>1240,0</position>
         </group>
 
+        <textarea name="position" from="textarea_info_small">
+            <area>1270,5,120,35</area>
+            <font>Font_Clock</font>
+            <alpha>192</alpha>
+            <align>allcenter</align>
+        </textarea>	  
+
         <group name="multiplextabletmoviegroup">
            <area>113,70,1694,846</area>
 
@@ -58,6 +65,10 @@
 	            <position>52,30</position>
 	        </buttonlist>
 
+	        <textarea name="noimages" from="textarea_plot">
+	            <area>30,70,567,350</area>
+	        </textarea>
+	
 	     </group>   
 
         <group name="multiplextabletmoviewallgroup">
@@ -90,31 +101,108 @@
 
 	     </group>
 
-<!--
-        <textarea name="position" from="basetextarea">
-            <area>530,15,110,40</area>
-            <align>hcenter,vcenter</align>
-            <font>basemedium</font>
-        </textarea>
-
-        <textarea name="noimages" from="basetextarea">
-            <area>15,20,770,560</area>
-            <font>basemedium</font>
-            <align>allcenter</align>
-        </textarea>
--->
     </window>
 
     <window name="filter">
 
-        <textarea name="title" from="basetextarea">
-            <area>20,50,770,30</area>
-            <value>Filter/sort images</value>
-            <align>hcenter,vcenter</align>
-            <font>baselarge</font>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <!-- Filter: labels -->
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
+
+        <group name="filter_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="filter_label" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Directory to filter:</value>
+	        </textarea>
+	
+	        <textarea name="filtertype_label" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Filter on:</value>
+	        </textarea>
+	
+	        <textarea name="numimages_label" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>Number of images:</value>
+	        </textarea>
+	
+	        <textarea name="sort_label" from="textarea_settings_option">
+	            <position>20,336</position>
+	            <value>Sort images by:</value>
+	        </textarea>
+	
+	        <!-- widgets -->
+	        <textedit name="dirfilter_text" from="textedit_settings">
+	            <position>0,120</position>
+	        </textedit>
+	
+	        <buttonlist name="typefilter_select" from="selector_settings">
+	            <position>0,192</position>
+	        </buttonlist>
+	
+	        <textarea name="numimages_text" from="textarea_settings_option">
+	            <position>500,264</position>
+	        </textarea>
+	
+	        <buttonlist name="sort_select" from="selector_settings">
+	            <position>0,336</position>
+	        </buttonlist>
+	
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+
+        </group>
+
+        <group name="filter_menu">
+           <area>30,28,324,952</area>
+
+	        <textarea name="title_menu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Filter and Sort</value>
+	        </textarea>
+	
+	        <button name="check_button" from="button_settings">
+	            <position>0,120</position>
+	            <value>Check Filter</value>
+	        </button>
+	
+	        <button name="done_button" from="button_settings">
+	            <position>0,192</position>
+	            <value>Done</value>
+	        </button>
+	
+	        <button name="save_button" from="button_settings">
+	            <position>0,264</position>
+	            <value>Save as default</value>
+	        </button>
+	
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+
+<!--
         <textarea name="filter_text" from="basetextarea">
             <area>10,107,180,34</area>
             <value>Folder filter :</value>
@@ -131,14 +219,12 @@
             <align>left,top</align>
         </textarea>
 
-        <!-- Sort: labels -->
         <textarea name="sort_text" from="basetextarea">
             <area>10,319,180,34</area>
             <value>Sort by :</value>
             <align>right,top</align>
         </textarea>
 
-        <!-- Widgets -->
         <textedit name="dirfilter_text" from="basetextedit">
             <position>200,100</position>
         </textedit>
@@ -147,24 +233,10 @@
             <position>200,154</position>
         </buttonlist>
 
-        <button name="check_button" from="basebutton">
-            <position>200,200</position>
-            <value>Check Filter</value>
-        </button>
-
         <buttonlist name="sort_select" from="baseselector">
             <position>200,312</position>
         </buttonlist>
 
-        <button name="done_button" from="basebutton">
-            <position>380,505</position>
-            <value>Done</value>
-        </button>
-
-        <button name="save_button" from="basebutton">
-            <position>200,505</position>
-            <value>Save as default</value>
-        </button>
-
+-->
     </window>
 </mythuitheme>
