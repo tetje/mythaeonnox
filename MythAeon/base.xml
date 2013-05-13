@@ -612,6 +612,36 @@
                    <preserveaspect>no</preserveaspect>
                    <reflection shear="0" scale="50" length="33" spacing="0" />
                </imagetype>
+		         <statetype name="playlist">
+		             <state name="yes">
+		                 <alpha>255</alpha>
+			              <imagetype name="iconbgd">
+			                  <area>249,121,53,47</area>
+			                  <alpha>255</alpha>
+			                  <filename>images/shared/musicinfoshadow.png</filename>
+			                  <preserveaspect>no</preserveaspect>
+			              </imagetype>
+							  <shape name="defaulticonborder">
+							      <area>253,124,46,42</area>
+							      <type>roundbox</type>
+							      <cornerradius>2</cornerradius>
+							      <line color="#000000" alpha="255" width="2" />
+							      <fill color="#000000" alpha="255" />
+							  </shape>
+		                 <imagetype name="playlist_icon">
+		                     <area>258,129,36,36</area>
+		                     <preserveaspect>yes</preserveaspect>
+		                     <filename>images/icons/playlist.png</filename>
+		                 </imagetype>
+			              <imagetype name="iconglass">
+			                  <area>253,124,46,42</area>
+			                  <alpha>255</alpha>
+			                  <filename>images/shared/list_musicicon_glass.png</filename>
+			                  <preserveaspect>no</preserveaspect>
+			              </imagetype>
+		             </state>
+		             <state name="no"/>
+		         </statetype>
                <imagetype name="previewglass">
                    <area>8,11,300,168</area>
                    <alpha>255</alpha>
@@ -647,6 +677,36 @@
                    <mask>images/shared/multiplex_tvmask.png</mask>
                    <filename>images/shared/DefaultVideoBigPoster.png</filename>
                </imagetype>
+		         <statetype name="playlist">
+		             <state name="yes">
+		                 <alpha>255</alpha>
+			              <imagetype name="iconbgd">
+			                  <area>316,118,53,47</area>
+			                  <alpha>255</alpha>
+			                  <filename>images/shared/musicinfoshadow.png</filename>
+			                  <preserveaspect>no</preserveaspect>
+			              </imagetype>
+							  <shape name="defaulticonborder">
+							      <area>320,157,46,42</area>
+							      <type>roundbox</type>
+							      <cornerradius>2</cornerradius>
+							      <line color="#000000" alpha="255" width="2" />
+							      <fill color="#000000" alpha="255" />
+							  </shape>
+		                 <imagetype name="playlist_icon">
+		                     <area>325,162,36,36</area>
+		                     <preserveaspect>yes</preserveaspect>
+		                     <filename>images/icons/playlist.png</filename>
+		                 </imagetype>
+			              <imagetype name="iconglass">
+			                  <area>320,157,46,42</area>
+			                  <alpha>255</alpha>
+			                  <filename>images/shared/list_musicicon_glass.png</filename>
+			                  <preserveaspect>no</preserveaspect>
+			              </imagetype>
+		             </state>
+		             <state name="no"/>
+		         </statetype>
                <imagetype name="previewglass">
                    <area>0,0,380,213</area>
                    <alpha>255</alpha>
