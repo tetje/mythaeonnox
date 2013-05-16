@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="news">
+
+        <imagetype name="fanart">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/news/</filename>
+        </imagetype>
+        
+        <imagetype name="listfloorimg" from="fanart">
+            <area>0,473,1920,607</area>
+            <filename>images/shared/list_floor.png</filename>
+        </imagetype>
+        
+        <imagetype name="listfilterimg" from="fanart">
+            <filename>images/shared/list_filter.png</filename>
+        </imagetype>
+        
+        <imagetype name="spotlightimg" from="fanart">
+            <area>0,875,1920,205</area>
+            <filename>images/shared/list_spot.png</filename>
+        </imagetype>
+        
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
+        </group>
+
+        <group name="listpanel">
+           <area>88,110,1139,970</area>
+           
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="88,-1080" end="88,110" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+	        <imagetype name="listpanelbgdblack">
+	            <area>0,0,1139,970</area>
+	            <filename>images/shared/listpanel_black.png</filename>
+               <preserveaspect>no</preserveaspect>
+	        </imagetype>
+
+	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
+	            <filename>images/shared/listpanel_back.png</filename>
+	        </imagetype>
+        
+	        <imagetype name="listpaneldetailbgd">
+	            <area>912,12,148,850</area>
+	            <filename>images/shared/listpanel_detailwide.png</filename>
+	        </imagetype>
+        
+           <buttonlist name="siteslist" from="buttonlist_news_sites">
+               <position>12,50</position>
+           </buttonlist>
+           
+           <buttonlist name="articleslist" from="buttonlist_news_articles">
+               <position>12,50</position>
+           </buttonlist>
+           
+           <textarea name="updated" from="textarea_label_list">
+               <area>62,860,800,30</area>
+           </textarea>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
+        
+        <group name="listinfo">
+           <area>1264,150,545,930</area>
+
+        <animation trigger="AboutToShow">
+            <section duration="1200" centre="middle">
+                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
+            </section>
+        </animation>
+
+        <imagetype name="TVShowsframe">
+            <area>-2,245,548,549</area>
+            <filename>images/shared/list_musicicon_frame.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+     
+        <imagetype name="defaulticon">
+            <area>13,260,518,519</area>
+            <mask>images/shared/list_musicicon_mask.png</mask>
+            <filename>images/shared/DefaultNetwork.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+	
+        <imagetype name="thumbnail" from="defaulticon"/>
+	
+	     <shape name="descriptionbox" depends="description">
+	         <area>13,260,518,519</area>
+	         <type>roundbox</type>
+	         <cornerradius>15</cornerradius>
+	         <fill color="#323232" alpha="210" />
+	     </shape>
+
+        <textarea name="title" from="textarea_settings_button">
+            <area>40,287,475,32</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="horizontal"/>
+        </textarea>
+       
+        <textarea name="description" from="textarea_plot">
+            <area>40,325,475,440</area>
+            <multiline>yes</multiline>
+            <cutdown>yes</cutdown>
+            <template>%DESCRIPTION%</template>
+        </textarea>
+       
+        <textarea name="nosites" from="description">
+        </textarea>
+
+        <textarea name="nodescription" from="description" depends="!description">
+            <value>No description available.</value>
+        </textarea>
+       
+        <imagetype name="TVShowsglass">
+            <area>13,260,518,519</area>
+            <filename>images/shared/list_musicicon_glass.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
+
+<!--
+        <imagetype name="enclosures">
+            <filename>enclosures.png</filename>
+            <position>705,350</position>
+        </imagetype>
+
+        <imagetype name="download">
+            <filename>need-download.png</filename>
+            <position>740,350</position>
+        </imagetype>
+
+        <imagetype name="ispodcast">
+            <filename>podcast.png</filename>
+            <position>740,350</position>
+        </imagetype>
+-->
+    </window>
+
+    <window name="editor">
+
+        <textarea name="title" from="basetextarea">
+            <font>baselarge</font>
+            <area>0,50,800,50</area>
+            <align>center,vcenter</align>
+        </textarea>
+
+        <textarea name="namelabel" from="basetextarea">
+            <area>120,150,100,30</area>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <textedit name="name" from="basetextedit">
+            <position>235,140</position>
+        </textedit>
+
+        <textarea name="urllabel" from="basetextarea">
+            <area>120,250,100,30</area>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <textedit name="url" from="basetextedit">
+            <position>235,240</position>
+        </textedit>
+
+        <textarea name="iconlabel" from="basetextarea">
+            <area>120,350,100,30</area>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <textedit name="icon" from="basetextedit">
+            <position>235,340</position>
+        </textedit>
+
+        <textarea name="podcastlabel" from="basetextarea">
+            <area>120,450,100,30</area>
+            <align>right,vcenter</align>
+        </textarea>
+
+        <checkbox name="podcast_check" from="basecheckbox">
+            <position>235,450</position>
+        </checkbox>
+
+        <button name="cancel" from="basebutton">
+            <position>60,510</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok" from="basebutton">
+            <position>590,510</position>
+            <value>OK</value>
+        </button>
+
+    </window>
+
+    <window name="config">
+
+        <buttonlist name="category" from="basebuttonlist">
+            <area>20,40,300,515</area>
+            <showarrow>yes</showarrow>
+        </buttonlist>
+
+        <buttonlist name="sites" from="basebuttonlist">
+            <area>340,40,440,515</area>
+        </buttonlist>
+
+        <textarea name="context_switch" from="basetextarea">
+            <area>20,550,760,50</area>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <textarea name="help" from="basetextarea">
+            <area>20,500,760,150</area>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <!-- <blackhole name="spinbox_holder">
+            <area>20,170,70,30</area>
+        </blackhole>
+
+        <textarea name="minutes">
+            <area>90,170,100,30</area>
+            <font>active</font>
+            <value>Minutes</value>
+        </textarea> -->
+
+    </window>
+
+</mythuitheme>

@@ -2015,7 +2015,7 @@
        </statetype>
    </buttonlist>
 
-   <buttonlist name="buttonlist_browsewebtree">
+   <buttonlist name="buttonlist_news_sites">
        <area>0,0,1115,800</area>
        <layout>vertical</layout>
        <spacing>0</spacing>
@@ -2032,27 +2032,25 @@
                    <area>0,63,1115,50</area>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
-               <textarea name="buttontext" from="textarea_list">
+               <textarea name="buttontext_lbl" from="textarea_list">
                    <area>50,25,850,35</area>
                    <cutdown>yes</cutdown>
                    <font>Font_List_Active</font>
+                   <value>Site item:</value>
                </textarea>
                <textarea name="length" from="textarea_list">
                    <area>900,25,144,35</area>
                    <align>hcenter,vcenter</align>
                    <font>Font_List_Active</font>
-                   <value>length</value>
                </textarea>
-               <textarea name="author" from="textarea_label_list">
+               <textarea name="buttontext" from="textarea_label_list">
                    <area>50,55,850,30</area>
                    <cutdown>yes</cutdown>
-                   <value>author</value>
                </textarea>
                <textarea name="filesize_str" from="textarea_label_list">
                    <area>900,61,144,30</area>
                    <cutdown>yes</cutdown>
                    <align>allcenter</align>
-                   <value>type</value>
                </textarea>
            </state>
            <state name="selectedactive">
@@ -2061,15 +2059,15 @@
                    <area>0,0,1115,113</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
-               <textarea name="buttontext" from="textarea_list">
+               <textarea name="buttontext_lbl" from="textarea_list">
                    <area>50,25,850,35</area>
-                   <scroll direction="left" />
+                   <value>Site item:</value>
                </textarea>
                <textarea name="length" from="textarea_list">
                    <area>900,25,144,35</area>
                    <align>hcenter,vcenter</align>
                </textarea>
-               <textarea name="author" from="textarea_label_list">
+               <textarea name="buttontext" from="textarea_label_list">
                    <area>50,55,850,30</area>
                    <scroll direction="left" />
                    <font>Font_Label_List_Selected</font>
@@ -2081,8 +2079,31 @@
                    <font>Font_Label_List_Selected</font>
                </textarea>
            </state>
-           <state name="inactive" from="active"/>
-           <state name="selectedinactive" from="selectedactive"/>
+           <state name="inactive" >
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedinactive">
+               <alpha>0</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_news_articles" from="buttonlist_news_sites">
+       <statetype name="buttonitem">
+           <state name="active">
+               <textarea name="buttontext_lbl" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+                   <value>Article:</value>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <textarea name="buttontext_lbl" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <value>Article:</value>
+               </textarea>
+           </state>
        </statetype>
    </buttonlist>
 
