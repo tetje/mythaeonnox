@@ -2095,14 +2095,62 @@
                    <area>50,25,850,35</area>
                    <cutdown>yes</cutdown>
                    <font>Font_List_Active</font>
-                   <value>Article:</value>
+                   <value>Article item:</value>
                </textarea>
+<!--
+		         <imagetype name="download_bgd">
+		             <filename>images/icons/download.png</filename>
+		             <alpha>128</alpha>
+		             <area>918,25,36,36</area>
+		         </imagetype>
+		         <imagetype name="enclosures_bgd" from="download_bgd">
+		             <filename>images/icons/enclosure.png</filename>
+		             <position>954,25</position>
+		         </imagetype>
+		         <imagetype name="ispodcast_bgd" from="download_bgd">
+		             <filename>images/icons/podcast.png</filename>
+		             <position>990,25</position>
+		         </imagetype>
+		         <imagetype name="download" from="download_bgd">
+		             <alpha>255</alpha>
+		         </imagetype>
+		         <imagetype name="enclosures" from="enclosures_bgd">
+		             <alpha>255</alpha>
+		         </imagetype>
+		         <imagetype name="ispodcast" from="ispodcast_bgd">
+		             <alpha>255</alpha>
+		         </imagetype>
+--> 
            </state>
            <state name="selectedactive">
                <textarea name="buttontext_lbl" from="textarea_list">
                    <area>50,25,850,35</area>
-                   <value>Article:</value>
+                   <value>Article item:</value>
                </textarea>
+<!--               
+		         <imagetype name="download_bgd">
+		             <filename>images/icons/download_black.png</filename>
+		             <alpha>128</alpha>
+		             <area>918,25,36,36</area>
+		         </imagetype>
+		         <imagetype name="enclosures_bgd" from="download_bgd">
+		             <filename>images/icons/enclosure_black.png</filename>
+		             <position>954,25</position>
+		         </imagetype>
+		         <imagetype name="ispodcast_bgd" from="download_bgd">
+		             <filename>images/icons/podcast_black.png</filename>
+		             <position>990,25</position>
+		         </imagetype>
+		         <imagetype name="download" from="download_bgd">
+		             <alpha>255</alpha>
+		         </imagetype>
+		         <imagetype name="enclosures" from="enclosures_bgd">
+		             <alpha>255</alpha>
+		         </imagetype>
+		         <imagetype name="ispodcast" from="ispodcast_bgd">
+		             <alpha>255</alpha>
+		         </imagetype>
+-->		         
            </state>
        </statetype>
    </buttonlist>

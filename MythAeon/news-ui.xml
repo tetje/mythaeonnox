@@ -76,60 +76,88 @@
         <group name="listinfo">
            <area>1264,150,545,930</area>
 
-        <animation trigger="AboutToShow">
-            <section duration="1200" centre="middle">
-                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
-            </section>
-        </animation>
-
-        <imagetype name="TVShowsframe">
-            <area>-2,245,548,549</area>
-            <filename>images/shared/list_musicicon_frame.png</filename>
-            <preserveaspect>no</preserveaspect>
-        </imagetype>
-     
-        <imagetype name="defaulticon">
-            <area>13,260,518,519</area>
-            <mask>images/shared/list_musicicon_mask.png</mask>
-            <filename>images/shared/DefaultNetwork.png</filename>
-            <preserveaspect>no</preserveaspect>
-        </imagetype>
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
 	
-        <imagetype name="thumbnail" from="defaulticon"/>
+	        <imagetype name="TVShowsframe">
+	            <area>-2,245,548,549</area>
+	            <filename>images/shared/list_musicicon_frame.png</filename>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	     
+	        <imagetype name="defaulticon">
+	            <area>13,260,518,519</area>
+	            <mask>images/shared/list_musicicon_mask.png</mask>
+	            <filename>images/shared/DefaultNetwork.png</filename>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+		
+	        <imagetype name="thumbnail" from="defaulticon"/>
+		
+		     <shape name="descriptionbox" depends="description">
+		         <area>13,260,518,519</area>
+		         <type>roundbox</type>
+		         <cornerradius>15</cornerradius>
+		         <fill color="#323232" alpha="210" />
+		     </shape>
 	
-	     <shape name="descriptionbox" depends="description">
-	         <area>13,260,518,519</area>
-	         <type>roundbox</type>
-	         <cornerradius>15</cornerradius>
-	         <fill color="#323232" alpha="210" />
-	     </shape>
+	        <textarea name="title" from="textarea_settings_button">
+	            <area>40,287,475,32</area>
+	            <multiline>no</multiline>
+	            <cutdown>no</cutdown>
+	            <scroll direction="horizontal"/>
+	        </textarea>
+	       
+	        <textarea name="description" from="textarea_plot">
+	            <area>40,325,475,440</area>
+	            <multiline>yes</multiline>
+	            <cutdown>yes</cutdown>
+	            <template>%DESCRIPTION%</template>
+	        </textarea>
+	       
+	        <textarea name="nosites" from="description">
+	        </textarea>
+	
+	        <textarea name="nodescription" from="description" depends="!description">
+	            <value>No description available.</value>
+	        </textarea>
+	       
+	        <imagetype name="TVShowsglass">
+	            <area>13,260,518,519</area>
+	            <filename>images/shared/list_musicicon_glass.png</filename>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	        
+           <imagetype name="download_bgd">
+	             <filename>images/icons/download_black.png</filename>
+	             <alpha>92</alpha>
+	             <area>176,810,40,40</area>
+	         </imagetype>
+	         
+	         <imagetype name="enclosures_bgd" from="download_bgd">
+	             <filename>images/icons/enclosure_black.png</filename>
+	             <position>246,810</position>
+	         </imagetype>
+	         
+	         <imagetype name="ispodcast_bgd" from="download_bgd">
+	             <filename>images/icons/podcast_black.png</filename>
+	             <position>316,810</position>
+	         </imagetype>
+	         
+	         <imagetype name="download" from="download_bgd">
+	             <alpha>255</alpha>
+	         </imagetype>
+	         
+	         <imagetype name="enclosures" from="enclosures_bgd">
+	             <alpha>255</alpha>
+	         </imagetype>
 
-        <textarea name="title" from="textarea_settings_button">
-            <area>40,287,475,32</area>
-            <multiline>no</multiline>
-            <cutdown>no</cutdown>
-            <scroll direction="horizontal"/>
-        </textarea>
-       
-        <textarea name="description" from="textarea_plot">
-            <area>40,325,475,440</area>
-            <multiline>yes</multiline>
-            <cutdown>yes</cutdown>
-            <template>%DESCRIPTION%</template>
-        </textarea>
-       
-        <textarea name="nosites" from="description">
-        </textarea>
-
-        <textarea name="nodescription" from="description" depends="!description">
-            <value>No description available.</value>
-        </textarea>
-       
-        <imagetype name="TVShowsglass">
-            <area>13,260,518,519</area>
-            <filename>images/shared/list_musicicon_glass.png</filename>
-            <preserveaspect>no</preserveaspect>
-        </imagetype>
+	         <imagetype name="ispodcast" from="ispodcast_bgd">
+	             <alpha>255</alpha>
+	         </imagetype>
 
 <!-- Fix me: This does not work when a movie has played and one returns to the main screen
 
@@ -140,91 +168,188 @@
 	        </animation>       
 -->
         </group>
-
-<!--
-        <imagetype name="enclosures">
-            <filename>enclosures.png</filename>
-            <position>705,350</position>
-        </imagetype>
-
-        <imagetype name="download">
-            <filename>need-download.png</filename>
-            <position>740,350</position>
-        </imagetype>
-
-        <imagetype name="ispodcast">
-            <filename>podcast.png</filename>
-            <position>740,350</position>
-        </imagetype>
--->
+        
     </window>
 
     <window name="editor">
 
-        <textarea name="title" from="basetextarea">
-            <font>baselarge</font>
-            <area>0,50,800,50</area>
-            <align>center,vcenter</align>
-        </textarea>
+         <area>-1,-1,1850,1010</area>
 
-        <textarea name="namelabel" from="basetextarea">
-            <area>120,150,100,30</area>
-            <align>right,vcenter</align>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textedit name="name" from="basetextedit">
-            <position>235,140</position>
-        </textedit>
+        <group name="editor_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="namelabel" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>RSS feed name:</value>
+	        </textarea>
+	
+	        <textarea name="urllabel" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>RSS URL:</value>
+	        </textarea>
+	
+	        <textarea name="iconlabel" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>RSS Icon:</value>
+	        </textarea>
+	
+	        <textarea name="podcastlabel" from="textarea_settings_option">
+	            <position>20,336</position>
+	            <value>RSS feed is podcast:</value>
+	        </textarea>
+		        
+	        <!-- widgets -->
+	        <textedit name="name" from="textedit_settings">
+	            <position>0,120</position>
+	        </textedit>
+	
+	        <textedit name="url" from="textedit_settings">
+	            <position>0,192</position>
+	        </textedit>
+	
+	        <textedit name="icon"  from="textedit_settings">
+	            <position>0,264</position>
+	        </textedit>
+	
+	        <checkbox name="podcast_check" from="checkbox_settings">
+	            <position>0,336</position>
+	        </checkbox>
+	
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-        <textarea name="urllabel" from="basetextarea">
-            <area>120,250,100,30</area>
-            <align>right,vcenter</align>
-        </textarea>
+        </group>
 
-        <textedit name="url" from="basetextedit">
-            <position>235,240</position>
-        </textedit>
+        <group name="editor_menu">
+           <area>30,28,324,952</area>
 
-        <textarea name="iconlabel" from="basetextarea">
-            <area>120,350,100,30</area>
-            <align>right,vcenter</align>
-        </textarea>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>RSS Editor</value>
+	        </textarea>
+	
+	        <button name="ok" from="button_settings">
+	            <position>0,120</position>
+	            <value>Save</value>
+	        </button>
+	
+	        <button name="cancel" from="button_settings">
+	            <position>0,192</position>
+	            <value>Cancel</value>
+	        </button>
+	
+        </group>
 
-        <textedit name="icon" from="basetextedit">
-            <position>235,340</position>
-        </textedit>
-
-        <textarea name="podcastlabel" from="basetextarea">
-            <area>120,450,100,30</area>
-            <align>right,vcenter</align>
-        </textarea>
-
-        <checkbox name="podcast_check" from="basecheckbox">
-            <position>235,450</position>
-        </checkbox>
-
-        <button name="cancel" from="basebutton">
-            <position>60,510</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="ok" from="basebutton">
-            <position>590,510</position>
-            <value>OK</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
     <window name="config">
 
-        <buttonlist name="category" from="basebuttonlist">
-            <area>20,40,300,515</area>
-            <showarrow>yes</showarrow>
-        </buttonlist>
+        <area>-1,-1,1850,1010</area>
 
-        <buttonlist name="sites" from="basebuttonlist">
-            <area>340,40,440,515</area>
-        </buttonlist>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+	        <area>0,0,1850,1010</area>
+        </group>
+	        	        
+        <group name="config_panel">
+           <area>414,28,1400,952</area>
+
+	        <textarea name="siteslbl" from="textarea_settings_title">
+	            <area>20,50,1315,50</area>
+	            <align>left,vcenter</align>
+	            <scroll direction="horizontal" />
+	            <value>Choose sites you want to receive news from</value>
+	        </textarea>
+	        	
+	        <!-- Labels -->
+<!--	        
+	        <textarea name="titlelabel" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Title (Optional):</value>
+	        </textarea>
+-->
+	
+	        <!-- widgets -->
+	        <buttonlist name="sites" from="buttonlist_settings_details">
+			     <area>-33,120,1400,576</area>
+			     <buttonarea>0,0,1400,576</buttonarea>
+	        </buttonlist>
+
+	        <textarea name="help" from="textarea_settings_button">
+	            <area>20,770,1375,32</area>
+	        </textarea>
+
+           <imagetype name="backgroundgridline10">
+               <area>-20,760,1380,50</area>
+               <preserveaspect>no</preserveaspect>
+               <filename>images/shared/settings_radiobuttonoff.png</filename>
+           </imagetype>
+
+	        <textarea name="context_switch" from="textarea_plot">
+	            <area>20,820,1315,116</area>
+	            <case>normal</case>
+	            <align>top,justify</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+        	
+        </group>
+        
+        <group name="config_menu">
+           <area>29,28,324,952</area>
+
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>News catagories</value>
+	        </textarea>
+	
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+               <alpha>0</alpha>	            
+	        </textarea>
+	
+	        <buttonlist name="category" from="buttonlist_settings_menu">
+			       <area>0,120,324,720</area>
+			       <buttonarea>0,0,324,720</buttonarea>
+	        </buttonlist>
+	
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+<!--
 
         <textarea name="context_switch" from="basetextarea">
             <area>20,550,760,50</area>
@@ -236,7 +361,7 @@
             <multiline>yes</multiline>
         </textarea>
 
-        <!-- <blackhole name="spinbox_holder">
+        <blackhole name="spinbox_holder">
             <area>20,170,70,30</area>
         </blackhole>
 
@@ -244,7 +369,8 @@
             <area>90,170,100,30</area>
             <font>active</font>
             <value>Minutes</value>
-        </textarea> -->
+        </textarea> 
+-->
 
     </window>
 
