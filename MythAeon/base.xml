@@ -234,6 +234,35 @@
         <color>#FF0000</color>
     </fontdef>
 
+    <!-- Fonts for Weather updates -->
+    <fontdef name="Font_Weather_Title" face="Aeon Title">
+        <pixelsize>30</pixelsize>
+        <color>#FFFFFF</color>
+        <weight>bold</weight>
+        <stretch>condensed</stretch>
+    </fontdef>
+
+    <fontdef name="Font_Weather_Label" face="Aeon Title">
+        <pixelsize>28</pixelsize>
+        <color>#FFFFFF</color>
+        <weight>normal</weight>
+        <stretch>condensed</stretch>
+    </fontdef>
+
+    <fontdef name="Font_Weather_Info" face="Aeon Title">
+        <pixelsize>28</pixelsize>
+        <color>#FFFFFF</color>
+        <weight>bold</weight>
+        <stretch>condensed</stretch>
+    </fontdef>
+
+    <fontdef name="Font_Weather_Temp" face="Aeon Title">
+        <pixelsize>40</pixelsize>
+        <color>#FFFFFF</color>
+        <weight>bold</weight>
+        <stretch>normal</stretch>
+    </fontdef>
+
    <!-- Base MythAeon clock definition -->
    <group name="defaultclockup">
       <imagetype name="ClockBgd">
@@ -500,6 +529,42 @@
        <cutdown>no</cutdown>
        <case>upper</case>
        <align>allcenter</align>
+   </textarea>
+   
+   <textarea name="textarea_weathertitle">
+       <area>0,0,278,32</area>
+       <font>Font_Weather_Title</font>
+       <multiline>no</multiline>
+       <cutdown>no</cutdown>
+       <case>upper</case>
+       <align>allcenter</align>
+   </textarea>
+   
+   <textarea name="textarea_weatherlabel">
+       <area>0,0,208,30</area>
+       <font>Font_Weather_Label</font>
+       <multiline>no</multiline>
+       <cutdown>no</cutdown>
+       <case>normal</case>
+       <align>left,vcenter</align>
+   </textarea>
+   
+   <textarea name="textarea_weatherinfo">
+       <area>0,0,208,30</area>
+       <font>Font_Weather_Info</font>
+       <multiline>no</multiline>
+       <cutdown>no</cutdown>
+       <case>upper</case>
+       <align>right,vcenter</align>
+   </textarea>
+   
+   <textarea name="textarea_weathertemp">
+       <area>0,0,208,42</area>
+       <font>Font_Weather_Temp</font>
+       <multiline>no</multiline>
+       <cutdown>no</cutdown>
+       <case>upper</case>
+       <align>right,vcenter</align>
    </textarea>
    
    <textarea name="textarea_mini_player" from="textarea_info"> 
@@ -6758,7 +6823,39 @@
 
      </group>
 
-    <window name="MythPopupBox">
+	  <group name="weatherdefaultbgd">
+	    <position>0,0</position>
+	    <imagetype name="weather_bgd_1">
+	        <area>0,0,300,430</area>
+	        <filename>images/shared/nowplaying_back.png</filename>
+	    </imagetype>
+	  </group>
+
+	  <group name="weatherdefaultoverlay">
+	    <position>0,0</position>
+	    <imagetype name="weather_bgd_2">
+	        <area>12,16,278,398</area>
+	        <filename>images/shared/nowplaying_overlay.png</filename>
+	    </imagetype>
+	  </group>
+
+	  <group name="weathercurrentconditionsbgd">
+	    <position>0,0</position>
+	    <imagetype name="weather_bgd_1">
+	        <area>0,0,430,430</area>
+	        <filename>images/shared/nowplaying_back.png</filename>
+	    </imagetype>
+	  </group>
+
+	  <group name="weathercurrentconditionsoverlay">
+	    <position>0,0</position>
+	    <imagetype name="weather_bgd_2">
+	        <area>16,16,398,398</area>
+	        <filename>images/shared/nowplaying_overlay.png</filename>
+	    </imagetype>
+	  </group>
+
+   <window name="MythPopupBox">
         <area>0,0,1076,60</area>
 
         <animation trigger="AboutToShow">

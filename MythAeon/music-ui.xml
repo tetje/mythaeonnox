@@ -461,7 +461,7 @@
         </animation>
 
        <imagetype name="mm_blackhole_border">
-            <area>0,0,391,391</area>
+            <area>0,0,300,391</area>
             <filename>images/shared/nowplaying_back.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
@@ -480,7 +480,7 @@
         </imagetype>
 
         <imagetype name="coverartoverlay">
-            <area>15,15,362,362</area>
+            <area>15,15,260,362</area>
             <filename>images/shared/nowplaying_overlay.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
