@@ -164,7 +164,7 @@
 		
 		        <textarea name="dirlbl" from="humiditylbl">
 		            <position>0,120</position>
-		            <value>Wind Direction</value>
+		            <value>Wind(Dir)</value>
 		        </textarea>
 		
 		        <textarea name="visilbl" from="humiditylbl">
@@ -212,7 +212,8 @@
 		            <position>0,238</position>
 		        </textarea>
 		
-           </group>		
+           </group>	
+           	
 	        <group name="currentconditionsbgd" from="weathercurrentconditionsoverlay">
 	           <position>0,0</position>
 		     </group>
@@ -695,217 +696,371 @@
 
     <window name="Animated Map">
 
-        <textarea name="amdesc" from="basetextarea">
-            <area>30,80,740,33</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-        </textarea>
+	     <textarea name="amdesc" >
+	         <area>680,502,560,36</area>
+	         <font>Font_Clock</font>
+	         <multiline>no</multiline>
+	         <align>hcenter,vcenter</align>
+	         <cutdown>no</cutdown>
+	         <scroll direction="horizontal"/>
+	         <alpha>192</alpha>
+	     </textarea>
 
-        <imagetype name="animatedimage">
-            <area>40,140,720,360</area>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
+        <group name="animatedmap">
+           <position>10,50</position>
 
-        <textarea name="copyright" from="basetextarea">
-            <area>30,558,520,33</area>
+	        <group name="currentconditionsbgd" from="weathercurrentconditionsbgd">
+	           <position>0,0</position>
+		     </group>
+	        
+	        <imagetype name="animatedimage">
+	            <area>10,40,398,299</area>
+	            <preserveaspect>true</preserveaspect>
+	        </imagetype>
+
+	        <group name="currentconditionsbgd" from="weathercurrentconditionsoverlay">
+	           <position>0,0</position>
+		     </group>
+
+        </group>
+
+        <textarea name="copyright" from="textarea_info">
+            <area>10,590,500,40</area>
             <align>left,vcenter</align>
-            <font>basesmaller</font>
+            <multiline>yes</multiline>
+            <align>bottom,left</align>
+            <font>Font_Info_Small_White</font>
         </textarea>
-
+       
         <imagetype name="copyrightlogo">
-            <area>530,531,240,60</area>
-            <preserveaspect>true</preserveaspect>
+            <area>0,0,1,1</area>
+            <alpha>0</alpha>
         </imagetype>
 
     </window>
 
     <window name="Severe Weather Alerts">
 
-        <textarea name="swlocation" from="basetextarea">
-            <area>30,80,740,33</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-        </textarea>
+	     <textarea name="swlocation" >
+	         <area>680,502,560,36</area>
+	         <font>Font_Clock</font>
+	         <multiline>no</multiline>
+	         <align>hcenter,vcenter</align>
+	         <cutdown>no</cutdown>
+	         <scroll direction="horizontal"/>
+	         <alpha>192</alpha>
+	     </textarea>
 
-        <textarea name="alerts" from="basetextarea">
-            <area>40,140,720,360</area>
-            <multiline>yes</multiline>
-            <value>Weather Alerts</value>
-        </textarea>
+        <group name="severeweatheralerts">
+           <position>10,50</position>
 
-        <textarea name="copyright" from="basetextarea">
-            <area>30,558,520,33</area>
+	        <group name="currentconditionsbgd" from="weathercurrentconditionsbgd">
+	           <position>0,0</position>
+		     </group>
+	        
+	        <group name="severeweatheralerts_info">
+	           <area>32,66,358,398</area>
+
+		        <!-- widgets -->
+		        <textarea name="alerts" from="textarea_weatherinfo">
+		            <area>0,-2,368,300</area>
+		            <multiline>yes</multiline>
+		            <scroll direction="vertical"/>
+		            <align>left,top</align>
+		        </textarea>
+		
+           </group>	
+           	
+	        <group name="currentconditionsbgd" from="weathercurrentconditionsoverlay">
+	           <position>0,0</position>
+		     </group>
+
+        </group>
+
+        <textarea name="copyright" from="textarea_info">
+            <area>10,590,500,40</area>
             <align>left,vcenter</align>
-            <font>basesmaller</font>
+            <multiline>yes</multiline>
+            <align>bottom,left</align>
+            <font>Font_Info_Small_White</font>
         </textarea>
-
+       
         <imagetype name="copyrightlogo">
-            <area>530,531,240,60</area>
-            <preserveaspect>true</preserveaspect>
+            <area>0,0,1,1</area>
+            <alpha>0</alpha>
         </imagetype>
 
     </window>
 
     <window name="18 Hour Forecast">
-        <textarea name="18hrlocation" from="basetextarea">
-            <area>30,80,740,33</area>
-            <multiline>yes</multiline>
-            <align>allcenter</align>
-        </textarea>
 
-        <shape name="background-0">
-            <area>40,125,233,190</area>
-            <type>box</type>
-            <fill color="#000000" alpha="30" />
-        </shape>
-        <shape name="background-1" from="background-0">
-            <position>283,125</position>
-        </shape>
-        <shape name="background-2" from="background-0">
-            <position>526,125</position>
-        </shape>
-        <shape name="background-3" from="background-0">
-            <position>40,325</position>
-        </shape>
-        <shape name="background-4" from="background-0">
-            <position>283,325</position>
-        </shape>
-        <shape name="background-5" from="background-0">
-            <position>526,325</position>
-        </shape>
+ 	     <textarea name="18hrlocation" >
+	         <area>680,502,560,36</area>
+	         <font>Font_Clock</font>
+	         <multiline>no</multiline>
+	         <align>hcenter,vcenter</align>
+	         <cutdown>no</cutdown>
+	         <scroll direction="horizontal"/>
+	         <alpha>192</alpha>
+	     </textarea>
 
-        <textarea name="time-0" from="basetextarea">
-            <area>40,130,233,25</area>
-            <align>allcenter</align>
-        </textarea>
-        <textarea name="time-1" from="time-0">
-            <position>283,130</position>
-        </textarea>
-        <textarea name="time-2" from="time-0">
-            <position>526,130</position>
-        </textarea>
-        <textarea name="time-3" from="time-0">
-            <position>40,330</position>
-        </textarea>
-        <textarea name="time-4" from="time-0">
-            <position>283,330</position>
-        </textarea>
-        <textarea name="time-5" from="time-0">
-            <position>526,330</position>
-        </textarea>
+        <group name="time0">
+           <position>10,50</position>
+           
+	        <group name="time-0_bgd" from="weatherdefaultbgd">
+	           <position>0,0</position>
+		     </group>
+	
+	        <group name="time-0_info">
+	           <area>12,16,278,398</area>
+		        <textarea name="date-0" from="textarea_weathertitle">
+		            <position>0,358</position>
+		        </textarea>
+		
+		        <imagetype name="18icon-0">
+		            <area>10,10,258,194</area>
+		        </imagetype>
+		
+		        <textarea name="tempbl0" from="textarea_weatherlabel">
+		            <position>40,250</position>
+		            <value>Temp</value>
+		        </textarea>
+		
+		        <textarea name="poplbl0" from="tempbl0">
+		            <position>40,300</position>
+		            <value>Precip</value>
+		        </textarea>
+		
+		        <textarea name="temp-0" from="textarea_weathertemp">
+		            <position>40,244</position>
+		        </textarea>
+		
+		        <textarea name="pop-0" from="temp-0">
+		            <position>40,294</position>
+		        </textarea>
+	        </group>
+	
+	        <group name="time-0_overlay" from="weatherdefaultoverlay">
+	           <position>0,0</position>
+		     </group>
+	     </group>
 
-        <imagetype name="18icon-0">
-            <area>73,155,167,125</area>
-        </imagetype>
-        <imagetype name="18icon-1" from="18icon-0">
-            <position>316,155</position>
-        </imagetype>
-        <imagetype name="18icon-2" from="18icon-0">
-            <position>559,155</position>
-        </imagetype>
-        <imagetype name="18icon-3" from="18icon-0">
-            <position>73,355</position>
-        </imagetype>
-        <imagetype name="18icon-4" from="18icon-0">
-            <position>316,355</position>
-        </imagetype>
-        <imagetype name="18icon-5" from="18icon-0">
-            <position>559,355</position>
-        </imagetype>
+        <group name="time1">
+           <position>330,50</position>
+           
+	        <group name="time-1_bgd" from="weatherdefaultbgd">
+	           <position>0,0</position>
+		     </group>
+	
+	        <group name="time-1_info">
+	           <area>12,16,278,398</area>
+		        <textarea name="date-1" from="textarea_weathertitle">
+		            <position>0,358</position>
+		        </textarea>
+		
+		        <imagetype name="18icon-1">
+		            <area>10,10,258,194</area>
+		        </imagetype>
+		
+		        <textarea name="tempbl1" from="textarea_weatherlabel">
+		            <position>40,250</position>
+		            <value>Temp</value>
+		        </textarea>
+		
+		        <textarea name="poplbl1" from="tempbl1">
+		            <position>40,300</position>
+		            <value>Precip</value>
+		        </textarea>
+		
+		        <textarea name="temp-1" from="textarea_weathertemp">
+		            <position>40,244</position>
+		        </textarea>
+		
+		        <textarea name="pop-1" from="temp-1">
+		            <position>40,294</position>
+		        </textarea>
+	        </group>
+	
+	        <group name="time-1_overlay" from="weatherdefaultoverlay">
+	           <position>0,0</position>
+		     </group>
+	     </group>
 
-        <textarea name="tmplbl0" from="basetextarea">
-            <area>45,257,223,30</area>
-            <align>left</align>
-            <value>Temp</value>
-        </textarea>
-        <textarea name="tmplbl1" from="tmplbl0">
-            <position>288,257</position>
-        </textarea>
-        <textarea name="tmplbl2" from="tmplbl0">
-            <position>531,257</position>
-        </textarea>
-        <textarea name="tmplbl3" from="tmplbl0">
-            <position>45,457</position>
-        </textarea>
-        <textarea name="tmplbl4" from="tmplbl0">
-            <position>288,457</position>
-        </textarea>
-        <textarea name="tmplbl5" from="tmplbl0">
-            <position>531,457</position>
-        </textarea>
+        <group name="time2">
+           <position>650,50</position>
+           
+	        <group name="time-2_bgd" from="weatherdefaultbgd">
+	           <position>0,0</position>
+		     </group>
+	
+	        <group name="time-2_info">
+	           <area>12,16,278,398</area>
+		        <textarea name="date-2" from="textarea_weathertitle">
+		            <position>0,358</position>
+		        </textarea>
+		
+		        <imagetype name="18icon-2">
+		            <area>10,10,258,194</area>
+		        </imagetype>
+		
+		        <textarea name="tempbl2" from="textarea_weatherlabel">
+		            <position>40,250</position>
+		            <value>Temp</value>
+		        </textarea>
+		
+		        <textarea name="poplbl2" from="tempbl2">
+		            <position>40,300</position>
+		            <value>Precip</value>
+		        </textarea>
+		
+		        <textarea name="temp-2" from="textarea_weathertemp">
+		            <position>40,244</position>
+		        </textarea>
+		
+		        <textarea name="pop-2" from="temp-2">
+		            <position>40,294</position>
+		        </textarea>
+	        </group>
+	
+	        <group name="time-2_overlay" from="weatherdefaultoverlay">
+	           <position>0,0</position>
+		     </group>
+	     </group>
 
-        <textarea name="poplbl0" from="basetextarea">
-            <area>45,257,223,30</area>
-            <align>right</align>
-            <value>Precip</value>
-        </textarea>
-        <textarea name="poplbl1" from="poplbl0">
-            <position>288,257</position>
-        </textarea>
-        <textarea name="poplbl2" from="poplbl0">
-            <position>531,257</position>
-        </textarea>
-        <textarea name="poplbl3" from="poplbl0">
-            <position>45,457</position>
-        </textarea>
-        <textarea name="poplbl4" from="poplbl0">
-            <position>288,457</position>
-        </textarea>
-        <textarea name="poplbl5" from="poplbl0">
-            <position>531,457</position>
-        </textarea>
+        <group name="time3">
+           <position>970,50</position>
+           
+	        <group name="time-3_bgd" from="weatherdefaultbgd">
+	           <position>0,0</position>
+		     </group>
+	
+	        <group name="time-3_info">
+	           <area>12,16,278,398</area>
+		        <textarea name="date-3" from="textarea_weathertitle">
+		            <position>0,358</position>
+		        </textarea>
+		
+		        <imagetype name="18icon-3">
+		            <area>10,10,258,194</area>
+		        </imagetype>
+		
+		        <textarea name="tempbl3" from="textarea_weatherlabel">
+		            <position>40,250</position>
+		            <value>Temp</value>
+		        </textarea>
+		
+		        <textarea name="poplbl3" from="tempbl3">
+		            <position>40,300</position>
+		            <value>Precip</value>
+		        </textarea>
+		
+		        <textarea name="temp-3" from="textarea_weathertemp">
+		            <position>40,244</position>
+		        </textarea>
+		
+		        <textarea name="pop-3" from="temp-3">
+		            <position>40,294</position>
+		        </textarea>
+	        </group>
+	
+	        <group name="time-3_overlay" from="weatherdefaultoverlay">
+	           <position>0,0</position>
+		     </group>
+	     </group>
 
-        <textarea name="temp-0" from="basetextarea">
-            <area>45,282,223,30</area>
-            <font>baselarge</font>
-            <align>left,top</align>
-        </textarea>
-        <textarea name="temp-1" from="temp-0">
-            <position>288,282</position>
-        </textarea>
-        <textarea name="temp-2" from="temp-0">
-            <position>531,282</position>
-        </textarea>
-        <textarea name="temp-3" from="temp-0">
-            <position>45,482</position>
-        </textarea>
-        <textarea name="temp-4" from="temp-0">
-            <position>288,482</position>
-        </textarea>
-        <textarea name="temp-5" from="temp-0">
-            <position>531,482</position>
-        </textarea>
+        <group name="time4">
+           <position>1290,50</position>
+           
+	        <group name="time-4_bgd" from="weatherdefaultbgd">
+	           <position>0,0</position>
+		     </group>
+	
+	        <group name="time-4_info">
+	           <area>12,16,278,398</area>
+		        <textarea name="date-4" from="textarea_weathertitle">
+		            <position>0,358</position>
+		        </textarea>
+		
+		        <imagetype name="18icon-4">
+		            <area>10,10,258,194</area>
+		        </imagetype>
+		
+		        <textarea name="tempbl4" from="textarea_weatherlabel">
+		            <position>40,250</position>
+		            <value>Temp</value>
+		        </textarea>
+		
+		        <textarea name="poplbl4" from="tempbl4">
+		            <position>40,300</position>
+		            <value>Precip</value>
+		        </textarea>
+		
+		        <textarea name="temp-4" from="textarea_weathertemp">
+		            <position>40,244</position>
+		        </textarea>
+		
+		        <textarea name="pop-4" from="temp-4">
+		            <position>40,294</position>
+		        </textarea>
+	        </group>
+	
+	        <group name="time-4_overlay" from="weatherdefaultoverlay">
+	           <position>0,0</position>
+		     </group>
+	     </group>
 
-        <textarea name="pop-0" from="basetextarea">
-            <area>45,282,223,30</area>
-            <font>baselarge</font>
-            <align>right,top</align>
-        </textarea>
-        <textarea name="pop-1" from="pop-0">
-            <position>288,282</position>
-        </textarea>
-        <textarea name="pop-2" from="pop-0">
-            <position>531,282</position>
-        </textarea>
-        <textarea name="pop-3" from="pop-0">
-            <position>45,482</position>
-        </textarea>
-        <textarea name="pop-4" from="pop-0">
-            <position>288,482</position>
-        </textarea>
-        <textarea name="pop-5" from="pop-0">
-            <position>531,482</position>
-        </textarea>
+        <group name="time5">
+           <position>1610,50</position>
+           
+	        <group name="time-5_bgd" from="weatherdefaultbgd">
+	           <position>0,0</position>
+		     </group>
+	
+	        <group name="time-5_info">
+	           <area>12,16,278,398</area>
+		        <textarea name="date-5" from="textarea_weathertitle">
+		            <position>0,358</position>
+		        </textarea>
+		
+		        <imagetype name="18icon-5">
+		            <area>10,10,258,194</area>
+		        </imagetype>
+		
+		        <textarea name="tempbl5" from="textarea_weatherlabel">
+		            <position>40,250</position>
+		            <value>Temp</value>
+		        </textarea>
+		
+		        <textarea name="poplbl5" from="tempbl5">
+		            <position>40,300</position>
+		            <value>Precip</value>
+		        </textarea>
+		
+		        <textarea name="temp-5" from="textarea_weathertemp">
+		            <position>40,244</position>
+		        </textarea>
+		
+		        <textarea name="pop-5" from="temp-5">
+		            <position>40,294</position>
+		        </textarea>
+	        </group>
+	
+	        <group name="time-5_overlay" from="weatherdefaultoverlay">
+	           <position>0,0</position>
+		     </group>
+	     </group>
 
-        <textarea name="copyright" from="basetextarea">
-            <area>30,558,520,33</area>
+        <textarea name="copyright" from="textarea_info">
+            <area>10,590,500,40</area>
             <align>left,vcenter</align>
-            <font>basesmaller</font>
+            <multiline>yes</multiline>
+            <align>bottom,left</align>
+            <font>Font_Info_Small_White</font>
         </textarea>
-
+              
         <imagetype name="copyrightlogo">
-            <area>530,531,240,60</area>
-            <preserveaspect>true</preserveaspect>
+            <area>0,0,1,1</area>
+            <alpha>0</alpha>
         </imagetype>
 
     </window>
