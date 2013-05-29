@@ -132,7 +132,7 @@
 		     </group>
 	        
 	        <imagetype name="weather_icon">
-	            <area>10,40,398,299</area>
+	            <area>20,40,398,299</area>
 	            <filename>unknown.png</filename>
 	            <preserveaspect>no</preserveaspect>
 	            <alpha>128</alpha>
@@ -143,6 +143,7 @@
 
 		        <textarea name="weather" from="textarea_weathertitle">
 		            <area>0,308,358,30</area>
+		            <scroll direction="horizontal"/>
 		        </textarea>
 		        
 		        <!-- Labels -->
@@ -214,7 +215,7 @@
 		
            </group>	
            	
-	        <group name="currentconditionsbgd" from="weathercurrentconditionsoverlay">
+	        <group name="currentconditionsoverlay" from="weathercurrentconditionsoverlay">
 	           <position>0,0</position>
 		     </group>
 
@@ -270,6 +271,7 @@
 	           <area>12,16,278,398</area>
 		        <textarea name="date-0" from="textarea_weathertitle">
 		            <position>0,358</position>
+		            <scroll direction="horizontal"/>
 		        </textarea>
 		
 		        <imagetype name="icon-0">
@@ -311,6 +313,7 @@
 	           <area>12,16,278,398</area>
 		        <textarea name="date-1" from="textarea_weathertitle">
 		            <position>0,358</position>
+		            <scroll direction="horizontal"/>
 		        </textarea>
 		
 		        <imagetype name="icon-1">
@@ -352,6 +355,7 @@
 	           <area>12,16,278,398</area>
 		        <textarea name="date-2" from="textarea_weathertitle">
 		            <position>0,358</position>
+		            <scroll direction="horizontal"/>
 		        </textarea>
 		
 		        <imagetype name="icon-2">
@@ -419,6 +423,7 @@
 	           <area>12,16,278,398</area>
 		        <textarea name="date-0" from="textarea_weathertitle">
 		            <position>0,358</position>
+		            <scroll direction="horizontal"/>
 		        </textarea>
 		
 		        <imagetype name="icon-0">
@@ -460,6 +465,7 @@
 	           <area>12,16,278,398</area>
 		        <textarea name="date-1" from="textarea_weathertitle">
 		            <position>0,358</position>
+		            <scroll direction="horizontal"/>
 		        </textarea>
 		
 		        <imagetype name="icon-1">
@@ -501,6 +507,7 @@
 	           <area>12,16,278,398</area>
 		        <textarea name="date-2" from="textarea_weathertitle">
 		            <position>0,358</position>
+		            <scroll direction="horizontal"/>
 		        </textarea>
 		
 		        <imagetype name="icon-2">
@@ -542,6 +549,7 @@
 	           <area>12,16,278,398</area>
 		        <textarea name="date-3" from="textarea_weathertitle">
 		            <position>0,358</position>
+		            <scroll direction="horizontal"/>
 		        </textarea>
 		
 		        <imagetype name="icon-3">
@@ -583,6 +591,7 @@
 	           <area>12,16,278,398</area>
 		        <textarea name="date-4" from="textarea_weathertitle">
 		            <position>0,358</position>
+		            <scroll direction="horizontal"/>
 		        </textarea>
 		
 		        <imagetype name="icon-4">
@@ -624,6 +633,7 @@
 	           <area>12,16,278,398</area>
 		        <textarea name="date-5" from="textarea_weathertitle">
 		            <position>0,358</position>
+		            <scroll direction="horizontal"/>
 		        </textarea>
 		
 		        <imagetype name="icon-5">
@@ -709,16 +719,17 @@
         <group name="animatedmap">
            <position>10,50</position>
 
-	        <group name="currentconditionsbgd" from="weathercurrentconditionsbgd">
+	        <group name="mapsbgd" from="weathermapsbgd">
 	           <position>0,0</position>
 		     </group>
 	        
 	        <imagetype name="animatedimage">
-	            <area>10,40,398,299</area>
+	            <area>24,19,521,392</area>
+	            <mask>images/shared/weathermaps_mask.png</mask>
 	            <preserveaspect>true</preserveaspect>
 	        </imagetype>
 
-	        <group name="currentconditionsbgd" from="weathercurrentconditionsoverlay">
+	        <group name="mapsoverlay" from="weathermapsoverlay">
 	           <position>0,0</position>
 		     </group>
 
@@ -771,7 +782,7 @@
 		
            </group>	
            	
-	        <group name="currentconditionsbgd" from="weathercurrentconditionsoverlay">
+	        <group name="currentconditionsoverlay" from="weathercurrentconditionsoverlay">
 	           <position>0,0</position>
 		     </group>
 
@@ -813,7 +824,7 @@
 	
 	        <group name="time-0_info">
 	           <area>12,16,278,398</area>
-		        <textarea name="date-0" from="textarea_weathertitle">
+		        <textarea name="time-0" from="textarea_weathertitle">
 		            <position>0,358</position>
 		        </textarea>
 		
@@ -854,7 +865,7 @@
 	
 	        <group name="time-1_info">
 	           <area>12,16,278,398</area>
-		        <textarea name="date-1" from="textarea_weathertitle">
+		        <textarea name="time-1" from="textarea_weathertitle">
 		            <position>0,358</position>
 		        </textarea>
 		
@@ -895,7 +906,7 @@
 	
 	        <group name="time-2_info">
 	           <area>12,16,278,398</area>
-		        <textarea name="date-2" from="textarea_weathertitle">
+		        <textarea name="time-2" from="textarea_weathertitle">
 		            <position>0,358</position>
 		        </textarea>
 		
@@ -936,7 +947,7 @@
 	
 	        <group name="time-3_info">
 	           <area>12,16,278,398</area>
-		        <textarea name="date-3" from="textarea_weathertitle">
+		        <textarea name="time-3" from="textarea_weathertitle">
 		            <position>0,358</position>
 		        </textarea>
 		
@@ -977,7 +988,7 @@
 	
 	        <group name="time-4_info">
 	           <area>12,16,278,398</area>
-		        <textarea name="date-4" from="textarea_weathertitle">
+		        <textarea name="time-4" from="textarea_weathertitle">
 		            <position>0,358</position>
 		        </textarea>
 		
@@ -1018,7 +1029,7 @@
 	
 	        <group name="time-5_info">
 	           <area>12,16,278,398</area>
-		        <textarea name="date-5" from="textarea_weathertitle">
+		        <textarea name="time-5" from="textarea_weathertitle">
 		            <position>0,358</position>
 		        </textarea>
 		
@@ -1067,6 +1078,77 @@
 
     <window name="global-setup">
 
+         <area>-1,-1,1850,1010</area>
+
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
+
+        <group name="global-setup_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Configure your global weather settings</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="timeout_label" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Seconds to display each page:</value>
+	        </textarea>
+	
+	        <textarea name="background_label" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Retrieve data in the background:</value>
+	        </textarea>
+	
+	        <!-- widgets -->
+	        <spinbox name="timeout_spinbox" from="spinbox_settings">
+	            <position>0,120</position>
+	        </spinbox>
+	
+	        <checkbox name="backgroundcheck" from="checkbox_settings">
+	            <position>0,210</position>
+	        </checkbox>
+	
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+
+        </group>
+
+        <group name="global-setup_menu">
+           <area>30,28,324,952</area>
+
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Weather Settings</value>
+	        </textarea>
+	
+	        <button name="finishbutton" from="button_settings">
+	            <position>0,120</position>
+	            <value>Save</value>
+	        </button>
+		
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+
+<!--
         <textarea name="header" from="basetextarea">
             <area>0,18,800,45</area>
             <font>baselarge</font>
@@ -1095,7 +1177,7 @@
         <button name="finishbutton" from="basebutton">
             <position>600,495</position>
         </button>
-
+-->
     </window>
 
     <window name="screen-setup">

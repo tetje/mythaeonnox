@@ -6855,6 +6855,21 @@
 	    </imagetype>
 	  </group>
 
+	  <group name="weathermapsbgd">
+	    <position>0,0</position>
+	    <imagetype name="weather_bgd_1">
+	        <area>0,0,569,430</area>
+	        <filename>images/shared/nowplaying_back.png</filename>
+	    </imagetype>
+	  </group>
+
+	  <group name="weathermapsoverlay">
+	    <position>0,0</position>
+	    <imagetype name="weather_bgd_2">
+	        <area>22,16,528,398</area>
+	        <filename>images/shared/nowplaying_overlay.png</filename>
+	    </imagetype>
+	  </group>
    <window name="MythPopupBox">
         <area>0,0,1076,60</area>
 

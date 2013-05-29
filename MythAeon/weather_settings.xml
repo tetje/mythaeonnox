@@ -4,21 +4,21 @@
       <type>WEATHER_SETTINGS_GENERAL</type>
       <text>Settings</text>
       <action>SETTINGS_GENERAL</action>
-      <description>General weather</description>
+      <description>Configure your global weather settings</description>
    </button>
 
    <button>
       <type>WEATHER_SETTINGS_SCREEN</type>
       <text>Display</text>
       <action>SETTINGS_SCREEN</action>
-      <description>Weather forecasts to</description>
+      <description>Weather forecasts to display on screen</description>
    </button>
 
    <button>
       <type>WEATHER_SETTINGS_SOURCE</type>
       <text>Sources</text>
       <action>SETTINGS_SOURCE</action>
-      <description>Configure your weather</description>
+      <description>Setup sources for your weather</description>
    </button>
 
 </mythmenu>
