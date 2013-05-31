@@ -3589,6 +3589,38 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_settings_menu_2">
+       <area>0,0,324,648</area>
+       <align>top,hcenter</align>
+       <layout>vertical</layout>
+       <wrapstyle>selection</wrapstyle>
+       <arrange>stack</arrange>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,324,648</buttonarea>
+       <statetype name="buttonitem">
+           <area>20,0,324,72</area>
+           <state name="active">
+               <textarea name="buttontext"  from="textarea_settings_button">
+                   <area>20,0,264,72</area>
+                   <cutdown>yes</cutdown>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,324,72</area>
+                   <filename>images/shared/settings_leftmenufocus.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_settings_button">
+                   <area>50,0,264,72</area>
+                   <font>Font_Button_Settings_Focus</font>
+                   <scroll direction="horizontal"/>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
    <buttonlist name="buttonlist_settings_timelist">
        <area>0,0,1460,32</area>
        <layout>horizontal</layout>

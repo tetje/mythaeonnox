@@ -337,7 +337,7 @@
                <alpha>0</alpha>	            
 	        </textarea>
 	
-	        <buttonlist name="category" from="buttonlist_settings_menu">
+	        <buttonlist name="category" from="buttonlist_settings_menu_2">
 			       <area>0,120,324,720</area>
 			       <buttonarea>0,0,324,720</buttonarea>
 	        </buttonlist>
