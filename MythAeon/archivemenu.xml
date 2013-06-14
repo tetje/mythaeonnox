@@ -17,7 +17,7 @@
    <button>
        <type>ARCHIVE_ENCODE_VIDEO</type>
        <text>File</text>
-       <description>Encode your video</description>
+       <description>Encode your video to a file</description>
        <action>ARCHIVE_ENCODE_VIDEO</action>
        <depends></depends>
    </button>
@@ -32,7 +32,7 @@
    <button>
        <type>ARCHIVE_UTILITIES</type>
        <text>Utilities</text>
-       <description>Tools & Utilities for archives</description>
+       <description>Tools and Utilities for archives</description>
        <action>MENU archiveutils.xml</action>
    </button>
 

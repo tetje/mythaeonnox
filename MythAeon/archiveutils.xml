@@ -3,21 +3,21 @@
    <button>
       <type>ARCHIVE_LAST_LOG</type>
       <text>Log</text>
-      <description>Show</description>
+      <description>Show log with archive activities</description>
       <action>ARCHIVE_LAST_LOG</action>
    </button>
 
    <button>
        <type>ARCHIVE_TEST_DVD</type>
-       <text>DVD</text>
-       <description>Test created</description>
+       <text>Test</text>
+       <description>Test created DVD</description>
        <action>ARCHIVE_TEST_DVD</action>
    </button>
 
    <button>
        <type>ARCHIVE_BURN_DVD</type>
        <text>Burn</text>
-       <description>Start to</description>
+       <description>Start to Burn your archive to DVD</description>
        <action>ARCHIVE_BURN_DVD</action>
    </button>
 

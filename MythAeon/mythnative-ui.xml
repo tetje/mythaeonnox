@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<!--
+
+MythTV Archive GUI theme
+
+-->
+<mythuitheme>
+
+    <!--
+      The export native wizard
+    -->
+
+    <window name="exportnative">
+ 
+         <area>-1,-1,1850,1010</area>
+
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+           <area>0,0,1850,1010</area>
+        </group>
+
+        <group name="exportnative_menu">
+           <area>30,28,324,952</area>
+
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Archive Media</value>
+	        </textarea>
+	
+	        <button name="addrecording_button" from="button_settings">
+	            <position>0,120</position>
+	            <value>Add Recording</value>
+	        </button>
+	
+	        <button name="addvideo_button" from="button_settings">
+	            <position>0,192</position>
+	            <value>Add Video</value>
+	        </button>
+	
+	        <button name="cancel_button" from="button_settings">
+	            <position>0,264</position>
+	            <value>Cancel</value>
+	        </button>
+	
+	        <button name="prev_button" from="button_settings">
+	            <position>0,336</position>
+	            <value>Previous</value>
+	        </button>
+	
+	        <button name="next_button" from="button_settings">
+	            <position>0,408</position>
+	            <value>Next</value>
+	        </button>
+	
+	        <button name="finishbutton" from="button_settings">
+	            <position>0,480</position>
+	            <value>Finish</value>
+	        </button>
+
+           <group name="usebargroup">
+              <position>26,850</position>
+
+		        <textarea name="maxsize" from="textarea_info">
+		            <area>0,0,277,30</area>
+		            <align>right,vcenter</align>
+		        </textarea>
+		
+		        <textarea name="minsize" from="textarea_info">
+		            <area>0,0,277,30</area>
+		            <align>left,vcenter</align>
+		        </textarea>
+		
+		        <progressbar name="size_bar" from="baseprogressbar">
+		           <area>0,25,277,30</area>
+			        <layout>horizontal</layout>
+			        <style>reveal</style>
+			        <imagetype name="background">
+			            <area>0,0,100%,100%</area>
+			            <filename>images/shared/progress_back.png</filename>
+			        </imagetype>
+			        <imagetype name="progressimage">
+			            <area>0,0,100%,100%</area>
+			            <filename>images/shared/progress_fill.png</filename>
+			        </imagetype>
+		        </progressbar>
+		
+		        <textarea name="currentsize" from="textarea_info">
+		            <area>0,50,277,30</area>
+		            <align>allcenter</align>
+		            <template>Used: %1</template>
+		        </textarea>
+		
+		        <textarea name="currentsize_error" from="currentsize">
+		            <template>Error: %1</template>
+		        </textarea>
+		     </group>
+        </group>
+
+        <group name="exportnative_panel">
+           <area>414,28,1400,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1320,50</area>
+	            <value>Selected Items to be archived</value>
+	        </textarea>
+
+	        <textarea name="filesize" from="title_panel">
+               <align>right,vcenter</align>
+               <value></value>
+               <template>Current item size: %1</template>
+	        </textarea>
+	
+	        <!-- Labels -->
+
+	        <!-- widgets -->
+	        <buttonlist name="archivelist" from="buttonlist_settings_details">
+			     <area>-33,120,1400,576</area>
+			     <buttonarea>0,0,1400,576</buttonarea>
+	        </buttonlist>
+
+	        <textarea name="nofiles" from="textarea_settings_option">
+	            <area>20,120,1400,72</area>
+	            <value>No files are selected for archive</value>
+	        </textarea>
+
+	        <textarea name="progtitle" from="textarea_settings_button">
+	            <area>20,770,1120,32</area>
+	        </textarea>
+<!-- -->
+	        <textarea name="progdatetime" from="textarea_settings_button">
+	            <area>20,770,1320,32</area>
+	            <align>right,vcenter</align>
+	        </textarea>
+<!-- -->
+           <imagetype name="backgroundgridline10">
+               <area>-20,760,1380,50</area>
+               <preserveaspect>no</preserveaspect>
+               <filename>images/shared/settings_radiobuttonoff.png</filename>
+           </imagetype>
+
+	        <textarea name="progdescription" from="textarea_plot">
+	            <area>20,820,1315,116</area>
+	            <case>normal</case>
+	            <align>top,justify</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+
+        </group>
+
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+
+<!-- 
+
+        <progressbar name="size_bar">
+            <area>670,375,10,10</area>
+            <layout>vertical</layout>
+            <style>reveal</style>
+            <imagetype name="background">
+                <filename>ma_progressbar_background.png</filename>
+            </imagetype>
+            <imagetype name="progressimage">
+                <filename>ma_progressbar_fill.png</filename>
+            </imagetype>
+        </progressbar>
+
+        <textarea name="maxsize" from="basetextarea">
+            <area>710,380,100,30</area>
+            <font>basetiny</font>
+        </textarea>
+
+        <textarea name="minsize" from="basetextarea">
+            <area>710,520,100,30</area>
+            <font>basetiny</font>
+        </textarea>
+
+        <textarea name="currentsize" from="basetextarea">
+            <area>710,445,100,30</area>
+            <font>basetiny</font>
+        </textarea>
+
+        <textarea name="currentsize_error" from="basetextarea">
+            <area>710,445,100,30</area>
+            <font>basetinyred</font>
+        </textarea>
+
+-->
+    </window>
+
+    <!--
+      Archive File Selector
+    -->
+
+    <window name="archivefile_selector">
+
+        <textarea name="pagetitle" from="basetextarea">
+            <area>30,10,570,40</area>
+            <font>baselarge</font>
+            <value>File Finder To Import</value>
+        </textarea>
+
+        <textedit name="location_edit" from="basetextedit">
+            <position>35,60</position>
+        </textedit>
+
+        <button name="back_button" from="basebutton">
+            <position>425,65</position>
+            <value>Back</value>
+        </button>
+
+        <button name="home_button" from="basebutton">
+            <position>585,65</position>
+            <value>Home</value>
+        </button>
+
+        <buttonlist name="filelist" from="basebuttonlist">
+            <area>25,130,740,260</area>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <imagetype name="buttonimage">
+                        <area>2,2,28,28</area>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <area>35,0,650,30</area>
+                    </textarea>
+                    <statetype name="buttoncheck">
+                        <position>715,5</position>
+                    </statetype>
+                </state>
+                <state name="selectedactive" from="active">
+                    <shape name="buttonbackground">
+                        <area>0,0,100%,100%</area>
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" />
+                        </fill>
+                    </shape>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <shape name="buttonbackground">
+                        <area>0,0,100%,100%</area>
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" alpha="100" />
+                        </fill>
+                    </shape>
+                    <textarea name="buttontext">
+                        <font>basesmallpurple</font>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <shape name="topbackground" from="basebackground">
+            <area>20,410,760,120</area>
+        </shape>
+
+        <textarea name="label1" from="basetextarea">
+            <area>30,415,160,40</area>
+            <font>basesmallyellow</font>
+            <value>Title:</value>
+        </textarea>
+
+        <textarea name="label2" from="label1">
+            <position>30,455</position>
+            <value>Subtitle:</value>
+        </textarea>
+
+        <textarea name="label3" from="label1">
+            <position>30,495</position>
+            <value>Start Time:</value>
+        </textarea>
+
+        <textarea name="title_text" from="basetextarea">
+            <area>180,420,500,40</area>
+        </textarea>
+
+        <textarea name="subtitle_text" from="basetextarea">
+            <area>180,460,500,40</area>
+        </textarea>
+
+        <textarea name="starttime_text" from="basetextarea">
+            <area>180,500,500,40</area>
+        </textarea>
+
+        <button name="cancel_button" from="basebutton">
+            <position>35,550</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="prev_button" from="basebutton">
+            <position>440,550</position>
+            <value>Prev</value>
+        </button>
+
+        <button name="next_button" from="basebutton">
+            <position>610,550</position>
+            <value>Next</value>
+        </button>
+
+    </window>
+
+  <!--
+      Import Archive
+   -->
+
+  <window name="importnative">
+
+        <textarea name="pagetitle" from="basetextarea">
+            <area>30,10,570,40</area>
+            <font>baselarge</font>
+            <value>Select Associated Channel</value>
+        </textarea>
+
+        <!--
+            archived file channel
+        -->
+
+        <shape name="topbackground" from="basebackground">
+            <area>25,60,750,140</area>
+        </shape>
+
+        <textarea name="progtitle" from="basetextarea">
+            <area>40,70,440,30</area>
+        </textarea>
+
+        <textarea name="progdatetime" from="basetextarea">
+            <area>565,70,185,30</area>
+            <align>right</align>
+        </textarea>
+
+        <textarea name="progdescription" from="basetextarea">
+            <area>40,100,720,100</area>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <imagetype name="preview_image">
+            <area>615,70,130,100</area>
+            <filename>blank.png</filename>
+        </imagetype>
+
+        <shape name="middlebackground" from="basebackground">
+            <area>25,225,750,130</area>
+        </shape>
+
+        <textarea name="label1" from="basetextarea">
+            <area>50,230,690,50</area>
+            <font>basemedium</font>
+            <align>hcenter</align>
+            <value>Archived Channel</value>
+        </textarea>
+
+        <textarea name="label2" from="basetextarea">
+            <area>50,280,500,50</area>
+            <font>basesmallyellow</font>
+            <value>Chan. ID:</value>
+        </textarea>
+
+        <textarea name="chanid" from="basetextarea">
+            <area>190,285,500,50</area>
+        </textarea>
+
+        <textarea name="label3" from="label2">
+            <position>50,320</position>
+            <value>Chan. No:</value>
+        </textarea>
+
+        <textarea name="channo" from="chanid">
+            <position>190,325</position>
+        </textarea>
+
+        <textarea name="label4" from="label2">
+            <position>350,280</position>
+            <value>Callsign:</value>
+        </textarea>
+
+        <textarea name="callsign" from="chanid">
+            <position>480,285</position>
+        </textarea>
+
+        <textarea name="label5" from="label2">
+            <position>350,320</position>
+            <value>Name:</value>
+        </textarea>
+
+        <textarea name="name" from="chanid">
+            <position>480,325</position>
+        </textarea>
+
+        <!--
+            local file channel
+         -->
+
+        <shape name="bottombackground" from="basebackground">
+            <area>25,380,750,140</area>
+        </shape>
+
+        <textarea name="label6" from="label1">
+            <position>50,385</position>
+            <value>Local Channel</value>
+        </textarea>
+
+        <textarea name="label7" from="label2">
+            <position>50,440</position>
+            <value>Chan. ID:</value>
+        </textarea>
+
+        <textarea name="local_chanid" from="chanid">
+            <position>190,444</position>
+        </textarea>
+
+        <button name="searchchanid_button">
+            <area>300,440,32,32</area>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <imagetype name="background">
+                        <filename>blankbutton_off.png</filename>
+                    </imagetype>
+                </state>
+                <state name="selected" from="active">
+                    <imagetype name="background">
+                        <filename>blankbutton_on.png</filename>
+                    </imagetype>
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                    <imagetype name="background">
+                        <filename>blankbutton_pushed.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </button>
+
+        <textarea name="label8" from="label2">
+            <position>50,480</position>
+            <value>Chan. No:</value>
+        </textarea>
+
+        <textarea name="local_channo" from="chanid">
+            <position>190,484</position>
+        </textarea>
+
+        <button name="searchchanno_button" from="searchchanid_button">
+            <position>300,480</position>
+            <value>Search Channel</value>
+        </button>
+
+        <textarea name="label9" from="label2">
+            <position>350,440</position>
+            <value>Callsign:</value>
+        </textarea>
+
+        <textarea name="local_callsign" from="chanid">
+            <position>480,445</position>
+        </textarea>
+
+        <button name="searchcallsign_button" from="searchchanid_button">
+            <position>700,440</position>
+            <value>Search Callsign</value>
+        </button>
+
+        <textarea name="label10" from="label2">
+            <position>350,480</position>
+            <value>Name:</value>
+        </textarea>
+
+        <textarea name="local_name" from="chanid">
+            <position>480,485</position>
+        </textarea>
+
+        <button name="searchname_button" from="searchchanid_button">
+            <position>700,480</position>
+            <value>Search Name</value>
+        </button>
+
+        <button name="cancel_button" from="basebutton">
+            <position>35,550</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="prev_button" from="basebutton">
+            <position>440,550</position>
+            <value>Prev</value>
+        </button>
+
+        <button name="finish_button" from="basebutton">
+            <position>610,550</position>
+            <value>Finish</value>
+        </button>
+
+  </window>
+
+</mythuitheme>
