@@ -29,6 +29,20 @@ Common MythArchive window definitions
 	            <value>Select a destination for your archive or image</value>
 	        </textarea>
 	
+	         <!--gridlines -->
+            <imagetype name="Listpanelline1">
+                <area>0,214,1400,50</area>
+                <filename>images/shared/settings_radiobuttonoff.png</filename>
+            </imagetype>
+
+            <imagetype name="Listpanelline2" from="Listpanelline1">
+                <position>0,286</position>
+            </imagetype>
+
+            <imagetype name="Listpanelline3" from="Listpanelline1">
+                <position>0,358</position>
+            </imagetype>
+
 	        <!-- Labels -->
 	        <textarea name="destination_label" from="textarea_settings_option">
 	            <position>20,120</position>
@@ -296,12 +310,9 @@ Common MythArchive window definitions
 
     </window>
 
-  <!--
-      Recording Selector
-  -->
-  <window name="recording_selector">
+    <window name="recording_selector">
 
-         <area>-1,-1,1850,1010</area>
+        <area>-1,-1,1850,1010</area>
 
 	     <animation trigger="AboutToShow">
 	        <section duration="1000" centre="middle">
@@ -309,87 +320,54 @@ Common MythArchive window definitions
 	        </section>
 	     </animation>
 	     
-        <group name="settings_panel_bgd" from="basesettingswindow">
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
            <area>0,0,1850,1010</area>
         </group>
 
         <group name="recording_selector_panel">
-           <area>354,28,1460,952</area>
+           <area>414,28,1400,952</area>
 	
-	        <textarea name="title_panel" from="textarea_settings_title">
-	            <area>20,50,1360,50</area>
+	        <textarea name="filesize" from="textarea_settings_title">
+	            <area>20,50,1320,50</area>
 	            <value>Select Recordings for your archive or image</value>
+	            <template>Selected recording item size: %1</template>
 	        </textarea>
 	
 	        <!-- Labels -->
-	        <textarea name="destination_label" from="textarea_settings_option">
-	            <position>20,120</position>
-	            <value>Select Destination:</value>
-	        </textarea>
-	
-	        <textarea name="filename_label" from="textarea_settings_option">
-	            <position>20,192</position>
-	            <value>Filename:</value>
-	        </textarea>
-	
-	        <textarea name="Destinationtext_label" from="textarea_settings_option">
-	            <position>20,264</position>
-	            <value>Current Destination:</value>
-	        </textarea>
-	
-	        <textarea name="freespace_label" from="textarea_settings_option">
-	            <position>20,336</position>
-	            <value>Free Space:</value>
-	        </textarea>
-	
-	        <textarea name="isoimage_label" from="textarea_settings_option">
-	            <position>20,408</position>
-	            <value>Make ISO image:</value>
-	        </textarea>
-	
-	        <textarea name="burntodvdr_text" from="textarea_settings_option">
-	            <position>20,480</position>
-	            <value>Burn to DVD:</value>
-	        </textarea>
-	
-	        <textarea name="erasedvdrw_text" from="textarea_settings_option">
-	            <position>20,552</position>
-	            <value>Force Overwrite of DVD-RW Media:</value>
-	        </textarea>
-	
-	        <!-- widgets -->
-	        <buttonlist name="destination_selector" from="selector_settings">
-	            <position>0,120</position>
-	        </buttonlist>
-	
-	        <textedit name="filename_edit" from="textedit_settings">
-	            <position>0,193</position>
-	        </textedit>
-	
-	        <textarea name="destination_text" from="textarea_settings_option">
-	            <area>500,264,750,72</area>
-	        </textarea>
-	
-	        <textarea name="freespace_text" from="textarea_settings_option">
-	            <area>500,336,750,72</area>
+	        <textarea name="category_label" from="textarea_settings_option">
+	            <position>16,120</position>
+	            <value>Recordings group:</value>
 	        </textarea>
 		
-	        <checkbox name="makeisoimage_check" from="checkbox_settings">
-	            <position>0,408</position>
-	        </checkbox>
+	        <!-- widgets -->
+	        <buttonlist name="category_selector" from="selector_settings_details">
+	            <position>-4,120</position>
+	        </buttonlist>
 	
-	        <checkbox name="burntodvdr_check" from="checkbox_settings">
-	            <position>0,480</position>
-	        </checkbox>
-	
-	        <checkbox name="erasedvdrw_check" from="checkbox_settings">
-	            <position>0,552</position>
-	        </checkbox>
-	
-	        <textarea name="helptext" from="textarea_plot">
-	            <area>20,860,1375,72</area>
+	        <buttonlist name="recordinglist" from="buttonlist_settings_details">
+			     <area>-33,192,1400,504</area>
+			     <buttonarea>0,0,1400,504</buttonarea>
+	        </buttonlist>
+
+	        <textarea name="progtitle" from="textarea_settings_button">
+	            <area>20,770,1120,32</area>
+	        </textarea>
+
+	        <textarea name="progdatetime" from="textarea_settings_button">
+	            <area>20,770,1320,32</area>
+	            <align>right,vcenter</align>
+	        </textarea>
+
+           <imagetype name="backgroundgridline10">
+               <area>-20,760,1380,50</area>
+               <preserveaspect>no</preserveaspect>
+               <filename>images/shared/settings_radiobuttonoff.png</filename>
+           </imagetype>
+
+	        <textarea name="progdescription" from="textarea_plot">
+	            <area>20,820,1315,116</area>
 	            <case>normal</case>
-	            <align>bottom,left</align>
+	            <align>top,justify</align>
 	            <multiline>yes</multiline>
 	        </textarea>
 
@@ -400,7 +378,7 @@ Common MythArchive window definitions
 
 	        <textarea name="title" from="textarea_settings_title">
 	            <area>30,50,284,50</area>
-	            <value>Source</value>
+	            <value>Recordings</value>
 	        </textarea>
 	
 	        <button name="cancel_button" from="button_settings">
@@ -413,6 +391,24 @@ Common MythArchive window definitions
 	            <value>Done</value>
 	        </button>
 
+           <group name="preview_image_group">
+              <position>12,761</position>
+		        <imagetype name="videoborder">
+		            <area>0,0,306,179</area>
+		            <filename>images/shared/multiplex_tvborder.png</filename>
+		        </imagetype>
+		        
+		        <imagetype name="preview_image">
+		            <area>8,9,290,163</area>
+		            <mask>images/shared/multiplex_tvmask_video.png</mask>
+		            <filename>images/shared/DefaultVideoBigPoster.png</filename>
+		        </imagetype>
+		        
+		        <imagetype name="videoglass">
+		            <area>8,9,290,163</area>
+		            <filename>images/shared/multiplex_tvglass.png</filename>
+		        </imagetype>
+           </group>
         </group>
 
 	     <animation trigger="AboutToHide">
@@ -422,249 +418,212 @@ Common MythArchive window definitions
 	     </animation>
 
 <!--
-        <textarea name="pagetitle" from="basetextarea">
-            <area>30,10,570,40</area>
-            <font>baselarge</font>
-            <value>Select Recordings</value>
-        </textarea>
-
-        <textarea name="title2" from="basetextarea">
-            <area>45,75,200,50</area>
-            <font>basesmallyellow</font>
-            <align>right</align>
-            <value>Show Recordings</value>
-        </textarea>
-
-        <buttonlist name="category_selector" from="basewideselector">
-            <area>265,70,480,40</area>
-        </buttonlist>
-
-        <buttonlist name="recordinglist" from="basebuttonlist">
-            <area>50,120,700,180</area>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="buttontext">
-                        <area>5,0,660,30</area>
-                    </textarea>
-                    <statetype name="buttoncheck">
-                        <position>670,5</position>
-                    </statetype>
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="background">
-                        <area>0,0,100%,100%</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" />
-                        </fill>
-                    </shape>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="background">
-                        <area>0,0,100%,100%</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="100" />
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmallpurple</font>
-                    </textarea>
-                </state>
-            </statetype>
-        </buttonlist>
-
-        <shape name="bottombackground" from="basebackground">
-            <area>30,335,740,200</area>
-        </shape>
-
-        <textarea name="progtitle" from="basetextarea">
-            <area>40,340,440,30</area>
-            <font>basesmallyellow</font>
-        </textarea>
-
-        <textarea name="progdatetime" from="basetextarea">
-            <area>565,340,185,30</area>
-            <font>basesmallyellow</font>
-            <align>right</align>
-        </textarea>
-
-        <textarea name="progdescription" from="basetextarea">
-            <area>40,370,570,130</area>
-            <multiline>yes</multiline>
-        </textarea>
-
         <imagetype name="cutlist_image">
             <area>45,505,25,25</area>
             <filename>ma_cutlist.png</filename>
         </imagetype>
-
-        <textarea name="filesize" from="basetextarea">
-            <area>650,505,100,40</area>
-            <align>right</align>
-        </textarea>
-
-        <imagetype name="preview_image">
-            <area>615,370,130,100</area>
-            <filename>blank.png</filename>
-        </imagetype>
 -->
     </window>
 
-  <!--
-      Video Selector
-  -->
-  <window name="video_selector">
+    <window name="video_selector">
 
-        <shape name="topbackground" from="basebackground">
-            <area>30,55,740,270</area>
-        </shape>
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="pagetitle" from="basetextarea">
-            <area>30,10,570,40</area>
-            <font>baselarge</font>
-            <value>Select Videos</value>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <textarea name="title2" from="basetextarea">
-            <area>45,75,200,50</area>
-            <font>basesmallyellow</font>
-            <align>right</align>
-            <value>Video Category</value>
-        </textarea>
+        <group name="video_selector_panel">
+           <area>414,28,1400,952</area>
+	
+	        <textarea name="filesize" from="textarea_settings_title">
+	            <area>20,50,1320,50</area>
+	            <value>Select Recordings for your archive or image</value>
+	            <template>Selected video item size: %1</template>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="category_label" from="textarea_settings_option">
+	            <position>16,120</position>
+	            <value>Video category:</value>
+	        </textarea>
+		
+	        <!-- widgets -->
+	        <buttonlist name="category_selector" from="selector_settings_details">
+	            <position>-4,120</position>
+	        </buttonlist>
+	
+	        <buttonlist name="videolist" from="buttonlist_settings_details">
+			     <area>-33,192,1400,504</area>
+			     <buttonarea>0,0,1400,504</buttonarea>
+	        </buttonlist>
 
-        <buttonlist name="category_selector" from="basewideselector">
-            <area>265,70,480,40</area>
-        </buttonlist>
+	        <textarea name="warning_text" from="textarea_settings_option">
+	            <area>16,192,1400,72</area>
+	            <value>No videos available</value>
+	        </textarea>
 
-        <buttonlist name="videolist" from="basebuttonlist">
-            <area>50,120,700,180</area>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <textarea name="buttontext">
-                        <area>5,0,660,30</area>
-                    </textarea>
-                    <statetype name="buttoncheck">
-                        <position>670,5</position>
-                    </statetype>
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="background">
-                        <area>0,0,100%,100%</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" />
-                        </fill>
-                    </shape>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="background">
-                        <area>0,0,100%,100%</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="100" />
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmallpurple</font>
-                    </textarea>
-                </state>
-            </statetype>
-        </buttonlist>
+	        <textarea name="videotitle" from="textarea_settings_button">
+	            <area>20,770,1120,32</area>
+	        </textarea>
 
-        <shape name="bottombackground" from="basebackground">
-            <area>30,335,580,200</area>
-        </shape>
+	        <textarea name="parentallevel_text" from="textarea_settings_button">
+	            <area>20,770,1320,32</area>
+	            <align>right,vcenter</align>
+	            <template>Parental Level: %n</template>
+	        </textarea>
 
-        <textarea name="videotitle">
-            <area>40,340,440,30</area>
-            <font>basesmallyellow</font>
-        </textarea>
+           <imagetype name="backgroundgridline10">
+               <area>-20,760,1380,50</area>
+               <preserveaspect>no</preserveaspect>
+               <filename>images/shared/settings_radiobuttonoff.png</filename>
+           </imagetype>
 
-        <textarea name="videoplot" from="basetextarea">
-            <area>40,370,600,130</area>
-            <multiline>yes</multiline>
-        </textarea>
+	        <textarea name="videoplot" from="textarea_plot">
+	            <area>20,820,1315,116</area>
+	            <case>normal</case>
+	            <align>top,justify</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-        <textarea name="filesize" from="basetextarea">
-            <area>500,505,100,40</area>
-            <align>right</align>
-        </textarea>
+        </group>
 
-        <imagetype name="cover_background">
-            <area>615,338,140,200</area>
-            <filename>ma_coverback.png</filename>
-        </imagetype>
+        <group name="video_selector_menu">
+           <area>30,28,324,952</area>
 
-        <imagetype name="cover_image">
-            <area>620,343,130,190</area>
-        </imagetype>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Videos</value>
+	        </textarea>
+	
+	        <button name="cancel_button" from="button_settings">
+	            <position>0,120</position>
+	            <value>Cancel</value>
+	        </button>
+	
+	        <button name="ok_button" from="button_settings">
+	            <position>0,192</position>
+	            <value>Done</value>
+	        </button>
+	        
+           <group name="coverart_group">
+               <position>70,635</position>
+               <imagetype name="previewbgd">
+                   <area>-7,-7,200,305</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_border.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               
+               <imagetype name="cover_image">
+                   <area>0,0,186,287</area>
+                   <alpha>255</alpha>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
+                   <mask>images/shared/multiplex_mask_big.png</mask>
+               </imagetype>
 
-        <textarea name="label" from="basetextarea">
-            <area>660,295,60,40</area>
-            <font>basesmallyellow</font>
-            <align>right</align>
-            <value>PL:</value>
-        </textarea>
+               <imagetype name="previewglass">
+                   <area>0,0,186,287</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_glass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+           </group>
+        </group>
 
-        <textarea name="parentallevel_text" from="basetextarea">
-            <area>725,295,20,40</area>
-        </textarea>
-
-        <textarea name="warning_text" from="basetextarea">
-            <area>50,150,690,40</area>
-            <align>allcenter</align>
-            <value>No videos available</value>
-        </textarea>
-
-        <button name="cancel_button" from="basebutton">
-            <position>35,550</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="ok_button" from="basebutton">
-            <position>610,550</position>
-            <value>OK</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 
-  <window name="logviewer">
+	 <window name="logviewer">
+	
+        <area>-1,-1,1850,1010</area>
 
-     <textarea name="pagetitle" from="basetextarea">
-         <area>30,10,570,40</area>
-         <font>baselarge</font>
-         <value>Log Viewer</value>
-     </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-     <shape name="logbackground" from="basebackground">
-         <area>20,55,760,395</area>
-     </shape>
+        <group name="logviewer_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>View progress of your archive or image</value>
+	        </textarea>
+	
+	        <!-- gridlines -->
 
-     <buttonlist name="loglist" from="basebuttonlist">
-         <area>35,70,730,370</area>
-     </buttonlist>
+	        <!-- Labels -->
+	
+	        <!-- widgets -->
+	        <buttonlist name="loglist" from="buttonlist_settings_check">
+	            <area>0,120,1400,720</area>
+	            <buttonarea>0,0,1400,720</buttonarea>
+	        </buttonlist>
+		
+	        <textarea name="logitem_text" from="textarea_plot">
+	            <area>20,860,1375,72</area>
+	            <case>normal</case>
+	            <align>bottom,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
 
-     <shape name="itembackground" from="basebackground">
-         <area>20,460,760,80</area>
-     </shape>
+        </group>
 
-     <textarea name="logitem_text" from="basetextarea">
-         <area>35,465,730,80</area>
-         <multiline>yes</multiline>
-     </textarea>
+        <group name="logviewer_menu">
+           <area>30,28,324,952</area>
 
-     <button name="cancel_button" from="basebutton">
-         <position>35,550</position>
-         <value>Cancel</value>
-     </button>
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Log viewer</value>
+	        </textarea>
 
-     <button name="update_button" from="basebutton">
-         <position>320,550</position>
-         <value>Update</value>
-     </button>
+	        <button name="cancel_button" from="button_settings">
+	            <position>0,120</position>
+	            <value>Cancel</value>
+	        </button>
+	
+	        <button name="update_button" from="button_settings">
+	            <position>0,192</position>
+	            <value>Update</value>
+	        </button>
+	
+	        <button name="exit_button" from="button_settings">
+	            <position>0,264</position>
+	            <value>Exit</value>
+	        </button>
 
-     <button name="exit_button" from="basebutton">
-         <position>610,550</position>
-         <value>Exit</value>
-     </button>
+        </group>
 
-  </window>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+
+<!--
+	    <buttonlist name="loglist" from="basebuttonlist">
+	        <area>35,70,730,370</area>
+	    </buttonlist>
+	
+-->	
+	 </window>
 
 </mythuitheme>
