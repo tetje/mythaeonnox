@@ -150,41 +150,6 @@ MythTV Archive GUI theme
 	        </section>
 	     </animation>
 
-<!-- 
-
-        <progressbar name="size_bar">
-            <area>670,375,10,10</area>
-            <layout>vertical</layout>
-            <style>reveal</style>
-            <imagetype name="background">
-                <filename>ma_progressbar_background.png</filename>
-            </imagetype>
-            <imagetype name="progressimage">
-                <filename>ma_progressbar_fill.png</filename>
-            </imagetype>
-        </progressbar>
-
-        <textarea name="maxsize" from="basetextarea">
-            <area>710,380,100,30</area>
-            <font>basetiny</font>
-        </textarea>
-
-        <textarea name="minsize" from="basetextarea">
-            <area>710,520,100,30</area>
-            <font>basetiny</font>
-        </textarea>
-
-        <textarea name="currentsize" from="basetextarea">
-            <area>710,445,100,30</area>
-            <font>basetiny</font>
-        </textarea>
-
-        <textarea name="currentsize_error" from="basetextarea">
-            <area>710,445,100,30</area>
-            <font>basetinyred</font>
-        </textarea>
-
--->
     </window>
 
     <!--
