@@ -8,13 +8,54 @@ MythArchive GUI theme
 <mythuitheme>
 
     <window name="profilepopup">
-        <area>-1,-1,413,426</area>
+        <area>-1,-1,700,450</area>
 
-        <imagetype name="backimg">
-            <area>0,0,413,426</area>
-            <filename>mythdialogbox-background.png</filename>
-        </imagetype>
+        <group name="profile_selection_window" from="basedialogwindow450">
+            <position>0,0</position>        
+        </group>
 
+        <textarea name="caption_text" from="textarea_list">
+            <area>70,75,560,50</area>
+            <multiline>no</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
+        </textarea>
+
+        <buttonlist name="profile_list" from="selector_dialog">
+		       <position>0,125</position>
+        </buttonlist>
+
+        <button name="ok_button" from="button_dialog">
+            <position>0,175</position>
+            <value>OK</value>
+        </button>
+
+        <textarea name="description_text" from="textarea_list">
+            <area>70,225,560,100</area>
+            <multiline>yes</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical"/>
+        </textarea>
+
+        <textarea name="oldsize_text" from="textarea_list">
+            <area>70,325,560,50</area>
+            <align>left,vcenter</align>
+            <template>Current: %n</template>
+        </textarea>
+
+        <textarea name="newsize_text" from="textarea_list">
+            <area>70,325,560,50</area>
+            <align>right,vcenter</align>
+            <template>New: %n</template>
+        </textarea>
+
+        <textarea name="tolable_text" from="textarea_list">
+            <area>70,325,560,50</area>
+            <align>hcenter,vcenter</align>
+            <value>to</value>
+        </textarea>
+
+<!--
         <textarea name="title" from="basetextarea">
             <area>20,20,360,40</area>
             <font>basemedium</font>
@@ -54,6 +95,7 @@ MythArchive GUI theme
             <position>125,350</position>
             <value>OK</value>
         </button>
+-->
     </window>
 
     <window name="themeselector">
@@ -415,8 +457,8 @@ MythArchive GUI theme
 
 	        <!-- widgets -->
 	        <buttonlist name="archivelist" from="buttonlist_settings_check">
-			     <area>0,120,1400,952</area>
-			     <buttonarea>0,0,1400,952</buttonarea>
+			     <area>0,120,1400,792</area>
+			     <buttonarea>0,0,1400,792</buttonarea>
 			     <statetype name="buttonitem">
 			         <state name="active">
 			            <area>0,0,1400,128</area>

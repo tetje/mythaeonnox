@@ -6849,6 +6849,25 @@
         </imagetype>        
     </group>
 
+    <group name="basedialogwindow450" >
+        <area>0,0,700,450</area>
+        <imagetype name="dialogtop">
+            <area>0,0,700,75</area>
+            <filename>images/shared/context_top.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogmid">
+            <area>1,75,700,300</area>
+            <filename>images/shared/context_middle.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogbottom">
+            <area>0,374,700,75</area>
+            <filename>images/shared/context_bottom.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>        
+    </group>
+
     <group name="basedialogwindow600" >
         <area>0,0,700,600</area>
         <imagetype name="dialogtop">
@@ -7038,7 +7057,7 @@
         </textarea>
 
         <imagetype name="animation">
-            <position>70,95</position>
+            <position>50,95</position>
             <filepattern low="0" high="24">images/busyimages/%1.png</filepattern>
             <delay>250</delay>
         </imagetype>

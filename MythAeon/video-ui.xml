@@ -192,13 +192,13 @@
 	        </button>
       
 		  </group>       
-
+<!--
 	     <animation trigger="AboutToHide">
 	        <section duration="1000" centre="middle">
 	            <alpha start="255" end="0" easingcurve="InQuad" />
 	        </section>
 	     </animation>
-
+-->
     </window>
 
     <!-- Main Windows -->
