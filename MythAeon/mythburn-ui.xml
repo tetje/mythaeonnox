@@ -55,47 +55,6 @@ MythArchive GUI theme
             <value>to</value>
         </textarea>
 
-<!--
-        <textarea name="title" from="basetextarea">
-            <area>20,20,360,40</area>
-            <font>basemedium</font>
-            <align>hcenter,top</align>
-            <value>Change Encoding Profile</value>
-        </textarea>
-
-        <textarea name="caption_text" from="basetextarea">
-            <area>20,70,360,30</area>
-            <align>hcenter,top</align>
-        </textarea>
-
-        <buttonlist name="profile_list" from="baseselector">
-            <position>90,130</position>
-        </buttonlist>
-
-        <textarea name="description_text" from="basetextarea">
-            <area>25,180,350,90</area>
-            <align>allcenter</align>
-            <font>basesmallgrey</font>
-            <multiline>yes</multiline>
-        </textarea>
-
-       <textarea name="oldsize_text" from="basetextarea">
-            <area>30,300,200,60</area>
-            <font>basesmallpurple</font>
-            <align>left</align>
-        </textarea>
-
-       <textarea name="newsize_text" from="basetextarea">
-            <area>170,300,200,60</area>
-            <font>basesmallpurple</font>
-            <align>right</align>
-        </textarea>
-
-        <button name="ok_button" from="basebutton">
-            <position>125,350</position>
-            <value>OK</value>
-        </button>
--->
     </window>
 
     <window name="themeselector">
@@ -765,106 +724,394 @@ MythArchive GUI theme
 -->
     </window>
 
-  <!--
-      *******************************************************************
-      The editmetadata dialog
-      *******************************************************************
-  -->
+    <window name="edit_metadata">
 
-  <window name="edit_metadata">
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="title" from="basetextarea">
-            <area>0,15,800,50</area>
-            <font>baseextralarge</font>
-            <align>allcenter</align>
-            <value>Archive Item Details</value>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow">
+           <area>0,0,1850,1010</area>
+        </group>
 
-        <!--
-            Labels
-        -->
+        <group name="edit_metadata_panel">
+           <area>354,28,1460,952</area>
+	
+	        <textarea name="titlepanel" from="textarea_settings_title">
+	            <area>20,50,1360,50</area>
+	            <value>Edit Archive item Information</value>
+	        </textarea>
+	
+	        <!-- Labels -->
+	        <textarea name="title_label" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Title:</value>
+	        </textarea>
+	
+	        <textarea name="subtitle_label" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Subtitle:</value>
+	        </textarea>
+	
+	        <textarea name="startdate_label" from="textarea_settings_option">
+	            <position>20,264</position>
+	            <value>Start Date:</value>
+	        </textarea>
+	
+	        <textarea name="starttime_label" from="textarea_settings_option">
+	            <position>20,336</position>
+	            <value>Start Time:</value>
+	        </textarea>
+	
+	        <textarea name="description_label" from="textarea_settings_option">
+	            <position>20,408</position>
+	            <value>Description:</value>
+	        </textarea>
+		
+	        <!-- widgets -->
+	        <textedit name="title_edit" from="textedit_settings">
+                <position>0,120</position>
+	        </textedit>
+	
+	        <textedit name="subtitle_edit" from="textedit_settings">
+                <position>0,192</position>
+	        </textedit>
+	
+	        <textedit name="startdate_edit" from="textedit_settings">
+                <position>0,264</position>
+	        </textedit>
+	
+	        <textedit name="starttime_edit" from="textedit_settings">
+                <position>0,336</position>
+	        </textedit>
+	
+	        <textedit name="description_edit" from="textedit_settings_long">
+                <position>0,408</position>
+	        </textedit>
+	
+        </group>
+     
+	     <group name="edit_metadata_menu">
+	        <area>30,28,324,952</area>
+	
+	        <textarea name="title" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Metadata</value>
+	        </textarea>
+	
+	        <button name="cancel_button" from="button_settings">
+	            <position>0,120</position>
+	            <value>Cancel</value>
+	        </button>
+	
+	        <button name="ok_button" from="button_settings">
+	            <position>0,192</position>
+	            <value>Save</value>
+	        </button>
+	
+	     </group>
 
-        <textarea name="title_label" from="basetextarea">
-            <area>45,70,170,50</area>
-            <font>basesmallyellow</font>
-            <align>right,vcenter</align>
-            <value>Title:</value>
-        </textarea>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	
+  </window>
 
-        <textarea name="subtitle_label" from="title_label">
-            <area>45,135,170,50</area>
-            <value>Subtitle:</value>
-        </textarea>
+    <window name="thumbfinder">
 
-        <textarea name="startdate_label" from="title_label">
-            <area>45,200,170,50</area>
-            <value>Start Date:</value>
-        </textarea>
+     <imagetype name="backdropimg">
+         <area>0,0,1920,1080</area>
+         <filename>images/backgrounds/play_disc/play_disc.jpg</filename>
+     </imagetype>
+     
+     <imagetype name="showcaseimg" from="backdropimg">
+         <filename>images/shared/showcase_stage.png</filename>
+     </imagetype>
+     
+     <imagetype name="spotlightimg">
+         <area>0,875,1920,205</area>
+         <alpha>128</alpha>
+         <filename>images/shared/showcase_spot.png</filename>
+     </imagetype>
+     
+     <group name="date_clock" from="defaultclockup">
+         <position>1240,0</position>
+     </group>
 
-        <textarea name="starttime_label" from="title_label">
-            <area>45,265,170,50</area>
-            <value>Time:</value>
-        </textarea>
+     <group name="multiplextabletburndvdgroup">
+        <area>113,70,1694,846</area>
 
-        <textarea name="description_label" from="title_label">
-            <area>45,330,170,50</area>
-            <value>Description:</value>
-        </textarea>
+        <animation trigger="AboutToShow">
+            <section duration="1200" centre="middle">
+                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
+            </section>
+        </animation>
 
-        <!--
-            edits
-        -->
+<!-- Fix me: This does not work when a recording has played and one returns to the main recording screen
 
-        <textedit name="title_edit" from="basetextedit">
-            <position>225,70</position>
-        </textedit>
+        <animation trigger="AboutToHide">
+            <section duration="1200" centre="middle">
+                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
+            </section>
+        </animation>       
+-->
 
-        <textedit name="subtitle_edit" from="basetextedit">
-            <position>225,135</position>
-        </textedit>
+        <imagetype name="multiplextabletbgdimg">
+            <area>0,0,1694,846</area>
+            <filename>images/shared/multiplex_back.png</filename>
+        </imagetype>
+        
+        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
+            <filename>images/shared/multiplex_tablet_bigthumb.png</filename>
+        </imagetype>
 
-        <textedit name="startdate_edit" from="basetextedit">
-            <position>225,200</position>
-        </textedit>
+        <group name="searchinfo">
+           <area>0,0,1694,846</area>
+           
+	        <imagetype name="frameimage">
+	            <area>729,58,949,538</area>
+	            <filename>images/backgrounds/defaultfanart/</filename>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	               
+           <group name="additionalburndvdinfo">
+	              <area>30,85,567,270</area>
+	              
+                 <!-- labels -->
+			        <textarea name="positionlbl" from="textarea_label">
+			            <area>0,0,567,30</area>
+			            <value>Current Position:</value>
+			        </textarea>
+		
+			        <textarea name="positionviewlbl" from="positionlbl">
+			            <position>0,70</position>
+			            <value>Position View:</value>
+			        </textarea>
+		
+			        <textarea name="seeklbl" from="positionlbl">
+			            <position>0,140</position>
+			            <value>Seek amount:</value>
+			        </textarea>
+		
+			        <textarea name="framebuttonlbl" from="textarea_label">
+			            <area>358,0,340,30</area>
+			            <value>Select thumb image:</value>
+			        </textarea>
+	
+                 <!-- widgets -->
+			        <textarea name="currentpos" from="textarea_info">
+			            <area>0,25,567,30</area>
+			        </textarea>
+		
+			        <imagetype name="positionimage">
+			            <area>0,100,320,25</area>
+			            <filename>images/shared/progress_back.png</filename>
+			            <grayscale>true</grayscale>
+			        </imagetype>
+		
+			        <textarea name="seekamount" from="textarea_info">
+			            <area>0,165,567,30</area>
+			        </textarea>
 
-        <textedit name="starttime_edit" from="basetextedit">
-            <position>225,265</position>
-        </textedit>
+			        <button name="frame_button">
+			            <position>440,40</position>
+			            <statetype name="buttonstate">
+			                <state name="active">
+			                    <imagetype name="background">
+			                        <filename>images/shared/multi_arrow.png</filename>
+			                        <alpha>128</alpha>
+			                    </imagetype>
+			                </state>
+			                <state name="selected">
+			                    <imagetype name="background">
+			                        <filename>images/shared/multi_arrow.png</filename>
+			                    </imagetype>
+			                    <textarea name="selectedtxt" from="textarea_info">
+			                        <area>0,0,153,165</area>
+			                        <align>allcenter</align>
+			                        <value>OK</value>
+			                    </textarea>
+			                </state>
+			                <state name="disabled" from="active" />
+			                <state name="pushed" from="active">
+			                    <textarea name="selectedtxt" from="textarea_info">
+			                        <area>0,0,153,165</area>
+			                        <case>lower</case>
+			                        <align>allcenter</align>
+			                        <value>OK</value>
+			                    </textarea>
+			                </state>
+			            </statetype>
+			            <helptext>Press 'left' and 'right' arrows to move through the frames. Press 'up' and 'down' arrows to change seek amount. Press 'select' or 'enter' key to lock the selected thumb image.</helptext>
+			        </button>
 
-        <textedit name="description_edit" from="basetextedit">
-            <position>225,330</position>
-        </textedit>
+		
+           </group>
 
-        <!--
-            Push buttons
-        -->
-        <button name="ok_button" from="basebutton">
-            <position>250,540</position>
-            <value>OK</value>
+	        <textarea name="helptext" from="textarea_plot">
+	            <area>38,320,667,260</area>
+	            <align>left,top</align>
+	            <value>First select the thumb image you want to change from the overview. Second press the 'tab' key to move to the select thumb frame button to change the thumb image.</value>
+	        </textarea>
+	        
+	     </group>   
+     </group>
+
+     <group name="multiplextabletburndvdlistgroup">
+        <area>0,755,1920,325</area>
+
+        <animation trigger="AboutToShow">
+            <section duration="1200" centre="middle">
+                <position start="1920,755" end="0,755" easingcurve="InOutBack" />
+            </section>
+        </animation>
+
+<!-- Fix me: This does not work will when a recording has played and one returns to the main recording screen
+        
+        <animation trigger="AboutToHide">
+            <section duration="1200" centre="middle">
+                <position start="0,755" end="-1920,755" easingcurve="OutInBack" />
+            </section>
+        </animation>       
+-->
+        <buttonlist name="thumblist" from="buttonlist_multiplexwebsearch">
+             <position>0,-67</position>
+        </buttonlist>
+
+<!--
+        <button name="frame_button">
+            <position>883,160</position>
+            <statetype name="buttonstate">
+                <state name="active">
+                    <imagetype name="background">
+                        <filename>images/shared/multi_arrow_black.png</filename>
+                        <alpha>128</alpha>
+                    </imagetype>
+                </state>
+                <state name="selected">
+                    <imagetype name="background">
+                        <filename>images/shared/multi_arrow_black.png</filename>
+                    </imagetype>
+                    <textarea name="selectedtxt" from="textarea_title">
+                        <area>0,0,153,165</area>
+                        <align>allcenter</align>
+                        <value>OK</value>
+                    </textarea>
+                </state>
+                <state name="disabled" from="active" />
+                <state name="pushed" from="active">
+                    <textarea name="selectedtxt" from="textarea_title">
+                        <area>0,0,153,165</area>
+                        <case>lower</case>
+                        <align>allcenter</align>
+                        <value>OK</value>
+                    </textarea>
+                </state>
+            </statetype>
+            <helptext>Press 'left' and 'right' arrows to move through the frames. Press 'up' and 'down' arrows to change seek amount. Press 'select' or 'enter' key to lock the selected thumb image.</helptext>
         </button>
+-->
 
-        <button name="cancel_button" from="basebutton">
-            <position>450,540</position>
+     </group>
+
+     <group name="thumbfinder_menu">
+        <area>0,0,1076,60</area>
+<!--
+        <animation trigger="AboutToShow">
+            <section duration="500" centre="middle">
+                <position start="0,-60" end="0,0" easingcurve="OutSine" />
+            </section>
+        </animation>
+        <animation trigger="AboutToHide">
+            <section duration="500" centre="middle">
+                <position start="0,0" end="0,-60" easingcurve="InSine" />
+            </section>
+        </animation>       
+-->        
+        <imagetype name="popupboxbgd">
+            <area>0,0,1076,120</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/submenubar.png</filename>
+        </imagetype>
+
+        <button name="cancel_button" from="button_submenu">
+            <position>58,0</position>
             <value>Cancel</value>
         </button>
-    </window>
 
-  <window name="thumbfinder">
+        <button name="save_button" from="button_submenu">
+            <position>203,0</position>
+            <value>Save</value>
+        </button>
 
-        <textarea name="title" from="basetextarea">
-            <area>0,10,800,45</area>
-            <font>baseextralarge</font>
-            <align>allcenter</align>
-            <value>Thumb Image Selector</value>
-        </textarea>
+     </group>
 
-        <imagetype name="topbgimage">
-            <area>420,65,365,80</area>
+
+<!--
+        <area>-1,-1,1850,1010</area>
+
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+	        <area>0,0,1850,1010</area>
+        </group>
+	        	        
+        <group name="thumbfinder_panel">
+           <area>414,28,1400,952</area>
+
+	        <textarea name="title_panel" from="textarea_settings_title">
+	            <area>20,50,1315,50</area>
+	            <align>left,vcenter</align>
+	            <scroll direction="horizontal" />
+	            <value>Thumb Image Selector</value>
+	        </textarea>
+        	
+           <imagetype name="Listpanelline1">
+               <area>-30,142,1380,50</area>
+               <filename>images/shared/settings_radiobuttonoff.png</filename>
+           </imagetype>
+
+           <imagetype name="Listpanelline2">
+               <area>-30,214,1380,50</area>
+               <filename>images/shared/settings_radiobuttonoff.png</filename>
+           </imagetype>
+	        	
+	        <textarea name="positionlbl" from="textarea_settings_option">
+	            <position>20,120</position>
+	            <value>Current Position</value>
+	        </textarea>
+	
+	        <textarea name="seeklbl" from="textarea_settings_option">
+	            <position>20,192</position>
+	            <value>Seek amount:</value>
+	        </textarea>
+
+	        <textarea name="currentpos" from="textarea_settings_option">
+	            <area>500,120,840,72</area>
+	        </textarea>
+	
+	        <textarea name="seekamount" from="textarea_settings_option">
+	            <area>500,192,840,72</area>
+	            <value>Frame</value>
+	        </textarea>
+	
+        <imagetype name="positionimage">
+            <area>20,264,350,25</area>
             <filename>trans-cr-background.png</filename>
         </imagetype>
 
         <button name="frame_button">
-            <position>22,65</position>
+            <position>20,336</position>
             <statetype name="buttonstate">
                 <state name="active">
                     <imagetype name="background">
@@ -885,103 +1132,160 @@ MythArchive GUI theme
             </statetype>
         </button>
 
-        <imagetype name="frameimage">
-            <area>27,70,360,229</area>
-            <filename>ma_black.png</filename>
-        </imagetype>
+			   <buttonlist name="thumblist">
+			       <spacing>4</spacing>
+			       <area>0,745,1350,250</area>
+			       <searchposition>758,55</searchposition>
+			       <layout>horizontal</layout>
+			       <scrollstyle>center</scrollstyle>
+			       <arrange>stack</arrange>
+			       <align>hcenter</align>
+			       <wrapstyle>items</wrapstyle>
+			       <showarrow>yes</showarrow>
+			       <buttonarea>70,0,1230,250</buttonarea>
+			       <statetype name="buttonitem">
+			           <state name="active">
+			               <imagetype name="previewbgd">
+			                   <area>0,5,314,176</area>
+			                   <alpha>255</alpha>
+			                   <filename>images/shared/multiplex_tvborder.png</filename>
+			                   <preserveaspect>no</preserveaspect>
+			               </imagetype>
+			               <imagetype name="preview">
+			                   <area>8,11,300,168</area>
+			                   <alpha>255</alpha>
+			                   <mask>images/shared/multiplex_tvmask_small.png</mask>
+			                   <filename>images/shared/DefaultVideoBigPoster.png</filename>
+			                   <preserveaspect>no</preserveaspect>
+			                   <reflection shear="0" scale="50" length="33" spacing="0" />
+			               </imagetype>
+			               <imagetype name="buttonimage" from="preview"/>
+			               <imagetype name="previewglass">
+			                   <area>8,11,300,168</area>
+			                   <alpha>255</alpha>
+			                   <filename>images/shared/multiplex_tvglass.png</filename>
+			                   <preserveaspect>no</preserveaspect>
+			               </imagetype>
+			               <imagetype name="previewlabel" depends="!preview">
+			                   <area>19,225,278,90</area>
+			                   <alpha>255</alpha>
+			                   <filename>images/shared/multiplex_labelblock.png</filename>
+			                   <preserveaspect>no</preserveaspect>
+			               </imagetype>
+			           </state>
+			           <state name="selectedactive">
+			               <area>-648,-9,398,330</area>
+			               <imagetype name="previewbgd">
+			                   <area>0,-9,398,231</area>
+			                   <alpha>255</alpha>
+			                   <filename>images/shared/multiplex_tvborder.png</filename>
+			                   <preserveaspect>no</preserveaspect>
+			               </imagetype>
+			               <imagetype name="preview">
+			                   <area>9,0,380,213</area>
+			                   <alpha>255</alpha>
+			                   <preserveaspect>no</preserveaspect>
+			                   <mask>images/shared/multiplex_tvmask.png</mask>
+			                   <filename>images/shared/DefaultVideoBigPoster.png</filename>
+			               </imagetype>
+			               <imagetype name="buttonimage" from="preview"/>
+			               <imagetype name="previewglass">
+			                   <area>9,0,380,213</area>
+			                   <alpha>255</alpha>
+			                   <filename>images/shared/multiplex_tvglass.png</filename>
+			                   <preserveaspect>no</preserveaspect>
+			               </imagetype>
+			           </state>
+			           <state name="inactive" from ="active">
+			               <alpha>255</alpha>
+			           </state>
+			           <state name="selectedinactive" from="selectedactive">
+			               <alpha>255</alpha>
+			           </state>
+			       </statetype>
+				    <statetype name="downscrollarrow">
+				        <position>0,70</position>
+				        <state type="off">
+				            <imagetype name="dnon">
+				                <filename>images/shared/multiplex_arrow2.png</filename>
+				                <alpha>90</alpha>
+				            </imagetype>
+				        </state>
+				        <state type="full">
+				            <imagetype name="dnoff">
+				                <filename>images/shared/multiplex_arrow2.png</filename>
+				            </imagetype>
+				        </state>
+				    </statetype>
+				    <statetype name="upscrollarrow">
+				        <position>1300,70</position>
+				        <state type="off">
+				            <imagetype name="dnon">
+				                <filename>images/shared/multiplex_arrow1.png</filename>
+				                <alpha>90</alpha>
+				            </imagetype>
+				        </state>
+				        <state type="full">
+				            <imagetype name="dnoff">
+				                <filename>images/shared/multiplex_arrow1.png</filename>
+				            </imagetype>
+				        </state>
+				    </statetype>
+			       
+			   </buttonlist>
+       	
+        </group>
+        
+        <group name="thumbfinder_menu">
+           <area>29,28,324,952</area>
 
-        <textarea name="label1" from="basetextarea">
-            <area>420,75,365,20</area>
-            <font>basesmallyellow</font>
-            <align>hcenter</align>
-            <value>Current Position</value>
-        </textarea>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Thumbs</value>
+	        </textarea>
+	
+	        <button name="cancel_button" from="button_settings">
+	            <position>0,120</position>
+	            <value>Cancel</value>
+	        </button>
 
-        <textarea name="currentpos" from="basetextarea">
-            <area>420,95,365,40</area>
-            <align>hcenter</align>
-        </textarea>
+	        <button name="save_button" from="button_settings">
+	            <position>0,192</position>
+	            <value>Save</value>
+	        </button>
 
-        <imagetype name="bottombgimage">
-            <area>420,175,365,80</area>
-            <filename>trans-cr-background.png</filename>
-        </imagetype>
+	        <textarea name="imagelbl" from="textarea_settings_title">
+	            <area>30,691,284,50</area>
+	            <value>Selected Thumb</value>
+	        </textarea>
 
-        <textarea name="label2" from="basetextarea">
-            <area>420,185,365,20</area>
-            <align>hcenter</align>
-            <font>basesmallyellow</font>
-            <value>Seek Amount</value>
-        </textarea>
+           <group name="thumb_selected_group">
+              <position>12,761</position>
+		        <imagetype name="videoborder">
+		            <area>0,0,306,179</area>
+		            <filename>images/shared/multiplex_tvborder.png</filename>
+		        </imagetype>
+		        
+		        <imagetype name="frameimage">
+		            <area>8,9,290,163</area>
+		            <mask>images/shared/multiplex_tvmask_video.png</mask>
+		            <filename>images/shared/DefaultVideoBigPoster.png</filename>
+		        </imagetype>
+		        
+		        <imagetype name="videoglass">
+		            <area>8,9,290,163</area>
+		            <filename>images/shared/multiplex_tvglass.png</filename>
+		        </imagetype>
+           </group>
+	
+        </group>
 
-        <textarea name="seekamount" from="basetextarea">
-            <area>420,210,365,40</area>
-            <align>hcenter</align>
-            <value>Frame</value>
-        </textarea>
-
-        <imagetype name="positionimage">
-            <area>425,142,350,25</area>
-            <filename>trans-cr-background.png</filename>
-        </imagetype>
-
-        <button name="cancel_button" from="basebutton">
-            <position>425,260</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="save_button" from="basebutton">
-            <position>625,260</position>
-            <value>Save</value>
-        </button>
-
-        <buttonlist name="thumblist">
-            <area>25,320,760,280</area>
-            <layout>grid</layout>
-            <spacing>5</spacing>
-            <buttonarea>0,0,760,270</buttonarea>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <area>0,0,144,125</area>
-                    <shape name="buttonbackground">
-                        <area>0,0,144,125</area>
-                        <fill style="gradient">
-                            <gradient start="#505050" end="#000000" alpha="200" />
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext" from="basetextarea">
-                        <area>5,100,134,30</area>
-                        <font>basesmall</font>
-                        <align>hcenter,top</align>
-                    </textarea>
-                    <imagetype name="buttonimage">
-                        <area>5,5,134,90</area>
-                        <preserveaspect>false</preserveaspect>
-                    </imagetype>
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="buttonbackground">
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="255" />
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="buttonbackground">
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="100" />
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmallpurple</font>
-                    </textarea>
-                </state>
-            </statetype>
-        </buttonlist>
-
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+-->
     </window>
 
 </mythuitheme>

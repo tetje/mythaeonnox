@@ -407,86 +407,79 @@
            </state>
 
            <!-- ########  dvdmenu.xml  ########-->
-<!--
            <state name="DVD_PLAY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamDVDBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="VCD_PLAY">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamDVDBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="DVD_RIP">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamDVDBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/files/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE_CREATE_DVD">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE_CREATE_ARCHIVE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/files/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE_ENCODE_VIDEO">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/files/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE_IMPORT_VIDEO">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/files/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE_UTILITIES">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/files/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE_LAST_LOG">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/harddisk.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/files/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE_TEST_DVD">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamDVDBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ARCHIVE_BURN_DVD">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamDVDBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/play_disc/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
-           <state name="EJECT">
-               <imagetype name="watermark">
-                   <filename>images/backgrounds/eject-dvd.jpg</filename>
-                   <area>0,0,1280,720</area>
-               </imagetype>
-           </state>
--->
+
            <!-- ########  game_settings.xml  ########-->
 <!--
            <state name="GAME_SETTINGS_GENERAL">

@@ -863,7 +863,8 @@
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
                    <template>%title%</template>
-               </textarea>	          
+               </textarea>	
+               <textarea name="buttontext" from="title"/>          
            </state>
            <state name="selectedactive">
                <area>-648,-9,398,330</area>
@@ -897,7 +898,8 @@
                    <cutdown>no</cutdown>
 		             <align>allcenter</align>
 		             <template>%title%</template>
-               </textarea>	  
+               </textarea>
+               <textarea name="buttontext" from="title"/>	  
            </state>
            <state name="inactive" from ="active">
                <alpha>255</alpha>
@@ -3911,6 +3913,30 @@
                <textarea name="text" from="textarea_list">
                    <area>70,0,560,50</area>
                    <font>Font_List_Active</font>
+               </textarea>
+           </state>
+           <state name="disabled" from="active" />
+           <state name="pushed" from="active">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+
+    <button name="button_submenu">
+        <area>0,0,195,55</area>
+        <statetype name="buttonstate">
+           <state name="active">
+               <textarea name="text" from="textarea_submenu">
+                   <area>0,5,195,50</area>
+                   <alpha>128</alpha>
+               </textarea>
+           </state>
+           <state name="selected">
+               <textarea name="text" from="textarea_submenu">
+                   <area>0,5,195,50</area>
+					    <cutdown>no</cutdown>
+					    <scroll direction="vertical" />                  
+                   <alpha>255</alpha>
                </textarea>
            </state>
            <state name="disabled" from="active" />
