@@ -9,7 +9,7 @@ MythTV Archive GUI theme
 
     <window name="exportnative">
  
-         <area>-1,-1,1850,1010</area>
+        <area>-1,-1,1850,1010</area>
 
 	     <animation trigger="AboutToShow">
 	        <section duration="1000" centre="middle">
@@ -152,114 +152,170 @@ MythTV Archive GUI theme
 
     </window>
 
-    <!--
-      Archive File Selector
-    -->
-
     <window name="archivefile_selector">
 
-        <textarea name="pagetitle" from="basetextarea">
-            <area>30,10,570,40</area>
-            <font>baselarge</font>
-            <value>File Finder To Import</value>
-        </textarea>
+        <area>-1,-1,1850,1010</area>
 
-        <textedit name="location_edit" from="basetextedit">
-            <position>35,60</position>
-        </textedit>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+	        <area>0,0,1850,1010</area>
+        </group>
+	        	        
+        <group name="archivefile_selector_panel">
+           <area>414,28,1400,952</area>
+<!--
+	        <textarea name="panel_title" from="textarea_settings_title">
+	            <area>20,50,1315,50</area>
+	            <align>left,vcenter</align>
+	            <scroll direction="horizontal" />
+	            <value>Search for files to import</value>
+	        </textarea>
+-->
+	        <textedit name="location_edit" from="textedit_settings_details">
+	            <position>-5,25</position>
+	        </textedit>
 
-        <button name="back_button" from="basebutton">
-            <position>425,65</position>
-            <value>Back</value>
-        </button>
 
-        <button name="home_button" from="basebutton">
-            <position>585,65</position>
-            <value>Home</value>
-        </button>
+           <!-- gridlines -->	        	
+           <imagetype name="backgroundgridline10">
+               <area>-20,760,1380,50</area>
+               <preserveaspect>no</preserveaspect>
+               <filename>images/shared/settings_radiobuttonoff.png</filename>
+           </imagetype>
 
-        <buttonlist name="filelist" from="basebuttonlist">
-            <area>25,130,740,260</area>
-            <statetype name="buttonitem">
-                <state name="active">
-                    <imagetype name="buttonimage">
-                        <area>2,2,28,28</area>
-                    </imagetype>
-                    <textarea name="buttontext">
-                        <area>35,0,650,30</area>
-                    </textarea>
-                    <statetype name="buttoncheck">
-                        <position>715,5</position>
-                    </statetype>
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,100%,100%</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" />
-                        </fill>
-                    </shape>
-                </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,100%,100%</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="100" />
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmallpurple</font>
-                    </textarea>
-                </state>
-            </statetype>
-        </buttonlist>
+	        <!-- labels -->
+	
+	        <!-- widgets -->
+	        <buttonlist name="filelist">
+	            <area>20,120,1340,555</area>
+	            <spacing>5</spacing>
+	            <layout>grid</layout>
+	            <buttonarea>0,0,1340,555</buttonarea>
+	            <statetype name="buttonitem">
+	                <state name="active">
+			              <area>0,0,160,180</area>
+	                    <statetype name="nodetype">
+	                        <state name="folder">
+	                            <imagetype name="icon">
+	                                <area>16,16,128,128</area>
+	                                <filename>images/icons/Blank-Folder.png</filename>
+	                             <!--   <mask>images/shared/wall_music_mask_small.png</mask> -->
+	                                <preserveaspect>yes</preserveaspect>
+	                            </imagetype>
+	                        </state>
+	                        <state name="upfolder" from="folder">
+	                            <imagetype name="icon">
+	                                <filename>images/icons/uploads.png</filename>
+	                            </imagetype>
+	                        </state>
+	                        <state name="executable" from="folder">
+	                            <imagetype name="icon">
+	                                <filename>images/icons/binary.png</filename>
+	                            </imagetype>
+	                        </state>
+	                        <state name="file" from="folder">
+	                            <imagetype name="icon">
+	                                <filename>images/icons/file.png</filename>
+	                            </imagetype>
+	                        </state>
+	                    </statetype>
+	                    <imagetype name="buttonimage">
+	                        <area>3,3,154,154</area>
+	                        <preserveaspect>true</preserveaspect>
+	                    </imagetype>
+	                    <imagetype name="defaultimage" depends="!buttonimage">
+	                        <area>3,3,154,154</area>
+	                        <preserveaspect>true</preserveaspect>
+	                        <filename>images/icons/file.png</filename>
+	                    </imagetype>
+	                    <textarea name="buttontext"from="textarea_plot">
+			                  <font>Font_Info_Small_Grey</font>
+	                        <area>10,150,140,30</area>
+	                        <align>allcenter</align>
+	                    </textarea>
+	                </state>
+	                <state name="selectedinactive" from="active" />
+	                <state name="selectedactive" from="active">
+			              <imagetype name="WallMusicBorder">
+			                  <area>-5,-8,169,190</area>
+			                  <preserveaspect>no</preserveaspect>
+			                  <filename>images/shared/wall_fborder.png</filename>
+			              </imagetype>
+	                    <textarea name="buttontext"from="textarea_plot">
+			                  <font>Font_Info_Small_White</font>
+	                        <area>10,150,140,30</area>
+	                        <align>allcenter</align>
+	                    </textarea>
+			              <imagetype name="WallMovieOverlay">
+			                  <area>5,-2,154,176</area>
+			                  <filename>images/shared/list_musicicon_glass.png</filename>
+			              </imagetype>
+	                </state>
+	            </statetype>
+	        </buttonlist>
 
-        <shape name="topbackground" from="basebackground">
-            <area>20,410,760,120</area>
-        </shape>
+		     <textarea name="title_text" from="textarea_settings_button">
+	            <area>20,770,1315,32</area>
+	        </textarea>
 
-        <textarea name="label1" from="basetextarea">
-            <area>30,415,160,40</area>
-            <font>basesmallyellow</font>
-            <value>Title:</value>
-        </textarea>
+	        <textarea name="starttime_text" from="title_text">
+               <align>right,vcenter</align>
+           </textarea>
+	
+	        <textarea name="subtitle_text" from="textarea_plot">
+	            <area>20,820,1315,116</area>
+	            <case>normal</case>
+	            <align>top,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+	        	
+        </group>
+        
+        <group name="archivefile_selector_menu">
+           <area>29,28,324,952</area>
 
-        <textarea name="label2" from="label1">
-            <position>30,455</position>
-            <value>Subtitle:</value>
-        </textarea>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>File browser</value>
+	        </textarea>
+	
+	        <button name="back_button" from="button_settings">
+	            <position>0,120</position>
+	            <value>Up Level</value>
+	        </button>
 
-        <textarea name="label3" from="label1">
-            <position>30,495</position>
-            <value>Start Time:</value>
-        </textarea>
+	        <button name="home_button" from="button_settings">
+	            <position>0,192</position>
+	            <value>Home</value>
+	        </button>
+	
+	        <button name="cancel_button" from="button_settings">
+	            <position>0,264</position>
+	            <value>Cancel</value>
+	        </button>
+	
+	        <button name="prev_button" from="button_settings">
+	            <position>0,336</position>
+	            <value>Previous</value>
+	        </button>
 
-        <textarea name="title_text" from="basetextarea">
-            <area>180,420,500,40</area>
-        </textarea>
+	        <button name="next_button" from="button_settings">
+	            <position>0,408</position>
+	            <value>Next</value>
+	        </button>
 
-        <textarea name="subtitle_text" from="basetextarea">
-            <area>180,460,500,40</area>
-        </textarea>
+        </group>
 
-        <textarea name="starttime_text" from="basetextarea">
-            <area>180,500,500,40</area>
-        </textarea>
-
-        <button name="cancel_button" from="basebutton">
-            <position>35,550</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="prev_button" from="basebutton">
-            <position>440,550</position>
-            <value>Prev</value>
-        </button>
-
-        <button name="next_button" from="basebutton">
-            <position>610,550</position>
-            <value>Next</value>
-        </button>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
     </window>
 

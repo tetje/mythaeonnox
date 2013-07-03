@@ -9,7 +9,7 @@ Common MythArchive window definitions
 
     <window name="selectdestination">
 
-         <area>-1,-1,1850,1010</area>
+        <area>-1,-1,1850,1010</area>
 
 	     <animation trigger="AboutToShow">
 	        <section duration="1000" centre="middle">
@@ -175,14 +175,19 @@ Common MythArchive window definitions
 	        	        
         <group name="filebrowser_panel">
            <area>414,28,1400,952</area>
-
+<!--
 	        <textarea name="panel_title" from="textarea_settings_title">
 	            <area>20,50,1315,50</area>
 	            <align>left,vcenter</align>
 	            <scroll direction="horizontal" />
 	            <value>Search for files on your local disks</value>
 	        </textarea>
-	        	
+-->	        	
+	
+	        <textedit name="location_edit" from="textedit_settings_details">
+	            <position>-5,25</position>
+	        </textedit>
+
 	        <!-- Labels -->
 	
 	        <!-- widgets -->
@@ -223,6 +228,11 @@ Common MythArchive window definitions
 	                        <area>3,3,154,154</area>
 	                        <preserveaspect>true</preserveaspect>
 	                    </imagetype>
+	                    <imagetype name="defaultimage" depends="!buttonimage">
+	                        <area>3,3,154,154</area>
+	                        <preserveaspect>true</preserveaspect>
+	                        <filename>images/icons/file.png</filename>
+	                    </imagetype>
 	                    <textarea name="buttontext"from="textarea_plot">
 			                  <font>Font_Info_Small_Grey</font>
 	                        <area>10,150,140,30</area>
@@ -248,10 +258,6 @@ Common MythArchive window definitions
 	                </state>
 	            </statetype>
 	        </buttonlist>
-	
-	        <textedit name="location_edit" from="textedit_settings_details">
-	            <position>-5,750</position>
-	        </textedit>
 	
 	        <textarea name="info" from="basetextarea">
 	            <area>20,830,1300,116</area>

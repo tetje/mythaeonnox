@@ -957,7 +957,7 @@ MythArchive GUI theme
 	        <textarea name="helptext" from="textarea_plot">
 	            <area>38,320,667,260</area>
 	            <align>left,top</align>
-	            <value>First select the thumb image you want to change from the overview. Second press the 'tab' key to move to the select thumb frame button to change the thumb image.</value>
+	            <value>First, select the thumb image you want to change from the overview. Second, press the 'tab' key to move to the select thumb frame button to change the image.</value>
 	        </textarea>
 	        
 	     </group>   
