@@ -239,7 +239,6 @@ Common MythArchive window definitions
 	                        <align>allcenter</align>
 	                    </textarea>
 	                </state>
-	                <state name="selectedinactive" from="active" />
 	                <state name="selectedactive" from="active">
 			              <imagetype name="WallMusicBorder">
 			                  <area>-5,-8,169,190</area>
@@ -256,6 +255,7 @@ Common MythArchive window definitions
 			                  <filename>images/shared/list_musicicon_glass.png</filename>
 			              </imagetype>
 	                </state>
+	                <state name="selectedinactive" from="selectedactive" />
 	            </statetype>
 	        </buttonlist>
 	

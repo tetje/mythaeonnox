@@ -239,7 +239,6 @@ MythTV Archive GUI theme
 	                        <align>allcenter</align>
 	                    </textarea>
 	                </state>
-	                <state name="selectedinactive" from="active" />
 	                <state name="selectedactive" from="active">
 			              <imagetype name="WallMusicBorder">
 			                  <area>-5,-8,169,190</area>
@@ -256,6 +255,7 @@ MythTV Archive GUI theme
 			                  <filename>images/shared/list_musicicon_glass.png</filename>
 			              </imagetype>
 	                </state>
+	                <state name="selectedinactive" from="selectedactive" />
 	            </statetype>
 	        </buttonlist>
 
@@ -319,100 +319,217 @@ MythTV Archive GUI theme
 
     </window>
 
-  <!--
-      Import Archive
-   -->
+    <window name="importnative">
 
-  <window name="importnative">
+        <area>-1,-1,1850,1010</area>
 
-        <textarea name="pagetitle" from="basetextarea">
-            <area>30,10,570,40</area>
-            <font>baselarge</font>
-            <value>Select Associated Channel</value>
-        </textarea>
+	     <animation trigger="AboutToShow">
+	        <section duration="1000" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InQuad" />
+	        </section>
+	     </animation>
+	     
+        <group name="settings_panel_bgd" from="basesettingswindow_detail">
+	        <area>0,0,1850,1010</area>
+        </group>
+	        	        
+        <group name="importnative_panel">
+           <area>414,28,1400,952</area>
 
-        <!--
-            archived file channel
-        -->
+	        <textarea name="panel_title1" from="textarea_settings_title">
+	            <area>320,50,1315,50</area>
+	            <align>left,vcenter</align>
+	            <scroll direction="horizontal" />
+	            <value>Archived Channel</value>
+	        </textarea>
 
-        <shape name="topbackground" from="basebackground">
-            <area>25,60,750,140</area>
-        </shape>
+	        <textarea name="panel_title2" from="panel_title1">
+	            <position>820,50</position>
+	            <value>Local Channel</value>
+	        </textarea>
 
-        <textarea name="progtitle" from="basetextarea">
-            <area>40,70,440,30</area>
-        </textarea>
+           <!-- gridlines -->
+           <group name="gridline_group">	  
+              <position>-20,120</position>      	
+	           <imagetype name="backgroundgridline1">
+	               <area>0,22,1380,50</area>
+	               <preserveaspect>no</preserveaspect>
+	               <filename>images/shared/settings_radiobuttonoff.png</filename>
+	           </imagetype>
+	           <imagetype name="backgroundgridline2" from="backgroundgridline1">
+	               <position>0,94</position>
+	           </imagetype>
+	           <imagetype name="backgroundgridline3" from="backgroundgridline1">
+	               <position>0,166</position>
+	           </imagetype>
+	           <imagetype name="backgroundgridline4" from="backgroundgridline1">
+	               <position>0,238</position>
+	           </imagetype>
+           </group>
+           <imagetype name="backgroundgridline10">
+               <area>-20,760,1380,50</area>
+               <preserveaspect>no</preserveaspect>
+               <filename>images/shared/settings_radiobuttonoff.png</filename>
+           </imagetype>
 
-        <textarea name="progdatetime" from="basetextarea">
-            <area>565,70,185,30</area>
-            <align>right</align>
-        </textarea>
+	        <!-- labels -->
+           <group name="archivechannellbl_group">
+              <area>16,120,1320,288</area>
+		        <textarea name="chanid_label" from="textarea_settings_option">
+		            <position>0,0</position>
+		            <value>Channel ID:</value>
+		        </textarea>
+			
+		        <textarea name="channo_label" from="textarea_settings_option">
+		            <position>0,72</position>
+		            <value>Channel Number:</value>
+		        </textarea>
+			
+		        <textarea name="callsign_label" from="textarea_settings_option">
+		            <position>0,144</position>
+		            <value>Callsign:</value>
+		        </textarea>
+			
+		        <textarea name="name_label" from="textarea_settings_option">
+		            <position>0,216</position>
+		            <value>Channel Name:</value>
+		        </textarea>
+	        </group>
+<!--		
+           <group name="locallchannellbl_group" from="archivechannellbl_group">
+              <area>16,480,1320,288</area>
+	        </group>
+-->		
+	        <!-- widgets -->
+           <group name="archivechannel_group">
+              <position>320,120</position>
+		        <textarea name="chanid" from="textarea_settings_option">
+		            <area>0,0,500,72</area>
+		        </textarea>
+	
+		        <textarea name="channo" from="chanid">
+		            <position>0,72</position>
+		        </textarea>
+	
+		        <textarea name="callsign" from="chanid">
+		            <position>0,144</position>
+		        </textarea>
+	
+		        <textarea name="name" from="chanid">
+		            <position>0,216</position>
+		        </textarea>
+	        </group>
 
-        <textarea name="progdescription" from="basetextarea">
-            <area>40,100,720,100</area>
-            <multiline>yes</multiline>
-        </textarea>
+           <group name="localchannel_group">
+              <position>820,120</position>
+		        <textarea name="local_chanid" from="textarea_settings_option">
+		            <area>0,0,500,72</area>
+		        </textarea>
+	
+		        <textarea name="local_channo" from="local_chanid">
+		            <position>0,72</position>
+		        </textarea>
+	
+		        <textarea name="local_callsign" from="local_chanid">
+		            <position>0,144</position>
+		        </textarea>
+	
+		        <textarea name="local_name" from="local_chanid">
+		            <position>0,216</position>
+		        </textarea>
+	        </group>
 
-        <imagetype name="preview_image">
-            <area>615,70,130,100</area>
-            <filename>blank.png</filename>
-        </imagetype>
+		     <textarea name="progtitle" from="textarea_settings_button">
+	            <area>20,770,1315,32</area>
+	        </textarea>
 
-        <shape name="middlebackground" from="basebackground">
-            <area>25,225,750,130</area>
-        </shape>
+	        <textarea name="progdatetime" from="progtitle">
+               <align>right,vcenter</align>
+           </textarea>
+	
+	        <textarea name="progdescription" from="textarea_plot">
+	            <area>20,820,1315,116</area>
+	            <case>normal</case>
+	            <align>top,left</align>
+	            <multiline>yes</multiline>
+	        </textarea>
+	        	
+        </group>
+        
+        <group name="importnative_menu">
+           <area>29,28,324,952</area>
 
-        <textarea name="label1" from="basetextarea">
-            <area>50,230,690,50</area>
-            <font>basemedium</font>
-            <align>hcenter</align>
-            <value>Archived Channel</value>
-        </textarea>
+	        <textarea name="titlemenu" from="textarea_settings_title">
+	            <area>30,50,284,50</area>
+	            <value>Select Channel</value>
+	        </textarea>
+	
+	        <button name="searchchanid_button" from="button_settings">
+	            <position>0,120</position>
+	            <value>Search Chan ID</value>
+	        </button>
 
-        <textarea name="label2" from="basetextarea">
-            <area>50,280,500,50</area>
-            <font>basesmallyellow</font>
-            <value>Chan. ID:</value>
-        </textarea>
+	        <button name="searchchanno_button" from="button_settings">
+	            <position>0,192</position>
+	            <value>Search Chan NO</value>
+	        </button>
+	
+	        <button name="searchcallsign_button" from="button_settings">
+	            <position>0,264</position>
+	            <value>Search Callsign</value>
+	        </button>
+	
+	        <button name="searchname_button" from="button_settings">
+	            <position>0,336</position>
+	            <value>Search Name</value>
+	        </button>
 
-        <textarea name="chanid" from="basetextarea">
-            <area>190,285,500,50</area>
-        </textarea>
+	        <button name="cancel_button" from="button_settings">
+	            <position>0,408</position>
+	            <value>Cancel</value>
+	        </button>
 
-        <textarea name="label3" from="label2">
-            <position>50,320</position>
-            <value>Chan. No:</value>
-        </textarea>
+	        <button name="prev_button" from="button_settings">
+	            <position>0,480</position>
+	            <value>Previous</value>
+	        </button>
 
-        <textarea name="channo" from="chanid">
-            <position>190,325</position>
-        </textarea>
+	        <button name="finish_button" from="button_settings">
+	            <position>0,552</position>
+	            <value>Finish</value>
+	        </button>
 
-        <textarea name="label4" from="label2">
-            <position>350,280</position>
-            <value>Callsign:</value>
-        </textarea>
+           <group name="preview_image_group">
+              <position>12,761</position>
+		        <imagetype name="videoborder">
+		            <area>0,0,306,179</area>
+		            <filename>images/shared/multiplex_tvborder.png</filename>
+		        </imagetype>
+		        
+		        <imagetype name="tpreview_image">
+		            <area>8,9,290,163</area>
+		            <mask>images/shared/multiplex_tvmask_video.png</mask>
+		            <filename>images/shared/DefaultTVShows.png</filename>
+		        </imagetype>
+		        
+		        <imagetype name="videoglass">
+		            <area>8,9,290,163</area>
+		            <filename>images/shared/multiplex_tvglass.png</filename>
+		        </imagetype>
+           </group>
 
-        <textarea name="callsign" from="chanid">
-            <position>480,285</position>
-        </textarea>
+        </group>
 
-        <textarea name="label5" from="label2">
-            <position>350,320</position>
-            <value>Name:</value>
-        </textarea>
+	     <animation trigger="AboutToHide">
+	        <section duration="1000" centre="middle">
+	            <alpha start="255" end="0" easingcurve="InQuad" />
+	        </section>
+	     </animation>
 
-        <textarea name="name" from="chanid">
-            <position>480,325</position>
-        </textarea>
+<!--
 
-        <!--
             local file channel
-         -->
 
-        <shape name="bottombackground" from="basebackground">
-            <area>25,380,750,140</area>
-        </shape>
 
         <textarea name="label6" from="label1">
             <position>50,385</position>
@@ -506,7 +623,7 @@ MythTV Archive GUI theme
             <position>610,550</position>
             <value>Finish</value>
         </button>
-
+-->
   </window>
 
 </mythuitheme>

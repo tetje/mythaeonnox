@@ -7439,7 +7439,6 @@
 	                        <align>allcenter</align>
 	                    </textarea>
 	                </state>
-	                <state name="selectedinactive" from="active" />
 	                <state name="selectedactive" from="active">
 			              <imagetype name="WallMusicBorder">
 			                  <area>-5,-8,169,190</area>
@@ -7456,6 +7455,7 @@
 			                  <filename>images/shared/list_musicicon_glass.png</filename>
 			              </imagetype>
 	                </state>
+	                <state name="selectedinactive" from="selectedactive" />
 	            </statetype>
 	            <helptext>Press 'up', 'down, 'left' and 'right' arrows to move through the files and folders. Press 'select' or 'enter' key to select the file or folder.</helptext>
 	        </buttonlist>
