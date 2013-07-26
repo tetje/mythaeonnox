@@ -1986,38 +1986,6 @@
 		         <area>0,860,302,64</area>
 		     </statetype>
 
-<!--
-
-        <textarea name="tracknumlbl" from="titlelbl">
-            <area>510,160,150,35</area>
-            <value>Track No.:</value>
-        </textarea>
-
-        <textarea name="tracknum" from="title">
-            <area>680,160,100,35</area>
-        </textarea>
-
-        <textarea name="lastplaylbl" from="titlelbl">
-            <area>100,360,210,35</area>
-            <value>Last Played:</value>
-        </textarea>
-
-        <textarea name="lastplayed" from="title">
-            <area>320,360,465,35</area>
-            <value></value>
-        </textarea>
-
-        <textarea name="playcountlbl" from="titlelbl">
-            <area>160,400,150,35</area>
-            <value>Played:</value>
-        </textarea>
-
-        <textarea name="playcount" from="title">
-            <area>320,400,500,35</area>
-            <template>%playcount% times</template>
-        </textarea>
-
--->
         </group>
 
     </window>
