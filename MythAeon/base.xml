@@ -2240,6 +2240,83 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_games">
+       <area>0,0,1115,800</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,1115,800</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,1115,113</area>
+               <imagetype name="Listpanelline">
+                   <area>0,63,1115,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+               </textarea>
+               <textarea name="title" from="buttontext"/>
+               <textarea name="year" from="textarea_list">
+                   <area>900,25,144,35</area>
+                   <align>hcenter,vcenter</align>
+                   <font>Font_List_Active</font>
+                   <value>year</value>
+               </textarea>
+               <textarea name="genre" from="textarea_label_list">
+                   <area>50,55,850,30</area>
+                   <cutdown>yes</cutdown>
+                   <value>genre: feature not implemented</value>
+               </textarea>
+			      <imagetype name="starsbgd">
+			          <area>927,61,90,18</area>
+			          <filename>images/icons/ratings/stars_bg.png</filename>
+			      </imagetype>
+			      <statetype name="userratingstate" from="rating_base">
+			          <area>927,61,90,18</area>
+			      </statetype>
+           </state>
+           <state name="selectedactive">
+               <area>0,0,1115,113</area>
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,1115,113</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>50,25,850,35</area>
+                   <scroll direction="left" />
+               </textarea>
+               <textarea name="title" from="buttontext"/>
+               <textarea name="year" from="textarea_list">
+                   <area>900,25,144,35</area>
+                   <align>hcenter,vcenter</align>
+                   <value>year</value>
+               </textarea>
+               <textarea name="genre" from="textarea_label_list">
+                   <area>50,55,850,30</area>
+                   <scroll direction="left" />
+                   <font>Font_Label_List_Selected</font>
+                   <value>genre: feature not implemented</value>
+               </textarea>
+			      <imagetype name="starsbgd">
+			          <area>927,61,90,18</area>
+			          <filename>images/icons/ratings/stars_bg.png</filename>
+			      </imagetype>
+			      <statetype name="userratingstate" from="rating_base">
+			          <area>927,61,90,18</area>
+			      </statetype>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
    <buttonlist name="buttonlist_news_sites">
        <area>0,0,1115,800</area>
        <layout>vertical</layout>
