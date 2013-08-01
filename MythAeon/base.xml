@@ -2269,10 +2269,10 @@
                    <font>Font_List_Active</font>
                    <value>year</value>
                </textarea>
-               <textarea name="genre" from="textarea_label_list">
+               <textarea name="publisher" from="textarea_label_list">
                    <area>50,55,850,30</area>
                    <cutdown>yes</cutdown>
-                   <value>genre: feature not implemented</value>
+                   <value>publisher: </value>
                </textarea>
 			      <imagetype name="starsbgd">
 			          <area>927,61,90,18</area>
@@ -2298,11 +2298,11 @@
                    <align>hcenter,vcenter</align>
                    <value>year</value>
                </textarea>
-               <textarea name="genre" from="textarea_label_list">
+               <textarea name="publisher" from="textarea_label_list">
                    <area>50,55,850,30</area>
                    <scroll direction="left" />
                    <font>Font_Label_List_Selected</font>
-                   <value>genre: feature not implemented</value>
+                   <value>publisher:</value>
                </textarea>
 			      <imagetype name="starsbgd">
 			          <area>927,61,90,18</area>
