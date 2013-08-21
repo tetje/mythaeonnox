@@ -76,6 +76,10 @@
         <pixelsize>18</pixelsize>
     </fontdef>
 
+    <fontdef name="Font_Info_20_White" from="Font_Info">
+        <pixelsize>20</pixelsize>
+    </fontdef>
+
     <fontdef name="Font_Info_Small" from="Font_Info">
         <pixelsize>18</pixelsize>
         <weight>bold</weight>
@@ -156,6 +160,11 @@
     <fontdef name="Font_Button_Settings" face="ScoutCond">
         <pixelsize>40</pixelsize>
         <color>#ffffff</color>
+    </fontdef>
+    
+    <fontdef name="Font_Button_Settings_Normal_Black" face="ScoutCond">
+        <pixelsize>40</pixelsize>
+        <color>#000000</color>
     </fontdef>
     
     <fontdef name="Font_Button_Settings_Small" from="Font_Button_Settings">
@@ -713,18 +722,19 @@
                    <filename>images/shared/multiplex_tvglass.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
-               <imagetype name="previewlabel" depends="!preview">
-                   <area>19,185,278,90</area>
+               <imagetype name="previewlabel">
+                   <area>19,235,278,90</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_labelblock.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
-               <textarea name="title" from="textarea_plot" depends="!preview">
-                   <area>24,185,268,50</area>
+               <textarea name="title" from="textarea_plot">
+                   <area>24,235,268,50</area>
+                   <font>Font_Info_20_White</font>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
-                   <template>%title%</template>
+                   <template>%startdate%% - |00x00%\n%title%</template>
                </textarea>	          
            </state>
            <state name="selectedactive">
@@ -860,6 +870,7 @@
                <textarea name="title" from="textarea_plot" depends="!preview">
                    <area>24,225,268,50</area>
                    <multiline>yes</multiline>
+                   <font>Font_Info_20_White</font>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
                    <template>%title%</template>
@@ -1010,7 +1021,7 @@
 -->            
                <textarea name="buttontext" from="textarea_plot" depends="!coverart">
                    <area>17,245,140,50</area>
-                   <font>Font_Info_Small_White</font>
+                   <font>Font_Info_20_White</font>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
@@ -1159,7 +1170,7 @@
 -->
                <textarea name="title" from="textarea_plot">
                    <area>17,225,140,50</area>
-                   <font>Font_Info_Small_White</font>
+                   <font>Font_Info_20_White</font>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
@@ -1332,7 +1343,7 @@
                </imagetype>
                <textarea name="title" from="textarea_plot">
                    <area>17,225,140,50</area>
-                   <font>Font_Info_Small_White</font>
+                   <font>Font_Info_20_White</font>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
@@ -1501,7 +1512,7 @@
 -->
                <textarea name="channel" from="textarea_plot">
                    <area>17,225,140,50</area>
-                   <font>Font_Info_Small_White</font>
+                   <font>Font_Info_20_White</font>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
@@ -1682,7 +1693,7 @@
 -->            
                <textarea name="buttontext" from="textarea_plot" depends="!coverart">
                    <area>17,245,140,50</area>
-                   <font>Font_Info_Small_White</font>
+                   <font>Font_Info_20_White</font>
                    <multiline>yes</multiline>
                    <cutdown>yes</cutdown>
                    <align>hcenter,vcenter</align>
@@ -1808,6 +1819,59 @@
            </state>
            <state name="inactive" from="active"/>
            <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_zonemindershowpanel">
+       <area>0,0,1052,560</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,1052,560</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,1052,70</area>
+		         <textarea name="buttontext" from="textarea_label">
+		             <area>20,7,973,30</area>
+		         </textarea>	
+		         <textarea name="camera" from="buttontext">
+		             <align>right,vcenter</align>
+		         </textarea>	
+               <textarea name="time" from="textarea_info">
+                   <area>20,32,973,30</area>
+               </textarea>
+               <textarea name="length" from="time">
+                   <align>right,vcenter</align>
+                   <template>%length%</template>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,1052,70</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+		         <textarea name="buttontext" from="textarea_label">
+		             <area>20,7,973,30</area>
+		             <font>Font_Label_List_Selected</font>
+		         </textarea>	
+		         <textarea name="camera" from="buttontext">
+		             <align>right,vcenter</align>
+               </textarea>
+               <textarea name="time" from="textarea_info">
+                   <area>20,32,973,30</area>
+                   <font>Font_Info_Selected</font>
+               </textarea>
+               <textarea name="length" from="time">
+                   <align>right,vcenter</align>
+                   <template>%length%</template>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="active"/>
        </statetype>
    </buttonlist>
 
@@ -1940,7 +2004,7 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_tvshowpanel_group">
-       <area>0,0,615,352</area>
+       <area>0,0,712,280</area>
        <layout>vertical</layout>
        <spacing>0</spacing>
        <scrollstyle>free</scrollstyle>
@@ -1948,30 +2012,30 @@
        <align>left</align>
        <wrapstyle>selection</wrapstyle>
        <showarrow>no</showarrow>
-       <buttonarea>0,0,615,352</buttonarea>
+       <buttonarea>0,0,712,280</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
-               <area>0,0,615,70</area>
-		         <textarea name="lbl" from="textarea_label">
-		             <area>20,7,575,30</area>
+               <area>0,0,670,70</area>
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,670,30</area>
 		             <value>Grouplist item:</value>
 		         </textarea>	
                <textarea name="buttontext" from="textarea_info">
-                   <area>20,32,575,30</area>
+                   <area>20,32,670,30</area>
                </textarea>
            </state>
            <state name="selectedactive">
                <imagetype name="Listpanel_selectbar">
-                   <area>0,0,615,70</area>
+                   <area>0,0,712,70</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
-		         <textarea name="lbl" from="textarea_label">
-		             <area>20,7,575,30</area>
+		         <textarea name="listitemlbl" from="textarea_label">
+		             <area>20,7,670,30</area>
 		             <font>Font_Label_List_Selected</font>
 		             <value>Grouplist item:</value>
 		         </textarea>	
                <textarea name="buttontext" from="textarea_info">
-                   <area>20,32,575,30</area>
+                   <area>20,32,670,30</area>
                    <font>Font_Info_Selected</font>
                    <scroll direction="horizontal"/>
                </textarea>
@@ -1991,7 +2055,7 @@
        <statetype name="buttonitem">
            <state name="active">
                <area>0,0,700,70</area>
-		         <textarea name="lbl" from="textarea_label">
+		         <textarea name="listitemlbl" from="textarea_label">
 		             <area>20,7,680,30</area>
 		             <value>Searchlist item:</value>
 		         </textarea>	
@@ -2004,7 +2068,7 @@
                    <area>0,0,711,70</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
-		         <textarea name="lbl" from="textarea_label">
+		         <textarea name="listitemlbl" from="textarea_label">
 		             <area>20,7,680,30</area>
 		             <font>Font_Label_List_Selected</font>
 		             <value>Searchlist item:</value>
@@ -4840,6 +4904,46 @@
        </statetype>
    </checkbox>
 
+   <checkbox name="checkbox_dialog">
+       <area>0,0,700,50</area>
+       <statetype name="background">
+           <state name="active">
+               <imagetype name="Listpanelline">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_nofocus.png</filename>
+               </imagetype>
+           </state>
+           <state name="selected">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,700,50</area>
+                   <filename>images/shared/context_highlight.png</filename>
+               </imagetype>
+           </state>
+           <state name="disabled" from="active"/>
+       </statetype>
+       <statetype name="checkstate">
+           <state type="off">
+               <imagetype name="LEDOff">
+                   <area>547,-24,122,98</area>
+                   <filename>images/shared/settings_radiobuttonon.png</filename>
+               </imagetype>
+           </state>
+           <state type="half">
+               <imagetype name="LEDOn">
+                   <area>547,-24,122,98</area>
+                   <filename>images/shared/settings_radiobuttononfocus.png</filename>
+                   <alpha>128</alpha>
+               </imagetype>
+           </state>
+           <state type="full">
+               <imagetype name="LEDOn">
+                   <area>547,-24,122,98</area>
+                   <filename>images/shared/settings_radiobuttononfocus.png</filename>
+               </imagetype>
+           </state>
+       </statetype>
+   </checkbox>
+
    <checkbox name="checkbox_settings_halfwidth">
        <area>0,0,700,72</area>
        <statetype name="background">
@@ -5902,6 +6006,60 @@
             <state type="full">
                 <imagetype name="upoff">
                    <area>674,-13,62,98</area>
+                   <filename>images/shared/spin-up-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+   </buttonlist>
+
+   <buttonlist name="selector_tvshowpanel">
+       <area>0,0,615,70</area>
+       <layout>horizontal</layout>
+       <buttonarea>0,0,490,70</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,470,30</area>
+               </textarea>
+          </state>
+          <state name="selectedactive">
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,615,70</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_info">
+                   <area>20,32,470,30</area>
+                   <font>Font_Info_Selected</font>
+                   <scroll direction="horizontal"/>
+               </textarea>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="active"/>
+       </statetype>
+        <statetype name="upscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>491,-13,62,98</area>
+                   <filename>images/shared/spin-down.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="dnoff">
+                   <area>491,-13,62,98</area>
+                   <filename>images/shared/spin-down-focus.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <state type="off">
+               <imagetype name="dnon">
+                   <area>553,-13,62,98</area>
+                   <filename>images/shared/spin-up.png</filename>
+               </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                   <area>553,-13,62,98</area>
                    <filename>images/shared/spin-up-focus.png</filename>
                 </imagetype>
             </state>
@@ -7072,6 +7230,25 @@
         </imagetype>        
     </group>
 
+    <group name="basedialogwindow350" >
+        <area>0,0,700,350</area>
+        <imagetype name="dialogtop">
+            <area>0,0,700,75</area>
+            <filename>images/shared/context_top.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogmid">
+            <area>1,75,700,200</area>
+            <filename>images/shared/context_middle.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+        <imagetype name="dialogbottom">
+            <area>0,274,700,75</area>
+            <filename>images/shared/context_bottom.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>        
+    </group>
+
     <group name="basedialogwindowmid" >
         <area>0,0,700,400</area>
         <imagetype name="dialogtop">
@@ -7322,7 +7499,7 @@
             <filepattern low="0" high="24">images/busyimages/%1.png</filepattern>
             <delay>250</delay>
         </imagetype>
-
+window
     </window>
 
     <window name="MythProgressDialog">

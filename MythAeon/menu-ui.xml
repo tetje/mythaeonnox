@@ -928,36 +928,37 @@
            </state>
 <!-- -->
            <!-- ZONEMINDER -->
-<!--           <state name="ZM_CONSOLE">
+           <state name="ZM_CONSOLE">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/cctv.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/zoneminder/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ZM_LIVE_VIEWER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/cctv.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/zoneminder/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ZM_EVENT_VIEWER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/cctv.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/zoneminder/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="ZONEMINDER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/cctv.jpg</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/zoneminder/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
            <state name="SETTINGS_ZONEMINDER">
                <imagetype name="watermark">
-                   <filename>images/backgrounds/MediaStreamSystemBGD.png</filename>
-                   <area>0,0,1280,720</area>
+                   <filename>images/backgrounds/zoneminder/</filename>
+                   <area>0,0,1920,1080</area>
                </imagetype>
            </state>
+<!--
            <state name="MOVIETIMES">
                <imagetype name="watermark">
                    <filename>images/backgrounds/default.png</filename>

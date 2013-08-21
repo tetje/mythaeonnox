@@ -74,6 +74,7 @@
                </state>
            </statetype>
         </group> 
+        
         <group name="multiplextablettvgroup">
            <area>113,70,1694,846</area>
 
@@ -98,23 +99,22 @@
 	        </imagetype>
 	        
 	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tvtablet.png</filename>
+	            <filename>images/shared/multiplex_tablet_bigthumb.png</filename>
 	        </imagetype>
+	
 	
 	        <group name="recordingsinfo">
 	           <area>0,0,1694,846</area>
-	           
-		        <imagetype name="fanart" > <!-- depends="filesize_str"> -->
-		            <area>632,58,1046,604</area>
+
+		        <imagetype name="fanart">
+		            <area>729,58,949,538</area>
 		            <preserveaspect>no</preserveaspect>
 		        </imagetype>
 		        
-		        <imagetype name="preview" depends="!fanart">
-		            <area>632,58,1046,604</area>
+		        <imagetype name="preview" from="fanart" depends="!fanart">
 		            <filename>images/backgrounds/defaultfanart/</filename>
-		            <preserveaspect>no</preserveaspect>
 		        </imagetype>
-		        
+        
 	           <statetype name="watched">
 	               <state name="yes">
 	                   <imagetype name="yes">
@@ -127,85 +127,113 @@
 		        
 	           <group name="additionalrecordingsinfo">
 	              <area>30,85,567,270</area>
-			        <textarea name="channellbl" from="textarea_label" depends="channel">
-			            <area>0,140,567,30</area>
-			            <value>Channel:</value>
-			        </textarea>
-		
-			        <textarea name="airedlbl" from="channellbl" depends="startdate">
-			            <position>0,70</position>
-			            <value>Aired:</value>
-			        </textarea>
-		
-			        <textarea name="storagelbl" from="channellbl">
+	              
+	              <!-- labels -->
+			        <textarea name="storagelbl" from="textarea_label">
 			            <position>0,0</position>
 			            <value>Storage:</value>
 			        </textarea>
 		
-			        <textarea name="channel" from="textarea_info">
-			            <area>0,165,567,30</area>
-			        </textarea>
-		
-			        <textarea name="startdate" from="textarea_info">
-			            <area>0,95,567,30</area>
-			            <template>%startdate%%| year%, %starttime% - %endtime%</template>
-			        </textarea>
-		
-			        <textarea name="filesize_str" from="textarea_info">
-			            <area>0,25,567,30</area>
-			            <template>%filesize_str% of %storagegroup% storage</template>
-			        </textarea>
-		
-			        <textarea name="freereport" from="textarea_info" depends="!filesize_str">
-			            <area>0,25,567,30</area>
-			        </textarea>
-
-			        <textarea name="usagelbl" from="channellbl" depends="!filesize_str">
+			        <textarea name="airedlbl" from="storagelbl" depends="startdate">
 			            <position>0,70</position>
-			            <value>Usage overview:</value>
+			            <value>Aired:</value>
+			        </textarea>
+			        
+			        <textarea name="usagelbl" from="airedlbl" depends="!filesize_str">
+			            <value>Usage:</value>
 			        </textarea>
 
-			        <progressbar name="usedbar" from="baseprogressbar" depends="!filesize_str">
-			           <area>0,100,583,30</area>
-				        <layout>horizontal</layout>
-				        <style>reveal</style>
-				        <imagetype name="background">
-				            <area>0,0,100%,100%</area>
-				            <filename>images/shared/progress_back.png</filename>
-				        </imagetype>
-				        <imagetype name="progressimage">
-				            <area>0,0,100%,100%</area>
-				            <filename>images/shared/progress_fill.png</filename>
-				        </imagetype>
-			        </progressbar>
-
-			        <textarea name="rec_countlbl" from="channellbl" depends="!filesize_str">
+			        <textarea name="channellbl" from="storagelbl" depends="channel">
 			            <position>0,140</position>
+			            <value>Channel:</value>
+			        </textarea>
+			        
+			        <textarea name="rec_countlbl" from="channellbl" depends="!filesize_str">
 			            <value>Number of Recordings:</value>
 			        </textarea>
 
-			        <textarea name="rec_count" from="textarea_info" depends="!filesize_str">
-			            <area>0,165,567,30</area>
-			            <template>%n in current group</template>
+			        <textarea name="seasonlbl" from="textarea_label">
+			            <area>358,0,340,30</area>
+			            <value>Season and Episode:</value>
+			        </textarea>
+	
+			        <textarea name="starttimelbl" from="seasonlbl">
+			            <position>358,70</position>
+			            <value>Start time:</value>
+			        </textarea>
+		
+			        <textarea name="endtimelbl" from="seasonlbl">
+			            <position>358,140</position>
+			            <value>End time:</value>
+			        </textarea>
+		
+		           <!-- widgets -->
+			        <textarea name="filesize_str" from="textarea_info">
+			            <area>0,25,567,30</area>
+			        </textarea>
+		
+			        <textarea name="freereport" from="filesize_str" depends="!filesize_str"/>
+
+			        <textarea name="startdate" from="textarea_info">
+			            <area>0,95,567,30</area>
+			            <template>%startdate%%| year%</template>
 			        </textarea>
 
+			        <progressbar name="usedbar" from="baseprogressbar" depends="!filesize_str">
+			           <area>0,100,325,30</area>
+				        <layout>horizontal</layout>
+				        <style>reveal</style>
+				        <imagetype name="background">
+				            <area>0,0,325,30</area>
+				            <filename>images/shared/progress_back.png</filename>
+				        </imagetype>
+				        <imagetype name="progressimage">
+				            <area>0,0,325,30</area>
+				            <filename>images/shared/progress_fill.png</filename>
+				        </imagetype>
+			        </progressbar>
+	
+			        <textarea name="channel" from="textarea_info">
+			            <area>0,165,567,30</area>
+			        </textarea>
+
+			        <textarea name="rec_count" from="channel" depends="!filesize_str">
+			            <template>%n in current group</template>
+			        </textarea>
+	
+			        <textarea name="00x00" from="textarea_info">
+			            <area>358,25,340,30</area>
+			            <value>Not applicable</value>
+			        </textarea>			
+			        
+			        <textarea name="starttime" from="textarea_info">
+			            <area>358,95,340,30</area>
+			        </textarea>
+			        			
+			        <textarea name="endtime" from="textarea_info">
+			            <area>358,165,340,30</area>
+			        </textarea>	
+				
 		        </group>
 		
 		        <textarea name="description" from="textarea_plot" depends="filesize_str">
-		            <area>38,320,567,350</area>
-		            <template>%00x00| - %%"|SUBTITLE|"\n%%|YEARSTARS| - %%DESCRIPTION%</template>
+		            <area>33,320,672,258</area>
+		            <align>left,top</align>
+		            <cutdown>no</cutdown>
+		            <scroll direction="vertical"/>
+		            <template>%"|subtitle|"\n%%description%</template>
 		        </textarea>
-
+		        
 	        </group>
 
         </group>
 
         <group name="multiplextablettvlistgroup">
-           <area>0,755,1920,325</area>
+           <area>0,685,1920,385</area>
 
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="1920,755" end="0,755" easingcurve="InOutBack" />
+	                <position start="1920,685" end="0,685" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
@@ -222,11 +250,11 @@
 	        </buttonlist>
 	
 	        <buttonlist name="groups" from="buttonlist_tvshowpanel_group">
-	            <position>126,-365</position>
+	            <position>126,-305</position>
 	        </buttonlist>
 	
 	        <group name="statusinfo">
-	           <area>200,250,314,50</area>
+	           <area>200,320,314,50</area>
 	           <alpha>228</alpha>
 		        <statetype name="autoexpire">
 		            <state name="yes">
@@ -376,17 +404,17 @@
 	        </group>
 
 	        <textarea name="category" from="textarea_title_sub">
-	            <area>510,230,900,30</area>
+	            <area>510,300,900,30</area>
 	            <align>allcenter</align>
 	        </textarea>
 	
 	        <textarea name="title" from="textarea_title">
-	            <area>510,265,900,45</area>
+	            <area>510,335,900,45</area>
 	            <align>allcenter</align>
 	        </textarea>
 
 	        <group name="mediainfo" depends="category"> 
-	           <area>1400,250,390,100</area>
+	           <area>1400,320,390,100</area>
 	           <alpha>228</alpha>
 	
 		        <statetype name="subtitletypes">

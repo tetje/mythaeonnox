@@ -3,21 +3,21 @@
    <button>
       <type>ZM_CONSOLE</type>
       <text>Console</text>
-      <description>Show zoneminder</description>
+      <description>Show zoneminder console</description>
       <action>ZM_CONSOLE</action>
    </button>
 
    <button>
       <type>ZM_LIVE_VIEWER</type>
       <text>Live View</text>
-      <description>Show zoneminder</description>
+      <description>Show zoneminder live cctv views</description>
       <action>ZM_LIVE_VIEWER</action>
    </button>
 
    <button>
        <type>ZM_EVENT_VIEWER</type>
        <text>Events</text>
-       <description>Show zoneminder</description>
+       <description>Show zoneminder events</description>
        <action>ZM_EVENT_VIEWER</action>
    </button>
 
