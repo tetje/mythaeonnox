@@ -8,6 +8,12 @@ cp -a MythAeon* ~/.mythtv/themes/
 This theme is designed to work with a custom menu called MythAeon. To select this menu, go to 
 the 'theme & screensettings' menu in your frontend and set your Menu theme to 'MythAeon'.
 
+v026.3
+Added information labels to recordings screen to make the theme more usable.
+Reworked recordings screen to accommodate for information labels
+Resized other windows in recordings-ui to let them blend into the panel
+Started to add support for MythZoneminder
+
 v026.2
 Added support for MythGame
 

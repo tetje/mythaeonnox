@@ -208,10 +208,12 @@
 			        
 			        <textarea name="starttime" from="textarea_info">
 			            <area>358,95,340,30</area>
+			            <value>Not applicable</value>
 			        </textarea>
 			        			
 			        <textarea name="endtime" from="textarea_info">
 			            <area>358,165,340,30</area>
+			            <value>Not applicable</value>
 			        </textarea>	
 				
 		        </group>
@@ -246,7 +248,7 @@
 	        </animation>       
 -->
 	        <buttonlist name="recordings" from="buttonlist_multiplextv">
-	             <position>0,0</position>
+	             <position>0,2</position>
 	        </buttonlist>
 	
 	        <buttonlist name="groups" from="buttonlist_tvshowpanel_group">
@@ -404,12 +406,12 @@
 	        </group>
 
 	        <textarea name="category" from="textarea_title_sub">
-	            <area>510,300,900,30</area>
+	            <area>510,305,900,30</area>
 	            <align>allcenter</align>
 	        </textarea>
 	
 	        <textarea name="title" from="textarea_title">
-	            <area>510,335,900,45</area>
+	            <area>510,340,900,45</area>
 	            <align>allcenter</align>
 	        </textarea>
 
@@ -695,7 +697,7 @@
 
     <!-- Popups -->
     <window name="groupselector">
-        <area>740,125,1053,610</area>
+        <area>837,125,956,545</area>
 
         <animation trigger="AboutToShow">
            <section duration="500" centre="middle">
@@ -709,22 +711,23 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>0,0,1053,610</area>
+            <area>0,0,956,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbgd">
-            <area>0,0,1053,610</area>
+            <area>0,0,956,545</area>
             <preserveaspect>no</preserveaspect>
-            <filename>images/shared/multiplex_tvtablet_panel.png</filename>
+            <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
 
         <textarea name="label" from="textarea_label">
-            <area>-590,-32,993,30</area>
+            <area>-696,-32,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
+            <value>Group selector</value>
         </textarea>
 
         <buttonlist name="groups" from="buttonlist_tvshowpanel">
@@ -734,7 +737,7 @@
     </window>
 
     <window name="changeview">
-        <area>740,125,1053,610</area>
+        <area>837,125,956,545</area>
 
         <animation trigger="AboutToShow">
            <section duration="500" centre="middle">
@@ -748,20 +751,33 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>0,0,1053,610</area>
+            <area>0,0,956,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbgd">
-            <area>0,0,1053,610</area>
+            <area>0,0,956,545</area>
             <preserveaspect>no</preserveaspect>
-            <filename>images/shared/multiplex_tvtablet_panel.png</filename>
+            <filename>images/shared/multiplex_webtablet_panel.png</filename>
+        </imagetype>
+
+        <shape name="groupselectorbuttonblackbgd">
+            <area>-353,20,353,70</area>
+            <type>box</type>
+            <line color="#000000" alpha="255" width="1" />
+            <fill style="solid" color="#000000" alpha="255" />
+        </shape>
+
+        <imagetype name="groupselectorbuttonbgd">
+            <area>-354,20,355,70</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
         </imagetype>
 
         <textarea name="title" from="textarea_label">
-            <area>-590,-32,993,30</area>
+            <area>-696,-32,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
             <value>Change View</value>
@@ -964,13 +980,13 @@
         </checkbox>
 
         <button name="save" from="button_tvshow_panel">
-            <position>2,520</position>
+            <position>-352,25</position>
             <value>Save</value>
         </button>
     </window>
 
     <window name="passwordchanger">
-        <area>740,125,1053,610</area>
+        <area>837,125,956,545</area>
 
         <animation trigger="AboutToShow">
            <section duration="500" centre="middle">
@@ -984,27 +1000,40 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>0,0,1053,610</area>
+            <area>0,0,956,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbgd">
-            <area>0,0,1053,610</area>
+            <area>0,0,956,545</area>
             <preserveaspect>no</preserveaspect>
-            <filename>images/shared/multiplex_tvtablet_panel.png</filename>
+            <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
 
-        <textarea name="label" from="textarea_label">
-            <area>-590,-32,993,30</area>
+        <shape name="groupselectorbuttonblackbgd">
+            <area>-353,20,353,70</area>
+            <type>box</type>
+            <line color="#000000" alpha="255" width="1" />
+            <fill style="solid" color="#000000" alpha="255" />
+        </shape>
+
+        <imagetype name="groupselectorbuttonbgd">
+            <area>-354,20,355,70</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
+        </imagetype>
+
+        <textarea name="title" from="textarea_label">
+            <area>-696,-32,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
             <value>Change Recording Group Password</value>
         </textarea>
 
         <textedit name="oldpassword" from="textedit_tvshow_panel">
-            <area>2,25,1052,70</area>
+            <area>2,25,956,70</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -1018,7 +1047,7 @@
 				    </state>
 	             <state name="selected">
 		              <imagetype name="Listpanel_selectbar">
-		                  <area>0,0,1052,70</area>
+		                  <area>0,0,956,70</area>
 		                  <filename>images/shared/listpanel_selectbar.png</filename>
 		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
@@ -1038,12 +1067,12 @@
 	             <filename>cursor.png</filename>
 	         </imagetype>
 	         <textarea name="text" from="textarea_info">
-	             <area>302,32,740,30</area>
+	             <area>302,32,640,30</area>
 	         </textarea>
         </textedit>
 
         <textedit name="newpassword">
-            <area>2,95,1052,70</area>
+            <area>2,95,956,70</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -1057,7 +1086,7 @@
 				    </state>
 	             <state name="selected">
 		              <imagetype name="Listpanel_selectbar">
-		                  <area>0,0,1052,70</area>
+		                  <area>0,0,956,70</area>
 		                  <filename>images/shared/listpanel_selectbar.png</filename>
 		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
@@ -1077,18 +1106,18 @@
 	             <filename>cursor.png</filename>
 	         </imagetype>
 	         <textarea name="text" from="textarea_info">
-	             <area>302,32,740,30</area>
+	             <area>302,32,640,30</area>
 	         </textarea>
         </textedit>
 
         <button name="ok" from="button_tvshow_panel">
-            <position>2,170</position>
+            <position>-352,25</position>
             <value>Save</value>
         </button>
     </window>
 
     <window name="editmetadata">
-        <area>740,125,1053,610</area>
+        <area>837,125,956,545</area>
 
         <animation trigger="AboutToShow">
            <section duration="500" centre="middle">
@@ -1102,27 +1131,40 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>0,0,1053,610</area>
+            <area>0,0,956,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbgd">
-            <area>0,0,1053,610</area>
+            <area>0,0,956,545</area>
             <preserveaspect>no</preserveaspect>
-            <filename>images/shared/multiplex_tvtablet_panel.png</filename>
+            <filename>images/shared/multiplex_webtablet_panel.png</filename>
+        </imagetype>
+
+        <shape name="groupselectorbuttonblackbgd">
+            <area>-353,20,353,70</area>
+            <type>box</type>
+            <line color="#000000" alpha="255" width="1" />
+            <fill style="solid" color="#000000" alpha="255" />
+        </shape>
+
+        <imagetype name="groupselectorbuttonbgd">
+            <area>-354,20,355,70</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
         </imagetype>
 
         <textarea name="label" from="textarea_label">
-            <area>-590,-32,993,30</area>
+            <area>-696,-32,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
             <value>Edit Recording Metadata</value>
         </textarea>
 
         <textedit name="title">
-            <area>2,25,1052,70</area>
+            <area>2,25,956,70</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -1136,7 +1178,7 @@
 				    </state>
 	             <state name="selected">
 		              <imagetype name="Listpanel_selectbar">
-		                  <area>0,0,1052,70</area>
+		                  <area>0,0,956,70</area>
 		                  <filename>images/shared/listpanel_selectbar.png</filename>
 		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
@@ -1156,12 +1198,12 @@
 	             <filename>cursor.png</filename>
 	         </imagetype>
 	         <textarea name="text" from="textarea_info">
-	             <area>302,32,740,30</area>
+	             <area>302,32,640,30</area>
 	         </textarea>
         </textedit>
 
         <textedit name="subtitle">
-            <area>2,95,1052,70</area>
+            <area>2,95,956,70</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -1175,7 +1217,7 @@
 				    </state>
 	             <state name="selected">
 		              <imagetype name="Listpanel_selectbar">
-		                  <area>0,0,1052,70</area>
+		                  <area>0,0,956,70</area>
 		                  <filename>images/shared/listpanel_selectbar.png</filename>
 		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
@@ -1195,12 +1237,12 @@
 	             <filename>cursor.png</filename>
 	         </imagetype>
 	         <textarea name="text" from="textarea_info">
-	             <area>302,32,740,30</area>
+	             <area>302,32,640,30</area>
 	         </textarea>
         </textedit>
 
         <textedit name="inetref">
-            <area>2,165,1052,70</area>
+            <area>2,165,956,70</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -1214,7 +1256,7 @@
 				    </state>
 	             <state name="selected">
 		              <imagetype name="Listpanel_selectbar">
-		                  <area>0,0,1052,70</area>
+		                  <area>0,0,956,70</area>
 		                  <filename>images/shared/listpanel_selectbar.png</filename>
 		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
@@ -1234,12 +1276,12 @@
 	             <filename>cursor.png</filename>
 	         </imagetype>
 	         <textarea name="text" from="textarea_info">
-	             <area>302,32,740,30</area>
+	             <area>302,32,640,30</area>
 	         </textarea>
         </textedit>
 
         <spinbox name="season" from="spinbox_menu_season">
-            <area>2,221,1052,98</area>
+            <position>2,221</position>
         </spinbox>
 
         <spinbox name="episode" from="spinbox_menu_episode">
@@ -1247,7 +1289,7 @@
         </spinbox>
 
         <textedit name="description">
-            <area>2,370,1052,160</area>
+            <area>2,370,956,160</area>
 	         <statetype name="background">
 	             <state name="active">
 				        <textarea name="lblactive" from="textarea_label">
@@ -1257,7 +1299,7 @@
 				    </state>
 	             <state name="selected">
 		              <imagetype name="Listpanel_selectbar">
-		                  <area>0,0,1052,160</area>
+		                  <area>0,0,956,160</area>
 		                  <filename>images/shared/listpanel_selectbar.png</filename>
 		              </imagetype>
 		  		        <textarea name="lblselected" from="textarea_label">
@@ -1272,18 +1314,18 @@
 	             <filename>cursor.png</filename>
 	         </imagetype>
 	         <textarea name="text" from="textarea_plot">
-	             <area>20,45,1007,105</area>
+	             <area>20,45,914,105</area>
 	         </textarea>
         </textedit>
 
         <button name="ok" from="button_tvshow_panel">
-            <position>2,520</position>
+            <position>-352,25</position>
             <value>Save</value>
         </button>
     </window>
 
     <window name="iconhelp">
-        <area>740,125,1053,610</area>
+        <area>837,125,956,545</area>
 
         <animation trigger="AboutToShow">
            <section duration="500" centre="middle">
@@ -1297,20 +1339,20 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>0,0,1053,610</area>
+            <area>0,0,956,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbgd">
-            <area>0,0,1053,610</area>
+            <area>0,0,956,545</area>
             <preserveaspect>no</preserveaspect>
-            <filename>images/shared/multiplex_tvtablet_panel.png</filename>
+            <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
 
-        <textarea name="title"  from="textarea_label">
-            <area>-590,-32,993,30</area>
+        <textarea name="title" from="textarea_label">
+            <area>-696,-32,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
             <value>Icon Help</value>
@@ -1321,7 +1363,7 @@
             <statetype name="buttonitem">
                 <state name="active">
                     <statetype name="icons">
-                        <area>855,10,165,50</area>
+                        <area>770,10,165,50</area>
                         <state name="commflagged">
 								  <area>0,0,64,50</area>
 				              <imagetype name="iconbgd">
@@ -1749,7 +1791,7 @@
                 </state>
                 <state name="selectedactive">
                     <statetype name="icons">
-                        <area>855,10,165,50</area>
+                        <area>770,10,165,50</area>
                         <state name="commflagged">
 								  <area>0,0,64,50</area>
 				              <imagetype name="iconbgd">
