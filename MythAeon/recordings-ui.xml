@@ -771,7 +771,7 @@
         </shape>
 
         <imagetype name="groupselectorbuttonbgd">
-            <area>-354,20,355,70</area>
+            <area>-353,20,354,70</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
         </imagetype>
@@ -1020,7 +1020,7 @@
         </shape>
 
         <imagetype name="groupselectorbuttonbgd">
-            <area>-354,20,355,70</area>
+            <area>-353,20,354,70</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
         </imagetype>
@@ -1151,7 +1151,7 @@
         </shape>
 
         <imagetype name="groupselectorbuttonbgd">
-            <area>-354,20,355,70</area>
+            <area>-353,20,354,70</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
         </imagetype>
