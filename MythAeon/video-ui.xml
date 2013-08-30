@@ -537,11 +537,11 @@
         </group>
 
         <group name="multiplextabletmoviegroup">
-           <area>113,70,1694,846</area>
+           <area>80,68,1920,944</area>
 
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
+	                <position start="80,-944" end="80,68" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
@@ -553,6 +553,7 @@
 	            </section>
 	        </animation>       
 -->
+<!--	
 	        <imagetype name="multiplextabletbgdimg">
 	            <area>0,0,1694,846</area>
 	            <filename>images/shared/multiplex_back.png</filename>
@@ -561,9 +562,10 @@
 	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
 	            <filename>images/shared/multiplex_tablet_nolines.png</filename>
 	        </imagetype>
-
-	        <buttonlist name="videos" from="buttonlist_wall_panel">
-	            <position>11,58</position>
+-->
+	        <buttonlist name="videos" from="buttonlist_wall_small">
+	            <position>8,-25</position>
+<!--	            <position>11,-25</position> -->
 	        </buttonlist>
 
 	     </group>   
@@ -585,20 +587,23 @@
 	            </section>
 	        </animation>       
 -->
-	        <textarea name="genres" from="textarea_title_sub">
-	            <area>510,295,900,30</area>
+	        <textarea name="year" from="textarea_title_sub">
+	            <area>510,330,900,30</area>
 	            <align>allcenter</align>
+	            <template>%year%% by |director%%, |length%%, rating: |userrating%</template>
 	        </textarea>
 	
-	        <textarea name="title" from="textarea_title">
-	            <area>510,329,900,45</area>
+	        <textarea name="title" from="textarea_title" depends="!coverart">
+	            <area>510,365,900,45</area>
 	            <align>allcenter</align>
 	            <template>%TITLE%% - |SUBTITLE%</template>
 	        </textarea>
 
+<!-- -->
 	        <group name="listinfodetails" from="basegroupinfodetailswall">
-	           <position>0,300</position>
+	           <position>0,358</position>
 	        </group>
+<!-- -->
 	     </group>
 
     </window>
@@ -712,7 +717,7 @@
            </statetype>
 
 	        <group name="listinfodetails" from="basegroupinfodetails">
-	           <position>73,810</position>
+	           <position>0,810</position>
 	        </group>
 
 <!-- Fix me: This does not work will when a movie has played and one returns to the main screen

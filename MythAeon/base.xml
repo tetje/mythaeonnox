@@ -147,6 +147,29 @@
         <color>#323232</color>
     </fontdef>
 
+    <fontdef name="Font_List_Edit" face="Scout">
+        <pixelsize>32</pixelsize>
+        <color>#323232</color>
+        <weight>bold</weight>
+        <outlinecolor>#ececec</outlinecolor>
+        <outlinesize>3</outlinesize> 
+   </fontdef>
+
+    <fontdef name="Font_List_Amber" face="Scout">
+        <pixelsize>32</pixelsize>
+        <color>#E0991A</color>
+    </fontdef>
+
+    <fontdef name="Font_List_Blue" face="Scout">
+        <pixelsize>32</pixelsize>
+        <color>#105B8F</color>
+    </fontdef>
+
+    <fontdef name="Font_List_Black" face="Scout">
+        <pixelsize>32</pixelsize>
+        <color>#000000</color>
+    </fontdef>
+
     <fontdef name="Font_List_Active" from="Font_List_Selected">
         <color>#ececec</color>
     </fontdef>
@@ -2787,19 +2810,19 @@
 
    <buttonlist name="buttonlist_wall_small">
        <spacing>0</spacing>
-       <area>0,0,1600,710</area>
-       <searchposition>610,340</searchposition>
+       <area>0,0,1760,944</area>
+       <searchposition>-1,-1</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
        <arrange>fixed</arrange>
-       <align>bottom,hcenter</align>
+       <align>allcenter</align>
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <drawfrombottom>yes</drawfrombottom>
-       <buttonarea>0,0,1600,710</buttonarea>
+       <buttonarea>0,0,1760,944</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
-               <area>-2,-2,160,236</area>
+               <area>0,0,160,236</area>
                <imagetype name="WallMovieBorder">
                    <area>0,0,160,236</area>
                    <preserveaspect>no</preserveaspect>
@@ -2892,16 +2915,17 @@
 
    <buttonlist name="buttonlist_wall_panel">
        <spacing>0</spacing>
-       <area>0,0,1680,744</area>
+       <area>0,0,1680,989</area>
        <searchposition>610,340</searchposition>
        <layout>grid</layout>
+<!--
        <scrollstyle>free</scrollstyle>
        <arrange>fixed</arrange>
-       <align>bottom,hcenter</align>
+-->
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <drawfrombottom>yes</drawfrombottom>
-       <buttonarea>0,0,1680,744</buttonarea>
+       <buttonarea>0,0,1680,989</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
                <area>0,0,167,245</area>
@@ -6289,6 +6313,22 @@
         </imagetype>
         <textarea name="text" from="textarea_list">
             <area>70,0,560,50</area>
+            <font state="selected">Font_List_Selected</font>
+            <font state="active">Font_List_Active</font>
+        </textarea>
+    </textedit>
+
+    <textedit name="textedit_dialog_amber" from="textedit_dialog">
+        <textarea name="text" from="textarea_list">
+            <area>70,0,560,50</area>
+            <font>Font_List_Amber</font>
+        </textarea>
+    </textedit>
+
+    <textedit name="textedit_dialog_black" from="textedit_dialog">
+        <textarea name="text" from="textarea_list">
+            <area>70,0,560,50</area>
+            <font>Font_List_Black</font>
         </textarea>
     </textedit>
 
@@ -7568,7 +7608,7 @@ window
             <cutdown>no</cutdown>
         </textarea>
 
-        <textedit name="input" from="textedit_dialog">
+        <textedit name="input" from="textedit_dialog_black">
             <position>0,125</position>
         </textedit>
 
@@ -7592,7 +7632,7 @@ window
             <scroll direction="horizontal"/>
         </textarea>
 
-        <textedit name="input" from="textedit_dialog">
+        <textedit name="input" from="textedit_dialog_black">
             <position>0,125</position>
         </textedit>
 
@@ -7755,7 +7795,7 @@ window
             </state>
         </statetype>
 
-        <textedit name="searchedit" from="textedit_dialog">
+        <textedit name="searchedit" from="textedit_dialog_black">
             <position>0,175</position>
         </textedit>
 
