@@ -180,6 +180,10 @@
         <color>#ffffff</color>
     </fontdef>
         
+    <fontdef name="Font_Title_Settings_Selected" face="Aeon_Settings">
+        <pixelsize>50</pixelsize>
+        <color>#323232</color>
+    </fontdef>
     <fontdef name="Font_Button_Settings" face="ScoutCond">
         <pixelsize>40</pixelsize>
         <color>#ffffff</color>
@@ -2255,6 +2259,150 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_videomanager">
+       <spacing>0</spacing>
+       <area>0,0,1680,735</area>
+       <searchposition>-1,-1</searchposition>
+       <layout>grid</layout>
+       <scrollstyle>free</scrollstyle>
+       <arrange>fixed</arrange>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <drawfrombottom>yes</drawfrombottom>
+       <buttonarea>0,0,1680,735</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,840,245</area>
+               <imagetype name="WallMovieBorder">
+                   <area>5,0,167,245</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_movie_nfborder.png</filename>
+               </imagetype>
+               <imagetype name="coverart">
+                   <area>10,5,158,236</area>
+                   <mask>images/shared/wall_movie_mask_small_panel.png</mask>
+                   <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
+               </imagetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>10,5,158,236</area>
+                   <filename>images/shared/wall_movie_nfoverlay.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_settings_title">
+                   <area>190,15,625,55</area>
+                   <cutdown>yes</cutdown>
+               </textarea>
+			      <imagetype name="starsbgd">
+			          <area>190,67,90,18</area>
+			          <filename>images/icons/ratings/stars_bg.png</filename>
+			      </imagetype>
+			      <statetype name="userratingstate" from="rating_base">
+			          <area>190,67,90,18</area>
+			      </statetype>
+               <textarea name="year" from="textarea_list">
+                   <area>280,60,510,35</area>
+                   <align>left,vcenter</align>
+                   <font>Font_List_Active</font>
+                   <template>% - |year%% - |length%</template>
+               </textarea>
+		         <textarea name="description" from="textarea_plot">
+		             <area>190,110,620,133</area>
+		             <align>left,top</align>
+		         </textarea>	
+		        
+<!-- 
+               <statetype name="nodetype">
+                   <area>0,0,153,220</area>
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>123,190,25,25</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,153,220</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>255</alpha>
+           </state>
+           <state name="selectedactive">
+               <area>0,0,840,245</area>
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,-13,831,279</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <imagetype name="WallMovieBorder">
+                   <area>5,0,167,245</area>
+                   <preserveaspect>no</preserveaspect>
+                   <filename>images/shared/wall_movie_nfborder.png</filename>
+               </imagetype>
+               <imagetype name="coverart">
+                   <area>10,5,158,236</area>
+                   <mask>images/shared/wall_movie_mask_small_panel.png</mask>
+                   <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
+               </imagetype>
+               <imagetype name="WallMovieOverlay">
+                   <area>10,5,158,236</area>
+                   <filename>images/shared/wall_movie_nfoverlay.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_settings_title">
+                   <area>190,15,625,55</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_Title_Settings_Selected</font>
+               </textarea>
+			      <imagetype name="starsbgd">
+			          <area>190,67,90,18</area>
+			          <filename>images/icons/ratings/stars_bg.png</filename>
+			      </imagetype>
+			      <statetype name="userratingstate" from="rating_base">
+			          <area>190,67,90,18</area>
+			      </statetype>
+               <textarea name="year" from="textarea_list">
+                   <area>280,60,510,35</area>
+                   <align>left,vcenter</align>
+                   <template>% - |year%% - |length%</template>
+               </textarea>
+		         <textarea name="description" from="textarea_plot">
+		             <area>190,110,620,133</area>
+		             <align>left,top</align>
+		             <font>Font_Plot_Grey</font>
+		         </textarea>		        
+<!--
+               <statetype name="nodetype">
+                   <state name="subfolder">
+                       <imagetype name="icon">
+                           <area>150,234,30,30</area>
+                           <alpha>128</alpha>
+                           <filename>images/shared/DefaultFolderTransparent.png</filename>
+                           <preserveaspect>yes</preserveaspect>
+                       </imagetype>
+                   </state>
+                   <state name="upfolder">
+                       <imagetype name="icon">
+                           <area>0,0,185,269</area>
+                           <alpha>255</alpha>
+                           <filename>images/shared/DefaultFolderBack.png</filename>
+                           <preserveaspect>no</preserveaspect>
+                       </imagetype>
+                   </state>
+               </statetype>
+-->
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>255</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_videotree">
        <area>0,0,1115,800</area>
        <layout>vertical</layout>
        <spacing>0</spacing>
@@ -2915,8 +3063,8 @@
 
    <buttonlist name="buttonlist_wall_panel">
        <spacing>0</spacing>
-       <area>0,0,1680,989</area>
-       <searchposition>610,340</searchposition>
+       <area>0,0,1680,735</area>
+       <searchposition>-1,-1</searchposition>
        <layout>grid</layout>
 <!--
        <scrollstyle>free</scrollstyle>
@@ -2925,7 +3073,7 @@
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <drawfrombottom>yes</drawfrombottom>
-       <buttonarea>0,0,1680,989</buttonarea>
+       <buttonarea>0,0,1680,735</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
                <area>0,0,167,245</area>
@@ -6840,18 +6988,18 @@
      <group name="basegroupinfodetails">
         <area>0,0,568,50</area>
         
-        <group name="seasonicon" from="defaultinfoiconseason">
-            <area>0,0,200,50</area>
-        </group>
-        
         <group name="ratingicon" from="defaultinfoiconrating">
-            <area>220,0,200,50</area>
+            <area>0,0,200,50</area>
         </group>
 
         <group name="parentalicon" from="defaultinfoiconparental">
-            <area>440,0,128,50</area>
+            <area>220,0,128,50</area>
         </group>
 
+        <group name="seasonicon" from="defaultinfoiconseason">
+            <area>368,0,200,50</area>
+        </group>
+        
      </group>
 
      <group name="basegroupinfodetailswall">
