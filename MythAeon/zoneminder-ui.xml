@@ -304,38 +304,14 @@
 	            <filename>images/backgrounds/defaultfanart/</filename>
 	            <preserveaspect>no</preserveaspect>
 	        </imagetype>
-<!--	        
-	        <imagetype name="frameimage" depends="filesize_str">
-	            <area>729,58,949,538</area>
-	            <filename>images/backgrounds/defaultfanart/</filename>
-	            <preserveaspect>no</preserveaspect>
-	        </imagetype>
-        
-		     <buttontree name="videos">
-		         <area>13,315,700,280</area> 
-		         <numlists>1</numlists>
-		         <spacing>0</spacing>
-		         <buttonlist name="listtemplate" from="buttonlist_webshowpanel_list" />
-		     </buttontree>
--->		
+
            <group name="additionaleventinfo">
               <area>30,85,567,270</area>
               
               <!-- labels -->
-<!--
-		        <textarea name="cameralbl" from="textarea_label">
-		            <area>0,0,567,30</area>
-		            <value>Select Camera</value>
-		        </textarea>
-	
-		        <textarea name="datelbl" from="cameralbl">
-		            <position>0,70</position>
-		            <value>Select Date:</value>
-		        </textarea>
--->	
-		        <textarea name="eventcountlbl"from="cameralbl">
-		            <position>0,140</position>
-		            <value>Event:</value>
+		        <textarea name="eventcountlbl" from="textarea_label">
+		            <area>0,140,567,30</area>
+		            <value>Event number:</value>
 		        </textarea>
 		        
               <!-- widgets -->	
@@ -418,241 +394,22 @@
             </section>
         </animation>       
 -->
-        <textarea name="author" from="textarea_title_sub">
-            <area>10,270,1900,30</area>
-            <align>allcenter</align>
-        </textarea>
-
-        <textarea name="title" from="textarea_title">
-            <area>10,305,1900,45</area>
-            <align>allcenter</align>
-        </textarea>
-
      </group>
 
-<!--
-        <fontdef name="active" from="basesmall">
-            <color>#ffffff</color>
-            <size>18</size>
-            <weight>bold</weight>
-        </fontdef>
-
-        <fontdef name="inactive" from="basesmall">
-            <color>#9999cc</color>
-            <size>18</size>
-            <weight>bold</weight>
-        </fontdef>
-
-        <fontdef name="selected" from="basesmall">
-            <color>#00ff00</color>
-            <size>18</size>
-            <weight>bold</weight>
-        </fontdef>
-
-        <fontdef name="date" from="basesmall">
-            <color>#9999cc</color>
-            <size>14</size>
-        </fontdef>
-        <fontdef name="description" from="basesmall">
-            <color>#ffffff</color>
-            <size>18</size>
-        </fontdef>
-
-        <fontdef name="label" from="basesmall">
-            <color>#ffff00</color>
-            <size>16</size>
-            <weight>bold</weight>
-        </fontdef>
-
-        <fontdef name="listlabel" from="basesmall">
-            <color>#ffff00</color>
-            <size>14</size>
-            <weight>bold</weight>
-        </fontdef>
-
-        <fontdef name="buttons" from="basesmall">
-            <color>#ffffff</color>
-            <size>12</size>
-            <weight>bold</weight>
-        </fontdef>
-
-        <fontdef name="subtitle_active" from="basesmall">
-            <color>#ffffff</color>
-            <size>14</size>
-        </fontdef>
-
-        <fontdef name="subtitle_inactive" from="basesmall">
-            <color>#9999cc</color>
-            <size>14</size>
-        </fontdef>
-
-        <fontdef name="subtitle_selected" from="basesmall">
-            <color>#ff0000</color>
-            <size>14</size>
-        </fontdef>
-
-        <textarea name="pagetitle" from="basetextarea">
-            <area>30,10,570,40</area>
-            <font>baselarge</font>
-            <value>ZoneMinder Events</value>
-        </textarea>
-
-        <shape name="topbackground" from="basebackground">
-            <area>20,60,740,95</area>
-        </shape>
-
-        <textarea name="label1" from="basetextarea">
-            <area>45,75,200,50</area>
-            <font>listlabel</font>
-            <value>Select Camera</value>
-        </textarea>
-
-        <textarea name="label2" from="basetextarea">
-            <area>345,75,200,50</area>
-            <font>listlabel</font>
-            <value>Select Date</value>
-        </textarea>
-
-        <buttonlist name="camera_selector" from="baseselector">
-            <position>45,100</position>
-        </buttonlist>
-
-        <buttonlist name="date_selector" from="baseselector">
-            <position>345,100</position>
-        </buttonlist>
-
-        <textarea name="eventno_text" from="basetextarea">
-            <area>600,110,140,50</area>
-            <align>right</align>
-            <font>label</font>
-            <value>0/0</value>
-        </textarea>
-
--->
 <!--+++++++++++++++++++ layout 1 - list view +++++++++++++++++++++++++-->
+     <group name="multiplextabletlayout1group">
+        <area>113,70,1694,846</area>
+
+        <animation trigger="AboutToShow">
+            <section duration="1200" centre="middle">
+                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
+            </section>
+        </animation>
+
         <buttonlist name="layout1_eventlist" from="buttonlist_zonemindershowpanel">
-            <position>742,150</position>
+            <position>629,80</position>
         </buttonlist>
-<!--
-        <textarea name="layout1_title1" from="basetextarea">
-            <area>50,165,130,30</area>
-            <font>listlabel</font>
-            <value>Event Name</value>
-        </textarea>
-
-        <textarea name="layout1_title2" from="basetextarea">
-            <area>200,165,130,30</area>
-            <font>listlabel</font>
-            <value>Camera</value>
-        </textarea>
-
-        <textarea name="layout1_title3" from="basetextarea">
-            <area>425,165,130,30</area>
-            <font>listlabel</font>
-            <value>Date/Time</value>
-        </textarea>
-
-        <textarea name="layout1_title4" from="basetextarea">
-            <area>600,165,130,30</area>
-            <align>right</align>
-            <font>listlabel</font>
-            <value>Length</value>
-        </textarea>
-
-        <shape name="layout1_image2" from="basebackground">
-            <area>20,190,740,230</area>
-        </shape>
-
-        <buttonlist name="layout1_eventlist">
-            <area>25,200,700,320</area>
-            <layout>vertical</layout>
-            <spacing>5</spacing>
-            <buttonarea>0,0,740,320</buttonarea>
-            <statetype name="buttonitem">
-                <area>0,0,740,25</area>
-                <state name="active">
-                    <shape name="buttonbackground">
-                        <area>15,0,700,30</area>
-                        <fill style="gradient">
-                            <gradient start="#505050" end="#000000" alpha="200"/>
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext" from="basetextarea">
-                        <area>25,4,150,25</area>
-                        <font>basesmallgrey</font>
-                    </textarea>
-                    <textarea name="camera" from="buttontext">
-                        <area>175,4,160,25</area>
-                    </textarea>
-                    <textarea name="time" from="buttontext">
-                        <area>400,4,230,25</area>
-                    </textarea>
-                    <textarea name="length" from="buttontext">
-                        <area>640,4,60,25</area>
-                        <align>right</align>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="buttonbackground">
-                        <area>15,0,700,30</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="255"/>
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmall</font>
-                    </textarea>
-                    <textarea name="camera">
-                        <font>basesmall</font>
-                    </textarea>
-                    <textarea name="time">
-                        <font>basesmall</font>
-                    </textarea>
-                    <textarea name="length">
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-               <state name="selectedinactive" from="active">
-                    <shape name="buttonbackground"> 
-                        <area>15,0,700,30</area> 
-                        <fill style="gradient"> 
-                            <gradient start="#52CA38" end="#349838" alpha="100"/> 
-                        </fill> 
-                    </shape> 
-
-                    <textarea name="buttontext">
-                        <font>basesmall</font>
-                    </textarea>
-                    <textarea name="camera">
-                        <font>basesmall</font>
-                    </textarea>
-                    <textarea name="time">
-                        <font>basesmall</font>
-                    </textarea>
-                    <textarea name="length">
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>240,270</position>
-                <state type="on">
-                    <imagetype name="upon">
-                        <filename>up_arrow.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>456,270</position>
-                <state type="on">
-                    <imagetype name="dnon">
-                        <filename>down_arrow.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
-
--->
+     </group>
 <!--+++++++++++++++++++ layout 2 - 1 row +++++++++++++++++++++++++-->
 
         <shape name="layout2_image2" from="basebackground">
@@ -829,15 +586,25 @@
 
 <!--+++++++++++++++++++ buttons  +++++++++++++++++++++++++-->
 
+     <group name="multiplextabletbuttongroup">
+        <area>113,110,1694,846</area>
+
+        <animation trigger="AboutToShow">
+            <section duration="1200" centre="middle">
+                <position start="113,-916" end="113,110" easingcurve="InOutBack" />
+            </section>
+        </animation>
+
  	     <button name="play_button" from="button_info_panel">
             <value>Watch</value>
-            <position>0,480</position>
+            <position>30,620</position>
         </button>
 
         <button name="delete_button" from="button_info_panel">
             <value>Done</value>
-            <position>150,480</position>
+            <position>180,620</position>
         </button>
+     </group>
    
     </window>
 

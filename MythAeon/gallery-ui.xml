@@ -58,7 +58,7 @@
 	        </imagetype>
 	        
 	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet_nolines.png</filename>
+	            <filename>images/shared/multiplex_tablet_small_bottom.png</filename>
 	        </imagetype>
 
 	        <buttonlist name="images" from="buttonlist_wall_gallery">

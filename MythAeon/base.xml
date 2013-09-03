@@ -1898,7 +1898,7 @@
                </textarea>
            </state>
            <state name="inactive" from="active"/>
-           <state name="selectedinactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
        </statetype>
    </buttonlist>
 
@@ -2267,7 +2267,7 @@
        <arrange>fixed</arrange>
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
-       <drawfrombottom>yes</drawfrombottom>
+       <drawfrombottom>no</drawfrombottom>
        <buttonarea>0,0,1680,735</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
