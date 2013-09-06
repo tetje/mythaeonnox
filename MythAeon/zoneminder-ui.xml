@@ -292,7 +292,7 @@
         </imagetype>
         
         <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-            <filename>images/shared/multiplex_tvtablet.png</filename>
+            <filename>images/shared/multiplex_tablet_bigthumb.png</filename>
         </imagetype>
 	
         <group name="eventinfo">
@@ -300,17 +300,17 @@
 
 
 	        <imagetype name="frameimage">
-	            <area>16,313,611,350</area>
-	            <filename>images/backgrounds/defaultfanart/</filename>
+	            <area>729,58,949,538</area>
 	            <preserveaspect>no</preserveaspect>
+	            <filename>images/backgrounds/defaultfanart/</filename>
 	        </imagetype>
 
            <group name="additionaleventinfo">
-              <area>30,85,567,270</area>
+              <area>30,85,350,270</area>
               
               <!-- labels -->
 		        <textarea name="eventcountlbl" from="textarea_label">
-		            <area>0,140,567,30</area>
+		            <area>5,140,350,30</area>
 		            <value>Event number:</value>
 		        </textarea>
 		        
@@ -358,7 +358,7 @@
 		        </buttonlist>
 	
 		        <textarea name="eventno_text" from="textarea_info">
-		            <area>0,165,567,30</area>
+		            <area>5,165,350,30</area>
 		        </textarea>
 	
 	     </group>   
@@ -373,7 +373,7 @@
 	         <value>You haven't added any Sites/RSS Feeds yet!  To add a site, press MENU, then choose "Scan/Manage Subscriptions," then "Manage Site Subscriptions."</value>
 	     </textarea>		
 -->
-     </group>
+        </group>
 
      </group>
      
@@ -407,7 +407,7 @@
         </animation>
 
         <buttonlist name="layout1_eventlist" from="buttonlist_zonemindershowpanel">
-            <position>629,80</position>
+            <position>14,315</position>
         </buttonlist>
      </group>
 <!--+++++++++++++++++++ layout 2 - 1 row +++++++++++++++++++++++++-->
@@ -513,7 +513,7 @@
         </buttonlist>
 
 
-        <!--+++++++++++++++++++ layout 3 - grid view 6x2 +++++++++++++++++++++++++-->
+<!--+++++++++++++++++++ layout 3 - grid view 6x2 +++++++++++++++++++++++++-->
 
         <shape name="layout3_image2" from="basebackground">
             <area>20,160,740,450</area>
@@ -595,14 +595,14 @@
             </section>
         </animation>
 
- 	     <button name="play_button" from="button_info_panel">
+        <button name="play_button" from="button_tvshow_panel">
+            <position>373,40</position>
             <value>Watch</value>
-            <position>30,620</position>
         </button>
 
-        <button name="delete_button" from="button_info_panel">
+        <button name="delete_button" from="button_tvshow_panel">
             <value>Done</value>
-            <position>180,620</position>
+            <position>373,110</position>
         </button>
      </group>
    
@@ -610,92 +610,70 @@
 
     <window name="zmplayer">
 
-        <fontdef name="label" from="basesmall">
-            <color>#ffff00</color>
-            <size>16</size>
-            <weight>bold</weight>
-        </fontdef>
-
-        <fontdef name="data" from="basesmall">
-            <color>#ffffff</color>
-            <size>14</size>
-            <weight>bold</weight>
-        </fontdef>
-
-        <fontdef name="buttons" from="basesmall">
-            <color>#ffffff</color>
-            <size>12</size>
-            <weight>bold</weight>
-        </fontdef>
-
+        <area>837,125,956,545</area>
+<!--
         <textarea name="pagetitle" from="basetextarea">
             <area>30,10,570,40</area>
             <font>baselarge</font>
             <value>ZoneMinder Event Player</value>
         </textarea>
+-->
+        <!-- labels -->
+        <group name="eventinfogroup">
+	        <area>-713,250,713,294</area>
+	        <shape name="groupselectorbuttonlistblackbgd">
+	            <area>0,0,713,294</area>
+	            <type>box</type>
+	            <line color="#000000" alpha="255" width="1" />
+	            <fill style="solid" color="#000000" alpha="255" />
+	        </shape>
+	
+	        <imagetype name="groupselectorbuttonlistbgd">
+	            <area>0,0,713,294</area>
+	            <preserveaspect>no</preserveaspect>
+	            <filename>images/shared/multiplex_tablet_bigthumb_leftpanel_bottom.png</filename>
+	        </imagetype>
+	
+	        <textarea name="datelbl" from="textarea_label">
+	            <area>22,17,350,30</area>
+	            <value>Date:</value>
+	        </textarea>
+		        
+	        <textarea name="eventlbl" from="textarea_label">
+	            <area>22,87,350,30</area>
+	            <value>Event name:</value>
+	        </textarea>
+		        
+	        <textarea name="cameralbl" from="textarea_label">
+	            <area>22,157,350,30</area>
+	            <value>Camera name:</value>
+	        </textarea>
+		        
+	        <textarea name="framelbl" from="textarea_label">
+	            <area>22,227,350,30</area>
+	            <value>Frame:</value>
+	        </textarea>
+		        
+           <!-- widgets -->
+	        <textarea name="date_text" from="textarea_info">
+	            <area>22,42,350,30</area>
+	        </textarea>
 
-        <shape name="topbackground" from="basebackground">
-            <area>30,75,740,70</area>
-        </shape>
+	        <textarea name="event_text" from="textarea_info">
+	            <area>22,112,350,30</area>
+	        </textarea>
 
-        <textarea name="label1">
-            <area>40,75,160,40</area>
-            <align>left,vcenter</align>
-            <font>label</font>
-            <value>Event:</value>
-        </textarea>
+	        <textarea name="camera_text" from="textarea_info">
+	            <area>22,182,350,30</area>
+	        </textarea>
 
-        <textarea name="event_text">
-            <area>140,75,270,40</area>
-            <align>left,vcenter</align>
-            <font>data</font>
-            <value>Event Name (1/123)</value>
-        </textarea>
-
-        <textarea name="label2">
-            <area>410,75,400,40</area>
-            <align>left,vcenter</align>
-            <font>label</font>
-            <value>Camera:</value>
-        </textarea>
-
-        <textarea name="camera_text">
-            <area>530,75,160,40</area>
-            <align>left,vcenter</align>
-            <font>data</font>
-            <value>Camera Name</value>
-        </textarea>
-
-        <textarea name="label3">
-            <area>40,105,160,40</area>
-            <font>label</font>
-            <align>left,vcenter</align>
-            <value>Frame:</value>
-        </textarea>
-
-        <textarea name="frame_text">
-            <area>140,105,160,40</area>
-            <align>left,vcenter</align>
-            <font>data</font>
-            <value>1/123</value>
-        </textarea>
-
-        <textarea name="label4">
-            <area>410,105,400,40</area>
-            <align>left,vcenter</align>
-            <font>label</font>
-            <value>Date:</value>
-        </textarea>
-
-        <textarea name="date_text">
-            <area>530,105,250,40</area>
-            <align>left,vcenter</align>
-            <font>data</font>
-            <value>Mon 01 Nov 2006 12:34</value>
-        </textarea>
+	        <textarea name="frame_text" from="textarea_info">
+	            <area>22,252,350,30</area>
+	        </textarea>
+        </group>
 
         <imagetype name="frameimage">
-            <area>150,165,500,350</area>
+            <area>3,3,949,538</area>
             <filename>mz_testcard.png</filename>
         </imagetype>
 
@@ -708,24 +686,39 @@
 
         <!-- fullscreen player -->
         <imagetype name="framefsimage">
-            <area>0,0,800,600</area>
+            <area>0,0,1920,1080</area>
         </imagetype>
 
         <!-- buttons -->
-        <button name="play_button" from="basebutton">
-            <position>35,550</position>
+        <shape name="groupselectorbuttonblackbgd">
+            <area>-354,5,355,243</area>
+            <type>box</type>
+            <line color="#000000" alpha="255" width="1" />
+            <fill style="solid" color="#000000" alpha="255" />
+        </shape>
+
+        <imagetype name="groupselectorbuttonbgd">
+            <area>-354,5,355,243</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/multiplex_tablet_bigthumb_midpanel_top.png</filename>
+        </imagetype>
+
+        <button name="play_button" from="button_tvshow_panel">
+            <position>-352,25</position>
+            <value>Save</value>
         </button>
 
-        <button name="delete_button" from="basebutton">
-            <position>205,550</position>
+        <button name="delete_button" from="button_tvshow_panel">
+            <position>-352,95</position>
+            <value>Save</value>
         </button>
 
-        <button name="prev_button" from="basebutton">
-            <position>440,550</position>
+        <button name="prev_button" from="button_skipbwd">
+            <position>0,410</position>
         </button>
 
-        <button name="next_button" from="basebutton">
-            <position>610,550</position>
+        <button name="next_button" from="button_skipfwd">
+            <position>810,410</position>
         </button>
 
     </window>

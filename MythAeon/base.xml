@@ -1850,7 +1850,7 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_zonemindershowpanel">
-       <area>0,0,1052,560</area>
+       <area>0,0,712,280</area>
        <layout>vertical</layout>
        <spacing>0</spacing>
        <scrollstyle>free</scrollstyle>
@@ -1858,18 +1858,18 @@
        <align>left</align>
        <wrapstyle>selection</wrapstyle>
        <showarrow>no</showarrow>
-       <buttonarea>0,0,1052,560</buttonarea>
+       <buttonarea>0,0,712,280</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
-               <area>0,0,1052,70</area>
+               <area>0,0,712,70</area>
 		         <textarea name="buttontext" from="textarea_label">
-		             <area>20,7,973,30</area>
+		             <area>20,7,670,30</area>
 		         </textarea>	
 		         <textarea name="camera" from="buttontext">
 		             <align>right,vcenter</align>
 		         </textarea>	
                <textarea name="time" from="textarea_info">
-                   <area>20,32,973,30</area>
+                   <area>20,32,670,30</area>
                </textarea>
                <textarea name="length" from="time">
                    <align>right,vcenter</align>
@@ -1878,18 +1878,18 @@
            </state>
            <state name="selectedactive">
                <imagetype name="Listpanel_selectbar">
-                   <area>0,0,1052,70</area>
+                   <area>0,0,712,70</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
 		         <textarea name="buttontext" from="textarea_label">
-		             <area>20,7,973,30</area>
+		             <area>20,7,670,30</area>
 		             <font>Font_Label_List_Selected</font>
 		         </textarea>	
 		         <textarea name="camera" from="buttontext">
 		             <align>right,vcenter</align>
                </textarea>
                <textarea name="time" from="textarea_info">
-                   <area>20,32,973,30</area>
+                   <area>20,32,670,30</area>
                    <font>Font_Info_Selected</font>
                </textarea>
                <textarea name="length" from="time">
@@ -4851,6 +4851,70 @@
         </statetype>
     </button>
     
+    <button name="button_delete">
+        <area>0,0,146,144</area>
+        <statetype name="buttonstate">
+           <state name="active">
+			     <imagetype name="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_nofocus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_delete" from="osd_button_nofocus_bgd">
+			        <filename>images/icons/delete.png</filename>
+			     </imagetype>
+           </state>
+           <state name="pushed">
+			     <imagetype name="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_focus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_delete" from="osd_button_focus_bgd">
+			        <filename>images/icons/delete.png</filename>
+			     </imagetype>
+           </state>
+           <state name="disabled" from="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selected" from="pushed">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+    
+    <button name="button_add">
+        <area>0,0,146,144</area>
+        <statetype name="buttonstate">
+           <state name="active">
+			     <imagetype name="osd_button_nofocus_bgd">
+			        <filename>images/osd/osd_button_nofocus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_add" from="osd_button_nofocus_bgd">
+			        <filename>images/icons/add.png</filename>
+			     </imagetype>
+           </state>
+           <state name="pushed">
+			     <imagetype name="osd_button_focus_bgd">
+			        <filename>images/osd/osd_button_focus.png</filename>
+			        <area>0,0,146,144</area>
+			        <preserveaspect>no</preserveaspect>
+			     </imagetype>
+			     <imagetype name="osd_button_add" from="osd_button_focus_bgd">
+			        <filename>images/icons/add.png</filename>
+			     </imagetype>
+           </state>
+           <state name="disabled" from="active">
+               <alpha>128</alpha>
+           </state>
+           <state name="selected" from="pushed">
+               <alpha>128</alpha>
+           </state>
+        </statetype>
+    </button>
+    
     <!-- Base definition of a button -->
     <button name="basebutton">
         <position>0,0</position>
@@ -6185,22 +6249,22 @@
    </buttonlist>
 
    <buttonlist name="selector_tvshowpanel">
-       <area>0,0,615,70</area>
+       <area>0,0,359,70</area>
        <layout>horizontal</layout>
-       <buttonarea>0,0,490,70</buttonarea>
+       <buttonarea>0,0,359,70</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
                <textarea name="buttontext" from="textarea_info">
-                   <area>20,32,470,30</area>
+                   <area>20,32,200,30</area>
                </textarea>
           </state>
           <state name="selectedactive">
                <imagetype name="Listpanel_selectbar">
-                   <area>0,0,615,70</area>
+                   <area>0,0,359,70</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
                <textarea name="buttontext" from="textarea_info">
-                   <area>20,32,470,30</area>
+                   <area>20,32,200,30</area>
                    <font>Font_Info_Selected</font>
                    <scroll direction="horizontal"/>
                </textarea>
@@ -6211,13 +6275,13 @@
         <statetype name="upscrollarrow">
             <state type="off">
                <imagetype name="dnon">
-                   <area>491,-13,62,98</area>
+                   <area>235,-13,62,98</area>
                    <filename>images/shared/spin-down.png</filename>
                </imagetype>
             </state>
             <state type="full">
                 <imagetype name="dnoff">
-                   <area>491,-13,62,98</area>
+                   <area>235,-13,62,98</area>
                    <filename>images/shared/spin-down-focus.png</filename>
                 </imagetype>
             </state>
@@ -6225,13 +6289,13 @@
         <statetype name="downscrollarrow">
             <state type="off">
                <imagetype name="dnon">
-                   <area>553,-13,62,98</area>
+                   <area>297,-13,62,98</area>
                    <filename>images/shared/spin-up.png</filename>
                </imagetype>
             </state>
             <state type="full">
                 <imagetype name="upoff">
-                   <area>553,-13,62,98</area>
+                   <area>297,-13,62,98</area>
                    <filename>images/shared/spin-up-focus.png</filename>
                 </imagetype>
             </state>
