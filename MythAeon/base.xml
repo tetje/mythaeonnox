@@ -285,18 +285,25 @@
         <stretch>condensed</stretch>
     </fontdef>
 
-    <fontdef name="Font_Weather_Info" face="Aeon Title">
-        <pixelsize>28</pixelsize>
+    <fontdef name="Font_Zm_Info" face="Aeon Title">
+        <pixelsize>38</pixelsize>
         <color>#FFFFFF</color>
         <weight>bold</weight>
         <stretch>condensed</stretch>
+        <outlinecolor>#000000</outlinecolor>
+        <outlinesize>4</outlinesize> 
     </fontdef>
 
-    <fontdef name="Font_Weather_Temp" face="Aeon Title">
-        <pixelsize>40</pixelsize>
-        <color>#FFFFFF</color>
-        <weight>bold</weight>
-        <stretch>normal</stretch>
+    <fontdef name="Font_Zm_Info_red" from="Font_Zm_Info">
+        <color>#FF0000</color>
+    </fontdef>
+
+    <fontdef name="Font_Zm_Info_amber" from="Font_Zm_Info">
+        <color>#E0991A</color>
+    </fontdef>
+
+    <fontdef name="Font_ZM_Info_green" from="Font_Zm_Info">
+        <color>#00FF00</color>
     </fontdef>
 
    <!-- Base MythAeon clock definition -->
@@ -1774,6 +1781,126 @@
            </state>
            <state name="selectedinactive" from="selectedactive">
                <alpha>0</alpha>
+           </state>
+       </statetype>
+	    <statetype name="downscrollarrow">
+	        <position>50,70</position>
+	        <state type="off">
+	            <imagetype name="dnon">
+	                <filename>images/shared/multiplex_arrow2.png</filename>
+	                <alpha>90</alpha>
+	            </imagetype>
+	        </state>
+	        <state type="full">
+	            <imagetype name="dnoff">
+	                <filename>images/shared/multiplex_arrow2.png</filename>
+	            </imagetype>
+	        </state>
+	    </statetype>
+	    <statetype name="upscrollarrow">
+	        <position>1820,70</position>
+	        <state type="off">
+	            <imagetype name="dnon">
+	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <alpha>90</alpha>
+	            </imagetype>
+	        </state>
+	        <state type="full">
+	            <imagetype name="dnoff">
+	                <filename>images/shared/multiplex_arrow1.png</filename>
+	            </imagetype>
+	        </state>
+	    </statetype>
+       
+   </buttonlist>
+
+   <buttonlist name="buttonlist_multiplexzoneminder">
+       <spacing>5</spacing>
+       <area>0,0,1920,335</area>
+       <searchposition>610,340</searchposition>
+       <layout>horizontal</layout>
+       <scrollstyle>center</scrollstyle>
+       <arrange>stack</arrange>
+       <align>hcenter</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>yes</showarrow>
+       <buttonarea>113,0,1694,335</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <imagetype name="previewbgd">
+                   <area>0,5,314,176</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_tvborder.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="frameimage">
+                   <area>8,11,300,168</area>
+                   <alpha>255</alpha>
+                   <mask>images/shared/multiplex_tvmask_small.png</mask>
+                   <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+                   <preserveaspect>no</preserveaspect>
+                   <reflection shear="0" scale="50" length="33" spacing="0" />
+               </imagetype>
+               <imagetype name="buttonimage" from="frameimage" depends="!frameimage"/>
+               <imagetype name="previewglass">
+                   <area>8,11,300,168</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_tvglass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="previewlabel" depends="!preview">
+                   <area>19,225,278,90</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_labelblock.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_plot" depends="!buttonimage">
+                   <area>24,225,268,50</area>
+                   <multiline>yes</multiline>
+                   <font>Font_Info_20_White</font>
+                   <cutdown>yes</cutdown>
+                   <align>hcenter,vcenter</align>
+                   <template>%buttontext%\n%time%</template>
+               </textarea>	
+           </state>
+           <state name="selectedactive">
+               <area>-648,-9,398,330</area>
+               <imagetype name="previewbgd">
+                   <area>0,-9,398,231</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_tvborder.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+               <imagetype name="preview">
+                   <area>9,0,380,213</area>
+                   <alpha>255</alpha>
+                   <preserveaspect>no</preserveaspect>
+                   <mask>images/shared/multiplex_tvmask.png</mask>
+                   <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+               </imagetype>
+               <imagetype name="buttonimage" from="preview"/>
+               <imagetype name="previewglass">
+                   <area>9,0,380,213</area>
+                   <alpha>255</alpha>
+                   <filename>images/shared/multiplex_tvglass.png</filename>
+                   <preserveaspect>no</preserveaspect>
+               </imagetype>
+		         <textarea name="author" from="textarea_title_sub">
+		             <area>-648,295,1694,30</area>
+		             <align>allcenter</align>
+		         </textarea>
+               <textarea name="buttontext" from="textarea_title">
+                   <area>-648,330,1694,45</area>
+                   <cutdown>no</cutdown>
+		             <align>allcenter</align>
+		             <template>%buttontext%</template>
+               </textarea>
+           </state>
+           <state name="inactive" from ="active">
+               <alpha>255</alpha>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>255</alpha>
            </state>
        </statetype>
 	    <statetype name="downscrollarrow">

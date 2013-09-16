@@ -302,7 +302,7 @@
 	        <imagetype name="frameimage">
 	            <area>729,58,949,538</area>
 	            <preserveaspect>no</preserveaspect>
-	            <filename>images/backgrounds/defaultfanart/</filename>
+	            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
 	        </imagetype>
 
            <group name="additionaleventinfo">
@@ -361,41 +361,12 @@
 		            <area>5,165,350,30</area>
 		        </textarea>
 	
-	     </group>   
+	        </group>   
 
-<!--	     
-        <textarea name="description" from="textarea_plot">
-            <area>30,620,1634,200</area>
-            <align>left,top</align>
-        </textarea>
-        
-	     <textarea name="nosites" from="description">
-	         <value>You haven't added any Sites/RSS Feeds yet!  To add a site, press MENU, then choose "Scan/Manage Subscriptions," then "Manage Site Subscriptions."</value>
-	     </textarea>		
--->
         </group>
 
      </group>
      
-     <group name="multiplextabletweblistgroup">
-        <area>0,690,1920,390</area>
-
-        <animation trigger="AboutToShow">
-            <section duration="1200" centre="middle">
-                <position start="1920,690" end="0,690" easingcurve="InOutBack" />
-            </section>
-        </animation>
-
-<!-- Fix me: This does not work when a movie has played and one returns to the main screen
-
-        <animation trigger="AboutToHide">
-            <section duration="1200" centre="middle">
-                <position start="0,690" end="-1920,690" easingcurve="OutInBack" />
-            </section>
-        </animation>       
--->
-     </group>
-
 <!--+++++++++++++++++++ layout 1 - list view +++++++++++++++++++++++++-->
      <group name="multiplextabletlayout1group">
         <area>113,70,1694,846</area>
@@ -515,74 +486,20 @@
 
 <!--+++++++++++++++++++ layout 3 - grid view 6x2 +++++++++++++++++++++++++-->
 
-        <shape name="layout3_image2" from="basebackground">
-            <area>20,160,740,450</area>
-        </shape>
+     <group name="multiplextabletlayout3group">
+        <area>0,690,1920,390</area>
 
-        <buttonlist name="layout3_eventlist">
-            <area>42,170,700,340</area>
-            <layout>grid</layout>
-            <spacing>10</spacing>
-            <buttonarea>0,0,700,340</buttonarea>
-            <statetype name="buttonitem">
-                <area>0,0,230,150</area>
-                <state name="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,225,160</area>
-                        <fill style="gradient">
-                            <gradient start="#505050" end="#000000" alpha="200"/>
-                        </fill>
-                    </shape>
-                    <imagetype name="buttonimage">
-                        <area>25,10,180,120</area>
-                    </imagetype>
+        <animation trigger="AboutToShow">
+            <section duration="1200" centre="middle">
+                <position start="1920,690" end="0,690" easingcurve="InOutBack" />
+            </section>
+        </animation>
 
-                    <textarea name="buttontext" from="basetextarea">
-                        <area>5,130,220,30</area>
-                        <align>hcenter,bottom</align>
-                        <font>basesmallgrey</font>
-                    </textarea>
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,225,160</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="255"/>
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-               <state name="selectedinactive" from="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,225,160</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="100"/>
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>240,270</position>
-                <state type="on">
-                    <imagetype name="upon">
-                        <filename>up_arrow.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>456,270</position>
-                <state type="on">
-                    <imagetype name="dnon">
-                        <filename>down_arrow.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
+        <buttonlist name="layout3_eventlist" from="buttonlist_multiplexzoneminder">
+            <position>0,-5</position>
         </buttonlist>
+
+     </group>
 
 <!--+++++++++++++++++++ buttons  +++++++++++++++++++++++++-->
 
@@ -611,13 +528,7 @@
     <window name="zmplayer">
 
         <area>837,125,956,545</area>
-<!--
-        <textarea name="pagetitle" from="basetextarea">
-            <area>30,10,570,40</area>
-            <font>baselarge</font>
-            <value>ZoneMinder Event Player</value>
-        </textarea>
--->
+
         <!-- labels -->
         <group name="eventinfogroup">
 	        <area>-713,250,713,294</area>
@@ -674,13 +585,14 @@
 
         <imagetype name="frameimage">
             <area>3,3,949,538</area>
-            <filename>mz_testcard.png</filename>
+            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
         </imagetype>
 
-        <textarea name="noevents_text">
-            <area>100,65,600,450</area>
-            <font>data</font>
-            <align>allcenter</align>
+
+        <textarea name="noevents_text" from="textarea_label">
+            <area>-696,-32,993,30</area>
+            <align>left,top</align>
+            <multiline>no</multiline>
             <value>There are no events to show</value>
         </textarea>
 
@@ -724,148 +636,238 @@
     </window>
 
     <window name="zmliveplayer">
+        <area>0,0,1920,1080</area>
 
-        <fontdef name="monitor" from="basesmall">
-            <color>#ffff00</color>
-            <size>16</size>
-        </fontdef>
-
-        <fontdef name="idle" from="basesmall">
-            <color>#ffff00</color>
-            <size>16</size>
-        </fontdef>
-
-        <fontdef name="alarm" from="basesmall">
-            <color>#ff0000</color>
-            <size>16</size>
-        </fontdef>
-
-        <fontdef name="alert" from="basesmall">
-            <color>#ffa500</color>
-            <size>16</size>
-        </fontdef>
-
-        <textarea name="pagetitle" from="basetextarea">
-            <area>30,10,570,40</area>
-            <font>baselarge</font>
-            <value>ZoneMinder Live Player</value>
-        </textarea>
-
-        <!-- one monitor view -->
-        <textarea name="name1-1" from="basetextarea">
-            <area>100,75,300,70</area>
-            <font>monitor</font>
-            <value>Monitor 1</value>
-        </textarea>
-
-        <textarea name="status1-1" from="basetextarea">
-            <area>400,75,300,70</area>
-            <align>right</align>
-            <font>idle</font>
-            <font state="idle">idle</font>
-            <font state="alarm">alarm</font>
-            <font state="alert">alert</font>
-            <value></value>
-        </textarea>
-
-        <imagetype name="frame1-1">
-            <area>100,105,600,450</area>
-            <filename>mz_testcard.png</filename>
+        <imagetype name="fanart">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/zoneminder/</filename>
+        </imagetype>
+        
+        <imagetype name="framebgd3-1_bgd">
+            <area>86,20,811,500</area>
+            <filename>images/shared/nowplaying_back.png</filename>
         </imagetype>
 
-        <!-- two monitor view -->
-        <textarea name="name2-1" from="basetextarea">
-            <area>20,70,185,30</area>
-            <font>monitor</font>
+        <imagetype name="framebgd3-2_bgd" from="framebgd3-1_bgd">
+            <position>1022,20</position>
+        </imagetype>
+<!-- -->
+        <imagetype name="framebgd3-3_bgd" from="framebgd3-1_bgd">
+            <position>86,520</position>
+        </imagetype>
+
+        <imagetype name="framebgd3-4_bgd" from="framebgd3-1_bgd">
+            <position>1022,520</position>
+        </imagetype>
+<!-- -->
+        <!-- one monitor view -->
+        
+        <imagetype name="frame1-1">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+        </imagetype>
+
+        <textarea name="name1-1" from="textarea_weatherinfo">
+            <area>30,30,1860,40</area>
+            <font>Font_Zm_Info</font>
+            <align>left</align>
             <value>Monitor 1</value>
         </textarea>
 
-        <textarea name="status2-1" from="status1-1">
-            <area>205,75,185,70</area>
+        <textarea name="status1-1" from="name1-1">
+            <align>right</align>
+            <font state="idle">Font_Weather_Zm_green</font>
+            <font state="alarm">Font_Weather_Zm_red</font>
+            <font state="alert">Font_Weather_Zm_amber</font>
+            <value>Not running</value>
+        </textarea>
+
+        <!-- two monitor view -->
+        <textarea name="name2-1" from="textarea_weatherinfo">
+            <area>136,55,711,40</area>
+            <align>left</align>
+            <value>Monitor 1</value>
+        </textarea>
+
+        <textarea name="status2-1" from="name2-1">
+            <align>right</align>
+            <font state="idle">Font_Weather_Info_green</font>
+            <font state="alarm">Font_Weather_Info_red</font>
+            <font state="alert">Font_Weather_Info_amber</font>
+            <value>Not running</value>
         </textarea>
 
         <imagetype name="frame2-1">
-            <area>20,105,370,280</area>
-            <filename>mz_testcard.png</filename>
+            <area>136,85,711,400</area>
+            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
         </imagetype>
 
-        <textarea name="name2-2" from="basetextarea">
-            <area>410,75,185,30</area>
-            <font>monitor</font>
+        <textarea name="name2-2" from="textarea_weatherinfo">
+            <area>1072,55,711,40</area>
+            <align>left</align>
             <value>Monitor 2</value>
         </textarea>
 
-        <textarea name="status2-2" from="status1-1">
-            <area>595,75,185,70</area>
+        <textarea name="status2-2" from="name2-2">
+            <align>right</align>
+            <font state="idle">Font_Weather_Info_green</font>
+            <font state="alarm">Font_Weather_Info_red</font>
+            <font state="alert">Font_Weather_Info_amber</font>
+            <value>Not running</value>
         </textarea>
 
         <imagetype name="frame2-2">
-            <area>410,105,370,280</area>
-            <filename>mz_testcard.png</filename>
+            <area>1072,85,711,400</area>
+            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
         </imagetype>
 
         <!-- four monitor view -->
 
-        <textarea name="name3-1" from="basetextarea">
-            <area>50,70,162,30</area>
-            <font>monitor</font>
-            <multiline>no</multiline>
+        <textarea name="name3-1" from="textarea_weatherinfo">
+            <area>136,55,711,40</area>
+            <align>left</align>
             <value>Monitor 1</value>
         </textarea>
 
-        <textarea name="status3-1" from="status1-1">
-            <area>212,70,162,30</area>
+        <textarea name="status3-1" from="name3-1">
+            <align>right</align>
+            <font state="idle">Font_Weather_Info_green</font>
+            <font state="alarm">Font_Weather_Info_red</font>
+            <font state="alert">Font_Weather_Info_amber</font>
+            <value>Not running</value>
         </textarea>
 
         <imagetype name="frame3-1">
-            <area>50,100,325,215</area>
-            <filename>mz_testcard.png</filename>
+            <area>136,85,711,400</area>
+            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
         </imagetype>
 
-        <textarea name="name3-2" from="basetextarea">
-            <area>425,70,162,30</area>
-            <font>monitor</font>
+        <textarea name="name3-2" from="textarea_weatherinfo">
+            <area>1072,55,711,40</area>
+            <align>left</align>
             <value>Monitor 2</value>
         </textarea>
 
-        <textarea name="status3-2" from="status1-1">
-            <area>587,70,162,30</area>
+        <textarea name="status3-2" from="name3-2">
+            <align>right</align>
+            <font state="idle">Font_Weather_Info_green</font>
+            <font state="alarm">Font_Weather_Info_red</font>
+            <font state="alert">Font_Weather_Info_amber</font>
+            <value>Not running</value>
         </textarea>
 
         <imagetype name="frame3-2">
-            <area>425,100,325,215</area>
-            <filename>mz_testcard.png</filename>
+            <area>1072,85,711,400</area>
+            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
         </imagetype>
 
-        <textarea name="name3-3" from="basetextarea">
-            <area>50,320,162,30</area>
-            <font>monitor</font>
+        <textarea name="name3-3" from="textarea_weatherinfo">
+            <area>136,555,711,40</area>
+            <align>left</align>
             <value>Monitor 3</value>
         </textarea>
 
-        <textarea name="status3-3" from="status1-1">
-            <area>212,320,162,30</area>
+        <textarea name="status3-3" from="name3-3">
+            <align>right</align>
+            <font state="idle">Font_Weather_Info_green</font>
+            <font state="alarm">Font_Weather_Info_red</font>
+            <font state="alert">Font_Weather_Info_amber</font>
+            <value>Not running</value>
         </textarea>
 
         <imagetype name="frame3-3">
-            <area>50,350,325,215</area>
-            <filename>mz_testcard.png</filename>
+            <area>136,585,711,400</area>
+            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
         </imagetype>
 
-        <textarea name="name3-4" from="basetextarea">
-            <area>425,320,162,30</area>
-            <font>monitor</font>
+        <textarea name="name3-4" from="textarea_weatherinfo">
+            <area>1072,555,711,40</area>
+            <align>left</align>
             <value>Monitor 4</value>
         </textarea>
 
-        <textarea name="status3-4" from="status1-1">
-            <area>587,320,162,30</area>
+        <textarea name="status3-4" from="name3-4">
+            <align>right</align>
+            <font state="idle">Font_Weather_Info_green</font>
+            <font state="alarm">Font_Weather_Info_red</font>
+            <font state="alert">Font_Weather_Info_amber</font>
+            <value>Not running</value>
         </textarea>
 
         <imagetype name="frame3-4">
-            <area>425,350,325,215</area>
-            <filename>mz_testcard.png</filename>
+            <area>1072,585,711,400</area>
+            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
         </imagetype>
+
+       <group name="menu_group" >
+          <position>0,420</position>
+          
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="0,0" end="0,420" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+	       <group name="description_clock_bgd_group">
+	         <area>613,444,2031,93></area>
+	
+		       <animation trigger="AboutToShow">
+		          <section duration="500" centre="middle">
+		              <alpha start="0" end="255" easingcurve="InQuad" />
+		          </section>
+		       </animation>
+	
+		      <imagetype name="ClockBgd">
+		         <filename>images/shared/timepanel_mid_flip.png</filename>
+		         <area>627,9,683,87</area>
+		         <preserveaspect>no</preserveaspect>
+		      </imagetype>  
+	
+		      <clock name="clock">
+		         <area>667,58,620,36</area>
+		         <font>Font_Clock</font>
+		         <template>dddd,  MMMM dd,  yyyy  |  hh:mm AP</template>
+		         <align>right,vcenter</align>
+		         <alpha>192</alpha>
+		      </clock>
+	
+	       </group>
+	
+	       <imagetype name="menu_bgd">
+	          <filename>images/shared/homemenu_back.png</filename>
+	          <area>0,476,1920,225></area>
+	          <preserveaspect>no</preserveaspect>
+	       </imagetype>
+	
+	       <group name="mainmenugroup">    
+	          <area>0,0,1920,1080</area>
+	
+		       <animation trigger="AboutToShow">
+		          <section duration="500" centre="middle">
+		              <alpha start="0" end="255" easingcurve="InQuad" />
+		          </section>
+		       </animation>
+	
+	          <textarea name="header">
+	              <alpha>255</alpha>
+	              <area>0,518,1920,142</area>
+	              <font>Font_MainMenu</font>
+	              <case>upper</case>
+	              <multiline>no</multiline>
+	              <align>allcenter</align>
+	              <scroll direction="left" />
+	              <cutdown>no</cutdown>
+	              <value>ZoneMinder Live Player</value>
+	          </textarea>
+	
+	       </group>
+		
+	       <imagetype name="menu_gradient">
+	          <filename>images/shared/homemenu_gradient.png</filename>
+	          <area>0,476,1920,225></area>
+	          <preserveaspect>no</preserveaspect>
+	       </imagetype>  
+        </group>
 
     </window>
 
