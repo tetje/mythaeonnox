@@ -302,7 +302,7 @@
 	        <imagetype name="frameimage">
 	            <area>729,58,949,538</area>
 	            <preserveaspect>no</preserveaspect>
-	            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+	            <filename>images/backgrounds/zoneminder/</filename>
 	        </imagetype>
 
            <group name="additionaleventinfo">
@@ -381,12 +381,23 @@
             <position>14,315</position>
         </buttonlist>
      </group>
+     
 <!--+++++++++++++++++++ layout 2 - 1 row +++++++++++++++++++++++++-->
 
-        <shape name="layout2_image2" from="basebackground">
-            <area>20,160,740,350</area>
-        </shape>
+     <group name="multiplextabletlayout1group">
+        <area>113,70,1694,846</area>
 
+        <animation trigger="AboutToShow">
+            <section duration="1200" centre="middle">
+                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
+            </section>
+        </animation>
+
+        <buttonlist name="layout2_eventlist" from="buttonlist_zonemindershowpanel_one_row">
+            <position>14,295</position>
+        </buttonlist>
+
+<!--
         <buttonlist name="layout2_eventlist">
             <area>50,170,700,340</area>
             <layout>grid</layout>
@@ -483,7 +494,8 @@
             </statetype>
         </buttonlist>
 
-
+-->
+     </group>
 <!--+++++++++++++++++++ layout 3 - grid view 6x2 +++++++++++++++++++++++++-->
 
      <group name="multiplextabletlayout3group">
