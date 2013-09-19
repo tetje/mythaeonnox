@@ -8,6 +8,13 @@ cp -a MythAeon* ~/.mythtv/themes/
 This theme is designed to work with a custom menu called MythAeon. To select this menu, go to 
 the 'theme & screensettings' menu in your frontend and set your Menu theme to 'MythAeon'.
 
+v026.4
+Finished screens for Mythzoneminder plugin
+Removed panel background in video gallery window
+Changed screen layout for video manager window
+Reworked a few information icons in video library windows
+Number of small fixes and improvements to various windows
+
 v026.3
 Added information labels to recordings screen to make the theme more usable.
 Reworked recordings screen to accommodate for information labels

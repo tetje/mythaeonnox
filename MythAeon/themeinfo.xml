@@ -17,12 +17,12 @@
 
     <version>
         <major>26</major>
-        <minor>3</minor>
+        <minor>4</minor>
     </version>
 
     <detail>
         <thumbnail name="preview">Recordings.png</thumbnail>
         <description>This theme is based on, and inspired by, the original XBMC skin called Aeon by Duncan Harris. When using this theme you should select the customized menu called 'MythAeon' as this menu lay-out and items are tailored for this particular theme.</description>
-        <errata>Plugins to do: MythZoneminder</errata>
+        <errata></errata>
     </detail>
 </themeinfo>
