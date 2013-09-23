@@ -299,6 +299,29 @@
         <stretch>condensed</stretch>
     </fontdef>
 
+    <fontdef name="Font_Weather_Info" face="Aeon Title">
+        <pixelsize>32</pixelsize>
+        <color>#FFFFFF</color>
+        <weight>bold</weight>
+        <stretch>condensed</stretch>
+    </fontdef>
+
+    <fontdef name="Font_Weather_Temp" face="Aeon Title">
+        <pixelsize>32</pixelsize>
+        <color>#FFFFFF</color>
+        <weight>bold</weight>
+        <stretch>condensed</stretch>
+    </fontdef>
+
+    <fontdef name="Font_Weather_Temp_Red" from="Font_Weather_Temp">
+        <color>#FF0000</color>
+    </fontdef>
+
+    <fontdef name="Font_Weather_Temp_Blue" from="Font_Weather_Temp">
+        <color>#0055FF</color>
+    </fontdef>
+
+
     <fontdef name="Font_Zm_Info" face="Aeon Title">
         <pixelsize>38</pixelsize>
         <color>#FFFFFF</color>

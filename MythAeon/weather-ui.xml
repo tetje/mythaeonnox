@@ -149,7 +149,7 @@
 		        <!-- Labels -->
 	
 		        <textarea name="humiditylbl" from="textarea_weatherlabel">
-		            <area>0,0,358,32</area>
+		            <area>0,0,365,32</area>
 		            <value>Humidity</value>
 		        </textarea>
 		
@@ -184,33 +184,46 @@
 		        </textarea>
 		
 		        <!-- widgets -->
-		        <textarea name="relative_humidity" from="textarea_weatherinfo">
-		            <area>0,-2,368,42</area>
+		        <textarea name="relative_humidity" from="humiditylbl">
 		            <align>right,vcenter</align>
+		            <font>Font_Weather_Info</font>
+		            <value>N/A</value>
 		        </textarea>
 		
-		        <textarea name="pressure" from="relative_humidity">
-		            <position>0,38</position>
+		        <textarea name="pressure" from="pressurelbl">
+		            <align>right,vcenter</align>
+		            <font>Font_Weather_Info</font>
+		            <value>N/A</value>
 		        </textarea>
 		
-		        <textarea name="wind_spdgst" from="relative_humidity">
-		            <position>0,78</position>
+		        <textarea name="wind_spdgst" from="windlbl">
+		            <align>right,vcenter</align>
+		            <font>Font_Weather_Info</font>
+		            <value>N/A</value>
 		        </textarea>
 		
-		        <textarea name="wind_dir" from="relative_humidity">
-		            <position>0,118</position>
+		        <textarea name="wind_dir" from="dirlbl">
+		            <align>right,vcenter</align>
+		            <font>Font_Weather_Info</font>
+		            <value>N/A</value>
 		        </textarea>
 		
-		        <textarea name="visibility" from="relative_humidity">
-		            <position>0,158</position>
+		        <textarea name="visibility" from="visilbl">
+		            <align>right,vcenter</align>
+		            <font>Font_Weather_Info</font>
+		            <value>N/A</value>
 		        </textarea>
 		
-		        <textarea name="appt" from="relative_humidity">
-		            <position>0,198</position>
+		        <textarea name="appt" from="apptlbl">
+		            <align>right,vcenter</align>
+		            <font>Font_Weather_Info</font>
+		            <value>N/A</value>
 		        </textarea>
 		
-		        <textarea name="temp" from="relative_humidity">
-		            <position>0,238</position>
+		        <textarea name="temp" from="templbl">
+		            <align>right,vcenter</align>
+		            <font>Font_Weather_Temp_Red</font>
+		            <value>N/A</value>
 		        </textarea>
 		
            </group>	
@@ -563,10 +576,12 @@
 		
 		        <textarea name="low-0" from="textarea_weathertemp">
 		            <position>40,244</position>
+		            <font>Font_Weather_Temp_Blue</font>
 		        </textarea>
 		
 		        <textarea name="high-0" from="low-0">
 		            <position>40,294</position>
+		            <font>Font_Weather_Temp_Red</font>
 		        </textarea>
 	        </group>
 	
@@ -605,10 +620,12 @@
 		
 		        <textarea name="low-1" from="textarea_weathertemp">
 		            <position>40,244</position>
+		            <font>Font_Weather_Temp_Blue</font>
 		        </textarea>
 		
 		        <textarea name="high-1" from="low-1">
 		            <position>40,294</position>
+		            <font>Font_Weather_Temp_Red</font>
 		        </textarea>
 	        </group>
 	
@@ -647,10 +664,12 @@
 		
 		        <textarea name="low-2" from="textarea_weathertemp">
 		            <position>40,244</position>
+		            <font>Font_Weather_Temp_Blue</font>
 		        </textarea>
 		
 		        <textarea name="high-2" from="low-2">
 		            <position>40,294</position>
+		            <font>Font_Weather_Temp_Red</font>
 		        </textarea>
 	        </group>
 	
@@ -715,10 +734,12 @@
 		
 		        <textarea name="low-0" from="textarea_weathertemp">
 		            <position>40,244</position>
+		            <font>Font_Weather_Temp_Blue</font>
 		        </textarea>
 		
 		        <textarea name="high-0" from="low-0">
 		            <position>40,294</position>
+		            <font>Font_Weather_Temp_Red</font>
 		        </textarea>
 	        </group>
 	
@@ -757,10 +778,12 @@
 		
 		        <textarea name="low-1" from="textarea_weathertemp">
 		            <position>40,244</position>
+		            <font>Font_Weather_Temp_Blue</font>
 		        </textarea>
 		
 		        <textarea name="high-1" from="low-1">
 		            <position>40,294</position>
+		            <font>Font_Weather_Temp_Red</font>
 		        </textarea>
 	        </group>
 	
@@ -799,10 +822,12 @@
 		
 		        <textarea name="low-2" from="textarea_weathertemp">
 		            <position>40,244</position>
+		            <font>Font_Weather_Temp_Blue</font>
 		        </textarea>
 		
 		        <textarea name="high-2" from="low-2">
 		            <position>40,294</position>
+		            <font>Font_Weather_Temp_Red</font>
 		        </textarea>
 	        </group>
 	
@@ -841,10 +866,12 @@
 		
 		        <textarea name="low-3" from="textarea_weathertemp">
 		            <position>40,244</position>
+		            <font>Font_Weather_Temp_Blue</font>
 		        </textarea>
 		
 		        <textarea name="high-3" from="low-3">
 		            <position>40,294</position>
+		            <font>Font_Weather_Temp_Red</font>
 		        </textarea>
 	        </group>
 	
@@ -883,10 +910,12 @@
 		
 		        <textarea name="low-4" from="textarea_weathertemp">
 		            <position>40,244</position>
+		            <font>Font_Weather_Temp_Blue</font>
 		        </textarea>
 		
 		        <textarea name="high-4" from="low-4">
 		            <position>40,294</position>
+		            <font>Font_Weather_Temp_Red</font>
 		        </textarea>
 	        </group>
 	
@@ -925,10 +954,12 @@
 		
 		        <textarea name="low-5" from="textarea_weathertemp">
 		            <position>40,244</position>
+		            <font>Font_Weather_Temp_Blue</font>
 		        </textarea>
 		
 		        <textarea name="high-5" from="low-5">
 		            <position>40,294</position>
+		            <font>Font_Weather_Temp_Red</font>
 		        </textarea>
 	        </group>
 	
