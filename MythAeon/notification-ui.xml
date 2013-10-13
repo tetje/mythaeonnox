@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.xsd">
+
+<mythuitheme>
+
+    <baseres>1920x1080</baseres>
+
+    <window name="notification">
+        <area>1088,50,778,391</area>
+
+        <animation trigger="AboutToShow">
+           <section duration="500" centre="middle">
+               <alpha start="0" end="255" easingcurve="InSine" />
+           </section>
+        </animation>
+        <animation trigger="AboutToHide">
+           <section duration="500" centre="middle">
+               <alpha start="255" end="0" easingcurve="OutSine" />
+           </section>
+        </animation>
+
+        <imagetype name="shadow_background">
+            <area>376,0,432,376</area>
+            <filename>images/shared/nowplaying_shadow.png</filename>
+            <mask>images/shared/nowplaying_info_mask.png</mask>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <imagetype name="mm_info_border">
+            <area>376,64,387,263</area>
+            <filename>images/shared/nowplaying_info.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+<!--
+       <imagetype name="mm_blackhole_border">
+            <area>0,0,391,391</area>
+            <filename>images/shared/nowplaying_back.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <imagetype name="image" depends="!mediastate&amp;!errorstate">
+            <area>15,15,362,362</area>
+            <filename>images/icons/notifications/dialog-question.png</filename>
+            <mask>images/shared/nowplaying_mask.png</mask>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+       <imagetype name="mm_blackhole_overlay">
+            <area>17,17,357,357</area>
+            <filename>images/shared/nowplaying_overlay.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+-->
+        <group name="notification_infogroup">
+           <area>420,25,387,362</area>
+	        <textarea name="title" from="textarea_mini_player">
+	            <area>0,0,360,35</area>
+	            <scroll direction="horizontal"/>
+	        </textarea>
+
+	        <textarea name="origin" from="textarea_mini_player_small">
+	            <area>0,45,360,35</area>
+	        </textarea>
+	
+	        <textarea name="description" from="textarea_mini_player_small" depends="progress">
+	            <area>0,90,360,142</area>
+	            <multiline>yes</multiline>
+	            <align>top,left</align>
+	            <scroll direction="vertical"/>
+	            <alpha>192</alpha>
+	        </textarea>
+
+	        <textarea name="extra" from="textarea_mini_player">
+	            <area>0,257,360,35</area>
+	            <scroll direction="horizontal"/>
+	            <value>No additional info available</value>
+	        </textarea>
+		
+	        <textarea name="progress_text" from="textarea_info" depends="progress">
+	            <area>0,300,360,20</area>
+	            <align>allcenter</align>
+	        </textarea>
+
+		    <progressbar name="progress">
+		        <area>0,323,360,20</area>
+		        <layout>horizontal</layout>
+		        <style>reveal</style>
+		        <imagetype name="background">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_back.png</filename>
+		        </imagetype>
+		        <imagetype name="progressimage">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_fill.png</filename>
+		        </imagetype>
+		    </progressbar>
+
+	        <textarea name="description_noprogress" from="textarea_mini_player_small" depends="!progress">
+	            <area>0,90,360,142</area>
+	            <multiline>yes</multiline>
+	            <align>top,left</align>
+	            <scroll direction="vertical"/>
+	            <alpha>192</alpha>
+               <template>%DESCRIPTION%</template>
+	        </textarea>
+	    </group>
+
+    </window>
+
+    <window name="notification-image">
+        <area>1088,50,778,391</area>
+
+        <animation trigger="AboutToShow">
+           <section duration="500" centre="middle">
+               <alpha start="0" end="255" easingcurve="InSine" />
+           </section>
+        </animation>
+        <animation trigger="AboutToHide">
+           <section duration="500" centre="middle">
+               <alpha start="255" end="0" easingcurve="OutSine" />
+           </section>
+        </animation>
+
+       <imagetype name="shadow_background">
+            <area>376,0,432,376</area>
+            <filename>images/shared/nowplaying_shadow.png</filename>
+            <mask>images/shared/nowplaying_info_mask.png</mask>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <imagetype name="mm_info_border">
+            <area>376,64,387,263</area>
+            <filename>images/shared/nowplaying_info.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+       <imagetype name="mm_blackhole_border">
+            <area>0,0,391,391</area>
+            <filename>images/shared/nowplaying_back.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <statetype name="mediastate">
+            <area>0,0,392,392</area>
+            <state name="ok"/>
+            <state name="noartwork">
+                <area>0,0,392,392</area>
+                <imagetype name="imageartwork">
+		            <area>15,15,362,362</area>
+		            <filename>images/icons/notifications/image-missing.png</filename>
+		            <mask>images/shared/nowplaying_mask.png</mask>
+		            <preserveaspect>no</preserveaspect>
+                </imagetype>
+            </state>
+        </statetype>
+
+        <statetype name="errorstate">
+            <area>0,0,392,392</area>
+            <state name="ok"/>
+            <state name="error">
+                <area>0,0,392,392</area>
+                <imagetype name="imageerror">
+		            <area>15,15,362,362</area>
+		            <filename>images/icons/notifications/dialog-error.png</filename>
+		            <mask>images/shared/nowplaying_mask.png</mask>
+		            <preserveaspect>no</preserveaspect>
+                </imagetype>
+            </state>
+            <state name="check">
+                <area>0,0,392,392</area>
+                <imagetype name="imageerror">
+		            <area>25,25,342,342</area>
+		            <filename>images/icons/notifications/dialog-check.png</filename>
+		            <mask>images/shared/nowplaying_mask.png</mask>
+		            <preserveaspect>no</preserveaspect>
+                </imagetype>
+            </state>
+            <state name="warning">
+                <area>0,0,392,392</area>
+                <imagetype name="imageerror">
+		            <area>15,15,362,362</area>
+		            <filename>images/icons/notifications/dialog-warning.png</filename>
+		            <mask>images/shared/nowplaying_mask.png</mask>
+		            <preserveaspect>no</preserveaspect>
+                </imagetype>
+            </state>
+            <state name="busy">
+                <area>0,0,392,392</area>
+                <imagetype name="animation">
+		            <area>15,15,362,362</area>
+		            <filename>images/icons/notifications/system-run.png</filename>
+		            <mask>images/shared/nowplaying_mask.png</mask>
+		            <preserveaspect>no</preserveaspect>
+                </imagetype>
+            </state>
+        </statetype>
+
+        <imagetype name="image" depends="!mediastate&amp;!errorstate">
+            <area>15,15,362,362</area>
+            <filename>images/icons/notifications/dialog-question.png</filename>
+            <mask>images/shared/nowplaying_mask.png</mask>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+       <imagetype name="mm_blackhole_overlay">
+            <area>17,17,357,357</area>
+            <filename>images/shared/nowplaying_overlay.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <group name="notification_infogroup">
+           <area>420,25,387,362</area>
+	        <textarea name="title" from="textarea_mini_player">
+	            <area>0,0,360,35</area>
+	            <scroll direction="horizontal"/>
+	        </textarea>
+
+	        <textarea name="origin" from="textarea_mini_player_small">
+	            <area>0,45,360,35</area>
+	        </textarea>
+	
+	        <textarea name="description" from="textarea_mini_player_small" depends="progress">
+	            <area>0,90,360,142</area>
+	            <multiline>yes</multiline>
+	            <align>top,left</align>
+	            <scroll direction="vertical"/>
+	            <alpha>192</alpha>
+	        </textarea>
+
+	        <textarea name="extra" from="textarea_mini_player">
+	            <area>0,257,360,35</area>
+	            <scroll direction="horizontal"/>
+	            <value>No additional info available</value>
+	        </textarea>
+		
+	        <textarea name="progress_text" from="textarea_info" depends="progress">
+	            <area>0,300,360,20</area>
+	            <align>allcenter</align>
+	        </textarea>
+
+		    <progressbar name="progress">
+		        <area>0,323,360,20</area>
+		        <layout>horizontal</layout>
+		        <style>reveal</style>
+		        <imagetype name="background">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_back.png</filename>
+		        </imagetype>
+		        <imagetype name="progressimage">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_fill.png</filename>
+		        </imagetype>
+		    </progressbar>
+
+	        <textarea name="description_noprogress" from="textarea_mini_player_small" depends="!progress">
+	            <area>0,90,360,142</area>
+	            <multiline>yes</multiline>
+	            <align>top,left</align>
+	            <scroll direction="vertical"/>
+	            <alpha>192</alpha>
+               <template>%DESCRIPTION%</template>
+	        </textarea>
+	    </group>
+
+    </window>
+
+    <window name="notification-full">
+        <area>0,0,1920,1080</area>
+
+       <imagetype name="fanart">
+           <area>0,0,1920,1080</area>
+           <filename>images/backgrounds/notifications/</filename>
+       </imagetype>
+
+       <group name="icon_group">
+	       <area>1478,50,392,392</area>
+	       <imagetype name="mm_blackhole_border">
+	            <area>0,0,391,391</area>
+	            <filename>images/shared/nowplaying_back.png</filename>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	
+	        <statetype name="mediastate">
+	            <area>0,0,392,392</area>
+	            <state name="ok"/>
+	            <state name="noartwork">
+	                <area>0,0,392,392</area>
+	                <imagetype name="imageartwork">
+			            <area>15,15,362,362</area>
+			            <filename>images/icons/notifications/image-missing.png</filename>
+			            <mask>images/shared/nowplaying_mask.png</mask>
+			            <preserveaspect>no</preserveaspect>
+	                </imagetype>
+	            </state>
+	        </statetype>
+	
+	        <statetype name="errorstate">
+	            <area>0,0,392,392</area>
+	            <state name="ok"/>
+	            <state name="error">
+	                <area>0,0,392,392</area>
+	                <imagetype name="imageerror">
+			            <area>15,15,362,362</area>
+			            <filename>images/icons/notifications/dialog-error.png</filename>
+			            <mask>images/shared/nowplaying_mask.png</mask>
+			            <preserveaspect>no</preserveaspect>
+	                </imagetype>
+	            </state>
+	            <state name="check">
+	                <area>0,0,392,392</area>
+	                <imagetype name="imageerror">
+			            <area>25,25,342,342</area>
+			            <filename>images/icons/notifications/dialog-check.png</filename>
+			            <mask>images/shared/nowplaying_mask.png</mask>
+			            <preserveaspect>no</preserveaspect>
+	                </imagetype>
+	            </state>
+	            <state name="warning">
+	                <area>0,0,392,392</area>
+	                <imagetype name="imageerror">
+			            <area>15,15,362,362</area>
+			            <filename>images/icons/notifications/dialog-warning.png</filename>
+			            <mask>images/shared/nowplaying_mask.png</mask>
+			            <preserveaspect>no</preserveaspect>
+	                </imagetype>
+	            </state>
+	            <state name="busy">
+	                <area>0,0,392,392</area>
+	                <imagetype name="animation">
+			            <area>15,15,362,362</area>
+			            <filename>images/icons/notifications/system-run.png</filename>
+			            <mask>images/shared/nowplaying_mask.png</mask>
+			            <preserveaspect>no</preserveaspect>
+	                </imagetype>
+	            </state>
+	        </statetype>
+	
+	        <imagetype name="image" depends="!mediastate&amp;!errorstate">
+	            <area>15,15,362,362</area>
+	            <filename>images/icons/notifications/dialog-question.png</filename>
+	            <mask>images/shared/nowplaying_mask.png</mask>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	        	        
+		     <progressbar name="progress">
+		        <area>21,363,352,10</area>
+		        <layout>horizontal</layout>
+		        <style>reveal</style>
+		        <imagetype name="background">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_back.png</filename>
+		        </imagetype>
+		        <imagetype name="progressimage">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_fill.png</filename>
+		        </imagetype>
+		     </progressbar>
+	
+	        <imagetype name="mm_blackhole_overlay">
+	            <area>17,17,357,357</area>
+	            <filename>images/shared/nowplaying_overlay.png</filename>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	
+	    </group>
+
+       <imagetype name="rss_bgd">
+          <filename>images/shared/rssbar_mid.png</filename>
+          <area>21,634,1899,87></area>
+          <preserveaspect>no</preserveaspect>
+       </imagetype>
+
+       <textarea name="description">
+           <alpha>255</alpha>
+           <area>100,637,1820,41></area>
+           <font>Font_RSS</font>
+           <case>upper</case>
+           <alpha>192</alpha>
+           <multiline>no</multiline>
+           <align>hcenter,vcenter</align>
+           <scroll direction="left" />
+           <cutdown>no</cutdown>
+       </textarea>
+    
+       <textarea name="description_noprogress" from="description"/>
+
+
+       <imagetype name="rss_fade">
+          <filename>images/shared/rssbar_mid_fade.png</filename>
+          <area>41,634,200,41></area>
+          <preserveaspect>no</preserveaspect>
+       </imagetype>
+
+      <group name="description_clock_bgd_group">
+         <area>613,444,2031,93></area>
+<!--
+	      <animation trigger="AboutToShow">
+	          <section duration="500" centre="middle">
+	              <position start="613,476" end="613,444" easingcurve="OutSine" />
+	          </section>
+	      </animation>
+-->
+<!-- -->     
+	       <animation trigger="AboutToShow">
+	          <section duration="500" centre="middle">
+	              <alpha start="0" end="255" easingcurve="InQuad" />
+	          </section>
+	       </animation>
+<!-- -->      
+	      <imagetype name="description_clock_bgd_long" depends="origin">
+	          <filename>images/shared/timepanel_mid_flip_long.png</filename>
+             <area>-34,9,1899,87</area>
+	          <alpha>255</alpha>
+	          <preserveaspect>no</preserveaspect>
+	      </imagetype>
+
+	      <imagetype name="ClockBgd">
+	         <filename>images/shared/timepanel_mid_flip.png</filename>
+	         <area>627,9,683,87</area>
+	         <preserveaspect>no</preserveaspect>
+	      </imagetype>  
+
+	      <clock name="clock">
+	         <area>667,58,620,36</area>
+	         <font>Font_Clock</font>
+	         <template>dddd,  MMMM dd,  yyyy  |  hh:mm AP</template>
+	         <align>right,vcenter</align>
+	         <alpha>192</alpha>
+	      </clock>
+
+	      <textarea name="origin">
+	           <area>67,58,560,36</area>
+	           <font>Font_Clock</font>
+	           <multiline>no</multiline>
+	           <align>hcenter,vcenter</align>
+	           <cutdown>no</cutdown>
+	           <scroll direction="horizontal"/>
+	           <alpha>192</alpha>
+	      </textarea>
+       </group>
+
+  <!--   THE MENU ITEMS                                      -->
+
+       <imagetype name="menu_bgd">
+          <filename>images/shared/homemenu_back.png</filename>
+          <area>0,476,1920,225></area>
+          <preserveaspect>no</preserveaspect>
+       </imagetype>
+
+       <group name="mainmenugroup">    
+          <area>0,0,1920,1080</area>
+
+	       <animation trigger="AboutToShow">
+	          <section duration="500" centre="middle">
+	              <alpha start="0" end="255" easingcurve="InQuad" />
+	          </section>
+	       </animation>
+      
+          <textarea name="title">
+              <alpha>255</alpha>
+              <area>0,518,1920,142</area>
+              <font>Font_MainMenu</font>
+              <case>upper</case>
+              <multiline>no</multiline>
+              <align>allcenter</align>
+              <scroll direction="left" />
+              <cutdown>no</cutdown>
+          </textarea>
+
+      </group>
+	
+       <imagetype name="menu_gradient">
+          <filename>images/shared/homemenu_gradient.png</filename>
+          <area>0,476,1920,225></area>
+          <preserveaspect>no</preserveaspect>
+       </imagetype>  
+
+<!--
+
+        <statetype name="mediastate">
+            <area>0,0,100%,100%</area>
+            <state name="ok"/>
+            <state name="noartwork">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imageartwork">
+                    <filename>noartwork512.png</filename>
+                    <area>0,0,100%,100%</area>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>
+            </state>
+        </statetype>
+
+        <statetype name="errorstate">
+            <area>0,0,100%,100%</area>
+            <state name="ok"/>
+            <state name="error">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imageerror">
+                    <filename>error.png</filename>
+                    <area>704,189,512,512</area>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>
+            </state>
+            <state name="check">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imagecheck">
+                    <filename>check.png</filename>
+                    <area>704,189,512,512</area>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>
+            </state>
+            <state name="warning">
+                <area>0,0,100%,100%</area>
+                <imagetype name="imagewarning">
+                    <filename>warning.png</filename>
+                    <area>704,189,512,512</area>
+                    <preserveaspect>true</preserveaspect>
+                </imagetype>
+            </state>
+            <state name="busy">
+                <area>0,0,100%,100%</area>
+                <imagetype name="animation">
+                    <area>704,189,512,512</area>
+                    <filepattern low="0" high="24">busyimages/%1.png</filepattern>
+                    <delay>250</delay>
+                </imagetype>
+            </state>
+        </statetype>
+
+        <imagetype name="image" depends="!mediastate&amp;!errorstate">
+            <filename>damaged.png</filename>
+            <area>0,0,100%,100%</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+
+        <textarea name="extra" from="basetextarea" depends="progress">
+            <area>170,100%-135,300,30</area>
+            <font>basemedium</font>
+        </textarea>
+
+        <textarea name="progress_text" from="basetextarea" depends="progress">
+            <area>370,100%-135,-10,30</area>
+            <font>basemedium</font>
+            <align>right</align>
+        </textarea>
+
+        <progressbar name="progress" from="baseprogressbar">
+            <area>170,100%-100,10,10</area>
+        </progressbar>
+
+-->
+    </window>
+
+</mythuitheme>

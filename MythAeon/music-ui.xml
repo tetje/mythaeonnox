@@ -460,8 +460,14 @@
            </section>
         </animation>
 
+       <imagetype name="shadow_background">
+            <area>370,0,438,376</area>
+            <filename>images/shared/nowplaying_shadow.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
        <imagetype name="mm_blackhole_border">
-            <area>0,0,300,391</area>
+            <area>0,0,391,391</area>
             <filename>images/shared/nowplaying_back.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
@@ -479,8 +485,8 @@
             <preserveaspect>no</preserveaspect>
         </imagetype>
 
-        <imagetype name="coverartoverlay">
-            <area>15,15,260,362</area>
+       <imagetype name="mm_blackhole_overlay">
+            <area>17,17,357,357</area>
             <filename>images/shared/nowplaying_overlay.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
@@ -1108,7 +1114,13 @@
            </section>
         </animation>
 
-        <imagetype name="mm_blackhole_border">
+       <imagetype name="shadow_background">
+            <area>370,0,438,376</area>
+            <filename>images/shared/nowplaying_shadow.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+       <imagetype name="mm_blackhole_border">
             <area>0,0,391,391</area>
             <filename>images/shared/nowplaying_back.png</filename>
             <preserveaspect>no</preserveaspect>
@@ -1127,8 +1139,8 @@
             <preserveaspect>no</preserveaspect>
         </imagetype>
 
-        <imagetype name="coverartoverlay">
-            <area>15,15,362,362</area>
+       <imagetype name="mm_blackhole_overlay">
+            <area>17,17,357,357</area>
             <filename>images/shared/nowplaying_overlay.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>

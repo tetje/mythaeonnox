@@ -10,6 +10,7 @@ the 'theme & screensettings' menu in your frontend and set your Menu theme to 'M
 
 v027.1
 Removed menu item recpriorities shows
+Added notifications screens
 
 v026.5
 Fixed fonts used in mythweather plugin which were broke as a result of reusing them for mythzoneminder
