@@ -55,14 +55,14 @@
 	            <position>20,480</position>
 	            <value>Ignore ID3 Tags:</value>
 	        </textarea>
-	
+<!--	
 	        <textarea name="tagencoding_label" from="textarea_settings_option">
 	            <position>20,552</position>
 	            <value>Tag Encoding:</value>
 	        </textarea>
-	        
+-->	        
 	        <textarea name="allowtagwriting_label" from="textarea_settings_option">
-	            <position>20,624</position>
+	            <position>20,552</position>
 	            <value>Allow metadata to be written to tags:</value>
 	        </textarea>
 	        
@@ -90,13 +90,13 @@
 	        <checkbox name="ignoreid3tags" from="checkbox_settings">
 	            <position>0,480</position>
 	        </checkbox>
-	
+<!--	
 	        <buttonlist name="tagencoding" from="selector_settings">
 	            <position>0,552</position>
 	        </buttonlist>
-	
+-->	
 	        <checkbox name="allowtagwriting" from="checkbox_settings">
-	            <position>0,624</position>
+	            <position>0,552</position>
 	        </checkbox>
 	
 	        <textarea name="helptext" from="textarea_plot">
