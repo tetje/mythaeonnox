@@ -3,253 +3,7 @@
 <mythuitheme>
 
     <window name="programguide">
-
-        <shape name="backdropblackimg">
-            <area>0,0,1920,1080</area>
-            <type>box</type>
-            <line color="#000000" alpha="255" width="1" />
-            <fill color="#000000" alpha="255" />
-        </shape> 
     
-        <imagetype name="backdropimg">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvguide/</filename>
-        </imagetype>        
-
-        <imagetype name="showcasefloorimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/showcase_floor.png</filename>
-        </imagetype>        
-
-        <imagetype name="showcaseimg" from="backdropimg">
-            <filename>images/shared/showcase_stage.png</filename>
-        </imagetype>
-        
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>128</alpha>
-            <filename>images/shared/showcase_spot.png</filename>
-        </imagetype>
-        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
-
-        <group name="programguidewindow">
-	        <area>113,100,1694,846</area>
-
-	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
-	            <filename>images/shared/multiplex_back.png</filename>
-	        </imagetype>
-	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet_small_bottom.png</filename>
-	        </imagetype>
-
-	        <group name="settings_panel">
-	           <area>414,28,1400,952</area>
-		        
-		        <group name="backgroundgridgroup">
-		            <area>730,56,500,720</area>
-	               <imagetype name="backgroundgridline1">
-	                   <area>0,0,500,50</area>
-	                   <preserveaspect>no</preserveaspect>
-	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
-	               </imagetype>
-					
-	               <imagetype name="backgroundgridline2" from="backgroundgridline1">
-                   	 <position>0,72,</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline3" from="backgroundgridline1">
-	                   <position>0,144</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline4" from="backgroundgridline1">
-	                   <position>0,216</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline5" from="backgroundgridline1">
-	                   <position>0,288</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline6" from="backgroundgridline1">
-	                   <position>0,360</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline7" from="backgroundgridline1">
-	                   <position>0,432</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline8" from="backgroundgridline1">
-	                   <position>0,504</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline9" from="backgroundgridline1">
-	                   <position>0,576</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline10" from="backgroundgridline1">
-	                   <position>0,648</position>
-	               </imagetype>
-	           </group>			
-
-		        <guidegrid name="guidegrid">
-		            <area>1254,160,500,720</area>
-		            <layout>horizontal</layout>
-		            <channels>10</channels>
-		            <timeslots>1</timeslots>
-		            <solidcolor>#000000</solidcolor>
-		            <selector type="box" linecolor="#929292" fillcolor="#929292"></selector>
-		            <categoryalpha>30</categoryalpha>
-		            <showcategorycolors>no</showcategorycolors>
-		            <recordingcolor>#00aa00</recordingcolor>
-		            <conflictingcolor>#ff6600</conflictingcolor>
-		            <cutdown>no</cutdown>
-		            <multiline>yes</multiline>
-		            <textoffset>10,10</textoffset>
-		            <recordstatus type="SingleRecord" image="images/icons/guide/gg-rs-single.png"></recordstatus>
-		            <recordstatus type="TimeslotRecord" image="images/icons/guide/gg-rs-timeslot.png"></recordstatus>
-		            <recordstatus type="ChannelRecord" image="images/icons/guide/gg-rs-channel.png"></recordstatus>
-		            <recordstatus type="AllRecord" image="/images/icons/guide/gg-rs-all.png"></recordstatus>
-		            <recordstatus type="WeekslotRecord" image="images/icons/guide/gg-rs-weekslot.png"></recordstatus>
-		            <recordstatus type="FindOneRecord" image="images/icons/guide/gg-rs-findone.png"></recordstatus>
-		            <recordstatus type="OverrideRecord" image="images/icons/guide/gg-rs-override.png"></recordstatus>
-		            <font>Font_Plot</font>
-		        </guidegrid>
-		
-				  <buttonlist name="channellist">
-				      <area>400,36,324,720</area>
-				      <align>top,hcenter</align>
-				      <layout>vertical</layout>
-				      <wrapstyle>selection</wrapstyle>
-				      <arrange>stack</arrange>
-				      <showarrow>no</showarrow>
-				      <buttonarea>0,0,324,720</buttonarea>
-				      <statetype name="buttonitem">
-				          <area>0,0,324,72</area>
-				          <state name="active">
-				              <imagetype name="channeliconframe" depends="channelicon">
-				                  <area>10,3,64,64</area>
-				                  <filename>images/shared/wall_nfborder.png</filename>
-				                  <preserveaspect>no</preserveaspect>
-				              </imagetype>
-				              <imagetype name="channelicon">
-				                  <area>12,5,62,62</area>
-				                  <mask>images/shared/wall_mask_tiny.png</mask>
-				                  <filename>images/shared/DefaultRecentlyAddedEpisodes.png</filename>
-				                  <preserveaspect>no</preserveaspect>
-				              </imagetype>
-				              <imagetype name="channeliconglass" depends="channelicon">
-				                  <area>12,5,62,62</area>
-				                  <filename>images/shared/wall_nfoverlay.png</filename>
-				                  <preserveaspect>no</preserveaspect>
-				              </imagetype>
-				              <imagetype name="backgroundgridline">
-				                  <area>0,22,310,50</area>
-				                  <preserveaspect>no</preserveaspect>
-				                  <filename>images/shared/settings_radiobuttonoff.png</filename>
-				              </imagetype>
-				              <textarea name="buttontext"  from="textarea_settings_button">
-				                  <area>90,0,210,72</area>
-				                  <align>left,vcenter</align>
-				              </textarea>
-				          </state>
-				          <state name="selectedactive" from="active"/>
-				          <state name="inactive" from="active"/>
-				          <state name="selectedinactive" from="active"/>
-				      </statetype>
-				  </buttonlist>
-
-				  <buttonlist name="timelist">
-				      <area>724,768,500,32</area>
-				      <layout>horizontal</layout>
-				      <buttonarea>0,0,500,32</buttonarea>
-				      <statetype name="buttonitem">
-				          <area>0,0,100,32</area>
-				          <state name="active">
-				              <textarea name="buttontext" from="textarea_label">
-				                  <area>0,0,100,32</area>
-				                  <align>left,vcenter</align>
-				              </textarea>
-				          </state>
-				          <state name="selectedactive" from="active"/>
-				          <state name="selectedinactive" from="active"/>
-				      </statetype>
-				  </buttonlist>
-
-		     </group>
-		     		     
-	        <group name="settings_menu">
-	           <area>30,28,800,952</area>
-
-		        <imagetype name="videoborder">
-		            <area>15,32,750,422</area>
-		            <filename>images/shared/multiplex_tvborder.png</filename>
-		        </imagetype>
-	
-		        <imagetype name="video">
-		            <area>32,49,716,388</area>
-		            <filename>images/backgrounds/other/fallback_livetv.jpg</filename>
-		            <mask>images/shared/multiplex_tvmask_bing.png</mask>
-		        </imagetype>
-<!--	
-		        <imagetype name="videoglass">
-		            <area>20,40,734,406</area>
-		            <filename>images/shared/multiplex_tvglass.png</filename>
-		        </imagetype>
--->
-		        <textarea name="titlesubtitle" from="textarea_settings_title">
-		            <area>20,463,735,32</area>
-		            <cutdown>no</cutdown>
-		            <scroll direction="vertical"/>
-		            <template>%titlesubtitle%</template>
-		        </textarea>
-
-		        <textarea name="timedate" from="textarea_settings_button">
-		            <area>20,499,735,32</area>
-		            <template>%timedate% (%lenmins%)</template>
-		        </textarea>
-<!--
-              <imagetype name="backgroundgridline10">
-                  <area>10,486,735,50</area>
-                  <preserveaspect>no</preserveaspect>
-                  <filename>images/shared/settings_radiobuttonoff.png</filename>
-              </imagetype>
--->
-<!--
-		        <imagetype name="channeliconframeactive" depends="channelicon">
-		            <area>16,560,119,119</area>
-		            <filename>images/shared/wall_fborder.png</filename>
-		        </imagetype>
-		
-		        <imagetype name="channelicon">
-		            <area>20,574,110,110</area>
-		            <mask>images/shared/wall_mask_channelicon.png</mask>
-                  <filename>images/shared/DefaultRecentlyAddedEpisodes.png</filename>
-		        </imagetype>
-		
-		        <imagetype name="channeliconglassactive" depends="channelicon">
-		            <area>20,574,110,110</area>
-		            <filename>images/shared/wall_nfoverlay.png</filename>
-		        </imagetype>
--->		
-		        <textarea name="description" from="textarea_plot">
-		            <area>20,537,735,235</area>
-		            <case>normal</case>
-		            <align>top,justify</align>
-		            <multiline>yes</multiline>
-		            <template>%LONGREPEAT%%YEARSTARS| %%DESCRIPTION%</template>
-		        </textarea>
-		        
-	
-		    </group>	
-
-        </group>
-
-
-<!--     
         <imagetype name="backdropimg">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/tvguide/</filename>
@@ -446,97 +200,65 @@
 		    </group>	
 
         </group>
--->
+
     </window>
 
     <window name="programguide-video">
 
-<!--
- 	     <animation trigger="AboutToShow">
-            <section duration="1000" centre="middle">
-            <alpha start="0" end="255" easingcurve="InQuad" />
-            </section>
-        </animation>
--->
-     
+        <shape name="backdropblackimg">
+            <area>0,0,1920,1080</area>
+            <type>box</type>
+            <line color="#000000" alpha="255" width="1" />
+            <fill color="#000000" alpha="255" />
+        </shape> 
+    
         <imagetype name="backdropimg">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/tvguide/</filename>
         </imagetype>        
 
+        <imagetype name="showcasefloorimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/showcase_floor.png</filename>
+        </imagetype>        
+
+        <imagetype name="showcaseimg" from="backdropimg">
+            <filename>images/shared/showcase_stage.png</filename>
+        </imagetype>
+
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
+        </group>
+
         <group name="programguidewindow">
-	        <area>35,35,1850,1010</area>
-<!--
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="35,-1045" end="35,35" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
--->	
-	        <group name="settings_panel_bgd" from="basesettingswindow_detail">
-		        <area>0,0,1850,1010</area>
-	        </group>
-	        	        
+	        <area>113,100,1694,846</area>
+
+	        <imagetype name="multiplextabletbgdimg">
+	            <area>0,0,1694,846</area>
+	            <filename>images/shared/multiplex_back.png</filename>
+	        </imagetype>
+	        
+	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
+	            <filename>images/shared/multiplex_tablet_small_bottom.png</filename>
+	        </imagetype>
+
 	        <group name="settings_panel">
 	           <area>414,28,1400,952</area>
-	
-		        <textarea name="rectypestatus" from="textarea_settings_title">
-		            <area>20,50,1315,50</area>
-		            <align>left,vcenter</align>
-		            <scroll direction="horizontal" />
-		            <template>%rectypestatus%% on card number |card%</template>
-		        </textarea>
-		        
-		        <group name="backgroundgrid">
-		            <area>-30,146,1500,650</area>
-	               <imagetype name="backgroundgridline1">
-	                   <area>0,0,1380,50</area>
-	                   <preserveaspect>no</preserveaspect>
-	                   <filename>images/shared/settings_radiobuttonoff.png</filename>
-	               </imagetype>
-					
-	               <imagetype name="backgroundgridline2" from="backgroundgridline1">
-                   	 <position>0,72,</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline3" from="backgroundgridline1">
-	                   <position>0,144</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline4" from="backgroundgridline1">
-	                   <position>0,216</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline5" from="backgroundgridline1">
-	                   <position>0,288</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline6" from="backgroundgridline1">
-	                   <position>0,360</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline7" from="backgroundgridline1">
-	                   <position>0,432</position>
-	               </imagetype>
-
-	               <imagetype name="backgroundgridline8" from="backgroundgridline1">
-	                   <position>0,504</position>
-	               </imagetype>
-	           </group>			
 
 		        <guidegrid name="guidegrid">
-		            <area>450,186,1342,576</area>
+		            <area>1023,160,740,720</area>
 		            <layout>horizontal</layout>
 		            <channels>8</channels>
-		            <timeslots>4</timeslots>
+		            <timeslots>1</timeslots>
 		            <solidcolor>#000000</solidcolor>
-		            <selector type="box" linecolor="#ffffff" fillcolor="#929292"></selector>
-		            <categoryalpha>30</categoryalpha>
+		            <selector type="box" linecolor="#929292" fillcolor="#929292"></selector>
+		            <categoryalpha>35</categoryalpha>
+		            <showcategorycolors>no</showcategorycolors>
 		            <recordingcolor>#00aa00</recordingcolor>
 		            <conflictingcolor>#ff6600</conflictingcolor>
 		            <cutdown>no</cutdown>
-		            <multiline>yes</multiline>
-		            <textoffset>10,10</textoffset>
+		            <multiline>no</multiline>
+		            <textoffset>17,0</textoffset>
 		            <recordstatus type="SingleRecord" image="images/icons/guide/gg-rs-single.png"></recordstatus>
 		            <recordstatus type="TimeslotRecord" image="images/icons/guide/gg-rs-timeslot.png"></recordstatus>
 		            <recordstatus type="ChannelRecord" image="images/icons/guide/gg-rs-channel.png"></recordstatus>
@@ -547,103 +269,42 @@
 		            <font>Font_Plot</font>
 		        </guidegrid>
 		
-				  <buttonlist name="timelist">
-				      <area>10,703,1342,32</area>
-				      <layout>horizontal</layout>
-				      <buttonarea>0,0,1402,32</buttonarea>
-				      <statetype name="buttonitem">
-				          <area>0,0,365,32</area>
-				          <state name="active">
-				              <textarea name="buttontext" from="textarea_settings_button">
-				                  <area>0,0,350,32</area>
-				                  <align>left,vcenter</align>
-				              </textarea>
-				          </state>
-				          <state name="selectedactive" from="active"/>
-				          <state name="selectedinactive" from="active"/>
-				      </statetype>
-				  </buttonlist>
-
-		        <textarea name="titlesubtitle" from="textarea_settings_button">
-		            <area>20,770,1315,32</area>
-		            <template>%titlesubtitle%  |  %timedate% (%lenmins%)</template>
-		        </textarea>
-
-              <imagetype name="backgroundgridline10">
-                  <area>-20,760,1380,50</area>
-                  <preserveaspect>no</preserveaspect>
-                  <filename>images/shared/settings_radiobuttonoff.png</filename>
-              </imagetype>
-
-		        <imagetype name="channeliconframeactive" depends="channelicon">
-		            <area>16,818,119,119</area>
-		            <filename>images/shared/wall_fborder.png</filename>
-		        </imagetype>
-		
-		        <imagetype name="channelicon">
-		            <area>20,822,110,110</area>
-		            <mask>images/shared/wall_mask_channelicon.png</mask>
-                  <filename>images/shared/DefaultRecentlyAddedEpisodes.png</filename>
-		        </imagetype>
-		
-		        <imagetype name="channeliconglassactive" depends="channelicon">
-		            <area>20,822,110,110</area>
-		            <filename>images/shared/wall_nfoverlay.png</filename>
-		        </imagetype>
-		
-		        <textarea name="description" from="textarea_plot">
-		            <area>150,820,1185,116</area>
-		            <case>normal</case>
-		            <align>top,justify</align>
-		            <multiline>yes</multiline>
-		            <template>%LONGREPEAT%%YEARSTARS| %%DESCRIPTION%</template>
-		        </textarea>
-		        
-		     </group>
-		     		     
-	        <group name="settings_menu">
-	           <area>30,28,324,952</area>
-	
-		        <textarea name="datetext" from="textarea_settings_title">
-		            <area>30,50,284,50</area>
-		            <align>right,vcenter</align>
-		        </textarea>
-		        
 				  <buttonlist name="channellist">
-				      <area>0,125,324,576</area>
+				      <area>400,34,824,720</area>
 				      <align>top,hcenter</align>
 				      <layout>vertical</layout>
 				      <wrapstyle>selection</wrapstyle>
 				      <arrange>stack</arrange>
 				      <showarrow>no</showarrow>
-				      <buttonarea>0,0,324,576</buttonarea>
+				      <buttonarea>0,0,824,720</buttonarea>
 				      <statetype name="buttonitem">
-				          <area>0,0,324,72</area>
 				          <state name="active">
-				              <imagetype name="channeliconframe" depends="channelicon">
-				                  <area>10,3,64,64</area>
+				              <area>0,0,824,90</area>
+				              <imagetype name="channeliconframe" > <!-- depends="channelicon"> -->
+				                  <area>10,3,84,84</area>
 				                  <filename>images/shared/wall_nfborder.png</filename>
 				                  <preserveaspect>no</preserveaspect>
 				              </imagetype>
 				              <imagetype name="channelicon">
-				                  <area>12,5,62,62</area>
-				                  <mask>images/shared/wall_mask_tiny.png</mask>
+				                  <area>13,6,78,78</area>
+				                  <mask>images/shared/wall_mask_guide.png</mask>
 				                  <filename>images/shared/DefaultRecentlyAddedEpisodes.png</filename>
 				                  <preserveaspect>no</preserveaspect>
 				              </imagetype>
 				              <imagetype name="channeliconglass" depends="channelicon">
-				                  <area>12,5,62,62</area>
+				                  <area>13,6,78,78</area>
 				                  <filename>images/shared/wall_nfoverlay.png</filename>
 				                  <preserveaspect>no</preserveaspect>
 				              </imagetype>
 				              <imagetype name="backgroundgridline">
-				                  <area>0,22,310,50</area>
+				                  <area>0,40,815,50</area>
 				                  <preserveaspect>no</preserveaspect>
 				                  <filename>images/shared/settings_radiobuttonoff.png</filename>
 				              </imagetype>
-				              <textarea name="buttontext"  from="textarea_settings_button">
-				                  <area>90,0,210,72</area>
-				                  <align>left,vcenter</align>
+				              <textarea name="buttontext"  from="textarea_info">
+				                  <area>110,0,710,83</area>
+				                  <align>left,bottom</align>
+				                  <multiline>no</multiline>
 				              </textarea>
 				          </state>
 				          <state name="selectedactive" from="active"/>
@@ -652,28 +313,63 @@
 				      </statetype>
 				  </buttonlist>
 
-		        <clock name="time">
-		            <area>20,704,290,32</area>
-		            <align>right,vcenter</align>
-		            <font>Font_Button_Settings</font>
-		            <template>%time%</template>
-		        </clock>
-		
+				  <buttonlist name="timelist">
+				      <area>514,768,710,32</area>
+				      <layout>horizontal</layout>
+				      <buttonarea>0,0,710,32</buttonarea>
+				      <statetype name="buttonitem">
+				          <area>0,0,100,32</area>
+				          <state name="active">
+				              <textarea name="starttime" from="textarea_label">
+				                  <area>0,0,710,32</area>
+				                  <align>left,vcenter</align>
+				              </textarea>
+				              <textarea name="endtime" from="textarea_label">
+				                  <area>0,0,710,32</area>
+				                  <align>right,vcenter</align>
+				              </textarea>
+				          </state>
+				          <state name="selectedactive" from="active"/>
+				          <state name="selectedinactive" from="active"/>
+				      </statetype>
+				  </buttonlist>
+
+		     </group>
+		     		     
+	        <group name="settings_menu">
+	           <area>30,28,800,952</area>
+
 		        <imagetype name="videoborder">
-		            <area>12,761,310,184</area>
+		            <area>28,27,724,422</area>
 		            <filename>images/shared/multiplex_tvborder.png</filename>
 		        </imagetype>
 	
 		        <imagetype name="video">
-		            <area>87,835,290,163</area>
-		            <mask>images/shared/multiplex_tvmask_video.png</mask>
+		            <area>45,44,690,388</area>716
+		            <filename>images/backgrounds/other/fallback_livetv.jpg</filename>
+		            <mask>images/shared/multiplex_tvmask_bing.png</mask>
 		        </imagetype>
-	
-<!--		        <imagetype name="videoglass">
-		            <area>20,770,290,163</area>
-		            <filename>images/shared/multiplex_tvglass.png</filename>
-		        </imagetype>
--->	
+
+		        <textarea name="titlesubtitle" from="textarea_settings_title">
+		            <area>45,453,690,32</area>
+		            <cutdown>no</cutdown>
+		            <scroll direction="horizontal"/>
+		            <template>%titlesubtitle%</template>
+		        </textarea>
+
+		        <textarea name="timedate" from="textarea_settings_button">
+		            <area>45,492,690,32</area>
+		            <template>%timedate% (%lenmins%)</template>
+		        </textarea>
+
+		        <textarea name="description" from="textarea_plot">
+		            <area>45,535,690,235</area>
+		            <case>normal</case>
+		            <align>top,justify</align>
+		            <multiline>yes</multiline>
+		            <template>%LONGREPEAT%%YEARSTARS| %%DESCRIPTION%</template>
+		        </textarea>
+		        	
 		    </group>	
 
         </group>
