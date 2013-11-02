@@ -345,9 +345,11 @@
 		        </imagetype>
 	
 		        <imagetype name="video">
-		            <area>190,174,686,384</area
+		            <area>190,174,686,384</area>
+<!--
 		            <filename>images/backgrounds/other/fallback_livetv.jpg</filename>
 		            <mask>images/shared/multiplex_tvmask_bing.png</mask>
+-->
 		        </imagetype>
 
 		        <textarea name="titlesubtitle" from="textarea_settings_title">
