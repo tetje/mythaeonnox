@@ -345,7 +345,7 @@
 		        </imagetype>
 	
 		        <imagetype name="video">
-		            <area>45,44,690,388</area>716
+		            <area>190,174,686,384</area
 		            <filename>images/backgrounds/other/fallback_livetv.jpg</filename>
 		            <mask>images/shared/multiplex_tvmask_bing.png</mask>
 		        </imagetype>
