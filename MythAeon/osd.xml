@@ -127,89 +127,52 @@
     </window>
 
     <window name="osd_status">
- <!--       <area>0,842,1920,238</area>-->
         <area>0,658,1920,422</area>
 
-         <group name="osd_info">
-	          <area>0,184,1920,238</area>
-		       <imagetype name="osd_statusbgd">
-		           <filename>images/osd/osd_back.png</filename>
-		           <area>0,0,1920,238></area>
-		           <alpha>192</alpha>
-		           <preserveaspect>no</preserveaspect>
-		        </imagetype>
-		
+        <imagetype name="osd_statusbgd">
+            <filename>images/osd/osd_back.png</filename>
+            <area>0,285,1920,238</area>
+            <alpha>192</alpha>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <group name="osd_info">
+ 	           <area>0,330,1920,60</area>
 		        <textarea name="title">
-		            <font>Font_Clock_Bold</font>
-		            <area>310,25,800,40</area>
+		            <font>Font_Clock</font>
+		            <area>310,0,800,40</area>
 		            <align>left,vcenter</align>
 		        </textarea>
 		
 		        <clock name="clock">
-		            <area>1100,25,800,40</area>
-		            <font>Font_Clock_Bold</font>
+		            <area>1100,0,800,40</area>
+		            <font>Font_Clock</font>
 		            <template>hh:mm AP</template>
 		            <align>right,vcenter</align>
 		        </clock>
 		
 		        <textarea name="description">
 		            <font>Font_Plot</font>
-		             <area>310,45,1590,30</area>
-		            <align>hcenter,bottom</align>
+		             <area>310,0,1590,40</area>
+		            <align>hcenter,vcenter</align>
 		            <template>%DESCRIPTION% %VALUE%%UNITS%</template>
 		        </textarea>
 		
 		        <progressbar name="position">
-		            <area>310,85,1590,23</area>
+		            <area>310,35,1590,25</area>
 		            <layout>horizontal</layout>
 		            <style>reveal</style>
 		            <imagetype name="background">
-		                <area>0,0,1590,23</area>
+		                <area>0,0,100%,100%</area>
 		                <filename>images/osd/osd_progress_back.png</filename>
 		            </imagetype>
 		            <imagetype name="progressimage">
-		                <area>0,0,1590,23</area>
+		                <area>0,0,100%,100%</area>
 		                <filename>images/osd/osd_progress_fill.png</filename>
 		            </imagetype>
 		        </progressbar>
-		
-		        <group name="osd_button_img_group">
-		           <area>410,100,1100,144</area>
-			        <group name="button_book_img" from="basebutton_book_img">
-			            <position>0,0</position>
-			        </group>
-			        <group name="button_playlist_img" from="basebutton_playlist_img">
-			            <position>100,0</position>
-			        </group>
-			        <group name="button_skipbwd_img" from="basebutton_skipbwd_img">
-			            <position>200,0</position>
-			        </group>
-			        <group name="button_rew_img" from="basebutton_rew_img">
-			            <position>300,0</position>
-			        </group>
-			        <group name="button_pause_img" from="basebutton_pause_img">
-			            <position>400,0</position>
-			        </group>
-			        <group name="button_play_img" from="basebutton_play_img">
-			            <position>500,0</position>
-			        </group>
-			        <group name="button_stop_img" from="basebutton_stop_img">
-			            <position>600,0</position>
-			        </group>
-			        <group name="button_ff_img" from="basebutton_ff_img">
-			            <position>700,0</position>
-			        </group>
-			        <group name="button_skipfwd_img" from="basebutton_skipfwd_img">
-			            <position>800,0</position>
-			        </group>
-			        <group name="button_audio_img" from="basebutton_audio_img">
-			            <position>900,0</position>
-			        </group>
-			        <group name="button_video_img" from="basebutton_video_img">
-			            <position>1000,0</position>
-			        </group>
-			     </group>
-			</group> 
+
+		  </group> 
 
         <group name="osd_coverart" depends="coverart">
             <area>17,0,274,398</area>
@@ -259,41 +222,46 @@
     </window>
 
     <window name="program_info">
-        <area>0,658,1920,422</area>
 
-        <group name="osd_info">
-           <area>0,184,1920,238</area>
-	        <imagetype name="osd_infobgd">
-	           <filename>images/osd/osd_back.png</filename>
-	           <area>0,0,1920,238></area>
-	           <alpha>192</alpha>
-	           <preserveaspect>no</preserveaspect>
-	        </imagetype>
-	
+        <imagetype name="osd_inputbgd">
+           <filename>images/osd/fullscreen_top.png</filename>
+           <area>0,0,1920,85></area>
+           <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <imagetype name="osd_infobgd">
+           <filename>images/osd/osd_back.png</filename>
+           <area>0,943,1920,238></area>
+           <alpha>192</alpha>
+           <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <group name="osd_title">
+           <area>0,0,1920,90></area>
 	        <textarea name="title">
 	            <font>Font_Clock</font>
-	            <area>310,25,800,40</area>
+	            <area>25,5,1870,40</area>
 	            <align>left,vcenter</align>
 	        </textarea>
 	
-	        <textarea name="starttime">
-	            <font>Font_Clock_Bold</font>
-	            <area>310,65,1200,40</area>
-	            <align>left,top</align>
-	            <template>%channel|  |  %%STARTTIME| -%%ENDTIME| %(%LENMINS%)</template>
-	        </textarea>
-	        
 	        <clock name="clock">
-	            <area>1100,25,650,40</area>
 	            <font>Font_Clock</font>
+	            <area>25,5,1870,40</area>
 	            <template>hh:mm AP</template>
 	            <align>right,vcenter</align>
 	        </clock>
-	
+
+	        <textarea name="channel">
+	            <font>Font_Clock_Bold</font>
+	            <area>25,45,1870,40</area>
+	            <align>left,top</align>
+	            <template>%CHANNEL|  |  %%STARTTIME| - %%ENDTIME| %(%LENMINS%)</template>
+	        </textarea>
+
 	        <statetype name="tvstate">
 	            <state name="WatchingLiveTV">
 	                <textarea name="tvstate">
-	                    <area>1600,65,150,40</area>
+                       <area>25,45,1870,40</area>
 	                    <font>Font_Clock_Bold</font>
 	                    <multiline>no</multiline>
 	                    <align>right,vcenter</align>
@@ -303,7 +271,7 @@
 	            </state>
 	            <state name="WatchingPreRecorded">
 	                <textarea name="tvstate">
-	                    <area>1600,65,150,40</area>
+                       <area>25,45,1870,40</area>
 	                    <font>Font_Clock_Bold</font>
 	                    <multiline>no</multiline>
 	                    <align>right,vcenter</align>
@@ -313,7 +281,7 @@
 	            </state>
 	            <state name="WatchingVideo">
 	                <textarea name="tvstate">
-	                    <area>1600,65,150,40</area>
+                       <area>25,45,1870,40</area>
 	                    <font>Font_Clock_Bold</font>
 	                    <multiline>no</multiline>
 	                    <align>right,vcenter</align>
@@ -323,7 +291,7 @@
 	            </state>
 	            <state name="WatchingDVD">
 	                <textarea name="tvstate">
-	                    <area>1600,65,150,40</area>
+                       <area>25,45,1870,40</area>
 	                    <font>Font_Clock_Bold</font>
 	                    <multiline>no</multiline>
 	                    <align>right,vcenter</align>
@@ -333,7 +301,7 @@
 	            </state>
 	            <state name="WatchingBD">
 	                <textarea name="tvstate">
-	                    <area>1600,65,150,40</area>
+                       <area>25,45,1870,40</area>
 	                    <font>Font_Clock_Bold</font>
 	                    <multiline>no</multiline>
 	                    <align>right,vcenter</align>
@@ -343,7 +311,7 @@
 	            </state>
 	            <state name="WatchingRecording">
 	                <textarea name="tvstate">
-	                    <area>1600,65,150,40</area>
+                       <area>25,45,1870,40</area>
 	                    <font>Font_Clock_Bold</font>
 	                    <multiline>no</multiline>
 	                    <align>right,vcenter</align>
@@ -351,250 +319,257 @@
 	                    <value>Recorded</value>
 	                </textarea>
 	            </state>
-	        </statetype>
-		
+	        </statetype>	        
+        
+           <group name="infomation_icons">
+              <area>685,15,550,50</area>
+		        <statetype name="videocodec">
+		            <area>0,0,130,50</area>
+		            <showempty>yes</showempty>
+		            <state name="MPEG-2">
+		                <imagetype name="mpeg2">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/video_codec/mpeg2.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="VC-1">
+		                <imagetype name="vc1">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/video_codec/vc-1.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="H.264">
+		                <imagetype name="h264">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/video_codec/h264.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="MPEG-4">
+		                <imagetype name="mpeg4">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/video_codec/mpeg4.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="RTjpeg">
+		                <imagetype name="rtjpeg">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/video_codec/mpeg4.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="WMV3">
+		                <imagetype name="wmv3">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/video_codec/wmv.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="H.263">
+		                <imagetype name="h263">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/video_codec/h264.png</filename>
+		                </imagetype>
+		            </state>
+		        </statetype>
+			
+		        <statetype name="audiocodec">
+		            <area>140,0,130,50</area>
+		            <showempty>yes</showempty>
+		            <state name="PCM_DVD">
+		                <imagetype name="pcmdvd">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/dolbydigital.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="PCM_BLURAY">
+		                <imagetype name="pcmbluray">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/eac3.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="AC3">
+		                <imagetype name="ac3">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/ac3.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="E-AC3">
+		                <imagetype name="eac3">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/eac3.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="TRUEHD">
+		                <imagetype name="truehd">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/truehd.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="WMAPRO">
+		                <imagetype name="wmapro">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/wmapro.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="DTS">
+		                <imagetype name="dts">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/dts.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="AAC">
+		                <imagetype name="aac">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/aac.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="MP2">
+		                <imagetype name="mp2">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/mp2.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="MP3">
+		                <imagetype name="mp3">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/mp3.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="VORBIS">
+		                <imagetype name="vorbis">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/vorbis.png</filename>
+		                </imagetype>
+		            </state>
+		        </statetype>
+	
+		        <statetype name="videodescrip">
+		            <area>280,0,130,50</area>
+		            <showempty>yes</showempty>
+		            <state name="SD">
+		                <imagetype name="SD">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/resolution/576.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="HD_720_I">
+		                <imagetype name="720i">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/resolution/720.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="HD_720_P">
+		                <imagetype name="720p">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/resolution/720.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="HD_1080_I">
+		                <imagetype name="1080i">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/resolution/1080.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="HD_1080_P">
+		                <imagetype name="1080p">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/resolution/1080.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="default">
+		                <imagetype name="default">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/resolution/480.png</filename>
+		                </imagetype>
+		            </state>
+		        </statetype>
+	
+		        <statetype name="audiochannels">
+		            <area>420,0,130,50</area>
+		            <showempty>yes</showempty>
+		            <state name="1">
+		                <imagetype name="1">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio/1.0.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="2">
+		                <imagetype name="2">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio/2.0.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="5">
+		                <imagetype name="5">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio/4.1.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="6">
+		                <imagetype name="6">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio/5.1.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="7">
+		                <imagetype name="7">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio/6.1.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="8">
+		                <imagetype name="8">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio/7.1.png</filename>
+		                </imagetype>
+		            </state>
+		        </statetype>
+	        </group>
+
+        </group>
+
+        <group name="osd_info">
+           <area>0,842,1920,238</area>
 	        <textarea name="description">
 	            <font>Font_Plot</font>
-	            <area>310,100,1440,120</area>
+	            <area>310,120,1590,120</area>
 	            <multiline>yes</multiline>
 	            <align>justify,top</align>
 	            <template>%"|SUBTITLE|"\n%%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
 	        </textarea>
 
-	        <statetype name="videocodec">
-	            <area>1780,25,130,50</area>
-	            <showempty>yes</showempty>
-	            <state name="MPEG-2">
-	                <imagetype name="mpeg2">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/video_codec/mpeg2.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="VC-1">
-	                <imagetype name="vc1">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/video_codec/vc-1.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="H.264">
-	                <imagetype name="h264">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/video_codec/h264.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="MPEG-4">
-	                <imagetype name="mpeg4">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/video_codec/mpeg4.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="RTjpeg">
-	                <imagetype name="rtjpeg">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/video_codec/mpeg4.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="WMV3">
-	                <imagetype name="wmv3">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/video_codec/wmv.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="H.263">
-	                <imagetype name="h263">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/video_codec/h264.png</filename>
-	                </imagetype>
-	            </state>
-	        </statetype>
-		
-	        <statetype name="audiocodec">
-	            <area>1780,75,130,50</area>
-	            <showempty>yes</showempty>
-	            <state name="PCM_DVD">
-	                <imagetype name="pcmdvd">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/dolbydigital.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="PCM_BLURAY">
-	                <imagetype name="pcmbluray">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/eac3.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="AC3">
-	                <imagetype name="ac3">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/ac3.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="E-AC3">
-	                <imagetype name="eac3">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/eac3.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="TRUEHD">
-	                <imagetype name="truehd">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/truehd.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="WMAPRO">
-	                <imagetype name="wmapro">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/wmapro.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="DTS">
-	                <imagetype name="dts">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/dts.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="AAC">
-	                <imagetype name="aac">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/aac.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="MP2">
-	                <imagetype name="mp2">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/mp2.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="MP3">
-	                <imagetype name="mp3">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/mp3.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="VORBIS">
-	                <imagetype name="vorbis">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio_codec/vorbis.png</filename>
-	                </imagetype>
-	            </state>
-	        </statetype>
-
-	        <statetype name="videodescrip">
-	            <area>1780,125,130,50</area>
-	            <showempty>yes</showempty>
-	            <state name="SD">
-	                <imagetype name="SD">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/resolution/576.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="HD_720_I">
-	                <imagetype name="720i">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/resolution/720.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="HD_720_P">
-	                <imagetype name="720p">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/resolution/720.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="HD_1080_I">
-	                <imagetype name="1080i">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/resolution/1080.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="HD_1080_P">
-	                <imagetype name="1080p">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/resolution/1080.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="default">
-	                <imagetype name="default">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/resolution/480.png</filename>
-	                </imagetype>
-	            </state>
-	        </statetype>
-
-	        <statetype name="audiochannels">
-	            <area>1780,175,130,50</area>
-	            <showempty>yes</showempty>
-	            <state name="1">
-	                <imagetype name="1">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio/1.0.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="2">
-	                <imagetype name="2">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio/2.0.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="5">
-	                <imagetype name="5">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio/4.1.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="6">
-	                <imagetype name="6">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio/5.1.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="7">
-	                <imagetype name="7">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio/6.1.png</filename>
-	                </imagetype>
-	            </state>
-	            <state name="8">
-	                <imagetype name="8">
-	                    <area>0,0,130,50</area>
-	                    <preserveaspect>no</preserveaspect>
-	                    <filename>images/icons/audio/7.1.png</filename>
-	                </imagetype>
-	            </state>
-	        </statetype>
-
 	     </group>
 
         <group name="osd_coverart" depends="coverart">
-            <area>17,0,274,398</area>
+            <area>17,658,274,398</area>
 	         <imagetype name="previewbgd">
 	             <area>0,0,274,398</area>
 	             <alpha>255</alpha>
@@ -616,7 +591,7 @@
 	     </group>
 
         <group name="osd_icon" depends="!coverart">
-            <area>17,124,275,275</area>
+            <area>17,782,275,275</area>
 	         <imagetype name="iconbgd">
 	             <area>0,0,274,274</area>
 	             <alpha>255</alpha>
