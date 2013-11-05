@@ -98,32 +98,137 @@
 
     <window name="osd_message">
 
-        <imagetype name="osd_messagebgd">
-           <filename>images/osd/fullscreen_top.png</filename>
-           <area>0,0,1920,72></area>
-           <preserveaspect>no</preserveaspect>
+        <area>1088,50,778,391</area>
+
+       <imagetype name="shadow_background">
+            <area>376,0,432,376</area>
+            <filename>images/shared/nowplaying_shadow.png</filename>
+            <mask>images/shared/nowplaying_info_mask.png</mask>
+            <preserveaspect>no</preserveaspect>
         </imagetype>
 
-        <textarea name="message_text">
-            <font>Font_Clock</font>
-            <area>20,0,1880,72</area>
-            <align>allcenter</align>
-        </textarea>
+        <imagetype name="mm_info_border">
+            <area>376,64,387,263</area>
+            <filename>images/shared/nowplaying_info.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+       <imagetype name="mm_blackhole_border">
+            <area>0,0,391,391</area>
+            <filename>images/shared/nowplaying_back.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <imagetype name="image">
+            <area>15,15,362,362</area>
+            <filename>images/icons/notifications/dialog-check.png</filename>
+            <mask>images/shared/nowplaying_mask.png</mask>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+       <imagetype name="mm_blackhole_overlay">
+            <area>17,17,357,357</area>
+            <filename>images/shared/nowplaying_overlay.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <group name="notification_infogroup">
+           <area>420,25,387,362</area>
+	        <textarea name="titletxt" from="textarea_mini_player">
+	            <area>0,0,360,35</area>
+	            <scroll direction="horizontal"/>
+	            <value>OSD Notification Message</value>
+	        </textarea>
+
+	        <textarea name="origintxt" from="textarea_mini_player_small">
+	            <area>0,45,360,35</area>
+	            <value>OSD</value>
+	        </textarea>
+	
+	        <textarea name="message_text" from="textarea_mini_player_small">
+	            <area>0,90,360,142</area>
+	            <multiline>yes</multiline>
+	            <align>top,left</align>
+	            <scroll direction="vertical"/>
+	            <alpha>192</alpha>
+	            <template>message:\n%message_text%</template>
+	        </textarea>
+
+	        <textarea name="extra" from="textarea_mini_player">
+	            <area>0,257,360,35</area>
+	            <scroll direction="horizontal"/>
+	            <value>No additional info available</value>
+	        </textarea>
+		
+	    </group>
+
     </window>
 
     <window name="osd_input">
-        <imagetype name="osd_inputbgd">
-           <filename>images/osd/fullscreen_top.png</filename>
-           <area>0,0,1920,72></area>
-           <preserveaspect>no</preserveaspect>
+
+        <area>1088,50,778,391</area>
+
+       <imagetype name="shadow_background">
+            <area>376,0,432,376</area>
+            <filename>images/shared/nowplaying_shadow.png</filename>
+            <mask>images/shared/nowplaying_info_mask.png</mask>
+            <preserveaspect>no</preserveaspect>
         </imagetype>
 
-        <textarea name="osd_number_entry">
-            <font>Font_Clock</font>
-            <area>20,0,1880,72</area>
-            <align>allcenter</align>
-            <template>key input: %osd_number_entry%</template>
-        </textarea>
+        <imagetype name="mm_info_border">
+            <area>376,64,387,263</area>
+            <filename>images/shared/nowplaying_info.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+       <imagetype name="mm_blackhole_border">
+            <area>0,0,391,391</area>
+            <filename>images/shared/nowplaying_back.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <imagetype name="image">
+            <area>15,15,362,362</area>
+            <filename>images/icons/notifications/dialog-question.png</filename>
+            <mask>images/shared/nowplaying_mask.png</mask>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+       <imagetype name="mm_blackhole_overlay">
+            <area>17,17,357,357</area>
+            <filename>images/shared/nowplaying_overlay.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+
+        <group name="notification_infogroup">
+           <area>420,25,387,362</area>
+	        <textarea name="titletxt" from="textarea_mini_player">
+	            <area>0,0,360,35</area>
+	            <scroll direction="horizontal"/>
+	            <value>OSD Input Message</value>
+	        </textarea>
+
+	        <textarea name="origintxt" from="textarea_mini_player_small">
+	            <area>0,45,360,35</area>
+	            <value>OSD</value>
+	        </textarea>
+	
+	        <textarea name="osd_number_entry" from="textarea_mini_player_small">
+	            <area>0,90,360,142</area>
+	            <multiline>yes</multiline>
+	            <align>top,left</align>
+	            <scroll direction="vertical"/>
+	            <alpha>192</alpha>
+	            <template>key pressed:\n%osd_number_entry%</template>
+	        </textarea>
+
+	        <textarea name="extra" from="textarea_mini_player">
+	            <area>0,257,360,35</area>
+	            <scroll direction="horizontal"/>
+	            <value>Enter information for action</value>
+	        </textarea>
+		  </group>
+
     </window>
 
     <window name="osd_status">
@@ -240,7 +345,7 @@
            <area>0,0,1920,90></area>
 	        <textarea name="title">
 	            <font>Font_Clock</font>
-	            <area>25,5,1870,40</area>
+	            <area>25,5,635,40</area>
 	            <align>left,vcenter</align>
 	        </textarea>
 	
@@ -655,7 +760,7 @@
            <area>0,0,1920,90></area>
 	        <textarea name="title">
 	            <font>Font_Clock</font>
-	            <area>25,5,1870,40</area>
+	            <area>25,5,635,40</area>
 	            <align>left,vcenter</align>
 	        </textarea>
 	
