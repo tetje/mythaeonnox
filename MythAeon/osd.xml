@@ -375,6 +375,13 @@
 		                    <filename>images/icons/video_codec/h264.png</filename>
 		                </imagetype>
 		            </state>
+		            <state name="default">
+		                <imagetype name="default">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/video_codec/mpeg4.png</filename>
+		                </imagetype>
+		            </state>
 		        </statetype>
 			
 		        <statetype name="audiocodec">
@@ -455,6 +462,13 @@
 		                    <area>0,0,130,50</area>
 		                    <preserveaspect>no</preserveaspect>
 		                    <filename>images/icons/audio_codec/vorbis.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="default">
+		                <imagetype name="default">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/mp2.png</filename>
 		                </imagetype>
 		            </state>
 		        </statetype>
@@ -549,6 +563,13 @@
 		                    <area>0,0,130,50</area>
 		                    <preserveaspect>no</preserveaspect>
 		                    <filename>images/icons/audio/7.1.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="default">
+		                <imagetype name="default">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio/2.0.png</filename>
 		                </imagetype>
 		            </state>
 		        </statetype>
@@ -652,69 +673,15 @@
 	            <template>%channum% - %callsign%  |  %STARTTIME%-%ENDTIME% (%LENMINS%)</template>
 	        </textarea>
 
-	        <statetype name="tvstate">
-	            <state name="WatchingLiveTV">
-	                <textarea name="tvstate">
-                       <area>25,45,1870,40</area>
-	                    <font>Font_Clock_Bold</font>
-	                    <multiline>no</multiline>
-	                    <align>right,vcenter</align>
-	                    <case>upper</case>
-	                    <value>LiveTV</value>
-	                </textarea>
-	            </state>
-	            <state name="WatchingPreRecorded">
-	                <textarea name="tvstate">
-                       <area>25,45,1870,40</area>
-	                    <font>Font_Clock_Bold</font>
-	                    <multiline>no</multiline>
-	                    <align>right,vcenter</align>
-	                    <case>upper</case>
-	                    <value>PreRecorded</value>
-	                </textarea>            
-	            </state>
-	            <state name="WatchingVideo">
-	                <textarea name="tvstate">
-                       <area>25,45,1870,40</area>
-	                    <font>Font_Clock_Bold</font>
-	                    <multiline>no</multiline>
-	                    <align>right,vcenter</align>
-	                    <case>upper</case>
-	                    <value>Video</value>
-	                </textarea>
-	            </state>
-	            <state name="WatchingDVD">
-	                <textarea name="tvstate">
-                       <area>25,45,1870,40</area>
-	                    <font>Font_Clock_Bold</font>
-	                    <multiline>no</multiline>
-	                    <align>right,vcenter</align>
-	                    <case>upper</case>
-	                    <value>DVD</value>
-	                </textarea>
-	            </state>
-	            <state name="WatchingBD">
-	                <textarea name="tvstate">
-                       <area>25,45,1870,40</area>
-	                    <font>Font_Clock_Bold</font>
-	                    <multiline>no</multiline>
-	                    <align>right,vcenter</align>
-	                    <case>upper</case>
-	                    <value>BlueRay Disc</value>
-	                </textarea>
-	            </state>
-	            <state name="WatchingRecording">
-	                <textarea name="tvstate">
-                       <area>25,45,1870,40</area>
-	                    <font>Font_Clock_Bold</font>
-	                    <multiline>no</multiline>
-	                    <align>right,vcenter</align>
-	                    <case>upper</case>
-	                    <value>Recorded</value>
-	                </textarea>
-	            </state>
-	        </statetype>	        
-        
+          <textarea name="tvstatetxt">
+              <area>25,45,1870,40</area>
+              <font>Font_Clock_Bold</font>
+              <multiline>no</multiline>
+              <align>right,vcenter</align>
+              <case>upper</case>
+              <value>WatchingLiveTV</value>
+          </textarea>
+
            <group name="infomation_icons">
               <area>685,15,550,50</area>
 		        <statetype name="videocodec">
@@ -767,6 +734,13 @@
 		                    <area>0,0,130,50</area>
 		                    <preserveaspect>no</preserveaspect>
 		                    <filename>images/icons/video_codec/h264.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="default">
+		                <imagetype name="default">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/video_codec/mpeg4.png</filename>
 		                </imagetype>
 		            </state>
 		        </statetype>
@@ -849,6 +823,13 @@
 		                    <area>0,0,130,50</area>
 		                    <preserveaspect>no</preserveaspect>
 		                    <filename>images/icons/audio_codec/vorbis.png</filename>
+		                </imagetype>
+		            </state>
+		            <state name="default">
+		                <imagetype name="default">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio_codec/mp3.png</filename>
 		                </imagetype>
 		            </state>
 		        </statetype>
@@ -945,6 +926,13 @@
 		                    <filename>images/icons/audio/7.1.png</filename>
 		                </imagetype>
 		            </state>
+		            <state name="default">
+		                <imagetype name="default">
+		                    <area>0,0,130,50</area>
+		                    <preserveaspect>no</preserveaspect>
+		                    <filename>images/icons/audio/2.0.png</filename>
+		                </imagetype>
+		            </state>
 		        </statetype>
 	        </group>
 
@@ -959,7 +947,6 @@
 	            <align>justify,top</align>
 	            <template>%"|SUBTITLE|"\n%%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
 	        </textarea>
-
 	     </group>
 
         <group name="osd_coverart" depends="coverart">
@@ -1006,94 +993,6 @@
 	             <preserveaspect>no</preserveaspect>
 	         </imagetype>
 	     </group>
-
-
-<!-- 
-        <area>0,658,1920,422</area>
-
-        <group name="osd_browse">
-           <area>0,184,1920,238</area>
-	        <imagetype name="osd_browsebgd">
-	           <filename>images/osd/osd_back.png</filename>
-	           <area>0,0,1920,238></area>
-	           <alpha>192</alpha>
-	           <preserveaspect>no</preserveaspect>
-	        </imagetype>
-	
-	        <textarea name="title">
-	            <font>Font_Clock</font>
-	            <area>310,25,800,40</area>
-	            <align>left,vcenter</align>
-	        </textarea>
-	
-	        <textarea name="starttime">
-	            <font>Font_Clock_Bold</font>
-	            <area>310,65,1200,40</area>
-	            <align>left,top</align>
-	            <template>%channum% - %callsign%  |  %STARTTIME%-%ENDTIME% (%LENMINS%)</template>
-	        </textarea>
-	        
-	        <clock name="clock">
-	            <area>1500,25,400,40</area>
-	            <font>Font_Clock</font>
-	            <template>hh:mm AP</template>
-	            <align>right,vcenter</align>
-	        </clock>
-	
-	        <textarea name="description">
-	            <font>Font_Plot</font>
-	            <area>310,100,1590,120</area>
-	            <multiline>yes</multiline>
-	            <align>left,top</align>
-	            <template>%"|SUBTITLE|"\n%%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template>
-	        </textarea>
-	     </group>
-
-        <group name="osd_coverart" depends="coverart">
-            <area>17,0,275,399</area>
-	         <imagetype name="previewbgd">
-	             <area>0,0,274,398</area>
-	             <alpha>255</alpha>
-	             <filename>images/shared/list_movieicon_frame.png</filename>
-	             <preserveaspect>no</preserveaspect>
-	         </imagetype>
-	         <imagetype name="coverart">
-	             <area>7,7,261,385</area>
-	             <alpha>255</alpha>
-	             <preserveaspect>no</preserveaspect>
-	             <mask>images/shared/list_movieicon_mask_small.png</mask>
-	         </imagetype>
-	         <imagetype name="previewglass">
-	             <area>7,7,261,385</area>
-	             <alpha>255</alpha>
-	             <filename>images/shared/list_movieicon_glass.png</filename>
-	             <preserveaspect>no</preserveaspect>
-	         </imagetype>
-	     </group>
-
-        <group name="osd_icon" depends="!coverart">
-            <area>17,124,274,274</area>
-	         <imagetype name="iconbgd">
-	             <area>0,0,275,275</area>
-	             <alpha>255</alpha>
-	             <filename>images/shared/list_musicicon_frame.png</filename>
-	             <preserveaspect>no</preserveaspect>
-	         </imagetype>
-	         <imagetype name="iconpath">
-	             <area>7,7,261,261</area>
-	             <alpha>255</alpha>
-	             <preserveaspect>no</preserveaspect>
-	             <filename>images/shared/DefaultTVShowsRecentlyPlayed.png</filename>
-	             <mask>images/shared/list_musicicon_mask_small.png</mask>
-	         </imagetype>
-	         <imagetype name="iconpreviewglass">
-	             <area>7,7,261,261</area>
-	             <alpha>255</alpha>
-	             <filename>images/shared/list_musicicon_glass.png</filename>
-	             <preserveaspect>no</preserveaspect>
-	         </imagetype>
-	     </group>
--->
     </window>
 
     <window name="ChannelEditor">
