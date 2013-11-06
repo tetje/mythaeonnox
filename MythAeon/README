@@ -8,6 +8,13 @@ cp -a MythAeon* ~/.mythtv/themes/
 This theme is designed to work with a custom menu called MythAeon. To select this menu, go to 
 the 'theme & screensettings' menu in your frontend and set your Menu theme to 'MythAeon'.
 
+v027.5
+Redesign of OSD screens to make actual TV show or movie more visable
+Removed spotlight image in Video Manager window
+
+v027.4
+Empty release to test whether theme is available in 027 version of MythTV downloader
+
 v027.3
 Redesign of Program guide for LiveTV
 
