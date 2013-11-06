@@ -120,7 +120,7 @@
         </imagetype>
 
         <imagetype name="image">
-            <area>15,15,362,362</area>
+            <area>25,25,342,342</area>
             <filename>images/icons/notifications/dialog-check.png</filename>
             <mask>images/shared/nowplaying_mask.png</mask>
             <preserveaspect>no</preserveaspect>
@@ -264,7 +264,7 @@
 		        </textarea>
 		
 		        <progressbar name="position">
-		            <area>310,35,1590,25</area>
+		            <area>310,35,1590,23</area>
 		            <layout>horizontal</layout>
 		            <style>reveal</style>
 		            <imagetype name="background">
@@ -728,7 +728,7 @@
 	             <area>7,7,261,261</area>
 	             <alpha>255</alpha>
 	             <preserveaspect>no</preserveaspect>
-	             <filename>images/shared/DefaultTVShowsRecentlyPlayed.png</filename>
+	             <filename>images/shared/DefaultTVShows.png</filename>
 	             <mask>images/shared/list_musicicon_mask_small.png</mask>
 	         </imagetype>
 	         <imagetype name="iconpreviewglass">
@@ -784,7 +784,7 @@
               <multiline>no</multiline>
               <align>right,vcenter</align>
               <case>upper</case>
-              <value>WatchingLiveTV</value>
+              <value>BrowsingLiveTV</value>
           </textarea>
 
            <group name="infomation_icons">
@@ -1088,7 +1088,7 @@
 	             <area>7,7,261,261</area>
 	             <alpha>255</alpha>
 	             <preserveaspect>no</preserveaspect>
-	             <filename>images/shared/DefaultTVShowsRecentlyPlayed.png</filename>
+	             <filename>images/shared/DefaultRecentlyAddedEpisodes.png</filename>
 	             <mask>images/shared/list_musicicon_mask_small.png</mask>
 	         </imagetype>
 	         <imagetype name="iconpreviewglass">
@@ -1185,80 +1185,124 @@
     </window>
 
     <window name="osd_program_editor">
-        <area>0,842,1920,238</area>
+        <area>0,658,1920,422</area>
 
-        <imagetype name="osd_editorbgd">
-           <filename>images/osd/osd_back.png</filename>
-           <area>0,0,1920,238></area>
-           <alpha>192</alpha>
-           <preserveaspect>no</preserveaspect>
+        <imagetype name="osd_statusbgd">
+            <filename>images/osd/osd_back.png</filename>
+            <area>0,285,1920,238</area>
+            <alpha>192</alpha>
+            <preserveaspect>no</preserveaspect>
         </imagetype>
 
-        <textarea name="title">
-            <font>Font_Clock_Bold</font>
-            <area>20,25,800,40</area>
-            <align>left,vcenter</align>
-        </textarea>
-
-        <textarea name="seekamount" from="title">
-            <area>1100,25,800,40</area>
-            <font>Font_Clock_Bold</font>
-            <align>right,vcenter</align>
-        </textarea>
-
-        <textarea name="framedisplay">
-            <font>Font_Clock</font>
-            <area>20,65,1200,40</area>
-            <align>left,top</align>
-            <template>%framedisplay%  |  %cutindicator%</template>
-        </textarea>
-	        
-        <textarea name="timedisplay" from="title">
-            <font>Font_Plot</font>
-            <area>165,105,1590,30</area>
-            <align>allcenter</align>
-        </textarea>
+        <group name="osd_info">
+ 	           <area>0,330,1920,60</area>
+		        <textarea name="framedisplay">
+		            <font>Font_Clock</font>
+		            <area>310,-10,800,40</area>
+		            <align>left,vcenter</align>
+		            <template>Frame: %framedisplay%  |  %cutindicator%</template>
+		        </textarea>
+		
+		        <textarea name="seekamount">
+		            <area>1100,-10,800,40</area>
+		            <font>Font_Clock</font>
+		            <align>right,vcenter</align>
+		        </textarea>
+		
+		        <textarea name="timedisplay">
+		            <font>Font_Plot</font>
+		             <area>310,0,1590,40</area>
+		            <align>hcenter,vcenter</align>
+		        </textarea>
+				
+			     <imagetype name="background">
+			         <area>310,35,1590,23</area>
+			         <filename>images/osd/osd_progress_back.png</filename>
+			     </imagetype>
 	
-	     <imagetype name="background">
-	         <area>165,144,1590,23</area>
-	         <filename>images/osd/osd_progress_back.png</filename>
-	     </imagetype>
-	
-        <editbar name="editbar">
-            <area>165,135,1590,42</area>
-            <shape name="position">
-                <area>0,0,2,100%</area>
-                <fill color="#ff0000" alpha="255" />
-            </shape>
-            <shape name="keep">
-                <area>0,12,100%,17</area>
-                <fill color="#e7e6e4" alpha="255" />
-                <type>roundbox</type>
-                <cornerradius>12</cornerradius>
-            </shape>
-            <shape name="cut">
-                <area>0,12,100%,17</area>
-                <fill color="#18191b" alpha="255" />
-                <type>roundbox</type>
-                <cornerradius>12</cornerradius>
-            </shape>
-            <shape name="cuttoright">
-                <area>0,2,2,38</area>
-                <fill color="#18191b" alpha="255" />
-            </shape>
-            <shape name="cuttoleft">
-                <area>0,2,2,38</area>
-                <fill color="#18191b" alpha="255" />
-            </shape>
-            <shape name="keeptoright">
-                <area>0,2,2,38</area>
-                <fill color="#e7e6e4" alpha="255" />
-            </shape>
-            <shape name="keeptoleft">
-                <area>0,2,2,38</area>
-                <fill color="#e7e6e4" alpha="255" />
-            </shape>
-        </editbar>
+		        <editbar name="editbar">
+	            <area>310,26,1590,42</area>
+	            <shape name="position">
+	                <area>0,0,2,100%</area>
+	                <fill color="#ff0000" alpha="255" />
+	            </shape>
+	            <shape name="keep">
+	                <area>0,12,100%,17</area>
+	                <fill color="#e7e6e4" alpha="255" />
+	                <type>roundbox</type>
+	                <cornerradius>12</cornerradius>
+	            </shape>
+	            <shape name="cut">
+	                <area>0,12,100%,17</area>
+	                <fill color="#18191b" alpha="255" />
+	                <type>roundbox</type>
+	                <cornerradius>12</cornerradius>
+	            </shape>
+	            <shape name="cuttoright">
+	                <area>0,2,2,38</area>
+	                <fill color="#18191b" alpha="255" />
+	            </shape>
+	            <shape name="cuttoleft">
+	                <area>0,2,2,38</area>
+	                <fill color="#18191b" alpha="255" />
+	            </shape>
+	            <shape name="keeptoright">
+	                <area>0,2,2,38</area>
+	                <fill color="#e7e6e4" alpha="255" />
+	            </shape>
+	            <shape name="keeptoleft">
+	                <area>0,2,2,38</area>
+	                <fill color="#e7e6e4" alpha="255" />
+	            </shape>
+	        </editbar>
+		
+
+		  </group> 
+
+        <group name="osd_coverart" depends="coverart">
+            <area>17,0,274,398</area>
+	         <imagetype name="previewbgd">
+	             <area>0,0,274,398</area>
+	             <alpha>255</alpha>
+	             <filename>images/shared/list_movieicon_frame.png</filename>
+	             <preserveaspect>no</preserveaspect>
+	         </imagetype>
+	         <imagetype name="coverart">
+	             <area>7,7,261,385</area>
+	             <alpha>255</alpha>
+	             <preserveaspect>no</preserveaspect>
+	             <mask>images/shared/list_movieicon_mask_small.png</mask>
+	         </imagetype>
+	         <imagetype name="previewglass">
+	             <area>7,7,261,385</area>
+	             <alpha>255</alpha>
+	             <filename>images/shared/list_movieicon_glass.png</filename>
+	             <preserveaspect>no</preserveaspect>
+	         </imagetype>
+	     </group>
+
+        <group name="osd_icon" depends="!coverart">
+            <area>17,124,275,275</area>
+	         <imagetype name="iconbgd">
+	             <area>0,0,274,274</area>
+	             <alpha>255</alpha>
+	             <filename>images/shared/list_musicicon_frame.png</filename>
+	             <preserveaspect>no</preserveaspect>
+	         </imagetype>
+	         <imagetype name="iconpath">
+	             <area>7,7,261,261</area>
+	             <alpha>255</alpha>
+	             <preserveaspect>no</preserveaspect>
+	             <filename>images/shared/DefaultMoviesRecentlyPlayed.png</filename>
+	             <mask>images/shared/list_musicicon_mask_small.png</mask>
+	         </imagetype>
+	         <imagetype name="iconpreviewglass">
+	             <area>7,7,261,261</area>
+	             <alpha>255</alpha>
+	             <filename>images/shared/list_musicicon_glass.png</filename>
+	             <preserveaspect>no</preserveaspect>
+	         </imagetype>
+	     </group>
     </window>
 
     <window name="MythPopupBox">

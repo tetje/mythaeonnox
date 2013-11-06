@@ -217,13 +217,13 @@
         <imagetype name="showcaseimg" from="fanart">
             <filename>images/shared/showcase_stage.png</filename>
         </imagetype>
-        
+<!--        
         <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
             <alpha>128</alpha>
             <filename>images/shared/showcase_spot.png</filename>
         </imagetype>
-        
+-->        
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
