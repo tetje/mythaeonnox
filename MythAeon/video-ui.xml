@@ -302,7 +302,7 @@
 	        </group>
 
            <group name="managerbanner">
-              <position>1080,330</position>
+              <position>1145,330</position>
 		        <imagetype name="banner_border" depends="banner">
 		            <area>0,0,566,110</area>
 		            <filename>images/shared/multiplex_tvborder.png</filename>

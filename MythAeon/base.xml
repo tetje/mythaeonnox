@@ -7332,6 +7332,26 @@
         </imagetype>
 	  </group>
 	
+	  <group name="defaultinfoiconwatched">
+		  <area>0,0,60,50</area>
+		  <group name="iconbgd" from="defaultinfoiconbgdshort"/>
+		  <textarea name="icontextlbl" from="textarea_icon">
+		      <area>2,2,60,38</area>
+		      <value>W</value>
+		  </textarea>
+		  <textarea name="icontextlbl2" from="textarea_icon">
+		      <area>2,33,60,15</area>
+		      <font>Font_Icon_Base_Small</font>
+		      <value>Watched</value>
+		  </textarea>
+        <imagetype name="iconglass">
+            <area>0,0,63,50</area>
+            <alpha>255</alpha>
+            <filename>images/shared/list_musicicon_glass.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+	  </group>
+	
 	  <group name="defaultinfoicon1_0">
 		  <area>0,0,128,50</area>
 	  </group>
@@ -7403,22 +7423,31 @@
      </group>
 
      <group name="basegroupinfodetails_manager">
-        <area>0,0,726,50</area>
+        <area>0,0,801,50</area>
         
-        <group name="ratingicon" from="defaultinfoiconrating">
-            <area>0,0,200,50</area>
+         <statetype name="watchedstate">
+            <state name="yes">
+		        <group name="watchedicon" from="defaultinfoiconwatched">
+		            <area>0,0,60,50</area>
+		        </group>
+            </state>
+            <state name="no"/>
+        </statetype>
+ 
+       <group name="ratingicon" from="defaultinfoiconrating">
+            <area>93,0,200,50</area>
         </group>
 
         <group name="userratingicon" from="defaultinfoiconuserrating">
-            <area>220,0,128,50</area>
+            <area>317,0,128,50</area>
         </group>
 
         <group name="parentalicon" from="defaultinfoiconparental">
-            <area>373,0,128,50</area>
+            <area>474,0,128,50</area>
         </group>
 
         <group name="seasonicon" from="defaultinfoiconseason">
-            <area>526,0,200,50</area>
+            <area>630,0,200,50</area>
         </group>
         
      </group>

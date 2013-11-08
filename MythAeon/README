@@ -8,6 +8,9 @@ cp -a MythAeon* ~/.mythtv/themes/
 This theme is designed to work with a custom menu called MythAeon. To select this menu, go to 
 the 'theme & screensettings' menu in your frontend and set your Menu theme to 'MythAeon'.
 
+v027.6
+Added watch state icon to video manager screen
+
 v027.5
 Redesign of OSD screens to make actual TV show or movie more visable
 Removed spotlight image in Video Manager window
