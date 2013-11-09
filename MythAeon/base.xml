@@ -7483,7 +7483,7 @@
      </group>
 
      <group name="basegroupschedulelistinfo">
-        <area>0,0,545,930</area>
+        <area>0,30,545,930</area>
 
         <animation trigger="AboutToShow">
             <section duration="1200" centre="middle">
@@ -7491,28 +7491,34 @@
             </section>
         </animation>
 
-        <imagetype name="TVShowsframe">
+        <imagetype name="TVShowsframe" depends="!description">
             <area>-2,245,548,549</area>
             <filename>images/shared/list_musicicon_frame.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
      
-        <imagetype name="TVShowsRecentlyPlayed">
+        <imagetype name="TVShowsRecentlyPlayed" depends="!description">
             <area>13,260,518,519</area>
             <mask>images/shared/list_musicicon_mask.png</mask>
             <filename>images/shared/DefaultTVShowsRecentlyPlayed.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
 	
+        <imagetype name="descriptionbgd" depends="description">
+            <area>10,256,530,560</area>
+            <filename>images/shared/listpanel_back_noreflect.png</filename>
+            <preserveaspect>no</preserveaspect>
+        </imagetype>
+<!--	
 	     <shape name="descriptionbox" depends="description">
 	         <area>13,260,518,519</area>
 	         <type>roundbox</type>
 	         <cornerradius>15</cornerradius>
 	         <fill color="#323232" alpha="210" />
 	     </shape>
-
+-->
         <textarea name="titlesubtitle" from="textarea_settings_button">
-            <area>40,287,475,32</area>
+            <area>40,275,475,32</area>
             <multiline>no</multiline>
             <cutdown>no</cutdown>
             <scroll direction="horizontal"/>
@@ -7520,17 +7526,19 @@
         </textarea>
        
         <textarea name="description" from="textarea_plot">
-            <area>40,325,475,440</area>
+            <area>40,320,475,440</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <template>%DESCRIPTION%</template>
         </textarea>
-       
+ 
+ <!--      
         <textarea name="nodescription" from="description" depends="!description">
             <value>No description available.</value>
         </textarea>
+ -->
        
-        <imagetype name="TVShowsglass">
+        <imagetype name="TVShowsglass" depends="!description">
             <area>13,260,518,519</area>
             <filename>images/shared/list_musicicon_glass.png</filename>
             <preserveaspect>no</preserveaspect>
