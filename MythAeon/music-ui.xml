@@ -461,8 +461,9 @@
         </animation>
 
        <imagetype name="shadow_background">
-            <area>370,0,438,376</area>
+            <area>376,0,432,376</area>
             <filename>images/shared/nowplaying_shadow.png</filename>
+            <mask>images/shared/nowplaying_info_mask.png</mask>
             <preserveaspect>no</preserveaspect>
         </imagetype>
 
@@ -1115,8 +1116,9 @@
         </animation>
 
        <imagetype name="shadow_background">
-            <area>370,0,438,376</area>
+            <area>376,0,432,376</area>
             <filename>images/shared/nowplaying_shadow.png</filename>
+            <mask>images/shared/nowplaying_info_mask.png</mask>
             <preserveaspect>no</preserveaspect>
         </imagetype>
 

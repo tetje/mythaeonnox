@@ -7455,6 +7455,15 @@
      <group name="basegroupinfodetailswall">
         <area>0,0,1920,60</area>
 	
+         <statetype name="watchedstate">
+            <state name="yes">
+		        <group name="watchedicon" from="defaultinfoiconwatched">
+		            <area>187,0,60,50</area>
+		        </group>
+            </state>
+            <state name="no"/>
+        </statetype>
+ 
         <group name="seasonicon" from="defaultinfoiconseason">
             <area>280,0,200,50</area>
         </group>

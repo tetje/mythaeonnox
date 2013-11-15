@@ -197,8 +197,8 @@
         </statetype>
 
         <imagetype name="image" depends="!mediastate&amp;!errorstate">
-            <area>15,15,362,362</area>
-            <filename>images/icons/notifications/dialog-question.png</filename>
+            <area>25,25,342,342</area>
+            <filename>images/icons/notifications/dialog-information.png</filename>
             <mask>images/shared/nowplaying_mask.png</mask>
             <preserveaspect>no</preserveaspect>
         </imagetype>
@@ -337,8 +337,8 @@
 	        </statetype>
 	
 	        <imagetype name="image" depends="!mediastate&amp;!errorstate">
-	            <area>15,15,362,362</area>
-	            <filename>images/icons/notifications/dialog-question.png</filename>
+	            <area>25,25,342,342</area>
+	            <filename>images/icons/notifications/dialog-information.png</filename>
 	            <mask>images/shared/nowplaying_mask.png</mask>
 	            <preserveaspect>no</preserveaspect>
 	        </imagetype>
