@@ -1024,7 +1024,7 @@
 		       <buttonarea>0,0,700,50</buttonarea>
         </buttonlist>
 
-        <textedit name="phrase_edit" from="textedit_dialog">
+        <textedit name="phrase_edit" from="textedit_dialog_black">
             <position>0,275</position>
         </textedit>
 
@@ -1257,23 +1257,29 @@
 
 <!-- To do --> 
     <window name="progdetails">
+        <imagetype name="backdropimg">
+            <area>0,0,1920,1080</area>
+            <filename>images/shared/wall_background_small.png</filename>
+        </imagetype>
 
-        <textarea name="title" from="basetextarea">
-            <area>40,20,720,40</area>
-            <font>baselarge</font>
+        <textarea name="title" from="textarea_settings_option">
+            <area>60,10,1920,72</area>
+            <align>left,vcenter</align>
             <value>Program Details:</value>
         </textarea>
 
-        <shape name="background" from="basebackground">
-            <area>40,60,720,500</area>
-            <fill color="#000000"/>
-        </shape>
-
+        <webbrowser name="browser">
+            <area>0,90,1920,990</area>
+            <background color="#000000"/>
+            <zoom>1.4</zoom>
+        </webbrowser>
+<!--
         <webbrowser name="browser">
             <area>40,65,710,490</area>
             <zoom>1.0</zoom>
             <background color="#000000"/>
         </webbrowser>
+-->
     </window>
 
     <window name="searchpopup" from="MythTextInputDialog">
@@ -1291,7 +1297,7 @@
             <cutdown>no</cutdown>
         </textarea>
 
-        <textedit name="input" from="textedit_dialog">
+        <textedit name="input" from="textedit_dialog_black">
             <position>0,125</position>
         </textedit>
 

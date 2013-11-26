@@ -8,6 +8,9 @@ cp -a MythAeon* ~/.mythtv/themes/
 This theme is designed to work with a custom menu called MythAeon. To select this menu, go to 
 the 'theme & screensettings' menu in your frontend and set your Menu theme to 'MythAeon'.
 
+v027.7
+Changed text color of search dialogs in schedule-ui into black for better readability
+
 v027.6
 Added watch state icon to video manager screen
 Changed background panel in program search windows when program description is available
