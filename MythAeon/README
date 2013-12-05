@@ -10,6 +10,7 @@ the 'theme & screensettings' menu in your frontend and set your Menu theme to 'M
 
 v027.7
 Changed text color of search dialogs in schedule-ui into black for better readability
+Created windows for program info details applicable for recordings and scheduler
 
 v027.6
 Added watch state icon to video manager screen
