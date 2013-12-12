@@ -57,8 +57,17 @@
         </buttonlist>
         
         <webbrowser name="webbrowser">
-            <area>0,90,1920,990</area>
-            <zoom>1.4</zoom>
+           <area>0,90,1920,990</area>
+	        <browserarea>0,0,1920,990</browserarea>
+	        <zoom>1.4</zoom>
+	        <background color="#000000" alpha="0" />
+	        <scrollduration>500</scrollduration>
+	        <scrollbar name="vertscrollbar" from="base_vertical_scrollbar">
+	            <area>1914,0,5,100%</area>
+	        </scrollbar>
+	        <scrollbar name="horizscrollbar" from="base_horizontal_scrollbar">
+	            <area>0,984,100%,5</area>
+	        </scrollbar>
         </webbrowser>
 
         <!-- these are optional -->

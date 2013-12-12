@@ -1315,10 +1315,18 @@
 	            <value>Program Details</value>
 	        </textarea>
 	
-	        <webbrowser name="browser" from="base_webbrowser">
-	            <area>20,60,1680,745</area>
+	        <webbrowser name="browser">
+	            <area>20,60,1654,731</area>
 	            <background color="#2B3335" alpha="0" />
 	            <zoom>1.4</zoom>
+  		         <browserarea>0,0,1654,731</browserarea>
+		         <scrollduration>500</scrollduration>
+		         <scrollbar name="vertscrollbar" from="base_vertical_scrollbar">
+		            <area>1644,0,5,100%</area>
+		         </scrollbar>
+		         <scrollbar name="horizscrollbar" from="base_horizontal_scrollbar">
+		            <area>0,721,100%,5</area>
+		         </scrollbar>
 	        </webbrowser>
 
 	     </group>   

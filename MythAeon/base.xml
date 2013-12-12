@@ -7084,7 +7084,7 @@
          background images shall be discarded and shapes will be used. -->
     <shape name="base_button_shape_active">
         <area>0,0,100%,100%</area>
-        <type>roundbox</type>
+        <type>box</type>
         <fill color="#535353" alpha="120" />
         <line color="#535353" alpha="100" width="1" />
         <cornerradius>8</cornerradius>
@@ -7093,6 +7093,11 @@
     <shape name="base_button_shape_selectedactive" from="base_button_shape_active">
         <fill color="#ffffff" alpha="200" />
         <line color="#ffffff" alpha="180" width="1" />
+    </shape>
+    
+    <shape name="base_button_shape_orange" from="base_button_shape_active">
+        <fill color="#F07746" alpha="200" />
+        <line color="#F07746" alpha="180" width="1" />
     </shape>
     
     <shape name="base_button_shape_selectedinactive" from="base_button_shape_active">
@@ -7117,7 +7122,7 @@
             <area>0,0,100%,100%</area>
             <cornerradius>3</cornerradius> 
         </shape>
-        <shape name="slider" from="base_button_shape_selectedactive">
+        <shape name="slider" from="base_button_shape_orange">
             <area>0,0,15,30</area>
             <cornerradius>3</cornerradius> 
         </shape>
@@ -7127,7 +7132,7 @@
     <scrollbar name="base_horizontal_scrollbar" from="base_vertical_scrollbar">
         <area>15,1050,1890,15</area>
         <layout>horizontal</layout>
-        <shape name="slider" from="base_button_shape_selectedactive">
+        <shape name="slider" from="base_button_shape_orange">
             <area>0,0,30,15</area>
         </shape>
     </scrollbar>
