@@ -102,7 +102,32 @@
 	            <filename>images/shared/multiplex_tablet_bigthumb.png</filename>
 	        </imagetype>
 	
-	
+			  <buttonlist name="recgroups">
+			      <spacing>0</spacing>
+			      <area>30,23,1600,30</area>
+			      <layout>horizontal</layout>
+			      <showarrow>no</showarrow>
+			      <buttonarea>0,0,200,30</buttonarea>
+			      <statetype name="buttonitem">
+			          <state name="active">
+			              <textarea name="buttontext" from="textarea_label">
+			                  <area>0,0,1600,30</area>
+			              </textarea>	  
+			          </state>
+			          <state name="selectedactive">
+			              <textarea name="buttontext" from="textarea_label">
+			                  <area>0,0,1600,30</area>
+							      <cutdown>no</cutdown>
+							      <scroll direction="vertical" />                  
+			                  <alpha>255</alpha>
+			                  <template>recording group filter set on %1</template>
+			              </textarea>	  
+			          </state>
+			          <state name="inactive" from="active"/>
+			          <state name="selectedinactive" from="selectedactive"/>
+			      </statetype>
+			   </buttonlist>
+
 	        <group name="recordingsinfo">
 	           <area>0,0,1694,846</area>
 
@@ -696,8 +721,8 @@
     </window>
 
     <!-- Popups -->
+
     <window name="groupselector">
-        <area>837,125,956,545</area>
 
         <animation trigger="AboutToShow">
            <section duration="500" centre="middle">
@@ -711,34 +736,38 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>0,0,956,540</area>
+            <area>837,125,956,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
+        <imagetype name="paneltop">
+            <area>113,70,1695,58</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/multiplex_tablet_top.png</filename>
+        </imagetype>
+
         <imagetype name="groupselectorbgd">
-            <area>0,0,956,545</area>
+            <area>837,125,956,545</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
 
         <textarea name="label" from="textarea_label">
-            <area>-696,-32,993,30</area>
+            <area>141,93,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
             <value>Group selector</value>
         </textarea>
 
         <buttonlist name="groups" from="buttonlist_tvshowpanel">
-            <position>2,25</position>
+            <position>839,150</position>
         </buttonlist>
 
     </window>
 
     <window name="changeview">
-        <area>837,125,956,545</area>
-
         <animation trigger="AboutToShow">
            <section duration="500" centre="middle">
                <alpha start="0" end="255" easingcurve="InSine" />
@@ -751,243 +780,250 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>0,0,956,540</area>
+            <area>837,125,956,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
+        <imagetype name="paneltop">
+            <area>113,70,1695,58</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/multiplex_tablet_top.png</filename>
+        </imagetype>
+
         <imagetype name="groupselectorbgd">
-            <area>0,0,956,545</area>
+            <area>837,125,956,545</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
 
-        <shape name="groupselectorbuttonblackbgd">
-            <area>-353,20,353,70</area>
-            <type>box</type>
-            <line color="#000000" alpha="255" width="1" />
-            <fill style="solid" color="#000000" alpha="255" />
-        </shape>
-
-        <imagetype name="groupselectorbuttonbgd">
-            <area>-353,20,354,70</area>
-            <preserveaspect>no</preserveaspect>
-            <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
-        </imagetype>
-
         <textarea name="title" from="textarea_label">
-            <area>-696,-32,993,30</area>
+            <area>141,93,993,30</area>
             <align>left,top</align>
             <multiline>no</multiline>
             <value>Change View</value>
         </textarea>
 
-        <checkbox name="titles" from="checkbox_menu">
-            <position>2,10</position>
-	         <statetype name="background">
-	             <state name="active">
-				        <textarea name="lblactive" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <value>Show:</value>
-				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,46,820,30</area>
-				            <value>Titles</value>
-				        </textarea>	
-				    </state>
-	             <state name="selected">
-		  		        <textarea name="lblselected" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <font>Font_Label_List_Selected</font>
-				            <value>Show:</value>
-				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,46,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>Titles</value>
-			           </textarea>		
-				    </state>
-				</statetype>	
-        </checkbox>
+        <shape name="groupselectorbuttonblackbgd">
+            <area>484,145,353,70</area>
+            <type>box</type>
+            <line color="#000000" alpha="255" width="1" />
+            <fill style="solid" color="#000000" alpha="255" />
+        </shape>
 
-        <checkbox name="categories" from="checkbox_menu">
-            <position>2,80</position>
-	         <statetype name="background">
-	             <state name="active">
-				        <textarea name="lblactive" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <value>Show:</value>
-				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,46,820,30</area>
-				            <value>Categories</value>
-				        </textarea>	
-				    </state>
-	             <state name="selected">
-		  		        <textarea name="lblselected" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <font>Font_Label_List_Selected</font>
-				            <value>Show:</value>
-				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,46,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>Categories</value>
-			           </textarea>		
-				    </state>
-				</statetype>	
-        </checkbox>
+        <imagetype name="groupselectorbuttonbgd">
+            <area>484,145,354,70</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
+        </imagetype>
 
-        <checkbox name="recgroups" from="checkbox_menu">
-            <position>2,150</position>
- 	         <statetype name="background">
-	             <state name="active">
-				        <textarea name="lblactive" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <value>Show:</value>
-				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,46,820,30</area>
-				            <value>Recording Groups</value>
-				        </textarea>	
-				    </state>
-	             <state name="selected">
-		  		        <textarea name="lblselected" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <font>Font_Label_List_Selected</font>
-				            <value>Show:</value>
-				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,46,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>Recording Groups</value>
-			           </textarea>		
-				    </state>
-				</statetype>	
-       </checkbox>
-
-        <checkbox name="watchlist" from="checkbox_menu">
-            <position>2,220</position>
-	         <statetype name="background">
-	             <state name="active">
-				        <textarea name="lblactive" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <value>Show:</value>
-				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,46,820,30</area>
-				            <value>Watch List</value>
-				        </textarea>	
-				    </state>
-	             <state name="selected">
-		  		        <textarea name="lblselected" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <font>Font_Label_List_Selected</font>
-				            <value>Show:</value>
-				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,46,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>Watch List</value>
-			           </textarea>		
-				    </state>
-				</statetype>	
-        </checkbox>
-
-        <checkbox name="searches" from="checkbox_menu">
-            <position>2,290</position>
-	         <statetype name="background">
-	             <state name="active">
-				        <textarea name="lblactive" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <value>Show:</value>
-				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,46,820,30</area>
-				            <value>Searches</value>
-				        </textarea>	
-				    </state>
-	             <state name="selected">
-		  		        <textarea name="lblselected" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <font>Font_Label_List_Selected</font>
-				            <value>Show:</value>
-				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,46,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>Searches</value>
-			           </textarea>		
-				    </state>
-				</statetype>	
-        </checkbox>
-
-        <checkbox name="livetv" from="checkbox_menu">
-            <position>2,360</position>
-	         <statetype name="background">
-	             <state name="active">
-				        <textarea name="lblactive" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <value>Show:</value>
-				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,46,820,30</area>
-				            <value>Live Television</value>
-				        </textarea>	
-				    </state>
-	             <state name="selected">
-		  		        <textarea name="lblselected" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <font>Font_Label_List_Selected</font>
-				            <value>Show:</value>
-				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,46,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>Live Television</value>
-			           </textarea>		
-				    </state>
-				</statetype>	
-        </checkbox>
-
-        <checkbox name="watched" from="checkbox_menu">
-            <position>2,430</position>
-	         <statetype name="background">
-	             <state name="active">
-				        <textarea name="lblactive" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <value>Show:</value>
-				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,46,820,30</area>
-				            <value>Watched Programs</value>
-				        </textarea>	
-				    </state>
-	             <state name="selected">
-		  		        <textarea name="lblselected" from="textarea_label">
-				            <area>20,21,820,30</area>
-				            <font>Font_Label_List_Selected</font>
-				            <value>Show:</value>
-				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,46,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>Watched Programs</value>
-			           </textarea>		
-				    </state>
-				</statetype>	
-        </checkbox>
+        <group name="changeviewwidgetsgroup">
+           <area>837,125,956,540</area>
+	        <checkbox name="titles" from="checkbox_menu">
+	            <position>2,10</position>
+		         <statetype name="background">
+		             <state name="active">
+					        <textarea name="lblactive" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <value>Show:</value>
+					        </textarea>		
+					        <textarea name="titlelblactive" from="textarea_info">
+					            <area>20,46,820,30</area>
+					            <value>Titles</value>
+					        </textarea>	
+					    </state>
+		             <state name="selected">
+			  		        <textarea name="lblselected" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <font>Font_Label_List_Selected</font>
+					            <value>Show:</value>
+					        </textarea>		
+				           <textarea name="titlelblselected" from="textarea_info">
+			                  <area>20,46,820,30</area>
+				               <font>Font_Info_Selected</font>
+				               <value>Titles</value>
+				           </textarea>		
+					    </state>
+					</statetype>	
+	        </checkbox>
+	
+	        <checkbox name="categories" from="checkbox_menu">
+	            <position>2,80</position>
+		         <statetype name="background">
+		             <state name="active">
+					        <textarea name="lblactive" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <value>Show:</value>
+					        </textarea>		
+					        <textarea name="titlelblactive" from="textarea_info">
+					            <area>20,46,820,30</area>
+					            <value>Categories</value>
+					        </textarea>	
+					    </state>
+		             <state name="selected">
+			  		        <textarea name="lblselected" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <font>Font_Label_List_Selected</font>
+					            <value>Show:</value>
+					        </textarea>		
+				           <textarea name="titlelblselected" from="textarea_info">
+			                  <area>20,46,820,30</area>
+				               <font>Font_Info_Selected</font>
+				               <value>Categories</value>
+				           </textarea>		
+					    </state>
+					</statetype>	
+	        </checkbox>
+	
+	        <checkbox name="recgroups" from="checkbox_menu">
+	            <position>2,150</position>
+	 	         <statetype name="background">
+		             <state name="active">
+					        <textarea name="lblactive" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <value>Show:</value>
+					        </textarea>		
+					        <textarea name="titlelblactive" from="textarea_info">
+					            <area>20,46,820,30</area>
+					            <value>Recording Groups</value>
+					        </textarea>	
+					    </state>
+		             <state name="selected">
+			  		        <textarea name="lblselected" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <font>Font_Label_List_Selected</font>
+					            <value>Show:</value>
+					        </textarea>		
+				           <textarea name="titlelblselected" from="textarea_info">
+			                  <area>20,46,820,30</area>
+				               <font>Font_Info_Selected</font>
+				               <value>Recording Groups</value>
+				           </textarea>		
+					    </state>
+					</statetype>	
+	       </checkbox>
+	
+	        <checkbox name="watchlist" from="checkbox_menu">
+	            <position>2,220</position>
+		         <statetype name="background">
+		             <state name="active">
+					        <textarea name="lblactive" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <value>Show:</value>
+					        </textarea>		
+					        <textarea name="titlelblactive" from="textarea_info">
+					            <area>20,46,820,30</area>
+					            <value>Watch List</value>
+					        </textarea>	
+					    </state>
+		             <state name="selected">
+			  		        <textarea name="lblselected" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <font>Font_Label_List_Selected</font>
+					            <value>Show:</value>
+					        </textarea>		
+				           <textarea name="titlelblselected" from="textarea_info">
+			                  <area>20,46,820,30</area>
+				               <font>Font_Info_Selected</font>
+				               <value>Watch List</value>
+				           </textarea>		
+					    </state>
+					</statetype>	
+	        </checkbox>
+	
+	        <checkbox name="searches" from="checkbox_menu">
+	            <position>2,290</position>
+		         <statetype name="background">
+		             <state name="active">
+					        <textarea name="lblactive" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <value>Show:</value>
+					        </textarea>		
+					        <textarea name="titlelblactive" from="textarea_info">
+					            <area>20,46,820,30</area>
+					            <value>Searches</value>
+					        </textarea>	
+					    </state>
+		             <state name="selected">
+			  		        <textarea name="lblselected" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <font>Font_Label_List_Selected</font>
+					            <value>Show:</value>
+					        </textarea>		
+				           <textarea name="titlelblselected" from="textarea_info">
+			                  <area>20,46,820,30</area>
+				               <font>Font_Info_Selected</font>
+				               <value>Searches</value>
+				           </textarea>		
+					    </state>
+					</statetype>	
+	        </checkbox>
+	
+	        <checkbox name="livetv" from="checkbox_menu">
+	            <position>2,360</position>
+		         <statetype name="background">
+		             <state name="active">
+					        <textarea name="lblactive" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <value>Show:</value>
+					        </textarea>		
+					        <textarea name="titlelblactive" from="textarea_info">
+					            <area>20,46,820,30</area>
+					            <value>Live Television</value>
+					        </textarea>	
+					    </state>
+		             <state name="selected">
+			  		        <textarea name="lblselected" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <font>Font_Label_List_Selected</font>
+					            <value>Show:</value>
+					        </textarea>		
+				           <textarea name="titlelblselected" from="textarea_info">
+			                  <area>20,46,820,30</area>
+				               <font>Font_Info_Selected</font>
+				               <value>Live Television</value>
+				           </textarea>		
+					    </state>
+					</statetype>	
+	        </checkbox>
+	
+	        <checkbox name="watched" from="checkbox_menu">
+	            <position>2,430</position>
+		         <statetype name="background">
+		             <state name="active">
+					        <textarea name="lblactive" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <value>Show:</value>
+					        </textarea>		
+					        <textarea name="titlelblactive" from="textarea_info">
+					            <area>20,46,820,30</area>
+					            <value>Watched Programs</value>
+					        </textarea>	
+					    </state>
+		             <state name="selected">
+			  		        <textarea name="lblselected" from="textarea_label">
+					            <area>20,21,820,30</area>
+					            <font>Font_Label_List_Selected</font>
+					            <value>Show:</value>
+					        </textarea>		
+				           <textarea name="titlelblselected" from="textarea_info">
+			                  <area>20,46,820,30</area>
+				               <font>Font_Info_Selected</font>
+				               <value>Watched Programs</value>
+				           </textarea>		
+					    </state>
+					</statetype>	
+	        </checkbox>
+        </group>
 
         <button name="save" from="button_tvshow_panel">
-            <position>-352,25</position>
+            <position>484,145</position>
             <value>Save</value>
         </button>
     </window>
 
     <window name="passwordchanger">
-        <area>837,125,956,545</area>
-
         <animation trigger="AboutToShow">
            <section duration="500" centre="middle">
                <alpha start="0" end="255" easingcurve="InSine" />
@@ -1000,118 +1036,127 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>0,0,956,540</area>
+            <area>837,125,956,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
+        <imagetype name="paneltop">
+            <area>113,70,1695,58</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/multiplex_tablet_top.png</filename>
+        </imagetype>
+
         <imagetype name="groupselectorbgd">
-            <area>0,0,956,545</area>
+            <area>837,125,956,545</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
 
+        <textarea name="title" from="textarea_label">
+            <area>141,93,993,30</area>
+            <align>left,top</align>
+            <multiline>no</multiline>
+            <value>Change recording group password</value>
+        </textarea>
+
         <shape name="groupselectorbuttonblackbgd">
-            <area>-353,20,353,70</area>
+            <area>484,145,353,70</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbuttonbgd">
-            <area>-353,20,354,70</area>
+            <area>484,145,354,70</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
         </imagetype>
 
-        <textarea name="title" from="textarea_label">
-            <area>-696,-32,993,30</area>
-            <align>left,top</align>
-            <multiline>no</multiline>
-            <value>Change Recording Group Password</value>
-        </textarea>
-
-        <textedit name="oldpassword" from="textedit_tvshow_panel">
-            <area>2,25,956,70</area>
-	         <statetype name="background">
-	             <state name="active">
-				        <textarea name="lblactive" from="textarea_label">
-				            <area>20,7,820,30</area>
-				            <value>Enter:</value>
-				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,32,820,30</area>
-				            <value>Old Password</value>
-				        </textarea>	
-				    </state>
-	             <state name="selected">
-		              <imagetype name="Listpanel_selectbar">
-		                  <area>0,0,956,70</area>
-		                  <filename>images/shared/listpanel_selectbar.png</filename>
-		              </imagetype>
-		  		        <textarea name="lblselected" from="textarea_label">
-				            <area>20,7,820,30</area>
-				            <font>Font_Label_List_Selected</font>
-				            <value>Enter:</value>
-				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,32,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>Old Password</value>
-			           </textarea>		
-				    </state>
-                <state name="inactive"/>
-				</statetype>	
-	         <imagetype name="cursor">
-	             <filename>cursor.png</filename>
-	         </imagetype>
-	         <textarea name="text" from="textarea_info">
-	             <area>302,32,640,30</area>
-	         </textarea>
-        </textedit>
-
-        <textedit name="newpassword">
-            <area>2,95,956,70</area>
-	         <statetype name="background">
-	             <state name="active">
-				        <textarea name="lblactive" from="textarea_label">
-				            <area>20,7,820,30</area>
-				            <value>Enter:</value>
-				        </textarea>		
-				        <textarea name="titlelblactive" from="textarea_info">
-				            <area>20,32,820,30</area>
-				            <value>New Password</value>
-				        </textarea>	
-				    </state>
-	             <state name="selected">
-		              <imagetype name="Listpanel_selectbar">
-		                  <area>0,0,956,70</area>
-		                  <filename>images/shared/listpanel_selectbar.png</filename>
-		              </imagetype>
-		  		        <textarea name="lblselected" from="textarea_label">
-				            <area>20,7,820,30</area>
-				            <font>Font_Label_List_Selected</font>
-				            <value>Enter:</value>
-				        </textarea>		
-			           <textarea name="titlelblselected" from="textarea_info">
-		                  <area>20,32,820,30</area>
-			               <font>Font_Info_Selected</font>
-			               <value>New Password</value>
-			           </textarea>		
-				    </state>
-                <state name="inactive"/>
-				</statetype>	
-	         <imagetype name="cursor">
-	             <filename>cursor.png</filename>
-	         </imagetype>
-	         <textarea name="text" from="textarea_info">
-	             <area>302,32,640,30</area>
-	         </textarea>
-        </textedit>
-
+        <group name="passwordchangerwidgetsgroup">
+           <area>837,125,956,540</area>
+	        <textedit name="oldpassword" from="textedit_tvshow_panel">
+	            <area>2,25,956,70</area>
+		         <statetype name="background">
+		             <state name="active">
+					        <textarea name="lblactive" from="textarea_label">
+					            <area>20,7,820,30</area>
+					            <value>Enter:</value>
+					        </textarea>		
+					        <textarea name="titlelblactive" from="textarea_info">
+					            <area>20,32,820,30</area>
+					            <value>Old Password</value>
+					        </textarea>	
+					    </state>
+		             <state name="selected">
+			              <imagetype name="Listpanel_selectbar">
+			                  <area>0,0,956,70</area>
+			                  <filename>images/shared/listpanel_selectbar.png</filename>
+			              </imagetype>
+			  		        <textarea name="lblselected" from="textarea_label">
+					            <area>20,7,820,30</area>
+					            <font>Font_Label_List_Selected</font>
+					            <value>Enter:</value>
+					        </textarea>		
+				           <textarea name="titlelblselected" from="textarea_info">
+			                  <area>20,32,820,30</area>
+				               <font>Font_Info_Selected</font>
+				               <value>Old Password</value>
+				           </textarea>		
+					    </state>
+	                <state name="inactive"/>
+					</statetype>	
+		         <imagetype name="cursor">
+		             <filename>cursor.png</filename>
+		         </imagetype>
+		         <textarea name="text" from="textarea_info">
+		             <area>302,32,640,30</area>
+		         </textarea>
+	        </textedit>
+	
+	        <textedit name="newpassword">
+	            <area>2,95,956,70</area>
+		         <statetype name="background">
+		             <state name="active">
+					        <textarea name="lblactive" from="textarea_label">
+					            <area>20,7,820,30</area>
+					            <value>Enter:</value>
+					        </textarea>		
+					        <textarea name="titlelblactive" from="textarea_info">
+					            <area>20,32,820,30</area>
+					            <value>New Password</value>
+					        </textarea>	
+					    </state>
+		             <state name="selected">
+			              <imagetype name="Listpanel_selectbar">
+			                  <area>0,0,956,70</area>
+			                  <filename>images/shared/listpanel_selectbar.png</filename>
+			              </imagetype>
+			  		        <textarea name="lblselected" from="textarea_label">
+					            <area>20,7,820,30</area>
+					            <font>Font_Label_List_Selected</font>
+					            <value>Enter:</value>
+					        </textarea>		
+				           <textarea name="titlelblselected" from="textarea_info">
+			                  <area>20,32,820,30</area>
+				               <font>Font_Info_Selected</font>
+				               <value>New Password</value>
+				           </textarea>		
+					    </state>
+	                <state name="inactive"/>
+					</statetype>	
+		         <imagetype name="cursor">
+		             <filename>cursor.png</filename>
+		         </imagetype>
+		         <textarea name="text" from="textarea_info">
+		             <area>302,32,640,30</area>
+		         </textarea>
+	        </textedit>
+        </group>
+        
         <button name="ok" from="button_tvshow_panel">
-            <position>-352,25</position>
+            <position>484,145</position>
             <value>Save</value>
         </button>
     </window>
@@ -1155,13 +1200,6 @@
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
         </imagetype>
-
-        <textarea name="label" from="textarea_label">
-            <area>-696,-32,993,30</area>
-            <align>left,top</align>
-            <multiline>no</multiline>
-            <value>Edit Recording Metadata</value>
-        </textarea>
 
         <textedit name="title">
             <area>2,25,956,70</area>
@@ -1350,13 +1388,6 @@
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
-
-        <textarea name="title" from="textarea_label">
-            <area>-696,-32,993,30</area>
-            <align>left,top</align>
-            <multiline>no</multiline>
-            <value>Icon Help</value>
-        </textarea>
 
         <buttonlist name="iconlist" from="buttonlist_tvshowpanel">
             <position>2,25</position>
