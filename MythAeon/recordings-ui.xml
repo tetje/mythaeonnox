@@ -10,14 +10,20 @@
             <filename>images/backgrounds/tvshows/</filename>
         </imagetype>
         
-        <imagetype name="showcaseimg" from="backdropimg">
-            <filename>images/shared/showcase_stage.png</filename>
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
         </imagetype>
-        
+<!--        
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+ -->       
         <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <alpha>128</alpha>
-            <filename>images/shared/showcase_spot.png</filename>
+            <alpha>255</alpha>
+            <filename>images/shared/views/showcase_spot.png</filename>
         </imagetype>
         
         <group name="date_clock" from="defaultclockup">
@@ -94,12 +100,24 @@
 -->
 
 	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
+	            <area>0,0,1695,900</area>
 	            <filename>images/shared/multiplex_back.png</filename>
 	        </imagetype>
 	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet_bigthumb.png</filename>
+	        <imagetype name="multiplextabletglowimg">
+	            <area>0,0,1695,1015</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+
+	        <imagetype name="multiplextabletimg">
+	            <area>0,0,1695,1015</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
+	        </imagetype>
+	
+	        <imagetype name="multiplextabletlayoutimg">
+	            <area>0,-2,1695,846</area>
+	            <filename>images/shared/views/fanart_layout.png</filename>
 	        </imagetype>
 	
 			  <buttonlist name="recgroups">
@@ -107,7 +125,7 @@
 			      <area>30,23,1600,30</area>
 			      <layout>horizontal</layout>
 			      <showarrow>no</showarrow>
-			      <buttonarea>0,0,200,30</buttonarea>
+			      <buttonarea>0,0,1600,30</buttonarea>
 			      <statetype name="buttonitem">
 			          <state name="active">
 			              <textarea name="buttontext" from="textarea_label">
@@ -272,6 +290,8 @@
 	            </section>
 	        </animation>       
 -->
+
+
 	        <buttonlist name="recordings" from="buttonlist_multiplextv">
 	             <position>0,2</position>
 	        </buttonlist>
@@ -454,6 +474,18 @@
 		                  <filename>images/shared/musicinfoshadow.png</filename>
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
+						  <shape name="iconbgdshade1">
+						      <area>60,0,104,48</area>
+						      <type>box</type>
+						      <cornerradius>2</cornerradius>
+						      <line color="#600000" alpha="255" width="3" />
+						  </shape>
+						  <shape name="iconbgdshade2">
+						      <area>60,-2,105,51</area>
+						      <type>box</type>
+						      <cornerradius>2</cornerradius>
+						      <line color="#000000" alpha="255" width="1" />
+						  </shape>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaulttvborder">
 						      <area>15,10,36,24</area>
@@ -669,7 +701,7 @@
 						      <fill color="#000000" alpha="255" />
 						  </shape>
 						  <shape name="defaultshape3">
-						      <area>2,8,10,34</area>
+						      <area>2,8,9,34</area>
 						      <type>box</type>
 						      <fill color="#000000" alpha="255" />
 						  </shape>
@@ -736,20 +768,20 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>837,125,956,540</area>
+            <area>841,126,950,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="paneltop">
-            <area>113,70,1695,58</area>
+            <area>113,70,1695,51</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_top.png</filename>
         </imagetype>
 
         <imagetype name="groupselectorbgd">
-            <area>837,125,956,545</area>
+            <area>841,126,950,540</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
@@ -780,20 +812,20 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>837,125,956,540</area>
+            <area>841,126,950,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="paneltop">
-            <area>113,70,1695,58</area>
+            <area>113,70,1695,51</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_top.png</filename>
         </imagetype>
 
         <imagetype name="groupselectorbgd">
-            <area>837,125,956,545</area>
+            <area>841,126,950,540</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
@@ -806,14 +838,14 @@
         </textarea>
 
         <shape name="groupselectorbuttonblackbgd">
-            <area>484,145,353,70</area>
+            <area>487,126,350,80</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbuttonbgd">
-            <area>484,145,354,70</area>
+            <area>487,126,350,80</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
         </imagetype>
@@ -1036,20 +1068,20 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>837,125,956,540</area>
+            <area>841,126,950,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="paneltop">
-            <area>113,70,1695,58</area>
+            <area>113,70,1695,51</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_top.png</filename>
         </imagetype>
 
         <imagetype name="groupselectorbgd">
-            <area>837,125,956,545</area>
+            <area>841,126,950,540</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
@@ -1062,14 +1094,14 @@
         </textarea>
 
         <shape name="groupselectorbuttonblackbgd">
-            <area>484,145,353,70</area>
+            <area>487,126,350,80</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbuttonbgd">
-            <area>484,145,354,70</area>
+            <area>487,126,350,80</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
         </imagetype>
@@ -1162,7 +1194,7 @@
     </window>
 
     <window name="editmetadata">
-        <area>837,125,956,545</area>
+        <area>841,126,950,540</area>
 
         <animation trigger="AboutToShow">
            <section duration="500" centre="middle">
@@ -1176,27 +1208,27 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>0,0,956,540</area>
+            <area>0,0,950,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbgd">
-            <area>0,0,956,545</area>
+            <area>0,0,950,545</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
 
         <shape name="groupselectorbuttonblackbgd">
-            <area>-353,20,353,70</area>
+            <area>-350,0,350,80</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbuttonbgd">
-            <area>-353,20,354,70</area>
+            <area>-350,0,350,80</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_tablet_buttonpanel.png</filename>
         </imagetype>
@@ -1363,7 +1395,7 @@
     </window>
 
     <window name="iconhelp">
-        <area>837,125,956,545</area>
+        <area>841,126,950,540</area>
 
         <animation trigger="AboutToShow">
            <section duration="500" centre="middle">
@@ -1377,20 +1409,20 @@
         </animation>
 
         <shape name="groupselectorblackbgd">
-            <area>0,0,956,540</area>
+            <area>0,0,950,540</area>
             <type>box</type>
             <line color="#000000" alpha="255" width="1" />
             <fill style="solid" color="#000000" alpha="255" />
         </shape>
 
         <imagetype name="groupselectorbgd">
-            <area>0,0,956,545</area>
+            <area>0,0,950,540</area>
             <preserveaspect>no</preserveaspect>
             <filename>images/shared/multiplex_webtablet_panel.png</filename>
         </imagetype>
 
         <buttonlist name="iconlist" from="buttonlist_tvshowpanel">
-            <position>2,25</position>
+            <position>0,25</position>
             <statetype name="buttonitem">
                 <state name="active">
                     <statetype name="icons">
@@ -1658,12 +1690,12 @@
 								  <shape name="defaultshape2">
 								      <area>2,13,26,26</area>
 								      <type>ellipse</type>
-								      <fill color="#000000" alpha="255" />
+								      <fill color="#600000" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape3">
-								      <area>2,8,10,34</area>
+								      <area>2,8,9,34</area>
 								      <type>box</type>
-								      <fill color="#000000" alpha="255" />
+								      <fill color="#600000" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape4">
 								      <area>10,10,4,30</area>
@@ -1697,6 +1729,18 @@
 				                  <filename>images/shared/musicinfoshadow.png</filename>
 				                  <preserveaspect>no</preserveaspect>
 				              </imagetype>
+								  <shape name="iconbgdshade1">
+								      <area>60,0,104,48</area>
+								      <type>box</type>
+								      <cornerradius>2</cornerradius>
+								      <line color="#600000" alpha="255" width="3" />
+								  </shape>
+								  <shape name="iconbgdshade2">
+								      <area>60,-2,105,51</area>
+								      <type>box</type>
+								      <cornerradius>2</cornerradius>
+								      <line color="#000000" alpha="255" width="1" />
+								  </shape>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaulttvborder">
 								      <area>15,10,36,24</area>
@@ -1727,7 +1771,7 @@
 								  </shape>
 								  <textarea name="subtitletxt" from="textarea_icon">
 								      <area>60,2,105,50</area>
-								      <font>Font_Icon_Base_Black</font>
+								      <font>Font_Icon_Base</font>
 								      <value>CC</value>
 								  </textarea>           
 				               <imagetype name="iconglass">
@@ -1740,14 +1784,14 @@
                         <state name="subtitles" from="cc">
 								  <textarea name="subtitletxt" from="textarea_icon">
 								      <area>60,2,105,50</area>
-								      <font>Font_Icon_Base_Black</font>
+								      <font>Font_Icon_Base</font>
 								      <value>OSD</value>
 								  </textarea>           
                         </state>
                         <state name="onscreensub" from="cc">
 								  <textarea name="subtitletxt" from="textarea_icon">
 								      <area>60,2,105,50</area>
-								      <font>Font_Icon_Base_Black</font>
+								      <font>Font_Icon_Base</font>
 								      <value>SUB</value>
 								  </textarea>           
                         </state>
@@ -2086,12 +2130,12 @@
 								  <shape name="defaultshape2">
 								      <area>2,13,26,26</area>
 								      <type>ellipse</type>
-								      <fill color="#000000" alpha="255" />
+								      <fill color="#600000" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape3">
-								      <area>2,8,10,34</area>
+								      <area>2,8,9,34</area>
 								      <type>box</type>
-								      <fill color="#000000" alpha="255" />
+								      <fill color="#600000" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape4">
 								      <area>10,10,4,30</area>
@@ -2125,6 +2169,18 @@
 				                  <filename>images/shared/musicinfoshadow.png</filename>
 				                  <preserveaspect>no</preserveaspect>
 				              </imagetype>
+								  <shape name="iconbgdshade1">
+								      <area>60,0,104,50</area>
+								      <type>box</type>
+								      <cornerradius>2</cornerradius>
+								      <line color="#600000" alpha="255" width="3" />
+								  </shape>
+								  <shape name="iconbgdshade2">
+								      <area>60,-2,105,52</area>
+								      <type>roundbox</type>
+								      <cornerradius>2</cornerradius>
+								      <line color="#000000" alpha="255" width="1" />
+								  </shape>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaulttvborder">
 								      <area>15,10,36,24</area>

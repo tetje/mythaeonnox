@@ -1097,7 +1097,7 @@
 	                   <textarea name="buttontext">
 	                       <alpha>255</alpha>
 	                       <area>0,61,526,142</area>
-	                       <font>Font_MainMenu</font>
+	                       <font>Font_MainMenu_LightBlue</font>
 	                       <case>upper</case>
 		                    <multiline>no</multiline>
 	                       <align>allcenter</align>

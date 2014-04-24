@@ -1,5 +1,5 @@
 <themeinfo>
-    <name>MythAeon</name>
+    <name>MythAeonNox</name>
 
     <aspect>16:9</aspect>
 
@@ -16,8 +16,8 @@
     <baseres>1920x1080</baseres>
 
     <version>
-        <major>27</major>
-        <minor>7</minor>
+        <major>28</major>
+        <minor>1</minor>
     </version>
 
     <detail>
