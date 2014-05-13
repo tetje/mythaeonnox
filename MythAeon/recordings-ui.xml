@@ -468,24 +468,28 @@
 		            <area>168,0,200,50</area>
 		            <state name="cc">
 						  <area>0,0,165,50</area>
-		              <imagetype name="iconbgd">
-		                  <area>-18,-5,198,60</area>
-		                  <alpha>255</alpha>
-		                  <filename>images/shared/musicinfoshadow.png</filename>
-		                  <preserveaspect>no</preserveaspect>
-		              </imagetype>
+				        <imagetype name="iconbgd">
+				            <area>-6,-5,76,60</area>
+				            <alpha>255</alpha>
+				            <filename>images/shared/musicinfoshadow.png</filename>
+				            <preserveaspect>no</preserveaspect>
+				        </imagetype>
+				
+						  <shape name="iconbgdshade2">
+						      <area>-1,-2,164,53</area>
+						      <type>roundbox</type>
+						      <cornerradius>2</cornerradius>
+						      <line color="#000000" alpha="255" width="2" />
+						  </shape>
+				
 						  <shape name="iconbgdshade1">
-						      <area>60,0,104,48</area>
-						      <type>box</type>
+						      <area>63,1,102,50</area>
+						      <type>roundbox</type>
 						      <cornerradius>2</cornerradius>
 						      <line color="#600000" alpha="255" width="3" />
+						      <fill color="#FFFFFF" alpha="64" />
 						  </shape>
-						  <shape name="iconbgdshade2">
-						      <area>60,-2,105,51</area>
-						      <type>box</type>
-						      <cornerradius>2</cornerradius>
-						      <line color="#000000" alpha="255" width="1" />
-						  </shape>
+				
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 						  <shape name="defaulttvborder">
 						      <area>15,10,36,24</area>
@@ -1722,24 +1726,27 @@
 				               </imagetype>
                         </state>
                         <state name="cc">
-								 <area>0,0,165,50</area>
-				              <imagetype name="iconbgd">
-				                  <area>-18,-5,198,60</area>
-				                  <alpha>255</alpha>
-				                  <filename>images/shared/musicinfoshadow.png</filename>
-				                  <preserveaspect>no</preserveaspect>
-				              </imagetype>
+								  <area>0,0,165,50</area>
+						        <imagetype name="iconbgd">
+						            <area>-6,-5,76,60</area>
+						            <alpha>255</alpha>
+						            <filename>images/shared/musicinfoshadow.png</filename>
+						            <preserveaspect>no</preserveaspect>
+						        </imagetype>
+						
+								  <shape name="iconbgdshade2">
+								      <area>-1,-2,164,53</area>
+								      <type>roundbox</type>
+								      <cornerradius>2</cornerradius>
+								      <line color="#000000" alpha="255" width="2" />
+								  </shape>
+						
 								  <shape name="iconbgdshade1">
-								      <area>60,0,104,48</area>
-								      <type>box</type>
+								      <area>63,1,102,50</area>
+								      <type>roundbox</type>
 								      <cornerradius>2</cornerradius>
 								      <line color="#600000" alpha="255" width="3" />
-								  </shape>
-								  <shape name="iconbgdshade2">
-								      <area>60,-2,105,51</area>
-								      <type>box</type>
-								      <cornerradius>2</cornerradius>
-								      <line color="#000000" alpha="255" width="1" />
+								      <fill color="#FFFFFF" alpha="64" />
 								  </shape>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaulttvborder">
@@ -2162,24 +2169,27 @@
 				               </imagetype>
                         </state>
                         <state name="cc">
-								 <area>0,0,165,50</area>
-				              <imagetype name="iconbgd">
-				                  <area>-18,-5,198,60</area>
-				                  <alpha>255</alpha>
-				                  <filename>images/shared/musicinfoshadow.png</filename>
-				                  <preserveaspect>no</preserveaspect>
-				              </imagetype>
-								  <shape name="iconbgdshade1">
-								      <area>60,0,104,50</area>
-								      <type>box</type>
-								      <cornerradius>2</cornerradius>
-								      <line color="#600000" alpha="255" width="3" />
-								  </shape>
+								  <area>0,0,165,50</area>
+						        <imagetype name="iconbgd">
+						            <area>-6,-5,76,60</area>
+						            <alpha>255</alpha>
+						            <filename>images/shared/musicinfoshadow.png</filename>
+						            <preserveaspect>no</preserveaspect>
+						        </imagetype>
+						
 								  <shape name="iconbgdshade2">
-								      <area>60,-2,105,52</area>
+								      <area>-1,-2,164,53</area>
 								      <type>roundbox</type>
 								      <cornerradius>2</cornerradius>
-								      <line color="#000000" alpha="255" width="1" />
+								      <line color="#000000" alpha="255" width="2" />
+								  </shape>
+						
+								  <shape name="iconbgdshade1">
+								      <area>63,1,102,50</area>
+								      <type>roundbox</type>
+								      <cornerradius>2</cornerradius>
+								      <line color="#600000" alpha="255" width="3" />
+								      <fill color="#FFFFFF" alpha="64" />
 								  </shape>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
 								  <shape name="defaulttvborder">

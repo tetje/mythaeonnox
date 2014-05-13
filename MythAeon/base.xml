@@ -240,6 +240,10 @@
         <color>#FFFFFF</color>
         <weight>bold</weight>
         <stretch>extraexpanded</stretch>
+        <outlinecolor>#000000</outlinecolor>
+		  <outlinesize>1</outlinesize>
+		  <outlinealpha>224</outlinealpha>
+
     </fontdef>
 
     <fontdef name="Font_Icon_Base_Italic" from="Font_Icon_Base">
@@ -264,16 +268,24 @@
         
     <fontdef name="Font_Icon_Base_Black_22" from="Font_Icon_Base">
         <color>#000000</color>
-        <pixelsize>22</pixelsize>
-        <weight>normal</weight>
-        <stretch>5</stretch>
+        <pixelsize>18</pixelsize>
+        <weight>light</weight>
+        <stretch>6</stretch>
+    </fontdef>
+        
+    <fontdef name="Font_Icon_Base_White_22" from="Font_Icon_Base_Black_22">
+        <color>#FFFFFF</color>
     </fontdef>
         
     <fontdef name="Font_Icon_Base_Black_24_Bold" from="Font_Icon_Base">
         <color>#000000</color>
-        <pixelsize>24</pixelsize>
+        <pixelsize>21</pixelsize>
         <weight>bold</weight>
-        <stretch>7</stretch>
+        <stretch>9</stretch>
+    </fontdef>
+        
+    <fontdef name="Font_Icon_Base_White_24_Bold" from="Font_Icon_Base_Black_24_Bold">
+        <color>#FFFFFF</color>
     </fontdef>
         
     <fontdef name="Font_Icon_Base_Green" from="Font_Icon_Base">
@@ -358,12 +370,19 @@
          <area>-50,0,733,87</area>
          <preserveaspect>no</preserveaspect>
       </imagetype>  
-      <clock name="clock">
-         <area>45,5,620,35</area>
+      <clock name="clockdate">
+         <area>45,5,500,35</area>
          <font>Font_Clock</font>
-         <template>dddd, MMMM dd, yyyy  |  hh:mm AP</template>
+         <template>dddd, MMMM dd, yyyy  |</template>
          <align>right,vcenter</align>
-         <alpha>192</alpha>
+         <alpha>255</alpha>
+      </clock>
+      <clock name="clocktime">
+         <area>545,5,120,35</area>
+         <font>Font_Clock_LightBlue</font>
+         <template>hh:mm AP</template>
+         <align>right,vcenter</align>
+         <alpha>255</alpha>
       </clock>
    </group>
 
@@ -523,6 +542,76 @@
         </state>
     </statetype>
 
+
+   <!-- Base MythAeon scrollbar definitions -->
+    <scrollbar name="basescrollbarvert">
+        <area>0,20,3%,100%-20</area>
+        <hidedelay>2000</hidedelay>
+        <layout>vertical</layout>
+        <shape name="bar">
+            <type>roundbox</type>
+            <area>0,2,15,-2</area>
+            <line color="#535353" alpha="100" width="1" />
+            <cornerradius>8</cornerradius>
+			   <fill style="gradient">
+				   <gradient direction="horizontal">
+					   <stop position="0" color="#535353" alpha="225" />
+					   <stop position="100" color="#000000" alpha="120" />
+				   </gradient>
+			   </fill>
+        </shape>
+        <shape name="slider">
+            <area>0,0,15,1</area>
+            <type>roundbox</type>
+	         <line color="#535353" alpha="100" width="1" />
+            <cornerradius>8</cornerradius>
+			   <fill style="gradient">
+				   <gradient direction="horizontal">
+					   <stop position="0" color="#FFFFFF" alpha="225" />
+					   <stop position="60" color="#A1A1A1" alpha="225" />
+<!--
+					 <stop position="0" color="#A1A1A1" alpha="225" />
+					 <stop position="60" color="#FFFFFF" alpha="225" />
+-->
+	  			   </gradient>
+			   </fill>
+        </shape>
+    </scrollbar>
+
+    <scrollbar name="basescrollbarhorz">
+        <area>0,0,100%-40,8%</area>
+        <hidedelay>2000</hidedelay>
+        <layout>horizontal</layout>
+        <shape name="bar">
+            <area>0,0,-8,15</area>
+            <line color="#535353" alpha="100" width="1" />
+            <type>roundbox</type>
+            <cornerradius>8</cornerradius>
+			   <fill style="gradient">
+				   <gradient direction="vertical">
+					   <stop position="0" color="#535353" alpha="225" />
+					   <stop position="100" color="#000000" alpha="120" />
+				   </gradient>
+			   </fill>
+        </shape>
+        <shape name="slider">
+            <area>5,0,20,15</area>
+            <type>roundbox</type>
+	         <line color="#535353" alpha="100" width="1" />
+            <cornerradius>8</cornerradius>
+			   <fill style="gradient">
+			      <gradient direction="vertical">
+					   <stop position="0" color="#FFFFFF" alpha="225" />
+					   <stop position="60" color="#A1A1A1" alpha="225" />
+<!--
+					 <stop position="0" color="#A1A1A1" alpha="225" />
+					 <stop position="60" color="#FFFFFF" alpha="225" />
+-->
+				   </gradient>
+			   </fill>
+        </shape>
+    </scrollbar>
+
    <!-- Base MythAeon textarea definitions -->
    
    <textarea name="textarea_info">
@@ -592,7 +681,7 @@
 
    <textarea name="textarea_list" from="textarea_info">
        <area>0,0,200,50</area>
-       <font>Font_List_Selected</font>
+       <font>Font_List_Active</font>
    </textarea>
    
    <textarea name="textarea_settings_title" from="textarea_info">
@@ -1109,22 +1198,22 @@
                </textarea>	  
            </state>
            <state name="selectedactive">
-               <area>-7,-7,200,305</area>
+               <area>-12,-11,222,322</area>
                <imagetype name="previewbgd">
-                   <area>-7,-7,200,305</area>
+                   <area>-12,-11,217,322</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_border.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
                <imagetype name="coverart">
-                   <area>0,0,186,287</area>
+                   <area>0,0,194,300</area>
                    <alpha>255</alpha>
                    <preserveaspect>no</preserveaspect>
                    <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
                    <mask>images/shared/multiplex_mask_big.png</mask>
                </imagetype>
                <imagetype name="previewglass">
-                   <area>0,0,186,287</area>
+                   <area>0,0,194,300</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_glass.png</filename>
                    <preserveaspect>no</preserveaspect>
@@ -1162,13 +1251,13 @@
 	        <position>50,70</position>
 	        <state type="off">
 	            <imagetype name="dnon">
-	                <filename>images/shared/multiplex_arrow2.png</filename>
+	                <filename>images/shared/views/multiplex_arrow2.png</filename>
 	                <alpha>90</alpha>
 	            </imagetype>
 	        </state>
 	        <state type="full">
 	            <imagetype name="dnoff">
-	                <filename>images/shared/multiplex_arrow2.png</filename>
+	                <filename>images/shared/views/multiplex_arrowfocus2.png</filename>
 	            </imagetype>
 	        </state>
 	    </statetype>
@@ -1176,13 +1265,13 @@
 	        <position>1820,70</position>
 	        <state type="off">
 	            <imagetype name="dnon">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/views/multiplex_arrow.png</filename>
 	                <alpha>90</alpha>
 	            </imagetype>
 	        </state>
 	        <state type="full">
 	            <imagetype name="dnoff">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/views/multiplex_arrowfocus.png</filename>
 	            </imagetype>
 	        </state>
 	    </statetype>
@@ -2775,6 +2864,110 @@
 			      <statetype name="userratingstate" from="rating_base">
 			          <area>927,61,90,18</area>
 			      </statetype>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_threepanel">
+       <area>0,0,850,800</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>stack</arrange>
+       <align>left</align>
+       <wrapstyle>selection</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,850,800</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,850,50</area>
+               <imagetype name="Listpanelline">
+                   <area>0,0,850,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="year" from="textarea_list">
+                   <area>40,0,80,50</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+                   <align>justify,vcenter</align>
+                   <template>%year%</template>
+                   <alpha>192</alpha>
+               </textarea>
+               <textarea name="title" from="textarea_list">
+                   <area>130,0,620,50</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+                   <template>%title%</template>
+               </textarea>
+               <textarea name="userrating" from="textarea_list">
+                   <area>40,0,755,50</area>
+                   <cutdown>yes</cutdown>
+                   <align>right,vcenter</align>
+                   <font>Font_List_Active</font>
+                   <template>%userrating%</template>
+                   <alpha>192</alpha>
+               </textarea>
+	            <statetype name="watchedstate">
+	                <state name="yes">
+	                    <imagetype name="yes">
+	                        <area>810,10,30,30</area>
+	                        <filename>images/icons/selected.png</filename>
+	                    </imagetype>
+	                </state>
+	                <state name="no">
+	                    <imagetype name="no">
+	                        <area>810,10,30,30</area>
+	                        <filename>images/icons/selected.png</filename>
+	                        <alpha>64</alpha>
+	                    </imagetype>
+	                </state>
+	           </statetype>
+           </state>
+           <state name="selectedactive">
+               <area>0,0,850,50</area>
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,850,50</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <textarea name="year" from="textarea_list">
+                   <area>40,0,80,50</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+                   <align>justify,vcenter</align>
+                   <template>%year%</template>
+                   <alpha>255</alpha>
+               </textarea>
+               <textarea name="title" from="textarea_list">
+                   <area>130,0,620,50</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+                   <template>%title%</template>
+               </textarea>
+               <textarea name="userrating" from="textarea_list">
+                   <area>40,0,755,50</area>
+                   <cutdown>yes</cutdown>
+                   <align>right,vcenter</align>
+                   <font>Font_List_Active</font>
+                   <template>%userrating%</template>
+                   <alpha>255</alpha>
+               </textarea>
+	            <statetype name="watchedstate">
+	                <state name="yes">
+	                    <imagetype name="yes">
+	                        <area>810,10,30,30</area>
+	                        <filename>images/icons/selected.png</filename>
+	                    </imagetype>
+	                </state>
+	                <state name="no">
+	                    <imagetype name="no">
+	                        <area>810,10,30,30</area>
+	                        <filename>images/icons/selected.png</filename>
+	                        <alpha>64</alpha>
+	                    </imagetype>
+	                </state>
+	           </statetype>
            </state>
            <state name="inactive" from="active"/>
            <state name="selectedinactive" from="selectedactive"/>
@@ -7228,11 +7421,27 @@
 	  <group name="defaultinfoiconseason">
 		  <area>0,0,200,50</area>
         <imagetype name="iconbgd" depends="##x##">
-            <area>-9,-5,210,60</area>
+            <area>-6,-5,76,60</area>
             <alpha>255</alpha>
             <filename>images/shared/musicinfoshadow.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
+
+		  <shape name="iconbgdshade2" depends="##x##">
+		      <area>-1,-2,199,53</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#000000" alpha="255" width="2" />
+		  </shape>
+
+		  <shape name="iconbgdshade1" depends="##x##">
+		      <area>63,1,136,50</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#600000" alpha="255" width="3" />
+		      <fill color="#FFFFFF" alpha="64" />
+		  </shape>
+
 		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="##x##"/>
 		  <textarea name="icontextlbl" from="textarea_icon" depends="##x##">
 		      <area>2,2,60,38</area>
@@ -7244,13 +7453,13 @@
 		      <value>Season</value>
 		  </textarea>
 		  <textarea name="##x##lbl" from="textarea_icon" depends="##x##">
-		      <area>57,7,134,22</area>
-		      <font>Font_Icon_Base_Black_22</font>
+		      <area>60,7,134,22</area>
+		      <font>Font_Icon_Base_White_22</font>
 		      <value>Episode</value>
 		  </textarea>           
 		  <textarea name="##x##" from="textarea_icon">
-		      <area>57,28,134,24</area>
-		      <font>Font_Icon_Base_Black_24_Bold</font>
+		      <area>60,24,134,24</area>
+		      <font>Font_Icon_Base_White_24_Bold</font>
 		  </textarea>           
         <imagetype name="iconglass" depends="##x##">
             <area>0,0,63,50</area>
@@ -7263,11 +7472,27 @@
 	  <group name="defaultinfoiconrating">
 		  <area>0,0,200,50</area>
         <imagetype name="iconbgd" depends="rating">
-            <area>-9,-5,210,60</area>
+            <area>-6,-5,76,60</area>
             <alpha>255</alpha>
-            <filename>images/shared/musicinfoshadowlong.png</filename>
+            <filename>images/shared/musicinfoshadow.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
+
+		  <shape name="iconbgdshade2" depends="rating">
+		      <area>-1,-2,199,53</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#000000" alpha="255" width="2" />
+		  </shape>
+
+		  <shape name="iconbgdshade1" depends="rating">
+		      <area>63,1,136,50</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#600000" alpha="255" width="3" />
+		      <fill color="#FFFFFF" alpha="64" />
+		  </shape>
+
 		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="rating"/>
 		  <textarea name="icontextlbl" from="textarea_icon" depends="rating">
 		      <area>2,2,60,38</area>
@@ -7280,12 +7505,12 @@
 		  </textarea>
 		  <textarea name="ratinglbl" from="textarea_icon" depends="rating">
 		      <area>60,7,134,22</area>
-		      <font>Font_Icon_Base_Black_22</font>
+		      <font>Font_Icon_Base_White_22</font>
 		      <value>Rating</value>
 		  </textarea>           
 		  <textarea name="rating" from="textarea_icon">
-		      <area>60,28,134,24</area>
-		      <font>Font_Icon_Base_Black_24_Bold</font>
+		      <area>60,24,134,24</area>
+		      <font>Font_Icon_Base_White_24_Bold</font>
 		  </textarea>           
         <imagetype name="iconglass" depends="rating">
             <area>0,0,63,50</area>
@@ -7297,26 +7522,42 @@
 	
 	  <group name="defaultinfoiconparental">
 		  <area>0,0,128,50</area>
-        <imagetype name="iconbgd">
-            <area>-13,-5,154,60</area>
+        <imagetype name="iconbgd" depends="videolevel">
+            <area>-6,-5,76,60</area>
             <alpha>255</alpha>
             <filename>images/shared/musicinfoshadow.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
-		  <textarea name="icontextlbl" from="textarea_icon">
+
+		  <shape name="iconbgdshade2" depends="videolevel">
+		      <area>-1,-2,127,53</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#000000" alpha="255" width="2" />
+		  </shape>
+
+		  <shape name="iconbgdshade1" depends="videolevel">
+		      <area>63,1,65,50</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#600000" alpha="255" width="3" />
+		      <fill color="#FFFFFF" alpha="64" />
+		  </shape>
+
+		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="videolevel"/>
+		  <textarea name="icontextlbl" from="textarea_icon" depends="videolevel">
 		      <area>2,2,60,38</area>
 		      <value>P</value>
 		  </textarea>
-		  <textarea name="icontextlbl2" from="textarea_icon">
+		  <textarea name="icontextlbl2" from="textarea_icon" depends="videolevel">
 		      <area>2,33,60,15</area>
 		      <font>Font_Icon_Base_Small</font>
 		      <value>Level</value>
 		  </textarea>
-		  <statetype name="videolevel" from="videolevel_base">
+		  <statetype name="videolevel" from="videolevel_base" depends="videolevel">
 		      <position>65,2</position>
 		  </statetype>
-        <imagetype name="iconglass">
+        <imagetype name="iconglass" depends="videolevel">
             <area>0,0,63,50</area>
             <alpha>255</alpha>
             <filename>images/shared/list_musicicon_glass.png</filename>
@@ -7327,11 +7568,27 @@
 	  <group name="defaultinfoiconuserrating">
 		  <area>0,0,128,50</area>
         <imagetype name="iconbgd" depends="userrating">
-            <area>-13,-5,154,60</area>
+            <area>-6,-5,76,60</area>
             <alpha>255</alpha>
             <filename>images/shared/musicinfoshadow.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
+
+		  <shape name="iconbgdshade2" depends="userrating">
+		      <area>-1,-2,127,53</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#000000" alpha="255" width="2" />
+		  </shape>
+
+		  <shape name="iconbgdshade1" depends="userrating">
+		      <area>63,1,65,50</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#600000" alpha="255" width="3" />
+		      <fill color="#FFFFFF" alpha="64" />
+		  </shape>
+
 		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="userrating"/>
 		  <textarea name="icontextlbl" from="textarea_icon" depends="userrating">
 		      <area>2,2,60,38</area>
@@ -7343,8 +7600,8 @@
 		      <value>User</value>
 		  </textarea>
 		  <textarea name="userrating" from="textarea_icon">
-		      <area>65,2,63,50</area>
-		      <font>Font_Icon_Base_Black</font>
+		      <area>64,2,64,50</area>
+		      <font>Font_Icon_Base_White_24_Bold</font>
 		  </textarea>           
         <imagetype name="iconglass" depends="userrating">
             <area>0,0,63,50</area>
@@ -7490,18 +7747,18 @@
      <group name="basegroupinfodetails">
         <area>0,0,573,50</area>
         
-        <group name="ratingicon" from="defaultinfoiconrating">
+        <group name="seasonicon" from="defaultinfoiconseason">
             <area>0,0,200,50</area>
         </group>
-
+        
         <group name="parentalicon" from="defaultinfoiconparental">
             <area>220,0,128,50</area>
         </group>
 
-        <group name="seasonicon" from="defaultinfoiconseason">
+        <group name="ratingicon" from="defaultinfoiconrating">
             <area>373,0,200,50</area>
         </group>
-        
+
      </group>
 
      <group name="basegroupinfodetails_manager">

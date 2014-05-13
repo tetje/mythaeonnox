@@ -329,7 +329,7 @@
     <window name="program_info">
 
         <imagetype name="osd_inputbgd">
-           <filename>images/osd/fullscreen_top.png</filename>
+           <filename>images/osd/codec_top.png</filename>
            <area>0,0,1920,85></area>
            <preserveaspect>no</preserveaspect>
         </imagetype>
@@ -744,7 +744,7 @@
     <window name="browse_info">
 
         <imagetype name="osd_inputbgd">
-           <filename>images/osd/fullscreen_top.png</filename>
+           <filename>images/osd/codec_top.png</filename>
            <area>0,0,1920,85></area>
            <preserveaspect>no</preserveaspect>
         </imagetype>

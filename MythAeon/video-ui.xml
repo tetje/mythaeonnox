@@ -67,19 +67,20 @@
 
         <imagetype name="infopanelshade">
             <area>728,0,1192,1080</area>
-            <filename>images/shared/movieinfogradient.png</filename>
+            <filename>images/shared/info/movieinfogradient.png</filename>
+            <alpha>255</alpha>
         </imagetype>
        
         <imagetype name="infopanel">
             <area>728,0,1192,1080</area>
-            <filename>images/shared/info_rightpaneltop.png</filename>
+            <filename>images/shared/info/info_rightpaneltop.png</filename>
         </imagetype>
 
         <group name="infopaneldetails">
            <area>878,70,1042,1010</area>   
 	        <imagetype name="infopanellines">
 	            <area>0,88,1042,853</area>
-	            <filename>images/shared/info_panellines_movie.png</filename>
+	            <filename>images/shared/info/info_panellines_movie.png</filename>
 	        </imagetype>
 	
 	        <textarea name="title" from="textarea_title_info">
@@ -208,52 +209,38 @@
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/movies/</filename>
         </imagetype>
-
-        <imagetype name="showcasefloorimg">
+        
+        <imagetype name="showcaseimg">
             <area>0,472,1920,608</area>
-            <filename>images/shared/showcase_floor.png</filename>
-        </imagetype>        
-
-        <imagetype name="showcaseimg" from="fanart">
-            <filename>images/shared/showcase_stage.png</filename>
+            <filename>images/shared/views/showcase_floor.png</filename>
         </imagetype>
-<!--        
+<!--  -->      
+        <imagetype name="listfilterimg" from="fanart">
+            <filename>images/shared/views/list_filter.png</filename>
+        </imagetype>
+        
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+<!--  -->      
         <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <alpha>128</alpha>
-            <filename>images/shared/showcase_spot.png</filename>
+            <alpha>255</alpha>
+            <filename>images/shared/views/list_spot.png</filename>
         </imagetype>
--->        
+                
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
 
-        <group name="positioninfo">
-            <area>1260,5,120,40</area>
-            <textarea name="positionlbl" from="textarea_info_small">
-                <area>0,0,90,20</area>
-                <alpha>192</alpha>
-                <font>Font_Info_Small_White</font>
-                <case>normal</case>
-                <align>allcenter</align>
-                <value>Position</value>
-            </textarea>	  
-            <textarea name="position" from="textarea_info_small">
-                <area>0,17,90,20</area>
-                <alpha>192</alpha>
-                <font>Font_Info_Small_White</font>
-                <case>normal</case>
-                <align>allcenter</align>
-            </textarea>
-        </group>	  
 
-
-        <group name="multiplextabletmoviegroup">
-           <area>113,100,1694,846</area>
+        <group name="listpanel3" depends="description&amp;coverart">
+           <area>1260,70,650,1080</area>
 
 	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="113,-916" end="113,100" easingcurve="InOutBack" />
+	            <section duration="2200" centre="middle">
+	                <position start="54,70" end="1260,70" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
@@ -265,27 +252,58 @@
 	            </section>
 	        </animation>       
 -->
-	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
-	            <filename>images/shared/multiplex_back.png</filename>
+	        <imagetype name="panel3">
+	            <area>0,0,650,1080</area>
+	            <filename>images/shared/views/tripanel/info_panel_alt.png</filename>
 	        </imagetype>
+	        <imagetype name="panel3_glow" from="panel3">
+	            <alpha>64</alpha>
+	            <filename>images/shared/views/tripanel/info_panel_alt_glow.png</filename>
+	        </imagetype>
+
+	        <textarea name="runtimelbl" from="textarea_label">
+	            <area>145,150,340,30</area>
+	            <value>Runtime:</value>
+	        </textarea>
+
+	        <textarea name="genrelbl" from="runtimelbl">
+	            <position>145,190</position>
+	            <value>Genre:</value>
+	        </textarea>
+
+	        <textarea name="directorlbl" from="runtimelbl">
+	            <position>145,230</position>
+	            <value>Director:</value>
+	        </textarea>
 	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet_small_bottom.png</filename>
-	        </imagetype>
+	        <textarea name="length" from="textarea_info">
+	            <area>255,150,315,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
 
-	        <buttonlist name="videos" from="buttonlist_videomanager">
-	            <position>13,57</position>
-	        </buttonlist>
+	        <textarea name="genres" from="textarea_info">
+	            <area>230,190,340,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
 
-	     </group>   
+	        <textarea name="director" from="textarea_info">
+	            <area>260,230,310,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
 
-        <group name="multiplextabletmoviewallgroup">
-           <area>0,620,1920,410</area>
+	        <textarea name="description" from="textarea_plot">
+	            <area>145,285,435,500</area>
+	            <template>%"|SUBTITLE|"\n\n%%DESCRIPTION%</template>
+	        </textarea>	
+	        
+        </group>	    
+
+        <group name="listpanel2" depends="coverart">
+           <area>800,125,650,1080</area>
 
 	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="1920,625" end="0,625" easingcurve="InOutBack" />
+	            <section duration="1700" centre="middle">
+	                <position start="54,125" end="800,125" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
@@ -293,53 +311,109 @@
 
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
-	                <position start="0,690" end="-1920,690" easingcurve="OutInBack" />
+	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
 	            </section>
 	        </animation>       
 -->
-	        <group name="managerinfodetails" from="basegroupinfodetails_manager">
-	           <position>300,360</position>
-	        </group>
+	        <imagetype name="coverart">
+	            <area>57,32,530,795</area>
+	            <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
+	            <mask>images/shared/views/tripanel/poster_diffuse.png</mask>
+	        </imagetype>
+	        <imagetype name="coverart_overlay">
+	            <area>0,0,640,980</area>
+	            <alpha>255</alpha>
+	            <filename>images/shared/views/tripanel/poster_overlay.png</filename>
+	        </imagetype>
+        </group>	   
+                     
+        <group name="listpanel1">
+           <area>54,107,860,1003</area>
+           
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="-914,107" end="54,107" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
 
-           <group name="managerbanner">
-              <position>1145,330</position>
-		        <imagetype name="banner_border" depends="banner">
-		            <area>0,0,566,110</area>
-		            <filename>images/shared/multiplex_tvborder.png</filename>
-		        </imagetype>
-	
-		        <imagetype name="banner">
-		            <area>12,5,541,100</area>
-		            <mask>images/shared/multiplex_bannermask.png</mask>
-		        </imagetype>
-	
-		        <imagetype name="banner_glass" depends="banner">
-		            <area>12,5,541,100</area>
-		            <filename>images/shared/multiplex_tvglass.png</filename>
-		        </imagetype>
-	        </group>
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
 
-	     </group>
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,860,1003</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
+	        </imagetype>
+        	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,860,1003</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+        
+	        <buttonlist name="videos" from="buttonlist_threepanel">
+	            <area>7,52,850,800</area>
+	            <showarrow>no</showarrow>
+	            <showscrollbar>yes</showscrollbar>
+		         <scrollbar name="scrollbar" from="basescrollbarvert">
+		             <area>800,0,3%,100%</area>
+		         </scrollbar>
+	        </buttonlist>
+
+           <textarea name="position" from="textarea_label_list">
+               <area>30,843,800,30</area>
+           </textarea>
+
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
+
+        <group name="listinfodetails" from="basegroupinfodetails">
+           <position>1300,990</position>
+
+  	        <animation trigger="AboutToShow">
+	           <section duration="1000" centre="middle">
+	               <alpha start="0" end="255" easingcurve="InQuad" />
+	           </section>
+	        </animation>
+      
+        </group>
 
     </window>
 
     <window name="browser">
 
-        <imagetype name="backdropimg">
+        <imagetype name="fanartbgd">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/movies/</filename>
         </imagetype>
         
-        <imagetype name="showcaseimg" from="backdropimg">
-            <filename>images/shared/showcase_stage.png</filename>
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
         </imagetype>
-        
+<!--        
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+ -->       
         <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <alpha>128</alpha>
-            <filename>images/shared/showcase_spot.png</filename>
+            <alpha>255</alpha>
+            <filename>images/shared/views/showcase_spot.png</filename>
         </imagetype>
-        
+                
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
@@ -348,7 +422,7 @@
             <area>1260,5,120,40</area>
             <textarea name="positionlbl" from="textarea_info_small">
                 <area>0,0,90,20</area>
-                <alpha>192</alpha>
+                <alpha>255</alpha>
                 <font>Font_Info_Small_White</font>
                 <case>normal</case>
                 <align>allcenter</align>
@@ -356,7 +430,7 @@
             </textarea>	  
             <textarea name="position" from="textarea_info_small">
                 <area>0,17,90,20</area>
-                <alpha>192</alpha>
+                <alpha>255</alpha>
                 <font>Font_Info_Small_White</font>
                 <case>normal</case>
                 <align>allcenter</align>
@@ -380,15 +454,28 @@
 	            </section>
 	        </animation>       
 -->
+
 	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
+	            <area>0,0,1695,900</area>
 	            <filename>images/shared/multiplex_back.png</filename>
 	        </imagetype>
 	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet_bigthumb.png</filename>
+	        <imagetype name="multiplextabletglowimg">
+	            <area>0,0,1695,1015</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
 	        </imagetype>
 
+	        <imagetype name="multiplextabletimg">
+	            <area>0,0,1695,1015</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
+	        </imagetype>
+	
+	        <imagetype name="multiplextabletlayoutimg">
+	            <area>0,-2,1695,846</area>
+	            <filename>images/shared/views/fanart_layout.png</filename>
+	        </imagetype>
+	
 	        <group name="movieinfo">
 	           <area>0,0,1694,846</area>
 
@@ -492,11 +579,11 @@
 	     </group>
 
         <group name="multiplextabletmovielistgroup">
-           <area>0,690,1920,390</area>
+           <area>0,675,1920,395</area>
 
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="1920,690" end="0,690" easingcurve="InOutBack" />
+	                <position start="1920,675" end="0,675" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
@@ -513,17 +600,17 @@
 	        </buttonlist>
 
 	        <textarea name="genres" from="textarea_title_sub">
-	            <area>510,305,900,30</area>
+	            <area>510,320,900,30</area>
 	            <align>allcenter</align>
 	        </textarea>
 	
 	        <textarea name="title" from="textarea_title">
-	            <area>510,340,900,45</area>
+	            <area>510,355,900,45</area>
 	            <align>allcenter</align>
 	        </textarea>
 
 	        <group name="listinfodetails" from="basegroupinfodetailswall">
-	           <position>0,305</position>
+	           <position>0,320</position>
 	        </group>
 	     </group>
 	
@@ -535,26 +622,27 @@
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/movies/</filename>
         </imagetype>
-
-        <imagetype name="showcasefloorimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/showcase_floor.png</filename>
-        </imagetype>        
-
-        <imagetype name="showcaseimg" from="fanart">
-            <filename>images/shared/showcase_stage.png</filename>
-        </imagetype>
         
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
+        </imagetype>
+<!--  -->      
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+<!--  -->      
         <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <alpha>128</alpha>
-            <filename>images/shared/showcase_spot.png</filename>
+            <alpha>255</alpha>
+            <filename>images/shared/views/showcase_spot.png</filename>
         </imagetype>
-        
+                
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
-
+        
         <group name="positioninfo">
             <area>1260,5,120,40</area>
             <textarea name="positionlbl" from="textarea_info_small">
@@ -652,20 +740,26 @@
             <filename>images/backgrounds/movies/</filename>
         </imagetype>
         
-        <imagetype name="listfloorimg" from="fanart">
-            <area>0,473,1920,607</area>
-            <filename>images/shared/list_floor.png</filename>
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
         </imagetype>
-        
+<!--  -->      
         <imagetype name="listfilterimg" from="fanart">
-            <filename>images/shared/list_filter.png</filename>
+            <filename>images/shared/views/list_filter.png</filename>
         </imagetype>
         
-        <imagetype name="spotlightimg" from="fanart">
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+<!--  -->      
+        <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <filename>images/shared/list_spot.png</filename>
+            <alpha>255</alpha>
+            <filename>images/shared/views/list_spot.png</filename>
         </imagetype>
-        
+                
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
@@ -678,22 +772,29 @@
 	                <position start="88,-1080" end="88,110" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
-
+<!--
 	        <imagetype name="listpanelbgdblack">
 	            <area>0,0,1139,970</area>
 	            <filename>images/shared/listpanel_black.png</filename>
                <preserveaspect>no</preserveaspect>
 	        </imagetype>
-
-	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
-	            <filename>images/shared/listpanel_back.png</filename>
+-->
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,1139,1025</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
 	        </imagetype>
         
 	        <imagetype name="listpaneldetailbgd">
 	            <area>912,12,148,850</area>
-	            <filename>images/shared/listpanel_detailwide.png</filename>
+	            <filename>images/shared/views/listpanel_detailwide.png</filename>
 	        </imagetype>
         	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,1139,1025</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+        
 	        <buttontree name="videos">
                <area>12,50,1115,800</area>
 	            <numlists>1</numlists>
@@ -896,14 +997,15 @@
 
         <imagetype name="infopanelshade">
             <area>728,0,1192,1080</area>
-            <filename>images/shared/movieinfogradient.png</filename>
+            <filename>images/shared/info/movieinfogradient.png</filename>
+            <alpha>255</alpha>
         </imagetype>
        
         <imagetype name="infopanel">
             <area>728,0,1192,1080</area>
-            <filename>images/shared/info_rightpaneltop.png</filename>
+            <filename>images/shared/info/info_rightpaneltop.png</filename>
         </imagetype>
-			
+
         <group name="infopaneldetails">
            <area>878,70,1042,1010</area>   
 	        <imagetype name="infopanellines">
