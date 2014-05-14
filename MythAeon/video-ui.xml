@@ -360,14 +360,13 @@
 	            <showarrow>no</showarrow>
 	            <showscrollbar>yes</showscrollbar>
 		         <scrollbar name="scrollbar" from="basescrollbarvert">
-		             <area>800,0,3%,100%</area>
+		             <area>841,0,100%,80%</area>
 		         </scrollbar>
 	        </buttonlist>
 
            <textarea name="position" from="textarea_label_list">
                <area>30,843,800,30</area>
            </textarea>
-
 <!-- Fix me: This does not work will when a movie has played and one returns to the main screen
 
 	        <animation trigger="AboutToHide">

@@ -550,7 +550,7 @@
         <layout>vertical</layout>
         <shape name="bar">
             <type>roundbox</type>
-            <area>0,2,15,-2</area>
+            <area>0,2,0,-2</area>
             <line color="#535353" alpha="100" width="1" />
             <cornerradius>8</cornerradius>
 			   <fill style="gradient">
@@ -2802,11 +2802,15 @@
        <layout>vertical</layout>
        <spacing>0</spacing>
        <scrollstyle>free</scrollstyle>
-       <arrange>stack</arrange>
+       <arrange>fixed</arrange>
        <align>left</align>
-       <wrapstyle>selection</wrapstyle>
+       <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <buttonarea>0,0,1115,800</buttonarea>
+       <showscrollbar>yes</showscrollbar>
+       <scrollbar name="scrollbar" from="basescrollbarvert">
+           <area>1112,10,100%,100%</area>
+       </scrollbar>
        <statetype name="buttonitem">
            <state name="active">
                <area>0,0,1115,113</area>
@@ -2875,9 +2879,9 @@
        <layout>vertical</layout>
        <spacing>0</spacing>
        <scrollstyle>free</scrollstyle>
-       <arrange>stack</arrange>
+       <arrange>fixed</arrange>
        <align>left</align>
-       <wrapstyle>selection</wrapstyle>
+       <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <buttonarea>0,0,850,800</buttonarea>
        <statetype name="buttonitem">
