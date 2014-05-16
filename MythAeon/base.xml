@@ -49,7 +49,10 @@
 <!-- -->
         <weight>bold</weight> 
 <!-- -->
-        <color>#000000</color>
+		  <shadowcolor>#000000</shadowcolor>
+		  <shadowoffset>3,3</shadowoffset>
+		  <shadowalpha>255</shadowalpha>
+        <color>#FFFFFF</color>
     </fontdef>
 
     <fontdef name="Font_Title_Info" face="Aeon_Settings">
@@ -60,7 +63,7 @@
     <fontdef name="Font_Title_Sub" from="Font_Title">
         <pixelsize>35</pixelsize>
         <weight>bold</weight> 
-        <color>#000000</color>
+        <color>#FFFFFF</color>
     </fontdef>
 
     <fontdef name="Font_Info" face="Scout">
@@ -218,7 +221,7 @@
     </fontdef>
     
     <fontdef name="Font_Button_Settings_Focus" from="Font_Button_Settings">
-        <color>#000000</color>
+        <color>#FFFFFF</color>
     </fontdef>
     
     <fontdef name="Font_Button_Settings_Focus_Small" from="Font_Button_Settings_Focus">
@@ -7749,7 +7752,7 @@
 		
     <!-- Aeon definitions of groups used on many screens -->
      <group name="basegroupinfodetails">
-        <area>0,0,573,50</area>
+        <area>0,0,568,50</area>
         
         <group name="seasonicon" from="defaultinfoiconseason">
             <area>0,0,200,50</area>
@@ -7760,7 +7763,7 @@
         </group>
 
         <group name="ratingicon" from="defaultinfoiconrating">
-            <area>373,0,200,50</area>
+            <area>368,0,200,50</area>
         </group>
 
      </group>
