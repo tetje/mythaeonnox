@@ -268,12 +268,12 @@
     <window name="notification-full">
         <area>0,0,1920,1080</area>
 
-       <imagetype name="fanart">
+       <imagetype name="image" depends="!errorstate">
            <area>0,0,1920,1080</area>
-           <filename>images/backgrounds/notifications/</filename>
+           <filename>images/icons/notifications/dialog-information.png</filename>
        </imagetype>
 
-       <group name="icon_group">
+       <group name="icon_group" depends="errorstate">
 	       <area>1478,50,392,392</area>
 	       <imagetype name="mm_blackhole_border">
 	            <area>0,0,391,391</area>
@@ -335,14 +335,7 @@
 	                </imagetype>
 	            </state>
 	        </statetype>
-	
-	        <imagetype name="image" depends="!mediastate&amp;!errorstate">
-	            <area>25,25,342,342</area>
-	            <filename>images/icons/notifications/dialog-information.png</filename>
-	            <mask>images/shared/nowplaying_mask.png</mask>
-	            <preserveaspect>no</preserveaspect>
-	        </imagetype>
-	        	        
+
 		     <progressbar name="progress">
 		        <area>21,363,352,10</area>
 		        <layout>horizontal</layout>
@@ -365,7 +358,7 @@
 	
 	    </group>
 
-       <imagetype name="rss_bgd">
+       <imagetype name="rss_bgd" depends="description">
           <filename>images/shared/rssbar_mid.png</filename>
           <area>21,634,1899,87></area>
           <preserveaspect>no</preserveaspect>
@@ -476,81 +469,6 @@
           <preserveaspect>no</preserveaspect>
        </imagetype>  
 
-<!--
-
-        <statetype name="mediastate">
-            <area>0,0,100%,100%</area>
-            <state name="ok"/>
-            <state name="noartwork">
-                <area>0,0,100%,100%</area>
-                <imagetype name="imageartwork">
-                    <filename>noartwork512.png</filename>
-                    <area>0,0,100%,100%</area>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <statetype name="errorstate">
-            <area>0,0,100%,100%</area>
-            <state name="ok"/>
-            <state name="error">
-                <area>0,0,100%,100%</area>
-                <imagetype name="imageerror">
-                    <filename>error.png</filename>
-                    <area>704,189,512,512</area>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>
-            </state>
-            <state name="check">
-                <area>0,0,100%,100%</area>
-                <imagetype name="imagecheck">
-                    <filename>check.png</filename>
-                    <area>704,189,512,512</area>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>
-            </state>
-            <state name="warning">
-                <area>0,0,100%,100%</area>
-                <imagetype name="imagewarning">
-                    <filename>warning.png</filename>
-                    <area>704,189,512,512</area>
-                    <preserveaspect>true</preserveaspect>
-                </imagetype>
-            </state>
-            <state name="busy">
-                <area>0,0,100%,100%</area>
-                <imagetype name="animation">
-                    <area>704,189,512,512</area>
-                    <filepattern low="0" high="24">busyimages/%1.png</filepattern>
-                    <delay>250</delay>
-                </imagetype>
-            </state>
-        </statetype>
-
-        <imagetype name="image" depends="!mediastate&amp;!errorstate">
-            <filename>damaged.png</filename>
-            <area>0,0,100%,100%</area>
-            <preserveaspect>true</preserveaspect>
-        </imagetype>
-
-
-        <textarea name="extra" from="basetextarea" depends="progress">
-            <area>170,100%-135,300,30</area>
-            <font>basemedium</font>
-        </textarea>
-
-        <textarea name="progress_text" from="basetextarea" depends="progress">
-            <area>370,100%-135,-10,30</area>
-            <font>basemedium</font>
-            <align>right</align>
-        </textarea>
-
-        <progressbar name="progress" from="baseprogressbar">
-            <area>170,100%-100,10,10</area>
-        </progressbar>
-
--->
     </window>
 
 </mythuitheme>
