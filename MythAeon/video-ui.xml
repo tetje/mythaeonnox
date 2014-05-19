@@ -740,7 +740,11 @@
 -->
 	        <buttonlist name="videos" from="buttonlist_wall_small">
 	            <position>8,-25</position>
-<!--	            <position>11,-25</position> -->
+	            <showarrow>no</showarrow>
+	            <showscrollbar>yes</showscrollbar>
+		         <scrollbar name="scrollbar" from="basescrollbarvertback">
+		             <area>1770,30,100%,95%</area>
+		         </scrollbar>
 	        </buttonlist>
 
 	     </group>   

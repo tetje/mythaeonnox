@@ -581,6 +581,40 @@
         </shape>
     </scrollbar>
 
+    <scrollbar name="basescrollbarvertback">
+        <area>0,20,3%,100%-20</area>
+        <hidedelay>2000</hidedelay>
+        <layout>vertical</layout>
+        <shape name="bar">
+            <type>roundbox</type>
+            <area>0,2,15,-2</area>
+            <line color="#535353" alpha="100" width="1" />
+            <cornerradius>8</cornerradius>
+			   <fill style="gradient">
+				   <gradient direction="horizontal">
+					   <stop position="0" color="#535353" alpha="225" />
+					   <stop position="100" color="#000000" alpha="120" />
+				   </gradient>
+			   </fill>
+        </shape>
+        <shape name="slider">
+            <area>0,0,15,1</area>
+            <type>roundbox</type>
+	         <line color="#535353" alpha="100" width="1" />
+            <cornerradius>8</cornerradius>
+			   <fill style="gradient">
+				   <gradient direction="horizontal">
+					   <stop position="0" color="#FFFFFF" alpha="225" />
+					   <stop position="60" color="#A1A1A1" alpha="225" />
+<!--
+					 <stop position="0" color="#A1A1A1" alpha="225" />
+					 <stop position="60" color="#FFFFFF" alpha="225" />
+-->
+	  			   </gradient>
+			   </fill>
+        </shape>
+    </scrollbar>
+
     <scrollbar name="basescrollbarhorz">
         <area>0,0,100%-40,8%</area>
         <hidedelay>2000</hidedelay>
