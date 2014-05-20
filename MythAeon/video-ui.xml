@@ -292,7 +292,7 @@
 	        </textarea>
 
 	        <textarea name="description" from="textarea_plot">
-	            <area>145,285,435,500</area>
+	            <area>145,280,435,500</area>
 	            <template>%"|SUBTITLE|"\n\n%%DESCRIPTION%</template>
 	        </textarea>	
 	        

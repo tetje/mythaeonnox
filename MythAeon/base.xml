@@ -3335,7 +3335,7 @@
                <textarea name="channel" from="textarea_label_list">
                    <area>50,55,850,30</area>
                    <cutdown>yes</cutdown>
-                   <template>%timedate% (%lenmins%) - %channel%</template>
+                   <template>%timedate% (%channel%)</template>
                </textarea>
                <textarea name="finalpriority" from="textarea_label_list">
                    <area>900,61,144,30</area>
@@ -3362,7 +3362,7 @@
                <textarea name="channel" from="textarea_label_list">
                    <area>50,55,850,30</area>
                    <scroll direction="left" />
-                   <template>%timedate% (%lenmins%) - %channel%</template>
+                   <template>%timedate% (%channel%)</template>
                    <font>Font_Label_List_Selected</font>
                </textarea>
                <textarea name="finalpriority" from="textarea_label_list">
@@ -7654,27 +7654,43 @@
 	
 	  <group name="defaultinfoiconrectype">
 		  <area>0,0,128,50</area>
-        <imagetype name="iconbgd">
-            <area>-13,-5,154,60</area>
+        <imagetype name="iconbgd" depends="rectypechar">
+            <area>-6,-5,76,60</area>
             <alpha>255</alpha>
             <filename>images/shared/musicinfoshadow.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
-		  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
-		  <textarea name="icontextlbl" from="textarea_icon">
+
+		  <shape name="iconbgdshade2" depends="rectypechar">
+		      <area>-1,-2,127,53</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#000000" alpha="255" width="2" />
+		  </shape>
+
+		  <shape name="iconbgdshade1" depends="rectypechar">
+		      <area>63,1,65,50</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#600000" alpha="255" width="3" />
+		      <fill color="#FFFFFF" alpha="64" />
+		  </shape>
+
+		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="rectypechar"/>
+		  <textarea name="icontextlbl" from="textarea_icon" depends="rectypechar">
 		      <area>2,2,60,38</area>
 		      <value>R</value>
 		  </textarea>
-		  <textarea name="icontextlbl2" from="textarea_icon">
+		  <textarea name="icontextlbl2" from="textarea_icon" depends="rectypechar">
 		      <area>2,33,60,15</area>
 		      <font>Font_Icon_Base_Small</font>
 		      <value>Status</value>
 		  </textarea>
 		  <textarea name="rectypechar" from="textarea_icon">
 		      <area>65,2,63,50</area>
-		      <font>Font_Icon_Base_Black</font>
+		      <font>Font_Icon_Base_White_24_Bold</font>
 		  </textarea>           
-        <imagetype name="iconglass">
+        <imagetype name="iconglass" depends="rectypechar">
             <area>0,0,63,50</area>
             <alpha>255</alpha>
             <filename>images/shared/list_musicicon_glass.png</filename>
@@ -7685,11 +7701,27 @@
 	  <group name="defaultinfoiconrecpriority">
 		  <area>0,0,128,50</area>
         <imagetype name="iconbgd" depends="recpriority">
-            <area>-13,-5,154,60</area>
+            <area>-6,-5,76,60</area>
             <alpha>255</alpha>
             <filename>images/shared/musicinfoshadow.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
+
+		  <shape name="iconbgdshade2" depends="recpriority">
+		      <area>-1,-2,127,53</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#000000" alpha="255" width="2" />
+		  </shape>
+
+		  <shape name="iconbgdshade1" depends="recpriority">
+		      <area>63,1,65,50</area>
+		      <type>roundbox</type>
+		      <cornerradius>2</cornerradius>
+		      <line color="#600000" alpha="255" width="3" />
+		      <fill color="#FFFFFF" alpha="64" />
+		  </shape>
+
 		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="recpriority"/>
 		  <textarea name="icontextlbl" from="textarea_icon" depends="recpriority">
 		      <area>2,2,60,38</area>
@@ -7702,7 +7734,7 @@
 		  </textarea>
 		  <textarea name="recpriority" from="textarea_icon">
 		      <area>65,2,63,50</area>
-		      <font>Font_Icon_Base_Black</font>
+		      <font>Font_Icon_Base_White_24_Bold</font>
 		  </textarea>           
         <imagetype name="iconglass" depends="recpriority">
             <area>0,0,63,50</area>
@@ -7872,71 +7904,67 @@
      </group>
 
      <group name="basegroupschedulelistinfo">
-        <area>0,30,545,930</area>
+        <area>0,0,545,930</area>
 
-        <animation trigger="AboutToShow">
-            <section duration="1200" centre="middle">
-                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
-            </section>
-        </animation>
-
-        <imagetype name="TVShowsframe" depends="!description">
-            <area>-2,245,548,549</area>
-            <filename>images/shared/list_musicicon_frame.png</filename>
-            <preserveaspect>no</preserveaspect>
+        <imagetype name="infopanel">
+            <area>0,0,650,1080</area>
+            <filename>images/shared/views/tripanel/info_panel.png</filename>
         </imagetype>
      
-        <imagetype name="TVShowsRecentlyPlayed" depends="!description">
-            <area>13,260,518,519</area>
-            <mask>images/shared/list_musicicon_mask.png</mask>
-            <filename>images/shared/DefaultTVShowsRecentlyPlayed.png</filename>
-            <preserveaspect>no</preserveaspect>
+        <imagetype name="infopanelglow" from="infopanel">
+            <filename>images/shared/views/tripanel/info_panel_glow.png</filename>
+            <alpha>64</alpha>
         </imagetype>
-	
-        <imagetype name="descriptionbgd" depends="description">
-            <area>10,256,530,560</area>
-            <filename>images/shared/listpanel_back_noreflect.png</filename>
-            <preserveaspect>no</preserveaspect>
-        </imagetype>
-<!--	
-	     <shape name="descriptionbox" depends="description">
-	         <area>13,260,518,519</area>
-	         <type>roundbox</type>
-	         <cornerradius>15</cornerradius>
-	         <fill color="#323232" alpha="210" />
-	     </shape>
--->
-        <textarea name="titlesubtitle" from="textarea_settings_button">
-            <area>40,275,475,32</area>
-            <multiline>no</multiline>
-            <cutdown>no</cutdown>
-            <scroll direction="horizontal"/>
-            <template>%TITLESUBTITLE% - %shorttimedate%</template>
+
+        <textarea name="channellbl" from="textarea_label">
+            <area>105,110,340,30</area>
+            <value>Channel:</value>
         </textarea>
-       
+     
+        <textarea name="runtimelbl" from="textarea_label">
+            <area>105,150,340,30</area>
+            <value>Runtime:</value>
+        </textarea>
+
+        <textarea name="datelbl" from="runtimelbl">
+            <position>105,190</position>
+            <value>Genre:</value>
+        </textarea>
+
+        <textarea name="titlelbl" from="runtimelbl">
+            <position>105,230</position>
+            <value>Title:</value>
+        </textarea>
+        
+        <textarea name="channel" from="textarea_info">
+            <area>215,110,365,30</area>
+            <cutdown>yes</cutdown>
+            <template>%channel%</template>
+        </textarea>
+
+        <textarea name="lenmins" from="textarea_info">
+            <area>215,150,365,30</area>
+            <cutdown>yes</cutdown>
+            <template>%lenmins%</template>
+        </textarea>
+
+        <textarea name="category" from="textarea_info">
+            <area>190,190,390,30</area>
+            <cutdown>yes</cutdown>
+        </textarea>
+
+        <textarea name="title" from="textarea_info">
+            <area>180,230,400,30</area>
+            <cutdown>yes</cutdown>
+        </textarea>
+
         <textarea name="description" from="textarea_plot">
-            <area>40,320,475,440</area>
+            <area>105,290,465,600</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
-            <template>%DESCRIPTION%</template>
+            <template>%"|SUBTITLE|"\n\n%%DESCRIPTION%</template>
         </textarea>
  
- <!--      
-        <textarea name="nodescription" from="description" depends="!description">
-            <value>No description available.</value>
-        </textarea>
- -->
-       
-        <imagetype name="TVShowsglass" depends="!description">
-            <area>13,260,518,519</area>
-            <filename>images/shared/list_musicicon_glass.png</filename>
-            <preserveaspect>no</preserveaspect>
-        </imagetype>
-
-        <group name="listscheduledetails" from="basegroupscheduledetails">
-           <position>73,810</position>
-		  </group>
-
 <!-- Fix me: This does not work when an other windows has been selected and one returns to the main screen
 
         <animation trigger="AboutToHide">
