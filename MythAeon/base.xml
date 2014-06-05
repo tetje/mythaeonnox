@@ -397,154 +397,6 @@
       </imagetype>  
    </group>
 
-    <!-- Aeon definition of a starrating -->
-    <statetype name="rating_base">
-        <area>0,0,90,18</area>
-        <showempty>yes</showempty>
-        <state name="0"/>
-        <state name="1">
-            <imagetype name="1">
-                <area>0,0,18,18</area>
-                <filename>images/icons/ratings/0.5_star.png</filename>
-            </imagetype>
-        </state>
-        <state name="2">
-            <imagetype name="2">
-                <area>0,0,18,18</area>
-                <filename>images/icons/ratings/1.0_star.png</filename>
-            </imagetype>
-        </state>
-        <state name="3">
-            <imagetype name="3">
-                <area>0,0,36,18</area>
-                <filename>images/icons/ratings/1.5_stars.png</filename>
-            </imagetype>
-        </state>
-        <state name="4">
-            <imagetype name="4">
-                <area>0,0,36,18</area>
-                <filename>images/icons/ratings/2.0_stars.png</filename>
-            </imagetype>
-        </state>
-        <state name="5">
-            <imagetype name="5">
-                <area>0,0,54,18</area>
-                <filename>images/icons/ratings/2.5_stars.png</filename>
-            </imagetype>
-        </state>
-        <state name="6">
-            <imagetype name="6">
-                <area>0,0,54,18</area>
-                <filename>images/icons/ratings/3.0_stars.png</filename>
-            </imagetype>
-        </state>
-        <state name="7">
-            <imagetype name="7">
-                <area>0,0,72,18</area>
-                <filename>images/icons/ratings/3.5_stars.png</filename>
-            </imagetype>
-        </state>
-        <state name="8">
-            <imagetype name="8">
-                <area>0,0,72,18</area>
-                <filename>images/icons/ratings/4.0_stars.png</filename>
-            </imagetype>
-        </state>
-        <state name="9">
-            <imagetype name="9">
-                <area>0,0,90,18</area>
-                <filename>images/icons/ratings/4.5_stars.png</filename>
-            </imagetype>
-        </state>
-        <state name="10">
-            <imagetype name="10">
-                <area>0,0,90,18</area>
-                <filename>images/icons/ratings/5.0_stars.png</filename>
-            </imagetype>
-        </state>
-    </statetype>
-
-    <statetype name="rating_base_big">
-        <area>0,0,302,64</area>
-        <showempty>yes</showempty>
-        <state name="0">
-            <imagetype name="rating0">
-                <area>0,0,302,64</area>
-                <filename>images/icons/ratings/rating0.png</filename>
-            </imagetype>
-        </state>
-        <state name="1">
-            <imagetype name="rating1">
-                <area>0,0,302,64</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/rating1.png</filename>
-            </imagetype>
-        </state>
-        <state name="2">
-            <imagetype name="rating2">
-                <area>0,0,302,64</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/rating1.png</filename>
-            </imagetype>
-        </state>
-        <state name="3">
-            <imagetype name="rating3">
-                <area>0,0,302,64</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/rating2.png</filename>
-            </imagetype>
-        </state>
-        <state name="4">
-            <imagetype name="rating4">
-                <area>0,0,302,64</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/rating2.png</filename>
-            </imagetype>
-        </state>
-        <state name="5">
-            <imagetype name="rating3">
-                <area>0,0,302,64</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/rating3.png</filename>
-            </imagetype>
-        </state>
-        <state name="6">
-            <imagetype name="rating3">
-                <area>0,0,302,64</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/rating3.png</filename>
-            </imagetype>
-        </state>
-        <state name="7">
-            <imagetype name="rating4">
-                <area>0,0,302,64</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/rating4.png</filename>
-            </imagetype>
-        </state>
-        <state name="8">
-            <imagetype name="rating4">
-                <area>0,0,302,64</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/rating4.png</filename>
-            </imagetype>
-        </state>
-        <state name="9">
-            <imagetype name="rating5">
-                <area>0,0,302,64</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/rating5.png</filename>
-            </imagetype>
-        </state>
-        <state name="10">
-            <imagetype name="rating5">
-                <area>0,0,302,64</area>
-                <alpha>225</alpha>
-                <filename>images/icons/ratings/rating5.png</filename>
-            </imagetype>
-        </state>
-    </statetype>
-
 
    <!-- Base MythAeon scrollbar definitions -->
     <scrollbar name="basescrollbarvert">
@@ -791,6 +643,258 @@
        <font>Font_Mini_Player_Small</font>
    </textarea>
    
+    <!-- Aeon definition of a starrating -->
+    <statetype name="rating_base">
+        <area>0,0,90,18</area>
+        <showempty>yes</showempty>
+        <state name="0"/>
+        <state name="1">
+            <imagetype name="1">
+                <area>0,0,18,18</area>
+                <filename>images/icons/ratings/0.5_star.png</filename>
+            </imagetype>
+        </state>
+        <state name="2">
+            <imagetype name="2">
+                <area>0,0,18,18</area>
+                <filename>images/icons/ratings/1.0_star.png</filename>
+            </imagetype>
+        </state>
+        <state name="3">
+            <imagetype name="3">
+                <area>0,0,36,18</area>
+                <filename>images/icons/ratings/1.5_stars.png</filename>
+            </imagetype>
+        </state>
+        <state name="4">
+            <imagetype name="4">
+                <area>0,0,36,18</area>
+                <filename>images/icons/ratings/2.0_stars.png</filename>
+            </imagetype>
+        </state>
+        <state name="5">
+            <imagetype name="5">
+                <area>0,0,54,18</area>
+                <filename>images/icons/ratings/2.5_stars.png</filename>
+            </imagetype>
+        </state>
+        <state name="6">
+            <imagetype name="6">
+                <area>0,0,54,18</area>
+                <filename>images/icons/ratings/3.0_stars.png</filename>
+            </imagetype>
+        </state>
+        <state name="7">
+            <imagetype name="7">
+                <area>0,0,72,18</area>
+                <filename>images/icons/ratings/3.5_stars.png</filename>
+            </imagetype>
+        </state>
+        <state name="8">
+            <imagetype name="8">
+                <area>0,0,72,18</area>
+                <filename>images/icons/ratings/4.0_stars.png</filename>
+            </imagetype>
+        </state>
+        <state name="9">
+            <imagetype name="9">
+                <area>0,0,90,18</area>
+                <filename>images/icons/ratings/4.5_stars.png</filename>
+            </imagetype>
+        </state>
+        <state name="10">
+            <imagetype name="10">
+                <area>0,0,90,18</area>
+                <filename>images/icons/ratings/5.0_stars.png</filename>
+            </imagetype>
+        </state>
+    </statetype>
+
+    <statetype name="rating_text">
+        <area>0,0,50,50</area>
+        <showempty>yes</showempty>
+        <state name="0">
+            <textarea name="0txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>0.0</value>
+            </textarea>
+        </state>
+        <state name="1">
+            <textarea name="1txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>0.5</value>
+            </textarea>
+        </state>
+        <state name="2">
+            <textarea name="2txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>1.0</value>
+            </textarea>
+        </state>
+        <state name="3">
+            <textarea name="3txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>1.5</value>
+            </textarea>
+        </state>
+        <state name="4">
+            <textarea name="4txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>2.0</value>
+            </textarea>
+        </state>
+        <state name="5">
+            <textarea name="5txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>2.5</value>
+            </textarea>
+        </state>
+        <state name="6">
+            <textarea name="6txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>3.0</value>
+            </textarea>
+        </state>
+        <state name="7">
+            <textarea name="7txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>3.5</value>
+            </textarea>
+        </state>
+        <state name="8">
+            <textarea name="8txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>4.0</value>
+            </textarea>
+        </state>
+        <state name="9">
+            <textarea name="9txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>4.5</value>
+            </textarea>
+        </state>
+        <state name="10">
+            <textarea name="10txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Active</font>
+                <value>5.0</value>
+            </textarea>
+        </state>
+    </statetype>
+
+    <statetype name="rating_base_big">
+        <area>0,0,302,64</area>
+        <showempty>yes</showempty>
+        <state name="0">
+            <imagetype name="rating0">
+                <area>0,0,302,64</area>
+                <filename>images/icons/ratings/rating0.png</filename>
+            </imagetype>
+        </state>
+        <state name="1">
+            <imagetype name="rating1">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating1.png</filename>
+            </imagetype>
+        </state>
+        <state name="2">
+            <imagetype name="rating2">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating1.png</filename>
+            </imagetype>
+        </state>
+        <state name="3">
+            <imagetype name="rating3">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating2.png</filename>
+            </imagetype>
+        </state>
+        <state name="4">
+            <imagetype name="rating4">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating2.png</filename>
+            </imagetype>
+        </state>
+        <state name="5">
+            <imagetype name="rating3">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating3.png</filename>
+            </imagetype>
+        </state>
+        <state name="6">
+            <imagetype name="rating3">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating3.png</filename>
+            </imagetype>
+        </state>
+        <state name="7">
+            <imagetype name="rating4">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating4.png</filename>
+            </imagetype>
+        </state>
+        <state name="8">
+            <imagetype name="rating4">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating4.png</filename>
+            </imagetype>
+        </state>
+        <state name="9">
+            <imagetype name="rating5">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating5.png</filename>
+            </imagetype>
+        </state>
+        <state name="10">
+            <imagetype name="rating5">
+                <area>0,0,302,64</area>
+                <alpha>225</alpha>
+                <filename>images/icons/ratings/rating5.png</filename>
+            </imagetype>
+        </state>
+    </statetype>
+
     <!-- Aeon definition of a parental level -->
     <statetype name="videolevel_base">
         <area>0,0,62,50</area>
@@ -1474,13 +1578,13 @@
 	        <position>1820,70</position>
 	        <state type="off">
 	            <imagetype name="dnon">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/multiplex_arrow.png</filename>
 	                <alpha>90</alpha>
 	            </imagetype>
 	        </state>
 	        <state type="full">
 	            <imagetype name="dnoff">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/multiplex_arrow.png</filename>
 	            </imagetype>
 	        </state>
 	    </statetype>
@@ -3009,6 +3113,55 @@
 	                    </imagetype>
 	                </state>
 	           </statetype>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_threepanel_music">
+       <area>0,0,850,800</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>fixed</arrange>
+       <align>left</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,850,800</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,850,50</area>
+               <imagetype name="Listpanelline">
+                   <area>0,0,850,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="title" from="textarea_list">
+                   <area>40,0,720,50</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+                   <template>%title% - %artist%</template>
+               </textarea>
+		         <statetype name="ratingstate" from="rating_text">
+		             <position>760,0</position>
+		             <alpha>192</alpha>
+		         </statetype>		
+           </state>
+           <state name="selectedactive">
+               <area>0,0,850,50</area>
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,850,50</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <textarea name="title" from="textarea_list">
+                   <area>40,0,720,50</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+                   <template>%title% - %artist%</template>
+               </textarea>
+		         <statetype name="ratingstate" from="rating_text">
+		             <position>760,0</position>
+		         </statetype>
            </state>
            <state name="inactive" from="active"/>
            <state name="selectedinactive" from="selectedactive"/>
@@ -8164,6 +8317,38 @@
             <position>600,0</position>
             <value>Play</value>
         </button>
+     </group>
+
+     <group name="basegroupcontrolbuttons2">
+        <area>0,0,300,200</area>
+        <button name="rew" from="button_rew">
+            <position>0,0</position>
+        </button>
+ 
+        <button name="play" from="button_play">
+            <position>100,0</position>
+        </button>
+ 
+        <button name="stop" from="button_stop">
+            <position>200,0</position>
+        </button>
+ 
+        <button name="ff" from="button_ff">
+            <position>300,0</position>
+        </button>
+ 
+        <button name="prev" from="button_skipbwd">
+            <position>50,100</position>
+        </button>
+ 
+        <button name="pause" from="button_pause">
+            <position>150,100</position>
+        </button>
+ 
+        <button name="next" from="button_skipfwd">
+            <position>250,100</position>
+        </button>
+
      </group>
 
      <group name="basegroupplaycontrol">
