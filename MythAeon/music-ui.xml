@@ -290,7 +290,6 @@
 	
 	     </group>
 
-
         <group name="listpanel1">
            <area>54,107,860,1003</area>
            
@@ -327,10 +326,11 @@
 		             <area>841,0,100%,80%</area>
 		         </scrollbar>
 	        </buttonlist>
-
+<!--
            <textarea name="playlistposition" from="textarea_label_list">
                <area>30,843,800,30</area>
            </textarea>
+-->
 <!-- Fix me: This does not work will when a movie has played and one returns to the main screen
 
 	        <animation trigger="AboutToHide">
@@ -341,80 +341,6 @@
 -->
         </group>
 
-<!--        
-        <imagetype name="showcaseimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/views/showcase_floor.png</filename>
-        </imagetype>
-
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>255</alpha>
-            <filename>images/shared/views/showcase_spot.png</filename>
-        </imagetype>
-        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
-
-        <group name="playcontrolinfo" from="basegroupplaycontrolinfo">
-             <area>1270,0,120,40</area>
-        </group> 
-
-        <group name="multiplextabletgroup">
-           <area>113,70,1694,846</area>
-
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
-
-	        <imagetype name="multiplextabletglowimg">
-	            <area>0,0,1695,1015</area>
-	            <alpha>64</alpha>
-	            <filename>images/shared/wall/wall_bg_glow.png</filename>
-	        </imagetype>
-
-	        <imagetype name="multiplextabletimg">
-	            <area>0,0,1695,1015</area>
-	            <filename>images/shared/wall/wall_bg.png</filename>
-	        </imagetype>
-	
-	        <imagetype name="multiplextabletlayoutimg">
-	            <area>0,-2,1695,846</area>
-	            <filename>images/shared/views/poster_layout.png</filename>
-	        </imagetype>
-	
-           <group name="trackinfo" from="basegrouptrackinfo">
-              <area>38,85,450,515</area>
-	        </group>
-		
-           <group name="playcontrol" from="basegroupplaycontrol">
-              <area>484,85,736,515</area>
-           </group>
-
-           <group name="playinfo" from="basegroupplayinfo">
-              <area>1222,58,455,540</area>
-           </group>
-
-        </group>
-
-        <group name="multiplextabletlistgroup">
-           <area>0,687,1920,400</area>
-
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="1920,687" end="0,687" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
-
-	        <buttonlist name="currentplaylist" from="buttonlist_multiplexmusic">
-	             <position>0,7</position>
-	        </buttonlist>
-	        
-        </group>             
--->
     </window>
 
     <!-- The playlist editor in tree view mode -->

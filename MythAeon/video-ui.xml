@@ -296,6 +296,20 @@
 	            <template>%"|SUBTITLE|"\n\n%%DESCRIPTION%</template>
 	        </textarea>	
 	        
+	        <textarea name="castlbl" from="runtimelbl" depends="cast">
+	            <position>145,780</position>
+	            <value>Starring:</value>
+	        </textarea>
+	        
+	        <textarea name="cast" from="textarea_plot">
+	            <area>145,810,435,30</area>
+	            <align>left,bottom</align>
+	            <cutdown>no</cutdown>
+	            <multiline>no</multiline>
+	            <scroll direction="left"/>
+	            <template>%cast%</template>
+	        </textarea>	
+	        
         </group>	    
 
         <group name="listpanel2" depends="coverart">

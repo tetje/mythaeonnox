@@ -3032,19 +3032,19 @@
                    <area>0,0,850,50</area>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
-               <textarea name="year" from="textarea_list">
+               <textarea name="##x##" from="textarea_list">
                    <area>40,0,80,50</area>
                    <cutdown>yes</cutdown>
                    <font>Font_List_Active</font>
                    <align>justify,vcenter</align>
-                   <template>%year%</template>
                    <alpha>192</alpha>
                </textarea>
+               <textarea name="year" from="##x##" depends="!##x##"/>
                <textarea name="title" from="textarea_list">
                    <area>130,0,620,50</area>
                    <cutdown>yes</cutdown>
                    <font>Font_List_Active</font>
-                   <template>%title%</template>
+                   <template>%title%% - |subtitle%</template>
                </textarea>
                <textarea name="userrating" from="textarea_list">
                    <area>40,0,755,50</area>
@@ -3076,19 +3076,19 @@
                    <area>0,0,850,50</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
-               <textarea name="year" from="textarea_list">
+               <textarea name="##x##" from="textarea_list">
                    <area>40,0,80,50</area>
                    <cutdown>yes</cutdown>
                    <font>Font_List_Active</font>
                    <align>justify,vcenter</align>
-                   <template>%year%</template>
                    <alpha>255</alpha>
                </textarea>
+               <textarea name="year" from="##x##" depends="!##x##"/>
                <textarea name="title" from="textarea_list">
                    <area>130,0,620,50</area>
                    <cutdown>yes</cutdown>
                    <font>Font_List_Active</font>
-                   <template>%title%</template>
+                   <template>%title%% - |subtitle%</template>
                </textarea>
                <textarea name="userrating" from="textarea_list">
                    <area>40,0,755,50</area>
@@ -7703,7 +7703,7 @@
 		      <value>Rating</value>
 		  </textarea>           
 		  <textarea name="rating" from="textarea_icon">
-		      <area>60,24,134,24</area>
+		      <area>67,24,126,24</area>
 		      <font>Font_Icon_Base_White_24_Bold</font>
 		  </textarea>           
         <imagetype name="iconglass" depends="rating">
