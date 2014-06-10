@@ -205,35 +205,7 @@
     <!-- Main Windows -->
     <window name="manager">
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/movies/</filename>
-        </imagetype>
-        
-        <imagetype name="showcaseimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/views/showcase_floor.png</filename>
-        </imagetype>
-<!--  -->      
-        <imagetype name="listfilterimg" from="fanart">
-            <filename>images/shared/views/list_filter.png</filename>
-        </imagetype>
-        
-        <imagetype name="showcaseglowimg">
-            <area>0,266,1920,608</area>
-            <filename>images/shared/views/showcase_glow.png</filename>
-        </imagetype>
-<!--  -->      
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>255</alpha>
-            <filename>images/shared/views/list_spot.png</filename>
-        </imagetype>
-                
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
-
+        <group name="backdrop" from="basefanartbackdrop"/>
 
         <group name="listpanel3" depends="description&amp;coverart">
            <area>1260,70,650,1080</area>
@@ -406,31 +378,7 @@
 
     <window name="browser">
 
-        <imagetype name="fanartbgd">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/movies/</filename>
-        </imagetype>
-        
-        <imagetype name="showcaseimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/views/showcase_floor.png</filename>
-        </imagetype>
-<!--        
-        <imagetype name="showcaseglowimg">
-            <area>0,266,1920,608</area>
-            <filename>images/shared/views/showcase_glow.png</filename>
-        </imagetype>
- -->       
-
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>255</alpha>
-            <filename>images/shared/views/showcase_spot.png</filename>
-        </imagetype>
-                
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
+        <group name="backdrop" from="basebackdrop"/>
 
         <group name="positioninfo">
             <area>1260,5,120,40</area>
@@ -640,31 +588,8 @@
 
     <window name="gallery">
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/movies/</filename>
-        </imagetype>
-        
-        <imagetype name="showcaseimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/views/showcase_floor.png</filename>
-        </imagetype>
-<!--  -->      
-        <imagetype name="showcaseglowimg">
-            <area>0,266,1920,608</area>
-            <filename>images/shared/views/showcase_glow.png</filename>
-        </imagetype>
-<!--  -->      
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>255</alpha>
-            <filename>images/shared/views/showcase_spot.png</filename>
-        </imagetype>
-                
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
-        
+        <group name="backdrop" from="basefanartbackdrop"/>
+
         <group name="positioninfo">
             <area>1260,5,120,40</area>
             <textarea name="positionlbl" from="textarea_info_small">
@@ -767,34 +692,7 @@
 
     <window name="tree">
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/movies/</filename>
-        </imagetype>
-        
-        <imagetype name="showcaseimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/views/showcase_floor.png</filename>
-        </imagetype>
-<!--  -->      
-        <imagetype name="listfilterimg" from="fanart">
-            <filename>images/shared/views/list_filter.png</filename>
-        </imagetype>
-        
-        <imagetype name="showcaseglowimg">
-            <area>0,266,1920,608</area>
-            <filename>images/shared/views/showcase_glow.png</filename>
-        </imagetype>
-<!--  -->      
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>255</alpha>
-            <filename>images/shared/views/list_spot.png</filename>
-        </imagetype>
-                
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
+        <group name="backdrop" from="basefanartbackdrop"/>
 
         <group name="listpanel">
            <area>88,110,1139,970</area>

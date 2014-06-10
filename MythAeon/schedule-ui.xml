@@ -217,15 +217,22 @@
             <filename>images/backgrounds/tvguide/</filename>
         </imagetype>        
 
-        <imagetype name="showcasefloorimg">
+        <imagetype name="showcaseimg">
             <area>0,472,1920,608</area>
-            <filename>images/shared/showcase_floor.png</filename>
-        </imagetype>        
-
-        <imagetype name="showcaseimg" from="backdropimg">
-            <filename>images/shared/showcase_stage.png</filename>
+            <filename>images/shared/views/showcase_floor.png</filename>
         </imagetype>
-
+<!-- -->       
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+<!-- -->       
+        <imagetype name="spotlightimg">
+            <area>0,875,1920,205</area>
+            <alpha>255</alpha>
+            <filename>images/shared/views/showcase_spot.png</filename>
+        </imagetype>
+        
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>

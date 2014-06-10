@@ -5,30 +5,7 @@
     <!-- Main Window -->
     <window name="watchrecordings">
 
-        <imagetype name="backdropimg">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvshows/</filename>
-        </imagetype>
-        
-        <imagetype name="showcaseimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/views/showcase_floor.png</filename>
-        </imagetype>
-<!--        
-        <imagetype name="showcaseglowimg">
-            <area>0,266,1920,608</area>
-            <filename>images/shared/views/showcase_glow.png</filename>
-        </imagetype>
- -->       
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>255</alpha>
-            <filename>images/shared/views/showcase_spot.png</filename>
-        </imagetype>
-        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
+        <group name="backdrop" from="basebackdrop"/>
 
         <group name="jobstateinfo">
             <area>1270,5,120,40</area>
@@ -153,11 +130,11 @@
 		            <area>729,58,949,538</area>
 		            <preserveaspect>no</preserveaspect>
 		        </imagetype>
-		        
+
 		        <imagetype name="preview" from="fanart" depends="!fanart">
 		            <filename>images/backgrounds/defaultfanart/</filename>
 		        </imagetype>
-        
+
 	           <statetype name="watched">
 	               <state name="yes">
 	                   <imagetype name="yes">

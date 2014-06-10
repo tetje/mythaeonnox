@@ -76,7 +76,8 @@
     </fontdef>
 
     <fontdef name="Font_Info_Selected" from="Font_Info">
-        <color>#323232</color>
+<!--        <color>#323232</color> -->
+        <color>#000000</color>
     </fontdef>
 
     <fontdef name="Font_Info_Grey_Big" from="Font_Info_Grey">
@@ -155,7 +156,8 @@
 
     <fontdef name="Font_List_Selected" face="Scout">
         <pixelsize>32</pixelsize>
-        <color>#323232</color>
+<!--        <color>#323232</color> -->
+        <color>#000000</color>
     </fontdef>
 
     <fontdef name="Font_List_Edit" face="Scout">
@@ -710,6 +712,72 @@
         </state>
     </statetype>
 
+    <statetype name="rating_base_selected">
+        <area>0,0,90,18</area>
+        <showempty>yes</showempty>
+        <state name="0"/>
+        <state name="1">
+            <imagetype name="1">
+                <area>0,0,18,18</area>
+                <filename>images/icons/ratings/0.5_star_black.png</filename>
+            </imagetype>
+        </state>
+        <state name="2">
+            <imagetype name="2">
+                <area>0,0,18,18</area>
+                <filename>images/icons/ratings/1.0_star_black.png</filename>
+            </imagetype>
+        </state>
+        <state name="3">
+            <imagetype name="3">
+                <area>0,0,36,18</area>
+                <filename>images/icons/ratings/1.5_stars_black.png</filename>
+            </imagetype>
+        </state>
+        <state name="4">
+            <imagetype name="4">
+                <area>0,0,36,18</area>
+                <filename>images/icons/ratings/2.0_stars_black.png</filename>
+            </imagetype>
+        </state>
+        <state name="5">
+            <imagetype name="5">
+                <area>0,0,54,18</area>
+                <filename>images/icons/ratings/2.5_stars_black.png</filename>
+            </imagetype>
+        </state>
+        <state name="6">
+            <imagetype name="6">
+                <area>0,0,54,18</area>
+                <filename>images/icons/ratings/3.0_stars_black.png</filename>
+            </imagetype>
+        </state>
+        <state name="7">
+            <imagetype name="7">
+                <area>0,0,72,18</area>
+                <filename>images/icons/ratings/3.5_stars_black.png</filename>
+            </imagetype>
+        </state>
+        <state name="8">
+            <imagetype name="8">
+                <area>0,0,72,18</area>
+                <filename>images/icons/ratings/4.0_stars_black.png</filename>
+            </imagetype>
+        </state>
+        <state name="9">
+            <imagetype name="9">
+                <area>0,0,90,18</area>
+                <filename>images/icons/ratings/4.5_stars_black.png</filename>
+            </imagetype>
+        </state>
+        <state name="10">
+            <imagetype name="10">
+                <area>0,0,90,18</area>
+                <filename>images/icons/ratings/5.0_stars_black.png</filename>
+            </imagetype>
+        </state>
+    </statetype>
+
     <statetype name="rating_text">
         <area>0,0,50,50</area>
         <showempty>yes</showempty>
@@ -809,6 +877,110 @@
                 <cutdown>yes</cutdown>
                 <align>right,vcenter</align>
                 <font>Font_List_Active</font>
+                <value>5.0</value>
+            </textarea>
+        </state>
+    </statetype>
+
+    <statetype name="rating_text_selected">
+        <area>0,0,50,50</area>
+        <showempty>yes</showempty>
+        <state name="0">
+            <textarea name="0txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
+                <value>0.0</value>
+            </textarea>
+        </state>
+        <state name="1">
+            <textarea name="1txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
+                <value>0.5</value>
+            </textarea>
+        </state>
+        <state name="2">
+            <textarea name="2txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
+                <value>1.0</value>
+            </textarea>
+        </state>
+        <state name="3">
+            <textarea name="3txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
+                <value>1.5</value>
+            </textarea>
+        </state>
+        <state name="4">
+            <textarea name="4txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
+                <value>2.0</value>
+            </textarea>
+        </state>
+        <state name="5">
+            <textarea name="5txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
+                <value>2.5</value>
+            </textarea>
+        </state>
+        <state name="6">
+            <textarea name="6txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
+                <value>3.0</value>
+            </textarea>
+        </state>
+        <state name="7">
+            <textarea name="7txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
+                <value>3.5</value>
+            </textarea>
+        </state>
+        <state name="8">
+            <textarea name="8txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
+                <value>4.0</value>
+            </textarea>
+        </state>
+        <state name="9">
+            <textarea name="9txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
+                <value>4.5</value>
+            </textarea>
+        </state>
+        <state name="10">
+            <textarea name="10txt" from="textarea_list">
+                <area>0,0,50,50</area>
+                <cutdown>yes</cutdown>
+                <align>right,vcenter</align>
+                <font>Font_List_Selected</font>
                 <value>5.0</value>
             </textarea>
         </state>
@@ -2991,10 +3163,12 @@
                <textarea name="buttontext" from="textarea_list">
                    <area>50,25,850,35</area>
                    <scroll direction="left" />
+                   <font>Font_List_Selected</font>
                </textarea>
                <textarea name="year" from="textarea_list">
                    <area>900,25,144,35</area>
                    <align>hcenter,vcenter</align>
+                   <font>Font_List_Selected</font>
                </textarea>
                <textarea name="director" from="textarea_label_list">
                    <area>50,55,850,30</area>
@@ -3006,7 +3180,7 @@
 			          <area>927,61,90,18</area>
 			          <filename>images/icons/ratings/stars_bg.png</filename>
 			      </imagetype>
-			      <statetype name="userratingstate" from="rating_base">
+			      <statetype name="userratingstate" from="rating_base_selected">
 			          <area>927,61,90,18</area>
 			      </statetype>
            </state>
@@ -3079,22 +3253,22 @@
                <textarea name="##x##" from="textarea_list">
                    <area>40,0,80,50</area>
                    <cutdown>yes</cutdown>
-                   <font>Font_List_Active</font>
+                   <font>Font_List_Selected</font>
                    <align>justify,vcenter</align>
-                   <alpha>255</alpha>
+                   <alpha>192</alpha>
                </textarea>
                <textarea name="year" from="##x##" depends="!##x##"/>
                <textarea name="title" from="textarea_list">
                    <area>130,0,620,50</area>
                    <cutdown>yes</cutdown>
-                   <font>Font_List_Active</font>
+                   <font>Font_List_Selected</font>
                    <template>%title%% - |subtitle%</template>
                </textarea>
                <textarea name="userrating" from="textarea_list">
                    <area>40,0,755,50</area>
                    <cutdown>yes</cutdown>
                    <align>right,vcenter</align>
-                   <font>Font_List_Active</font>
+                   <font>Font_List_Selected</font>
                    <template>%userrating%</template>
                    <alpha>255</alpha>
                </textarea>
@@ -3102,13 +3276,13 @@
 	                <state name="yes">
 	                    <imagetype name="yes">
 	                        <area>810,10,30,30</area>
-	                        <filename>images/icons/selected.png</filename>
+	                        <filename>images/icons/selected_black.png</filename>
 	                    </imagetype>
 	                </state>
 	                <state name="no">
 	                    <imagetype name="no">
 	                        <area>810,10,30,30</area>
-	                        <filename>images/icons/selected.png</filename>
+	                        <filename>images/icons/selected_black.png</filename>
 	                        <alpha>64</alpha>
 	                    </imagetype>
 	                </state>
@@ -3140,6 +3314,7 @@
                    <area>40,0,720,50</area>
                    <cutdown>yes</cutdown>
                    <font>Font_List_Active</font>
+                   <font state="running">Font_List_Amber</font>
                    <template>%title% - %artist%</template>
                </textarea>
 		         <statetype name="ratingstate" from="rating_text">
@@ -3156,11 +3331,12 @@
                <textarea name="title" from="textarea_list">
                    <area>40,0,720,50</area>
                    <cutdown>yes</cutdown>
-                   <font>Font_List_Active</font>
+                   <font>Font_List_Selected</font>
                    <template>%title% - %artist%</template>
                </textarea>
-		         <statetype name="ratingstate" from="rating_text">
+		         <statetype name="ratingstate" from="rating_text_selected">
 		             <position>760,0</position>
+		             <alpha>192</alpha>
 		         </statetype>
            </state>
            <state name="inactive" from="active"/>
@@ -8457,6 +8633,64 @@
         </progressbar>
 
      </group>
+
+     <group name="basebackdrop">
+        <area>0,0,1920,1080</area>
+
+        <imagetype name="fanartbgd">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/defaultfanart/</filename>
+        </imagetype>
+        
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
+        </imagetype>
+<!--        
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+ -->       
+        <imagetype name="spotlightimg">
+            <area>0,875,1920,205</area>
+            <alpha>255</alpha>
+            <filename>images/shared/views/showcase_spot.png</filename>
+        </imagetype>
+        
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
+        </group>
+    </group>
+
+     <group name="basefanartbackdrop">
+        <area>0,0,1920,1080</area>
+
+        <imagetype name="fanart">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/defaultfanart/</filename>
+        </imagetype>
+        
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
+        </imagetype>
+
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+
+        <imagetype name="spotlightimg">
+            <area>0,875,1920,205</area>
+            <alpha>255</alpha>
+            <filename>images/shared/views/showcase_spot.png</filename>
+        </imagetype>
+        
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
+        </group>
+    </group>
 
     <!-- Popup Dialogue Box -->
     <group name="basedialogwindow" >
