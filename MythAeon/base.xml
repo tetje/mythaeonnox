@@ -3310,17 +3310,41 @@
                    <area>0,0,850,50</area>
                    <filename>images/shared/settings_radiobuttonoff.png</filename>
                </imagetype>
-               <textarea name="title" from="textarea_list">
+               <textarea name="buttontext" from="textarea_list">
                    <area>40,0,720,50</area>
                    <cutdown>yes</cutdown>
                    <font>Font_List_Active</font>
                    <font state="running">Font_List_Amber</font>
+               </textarea>
+               <textarea name="title" from="buttontext">
                    <template>%title% - %artist%</template>
                </textarea>
 		         <statetype name="ratingstate" from="rating_text">
 		             <position>760,0</position>
 		             <alpha>192</alpha>
 		         </statetype>		
+	 	         <statetype name="buttoncheck">
+		            <area>730,0,122,50</area>
+		            <state type="off">
+		                <imagetype name="LEDOff">
+		                    <area>0,0,122,50</area>
+		                    <filename>images/shared/settings_radiobuttonon_buttonlist2.png</filename>
+		                </imagetype>
+		            </state>
+		            <state type="half">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,50</area> 
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist2.png</filename>
+		                    <alpha>128</alpha>
+		                </imagetype>
+		            </state>
+		            <state type="full">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,50</area>
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist2.png</filename>
+		                </imagetype>
+		            </state>
+		         </statetype>
            </state>
            <state name="selectedactive">
                <area>0,0,850,50</area>
@@ -3328,15 +3352,39 @@
                    <area>0,0,850,50</area>
                    <filename>images/shared/listpanel_selectbar.png</filename>
                </imagetype>
-               <textarea name="title" from="textarea_list">
+               <textarea name="buttontext" from="textarea_list">
                    <area>40,0,720,50</area>
                    <cutdown>yes</cutdown>
                    <font>Font_List_Selected</font>
+               </textarea>
+               <textarea name="title" from="buttontext">
                    <template>%title% - %artist%</template>
                </textarea>
 		         <statetype name="ratingstate" from="rating_text_selected">
 		             <position>760,0</position>
 		             <alpha>192</alpha>
+		         </statetype>
+	 	         <statetype name="buttoncheck">
+		            <area>730,0,122,50</area>
+		            <state type="off">
+		                <imagetype name="LEDOff">
+		                    <area>0,0,122,50</area>
+		                    <filename>images/shared/settings_radiobuttonon_buttonlist2.png</filename>
+		                </imagetype>
+		            </state>
+		            <state type="half">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,50</area> 
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist2.png</filename>
+		                    <alpha>128</alpha>
+		                </imagetype>
+		            </state>
+		            <state type="full">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,50</area>
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist2.png</filename>
+		                </imagetype>
+		            </state>
 		         </statetype>
            </state>
            <state name="inactive" from="active"/>
@@ -3902,7 +3950,6 @@
                    <area>12,12,208,311</area>
                    <filename>images/shared/wall_movie_nfoverlay.png</filename>
                </imagetype>
-
 <!--
                <statetype name="nodetype">
                    <state name="subfolder">
@@ -4038,8 +4085,8 @@
 
    <buttonlist name="buttonlist_wall_music">
        <spacing>0</spacing>
-       <area>0,0,1600,480</area>
-       <searchposition>610,340</searchposition>
+       <area>0,0,1760,940</area>
+       <searchposition>-1,-1</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
        <arrange>fixed</arrange>
@@ -4047,10 +4094,10 @@
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <drawfrombottom>yes</drawfrombottom>
-       <buttonarea>0,0,1600,480</buttonarea>
+       <buttonarea>0,0,1760,940</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
-               <area>,0,160,160</area>
+               <area>0,0,160,160</area>
                <imagetype name="WallMusicBorder">
                    <area>0,0,160,160</area>
                    <preserveaspect>no</preserveaspect>
@@ -4142,16 +4189,28 @@
                         </imagetype>
                     </state>
                </statetype>
-	            <statetype name="buttoncheck">
-		             <area>3,3,154,154</area>
-		             <showempty>yes</showempty>
-	                <state type="full">
-	                    <imagetype name="yes">
-	                        <area>121,20,33,31</area>
-	                        <filename>images/shared/OverlayWatched.png</filename>
-	                    </imagetype>
-	                </state>
-	            </statetype>
+	 	         <statetype name="buttoncheck">
+		            <area>60,0,122,98</area>
+		            <state type="off">
+		                <imagetype name="LEDOff">
+		                    <area>0,0,122,98</area>
+		                    <filename>images/shared/settings_radiobuttonon.png</filename>
+		                </imagetype>
+		            </state>
+		            <state type="half">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,98</area> 
+		                    <filename>images/shared/settings_radiobuttononfocus.png</filename>
+		                    <alpha>128</alpha>
+		                </imagetype>
+		            </state>
+		            <state type="full">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,98</area>
+		                    <filename>images/shared/settings_radiobuttononfocus.png</filename>
+		                </imagetype>
+		            </state>
+		         </statetype>
                <imagetype name="WallMovieOverlay">
                    <area>3,3,154,154</area>
                    <filename>images/shared/wall_nfoverlay.png</filename>
@@ -4253,16 +4312,28 @@
                         </imagetype>
                     </state>
                </statetype>
-	            <statetype name="buttoncheck">
-		             <area>9,9,213,213</area>
-		             <showempty>yes</showempty>
-	                <state type="full">
-	                    <imagetype name="yes">
-	                        <area>168,30,46,43</area>
-	                        <filename>images/shared/OverlayWatched.png</filename>
-	                    </imagetype>
-	                </state>
-	            </statetype>
+	 	         <statetype name="buttoncheck">
+		            <area>120,0,122,98</area>
+		            <state type="off">
+		                <imagetype name="LEDOff">
+		                    <area>0,0,122,98</area>
+		                    <filename>images/shared/settings_radiobuttonon.png</filename>
+		                </imagetype>
+		            </state>
+		            <state type="half">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,98</area> 
+		                    <filename>images/shared/settings_radiobuttononfocus.png</filename>
+		                    <alpha>128</alpha>
+		                </imagetype>
+		            </state>
+		            <state type="full">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,98</area>
+		                    <filename>images/shared/settings_radiobuttononfocus.png</filename>
+		                </imagetype>
+		            </state>
+		         </statetype>
                <imagetype name="WallMovieOverlay">
                    <area>9,9,213,213</area>
                    <filename>images/shared/wall_nfoverlay.png</filename>
@@ -8661,7 +8732,14 @@
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
-    </group>
+     </group>
+
+     <group name="basemusicbackdrop" from="basebackdrop">
+        <imagetype name="fanartbgd">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/music/</filename>
+        </imagetype>
+     </group>       
 
      <group name="basefanartbackdrop">
         <area>0,0,1920,1080</area>

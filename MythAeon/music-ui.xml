@@ -345,7 +345,343 @@
 
     <!-- The playlist editor in tree view mode -->
     <window name="playlisteditorview_tree">
+    
+        <imagetype name="backdropimg">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/music/</filename>
+        </imagetype>
 
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
+        </imagetype>
+<!--  -->      
+        <imagetype name="listfilterimg" from="backdropimg">
+            <filename>images/shared/views/list_filter.png</filename>
+        </imagetype>
+        
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+<!--  -->      
+        <imagetype name="spotlightimg">
+            <area>0,875,1920,205</area>
+            <alpha>255</alpha>
+            <filename>images/shared/views/list_spot.png</filename>
+        </imagetype>
+                
+        <group name="date_clock" from="defaultclockup">
+            <position>1240,0</position>
+        </group>
+
+        <group name="playcontrolinfo" from="basegroupplaycontrolinfo">
+             <area>1270,0,120,40</area>
+        </group> 
+
+        <group name="listpanel3">
+           <area>1295,70,650,1080</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="2200" centre="middle">
+	                <position start="54,70" end="1295,70" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+	        <imagetype name="panel3">
+	            <area>0,0,650,1080</area>
+	            <filename>images/shared/views/tripanel/info_panel_alt.png</filename>
+	        </imagetype>
+	        <imagetype name="panel3_glow" from="panel3">
+	            <alpha>64</alpha>
+	            <filename>images/shared/views/tripanel/info_panel_alt_glow.png</filename>
+	        </imagetype>
+
+	        <textarea name="runtimelbl" from="textarea_label">
+	            <area>145,150,340,30</area>
+	            <value>Runtime:</value>
+	        </textarea>
+
+	        <textarea name="yearlbl" from="runtimelbl">
+	            <position>145,190</position>
+	            <value>Year:</value>
+	        </textarea>
+
+	        <textarea name="tracknrlbl" from="runtimelbl">
+	            <position>145,230</position>
+	            <value>Track Number:</value>
+	        </textarea>
+	        
+	        <textarea name="length" from="textarea_info">
+	            <area>255,150,315,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+	        <textarea name="year" from="textarea_info">
+	            <area>215,190,290,30</area>
+	            <cutdown>yes</cutdown>
+	            <value>0000</value>
+	        </textarea>
+
+	        <textarea name="tracknum" from="textarea_info">
+	            <area>325,230,270,30</area>
+	            <cutdown>yes</cutdown>
+	            <value>0</value>
+	        </textarea>
+
+           <group name="playcontrolbuttons" from="basegroupcontrolbuttons2">
+              <position>145,270</position>
+           </group>
+           
+	        <textarea name="positionlbl" from="runtimelbl">
+	            <position>145,500</position>
+	            <value>Playlist Position:</value>
+	        </textarea>
+
+	        <textarea name="playcountlbl" from="runtimelbl">
+	            <position>145,540</position>
+	            <value>Playcount:</value>
+	        </textarea>
+
+	        <textarea name="lastplayedlbl" from="runtimelbl">
+	            <position>145,580</position>
+	            <value>Last Played:</value>
+	        </textarea>
+	        
+	        <textarea name="playlistposition" from="textarea_info">
+	            <area>355,500,240,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+	        <textarea name="playcount" from="textarea_info">
+	            <area>280,540,315,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+	        <textarea name="lastplayed" from="textarea_info">
+	            <area>295,580,300,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+	        <textarea name="playlistlbl" from="runtimelbl">
+	            <position>145,620</position>
+	            <value>Playlist:</value>
+	        </textarea>
+	        
+	        <textarea name="playlistplayedtime" from="textarea_info">
+	            <area>255,620,340,30</area>
+	            <align>left,vcenter</align>
+	            <template>%playlistplayedtime% of %playlisttotaltime%</template>
+	        </textarea>
+	
+	        <progressbar name="playlistprogress" from="baseprogressbar">
+	           <area>145,660,435,30</area>
+		        <layout>horizontal</layout>
+		        <style>reveal</style>
+		        <imagetype name="background">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_back.png</filename>
+		        </imagetype>
+		        <imagetype name="progressimage">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_fill.png</filename>
+		        </imagetype>
+	        </progressbar>
+
+	        <textarea name="volumelbl" from="runtimelbl">
+	            <position>145,740</position>
+	            <value>Volume:</value>
+	        </textarea>
+	        
+	        <textarea name="mutelbl" from="runtimelbl">
+	            <position>145,770</position>
+	            <value>Mute:</value>
+	        </textarea>
+
+	        <textarea name="volume" from="textarea_info">
+	            <area>250,740,345,30</area>
+	            <cutdown>yes</cutdown>
+	            <value>No volume control configured</value>
+	        </textarea>
+
+	        <textarea name="mute" from="textarea_info">
+	            <area>220,770,365,30</area>
+	            <cutdown>yes</cutdown>
+	            <value>Not muted</value>
+	        </textarea>
+
+        </group>	    
+
+	     <group name="listpanel2">
+           <area>820,75,650,1080</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1700" centre="middle">
+	                <position start="54,100" end="820,75" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+	
+	        <imagetype name="panel2">
+	            <area>0,0,650,1080</area>
+	            <filename>images/shared/views/tripanel/info_panel.png</filename>
+	        </imagetype>
+	     
+	        <imagetype name="panel2glow" from="panel2">
+	            <filename>images/shared/views/tripanel/info_panel_glow.png</filename>
+	            <alpha>64</alpha>
+	        </imagetype>
+	
+	        <textarea name="channellbl" from="textarea_label">
+	            <area>105,110,340,30</area>
+	            <value>Artist:</value>
+	        </textarea>
+	     
+	        <textarea name="runtimelbl" from="textarea_label">
+	            <area>105,150,340,30</area>
+	            <value>Album:</value>
+	        </textarea>
+	
+	        <textarea name="datelbl" from="runtimelbl">
+	            <position>105,190</position>
+	            <value>Title:</value>
+	        </textarea>
+	
+	        <textarea name="titlelbl" from="runtimelbl">
+	            <position>105,230</position>
+	            <value>Genre:</value>
+	        </textarea>
+	        
+	        <textarea name="artist" from="textarea_info">
+	            <area>195,110,385,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="album" from="textarea_info">
+	            <area>195,150,385,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="title" from="textarea_info">
+	            <area>175,190,405,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="genre" from="textarea_info">
+	            <area>190,230,390,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+	        <video name="visualizer">
+	            <area>96,278,492,492</area>
+	        </video>
+	
+	        <imagetype name="coverart_overlay">
+	            <area>46,258,594,608</area>
+	            <alpha>255</alpha>
+	            <filename>images/shared/views/tripanel/poster_overlay.png</filename>
+	        </imagetype>
+
+	        <textarea name="tracklbl" from="runtimelbl">
+	            <position>105,790</position>
+	            <value>Track:</value>
+	        </textarea>
+	        
+	        <textarea name="time" from="textarea_info">
+	            <area>190,790,390,30</area>
+	        </textarea>
+
+           <statetype name="trackstate">
+             <area>558,790,30,30</area>
+             <state name="playing">
+                 <imagetype name="playing">
+                     <area>0,0,30,30</area>
+                     <filename>images/icons/play.png</filename>
+                 </imagetype>
+             </state>
+             <state name="paused">
+                 <imagetype name="paused">
+                     <area>0,0,30,30</area>
+                     <filename>images/icons/paused.png</filename>
+                     <alpha>255</alpha>
+                 </imagetype>
+             </state>
+             <state name="stopped">
+                 <imagetype name="stopped">
+                     <area>0,0,30,30</area>
+                     <filename>images/icons/stopped.png</filename>
+                     <alpha>255</alpha>
+                 </imagetype>
+             </state>
+           </statetype>
+
+	        <progressbar name="progress" from="baseprogressbar">
+	           <area>96,830,492,30</area>
+		        <layout>horizontal</layout>
+		        <style>reveal</style>
+		        <imagetype name="background">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_back.png</filename>
+		        </imagetype>
+		        <imagetype name="progressimage">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_fill.png</filename>
+		        </imagetype>
+	        </progressbar>
+	
+	     </group>
+
+        <group name="listpanel1">
+           <area>54,107,860,1003</area>
+           
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="-914,107" end="54,107" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,860,1003</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
+	        </imagetype>
+        	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,860,1003</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+        
+	        <buttontree name="playlist_tree">
+	            <area>7,52,850,800</area>
+	            <numlists>1</numlists>
+	            <spacing>0</spacing>
+	            <buttonlist name="listtemplate" from="buttonlist_threepanel_music" />
+	        </buttontree>
+
+           <textarea name="breadcrumbs" from="textarea_label_list">
+               <area>30,843,800,30</area>
+               <cutdown>yes</cutdown>
+           </textarea>
+
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+        </group>
+    
+    
+<!--
         <imagetype name="backdropimg">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/music/</filename>
@@ -355,12 +691,7 @@
             <area>0,472,1920,608</area>
             <filename>images/shared/views/showcase_floor.png</filename>
         </imagetype>
-<!--        
-        <imagetype name="showcaseglowimg">
-            <area>0,266,1920,608</area>
-            <filename>images/shared/views/showcase_glow.png</filename>
-        </imagetype>
- -->       
+
         <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
             <alpha>255</alpha>
@@ -383,15 +714,6 @@
 	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
-
-<!-- Fix me: This does not work when a recording has played and one returns to the main recording screen
-
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
 
 	        <imagetype name="multiplextabletglowimg">
 	            <area>0,0,1695,1015</area>
@@ -440,59 +762,29 @@
 	            </section>
 	        </animation>
 
-<!-- Fix me: This does not work will when a recording has played and one returns to the main recording screen
-	        
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="0,755" end="-1920,755" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
 	        <buttonlist name="currentplaylist" from="buttonlist_multiplexmusic">
 	             <position>0,7</position>
 	        </buttonlist>
 	        
         </group>             
-
+-->
     </window>
 
     <!-- The playlist editor in gallery view mode -->
     <window name="playlisteditorview_gallery">
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/music/</filename>
-        </imagetype>
-
-        <imagetype name="showcasefloorimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/showcase_floor.png</filename>
-        </imagetype>        
-
-        <imagetype name="showcaseimg" from="fanart">
-            <filename>images/shared/showcase_stage.png</filename>
-        </imagetype>
-        
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>128</alpha>
-            <filename>images/shared/showcase_spot.png</filename>
-        </imagetype>
-        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
+        <group name="backdrop" from="basemusicbackdrop"/>
 
         <group name="playcontrolinfo" from="basegroupplaycontrolinfo">
              <area>1270,0,120,40</area>
         </group> 
 
         <group name="playlisteditorview_gallery_group">
-           <area>113,70,1694,846</area>
+           <area>88,50,1920,944</area>
 
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
+	                <position start="88,-944" end="88,50" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
@@ -504,6 +796,7 @@
 	            </section>
 	        </animation>       
 -->
+<!--
 	        <imagetype name="multiplextabletbgdimg">
 	            <area>0,0,1694,846</area>
 	            <filename>images/shared/multiplex_back.png</filename>
@@ -512,23 +805,24 @@
 	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
 	            <filename>images/shared/multiplex_tablet_nolines.png</filename>
 	        </imagetype>
+-->
 <!--
 	        <buttonlist name="videos" from="buttonlist_wall_panel">
 	            <position>11,58</position>
 	        </buttonlist>
 -->
 	        <buttontree name="playlist_tree">
-	            <area>52,90,1680,480</area>
+	            <area>0,75,1760,944</area>
 	            <numlists>1</numlists>
 	            <spacing>0</spacing>
 	            <buttonlist name="listtemplate" from="buttonlist_wall_music" />
 	        </buttontree>
-
+<!--
 	        <textarea name="breadcrumbs" from="textarea_label">
 	            <area>38,22,1600,30</area>
 	            <template>Path: %breadcrumbs%</template>
 	        </textarea>
-
+-->
 	     </group>
 
          <group name="multiplextabletlistgroup">
@@ -548,10 +842,18 @@
 	            </section>
 	        </animation>       
 -->
+
+	        <textarea name="breadcrumbs" from="textarea_title" depends="!coverart">
+	            <area>10,280,1900,100</area>
+	            <multiline>yes</multiline>
+	            <align>allcenter</align>
+	        </textarea>
+
+<!--
 	        <buttonlist name="currentplaylist" from="buttonlist_multiplexmusic">
 	             <position>0,0</position>
 	        </buttonlist>
-	        
+-->	        
         </group>             
 
    </window>
@@ -600,13 +902,20 @@
 	        </animation>       
 -->
 
-	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
-	            <filename>images/shared/multiplex_back.png</filename>
+	        <imagetype name="multiplextabletglowimg">
+	            <area>0,0,1695,1015</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
 	        </imagetype>
-	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet.png</filename>
+
+	        <imagetype name="multiplextabletimg">
+	            <area>0,0,1695,1015</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
+	        </imagetype>
+		
+	        <imagetype name="multiplextabletlayoutimg">
+	            <area>0,-2,1695,846</area>
+	            <filename>images/shared/views/poster_layout.png</filename>
 	        </imagetype>
 	
            <group name="trackinfo" from="basegrouptrackinfo">
