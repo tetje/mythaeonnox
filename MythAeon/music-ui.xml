@@ -2429,38 +2429,44 @@
 
         <imagetype name="infopanelshade">
             <area>728,0,1192,1080</area>
-            <filename>images/shared/movieinfogradient.png</filename>
+            <filename>images/shared/info/movieinfogradient.png</filename>
+            <alpha>255</alpha>
         </imagetype>
        
         <imagetype name="infopanel">
             <area>728,0,1192,1080</area>
-            <filename>images/shared/info_rightpaneltop.png</filename>
+            <filename>images/shared/info/info_rightpaneltop.png</filename>
         </imagetype>
 
         <group name="infopaneldetails">
-           <area>878,70,1042,1010</area>   
+           <area>878,70,1042,1010</area> 
+
 	        <imagetype name="infopanellines">
 	            <area>0,88,1042,853</area>
-	            <filename>images/shared/info_panellines.png</filename>
+	            <filename>images/shared/info/info_panellines_movie.png</filename>
 	        </imagetype>
 
-	        <imagetype name="infopanel_hline1">
-	            <area>0,297,1042,4</area>
-	            <preserveaspect>no</preserveaspect>
-	            <filename>images/shared/info_panel_hline.png</filename>
+<!--	        
+	        <imagetype name="infopanellines2">
+	            <area>0,254,1042,853</area>
+	            <filename>images/shared/info/info_panellines_livetv.png</filename>
 	        </imagetype>
+-->
 
-	        <imagetype name="infopanel_hline2">
-	            <area>0,341,1042,4</area>
-	            <preserveaspect>no</preserveaspect>
-	            <filename>images/shared/info_panel_hline.png</filename>
-	        </imagetype>
-
-	        <imagetype name="infopanel_hline3">
-	            <area>0,384,1042,4</area>
-	            <preserveaspect>no</preserveaspect>
-	            <filename>images/shared/info_panel_hline.png</filename>
-	        </imagetype>
+           <group name="infopanel_hline_group">
+              <area>0,332,1042,97</area>
+		        <imagetype name="infopanel_hline1">
+		            <area>0,0,1042,11</area>
+		            <preserveaspect>no</preserveaspect>
+		            <filename>images/shared/info/info_panellines_movie_horz.png</filename>
+		        </imagetype>
+		        <imagetype name="infopanel_hline2" from="infopanel_hline1">
+		            <position>0,43</position>
+		        </imagetype>
+		        <imagetype name="infopanel_hline3" from="infopanel_hline1">
+		            <position>0,86</position>
+		        </imagetype>
+	        </group>
 
 	        <textarea name="title" from="textarea_title_info">
 	            <area>0,20,900,65</area>
@@ -2469,7 +2475,7 @@
 	            <cutdown>no</cutdown>
 	        </textarea>
 	
-	        <textarea name="dateaddedlbl" from="textarea_info" depends="rating">
+	        <textarea name="dateaddedlbl" from="textarea_info">
 	            <area>0,105,270,30</area>
                <font>Font_Info_Grey</font>
 	            <align>top,hcenter</align>
@@ -2485,12 +2491,14 @@
 	        <textarea name="year" from="textarea_info_big">
 	            <area>270,100,165,60</area>
 	            <align>allcenter</align>
+	            <value>0000</value>
 	        </textarea>
 
 	        <textarea name="genre" from="textarea_info">
 	            <area>455,100,445,60</area>
                <font>Font_Info_Grey</font>
                <cutdown>yes</cutdown>
+               <value>Unknown</value>
 	        </textarea>
 	
 	        <textarea name="artistlbl" from="textarea_label">
@@ -2523,6 +2531,11 @@
 	            <value>Play count</value>
 	        </textarea>
 	        	        
+	        <textarea name="filenamelbl" from="artistlbl">
+	            <position>0,425</position>
+	            <value>Filename</value>
+	        </textarea>
+
 	        <textarea name="artist" from="textarea_info">
 	            <area>190,166,750,46</area>
 	        </textarea>
@@ -2548,26 +2561,20 @@
 	            <template>%playcount% times</template>
 	        </textarea>
 	        
-	        <textarea name="filenamelbl" from="artistlbl">
-	            <position>0,435</position>
-	            <value>Filename</value>
-	        </textarea>
-
 	        <textarea name="filename" from="artist">
-	            <area>190,440,710,174</area>
-	            <multiline>yes</multiline>
-               <cutdown>yes</cutdown>	            
-	            <align>top,left</align>
-	            <value>Unknown</value>
+	            <position>190,425</position>
+	            <multiline>no</multiline>
+               <cutdown>no</cutdown>
+               <scroll direction="left"/>           
 	        </textarea>
 	        
 		     <imagetype name="starsbgd_big">
-		         <area>0,860,302,64</area>
+		         <area>0,870,302,64</area>
 		         <filename>images/icons/ratings/rating0.png</filename>
 		     </imagetype>
 		     
 		     <statetype name="rating_state" from="rating_base_big">
-		         <area>0,860,302,64</area>
+		         <area>0,870,302,64</area>
 		     </statetype>
 
         </group>
