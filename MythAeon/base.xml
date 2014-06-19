@@ -1920,13 +1920,13 @@
 	        <position>1820,70</position>
 	        <state type="off">
 	            <imagetype name="dnon">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/multiplex_arrow.png</filename>
 	                <alpha>90</alpha>
 	            </imagetype>
 	        </state>
 	        <state type="full">
 	            <imagetype name="dnoff">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/multiplex_arrow.png</filename>
 	            </imagetype>
 	        </state>
 	    </statetype>
@@ -2092,13 +2092,13 @@
 	        <position>1820,70</position>
 	        <state type="off">
 	            <imagetype name="dnon">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/multiplex_arrow.png</filename>
 	                <alpha>90</alpha>
 	            </imagetype>
 	        </state>
 	        <state type="full">
 	            <imagetype name="dnoff">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/multiplex_arrow.png</filename>
 	            </imagetype>
 	        </state>
 	    </statetype>
@@ -2250,13 +2250,13 @@
 	        <position>1820,70</position>
 	        <state type="off">
 	            <imagetype name="dnon">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/multiplex_arrow.png</filename>
 	                <alpha>90</alpha>
 	            </imagetype>
 	        </state>
 	        <state type="full">
 	            <imagetype name="dnoff">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/multiplex_arrow.png</filename>
 	            </imagetype>
 	        </state>
 	    </statetype>
@@ -2370,13 +2370,13 @@
 	        <position>1820,70</position>
 	        <state type="off">
 	            <imagetype name="dnon">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/multiplex_arrow.png</filename>
 	                <alpha>90</alpha>
 	            </imagetype>
 	        </state>
 	        <state type="full">
 	            <imagetype name="dnoff">
-	                <filename>images/shared/multiplex_arrow1.png</filename>
+	                <filename>images/shared/multiplex_arrow.png</filename>
 	            </imagetype>
 	        </state>
 	    </statetype>
@@ -3317,7 +3317,7 @@
                    <font state="running">Font_List_Amber</font>
                </textarea>
                <textarea name="title" from="buttontext">
-                   <template>%title% - %artist%</template>
+                   <template>%title%% - |artist%</template>
                </textarea>
 		         <statetype name="ratingstate" from="rating_text">
 		             <position>760,0</position>
@@ -3358,7 +3358,7 @@
                    <font>Font_List_Selected</font>
                </textarea>
                <textarea name="title" from="buttontext">
-                   <template>%title% - %artist%</template>
+                   <template>%title%% - |artist%</template>
                </textarea>
 		         <statetype name="ratingstate" from="rating_text_selected">
 		             <position>760,0</position>
@@ -3386,6 +3386,47 @@
 		                </imagetype>
 		            </state>
 		         </statetype>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
+   <buttonlist name="buttonlist_threepanel_netvision">
+       <area>0,0,850,800</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>fixed</arrange>
+       <align>left</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,850,800</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,850,50</area>
+               <imagetype name="Listpanelline">
+                   <area>0,0,850,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>40,0,770,50</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+                   <font state="running">Font_List_Amber</font>
+               </textarea>
+           </state>
+           <state name="selectedactive">
+               <area>0,0,850,50</area>
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,850,50</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>40,0,770,50</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Selected</font>
+               </textarea>
            </state>
            <state name="inactive" from="active"/>
            <state name="selectedinactive" from="selectedactive"/>

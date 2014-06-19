@@ -679,95 +679,6 @@
 	        </animation>       
 -->
         </group>
-    
-    
-<!--
-        <imagetype name="backdropimg">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/music/</filename>
-        </imagetype>
-        
-        <imagetype name="showcaseimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/views/showcase_floor.png</filename>
-        </imagetype>
-
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>255</alpha>
-            <filename>images/shared/views/showcase_spot.png</filename>
-        </imagetype>
-                
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
-
-        <group name="playcontrolinfo" from="basegroupplaycontrolinfo">
-             <area>1270,0,120,40</area>
-        </group> 
-
-        <group name="multiplextabletgroup">
-           <area>113,70,1694,846</area>
-
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
-
-	        <imagetype name="multiplextabletglowimg">
-	            <area>0,0,1695,1015</area>
-	            <alpha>64</alpha>
-	            <filename>images/shared/wall/wall_bg_glow.png</filename>
-	        </imagetype>
-
-	        <imagetype name="multiplextabletimg">
-	            <area>0,0,1695,1015</area>
-	            <filename>images/shared/wall/wall_bg.png</filename>
-	        </imagetype>
-		
-	        <imagetype name="multiplextabletlayoutimg">
-	            <area>0,-2,1695,846</area>
-	            <filename>images/shared/views/poster_layout.png</filename>
-	        </imagetype>
-	
-           <group name="trackinfo" from="basegrouptrackinfo">
-              <area>38,85,450,515</area>
-	        </group>
-		
-	        <buttontree name="playlist_tree">
-	            <area>485,80,736,515</area>
-	            <numlists>1</numlists>
-	            <spacing>0</spacing>
-	            <buttonlist name="listtemplate" from="buttonlist_musicshowpanel" />
-	        </buttontree>
-
-	        <textarea name="breadcrumbs" from="textarea_label">
-	            <area>38,22,1600,30</area>
-	            <template>Path: %breadcrumbs%</template>
-	        </textarea>
-
-           <group name="playinfo" from="basegroupplayinfo">
-              <area>1222,58,455,540</area>
-           </group>
-
-        </group>
-
-        <group name="multiplextabletlistgroup">
-           <area>0,687,1920,400</area>
-
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="1920,687" end="0,687" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
-
-	        <buttonlist name="currentplaylist" from="buttonlist_multiplexmusic">
-	             <position>0,7</position>
-	        </buttonlist>
-	        
-        </group>             
--->
     </window>
 
     <!-- The playlist editor in gallery view mode -->
@@ -796,33 +707,13 @@
 	            </section>
 	        </animation>       
 -->
-<!--
-	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
-	            <filename>images/shared/multiplex_back.png</filename>
-	        </imagetype>
-	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet_nolines.png</filename>
-	        </imagetype>
--->
-<!--
-	        <buttonlist name="videos" from="buttonlist_wall_panel">
-	            <position>11,58</position>
-	        </buttonlist>
--->
 	        <buttontree name="playlist_tree">
 	            <area>0,75,1760,944</area>
 	            <numlists>1</numlists>
 	            <spacing>0</spacing>
 	            <buttonlist name="listtemplate" from="buttonlist_wall_music" />
 	        </buttontree>
-<!--
-	        <textarea name="breadcrumbs" from="textarea_label">
-	            <area>38,22,1600,30</area>
-	            <template>Path: %breadcrumbs%</template>
-	        </textarea>
--->
+
 	     </group>
 
          <group name="multiplextabletlistgroup">
@@ -849,11 +740,6 @@
 	            <align>allcenter</align>
 	        </textarea>
 
-<!--
-	        <buttonlist name="currentplaylist" from="buttonlist_multiplexmusic">
-	             <position>0,0</position>
-	        </buttonlist>
--->	        
         </group>             
 
    </window>
