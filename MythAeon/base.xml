@@ -3484,12 +3484,14 @@
                <textarea name="buttontext" from="textarea_list">
                    <area>50,25,850,35</area>
                    <scroll direction="left" />
+                   <font>Font_List_Selected</font>
                </textarea>
                <textarea name="title" from="buttontext"/>
                <textarea name="year" from="textarea_list">
                    <area>900,25,144,35</area>
                    <align>hcenter,vcenter</align>
                    <value>year</value>
+                   <font>Font_List_Selected</font>
                </textarea>
                <textarea name="publisher" from="textarea_label_list">
                    <area>50,55,850,30</area>
@@ -3698,10 +3700,12 @@
                <textarea name="titlesubtitle" from="textarea_list">
                    <area>50,25,850,35</area>
                    <scroll direction="left" />
+                   <font>Font_List_Selected</font>
                </textarea>
                <textarea name="starttime" from="textarea_list">
                    <area>900,25,144,35</area>
                    <align>hcenter,vcenter</align>
+                   <font>Font_List_Selected</font>
                </textarea>
                <textarea name="channel" from="textarea_label_list">
                    <area>50,55,850,30</area>
@@ -8748,7 +8752,18 @@
 
      <group name="basebackdrop">
         <area>0,0,1920,1080</area>
-
+<!--
+	     <animation trigger="AboutToShow">
+	        <section duration="500" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InSine" />
+	        </section>
+	     </animation>
+	     <animation trigger="AboutToHide">
+	        <section duration="500" centre="middle">
+	            <alpha start="255" end="0" easingcurve="OutSine" />
+	        </section>
+	     </animation>
+-->
         <imagetype name="fanartbgd">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/defaultfanart/</filename>
@@ -8782,9 +8797,27 @@
         </imagetype>
      </group>       
 
+     <group name="basegallerybackdrop" from="basebackdrop">
+        <imagetype name="fanartbgd">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/pictures/</filename>
+        </imagetype>
+     </group>       
+
      <group name="basefanartbackdrop">
         <area>0,0,1920,1080</area>
-
+<!--
+	     <animation trigger="AboutToShow">
+	        <section duration="500" centre="middle">
+	            <alpha start="0" end="255" easingcurve="InSine" />
+	        </section>
+	     </animation>
+	     <animation trigger="AboutToHide">
+	        <section duration="500" centre="middle">
+	            <alpha start="255" end="0" easingcurve="OutSine" />
+	        </section>
+	     </animation>
+-->
         <imagetype name="fanart">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/defaultfanart/</filename>

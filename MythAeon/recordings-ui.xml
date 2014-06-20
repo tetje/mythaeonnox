@@ -497,21 +497,21 @@
 						  </shape>
 						  <textarea name="subtitletxt" from="textarea_icon">
 						      <area>60,2,105,50</area>
-						      <font>Font_Icon_Base_Black</font>
+						      <font>Font_Icon_Base_White_24_Bold</font>
 						      <value>CC</value>
 						  </textarea>           
 		            </state>
 		            <state name="subtitles" from="cc">
 						  <textarea name="subtitletxt" from="textarea_icon">
 						      <area>60,2,105,50</area>
-						      <font>Font_Icon_Base_Black</font>
+						      <font>Font_Icon_Base_White_24_Bold</font>
 						      <value>SUB</value>
 						  </textarea>           
 		            </state>
 		            <state name="onscreensub" from="cc">
 						  <textarea name="subtitletxt" from="textarea_icon">
 						      <area>60,2,105,50</area>
-						      <font>Font_Icon_Base_Black</font>
+						      <font>Font_Icon_Base_White_24_Bold</font>
 						      <value>OSD</value>
 						  </textarea>           
 		            </state>
