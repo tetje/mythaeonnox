@@ -62,11 +62,11 @@
 	        <zoom>1.4</zoom>
 	        <background color="#000000" alpha="0" />
 	        <scrollduration>500</scrollduration>
-	        <scrollbar name="vertscrollbar" from="base_vertical_scrollbar">
-	            <area>1914,0,5,100%</area>
+	        <scrollbar name="vertscrollbar" from="basescrollbarvert">
+	            <area>1905,0,5,100%</area>
 	        </scrollbar>
-	        <scrollbar name="horizscrollbar" from="base_horizontal_scrollbar">
-	            <area>0,984,100%,5</area>
+	        <scrollbar name="horizscrollbar" from="basescrollbarhorz">
+	            <area>0,975,100%,5</area>
 	        </scrollbar>
         </webbrowser>
 

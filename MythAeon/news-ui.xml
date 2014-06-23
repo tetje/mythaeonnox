@@ -188,6 +188,11 @@
            
            <buttonlist name="articleslist" from="buttonlist_threepanel_news">
                <area>7,52,850,800</area>
+	            <showarrow>no</showarrow>
+	            <showscrollbar>yes</showscrollbar>
+		         <scrollbar name="scrollbar" from="basescrollbarvert">
+		             <area>841,0,100%,80%</area>
+		         </scrollbar>
            </buttonlist>
 
 <!-- Fix me: This does not work will when a movie has played and one returns to the main screen
