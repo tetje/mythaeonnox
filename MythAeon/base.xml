@@ -3433,6 +3433,18 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_threepanel_news" from ="buttonlist_threepanel_netvision">
+       <statetype name="buttonitem">
+           <state name="inactive" from="active">
+               <alpha>0</alpha>
+           </state>
+           <state name="selectedinactive" from="selectedactive">
+               <alpha>0</alpha>
+           </state>
+       </statetype>
+   </buttonlist>
+
+
    <buttonlist name="buttonlist_games">
        <area>0,0,1115,800</area>
        <layout>vertical</layout>
@@ -8801,6 +8813,13 @@
         <imagetype name="fanartbgd">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/pictures/</filename>
+        </imagetype>
+     </group>       
+
+     <group name="basenewsbackdrop" from="basebackdrop">
+        <imagetype name="fanartbgd">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/news/</filename>
         </imagetype>
      </group>       
 

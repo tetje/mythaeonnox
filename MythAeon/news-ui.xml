@@ -4,66 +4,193 @@
 
     <window name="news">
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/news/</filename>
-        </imagetype>
-        
-        <imagetype name="listfloorimg" from="fanart">
-            <area>0,473,1920,607</area>
-            <filename>images/shared/list_floor.png</filename>
-        </imagetype>
-        
-        <imagetype name="listfilterimg" from="fanart">
-            <filename>images/shared/list_filter.png</filename>
-        </imagetype>
-        
-        <imagetype name="spotlightimg" from="fanart">
-            <area>0,875,1920,205</area>
-            <filename>images/shared/list_spot.png</filename>
-        </imagetype>
-        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
+        <group name="backdrop" from="basenewsbackdrop"/>
 
-        <group name="listpanel">
-           <area>88,110,1139,970</area>
-           
+        <group name="listpanel3">
+           <area>1295,70,650,1080</area>
+
 	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="88,-1080" end="88,110" easingcurve="InOutBack" />
+	            <section duration="2200" centre="middle">
+	                <position start="54,70" end="1295,70" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
-	        <imagetype name="listpanelbgdblack">
-	            <area>0,0,1139,970</area>
-	            <filename>images/shared/listpanel_black.png</filename>
-               <preserveaspect>no</preserveaspect>
+	        <imagetype name="panel3">
+	            <area>0,0,650,1080</area>
+	            <filename>images/shared/views/tripanel/info_panel_alt.png</filename>
+	        </imagetype>
+	        <imagetype name="panel3_glow" from="panel3">
+	            <alpha>64</alpha>
+	            <filename>images/shared/views/tripanel/info_panel_alt_glow.png</filename>
 	        </imagetype>
 
-	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
-	            <filename>images/shared/listpanel_back.png</filename>
+	        <textarea name="fifthlbl" from="textarea_label">
+	            <area>145,150,340,30</area>
+	            <value>Needs Download:</value>
+	        </textarea>
+
+	        <textarea name="sixthlbl" from="fifthlbl">
+	            <position>145,190</position>
+	            <value>Enclosures:</value>
+	        </textarea>
+
+	        <textarea name="seventhlbl" from="fifthlbl">
+	            <position>145,230</position>
+	            <value>Is Podcast:</value>
+	        </textarea>
+	        
+	        <textarea name="Notxt1" from="textarea_info" depends="!download">
+	            <area>350,150,245,30</area>
+	            <cutdown>yes</cutdown>
+	            <value>No</value>
+	        </textarea>
+	
+	        <textarea name="Notxt2" from="Notxt1" depends="!enclosures">
+	            <position>295,190</position>
+	        </textarea>
+	
+	        <textarea name="Notxt3" from="Notxt1" depends="!ispodcast">
+	            <position>280,230</position>
+	        </textarea>
+	
+           <imagetype name="download">
+	             <filename>images/icons/selected.png</filename>
+	             <alpha>255</alpha>
+	             <area>345,150,30,30</area>
+	         </imagetype>
+	         
+	         <imagetype name="enclosures" from="download">
+	             <position>295,190</position>
+	         </imagetype>
+	         
+	         <imagetype name="ispodcast" from="download">
+	             <position>280,230</position>
+	         </imagetype>
+
+	        <textarea name="description" from="textarea_plot">
+	            <area>145,280,435,570</area>
+	            <template>%"|SUBTITLE|"\n\n%%DESCRIPTION%</template>
+	        </textarea>	
+ 	        <textarea name="nosites" from="description">
+               <value>No news sites available, please configure your subscriptions using the configuration menu</value>
+ 	        </textarea>
+       </group>	    
+
+	     <group name="listpanel2">
+           <area>820,75,650,1080</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1700" centre="middle">
+	                <position start="54,100" end="820,75" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+	
+	        <imagetype name="panel2">
+	            <area>0,0,650,1080</area>
+	            <filename>images/shared/views/tripanel/info_panel.png</filename>
 	        </imagetype>
-        
-	        <imagetype name="listpaneldetailbgd">
-	            <area>912,12,148,850</area>
-	            <filename>images/shared/listpanel_detailwide.png</filename>
+	     
+	        <imagetype name="panel2glow" from="panel2">
+	            <filename>images/shared/views/tripanel/info_panel_glow.png</filename>
+	            <alpha>64</alpha>
 	        </imagetype>
-        
-           <buttonlist name="siteslist" from="buttonlist_news_sites">
-               <position>12,50</position>
-           </buttonlist>
+	
+	        <textarea name="firstlbl" from="textarea_label">
+	            <area>105,110,340,30</area>
+	            <value></value>
+	        </textarea>
+	     
+	        <textarea name="secondlbl" from="firstlbl">
+            <position>105,150</position>
+	            <value></value>
+	        </textarea>
+	
+	        <textarea name="thirdlbl" from="firstlbl">
+	            <position>105,190</position>
+	            <value>Date:</value>
+	        </textarea>
+	        
+	        <textarea name="fourthlbl" from="firstlbl">
+	            <position>105,230</position>
+	            <value>Title:</value>
+	        </textarea>
+	
+	        <textarea name="author" from="textarea_info">
+	            <area>200,110,380,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="resolution" from="textarea_info">
+	            <area>250,150,330,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="update" from="textarea_info">
+	            <area>170,190,375,30</area>
+	            <cutdown>yes</cutdown>
+	            <value>Unknown</value>
+	        </textarea>
+
+	        <textarea name="title" from="textarea_info">
+	            <area>175,230,405,30</area>
+	            <cutdown>no</cutdown>
+	            <scroll direction="left"/>
+	        </textarea>
+	
+	        <imagetype name="defaulticon">
+	            <area>96,278,492,492</area>
+	            <filename>images/backgrounds/news/</filename>
+	            <mask>images/shared/views/tripanel/music_poster_mask.png</mask>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	
+	        <imagetype name="thumbnail" from="defaulticon"/>
+
+	        <imagetype name="coverart_overlay">
+	            <area>46,258,594,608</area>
+	            <alpha>255</alpha>
+	            <filename>images/shared/views/tripanel/poster_overlay.png</filename>
+	        </imagetype>
+
+	     </group>
+
+        <group name="listpanel1">
+           <area>54,107,860,1003</area>
            
-           <buttonlist name="articleslist" from="buttonlist_news_articles">
-               <position>12,50</position>
-           </buttonlist>
-           
-           <textarea name="updated" from="textarea_label_list">
-               <area>62,860,800,30</area>
-           </textarea>
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="-914,107" end="54,107" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
 
 <!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,860,1003</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
+	        </imagetype>
+        	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,860,1003</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+        
+           <buttonlist name="siteslist" from="buttonlist_threepanel_news">
+               <area>7,52,850,800</area>
+           </buttonlist>
+           
+           <buttonlist name="articleslist" from="buttonlist_threepanel_news">
+               <area>7,52,850,800</area>
+           </buttonlist>
+
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
 
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
@@ -72,103 +199,7 @@
 	        </animation>       
 -->
         </group>
-        
-        <group name="listinfo">
-           <area>1264,150,545,930</area>
 
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
-	
-	        <imagetype name="TVShowsframe">
-	            <area>-2,245,548,549</area>
-	            <filename>images/shared/list_musicicon_frame.png</filename>
-	            <preserveaspect>no</preserveaspect>
-	        </imagetype>
-	     
-	        <imagetype name="defaulticon">
-	            <area>13,260,518,519</area>
-	            <mask>images/shared/list_musicicon_mask.png</mask>
-	            <filename>images/shared/DefaultNetwork.png</filename>
-	            <preserveaspect>no</preserveaspect>
-	        </imagetype>
-		
-	        <imagetype name="thumbnail" from="defaulticon"/>
-		
-		     <shape name="descriptionbox" depends="description">
-		         <area>13,260,518,519</area>
-		         <type>roundbox</type>
-		         <cornerradius>15</cornerradius>
-		         <fill color="#323232" alpha="210" />
-		     </shape>
-	
-	        <textarea name="title" from="textarea_settings_button">
-	            <area>40,287,475,32</area>
-	            <multiline>no</multiline>
-	            <cutdown>no</cutdown>
-	            <scroll direction="horizontal"/>
-	        </textarea>
-	       
-	        <textarea name="description" from="textarea_plot">
-	            <area>40,325,475,440</area>
-	            <multiline>yes</multiline>
-	            <cutdown>yes</cutdown>
-	            <template>%DESCRIPTION%</template>
-	        </textarea>
-	       
-	        <textarea name="nosites" from="description">
-	        </textarea>
-	
-	        <textarea name="nodescription" from="description" depends="!description">
-	            <value>No description available.</value>
-	        </textarea>
-	       
-	        <imagetype name="TVShowsglass">
-	            <area>13,260,518,519</area>
-	            <filename>images/shared/list_musicicon_glass.png</filename>
-	            <preserveaspect>no</preserveaspect>
-	        </imagetype>
-	        
-           <imagetype name="download_bgd">
-	             <filename>images/icons/download_black.png</filename>
-	             <alpha>92</alpha>
-	             <area>176,810,40,40</area>
-	         </imagetype>
-	         
-	         <imagetype name="enclosures_bgd" from="download_bgd">
-	             <filename>images/icons/enclosure_black.png</filename>
-	             <position>246,810</position>
-	         </imagetype>
-	         
-	         <imagetype name="ispodcast_bgd" from="download_bgd">
-	             <filename>images/icons/podcast_black.png</filename>
-	             <position>316,810</position>
-	         </imagetype>
-	         
-	         <imagetype name="download" from="download_bgd">
-	             <alpha>255</alpha>
-	         </imagetype>
-	         
-	         <imagetype name="enclosures" from="enclosures_bgd">
-	             <alpha>255</alpha>
-	         </imagetype>
-
-	         <imagetype name="ispodcast" from="ispodcast_bgd">
-	             <alpha>255</alpha>
-	         </imagetype>
-
-<!-- Fix me: This does not work when a movie has played and one returns to the main screen
-
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
-        </group>
-        
     </window>
 
     <window name="editor">
