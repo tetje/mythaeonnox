@@ -8863,6 +8863,15 @@
         </group>
     </group>
 
+     <group name="basegamesfanartbackdrop" from="basefanartbackdrop">
+        <area>0,0,1920,1080</area>
+
+        <imagetype name="fanart">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/games/</filename>
+        </imagetype>
+    </group>
+    
     <!-- Popup Dialogue Box -->
     <group name="basedialogwindow" >
         <area>0,0,700,300</area>

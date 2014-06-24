@@ -475,7 +475,7 @@
 
         <group name="backdrop" from="basebackdrop"/>
 
-        <group name="listpanel3">
+        <group name="listpanel3" depends="description">
            <area>1295,70,650,1080</area>
 
 	        <animation trigger="AboutToShow">

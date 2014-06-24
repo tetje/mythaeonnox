@@ -4,29 +4,163 @@
 
   <window name="gameui">
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/games/</filename>
-        </imagetype>
+        <group name="backdrop" from="basegamesfanartbackdrop"/>
+
+        <group name="listpanel3" depends="description&amp;coverart">
+           <area>1260,70,650,1080</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="2200" centre="middle">
+	                <position start="54,70" end="1260,70" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+	        <imagetype name="panel3">
+	            <area>0,0,650,1080</area>
+	            <filename>images/shared/views/tripanel/info_panel_alt.png</filename>
+	        </imagetype>
+	        <imagetype name="panel3_glow" from="panel3">
+	            <alpha>64</alpha>
+	            <filename>images/shared/views/tripanel/info_panel_alt_glow.png</filename>
+	        </imagetype>
+
+	        <textarea name="lbltext1" from="textarea_label">
+	            <area>145,150,340,30</area>
+	            <value>Year:</value>
+	        </textarea>
+
+	        <textarea name="lbltext2" from="lbltext1">
+	            <position>145,190</position>
+	            <value>Genre:</value>
+	        </textarea>
+
+	        <textarea name="lbltext3" from="lbltext1">
+	            <position>145,230</position>
+	            <value>Title:</value>
+	        </textarea>
+	        
+	        <textarea name="year" from="textarea_info">
+	            <area>215,150,365,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+	        <textarea name="genre" from="textarea_info">
+	            <area>230,190,340,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+	        <textarea name="title" from="textarea_info">
+	            <area>220,230,350,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+	        <textarea name="description" from="textarea_plot">
+	            <area>145,280,435,500</area>
+	            <template>%"|SUBTITLE|"\n\n%%DESCRIPTION%</template>
+	        </textarea>	
+	        
+	        <textarea name="castlbl" from="runtimelbl" depends="cast">
+	            <position>145,780</position>
+	            <value>Starring:</value>
+	        </textarea>
+	        
+	        <textarea name="cast" from="textarea_plot">
+	            <area>145,810,435,30</area>
+	            <align>left,bottom</align>
+	            <cutdown>no</cutdown>
+	            <multiline>no</multiline>
+	            <scroll direction="left"/>
+	            <template>%cast%</template>
+	        </textarea>	
+	        
+        </group>	    
+
+        <group name="listpanel2" depends="coverart">
+           <area>800,125,650,1080</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1700" centre="middle">
+	                <position start="54,125" end="800,125" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+	        <imagetype name="coverart">
+	            <area>57,32,530,795</area>
+	            <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
+	            <mask>images/shared/views/tripanel/poster_diffuse.png</mask>
+	        </imagetype>
+	        <imagetype name="coverart_overlay">
+	            <area>0,0,640,980</area>
+	            <alpha>255</alpha>
+	            <filename>images/shared/views/tripanel/poster_overlay.png</filename>
+	        </imagetype>
+        </group>	   
+                     
+        <group name="listpanel1">
+           <area>54,107,860,1003</area>
+           
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="-914,107" end="54,107" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,860,1003</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
+	        </imagetype>
+        	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,860,1003</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
         
-        <imagetype name="listfloorimg" from="fanart">
-            <area>0,473,1920,607</area>
-            <filename>images/shared/list_floor.png</filename>
-        </imagetype>
-        
-        <imagetype name="listfilterimg" from="fanart">
-            <filename>images/shared/list_filter.png</filename>
-        </imagetype>
-        
-        <imagetype name="spotlightimg" from="fanart">
-            <area>0,875,1920,205</area>
-            <filename>images/shared/list_spot.png</filename>
-        </imagetype>
-        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
+	        <buttontree name="gametreelist">
+               <area>7,52,850,800</area>
+	            <numlists>1</numlists>
+	            <spacing>0</spacing>
+	            <buttonlist name="listtemplate" from="buttonlist_threepanel_netvision" />
+	        </buttontree>
+
+           <textarea name="position" from="textarea_label_list">
+               <area>30,843,800,30</area>
+           </textarea>
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+
+	        <animation trigger="AboutToHide">
+	            <section duration="1200" centre="middle">
+	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
+	            </section>
+	        </animation>       
+-->
         </group>
 
+<!--
         <group name="listpanel">
            <area>88,110,1139,970</area>
            
@@ -62,14 +196,6 @@
                <area>62,860,800,30</area>
            </textarea>
 
-<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
-
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
         </group>
         
         <group name="listinfo">
@@ -120,20 +246,8 @@
 	            <align>allcenter</align>
 	        </textarea>
 
-<!--
-	        <group name="listinfodetails" from="basegroupinfodetails">
-	           <position>73,810</position>
-	        </group>
--->
-<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
-
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
         </group>
+-->
   </window>
 
   <window name="edit_metadata">
@@ -301,38 +415,36 @@
 
         <imagetype name="infopanelshade">
             <area>728,0,1192,1080</area>
-            <filename>images/shared/movieinfogradient.png</filename>
+            <filename>images/shared/info/movieinfogradient.png</filename>
+            <alpha>255</alpha>
         </imagetype>
        
         <imagetype name="infopanel">
             <area>728,0,1192,1080</area>
-            <filename>images/shared/info_rightpaneltop.png</filename>
+            <filename>images/shared/info/info_rightpaneltop.png</filename>
         </imagetype>
 
         <group name="infopaneldetails">
            <area>878,70,1042,1010</area>   
 	        <imagetype name="infopanellines">
 	            <area>0,88,1042,853</area>
-	            <filename>images/shared/info_panellines.png</filename>
+	            <filename>images/shared/info/info_panellines_movie.png</filename>
 	        </imagetype>
 
-	        <imagetype name="infopanel_hline1">
-	            <area>0,297,1042,4</area>
-	            <preserveaspect>no</preserveaspect>
-	            <filename>images/shared/info_panel_hline.png</filename>
-	        </imagetype>
-
-	        <imagetype name="infopanel_hline2">
-	            <area>0,341,1042,4</area>
-	            <preserveaspect>no</preserveaspect>
-	            <filename>images/shared/info_panel_hline.png</filename>
-	        </imagetype>
-
-	        <imagetype name="infopanel_hline3">
-	            <area>0,384,1042,4</area>
-	            <preserveaspect>no</preserveaspect>
-	            <filename>images/shared/info_panel_hline.png</filename>
-	        </imagetype>
+           <group name="infopanel_hline_group">
+              <area>0,332,1042,97</area>
+		        <imagetype name="infopanel_hline1">
+		            <area>0,0,1042,11</area>
+		            <preserveaspect>no</preserveaspect>
+		            <filename>images/shared/info/info_panellines_movie_horz.png</filename>
+		        </imagetype>
+		        <imagetype name="infopanel_hline2" from="infopanel_hline1">
+		            <position>0,43</position>
+		        </imagetype>
+		        <imagetype name="infopanel_hline3" from="infopanel_hline1">
+		            <position>0,86</position>
+		        </imagetype>
+	        </group>
 
 	        <textarea name="title" from="textarea_title_info">
 	            <area>0,20,900,65</area>
@@ -423,27 +535,27 @@
 	        </textarea>
 	        
 	        <textarea name="description" from="textarea_plot">
-	            <area>0,495,900,312</area>
+	            <area>0,530,900,312</area>
 	            <scroll direction="vertical" />
 	        </textarea>
 	
 		     <imagetype name="starsbgd_big">
-		         <area>0,860,302,64</area>
+		         <area>0,870,302,64</area>
 		         <filename>images/icons/ratings/rating0.png</filename>
 		     </imagetype>
 		     
 		     <statetype name="rating_state" from="rating_base_big">
-		         <area>0,860,302,64</area>
+		         <area>0,870,302,64</area>
 		     </statetype>
 
 	        <button name="play_button" from="button_info_panel">
 	            <value>Play</value>
-	            <position>0,440</position>
+	            <position>0,470</position>
 	        </button>
 	
 	        <button name="done_button" from="button_info_panel">
 	            <value>Done</value>
-	            <position>150,440</position>
+	            <position>150,470</position>
 	        </button>
       
         </group>

@@ -2332,13 +2332,6 @@
 	            <filename>images/shared/info/info_panellines_movie.png</filename>
 	        </imagetype>
 
-<!--	        
-	        <imagetype name="infopanellines2">
-	            <area>0,254,1042,853</area>
-	            <filename>images/shared/info/info_panellines_livetv.png</filename>
-	        </imagetype>
--->
-
            <group name="infopanel_hline_group">
               <area>0,332,1042,97</area>
 		        <imagetype name="infopanel_hline1">
