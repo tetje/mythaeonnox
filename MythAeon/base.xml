@@ -8809,6 +8809,13 @@
         </imagetype>
      </group>       
 
+     <group name="baseradiobackdrop" from="basebackdrop">
+        <imagetype name="fanartbgd">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/radio/</filename>
+        </imagetype>
+     </group>       
+
      <group name="basegallerybackdrop" from="basebackdrop">
         <imagetype name="fanartbgd">
             <area>0,0,1920,1080</area>
