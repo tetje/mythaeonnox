@@ -75,6 +75,14 @@
         <color>#929292</color>
     </fontdef>
 
+    <fontdef name="Font_Info_Red" from="Font_Info">
+        <color>#FF0000</color>
+    </fontdef>
+
+    <fontdef name="Font_Info_Green" from="Font_Info">
+        <color>#00FF00</color>
+    </fontdef>
+
     <fontdef name="Font_Info_Selected" from="Font_Info">
 <!--        <color>#323232</color> -->
         <color>#000000</color>
@@ -8373,22 +8381,22 @@
             <alpha>64</alpha>
         </imagetype>
 
-        <textarea name="channellbl" from="textarea_label">
+        <textarea name="textlbl1" from="textarea_label">
             <area>105,110,340,30</area>
             <value>Channel:</value>
         </textarea>
      
-        <textarea name="runtimelbl" from="textarea_label">
-            <area>105,150,340,30</area>
+        <textarea name="textlbl2" from="textlbl1">
+            <position>105,150</position>
             <value>Runtime:</value>
         </textarea>
 
-        <textarea name="datelbl" from="runtimelbl">
+        <textarea name="textlbl3" from="textlbl1">
             <position>105,190</position>
             <value>Genre:</value>
         </textarea>
 
-        <textarea name="titlelbl" from="runtimelbl">
+        <textarea name="textlbl4" from="textlbl1">
             <position>105,230</position>
             <value>Title:</value>
         </textarea>
@@ -8827,6 +8835,13 @@
         <imagetype name="fanartbgd">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/news/</filename>
+        </imagetype>
+     </group>       
+
+     <group name="basezmbackdrop" from="basebackdrop">
+        <imagetype name="fanartbgd">
+            <area>0,0,1920,1080</area>
+            <filename>images/backgrounds/zoneminder/</filename>
         </imagetype>
      </group>       
 
