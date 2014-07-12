@@ -254,25 +254,32 @@
         </animation>       
 -->
 
-        <imagetype name="multiplextabletbgdimg">
-            <area>0,0,1694,846</area>
-            <filename>images/shared/multiplex_back.png</filename>
+        <imagetype name="multiplextabletglowimg">
+            <area>0,0,1695,1015</area>
+            <alpha>64</alpha>
+            <filename>images/shared/wall/wall_bg_glow.png</filename>
         </imagetype>
-        
-        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-            <filename>images/shared/multiplex_tablet_bigthumb.png</filename>
+
+        <imagetype name="multiplextabletimg">
+            <area>0,0,1695,1015</area>
+            <filename>images/shared/wall/wall_bg.png</filename>
         </imagetype>
-	
+
+        <imagetype name="multiplextabletlayoutimg">
+            <area>0,-2,1695,846</area>
+            <filename>images/shared/views/fanart_layout.png</filename>
+        </imagetype>
+		
         <group name="eventinfo">
            <area>0,0,1694,846</area>
 
-
+<!--
 	        <imagetype name="frameimage">
 	            <area>729,58,949,538</area>
 	            <preserveaspect>no</preserveaspect>
 	            <filename>images/backgrounds/zoneminder/</filename>
 	        </imagetype>
-
+-->
            <group name="additionaleventinfo">
               <area>30,85,350,270</area>
               
@@ -329,6 +336,16 @@
 		            <area>5,165,350,30</area>
 		        </textarea>
 	
+		        <button name="play_button" from="button_tvshow_panel">
+		            <position>-17,235</position>
+		            <value>Watch</value>
+		        </button>
+		
+		        <button name="delete_button" from="button_tvshow_panel">
+		            <value>Done</value>
+		            <position>-17,305</position>
+		        </button>
+
 	        </group>   
 
         </group>
@@ -362,107 +379,10 @@
         </animation>
 
         <buttonlist name="layout2_eventlist" from="buttonlist_zonemindershowpanel_one_row">
-            <position>14,295</position>
+	       <area>360,40,1600,900</area>
+	       <buttonarea>0,0,1600,900</buttonarea>
         </buttonlist>
 
-<!--
-        <buttonlist name="layout2_eventlist">
-            <area>50,170,700,340</area>
-            <layout>grid</layout>
-            <spacing>10</spacing>
-            <buttonarea>0,0,700,340</buttonarea>
-            <statetype name="buttonitem">
-                <area>0,0,700,340</area>
-                <state name="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,690,330</area>
-                        <fill style="gradient">
-                            <gradient start="#505050" end="#000000" alpha="200"/>
-                        </fill>
-                    </shape>
-
-                    <imagetype name="buttonimage">
-                        <area>15,15,400,300</area>
-                    </imagetype>
-
-                    <textarea name="namelabel" from="basetextarea">
-                        <area>415,30,285,30</area>
-                        <font>listlabel</font>
-                        <align>hcenter,top</align>
-                        <value>Name</value>
-                    </textarea>
-                    <textarea name="cameralabel" from="namelabel">
-                        <area>415,100,285,30</area>
-                        <value>Camera</value>
-                    </textarea>
-                    <textarea name="datelabel" from="namelabel">
-                        <area>415,170,285,30</area>
-                        <value>Date</value>
-                    </textarea>
-                    <textarea name="durationlabel" from="namelabel">
-                        <area>415,240,285,30</area>
-                        <value>Duration</value>
-                    </textarea>
-
-                    <textarea name="buttontext" from="basetextarea">
-                        <area>415,55,285,30</area>
-                        <align>hcenter,top</align>
-                        <font>basegrey</font>
-                    </textarea>
-                    <textarea name="camera" from="buttontext">
-                        <area>415,125,285,30</area>
-                    </textarea>
-                    <textarea name="time" from="buttontext">
-                        <area>415,195,285,30</area>
-                    </textarea>
-                    <textarea name="length" from="buttontext">
-                        <area>415,265,285,30</area>
-                    </textarea>
-
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,690,330</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="255"/>
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-               <state name="selectedinactive" from="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,690,330</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="100"/>
-                        </fill>
-                    </shape>
-
-                    <textarea name="buttontext">
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>240,270</position>
-                <state type="on">
-                    <imagetype name="upon">
-                        <filename>up_arrow.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>456,270</position>
-                <state type="on">
-                    <imagetype name="dnon">
-                        <filename>down_arrow.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </buttonlist>
-
--->
      </group>
 <!--+++++++++++++++++++ layout 3 - grid view 6x2 +++++++++++++++++++++++++-->
 
@@ -492,126 +412,79 @@
             </section>
         </animation>
 
-        <button name="play_button" from="button_tvshow_panel">
-            <position>373,40</position>
-            <value>Watch</value>
-        </button>
-
-        <button name="delete_button" from="button_tvshow_panel">
-            <value>Done</value>
-            <position>373,110</position>
-        </button>
      </group>
    
     </window>
 
     <window name="zmplayer">
-
-        <area>837,125,956,545</area>
-
-        <!-- labels -->
-        <group name="eventinfogroup">
-	        <area>-713,250,713,294</area>
-	        <shape name="groupselectorbuttonlistblackbgd">
-	            <area>0,0,713,294</area>
-	            <type>box</type>
-	            <line color="#000000" alpha="255" width="1" />
-	            <fill style="solid" color="#000000" alpha="255" />
-	        </shape>
-	
-	        <imagetype name="groupselectorbuttonlistbgd">
-	            <area>0,0,713,294</area>
-	            <preserveaspect>no</preserveaspect>
-	            <filename>images/shared/multiplex_tablet_bigthumb_leftpanel_bottom.png</filename>
-	        </imagetype>
-	
-	        <textarea name="datelbl" from="textarea_label">
-	            <area>22,17,350,30</area>
-	            <value>Date:</value>
-	        </textarea>
-		        
-	        <textarea name="eventlbl" from="textarea_label">
-	            <area>22,87,350,30</area>
-	            <value>Event name:</value>
-	        </textarea>
-		        
-	        <textarea name="cameralbl" from="textarea_label">
-	            <area>22,157,350,30</area>
-	            <value>Camera name:</value>
-	        </textarea>
-		        
-	        <textarea name="framelbl" from="textarea_label">
-	            <area>22,227,350,30</area>
-	            <value>Frame:</value>
-	        </textarea>
-		        
-           <!-- widgets -->
-	        <textarea name="date_text" from="textarea_info">
-	            <area>22,42,350,30</area>
-	        </textarea>
-
-	        <textarea name="event_text" from="textarea_info">
-	            <area>22,112,350,30</area>
-	        </textarea>
-
-	        <textarea name="camera_text" from="textarea_info">
-	            <area>22,182,350,30</area>
-	        </textarea>
-
-	        <textarea name="frame_text" from="textarea_info">
-	            <area>22,252,350,30</area>
-	        </textarea>
-        </group>
-
+   
+        <area>0,0,1920,1080</area>
         <imagetype name="frameimage">
-            <area>3,3,949,538</area>
+            <area>0,0,1920,1080</area>
             <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
         </imagetype>
-
-
-        <textarea name="noevents_text" from="textarea_label">
-            <area>-696,-32,993,30</area>
-            <align>left,top</align>
-            <multiline>no</multiline>
-            <value>There are no events to show</value>
-        </textarea>
 
         <!-- fullscreen player -->
         <imagetype name="framefsimage">
             <area>0,0,1920,1080</area>
         </imagetype>
 
-        <!-- buttons -->
-        <shape name="groupselectorbuttonblackbgd">
-            <area>-354,5,355,243</area>
-            <type>box</type>
-            <line color="#000000" alpha="255" width="1" />
-            <fill style="solid" color="#000000" alpha="255" />
-        </shape>
+        <group name="zmplayercontrols">
+           <area>0,960,1920,422</area>
 
-        <imagetype name="groupselectorbuttonbgd">
-            <area>-354,5,355,243</area>
-            <preserveaspect>no</preserveaspect>
-            <filename>images/shared/multiplex_tablet_bigthumb_midpanel_top.png</filename>
-        </imagetype>
+	        <imagetype name="osd_statusbgd">
+	            <filename>images/osd/osd_back.png</filename>
+	            <area>0,70,1920,50</area>
+	            <alpha>255</alpha>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	        <textarea name="date_text" from="textarea_info">
+	            <area>20,70,350,50</area>
+	        </textarea>
 
-        <button name="play_button" from="button_tvshow_panel">
-            <position>-352,25</position>
-            <value>Save</value>
-        </button>
+	        <textarea name="event_text" from="textarea_info">
+	            <area>370,70,350,50</area>
+	            <align>hcenter,vcenter</align>
+	        </textarea>
 
-        <button name="delete_button" from="button_tvshow_panel">
-            <position>-352,95</position>
-            <value>Save</value>
-        </button>
+	        <textarea name="camera_text" from="textarea_info">
+	            <area>1200,70,350,50</area>
+	            <align>hcenter,vcenter</align>
+	        </textarea>
 
-        <button name="prev_button" from="button_skipbwd">
-            <position>0,410</position>
-        </button>
+	        <textarea name="frame_text" from="textarea_info">
+	            <area>1550,70,350,50</area>
+	            <align>right,vcenter</align>
+	        </textarea>
 
-        <button name="next_button" from="button_skipfwd">
-            <position>810,410</position>
-        </button>
+	        <textarea name="noevents_text" from="textarea_label">
+	            <area>-696,-32,993,30</area>
+	            <align>left,top</align>
+	            <multiline>no</multiline>
+	            <value>There are no events to show</value>
+	        </textarea>
+	
+	        <!-- buttons -->
+
+           <group name="zmplaycontrolgroup">
+              <area>755,-5,400,50</area>
+		        <button name="prev_button" from="button_skipbwd">
+		            <position>0,0</position>
+		        </button>
+		
+		        <button name="play_button" from="button_play">
+		            <position>100,0</position>
+		        </button>
+		
+		        <button name="delete_button" from="button_stop">
+		            <position>200,0</position>
+		        </button>
+		
+		        <button name="next_button" from="button_skipfwd">
+		            <position>300,0</position>
+		        </button>
+	        </group>
+	    </group>
 
     </window>
 

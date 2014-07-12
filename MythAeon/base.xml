@@ -2488,7 +2488,7 @@
 
    <buttonlist name="buttonlist_zonemindershowpanel_one_row">
        <area>0,0,712,280</area>
-       <layout>vertical</layout>
+       <layout>grid</layout>
        <spacing>0</spacing>
        <scrollstyle>free</scrollstyle>
        <arrange>stack</arrange>
@@ -2498,40 +2498,40 @@
        <buttonarea>0,0,712,280</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
-              <area>0,0,712,280</area>
+              <area>0,0,712,266</area>
                <imagetype name="previewbgd">
-                   <area>5,30,440,256</area>
+                   <area>5,5,440,256</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvborder.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
               <imagetype name="buttonimage">
-                  <area>15,40,420,236</area>
+                  <area>15,15,420,236</area>
                   <mask>images/shared/multiplex_zonemindermask.png</mask>
 	               <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
               </imagetype>
                <imagetype name="previewglass">
-                   <area>15,40,420,236</area>
+                   <area>15,15,420,236</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvglass.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
               <group name="eventdetails">
-                 <area>440,5,272,280</area>
+                 <area>440,0,272,266</area>
 			        <textarea name="datelbl" from="textarea_label">
 			            <area>22,17,350,30</area>
 			            <value>Time:</value>
 			        </textarea>			        
 			        <textarea name="eventlbl" from="textarea_label">
-			            <area>22,87,350,30</area>
+			            <area>22,82,350,30</area>
 			            <value>Event:</value>
 			        </textarea>			        
 			        <textarea name="cameralbl" from="textarea_label">
-			            <area>22,157,350,30</area>
+			            <area>22,147,350,30</area>
 			            <value>Camera:</value>
 			        </textarea>			        
 			        <textarea name="framelbl" from="textarea_label">
-			            <area>22,227,350,30</area>
+			            <area>22,212,350,30</area>
 			            <value>Length:</value>
 			        </textarea>		        
 		           <!-- widgets -->
@@ -2539,58 +2539,58 @@
 			            <area>22,42,350,30</area>
 			        </textarea>	
 			        <textarea name="buttontext" from="textarea_info">
-			            <area>22,112,350,30</area>
+			            <area>22,107,350,30</area>
 			        </textarea>	
 			        <textarea name="camera" from="textarea_info">
-			            <area>22,182,350,30</area>
+			            <area>22,172,350,30</area>
 			        </textarea>	
 			        <textarea name="length" from="textarea_info">
-			            <area>22,252,350,30</area>
+			            <area>22,227,350,30</area>
 			        </textarea>
 		        </group>
            </state>
            <state name="selectedactive">
-              <area>0,0,712,280</area>
+              <area>0,0,712,266</area>
               <imagetype name="Listpanel_selectbar">
-                  <area>0,0,712,320</area>
+                  <area>0,0,712,266</area>
                   <filename>images/shared/listpanel_selectbar.png</filename>
               </imagetype>
-               <imagetype name="previewbgd">
-                   <area>5,30,440,256</area>
-                   <alpha>255</alpha>
-                   <filename>images/shared/multiplex_tvborder.png</filename>
-                   <preserveaspect>no</preserveaspect>
-               </imagetype>
+              <imagetype name="previewbgd">
+                  <area>5,5,440,256</area>
+                  <alpha>255</alpha>
+                  <filename>images/shared/multiplex_tvborder.png</filename>
+                  <preserveaspect>no</preserveaspect>
+              </imagetype>
               <imagetype name="buttonimage">
-                  <area>15,40,420,236</area>
+                  <area>15,15,420,236</area>
                   <mask>images/shared/multiplex_zonemindermask.png</mask>
 	               <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
               </imagetype>
                <imagetype name="previewglass">
-                   <area>15,40,420,236</area>
+                   <area>15,15,420,236</area>
                    <alpha>255</alpha>
                    <filename>images/shared/multiplex_tvglass.png</filename>
                    <preserveaspect>no</preserveaspect>
                </imagetype>
               <group name="eventdetails">
-                 <area>440,5,272,280</area>
+                 <area>440,0,272,266</area>
 			        <textarea name="datelbl" from="textarea_label">
 			            <area>22,17,350,30</area>
   		               <font>Font_Label_List_Selected</font>
 			            <value>Time:</value>
 			        </textarea>			        
 			        <textarea name="eventlbl" from="textarea_label">
-			            <area>22,87,350,30</area>
+			            <area>22,85,350,30</area>
   		               <font>Font_Label_List_Selected</font>
 			            <value>Event:</value>
 			        </textarea>			        
 			        <textarea name="cameralbl" from="textarea_label">
-			            <area>22,157,350,30</area>
+			            <area>22,147,350,30</area>
   		               <font>Font_Label_List_Selected</font>
 			            <value>Camera:</value>
 			        </textarea>			        
 			        <textarea name="framelbl" from="textarea_label">
-			            <area>22,227,350,30</area>
+			            <area>22,212,350,30</area>
   		               <font>Font_Label_List_Selected</font>
 			            <value>Length:</value>
 			        </textarea>		        
@@ -2600,21 +2600,21 @@
                      <font>Font_Info_Selected</font>
 			        </textarea>	
 			        <textarea name="buttontext" from="textarea_info">
-			            <area>22,112,350,30</area>
+			            <area>22,107,350,30</area>
                      <font>Font_Info_Selected</font>
 			        </textarea>	
 			        <textarea name="camera" from="textarea_info">
-			            <area>22,182,350,30</area>
+			            <area>22,172,350,30</area>
                      <font>Font_Info_Selected</font>
 			        </textarea>	
 			        <textarea name="length" from="textarea_info">
-			            <area>22,252,350,30</area>
+			            <area>22,227,350,30</area>
                      <font>Font_Info_Selected</font>
 			        </textarea>
 		        </group>
            </state>
            <state name="inactive" from="active"/>
-           <state name="selectedinactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
        </statetype>
    </buttonlist>
 
