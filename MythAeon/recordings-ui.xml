@@ -463,7 +463,7 @@
 						      <area>63,1,102,50</area>
 						      <type>roundbox</type>
 						      <cornerradius>2</cornerradius>
-						      <line color="#600000" alpha="255" width="3" />
+						      <line color="#454545" alpha="255" width="3" />
 						      <fill color="#FFFFFF" alpha="64" />
 						  </shape>
 				
@@ -1671,12 +1671,12 @@
 								  <shape name="defaultshape2">
 								      <area>2,13,26,26</area>
 								      <type>ellipse</type>
-								      <fill color="#600000" alpha="255" />
+								      <fill color="#454545" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape3">
 								      <area>2,8,9,34</area>
 								      <type>box</type>
-								      <fill color="#600000" alpha="255" />
+								      <fill color="#454545" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape4">
 								      <area>10,10,4,30</area>
@@ -1722,7 +1722,7 @@
 								      <area>63,1,102,50</area>
 								      <type>roundbox</type>
 								      <cornerradius>2</cornerradius>
-								      <line color="#600000" alpha="255" width="3" />
+								      <line color="#454545" alpha="255" width="3" />
 								      <fill color="#FFFFFF" alpha="64" />
 								  </shape>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
@@ -2114,12 +2114,12 @@
 								  <shape name="defaultshape2">
 								      <area>2,13,26,26</area>
 								      <type>ellipse</type>
-								      <fill color="#600000" alpha="255" />
+								      <fill color="#454545" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape3">
 								      <area>2,8,9,34</area>
 								      <type>box</type>
-								      <fill color="#600000" alpha="255" />
+								      <fill color="#454545" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape4">
 								      <area>10,10,4,30</area>
@@ -2165,7 +2165,7 @@
 								      <area>63,1,102,50</area>
 								      <type>roundbox</type>
 								      <cornerradius>2</cornerradius>
-								      <line color="#600000" alpha="255" width="3" />
+								      <line color="#454545" alpha="255" width="3" />
 								      <fill color="#FFFFFF" alpha="64" />
 								  </shape>
 								  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
