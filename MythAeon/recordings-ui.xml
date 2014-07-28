@@ -282,6 +282,7 @@
 		        <statetype name="autoexpire">
 		            <state name="yes">
 						  <area>0,0,64,50</area>
+<!--
 		              <imagetype name="iconbgd">
 		                  <area>-6,-5,76,60</area>
 		                  <alpha>255</alpha>
@@ -289,6 +290,7 @@
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <shape name="defaultshape1">
 						      <area>12,5,40,40</area>
 						      <type>ellipse</type>
@@ -302,18 +304,21 @@
 						  <shape name="defaultshape3" from="defaultshape2">
 						      <area>30,26,10,3</area>
 						  </shape>
+<!--
 		              <imagetype name="iconglass">
 		                  <area>0,0,63,50</area>
 		                  <alpha>255</alpha>
 		                  <filename>images/shared/list_musicicon_glass.png</filename>
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
+-->
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 		        <statetype name="commflagged">
 		            <state name="yes">
 						  <area>84,0,64,50</area>
+<!--
 		              <imagetype name="iconbgd">
 		                  <area>-6,-5,76,60</area>
 		                  <alpha>255</alpha>
@@ -321,6 +326,7 @@
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <shape name="defaultshape1">
 						      <area>12,5,40,40</area>
 						      <type>box</type>
@@ -340,18 +346,21 @@
 						  <shape name="defaultshape7" from="defaultshape6">
 						      <position>37,18</position>
 						  </shape>
+<!--
 		              <imagetype name="iconglass">
 		                  <area>0,0,63,50</area>
 		                  <alpha>255</alpha>
 		                  <filename>images/shared/list_musicicon_glass.png</filename>
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
+-->
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 		        <statetype name="bookmark">
 		            <state name="yes">
 						  <area>166,0,64,50</area>
+<!--
 		              <imagetype name="iconbgd">
 		                  <area>-6,-5,76,60</area>
 		                  <alpha>255</alpha>
@@ -359,6 +368,7 @@
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <shape name="defaultshape1">
 						      <area>12,8,40,37</area>
 						      <type>box</type>
@@ -375,18 +385,21 @@
 						  <shape name="defaultshape4" from="defaultshape2">
 						      <area>40,7,2,17</area>
 						  </shape>
+<!--
 		              <imagetype name="iconglass">
 		                  <area>0,0,63,50</area>
 		                  <alpha>255</alpha>
 		                  <filename>images/shared/list_musicicon_glass.png</filename>
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
+-->
 		            </state>
 		            <state name="no"/>
 		        </statetype>
 		        <statetype name="cutlist">
 		            <state name="yes">
 						  <area>250,0,64,50</area>
+<!--
 		              <imagetype name="iconbgd">
 		                  <area>-6,-5,76,60</area>
 		                  <alpha>255</alpha>
@@ -394,6 +407,7 @@
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <shape name="defaultshape1">
 						      <area>13,5,40,40</area>
 						      <type>box</type>
@@ -415,12 +429,14 @@
 						  <shape name="defaultshape5" from="defaultshape4">
 						      <position>11,26</position>
 						  </shape>
+<!--
 		              <imagetype name="iconglass">
 		                  <area>0,0,63,50</area>
 		                  <alpha>255</alpha>
 		                  <filename>images/shared/list_musicicon_glass.png</filename>
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
+-->
 		            </state>
 		            <state name="no"/>
 		        </statetype>
@@ -445,6 +461,7 @@
 		            <area>168,0,200,50</area>
 		            <state name="cc">
 						  <area>0,0,165,50</area>
+<!--
 				        <imagetype name="iconbgd">
 				            <area>-6,-5,76,60</area>
 				            <alpha>255</alpha>
@@ -468,6 +485,7 @@
 						  </shape>
 				
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <shape name="defaulttvborder">
 						      <area>15,10,36,24</area>
 						      <type>roundbox</type>
@@ -496,27 +514,31 @@
 						      <position>22,26</position>
 						  </shape>
 						  <textarea name="subtitletxt" from="textarea_icon">
-						      <area>60,2,105,50</area>
-						      <font>Font_Icon_Base_White_24_Bold</font>
+						      <area>52,10,105,40</area>
+						      <align>left,vcenter</align>
+						      <font>Font_Icon_Base_White_50_Bold</font>
 						      <value>CC</value>
 						  </textarea>           
 		            </state>
 		            <state name="subtitles" from="cc">
 						  <textarea name="subtitletxt" from="textarea_icon">
-						      <area>60,2,105,50</area>
-						      <font>Font_Icon_Base_White_24_Bold</font>
+						      <area>52,10,105,40</area>
+						      <align>left,vcenter</align>
+						      <font>Font_Icon_Base_White_50_Bold</font>
 						      <value>SUB</value>
 						  </textarea>           
 		            </state>
 		            <state name="onscreensub" from="cc">
 						  <textarea name="subtitletxt" from="textarea_icon">
-						      <area>60,2,105,50</area>
-						      <font>Font_Icon_Base_White_24_Bold</font>
+						      <area>52,10,105,40</area>
+						      <align>left,vcenter</align>
+						      <font>Font_Icon_Base_White_50_Bold</font>
 						      <value>OSD</value>
 						  </textarea>           
 		            </state>
 		            <state name="default">
 						  <area>0,0,64,50</area>
+<!--
 		              <imagetype name="iconbgd">
 	  	                  <area>-6,-5,76,60</area>
 		                  <alpha>255</alpha>
@@ -524,6 +546,7 @@
 		                  <preserveaspect>no</preserveaspect>
 		              </imagetype>
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 							  <textarea name="icontextlbl" from="textarea_icon">
 							      <area>2,2,60,38</area>
 							      <value>NO</value>
@@ -534,25 +557,31 @@
 							      <value>Subtitles</value>
 							  </textarea>
 		            </state>
+<!--
 	               <imagetype name="iconglass">
 	                   <area>0,0,63,50</area>
 	                   <alpha>255</alpha>
 	                   <filename>images/shared/list_musicicon_glass.png</filename>
 	                   <preserveaspect>no</preserveaspect>
 	               </imagetype>
+-->
 		        </statetype>
 	       
 		        <statetype name="videoprops">
 	              <area>84,0,64,50</area>
+<!--
 	               <imagetype name="iconbgd">
   	                   <area>-6,-5,76,60</area>
 	                   <alpha>255</alpha>
 	                   <filename>images/shared/musicinfoshadow.png</filename>
 	                   <preserveaspect>no</preserveaspect>
 	               </imagetype>
+-->
 		            <state name="hd1080">
 						  <area>0,0,165,50</area>
+<!--
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <textarea name="icontextlbl" from="textarea_icon">
 						      <area>0,2,60,38</area>
 						      <font>Font_Icon_Base_Italic</font>
@@ -587,7 +616,9 @@
 		            </state>
 		            <state name="widescreen">
 						  <area>0,0,165,50</area>
+<!--
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <textarea name="icontextlbl" from="textarea_icon">
 						      <area>2,2,60,38</area>
 						      <value>SD</value>
@@ -605,26 +636,32 @@
 						      <value>576p</value>
 						  </textarea>
 		            </state>
+<!--
 	               <imagetype name="iconglass">
 	                   <area>0,0,63,50</area>
 	                   <alpha>255</alpha>
 	                   <filename>images/shared/list_musicicon_glass.png</filename>
 	                   <preserveaspect>no</preserveaspect>
 	               </imagetype>
+-->
 		        </statetype>
 		        
 		        <statetype name="audioprops">
 		            <area>0,0,64,50</area>
+<!--
 	               <imagetype name="iconbgd">
   	                   <area>-6,-5,76,60</area>
 	                   <alpha>255</alpha>
 	                   <filename>images/shared/musicinfoshadow.png</filename>
 	                   <preserveaspect>no</preserveaspect>
 	               </imagetype>
+-->
 		            <showempty>yes</showempty>
 		            <state name="stereo">
 						  <area>0,0,64,50</area>
+<!--
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <shape name="defaultsoundborder">
 						      <area>17,10,31,30</area>
 						      <type>box</type>
@@ -641,7 +678,9 @@
 		            </state>
 		            <state name="surround">
 						  <area>0,0,64,50</area>
+<!--
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <shape name="defaultsoundborder">
 						      <area>17,10,31,30</area>
 						      <type>box</type>
@@ -670,7 +709,9 @@
 		            </state>
 		            <state name="dolby">
 						  <area>0,0,64,50</area>
+<!--
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <shape name="defaultshape1">
 						      <area>5,10,26,30</area>
 						      <type>box</type>
@@ -706,7 +747,9 @@
 		            </state>
 		            <state name="mono">
 						  <area>0,0,64,50</area>
+<!--
 						  <group name="iconbgdlong" from="defaultinfoiconbgdshort"/>
+-->
 						  <shape name="defaultsoundborder">
 						      <area>17,10,31,30</area>
 						      <type>box</type>
@@ -719,12 +762,14 @@
 						  </shape>
 		            </state>
 		            <state name="default" from="stereo"/>
+<!--
 	               <imagetype name="iconglass">
 	                   <area>0,0,63,50</area>
 	                   <alpha>255</alpha>
 	                   <filename>images/shared/list_musicicon_glass.png</filename>
 	                   <preserveaspect>no</preserveaspect>
 	               </imagetype>
+-->
 		        </statetype>
 
 	        </group>
@@ -1509,21 +1554,6 @@
 				                  <preserveaspect>no</preserveaspect>
 				              </imagetype>
                         </state>
-                        <state name="processing">
-			                  <imagetype name="animation1">
-			                     <area>0,10,60,10</area>
-			                     <filepattern low="1" high="5" cycle="reverse">images/icons/animation/busy_%1.png</filepattern>
-			                     <delay>100</delay>
-			                  </imagetype>
-				               <textarea name="infotext" from="textarea_info_small">
-				                   <area>0,20,60,20</area>
-				                   <alpha>192</alpha>
-				                   <case>normal</case>
-				                   <align>allcenter</align>
-				                   <font>Font_Info_Small_White</font>
-				                   <value>Flag</value>
-				               </textarea>	  
-                        </state>
                         <state name="bookmark">
 								  <area>0,0,64,50</area>
 				              <imagetype name="iconbgd">
@@ -1555,6 +1585,21 @@
 				                  <filename>images/shared/list_musicicon_glass.png</filename>
 				                  <preserveaspect>no</preserveaspect>
 				              </imagetype>
+                        </state>
+                        <state name="processing">
+			                  <imagetype name="animation1">
+			                     <area>0,10,60,10</area>
+			                     <filepattern low="1" high="5" cycle="reverse">images/icons/animation/busy_%1.png</filepattern>
+			                     <delay>100</delay>
+			                  </imagetype>
+				               <textarea name="infotext" from="textarea_info_small">
+				                   <area>0,20,60,20</area>
+				                   <alpha>192</alpha>
+				                   <case>normal</case>
+				                   <align>allcenter</align>
+				                   <font>Font_Info_Small_White</font>
+				                   <value>Flag</value>
+				               </textarea>	  
                         </state>
                         <state name="inuse"/>
                         <state name="transcoded"/>
@@ -1671,12 +1716,12 @@
 								  <shape name="defaultshape2">
 								      <area>2,13,26,26</area>
 								      <type>ellipse</type>
-								      <fill color="#454545" alpha="255" />
+								      <fill color="#858585" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape3">
 								      <area>2,8,9,34</area>
 								      <type>box</type>
-								      <fill color="#454545" alpha="255" />
+								      <fill color="#858585" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape4">
 								      <area>10,10,4,30</area>
@@ -2114,12 +2159,12 @@
 								  <shape name="defaultshape2">
 								      <area>2,13,26,26</area>
 								      <type>ellipse</type>
-								      <fill color="#454545" alpha="255" />
+								      <fill color="#858585" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape3">
 								      <area>2,8,9,34</area>
 								      <type>box</type>
-								      <fill color="#454545" alpha="255" />
+								      <fill color="#858585" alpha="255" />
 								  </shape>
 								  <shape name="defaultshape4">
 								      <area>10,10,4,30</area>

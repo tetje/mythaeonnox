@@ -364,7 +364,7 @@
         </group>
 
         <group name="listinfodetails" from="basegroupinfodetails">
-           <position>1300,990</position>
+           <position>1420,990</position>
 
   	        <animation trigger="AboutToShow">
 	           <section duration="1000" centre="middle">
@@ -562,12 +562,12 @@
 	        </buttonlist>
 
 	        <textarea name="genres" from="textarea_title_sub">
-	            <area>510,320,900,30</area>
+	            <area>510,325,900,30</area>
 	            <align>allcenter</align>
 	        </textarea>
 	
 	        <textarea name="title" from="textarea_title">
-	            <area>510,355,900,45</area>
+	            <area>510,360,900,45</area>
 	            <align>allcenter</align>
 	            <colorcycle start="#000000" end="#ffffff" steps="255"/>
 	        </textarea>
@@ -580,7 +580,7 @@
            </imagetype>
  -->            
 	        <group name="listinfodetails" from="basegroupinfodetailswall">
-	           <position>0,320</position>
+	           <position>0,342</position>
 	        </group>
 	     </group>
 	
@@ -785,7 +785,7 @@
            </statetype>
 
 	        <group name="listinfodetails" from="basegroupinfodetails">
-	           <position>0,810</position>
+	           <position>80,810</position>
 	        </group>
 
 <!-- Fix me: This does not work will when a movie has played and one returns to the main screen

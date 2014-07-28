@@ -301,19 +301,33 @@
         <color>#FFFFFF</color>
     </fontdef>
         
-    <fontdef name="Font_Icon_Base_Green" from="Font_Icon_Base">
+    <fontdef name="Font_Icon_Base_White_50_Bold" from="Font_Icon_Base_Black_24_Bold">
+        <color>#FFFFFF</color>
+        <pixelsize>40</pixelsize>
+        <weight>light</weight>
+        <stretch>2</stretch>
+    </fontdef>
+        
+    <fontdef name="Font_Icon_Base_White_45_Bold" from="Font_Icon_Base_Black_24_Bold">
+        <color>#FFFFFF</color>
+        <pixelsize>46</pixelsize>
+        <weight>light</weight>
+        <stretch>2</stretch>
+    </fontdef>
+        
+    <fontdef name="Font_Icon_Base_Green" from="Font_Icon_Base_White_45_Bold">
         <color>#00FF00</color>
     </fontdef>
         
-    <fontdef name="Font_Icon_Base_Yellow" from="Font_Icon_Base">
+    <fontdef name="Font_Icon_Base_Yellow" from="Font_Icon_Base_White_45_Bold">
         <color>#FFFF00</color>
     </fontdef>
         
-    <fontdef name="Font_Icon_Base_Orange" from="Font_Icon_Base">
+    <fontdef name="Font_Icon_Base_Orange" from="Font_Icon_Base_White_45_Bold">
         <color>#FF8000</color>
     </fontdef>
         
-    <fontdef name="Font_Icon_Base_Red" from="Font_Icon_Base">
+    <fontdef name="Font_Icon_Base_Red" from="Font_Icon_Base_White_45_Bold">
         <color>#FF0000</color>
     </fontdef>
 
@@ -1083,6 +1097,7 @@
            <textarea name="none" from="textarea_icon">
                <area>0,0,63,50</area>
                <font>Font_Icon_Base_Black</font>
+               <align>left,vcenter</align>
                <value>0</value>
            </textarea>           
         </state>
@@ -1090,6 +1105,7 @@
            <textarea name="lowest" from="textarea_icon">
                <area>0,0,62,50</area>
                <font>Font_Icon_Base_Green</font>
+               <align>left,vcenter</align>
                <value>1</value>
            </textarea>           
         </state>
@@ -1097,6 +1113,7 @@
            <textarea name="low" from="textarea_icon">
                <area>0,0,62,50</area>
                <font>Font_Icon_Base_Yellow</font>
+               <align>left,vcenter</align>
                <value>2</value>
            </textarea>           
         </state>
@@ -1104,6 +1121,7 @@
            <textarea name="medium" from="textarea_icon">
                <area>0,0,62,50</area>
                <font>Font_Icon_Base_Orange</font>
+               <align>left,vcenter</align>
                <value>3</value>
            </textarea>           
         </state>
@@ -1111,6 +1129,7 @@
            <textarea name="high" from="textarea_icon">
                <area>0,0,62,50</area>
                <font>Font_Icon_Base_Red</font>
+               <align>left,vcenter</align>
                <value>4</value>
            </textarea>           
         </state>
@@ -7722,6 +7741,7 @@
     <!-- Aeon definitions of groups used to create various icons -->
      <group name="defaultinfoiconbgd">
 		  <area>0,0,128,50</area>
+<!--
 		  <shape name="defaulticonborder">
 		      <area>0,0,128,50</area>
 		      <type>roundbox</type>
@@ -7740,25 +7760,28 @@
 		      <cornerradius>5</cornerradius>
 		      <fill color="#000000" alpha="255" />
 		  </shape>
+-->
      </group>
 
      <group name="defaultinfoiconbgdshort">
 		  <area>0,0,64,50</area>
+<!--
 		  <shape name="defaulticonborder">
 		      <area>0,0,64,50</area>
 		      <type>roundbox</type>
 		      <cornerradius>2</cornerradius>
 		      <line color="#000000" alpha="128" width="1" />
 		      <fill color="#858585" alpha="255" />
-<!--
+
 				<fill style="gradient">
 					<gradient direction="vertical" alpha="255">
 						<stop position="0" color="#FFFFFF" alpha="255"/>
 						<stop position="70" color="#A1A1A1" alpha="255" />
 					</gradient>
 				</fill>
--->
+
 		  </shape>
+-->
 	  </group>
 
      <group name="defaultinfoiconbgdmid" from="defaultinfoiconbgd">
@@ -7783,6 +7806,7 @@
 
 	  <group name="defaultinfoiconseason">
 		  <area>0,0,200,50</area>
+<!--
         <imagetype name="iconbgd" depends="##x##">
             <area>-6,-5,76,60</area>
             <alpha>255</alpha>
@@ -7806,6 +7830,7 @@
 		  </shape>
 
 		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="##x##"/>
+-->
 		  <textarea name="icontextlbl" from="textarea_icon" depends="##x##">
 		      <area>2,2,60,38</area>
 		      <value>S</value>
@@ -7815,25 +7840,35 @@
 		      <font>Font_Icon_Base_Small</font>
 		      <value>Season</value>
 		  </textarea>
+<!--
 		  <textarea name="##x##lbl" from="textarea_icon" depends="##x##">
 		      <area>60,7,134,22</area>
 		      <font>Font_Icon_Base_White_22</font>
 		      <value>Episode</value>
 		  </textarea>           
+-->
 		  <textarea name="##x##" from="textarea_icon">
+<!--
 		      <area>60,24,134,24</area>
 		      <font>Font_Icon_Base_White_24_Bold</font>
+-->
+		      <area>51,8,150,45</area>
+		      <align>left,vcenter</align>
+		      <font>Font_Icon_Base_White_45_Bold</font>
 		  </textarea>           
+<!--
         <imagetype name="iconglass" depends="##x##">
             <area>0,0,63,50</area>
             <alpha>255</alpha>
             <filename>images/shared/list_musicicon_glass.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
+-->
 	  </group>
 	
 	  <group name="defaultinfoiconrating">
 		  <area>0,0,200,50</area>
+<!--		  
         <imagetype name="iconbgd" depends="rating">
             <area>-6,-5,76,60</area>
             <alpha>255</alpha>
@@ -7855,7 +7890,7 @@
 		      <line color="#454545" alpha="255" width="3" />
 		      <fill color="#FFFFFF" alpha="64" />
 		  </shape>
-
+-->
 		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="rating"/>
 		  <textarea name="icontextlbl" from="textarea_icon" depends="rating">
 		      <area>2,2,60,38</area>
@@ -7866,25 +7901,35 @@
 		      <font>Font_Icon_Base_Small</font>
 		      <value>IMDB</value>
 		  </textarea>
+<!--
 		  <textarea name="ratinglbl" from="textarea_icon" depends="rating">
 		      <area>60,7,134,22</area>
 		      <font>Font_Icon_Base_White_22</font>
 		      <value>Rating</value>
 		  </textarea>           
+-->
 		  <textarea name="rating" from="textarea_icon">
+<!--
 		      <area>67,24,126,24</area>
 		      <font>Font_Icon_Base_White_24_Bold</font>
+-->
+		      <area>49,8,150,45</area>
+		      <align>left,vcenter</align>
+		      <font>Font_Icon_Base_White_45_Bold</font>
 		  </textarea>           
+<!--
         <imagetype name="iconglass" depends="rating">
             <area>0,0,63,50</area>
             <alpha>255</alpha>
             <filename>images/shared/list_musicicon_glass.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
+-->
 	  </group>
 	
 	  <group name="defaultinfoiconparental">
 		  <area>0,0,128,50</area>
+<!--
         <imagetype name="iconbgd" depends="videolevel">
             <area>-6,-5,76,60</area>
             <alpha>255</alpha>
@@ -7908,6 +7953,7 @@
 		  </shape>
 
 		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="videolevel"/>
+-->
 		  <textarea name="icontextlbl" from="textarea_icon" depends="videolevel">
 		      <area>2,2,60,38</area>
 		      <value>P</value>
@@ -7918,18 +7964,21 @@
 		      <value>Level</value>
 		  </textarea>
 		  <statetype name="videolevel" from="videolevel_base" depends="videolevel">
-		      <position>65,2</position>
+		      <position>49,6</position>
 		  </statetype>
+<!--
         <imagetype name="iconglass" depends="videolevel">
             <area>0,0,63,50</area>
             <alpha>255</alpha>
             <filename>images/shared/list_musicicon_glass.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
+-->
 	  </group>
 	
 	  <group name="defaultinfoiconuserrating">
 		  <area>0,0,128,50</area>
+<!--
         <imagetype name="iconbgd" depends="userrating">
             <area>-6,-5,76,60</area>
             <alpha>255</alpha>
@@ -7953,6 +8002,7 @@
 		  </shape>
 
 		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="userrating"/>
+-->
 		  <textarea name="icontextlbl" from="textarea_icon" depends="userrating">
 		      <area>2,2,60,38</area>
 		      <value>R</value>
@@ -7963,19 +8013,27 @@
 		      <value>User</value>
 		  </textarea>
 		  <textarea name="userrating" from="textarea_icon">
+<!--
 		      <area>64,2,64,50</area>
 		      <font>Font_Icon_Base_White_24_Bold</font>
+-->
+		      <area>49,8,150,45</area>
+		      <align>left,vcenter</align>
+		      <font>Font_Icon_Base_White_45_Bold</font>
 		  </textarea>           
+<!--
         <imagetype name="iconglass" depends="userrating">
             <area>0,0,63,50</area>
             <alpha>255</alpha>
             <filename>images/shared/list_musicicon_glass.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
+-->
 	  </group>
 	
 	  <group name="defaultinfoiconrectype">
-		  <area>0,0,128,50</area>
+		  <area>0,0,300,50</area>
+<!--
         <imagetype name="iconbgd" depends="rectypechar">
             <area>-6,-5,76,60</area>
             <alpha>255</alpha>
@@ -7999,29 +8057,38 @@
 		  </shape>
 
 		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="rectypechar"/>
-		  <textarea name="icontextlbl" from="textarea_icon" depends="rectypechar">
+-->
+		  <textarea name="icontextlbl" from="textarea_icon" depends="rectype">
 		      <area>2,2,60,38</area>
 		      <value>R</value>
 		  </textarea>
-		  <textarea name="icontextlbl2" from="textarea_icon" depends="rectypechar">
+		  <textarea name="icontextlbl2" from="textarea_icon" depends="rectype">
 		      <area>2,33,60,15</area>
 		      <font>Font_Icon_Base_Small</font>
 		      <value>Status</value>
 		  </textarea>
-		  <textarea name="rectypechar" from="textarea_icon">
+		  <textarea name="rectype" from="textarea_icon">
+<!--
 		      <area>65,2,63,50</area>
 		      <font>Font_Icon_Base_White_24_Bold</font>
+-->
+		      <area>53,8,300,45</area>
+		      <align>left,vcenter</align>
+		      <font>Font_Icon_Base_White_45_Bold</font>
 		  </textarea>           
+<!--
         <imagetype name="iconglass" depends="rectypechar">
             <area>0,0,63,50</area>
             <alpha>255</alpha>
             <filename>images/shared/list_musicicon_glass.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
+-->
 	  </group>
 	
 	  <group name="defaultinfoiconrecpriority">
 		  <area>0,0,128,50</area>
+<!--
         <imagetype name="iconbgd" depends="recpriority">
             <area>-6,-5,76,60</area>
             <alpha>255</alpha>
@@ -8045,9 +8112,10 @@
 		  </shape>
 
 		  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="recpriority"/>
+-->
 		  <textarea name="icontextlbl" from="textarea_icon" depends="recpriority">
 		      <area>2,2,60,38</area>
-		      <value>!</value>
+		      <value>R</value>
 		  </textarea>
 		  <textarea name="icontextlbl2" from="textarea_icon" depends="recpriority">
 		      <area>2,33,60,15</area>
@@ -8055,20 +8123,29 @@
 		      <value>Priority</value>
 		  </textarea>
 		  <textarea name="recpriority" from="textarea_icon">
+<!--
 		      <area>65,2,63,50</area>
 		      <font>Font_Icon_Base_White_24_Bold</font>
+-->
+		      <area>54,8,150,45</area>
+		      <align>left,vcenter</align>
+		      <font>Font_Icon_Base_White_45_Bold</font>
 		  </textarea>           
+<!--
         <imagetype name="iconglass" depends="recpriority">
             <area>0,0,63,50</area>
             <alpha>255</alpha>
             <filename>images/shared/list_musicicon_glass.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
+-->
 	  </group>
 	
 	  <group name="defaultinfoiconwatched">
 		  <area>0,0,60,50</area>
+<!--
 		  <group name="iconbgd" from="defaultinfoiconbgdshort"/>
+-->
 		  <textarea name="icontextlbl" from="textarea_icon">
 		      <area>2,2,60,38</area>
 		      <value>W</value>
@@ -8078,80 +8155,30 @@
 		      <font>Font_Icon_Base_Small</font>
 		      <value>Watched</value>
 		  </textarea>
+<!--
         <imagetype name="iconglass">
             <area>0,0,63,50</area>
             <alpha>255</alpha>
             <filename>images/shared/list_musicicon_glass.png</filename>
             <preserveaspect>no</preserveaspect>
         </imagetype>
-	  </group>
-	
-	  <group name="defaultinfoicon1_0">
-		  <area>0,0,128,50</area>
-	  </group>
-	
-	  <group name="defaultinfoicon2_0">
-		  <area>0,0,128,50</area>
-	  </group>
-	
-	  <group name="defaultinfoicon5_1">
-		  <area>0,0,128,50</area>
-	  </group>
-	
-	  <group name="defaultinfoicondolby">
-		  <area>0,0,128,50</area>
-	  </group>
-
-	  <group name="defaultinfoiconvideo1080">
-		  <area>0,0,165,50</area>
-	  </group>
-
-	  <group name="defaultinfoiconvideo720">
-		  <area>0,0,165,50</area>
-	  </group>
-	
-	  <group name="defaultinfoiconvideoavchd">
-		  <area>0,0,165,50</area>
-	  </group>
-	
-	  <group name="defaultinfoiconvideohdtv">
-		  <area>0,0,165,50</area>
-	  </group>
-	
-	  <group name="defaultinfoiconvideowide">
-		  <area>0,0,165,50</area>
-	  </group>
-	
-	  <group name="defaultinfoiconvideo576">
-		  <area>0,0,165,50</area>
-	  </group>
-	
-	  <group name="defaultinfoiconcc">
-		  <area>0,0,165,50</area>
-	  </group>
-	
-	  <group name="defaultinfoiconsub">
-		  <area>0,0,165,50</area>
-	  </group>
-	
-	  <group name="defaultinfoiconosd">
-		  <area>0,0,165,50</area>
+-->
 	  </group>
 		
     <!-- Aeon definitions of groups used on many screens -->
      <group name="basegroupinfodetails">
-        <area>0,0,568,50</area>
+        <area>0,0,470,50</area>
         
         <group name="seasonicon" from="defaultinfoiconseason">
-            <area>0,0,200,50</area>
+            <area>0,0,150,50</area>
         </group>
         
         <group name="parentalicon" from="defaultinfoiconparental">
-            <area>220,0,128,50</area>
+            <area>145,0,150,50</area>
         </group>
 
         <group name="ratingicon" from="defaultinfoiconrating">
-            <area>368,0,200,50</area>
+            <area>240,0,470,50</area>
         </group>
 
      </group>
@@ -8199,28 +8226,28 @@
         </statetype>
  
         <group name="seasonicon" from="defaultinfoiconseason">
-            <area>280,0,200,50</area>
-        </group>
-
-        <group name="ratingicon" from="defaultinfoiconrating">
-            <area>1440,0,200,50</area>
+            <area>280,0,150,50</area>
         </group>
 
         <group name="parentalicon" from="defaultinfoiconparental">
-            <area>1660,0,128,50</area>
+            <area>1450,0,128,50</area>
+        </group>
+
+        <group name="ratingicon" from="defaultinfoiconrating">
+            <area>1545,0,150,50</area>
         </group>
 
      </group>
 
      <group name="basegroupscheduledetails">
-        <area>0,0,400,100</area>
+        <area>0,0,300,100</area>
 	
-        <group name="rectypeicon" from="defaultinfoiconrectype">
-            <area>0,0,128,50</area>
+        <group name="recpriorityicon" from="defaultinfoiconrecpriority">
+            <area>0,0,150,50</area>
         </group>
 
-        <group name="recpriorityicon" from="defaultinfoiconrecpriority">
-            <area>148,0,200,50</area>
+        <group name="rectypeicon" from="defaultinfoiconrectype">
+            <area>105,0,200,50</area>
         </group>
 
      </group>

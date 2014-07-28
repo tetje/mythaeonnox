@@ -1321,29 +1321,7 @@
 <!-- To do --> 
     <window name="progdetails">
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvshows/</filename>
-        </imagetype>
-
-        <imagetype name="showcasefloorimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/showcase_floor.png</filename>
-        </imagetype>        
-
-        <imagetype name="showcaseimg" from="fanart">
-            <filename>images/shared/showcase_stage.png</filename>
-        </imagetype>
-<!--        
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>128</alpha>
-            <filename>images/shared/showcase_spot.png</filename>
-        </imagetype>
--->        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
+        <group name="backdrop" from="basebackdrop"/>
 
         <group name="multiplextabletmoviegroup">
            <area>113,100,1694,846</area>
@@ -1363,12 +1341,19 @@
 	        </animation>       
 -->
 	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
+	            <area>0,0,1695,900</area>
 	            <filename>images/shared/multiplex_back.png</filename>
 	        </imagetype>
 	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet_small_bottom.png</filename>
+	        <imagetype name="multiplextabletglowimg">
+	            <area>0,0,1695,1015</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+
+	        <imagetype name="multiplextabletimg">
+	            <area>0,0,1695,1015</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
 	        </imagetype>
 	
 	        <textarea name="title" from="textarea_label">
@@ -1379,28 +1364,21 @@
 	        </textarea>
 	
 	        <webbrowser name="browser">
-	            <area>20,60,1654,731</area>
-	            <background color="#2B3335" alpha="0" />
+	            <area>20,60,1654,781</area>
+	            <background color="#000000" alpha="0" />
 	            <zoom>1.4</zoom>
-  		         <browserarea>0,0,1654,731</browserarea>
+  		         <browserarea>0,0,1654,781</browserarea>
 		         <scrollduration>500</scrollduration>
-		         <scrollbar name="vertscrollbar" from="base_vertical_scrollbar">
+		         <scrollbar name="vertscrollbar" from="basescrollbarvert">
 		            <area>1644,0,5,100%</area>
 		         </scrollbar>
-		         <scrollbar name="horizscrollbar" from="base_horizontal_scrollbar">
+		         <scrollbar name="horizscrollbar" from="basescrollbarvertback">
 		            <area>0,721,100%,5</area>
 		         </scrollbar>
 	        </webbrowser>
 
 	     </group>   
 
-<!--
-        <webbrowser name="browser">
-            <area>40,65,710,490</area>
-            <zoom>1.0</zoom>
-            <background color="#000000"/>
-        </webbrowser>
--->
     </window>
 
     <window name="searchpopup" from="MythTextInputDialog">
