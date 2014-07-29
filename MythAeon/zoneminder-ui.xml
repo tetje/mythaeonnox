@@ -42,27 +42,82 @@
 
     <window name="zmconsole">
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/zoneminder/</filename>
-        </imagetype>
-        
-        <imagetype name="listfloorimg" from="fanart">
-            <area>0,473,1920,607</area>
-            <filename>images/shared/list_floor.png</filename>
-        </imagetype>
-        
-        <imagetype name="listfilterimg" from="fanart">
-            <filename>images/shared/list_filter.png</filename>
-        </imagetype>
-        
-        <imagetype name="spotlightimg" from="fanart">
-            <area>0,875,1920,205</area>
-            <filename>images/shared/list_spot.png</filename>
-        </imagetype>
-        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
+        <group name="backdrop" from="basezmbackdrop"/>
+
+        <group name="listinfo" from="basegroupschedulelistinfo">
+           <area>1140,87,545,930</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1500" centre="middle">
+	                <position start="-1228,87" end="1140,87" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+	
+	        <textarea name="textlbl1" from="textarea_label">
+	            <area>105,110,340,30</area>
+	            <value>Date:</value>
+	        </textarea>
+	     
+	        <textarea name="textlbl2" from="textlbl1">
+	            <position>105,150</position>
+	            <value>Time:</value>
+	        </textarea>
+	
+	        <textarea name="textlbl3" from="textlbl1">
+	            <position>105,190</position>
+	            <value>System:</value>
+	        </textarea>
+	
+	        <textarea name="textlbl4" from="textlbl1">
+	            <position>105,230</position>
+	            <value>Storage:</value>
+	        </textarea>
+	        
+	        <textarea name="textlbl5" from="textlbl1">
+	            <position>105,790</position>
+	            <value>Status:</value>
+	        </textarea>
+	        
+	        <textarea name="date_text" from="textarea_info">
+	            <area>170,110,365,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="time_text" from="textarea_info">
+	            <area>170,150,365,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="load_text" from="textarea_info">
+	            <area>205,190,390,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="disk_text" from="textarea_info">
+	            <area>215,230,400,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+			  <textarea name="status_text" from="textarea_info">
+			      <area>195,790,390,30</area>
+			      <font>Font_Icon_Base_Black</font>
+	            <font state="running">Font_Info_Green</font>
+	            <font state="stopped">Font_Info_Red</font>
+			  </textarea>           
+
+	        <imagetype name="icon">
+	            <area>96,278,492,492</area>
+	            <filename>images/backgrounds/defaultfanart/</filename>
+	            <mask>images/shared/views/tripanel/music_poster_mask.png</mask>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	
+	        <imagetype name="coverart_overlay">
+	            <area>46,258,594,608</area>
+	            <alpha>255</alpha>
+	            <filename>images/shared/views/tripanel/poster_overlay.png</filename>
+	        </imagetype>
+
         </group>
 
         <group name="listpanel">
@@ -74,19 +129,20 @@
 	            </section>
 	        </animation>
 
-	        <imagetype name="listpanelbgdblack">
-	            <area>0,0,1139,970</area>
-	            <filename>images/shared/listpanel_black.png</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-
-	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
-	            <filename>images/shared/listpanel_back.png</filename>
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,1139,1025</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
 	        </imagetype>
         
 	        <imagetype name="listpaneldetailbgd">
 	            <area>912,12,148,850</area>
-	            <filename>images/shared/listpanel_detailwide.png</filename>
+	            <filename>images/shared/views/listpanel_detailwide.png</filename>
+	        </imagetype>
+        	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,1139,1025</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
 	        </imagetype>
         
            <buttonlist name="monitor_list" from="buttonlist_listbase">
@@ -119,11 +175,13 @@
 			               <textarea name="name" from="textarea_list">
 			                   <area>50,25,850,35</area>
 			                   <scroll direction="left" />
+			                   <font>Font_List_Selected</font>
 			               </textarea>
 			               <textarea name="eventcount" from="textarea_list">
 			                   <area>900,25,144,35</area>
 			                   <scroll direction="left" />
 			                   <align>hcenter,vcenter</align>
+			                   <font>Font_List_Selected</font>
 			               </textarea>
 			               <textarea name="zmastatus" from="textarea_label_list">
 			                   <area>50,55,850,30</area>
@@ -150,96 +208,6 @@
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
 	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
-        </group>
-        
-        <group name="listinfo">
-           <area>1264,150,545,930</area>
-
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="1920,150" end="1264,150" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
-
-	        <imagetype name="iconframe">
-	            <area>-2,245,548,549</area>
-	            <filename>images/shared/list_musicicon_frame.png</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-        
-	        <imagetype name="icon">
-	            <area>13,260,518,519</area>
-	            <mask>images/shared/list_musicicon_mask.png</mask>
-               <filename>images/backgrounds/other/cctv_icon.jpg</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-		
-	        <textarea name="date_text" from="textarea_settings_button">
-	            <area>40,282,475,32</area>
-	            <font>Font_Button_Settings_Normal_Black</font>
-	            <multiline>no</multiline>
-	            <cutdown>no</cutdown>
-	            <scroll direction="horizontal"/>
-	        </textarea>
-	       
-	        <textarea name="time_text" from="date_text">
-               <align>right,vcenter</align>
-	        </textarea>
-	       
-	        <textarea name="load_text" from="date_text">
-	            <area>40,735,475,32</area>
-	        </textarea>
-	       
-	        <textarea name="disk_text" from="load_text">
-               <align>right,vcenter</align>
-	        </textarea>
-	       
-	        <imagetype name="iconglass">
-	            <area>13,260,518,519</area>
-	            <filename>images/shared/list_musicicon_glass.png</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-	        
-			  <group name="cctvstatusgroup">
-				  <area>73,810,200,50</area>
-		        <imagetype name="iconbgd" depends="rating">
-		            <area>-9,-5,260,60</area>
-		            <alpha>255</alpha>
-		            <filename>images/shared/musicinfoshadowlong.png</filename>
-		            <preserveaspect>no</preserveaspect>
-		        </imagetype>
-				  <group name="iconbgdlong" from="defaultinfoiconbgdshort" depends="rating"/>
-				  <textarea name="icontextlbl" from="textarea_icon" depends="rating">
-				      <area>2,2,60,38</area>
-				      <value>C</value>
-				  </textarea>
-				  <textarea name="icontextlbl2" from="textarea_icon" depends="rating">
-				      <area>2,33,60,15</area>
-				      <font>Font_Icon_Base_Small</font>
-				      <value>Status</value>
-				  </textarea>
-				  <textarea name="status_text" from="textarea_icon">
-				      <area>60,2,184,50</area>
-				      <font>Font_Icon_Base_Black</font>
-		            <font state="running">Font_Icon_Base_Green</font>
-		            <font state="stopped">Font_Icon_Base_Red</font>
-				  </textarea>           
-		        <imagetype name="iconglass" depends="rating">
-		            <area>0,0,63,50</area>
-		            <alpha>255</alpha>
-		            <filename>images/shared/list_musicicon_glass.png</filename>
-		            <preserveaspect>no</preserveaspect>
-		        </imagetype>
-			  </group>
-			
-<!-- Fix me: This does not work when an other windows has been selected and one returns to the main screen
-
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="1264,150" end="-1920,150" easingcurve="OutInBack" />
 	            </section>
 	        </animation>       
 -->
@@ -286,34 +254,29 @@
         </animation>       
 -->
 
-        <imagetype name="multiplextabletbgdimg">
-            <area>0,0,1694,846</area>
-            <filename>images/shared/multiplex_back.png</filename>
+        <imagetype name="multiplextabletglowimg">
+            <area>0,0,1695,1015</area>
+            <alpha>64</alpha>
+            <filename>images/shared/wall/wall_bg_glow.png</filename>
         </imagetype>
-        
-        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-            <filename>images/shared/multiplex_tablet_bigthumb.png</filename>
+
+        <imagetype name="multiplextabletimg">
+            <area>0,0,1695,1015</area>
+            <filename>images/shared/wall/wall_bg.png</filename>
         </imagetype>
-	
+
+        <imagetype name="infopanel_hline1">
+            <area>0,115,1668,11</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>images/shared/info/info_panellines_movie_horz.png</filename>
+        </imagetype>
+
         <group name="eventinfo">
            <area>0,0,1694,846</area>
 
-
-	        <imagetype name="frameimage">
-	            <area>729,58,949,538</area>
-	            <preserveaspect>no</preserveaspect>
-	            <filename>images/backgrounds/zoneminder/</filename>
-	        </imagetype>
-
            <group name="additionaleventinfo">
-              <area>30,85,350,270</area>
+              <area>30,58,1664,70</area>
               
-              <!-- labels -->
-		        <textarea name="eventcountlbl" from="textarea_label">
-		            <area>5,140,350,30</area>
-		            <value>Event number:</value>
-		        </textarea>
-		        
               <!-- widgets -->	
 		        <buttonlist name="camera_selector" from="selector_tvshowpanel">
 		            <position>-17,-5</position>
@@ -337,7 +300,7 @@
 		        </buttonlist>
 
 		        <buttonlist name="date_selector" from="selector_tvshowpanel">
-		            <position>-17,65</position>
+		            <position>342,-5</position>
 				      <statetype name="buttonitem">
 				          <state name="active">
 						        <textarea name="activelbl" from="textarea_label">
@@ -357,10 +320,23 @@
 						</statetype>
 		        </buttonlist>
 	
+		        <textarea name="eventcountlbl" from="textarea_label">
+		            <area>721,0,350,30</area>
+		            <value>Event number:</value>
+		        </textarea>
+		        
 		        <textarea name="eventno_text" from="textarea_info">
-		            <area>5,165,350,30</area>
+		            <area>721,25,359,30</area>
 		        </textarea>
 	
+		        <button name="play_button" from="button_tvshow_panel">
+		            <position>942,-5</position>
+		        </button>
+		
+		        <button name="delete_button" from="button_tvshow_panel">
+		            <position>1301,-5</position>
+		        </button>
+
 	        </group>   
 
         </group>
@@ -377,14 +353,74 @@
             </section>
         </animation>
 
-        <buttonlist name="layout1_eventlist" from="buttonlist_zonemindershowpanel">
-            <position>14,315</position>
+        <buttonlist name="layout1_eventlist">
+	       <area>13,120,712,780</area>
+	       <layout>vertical</layout>
+	       <spacing>0</spacing>
+	       <scrollstyle>free</scrollstyle>
+	       <arrange>stack</arrange>
+	       <align>left</align>
+	       <wrapstyle>selection</wrapstyle>
+	       <showarrow>no</showarrow>
+	       <buttonarea>0,0,712,780</buttonarea>
+	       <statetype name="buttonitem">
+	           <state name="active">
+	               <area>0,0,1670,72</area>
+			         <imagetype name="infopanel_hline1">
+			             <area>0,66,1670,11</area>
+			             <preserveaspect>no</preserveaspect>
+			             <filename>images/shared/info/info_panellines_movie_horz.png</filename>
+			         </imagetype>
+			         <textarea name="buttontext" from="textarea_label">
+			             <area>20,7,1628,30</area>
+			         </textarea>	
+			         <textarea name="camera" from="buttontext">
+			             <align>right,vcenter</align>
+			         </textarea>	
+	               <textarea name="time" from="textarea_info">
+	                   <area>20,32,1628,30</area>
+	               </textarea>
+	               <textarea name="length" from="time">
+	                   <align>right,vcenter</align>
+	                   <template>%length%</template>
+	               </textarea>
+	           </state>
+	           <state name="selectedactive">
+	               <area>0,0,1670,72</area>
+			         <imagetype name="infopanel_hline1">
+			             <area>0,66,1670,11</area>
+			             <preserveaspect>no</preserveaspect>
+			             <filename>images/shared/info/info_panellines_movie_horz.png</filename>
+			         </imagetype>
+	               <imagetype name="Listpanel_selectbar">
+	                   <area>0,0,1670,70</area>
+	                   <filename>images/shared/listpanel_selectbar.png</filename>
+	               </imagetype>
+			         <textarea name="buttontext" from="textarea_label">
+			             <area>20,7,1628,30</area>
+			             <font>Font_Label_List_Selected</font>
+			         </textarea>	
+			         <textarea name="camera" from="buttontext">
+			             <align>right,vcenter</align>
+	               </textarea>
+	               <textarea name="time" from="textarea_info">
+	                   <area>20,32,1628,30</area>
+	                   <font>Font_Info_Selected</font>
+	               </textarea>
+	               <textarea name="length" from="time">
+	                   <align>right,vcenter</align>
+	                   <template>%length%</template>
+	               </textarea>
+	           </state>
+	           <state name="inactive" from="active"/>
+	           <state name="selectedinactive" from="selectedactive"/>
+	        </statetype>
         </buttonlist>
      </group>
      
-<!--+++++++++++++++++++ layout 2 - 1 row +++++++++++++++++++++++++-->
+<!--+++++++++++++++++++ layout 2 - 2 row +++++++++++++++++++++++++-->
 
-     <group name="multiplextabletlayout1group">
+     <group name="multiplextabletlayout2group">
         <area>113,70,1694,846</area>
 
         <animation trigger="AboutToShow">
@@ -393,493 +429,559 @@
             </section>
         </animation>
 
-        <buttonlist name="layout2_eventlist" from="buttonlist_zonemindershowpanel_one_row">
-            <position>14,295</position>
-        </buttonlist>
-
-<!--
         <buttonlist name="layout2_eventlist">
-            <area>50,170,700,340</area>
-            <layout>grid</layout>
-            <spacing>10</spacing>
-            <buttonarea>0,0,700,340</buttonarea>
-            <statetype name="buttonitem">
-                <area>0,0,700,340</area>
-                <state name="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,690,330</area>
-                        <fill style="gradient">
-                            <gradient start="#505050" end="#000000" alpha="200"/>
-                        </fill>
-                    </shape>
-
-                    <imagetype name="buttonimage">
-                        <area>15,15,400,300</area>
-                    </imagetype>
-
-                    <textarea name="namelabel" from="basetextarea">
-                        <area>415,30,285,30</area>
-                        <font>listlabel</font>
-                        <align>hcenter,top</align>
-                        <value>Name</value>
-                    </textarea>
-                    <textarea name="cameralabel" from="namelabel">
-                        <area>415,100,285,30</area>
-                        <value>Camera</value>
-                    </textarea>
-                    <textarea name="datelabel" from="namelabel">
-                        <area>415,170,285,30</area>
-                        <value>Date</value>
-                    </textarea>
-                    <textarea name="durationlabel" from="namelabel">
-                        <area>415,240,285,30</area>
-                        <value>Duration</value>
-                    </textarea>
-
-                    <textarea name="buttontext" from="basetextarea">
-                        <area>415,55,285,30</area>
-                        <align>hcenter,top</align>
-                        <font>basegrey</font>
-                    </textarea>
-                    <textarea name="camera" from="buttontext">
-                        <area>415,125,285,30</area>
-                    </textarea>
-                    <textarea name="time" from="buttontext">
-                        <area>415,195,285,30</area>
-                    </textarea>
-                    <textarea name="length" from="buttontext">
-                        <area>415,265,285,30</area>
-                    </textarea>
-
-                </state>
-                <state name="selectedactive" from="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,690,330</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="255"/>
-                        </fill>
-                    </shape>
-                    <textarea name="buttontext">
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-               <state name="selectedinactive" from="active">
-                    <shape name="buttonbackground">
-                        <area>0,0,690,330</area>
-                        <fill style="gradient">
-                            <gradient start="#52CA38" end="#349838" alpha="100"/>
-                        </fill>
-                    </shape>
-
-                    <textarea name="buttontext">
-                        <font>basesmall</font>
-                    </textarea>
-                </state>
-            </statetype>
-            <statetype name="upscrollarrow">
-                <position>240,270</position>
-                <state type="on">
-                    <imagetype name="upon">
-                        <filename>up_arrow.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-            <statetype name="downscrollarrow">
-                <position>456,270</position>
-                <state type="on">
-                    <imagetype name="dnon">
-                        <filename>down_arrow.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
+	       <area>13,140,1700,800</area>
+	       <buttonarea>0,0,1700,800</buttonarea>
+	       <layout>grid</layout>
+	       <spacing>0</spacing>
+	       <scrollstyle>free</scrollstyle>
+	       <arrange>stack</arrange>
+	       <align>left</align>
+	       <wrapstyle>selection</wrapstyle>
+	       <showarrow>no</showarrow>
+	       <statetype name="buttonitem">
+	           <state name="active">
+	              <area>0,0,836,360</area>
+<!--
+	               <imagetype name="previewbgd">
+	                   <area>5,5,440,256</area>
+	                   <alpha>255</alpha>
+	                   <filename>images/shared/multiplex_tvborder.png</filename>
+	                   <preserveaspect>no</preserveaspect>
+	               </imagetype>
+-->	              <imagetype name="buttonimage">
+	                  <area>15,40,484,272</area>
+<!--	                  <mask>images/shared/multiplex_zonemindermask.png</mask> -->
+		               <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+	              </imagetype>
+	               <imagetype name="previewglass">
+	                   <area>15,40,484,272</area>
+	                   <alpha>255</alpha>
+	                   <filename>images/shared/multiplex_tvglass.png</filename>
+	                   <preserveaspect>no</preserveaspect>
+	               </imagetype>
+	              <group name="eventdetails">
+	                 <area>500,25,272,282</area>
+				        <textarea name="datelbl" from="textarea_label">
+				            <area>22,17,350,30</area>
+				            <value>Time:</value>
+				        </textarea>			        
+				        <textarea name="eventlbl" from="textarea_label">
+				            <area>22,87,350,30</area>
+				            <value>Event:</value>
+				        </textarea>			        
+				        <textarea name="cameralbl" from="textarea_label">
+				            <area>22,157,350,30</area>
+				            <value>Camera:</value>
+				        </textarea>			        
+				        <textarea name="framelbl" from="textarea_label">
+				            <area>22,227,350,30</area>
+				            <value>Length:</value>
+				        </textarea>		        
+			           <!-- widgets -->
+				        <textarea name="time" from="textarea_info">
+				            <area>22,42,350,30</area>
+				        </textarea>	
+				        <textarea name="buttontext" from="textarea_info">
+				            <area>22,112,350,30</area>
+				        </textarea>	
+				        <textarea name="camera" from="textarea_info">
+				            <area>22,182,350,30</area>
+				        </textarea>	
+				        <textarea name="length" from="textarea_info">
+				            <area>22,252,350,30</area>
+				        </textarea>
+			        </group>
+	           </state>
+	           <state name="selectedactive">
+	              <area>0,0,836,360</area>
+	              <imagetype name="Listpanel_selectbar">
+	                  <area>0,0,836,360</area>
+	                  <filename>images/shared/listpanel_selectbar.png</filename>
+	              </imagetype>
+<!--
+	              <imagetype name="previewbgd">
+	                  <area>5,5,440,256</area>
+	                  <alpha>255</alpha>
+	                  <filename>images/shared/multiplex_tvborder.png</filename>
+	                  <preserveaspect>no</preserveaspect>
+	              </imagetype>
+-->
+	              <imagetype name="buttonimage">
+	                  <area>15,40,484,272</area>
+<!--	                  <mask>images/shared/multiplex_zonemindermask.png</mask> -->
+		               <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+	              </imagetype>
+	               <imagetype name="previewglass">
+	                   <area>15,40,484,272</area>
+	                   <alpha>255</alpha>
+	                   <filename>images/shared/multiplex_tvglass.png</filename>
+	                   <preserveaspect>no</preserveaspect>
+	               </imagetype>
+	              <group name="eventdetails">
+	                 <area>500,25,272,282</area>
+				        <textarea name="datelbl" from="textarea_label">
+				            <area>22,17,350,30</area>
+	  		               <font>Font_Label_List_Selected</font>
+				            <value>Time:</value>
+				        </textarea>			        
+				        <textarea name="eventlbl" from="textarea_label">
+				            <area>22,87,350,30</area>
+	  		               <font>Font_Label_List_Selected</font>
+				            <value>Event:</value>
+				        </textarea>			        
+				        <textarea name="cameralbl" from="textarea_label">
+				            <area>22,157,350,30</area>
+	  		               <font>Font_Label_List_Selected</font>
+				            <value>Camera:</value>
+				        </textarea>			        
+				        <textarea name="framelbl" from="textarea_label">
+				            <area>22,227,350,30</area>
+	  		               <font>Font_Label_List_Selected</font>
+				            <value>Length:</value>
+				        </textarea>		        
+			           <!-- widgets -->
+				        <textarea name="time" from="textarea_info">
+				            <area>22,42,350,30</area>
+	                     <font>Font_Info_Selected</font>
+				        </textarea>	
+				        <textarea name="buttontext" from="textarea_info">
+				            <area>22,112,350,30</area>
+	                     <font>Font_Info_Selected</font>
+				        </textarea>	
+				        <textarea name="camera" from="textarea_info">
+				            <area>22,182,350,30</area>
+	                     <font>Font_Info_Selected</font>
+				        </textarea>	
+				        <textarea name="length" from="textarea_info">
+				            <area>22,252,350,30</area>
+	                     <font>Font_Info_Selected</font>
+				        </textarea>
+			        </group>
+	           </state>
+	           <state name="inactive" from="active"/>
+	           <state name="selectedinactive" from="selectedactive"/>
+	       </statetype>
         </buttonlist>
 
--->
      </group>
 <!--+++++++++++++++++++ layout 3 - grid view 6x2 +++++++++++++++++++++++++-->
 
      <group name="multiplextabletlayout3group">
-        <area>0,690,1920,390</area>
+		  <area>113,70,1694,846</area>
 
         <animation trigger="AboutToShow">
             <section duration="1200" centre="middle">
-                <position start="1920,690" end="0,690" easingcurve="InOutBack" />
+                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
             </section>
         </animation>
+        
+        <buttonlist name="layout3_eventlist">
+		       <spacing>5</spacing>
+		       <area>0,140,1920,800</area>
+		       <searchposition>610,340</searchposition>
+		       <layout>grid</layout>
+		       <scrollstyle>free</scrollstyle>
+		       <arrange>stack</arrange>
+		       <align>hcenter</align>
+		       <wrapstyle>items</wrapstyle>
+		       <showarrow>no</showarrow>
+		       <buttonarea>0,0,1694,800</buttonarea>
+		       <statetype name="buttonitem">
+		           <state name="active">
+		               <area>0,0,314,240</area>
+		               <imagetype name="previewbgd">
+		                   <area>0,5,314,176</area>
+		                   <alpha>255</alpha>
+		                   <filename>images/shared/multiplex_tvborder.png</filename>
+		                   <preserveaspect>no</preserveaspect>
+		               </imagetype>
+		               <imagetype name="frameimage">
+		                   <area>8,11,300,168</area>
+		                   <alpha>255</alpha>
+		                   <mask>images/shared/multiplex_tvmask_small.png</mask>
+		                   <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+		                   <preserveaspect>no</preserveaspect>
+		               </imagetype>
+		               <imagetype name="buttonimage" from="frameimage" depends="!frameimage"/>
+		               <imagetype name="previewglass">
+		                   <area>8,11,300,168</area>
+		                   <alpha>255</alpha>
+		                   <filename>images/shared/multiplex_tvglass.png</filename>
+		                   <preserveaspect>no</preserveaspect>
+		               </imagetype>
+	               
+		               <imagetype name="previewlabel" depends="!preview">
+		                   <area>19,170,278,90</area>
+		                   <alpha>255</alpha>
+		                   <filename>images/shared/multiplex_labelblock.png</filename>
+		                   <preserveaspect>no</preserveaspect>
+		               </imagetype>
+		               <textarea name="buttontext" from="textarea_plot" depends="!buttonimage">
+		                   <area>24,165,268,50</area>
+		                   <multiline>yes</multiline>
+		                   <font>Font_Info_20_White</font>
+		                   <cutdown>yes</cutdown>
+		                   <align>hcenter,vcenter</align>
+		                   <template>%buttontext%\n%time%</template>
+		               </textarea>	
 
-        <buttonlist name="layout3_eventlist" from="buttonlist_multiplexzoneminder">
-            <position>0,-5</position>
+		           </state>
+		           <state name="selectedactive">
+		               <area>-42,-26,397,231</area>
+		               <imagetype name="previewbgd">
+		                   <area>0,0,397,231</area>
+		                   <alpha>255</alpha>
+		                   <filename>images/shared/multiplex_tvborder.png</filename>
+		                   <preserveaspect>no</preserveaspect>
+		               </imagetype>
+		               <imagetype name="preview">
+		                   <area>9,9,380,213</area>
+		                   <alpha>255</alpha>
+		                   <preserveaspect>no</preserveaspect>
+		                   <mask>images/shared/multiplex_tvmask.png</mask>
+		                   <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+		               </imagetype>
+		               <imagetype name="buttonimage" from="preview"/>
+		               <imagetype name="previewglass">
+		                   <area>9,9,380,213</area>
+		                   <alpha>255</alpha>
+		                   <filename>images/shared/multiplex_tvglass.png</filename>
+		                   <preserveaspect>no</preserveaspect>
+		               </imagetype>
+	               
+		               <imagetype name="previewlabel" depends="!preview">
+		                   <area>60,196,278,90</area>
+		                   <alpha>255</alpha>
+		                   <filename>images/shared/multiplex_labelblock.png</filename>
+		                   <preserveaspect>no</preserveaspect>
+		               </imagetype>
+		               <textarea name="buttontext" from="textarea_plot" depends="!buttonimage">
+		                   <area>65,191,268,50</area>
+		                   <multiline>yes</multiline>
+		                   <font>Font_Info_20_White</font>
+		                   <cutdown>yes</cutdown>
+		                   <align>hcenter,vcenter</align>
+		                   <template>%buttontext%\n%time%</template>
+		               </textarea>	
+
+		           </state>
+		           <state name="inactive" from ="active">
+		               <alpha>255</alpha>
+		           </state>
+		           <state name="selectedinactive" from="selectedactive">
+		               <alpha>255</alpha>
+		           </state>
+		       </statetype>
+		       
         </buttonlist>
 
      </group>
 
 <!--+++++++++++++++++++ buttons  +++++++++++++++++++++++++-->
-
-     <group name="multiplextabletbuttongroup">
-        <area>113,110,1694,846</area>
-
-        <animation trigger="AboutToShow">
-            <section duration="1200" centre="middle">
-                <position start="113,-916" end="113,110" easingcurve="InOutBack" />
-            </section>
-        </animation>
-
-        <button name="play_button" from="button_tvshow_panel">
-            <position>373,40</position>
-            <value>Watch</value>
-        </button>
-
-        <button name="delete_button" from="button_tvshow_panel">
-            <value>Done</value>
-            <position>373,110</position>
-        </button>
-     </group>
    
     </window>
 
     <window name="zmplayer">
-
-        <area>837,125,956,545</area>
-
-        <!-- labels -->
-        <group name="eventinfogroup">
-	        <area>-713,250,713,294</area>
-	        <shape name="groupselectorbuttonlistblackbgd">
-	            <area>0,0,713,294</area>
-	            <type>box</type>
-	            <line color="#000000" alpha="255" width="1" />
-	            <fill style="solid" color="#000000" alpha="255" />
-	        </shape>
-	
-	        <imagetype name="groupselectorbuttonlistbgd">
-	            <area>0,0,713,294</area>
-	            <preserveaspect>no</preserveaspect>
-	            <filename>images/shared/multiplex_tablet_bigthumb_leftpanel_bottom.png</filename>
-	        </imagetype>
-	
-	        <textarea name="datelbl" from="textarea_label">
-	            <area>22,17,350,30</area>
-	            <value>Date:</value>
-	        </textarea>
-		        
-	        <textarea name="eventlbl" from="textarea_label">
-	            <area>22,87,350,30</area>
-	            <value>Event name:</value>
-	        </textarea>
-		        
-	        <textarea name="cameralbl" from="textarea_label">
-	            <area>22,157,350,30</area>
-	            <value>Camera name:</value>
-	        </textarea>
-		        
-	        <textarea name="framelbl" from="textarea_label">
-	            <area>22,227,350,30</area>
-	            <value>Frame:</value>
-	        </textarea>
-		        
-           <!-- widgets -->
-	        <textarea name="date_text" from="textarea_info">
-	            <area>22,42,350,30</area>
-	        </textarea>
-
-	        <textarea name="event_text" from="textarea_info">
-	            <area>22,112,350,30</area>
-	        </textarea>
-
-	        <textarea name="camera_text" from="textarea_info">
-	            <area>22,182,350,30</area>
-	        </textarea>
-
-	        <textarea name="frame_text" from="textarea_info">
-	            <area>22,252,350,30</area>
-	        </textarea>
-        </group>
-
+   
+        <area>0,0,1920,1080</area>
         <imagetype name="frameimage">
-            <area>3,3,949,538</area>
+            <area>0,0,1920,1080</area>
             <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
         </imagetype>
-
-
-        <textarea name="noevents_text" from="textarea_label">
-            <area>-696,-32,993,30</area>
-            <align>left,top</align>
-            <multiline>no</multiline>
-            <value>There are no events to show</value>
-        </textarea>
 
         <!-- fullscreen player -->
         <imagetype name="framefsimage">
             <area>0,0,1920,1080</area>
         </imagetype>
 
-        <!-- buttons -->
-        <shape name="groupselectorbuttonblackbgd">
-            <area>-354,5,355,243</area>
-            <type>box</type>
-            <line color="#000000" alpha="255" width="1" />
-            <fill style="solid" color="#000000" alpha="255" />
-        </shape>
+        <group name="zmplayercontrols">
+           <area>0,960,1920,422</area>
 
-        <imagetype name="groupselectorbuttonbgd">
-            <area>-354,5,355,243</area>
-            <preserveaspect>no</preserveaspect>
-            <filename>images/shared/multiplex_tablet_bigthumb_midpanel_top.png</filename>
-        </imagetype>
+	        <imagetype name="osd_statusbgd">
+	            <filename>images/osd/osd_back.png</filename>
+	            <area>0,70,1920,50</area>
+	            <alpha>255</alpha>
+	            <preserveaspect>no</preserveaspect>
+	        </imagetype>
+	        <textarea name="date_text" from="textarea_info">
+	            <area>20,70,350,50</area>
+	        </textarea>
 
-        <button name="play_button" from="button_tvshow_panel">
-            <position>-352,25</position>
-            <value>Save</value>
-        </button>
+	        <textarea name="event_text" from="textarea_info">
+	            <area>370,70,350,50</area>
+	            <align>hcenter,vcenter</align>
+	        </textarea>
 
-        <button name="delete_button" from="button_tvshow_panel">
-            <position>-352,95</position>
-            <value>Save</value>
-        </button>
+	        <textarea name="camera_text" from="textarea_info">
+	            <area>1200,70,350,50</area>
+	            <align>hcenter,vcenter</align>
+	        </textarea>
 
-        <button name="prev_button" from="button_skipbwd">
-            <position>0,410</position>
-        </button>
+	        <textarea name="frame_text" from="textarea_info">
+	            <area>1550,70,350,50</area>
+	            <align>right,vcenter</align>
+	        </textarea>
 
-        <button name="next_button" from="button_skipfwd">
-            <position>810,410</position>
-        </button>
+	        <textarea name="noevents_text" from="textarea_label">
+	            <area>-696,-32,993,30</area>
+	            <align>left,top</align>
+	            <multiline>no</multiline>
+	            <value>There are no events to show</value>
+	        </textarea>
+	
+	        <!-- buttons -->
+
+           <group name="zmplaycontrolgroup">
+              <area>755,-5,400,50</area>
+		        <button name="prev_button" from="button_skipbwd">
+		            <position>0,0</position>
+		        </button>
+		
+		        <button name="play_button" from="button_play">
+		            <position>100,0</position>
+		        </button>
+		
+		        <button name="delete_button" from="button_delete">
+		            <position>200,0</position>
+		        </button>
+		
+		        <button name="next_button" from="button_skipfwd">
+		            <position>300,0</position>
+		        </button>
+	        </group>
+	    </group>
 
     </window>
 
     <window name="zmliveplayer">
         <area>0,0,1920,1080</area>
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/zoneminder/</filename>
-        </imagetype>
-        
-        <imagetype name="framebgd3-1_bgd">
-            <area>86,20,811,500</area>
-            <filename>images/shared/nowplaying_back.png</filename>
-        </imagetype>
+		  <shape name="blackbgnd">
+		      <area>0,0,100%,100%</area>
+		      <type>box</type>
+		      <line color="#000000" alpha="255" width="1" />
+		      <fill color="#000000" alpha="255" />
+		  </shape>
 
-        <imagetype name="framebgd3-2_bgd" from="framebgd3-1_bgd">
-            <position>1022,20</position>
-        </imagetype>
-<!-- -->
-        <imagetype name="framebgd3-3_bgd" from="framebgd3-1_bgd">
-            <position>86,520</position>
-        </imagetype>
-
-        <imagetype name="framebgd3-4_bgd" from="framebgd3-1_bgd">
-            <position>1022,520</position>
-        </imagetype>
-<!-- -->
         <!-- one monitor view -->
         
         <imagetype name="frame1-1">
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+            <preserveaspect>yes</preserveaspect>
         </imagetype>
 
         <textarea name="name1-1" from="textarea_weatherinfo">
-            <area>30,30,1860,40</area>
+            <area>20,20,1860,40</area>
             <font>Font_Zm_Info</font>
             <align>left</align>
-            <value>Monitor 1</value>
         </textarea>
 
         <textarea name="status1-1" from="name1-1">
             <align>right</align>
-            <font state="idle">Font_Weather_Zm_green</font>
-            <font state="alarm">Font_Weather_Zm_red</font>
-            <font state="alert">Font_Weather_Zm_amber</font>
-            <value>Not running</value>
+            <font state="idle">Font_Zm_green</font>
+            <font state="alarm">Font_Zm_red</font>
+            <font state="alert">Font_Zm_amber</font>
+            <value>Stopped</value>
         </textarea>
 
         <!-- two monitor view -->
-        <textarea name="name2-1" from="textarea_weatherinfo">
-            <area>136,55,711,40</area>
-            <align>left</align>
-            <value>Monitor 1</value>
-        </textarea>
-
-        <textarea name="status2-1" from="name2-1">
-            <align>right</align>
-            <font state="idle">Font_Weather_Info_green</font>
-            <font state="alarm">Font_Weather_Info_red</font>
-            <font state="alert">Font_Weather_Info_amber</font>
-            <value>Not running</value>
-        </textarea>
-
-        <imagetype name="frame2-1">
-            <area>136,85,711,400</area>
-            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+        <imagetype name="frame2-1" from="frame1-1">
+            <area>0,0,960,540</area>
         </imagetype>
 
-        <textarea name="name2-2" from="textarea_weatherinfo">
-            <area>1072,55,711,40</area>
-            <align>left</align>
-            <value>Monitor 2</value>
+        <textarea name="name2-1" from="name1-1">
+            <area>20,20,920,40</area>
         </textarea>
 
-        <textarea name="status2-2" from="name2-2">
-            <align>right</align>
-            <font state="idle">Font_Weather_Info_green</font>
-            <font state="alarm">Font_Weather_Info_red</font>
-            <font state="alert">Font_Weather_Info_amber</font>
-            <value>Not running</value>
+        <textarea name="status2-1" from="status1-1">
+            <area>20,20,920,40</area>
         </textarea>
 
-        <imagetype name="frame2-2">
-            <area>1072,85,711,400</area>
-            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+        <imagetype name="frame2-2" from="frame1-1">
+            <area>960,0,960,540</area>
         </imagetype>
+
+        <textarea name="name2-2" from="name1-1">
+            <area>980,20,920,40</area>
+        </textarea>
+
+        <textarea name="status2-2" from="status1-1">
+            <area>980,20,920,40</area>
+        </textarea>
 
         <!-- four monitor view -->
 
-        <textarea name="name3-1" from="textarea_weatherinfo">
-            <area>136,55,711,40</area>
-            <align>left</align>
-            <value>Monitor 1</value>
-        </textarea>
+        <imagetype name="frame3-1" from="frame2-1"/>
 
-        <textarea name="status3-1" from="name3-1">
-            <align>right</align>
-            <font state="idle">Font_Weather_Info_green</font>
-            <font state="alarm">Font_Weather_Info_red</font>
-            <font state="alert">Font_Weather_Info_amber</font>
-            <value>Not running</value>
-        </textarea>
+        <textarea name="name3-1" from="name2-1"/>
 
-        <imagetype name="frame3-1">
-            <area>136,85,711,400</area>
-            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+        <textarea name="status3-1" from="status2-1"/>
+
+        <imagetype name="frame3-2" from="frame2-2"/>
+
+        <textarea name="name3-2" from="name2-2"/>
+
+        <textarea name="status3-2" from="status2-2"/>
+
+        <imagetype name="frame3-3" from="frame1-1">
+            <area>0,540,960,540</area>
         </imagetype>
 
-        <textarea name="name3-2" from="textarea_weatherinfo">
-            <area>1072,55,711,40</area>
-            <align>left</align>
-            <value>Monitor 2</value>
+        <textarea name="name3-3" from="name1-1">
+            <area>20,560,920,40</area>
         </textarea>
 
-        <textarea name="status3-2" from="name3-2">
-            <align>right</align>
-            <font state="idle">Font_Weather_Info_green</font>
-            <font state="alarm">Font_Weather_Info_red</font>
-            <font state="alert">Font_Weather_Info_amber</font>
-            <value>Not running</value>
+        <textarea name="status3-3" from="status1-1">
+            <area>20,560,920,40</area>
         </textarea>
 
-        <imagetype name="frame3-2">
-            <area>1072,85,711,400</area>
-            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+        <imagetype name="frame3-4" from="frame1-1">
+            <area>960,540,960,540</area>
         </imagetype>
 
-        <textarea name="name3-3" from="textarea_weatherinfo">
-            <area>136,555,711,40</area>
-            <align>left</align>
-            <value>Monitor 3</value>
+        <textarea name="name3-4" from="name1-1">
+            <area>980,560,920,40</area>
         </textarea>
 
-        <textarea name="status3-3" from="name3-3">
-            <align>right</align>
-            <font state="idle">Font_Weather_Info_green</font>
-            <font state="alarm">Font_Weather_Info_red</font>
-            <font state="alert">Font_Weather_Info_amber</font>
-            <value>Not running</value>
+        <textarea name="status3-4" from="status1-1">
+            <area>980,560,920,40</area>
         </textarea>
 
-        <imagetype name="frame3-3">
-            <area>136,585,711,400</area>
-            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+        <!-- six monitor view -->
+        <imagetype name="frame4-1" from="frame1-1">
+            <area>0,0,640,360</area>
         </imagetype>
 
-        <textarea name="name3-4" from="textarea_weatherinfo">
-            <area>1072,555,711,40</area>
-            <align>left</align>
-            <value>Monitor 4</value>
+        <textarea name="name4-1" from="name1-1">
+            <area>20,20,600,40</area>
         </textarea>
 
-        <textarea name="status3-4" from="name3-4">
-            <align>right</align>
-            <font state="idle">Font_Weather_Info_green</font>
-            <font state="alarm">Font_Weather_Info_red</font>
-            <font state="alert">Font_Weather_Info_amber</font>
-            <value>Not running</value>
+        <textarea name="status4-1" from="status1-1">
+            <area>20,20,600,40</area>
         </textarea>
 
-        <imagetype name="frame3-4">
-            <area>1072,585,711,400</area>
-            <filename>images/backgrounds/other/tv-monoscopio_16x9.png</filename>
+        <imagetype name="frame4-2" from="frame1-1">
+            <area>640,0,640,360</area>
         </imagetype>
 
-       <group name="menu_group" >
-          <position>0,420</position>
-          
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="0,0" end="0,420" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
+        <textarea name="name4-2" from="name1-1">
+            <area>660,20,600,40</area>
+        </textarea>
 
-	       <group name="description_clock_bgd_group">
-	         <area>613,444,2031,93></area>
-	
-		       <animation trigger="AboutToShow">
-		          <section duration="500" centre="middle">
-		              <alpha start="0" end="255" easingcurve="InQuad" />
-		          </section>
-		       </animation>
-	
-		      <imagetype name="ClockBgd">
-		         <filename>images/shared/timepanel_mid_flip.png</filename>
-		         <area>627,9,683,87</area>
-		         <preserveaspect>no</preserveaspect>
-		      </imagetype>  
-	
-		      <clock name="clock">
-		         <area>667,58,620,36</area>
-		         <font>Font_Clock</font>
-		         <template>dddd,  MMMM dd,  yyyy  |  hh:mm AP</template>
-		         <align>right,vcenter</align>
-		         <alpha>192</alpha>
-		      </clock>
-	
-	       </group>
-	
-	       <imagetype name="menu_bgd">
-	          <filename>images/shared/homemenu_back.png</filename>
-	          <area>0,476,1920,225></area>
-	          <preserveaspect>no</preserveaspect>
-	       </imagetype>
-	
-	       <group name="mainmenugroup">    
-	          <area>0,0,1920,1080</area>
-	
-		       <animation trigger="AboutToShow">
-		          <section duration="500" centre="middle">
-		              <alpha start="0" end="255" easingcurve="InQuad" />
-		          </section>
-		       </animation>
-	
-	          <textarea name="header">
-	              <alpha>255</alpha>
-	              <area>0,518,1920,142</area>
-	              <font>Font_MainMenu</font>
-	              <case>upper</case>
-	              <multiline>no</multiline>
-	              <align>allcenter</align>
-	              <scroll direction="left" />
-	              <cutdown>no</cutdown>
-	              <value>ZoneMinder Live Player</value>
-	          </textarea>
-	
-	       </group>
-		
-	       <imagetype name="menu_gradient">
-	          <filename>images/shared/homemenu_gradient.png</filename>
-	          <area>0,476,1920,225></area>
-	          <preserveaspect>no</preserveaspect>
-	       </imagetype>  
-        </group>
+        <textarea name="status4-2" from="status1-1">
+            <area>660,20,600,40</area>
+        </textarea>
+
+        <imagetype name="frame4-3" from="frame1-1">
+            <area>1280,0,640,360</area>
+        </imagetype>
+
+        <textarea name="name4-3" from="name1-1">
+            <area>1300,20,600,40</area>
+        </textarea>
+
+        <textarea name="status4-3" from="status1-1">
+            <area>1300,20,600,40</area>
+        </textarea>
+
+        <imagetype name="frame4-4" from="frame1-1">
+            <area>0,360,640,360</area>
+        </imagetype>
+
+        <textarea name="name4-4" from="name1-1">
+            <area>20,380,600,40</area>
+        </textarea>
+
+        <textarea name="status4-4" from="status1-1">
+            <area>20,380,600,40</area>
+        </textarea>
+
+        <imagetype name="frame4-5" from="frame1-1">
+            <area>640,360,640,360</area>
+        </imagetype>
+
+        <textarea name="name4-5" from="name1-1">
+            <area>660,380,600,40</area>
+        </textarea>
+
+        <textarea name="status4-5" from="status1-1">
+            <area>660,380,600,40</area>
+        </textarea>
+
+        <imagetype name="frame4-6" from="frame1-1">
+            <area>1280,360,640,360</area>
+        </imagetype>
+
+        <textarea name="name4-6" from="name1-1">
+            <area>1300,380,600,40</area>
+        </textarea>
+
+        <textarea name="status4-6" from="status1-1">
+            <area>1300,380,600,40</area>
+        </textarea>
+
+        <!-- eight monitor view -->
+        <imagetype name="frame5-1" from="frame4-1"/>
+
+        <textarea name="name5-1" from="name4-1"/>
+
+        <textarea name="status5-1" from="status4-1"/>
+
+        <imagetype name="frame5-2" from="frame4-2"/>
+
+        <textarea name="name5-2" from="name4-2"/>
+
+        <textarea name="status5-2" from="status4-2"/>
+
+        <imagetype name="frame5-3" from="frame4-3"/>
+
+        <textarea name="name5-3" from="name4-3"/>
+
+        <textarea name="status5-3" from="status4-3"/>
+
+        <imagetype name="frame5-4" from="frame4-4"/>
+
+        <textarea name="name5-4" from="name4-4"/>
+
+        <textarea name="status5-4" from="status4-4"/>
+
+        <imagetype name="frame5-5" from="frame4-5"/>
+
+        <textarea name="name5-5" from="name4-5"/>
+
+        <textarea name="status5-5" from="status4-5"/>
+
+        <imagetype name="frame5-6" from="frame4-6"/>
+
+        <textarea name="name5-6" from="name4-6"/>
+
+        <textarea name="status5-6" from="status4-6"/>
+
+        <imagetype name="frame5-7" from="frame1-1">
+            <area>0,720,640,360</area>
+        </imagetype>
+
+        <textarea name="name5-7" from="name1-1">
+            <area>20,740,600,40</area>
+        </textarea>
+
+        <textarea name="status5-7" from="status1-1">
+            <area>20,740,600,40</area>
+        </textarea>
+
+        <imagetype name="frame5-8" from="frame1-1">
+            <area>640,720,640,360</area>
+        </imagetype>
+
+        <textarea name="name5-8" from="name1-1">
+            <area>660,740,600,40</area>
+        </textarea>
+
+        <textarea name="status5-8" from="status1-1">
+            <area>660,740,600,40</area>
+        </textarea>
 
     </window>
 

@@ -212,36 +212,22 @@
             <fill color="#000000" alpha="255" />
         </shape> 
     
-        <imagetype name="backdropimg">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvguide/</filename>
-        </imagetype>        
-
-        <imagetype name="showcasefloorimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/showcase_floor.png</filename>
-        </imagetype>        
-
-        <imagetype name="showcaseimg" from="backdropimg">
-            <filename>images/shared/showcase_stage.png</filename>
-        </imagetype>
-
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
+        <group name="backdrop" from="basebackdrop"/>
 
         <group name="programguidewindow">
 	        <area>113,100,1694,846</area>
 
-	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
-	            <filename>images/shared/multiplex_back.png</filename>
-	        </imagetype>
-	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet_small_bottom.png</filename>
+	        <imagetype name="multiplextabletglowimg">
+	            <area>0,0,1695,1015</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
 	        </imagetype>
 
+	        <imagetype name="multiplextabletimg">
+	            <area>0,0,1695,1015</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
+	        </imagetype>
+	
 	        <group name="settings_panel">
 	           <area>414,28,1400,952</area>
 
@@ -492,23 +478,44 @@
             <filename>images/backgrounds/search/</filename>
         </imagetype>
         
-        <imagetype name="listfloorimg" from="fanart">
-            <area>0,473,1920,607</area>
-            <filename>images/shared/list_floor.png</filename>
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
         </imagetype>
-        
+
         <imagetype name="listfilterimg" from="fanart">
-            <filename>images/shared/list_filter.png</filename>
+            <filename>images/shared/views/list_filter.png</filename>
         </imagetype>
         
-        <imagetype name="spotlightimg" from="fanart">
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+
+        <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <filename>images/shared/list_spot.png</filename>
+            <alpha>255</alpha>
+            <filename>images/shared/views/list_spot.png</filename>
         </imagetype>
-        
+                
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
+
+        <group name="listinfo" from="basegroupschedulelistinfo">
+           <area>1140,87,545,930</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1500" centre="middle">
+	                <position start="-1228,87" end="1140,87" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+        </group>
+
+        <group name="listscheduledetails" from="basegroupscheduledetails">
+           <position>1310,1000</position>
+		  </group>
 
         <group name="listpanel">
            <area>88,110,1139,970</area>
@@ -519,23 +526,28 @@
 	            </section>
 	        </animation>
 
-	        <imagetype name="listpanelbgdblack">
-	            <area>0,0,1139,970</area>
-	            <filename>images/shared/listpanel_black.png</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-
-	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
-	            <filename>images/shared/listpanel_back.png</filename>
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,1139,1025</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
 	        </imagetype>
         
 	        <imagetype name="listpaneldetailbgd">
 	            <area>912,12,148,850</area>
-	            <filename>images/shared/listpanel_detailwide.png</filename>
+	            <filename>images/shared/views/listpanel_detailwide.png</filename>
 	        </imagetype>
-        
+        	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,1139,1025</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+                
            <buttonlist name="schedules" from="buttonlist_schedule">
                <position>12,50</position>
+			      <showscrollbar>yes</showscrollbar>
+			      <scrollbar name="scrollbar" from="basescrollbarvert">
+			          <area>1112,10,100%,100%</area>
+			      </scrollbar>
            </buttonlist>
            
            <textarea name="status" from="textarea_label_list">
@@ -552,10 +564,6 @@
 -->
         </group>
         
-        <group name="listinfo" from="basegroupschedulelistinfo">
-           <area>1264,150,545,930</area>
-        </group>
-
     </window>
  
     <window name="channelrecpriority">
@@ -565,20 +573,26 @@
             <filename>images/backgrounds/tvguide/</filename>
         </imagetype>
         
-        <imagetype name="listfloorimg" from="fanart">
-            <area>0,473,1920,607</area>
-            <filename>images/shared/list_floor.png</filename>
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
         </imagetype>
-        
+
         <imagetype name="listfilterimg" from="fanart">
-            <filename>images/shared/list_filter.png</filename>
+            <filename>images/shared/views/list_filter.png</filename>
         </imagetype>
         
-        <imagetype name="spotlightimg" from="fanart">
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+
+        <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <filename>images/shared/list_spot.png</filename>
+            <alpha>255</alpha>
+            <filename>images/shared/views/list_spot.png</filename>
         </imagetype>
-        
+                        
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
@@ -592,23 +606,28 @@
 	            </section>
 	        </animation>
 
-	        <imagetype name="listpanelbgdblack">
-	            <area>0,0,1139,970</area>
-	            <filename>images/shared/listpanel_black.png</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-
-	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
-	            <filename>images/shared/listpanel_back.png</filename>
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,1139,1025</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
 	        </imagetype>
         
 	        <imagetype name="listpaneldetailbgd">
 	            <area>912,12,148,850</area>
-	            <filename>images/shared/listpanel_detailwide.png</filename>
+	            <filename>images/shared/views/listpanel_detailwide.png</filename>
 	        </imagetype>
-        
+        	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,1139,1025</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+                
            <buttonlist name="channels" from="buttonlist_listbase">
                 <position>12,50</position>
+			       <showscrollbar>yes</showscrollbar>
+			       <scrollbar name="scrollbar" from="basescrollbarvert">
+			           <area>1112,10,100%,100%</area>
+			       </scrollbar>
 			       <statetype name="buttonitem">
 			           <state name="active">
 			               <area>0,0,1115,113</area>
@@ -808,51 +827,77 @@
             <area>0,0,1920,1080</area>
             <filename>images/backgrounds/tvguide/</filename>
         </imagetype>
-        
-        <imagetype name="listfloorimg" from="fanart">
-            <area>0,473,1920,607</area>
-            <filename>images/shared/list_floor.png</filename>
+              
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
         </imagetype>
-        
+
         <imagetype name="listfilterimg" from="fanart">
-            <filename>images/shared/list_filter.png</filename>
+            <filename>images/shared/views/list_filter.png</filename>
         </imagetype>
         
-        <imagetype name="spotlightimg" from="fanart">
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+
+        <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <filename>images/shared/list_spot.png</filename>
+            <alpha>255</alpha>
+            <filename>images/shared/views/list_spot.png</filename>
         </imagetype>
-        
+                
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
+
+        <group name="listinfo" from="basegroupschedulelistinfo">
+           <area>1140,87,545,930</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1500" centre="middle">
+	                <position start="-1228,87" end="1140,87" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+        </group>
+
+        <group name="listscheduledetails" from="basegroupscheduledetails">
+           <position>1310,1000</position>
+		  </group>
 
         <group name="listpanel">
            <area>88,110,1139,970</area>
            
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="88,-1080" end="88,110" easingcurve="InOutBack" />
+	                <position start="-1227,110" end="88,110" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
-	        <imagetype name="listpanelbgdblack">
-	            <area>0,0,1139,970</area>
-	            <filename>images/shared/listpanel_black.png</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-
-	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
-	            <filename>images/shared/listpanel_back.png</filename>
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,1139,1025</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
 	        </imagetype>
         
 	        <imagetype name="listpaneldetailbgd">
 	            <area>912,12,148,850</area>
-	            <filename>images/shared/listpanel_detailwide.png</filename>
+	            <filename>images/shared/views/listpanel_detailwide.png</filename>
 	        </imagetype>
-        
+        	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,1139,1025</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+                
            <buttonlist name="programs" from="buttonlist_rules">
                <position>12,50</position>
+			      <showscrollbar>yes</showscrollbar>
+			      <scrollbar name="scrollbar" from="basescrollbarvert">
+			          <area>1112,10,100%,100%</area>
+			      </scrollbar>
            </buttonlist>
            
            <textarea name="lastrecordeddate" from="textarea_label_list">
@@ -874,10 +919,6 @@
 -->
         </group>
         
-        <group name="listinfo" from="basegroupschedulelistinfo">
-           <area>1264,150,545,930</area>
-        </group>
-
     </window>
 
     <window name="custompriority">
@@ -1189,50 +1230,76 @@
             <filename>images/backgrounds/search/</filename>
         </imagetype>
         
-        <imagetype name="listfloorimg" from="fanart">
-            <area>0,473,1920,607</area>
-            <filename>images/shared/list_floor.png</filename>
+        <imagetype name="showcaseimg">
+            <area>0,472,1920,608</area>
+            <filename>images/shared/views/showcase_floor.png</filename>
         </imagetype>
-        
+
         <imagetype name="listfilterimg" from="fanart">
-            <filename>images/shared/list_filter.png</filename>
+            <filename>images/shared/views/list_filter.png</filename>
         </imagetype>
         
-        <imagetype name="spotlightimg" from="fanart">
+        <imagetype name="showcaseglowimg">
+            <area>0,266,1920,608</area>
+            <filename>images/shared/views/showcase_glow.png</filename>
+        </imagetype>
+
+        <imagetype name="spotlightimg">
             <area>0,875,1920,205</area>
-            <filename>images/shared/list_spot.png</filename>
+            <alpha>255</alpha>
+            <filename>images/shared/views/list_spot.png</filename>
         </imagetype>
-        
+
         <group name="date_clock" from="defaultclockup">
             <position>1240,0</position>
         </group>
+
+        <group name="listinfo" from="basegroupschedulelistinfo">
+           <area>1140,87,545,930</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1500" centre="middle">
+	                <position start="-1228,87" end="1140,87" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+        </group>
+
+        <group name="listscheduledetails" from="basegroupscheduledetails">
+           <position>1310,1000</position>
+		  </group>
 
         <group name="listpanel">
            <area>88,110,1139,970</area>
            
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="88,-1080" end="88,110" easingcurve="InOutBack" />
+	                <position start="-1227,110" end="88,110" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
-	        <imagetype name="listpanelbgdblack">
-	            <area>0,0,1139,970</area>
-	            <filename>images/shared/listpanel_black.png</filename>
-               <preserveaspect>no</preserveaspect>
-	        </imagetype>
-
-	        <imagetype name="listpanelbgd" from="listpanelbgdblack">
-	            <filename>images/shared/listpanel_back.png</filename>
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,1139,1025</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
 	        </imagetype>
         
 	        <imagetype name="listpaneldetailbgd">
 	            <area>912,12,148,850</area>
-	            <filename>images/shared/listpanel_detailwide.png</filename>
+	            <filename>images/shared/views/listpanel_detailwide.png</filename>
 	        </imagetype>
-        
+        	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,1139,1025</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+                
            <buttonlist name="proglist" from="buttonlist_schedule">
                <position>12,50</position>
+			      <showscrollbar>yes</showscrollbar>
+			      <scrollbar name="scrollbar" from="basescrollbarvert">
+			          <area>1112,10,100%,100%</area>
+			      </scrollbar>
            </buttonlist>
            
            <textarea name="curview" from="textarea_label_list">
@@ -1249,38 +1316,12 @@
 -->
         </group>
         
-        <group name="listinfo" from="basegroupschedulelistinfo">
-           <area>1264,150,545,930</area>
-        </group>
-
     </window>
 
 <!-- To do --> 
     <window name="progdetails">
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/tvshows/</filename>
-        </imagetype>
-
-        <imagetype name="showcasefloorimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/showcase_floor.png</filename>
-        </imagetype>        
-
-        <imagetype name="showcaseimg" from="fanart">
-            <filename>images/shared/showcase_stage.png</filename>
-        </imagetype>
-<!--        
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>128</alpha>
-            <filename>images/shared/showcase_spot.png</filename>
-        </imagetype>
--->        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
+        <group name="backdrop" from="basebackdrop"/>
 
         <group name="multiplextabletmoviegroup">
            <area>113,100,1694,846</area>
@@ -1300,12 +1341,19 @@
 	        </animation>       
 -->
 	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
+	            <area>0,0,1695,900</area>
 	            <filename>images/shared/multiplex_back.png</filename>
 	        </imagetype>
 	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet_small_bottom.png</filename>
+	        <imagetype name="multiplextabletglowimg">
+	            <area>0,0,1695,1015</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
+	        </imagetype>
+
+	        <imagetype name="multiplextabletimg">
+	            <area>0,0,1695,1015</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
 	        </imagetype>
 	
 	        <textarea name="title" from="textarea_label">
@@ -1316,28 +1364,21 @@
 	        </textarea>
 	
 	        <webbrowser name="browser">
-	            <area>20,60,1654,731</area>
-	            <background color="#2B3335" alpha="0" />
+	            <area>20,60,1654,781</area>
+	            <background color="#000000" alpha="0" />
 	            <zoom>1.4</zoom>
-  		         <browserarea>0,0,1654,731</browserarea>
+  		         <browserarea>0,0,1654,781</browserarea>
 		         <scrollduration>500</scrollduration>
-		         <scrollbar name="vertscrollbar" from="base_vertical_scrollbar">
+		         <scrollbar name="vertscrollbar" from="basescrollbarvert">
 		            <area>1644,0,5,100%</area>
 		         </scrollbar>
-		         <scrollbar name="horizscrollbar" from="base_horizontal_scrollbar">
+		         <scrollbar name="horizscrollbar" from="basescrollbarvertback">
 		            <area>0,721,100%,5</area>
 		         </scrollbar>
 	        </webbrowser>
 
 	     </group>   
 
-<!--
-        <webbrowser name="browser">
-            <area>40,65,710,490</area>
-            <zoom>1.0</zoom>
-            <background color="#000000"/>
-        </webbrowser>
--->
     </window>
 
     <window name="searchpopup" from="MythTextInputDialog">

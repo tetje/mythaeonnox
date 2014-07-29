@@ -4,29 +4,7 @@
 
     <window name="gallery">
 
-        <imagetype name="fanart">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/pictures/</filename>
-        </imagetype>
-
-        <imagetype name="showcasefloorimg">
-            <area>0,472,1920,608</area>
-            <filename>images/shared/showcase_floor.png</filename>
-        </imagetype>        
-
-        <imagetype name="showcaseimg" from="fanart">
-            <filename>images/shared/showcase_stage.png</filename>
-        </imagetype>
-        
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>128</alpha>
-            <filename>images/shared/showcase_spot.png</filename>
-        </imagetype>
-        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
+        <group name="backdrop" from="basegallerybackdrop"/>
 
         <textarea name="position" from="textarea_info_small">
             <area>1270,5,120,35</area>
@@ -34,42 +12,35 @@
             <alpha>192</alpha>
             <align>allcenter</align>
         </textarea>	  
-
-        <group name="multiplextabletmoviegroup">
-           <area>113,70,1694,846</area>
-
+	
+	     <group name="multiplextabletgallerygroup">
+	        <area>88,50,1920,944</area>
+	
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
-	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
+	                <position start="88,-944" end="88,50" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
-
-<!-- Fix me: This does not work when a movie has played and one returns to the main screen
-
+	
+	<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+	
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
 	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
 	            </section>
 	        </animation>       
--->
-	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
-	            <filename>images/shared/multiplex_back.png</filename>
-	        </imagetype>
-	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet_small_bottom.png</filename>
-	        </imagetype>
-
+	-->
 	        <buttonlist name="images" from="buttonlist_wall_gallery">
-	            <position>52,30</position>
+	            <area>0,75,1760,944</area>
+		         <buttonarea>0,0,1760,944</buttonarea>
+		         <showarrow>no</showarrow>
+		         <showscrollbar>yes</showscrollbar>
+			      <scrollbar name="scrollbar" from="basescrollbarvertback">
+			          <area>1770,10,100%,82%</area>
+			       </scrollbar>
 	        </buttonlist>
-
-	        <textarea name="noimages" from="textarea_plot">
-	            <area>30,70,567,350</area>
-	        </textarea>
 	
-	     </group>   
+	     </group>
 
         <group name="multiplextabletmoviewallgroup">
            <area>0,670,1920,410</area>
@@ -202,41 +173,5 @@
 	        </section>
 	     </animation>
 
-<!--
-        <textarea name="filter_text" from="basetextarea">
-            <area>10,107,180,34</area>
-            <value>Folder filter :</value>
-            <align>right,top</align>
-        </textarea>
-
-        <textarea name="type_filter" from="filter_text">
-            <position>10,161</position>
-            <value>Type filter :</value>
-        </textarea>
-
-        <textarea name="numimages_text" from="basetextarea">
-            <area>200,255,770,30</area>
-            <align>left,top</align>
-        </textarea>
-
-        <textarea name="sort_text" from="basetextarea">
-            <area>10,319,180,34</area>
-            <value>Sort by :</value>
-            <align>right,top</align>
-        </textarea>
-
-        <textedit name="dirfilter_text" from="basetextedit">
-            <position>200,100</position>
-        </textedit>
-
-        <buttonlist name="typefilter_select" from="baseselector">
-            <position>200,154</position>
-        </buttonlist>
-
-        <buttonlist name="sort_select" from="baseselector">
-            <position>200,312</position>
-        </buttonlist>
-
--->
     </window>
 </mythuitheme>

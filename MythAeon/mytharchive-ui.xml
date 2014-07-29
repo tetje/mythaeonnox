@@ -398,20 +398,20 @@ Common MythArchive window definitions
 	        </button>
 
            <group name="preview_image_group">
-              <position>12,761</position>
+              <position>12,650</position>
 		        <imagetype name="videoborder">
-		            <area>0,0,306,179</area>
+		            <area>0,0,306,306</area>
 		            <filename>images/shared/multiplex_tvborder.png</filename>
 		        </imagetype>
 		        
 		        <imagetype name="preview_image">
-		            <area>8,9,290,163</area>
-		            <mask>images/shared/multiplex_tvmask_video.png</mask>
-		            <filename>images/shared/DefaultVideoBigPoster.png</filename>
+		            <area>8,8,290,290</area>
+		            <mask>images/shared/list_musicicon_mask_archive.png</mask>
+		            <filename>images/shared/DefaultRecentlyAddedEpisodes.png</filename>
 		        </imagetype>
 		        
 		        <imagetype name="videoglass">
-		            <area>8,9,290,163</area>
+		            <area>8,8,290,290</area>
 		            <filename>images/shared/multiplex_tvglass.png</filename>
 		        </imagetype>
            </group>
@@ -518,29 +518,23 @@ Common MythArchive window definitions
 	            <value>Done</value>
 	        </button>
 	        
-           <group name="coverart_group">
-               <position>70,635</position>
-               <imagetype name="previewbgd">
-                   <area>-7,-7,200,305</area>
-                   <alpha>255</alpha>
-                   <filename>images/shared/multiplex_border.png</filename>
-                   <preserveaspect>no</preserveaspect>
-               </imagetype>
-               
-               <imagetype name="cover_image">
-                   <area>0,0,186,287</area>
-                   <alpha>255</alpha>
-                   <preserveaspect>no</preserveaspect>
-                   <filename>images/shared/DefaultVideoBigPosterLong.png</filename>
-                   <mask>images/shared/multiplex_mask_big.png</mask>
-               </imagetype>
-
-               <imagetype name="previewglass">
-                   <area>0,0,186,287</area>
-                   <alpha>255</alpha>
-                   <filename>images/shared/multiplex_glass.png</filename>
-                   <preserveaspect>no</preserveaspect>
-               </imagetype>
+           <group name="preview_image_group">
+              <position>12,650</position>
+		        <imagetype name="videoborder">
+		            <area>0,0,306,306</area>
+		            <filename>images/shared/multiplex_tvborder.png</filename>
+		        </imagetype>
+		        
+		        <imagetype name="cover_image">
+		            <area>8,8,290,290</area>
+		            <mask>images/shared/list_musicicon_mask_archive.png</mask>
+		            <filename>images/shared/DefaultRecentlyAddedMovies.png</filename>
+		        </imagetype>
+		        
+		        <imagetype name="videoglass">
+		            <area>8,8,290,290</area>
+		            <filename>images/shared/multiplex_tvglass.png</filename>
+		        </imagetype>
            </group>
         </group>
 

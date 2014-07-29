@@ -237,7 +237,7 @@
         <imagetype name="osd_statusbgd">
             <filename>images/osd/osd_back.png</filename>
             <area>0,285,1920,238</area>
-            <alpha>192</alpha>
+            <alpha>255</alpha>
             <preserveaspect>no</preserveaspect>
         </imagetype>
 
@@ -329,15 +329,15 @@
     <window name="program_info">
 
         <imagetype name="osd_inputbgd">
-           <filename>images/osd/fullscreen_top.png</filename>
-           <area>0,0,1920,85></area>
+           <filename>images/osd/codec_top.png</filename>
+           <area>0,0,1920,90</area>
            <preserveaspect>no</preserveaspect>
         </imagetype>
 
         <imagetype name="osd_infobgd">
            <filename>images/osd/osd_back.png</filename>
            <area>0,943,1920,238></area>
-           <alpha>192</alpha>
+           <alpha>255</alpha>
            <preserveaspect>no</preserveaspect>
         </imagetype>
 
@@ -744,15 +744,15 @@
     <window name="browse_info">
 
         <imagetype name="osd_inputbgd">
-           <filename>images/osd/fullscreen_top.png</filename>
-           <area>0,0,1920,85></area>
+           <filename>images/osd/codec_top.png</filename>
+           <area>0,0,1920,90></area>
            <preserveaspect>no</preserveaspect>
         </imagetype>
 
         <imagetype name="osd_infobgd">
            <filename>images/osd/osd_back.png</filename>
            <area>0,943,1920,238></area>
-           <alpha>192</alpha>
+           <alpha>255</alpha>
            <preserveaspect>no</preserveaspect>
         </imagetype>
 
@@ -1190,7 +1190,7 @@
         <imagetype name="osd_statusbgd">
             <filename>images/osd/osd_back.png</filename>
             <area>0,285,1920,238</area>
-            <alpha>192</alpha>
+            <alpha>255</alpha>
             <preserveaspect>no</preserveaspect>
         </imagetype>
 

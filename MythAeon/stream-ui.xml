@@ -5,24 +5,7 @@
 
     <window name="streamview">
 
-        <imagetype name="backdropimg">
-            <area>0,0,1920,1080</area>
-            <filename>images/backgrounds/radio/</filename>
-        </imagetype>
-        
-        <imagetype name="showcaseimg" from="backdropimg">
-            <filename>images/shared/showcase_stage.png</filename>
-        </imagetype>
-        
-        <imagetype name="spotlightimg">
-            <area>0,875,1920,205</area>
-            <alpha>128</alpha>
-            <filename>images/shared/showcase_spot.png</filename>
-        </imagetype>
-        
-        <group name="date_clock" from="defaultclockup">
-            <position>1240,0</position>
-        </group>
+        <group name="backdrop" from="baseradiobackdrop"/>
 
         <group name="playcontrolinfo" from="basegroupplaycontrolinfo">
              <area>1270,0,120,40</area>
@@ -46,15 +29,22 @@
 	        </animation>       
 -->
 
-	        <imagetype name="multiplextabletbgdimg">
-	            <area>0,0,1694,846</area>
-	            <filename>images/shared/multiplex_back.png</filename>
+	        <imagetype name="multiplextabletglowimg">
+	            <area>0,0,1695,1015</area>
+	            <alpha>64</alpha>
+	            <filename>images/shared/wall/wall_bg_glow.png</filename>
 	        </imagetype>
-	        
-	        <imagetype name="multiplextabletimg" from="multiplextabletbgdimg">
-	            <filename>images/shared/multiplex_tablet.png</filename>
+
+	        <imagetype name="multiplextabletimg">
+	            <area>0,0,1695,1015</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
 	        </imagetype>
-	
+		
+	        <imagetype name="multiplextabletlayoutimg">
+	            <area>0,-2,1695,846</area>
+	            <filename>images/shared/views/poster_layout.png</filename>
+	        </imagetype>
+		
 		     <group name="streamtrackinfo">
 		        <area>38,85,450,515</area>
 		

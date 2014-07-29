@@ -500,20 +500,20 @@ MythTV Archive GUI theme
 	        </button>
 
            <group name="preview_image_group">
-              <position>12,761</position>
+              <position>12,650</position>
 		        <imagetype name="videoborder">
-		            <area>0,0,306,179</area>
+		            <area>0,0,306,306</area>
 		            <filename>images/shared/multiplex_tvborder.png</filename>
 		        </imagetype>
 		        
 		        <imagetype name="tpreview_image">
-		            <area>8,9,290,163</area>
-		            <mask>images/shared/multiplex_tvmask_video.png</mask>
+		            <area>8,8,290,290</area>
+		            <mask>images/shared/list_musicicon_mask_archive.png</mask>
 		            <filename>images/shared/DefaultTVShows.png</filename>
 		        </imagetype>
 		        
 		        <imagetype name="videoglass">
-		            <area>8,9,290,163</area>
+		            <area>8,8,290,290</area>
 		            <filename>images/shared/multiplex_tvglass.png</filename>
 		        </imagetype>
            </group>
@@ -526,104 +526,6 @@ MythTV Archive GUI theme
 	        </section>
 	     </animation>
 
-<!--
-
-            local file channel
-
-
-        <textarea name="label6" from="label1">
-            <position>50,385</position>
-            <value>Local Channel</value>
-        </textarea>
-
-        <textarea name="label7" from="label2">
-            <position>50,440</position>
-            <value>Chan. ID:</value>
-        </textarea>
-
-        <textarea name="local_chanid" from="chanid">
-            <position>190,444</position>
-        </textarea>
-
-        <button name="searchchanid_button">
-            <area>300,440,32,32</area>
-            <statetype name="buttonstate">
-                <state name="active">
-                    <imagetype name="background">
-                        <filename>blankbutton_off.png</filename>
-                    </imagetype>
-                </state>
-                <state name="selected" from="active">
-                    <imagetype name="background">
-                        <filename>blankbutton_on.png</filename>
-                    </imagetype>
-                </state>
-                <state name="disabled" from="active" />
-                <state name="pushed" from="active">
-                    <imagetype name="background">
-                        <filename>blankbutton_pushed.png</filename>
-                    </imagetype>
-                </state>
-            </statetype>
-        </button>
-
-        <textarea name="label8" from="label2">
-            <position>50,480</position>
-            <value>Chan. No:</value>
-        </textarea>
-
-        <textarea name="local_channo" from="chanid">
-            <position>190,484</position>
-        </textarea>
-
-        <button name="searchchanno_button" from="searchchanid_button">
-            <position>300,480</position>
-            <value>Search Channel</value>
-        </button>
-
-        <textarea name="label9" from="label2">
-            <position>350,440</position>
-            <value>Callsign:</value>
-        </textarea>
-
-        <textarea name="local_callsign" from="chanid">
-            <position>480,445</position>
-        </textarea>
-
-        <button name="searchcallsign_button" from="searchchanid_button">
-            <position>700,440</position>
-            <value>Search Callsign</value>
-        </button>
-
-        <textarea name="label10" from="label2">
-            <position>350,480</position>
-            <value>Name:</value>
-        </textarea>
-
-        <textarea name="local_name" from="chanid">
-            <position>480,485</position>
-        </textarea>
-
-        <button name="searchname_button" from="searchchanid_button">
-            <position>700,480</position>
-            <value>Search Name</value>
-        </button>
-
-        <button name="cancel_button" from="basebutton">
-            <position>35,550</position>
-            <value>Cancel</value>
-        </button>
-
-        <button name="prev_button" from="basebutton">
-            <position>440,550</position>
-            <value>Prev</value>
-        </button>
-
-        <button name="finish_button" from="basebutton">
-            <position>610,550</position>
-            <value>Finish</value>
-        </button>
--->
   </window>
 
 </mythuitheme>
