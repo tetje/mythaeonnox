@@ -9160,7 +9160,7 @@ window
             <scroll direction="horizontal"/>
         </textarea>
 
-        <textedit name="input" from="textedit_dialog">
+        <textedit name="input" from="textedit_dialog_black">
             <position>0,125</position>
         </textedit>
 

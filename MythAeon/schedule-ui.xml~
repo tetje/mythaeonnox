@@ -1065,7 +1065,7 @@
 		       <buttonarea>0,0,700,50</buttonarea>
         </buttonlist>
 
-        <textedit name="phrase_edit" from="textedit_dialog">
+        <textedit name="phrase_edit" from="textedit_dialog_black">
             <position>0,275</position>
         </textedit>
 
