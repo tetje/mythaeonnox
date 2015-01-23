@@ -3234,6 +3234,105 @@
        </statetype>
    </buttonlist>
 
+   <buttonlist name="buttonlist_threepanel_stream">
+       <area>0,0,850,800</area>
+       <layout>vertical</layout>
+       <spacing>0</spacing>
+       <scrollstyle>free</scrollstyle>
+       <arrange>fixed</arrange>
+       <align>left</align>
+       <wrapstyle>items</wrapstyle>
+       <showarrow>no</showarrow>
+       <buttonarea>0,0,850,800</buttonarea>
+       <statetype name="buttonitem">
+           <state name="active">
+               <area>0,0,850,50</area>
+               <imagetype name="Listpanelline">
+                   <area>0,0,850,50</area>
+                   <filename>images/shared/settings_radiobuttonoff.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>40,0,720,50</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Active</font>
+                   <font state="running">Font_List_Amber</font>
+               </textarea>
+               <textarea name="channel" from="buttontext">
+                   <template>%STATION% - %CHANNEL%</template>
+               </textarea>
+		         <statetype name="ratingstate" from="rating_text">
+		             <position>760,0</position>
+		             <alpha>192</alpha>
+		         </statetype>		
+	 	         <statetype name="buttoncheck">
+		            <area>730,0,122,50</area>
+		            <state type="off">
+		                <imagetype name="LEDOff">
+		                    <area>0,0,122,50</area>
+		                    <filename>images/shared/settings_radiobuttonon_buttonlist2.png</filename>
+		                </imagetype>
+		            </state>
+		            <state type="half">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,50</area> 
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist2.png</filename>
+		                    <alpha>128</alpha>
+		                </imagetype>
+		            </state>
+		            <state type="full">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,50</area>
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist2.png</filename>
+		                </imagetype>
+		            </state>
+		         </statetype>
+           </state>
+           <state name="selectedactive">
+               <area>0,0,850,50</area>
+               <imagetype name="Listpanel_selectbar">
+                   <area>0,0,850,50</area>
+                   <filename>images/shared/listpanel_selectbar.png</filename>
+               </imagetype>
+               <textarea name="buttontext" from="textarea_list">
+                   <area>40,0,720,50</area>
+                   <cutdown>yes</cutdown>
+                   <font>Font_List_Selected</font>
+               </textarea>
+               <textarea name="channel" from="buttontext">
+                   <template>%STATION% - %CHANNEL%</template>
+               </textarea>
+		         <statetype name="ratingstate" from="rating_text_selected">
+		             <position>760,0</position>
+		             <alpha>192</alpha>
+		         </statetype>
+	 	         <statetype name="buttoncheck">
+		            <area>730,0,122,50</area>
+		            <state type="off">
+		                <imagetype name="LEDOff">
+		                    <area>0,0,122,50</area>
+		                    <filename>images/shared/settings_radiobuttonon_buttonlist2.png</filename>
+		                </imagetype>
+		            </state>
+		            <state type="half">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,50</area> 
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist2.png</filename>
+		                    <alpha>128</alpha>
+		                </imagetype>
+		            </state>
+		            <state type="full">
+		                <imagetype name="LEDOn">
+		                    <area>0,0,122,50</area>
+		                    <filename>images/shared/settings_radiobuttononfocus_buttonlist2.png</filename>
+		                </imagetype>
+		            </state>
+		         </statetype>
+           </state>
+           <state name="inactive" from="active"/>
+           <state name="selectedinactive" from="selectedactive"/>
+       </statetype>
+   </buttonlist>
+
    <buttonlist name="buttonlist_threepanel_netvision">
        <area>0,0,850,800</area>
        <layout>vertical</layout>

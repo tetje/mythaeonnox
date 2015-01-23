@@ -5,22 +5,263 @@
 
     <window name="streamview">
 
-        <group name="backdrop" from="baseradiobackdrop"/>
 
+        <group name="backdrop" from="baseradiobackdrop"/>
+                
         <group name="playcontrolinfo" from="basegroupplaycontrolinfo">
              <area>1270,0,120,40</area>
         </group> 
 
-        <group name="multiplextabletgroup">
-           <area>113,70,1694,846</area>
+        <group name="listpanel3">
+           <area>1295,70,650,1080</area>
 
 	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="113,-916" end="113,70" easingcurve="InOutBack" />
+	            <section duration="2200" centre="middle">
+	                <position start="54,70" end="1295,70" easingcurve="InOutBack" />
 	            </section>
 	        </animation>
 
-<!-- Fix me: This does not work when a recording has played and one returns to the main recording screen
+	        <imagetype name="panel3">
+	            <area>0,0,650,1080</area>
+	            <filename>images/shared/views/tripanel/info_panel_alt.png</filename>
+	        </imagetype>
+	        <imagetype name="panel3_glow" from="panel3">
+	            <alpha>64</alpha>
+	            <filename>images/shared/views/tripanel/info_panel_alt_glow.png</filename>
+	        </imagetype>
+
+	        <textarea name="panellbl5" from="textarea_label">
+	            <area>145,150,340,30</area>
+	            <value>Runtime:</value>
+	        </textarea>
+
+	        <textarea name="panellbl6" from="panellbl5">
+	            <position>145,190</position>
+	            <value>Track Number:</value>
+	        </textarea>
+
+	        <textarea name="panellbl7" from="panellbl5">
+	            <position>145,230</position>
+	            <value>Playlist Position:</value>
+	        </textarea>
+	        
+	        <textarea name="length" from="textarea_info">
+	            <area>255,150,315,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+	        <textarea name="tracknum" from="textarea_info">
+	            <area>325,190,270,30</area>
+	            <cutdown>yes</cutdown>
+	            <value>0</value>
+	        </textarea>
+
+	        <textarea name="playlistposition" from="textarea_info">
+	            <area>360,230,235,30</area>
+	            <cutdown>yes</cutdown>
+	            <value>0</value>
+	        </textarea>
+
+           <group name="playcontrolbuttons" from="basegroupcontrolbuttons2">
+              <position>145,270</position>
+           </group>
+           
+ 		     <buttonlist name="playedtrackslist">
+		         <area>145,510,736,280</area>
+		         <layout>vertical</layout>
+		         <spacing>0</spacing>
+		         <scrollstyle>freeplaylist</scrollstyle>
+		         <arrange>stack</arrange>
+		         <align>left</align>
+		         <wrapstyle>selection</wrapstyle>
+		         <showarrow>no</showarrow>
+		         <buttonarea>0,0,736,280</buttonarea>
+		         <statetype name="buttonitem">
+		             <state name="active">
+		                 <area>0,0,736,70</area>
+				           <textarea name="listitemlbl" from="textarea_label">
+				               <area>0,7,420,30</area>
+				               <value>Played track:</value>
+				           </textarea>	
+		                 <textarea name="tracknum" from="textarea_info">
+		                     <area>0,32,440,30</area>
+		                     <template>%TRACKNUM% - %TITLE% %(|LENGTH|)%</template>
+		                 </textarea>
+		            </state>
+		            <state name="selectedactive">
+		                 <imagetype name="Listpanel_selectbar">
+		                     <area>-10,0,451,70</area>
+		                     <filename>images/shared/listpanel_selectbar.png</filename>
+		                 </imagetype>
+				           <textarea name="listitemlbl" from="textarea_label">
+				               <area>0,7,420,30</area>
+				               <font>Font_Label_List_Selected</font>
+				               <value>Played track:</value>
+				           </textarea>	
+		                 <textarea name="tracknum" from="textarea_info">
+		                     <area>0,32,440,30</area>
+		                     <font>Font_Info_Selected</font>
+		                     <scroll direction="horizontal"/>
+		                     <template>%TRACKNUM% - %TITLE% - %ARTIST% %(|LENGTH|)%</template>
+		                 </textarea>
+		             </state>
+		             <state name="inactive" from="active"/>
+		             <state name="selectedinactive" from="active"/>
+		         </statetype>
+		     </buttonlist>
+
+	        <textarea name="volumelbl" from="panellbl5">
+	            <position>145,740</position>
+	            <value>Volume:</value>
+	        </textarea>
+	        
+	        <textarea name="mutelbl" from="panellbl5">
+	            <position>145,770</position>
+	            <value>Mute:</value>
+	        </textarea>
+
+	        <textarea name="volume" from="textarea_info">
+	            <area>250,740,345,30</area>
+	            <cutdown>yes</cutdown>
+	            <value>No volume control configured</value>
+	        </textarea>
+
+	        <textarea name="mute" from="textarea_info">
+	            <area>220,770,365,30</area>
+	            <cutdown>yes</cutdown>
+	            <value>Not muted</value>
+	        </textarea>
+
+        </group>	    
+
+	     <group name="listpanel2">
+           <area>820,75,650,1080</area>
+
+	        <animation trigger="AboutToShow">
+	            <section duration="1700" centre="middle">
+	                <position start="54,100" end="820,75" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+	
+	        <imagetype name="panel2">
+	            <area>0,0,650,1080</area>
+	            <filename>images/shared/views/tripanel/info_panel.png</filename>
+	        </imagetype>
+	     
+	        <imagetype name="panel2glow" from="panel2">
+	            <filename>images/shared/views/tripanel/info_panel_glow.png</filename>
+	            <alpha>64</alpha>
+	        </imagetype>
+	
+	        <textarea name="panellbl1" from="textarea_label">
+	            <area>105,110,340,30</area>
+	            <value>Artist:</value>
+	        </textarea>
+	     
+	        <textarea name="panellbl2" from="panellbl1">
+	            <position>105,150</position>
+	            <value>Channel:</value>
+	        </textarea>
+	
+	        <textarea name="panellbl3" from="panellbl1">
+	            <position>105,190</position>
+	            <value>Title:</value>
+	        </textarea>
+	
+	        <textarea name="panellbl4" from="panellbl1">
+	            <position>105,230</position>
+	            <value>Genre:</value>
+	        </textarea>
+	        
+	        <textarea name="artist" from="textarea_info">
+	            <area>195,110,385,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="album" from="textarea_info">
+	            <area>215,150,365,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="title" from="textarea_info">
+	            <area>175,190,405,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+	
+	        <textarea name="genre" from="textarea_info">
+	            <area>190,230,390,30</area>
+	            <cutdown>yes</cutdown>
+	        </textarea>
+
+	        <video name="visualizer">
+	            <area>96,278,492,492</area>
+	        </video>
+	
+	        <imagetype name="coverart_overlay">
+	            <area>46,258,594,608</area>
+	            <alpha>255</alpha>
+	            <filename>images/shared/views/tripanel/poster_overlay.png</filename>
+	        </imagetype>
+
+	        <textarea name="bufferlbl" from="panellbl1">
+	            <position>105,790</position>
+	            <value>Buffer:</value>
+	        </textarea>
+	        
+	        <textarea name="bufferstatus" from="textarea_info">
+	            <area>200,790,380,30</area>
+	        </textarea>
+
+           <statetype name="trackstate">
+             <area>558,790,30,30</area>
+             <state name="playing">
+                 <imagetype name="playing">
+                     <area>0,0,30,30</area>
+                     <filename>images/icons/play.png</filename>
+                 </imagetype>
+             </state>
+             <state name="paused">
+                 <imagetype name="paused">
+                     <area>0,0,30,30</area>
+                     <filename>images/icons/paused.png</filename>
+                     <alpha>255</alpha>
+                 </imagetype>
+             </state>
+             <state name="stopped">
+                 <imagetype name="stopped">
+                     <area>0,0,30,30</area>
+                     <filename>images/icons/stopped.png</filename>
+                     <alpha>255</alpha>
+                 </imagetype>
+             </state>
+           </statetype>
+
+	        <progressbar name="bufferprogress" from="baseprogressbar">
+	           <area>96,830,492,30</area>
+		        <layout>horizontal</layout>
+		        <style>reveal</style>
+		        <imagetype name="background">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_back.png</filename>
+		        </imagetype>
+		        <imagetype name="progressimage">
+		            <area>0,0,100%,100%</area>
+		            <filename>images/shared/progress_fill.png</filename>
+		        </imagetype>
+	        </progressbar>
+	
+	     </group>
+
+        <group name="listpanel1">
+           <area>54,107,860,1003</area>
+           
+	        <animation trigger="AboutToShow">
+	            <section duration="1200" centre="middle">
+	                <position start="-914,107" end="54,107" easingcurve="InOutBack" />
+	            </section>
+	        </animation>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
 
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
@@ -28,216 +269,39 @@
 	            </section>
 	        </animation>       
 -->
-
-	        <imagetype name="multiplextabletglowimg">
-	            <area>0,0,1695,1015</area>
+	        <imagetype name="listpanelbgd">
+	            <area>0,0,860,1003</area>
+	            <filename>images/shared/wall/wall_bg.png</filename>
+	        </imagetype>
+        	
+	        <imagetype name="listpanelglow">
+	            <area>0,0,860,1003</area>
 	            <alpha>64</alpha>
 	            <filename>images/shared/wall/wall_bg_glow.png</filename>
 	        </imagetype>
+        
+	        <buttonlist name="streamlist" from="buttonlist_threepanel_stream">
+	            <area>7,52,850,800</area>
+	            <showarrow>no</showarrow>
+	            <showscrollbar>yes</showscrollbar>
+		         <scrollbar name="scrollbar" from="basescrollbarvert">
+		             <area>841,0,100%,80%</area>
+		         </scrollbar>
+	        </buttonlist>
+<!--
+           <textarea name="playlistposition" from="textarea_label_list">
+               <area>30,843,800,30</area>
+           </textarea>
+-->
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
 
-	        <imagetype name="multiplextabletimg">
-	            <area>0,0,1695,1015</area>
-	            <filename>images/shared/wall/wall_bg.png</filename>
-	        </imagetype>
-		
-	        <imagetype name="multiplextabletlayoutimg">
-	            <area>0,-2,1695,846</area>
-	            <filename>images/shared/views/poster_layout.png</filename>
-	        </imagetype>
-		
-		     <group name="streamtrackinfo">
-		        <area>38,85,450,515</area>
-		
-		        <!-- Labels -->
-		        <textarea name="currentlyplayinglbl" from="textarea_label">
-		            <area>0,0,420,30</area>
-		            <value>Currently Playing:</value>
-		        </textarea>
-		
-		        <textarea name="artistlbl" from="currentlyplayinglbl">
-		            <position>0,70</position>
-		            <value>Artist:</value>
-		        </textarea>
-		
-		        <textarea name="albumlbl" from="currentlyplayinglbl">
-		            <position>0,140</position>
-		            <value>Channel:</value>
-		        </textarea>
-		
-		        <textarea name="genrelbl" from="currentlyplayinglbl">
-		            <position>0,210</position>
-		            <value>Genre:</value>
-		        </textarea>
-		
-		        <textarea name="lengthlbl" from="currentlyplayinglbl">
-		            <position>0,280</position>
-		            <value>Length:</value>
-		        </textarea>
-		
-		        <textarea name="volumelbl" from="currentlyplayinglbl">
-		            <position>0,350</position>
-		            <value>Volume:</value>
-		        </textarea>
-		
-		        <textarea name="lastplayedlbl" from="currentlyplayinglbl">
-		            <position>0,420</position>
-		            <value>Channellist position:</value>
-		        </textarea>
-		
-		        <!-- Widgets -->
-		        <textarea name="title" from="textarea_info">
-		            <area>0,25,420,30</area>
-		            <scroll direction="horizontal" />
-		        </textarea>
-		
-		        <textarea name="artist" from="title">
-		            <position>0,95</position>
-		        </textarea>
-		
-		        <textarea name="channel" from="title">
-		            <position>0,165</position>
-		            <template>%STATION% - %CHANNEL%</template>
-		        </textarea>
-		
-		        <textarea name="genre" from="title">
-		            <position>0,235</position>
-		        </textarea>
-		
-		        <textarea name="length" from="title">
-		            <position>0,305</position>
-		        </textarea>
-		
-		        <textarea name="volume" from="nexttitle">
-		            <position>0,375</position>
-		            <template>%volume% %(|mute|)%</template>
-		        </textarea>
-		
-		        <textarea name="novolumetext" from="volume" depends="!volume">
-		             <value>No volume controls configured</value>
-		        </textarea>
-
-		        <textarea name="playlistposition" from="title">
-		            <position>0,445</position>
-		        </textarea>
-		
-		     </group>
-
-		     <group name="basegroupstreamcontrol">
-		        <area>484,85,736,515</area>
-		        
-		        <!-- Labels -->
-		        <textarea name="playlisttimelbl" from="textarea_label">
-		            <area>20,210,700,30</area>
-		            <value>Stream buffer:</value>
-		        </textarea>
-		
-		        <textarea name="playlistprogresslbl" from="playlisttimelbl">
-		            <position>20,280</position>
-		            <value>Stream buffer status:</value>
-		        </textarea>
-		
-		        <textarea name="audiocontrolslbl" from="playlisttimelbl">
-		            <position>20,350</position>
-		            <value>Controls:</value>
-		        </textarea>
-		
-		        <!-- Widgets -->
- 			     <buttonlist name="playedtrackslist">
-			         <area>0,0,736,210</area>
-			         <layout>vertical</layout>
-			         <spacing>0</spacing>
-			         <scrollstyle>freeplaylist</scrollstyle>
-			         <arrange>stack</arrange>
-			         <align>left</align>
-			         <wrapstyle>selection</wrapstyle>
-			         <showarrow>no</showarrow>
-			         <buttonarea>0,0,736,210</buttonarea>
-			         <statetype name="buttonitem">
-			             <state name="active">
-			                 <area>0,0,736,70</area>
-					           <textarea name="listitemlbl" from="textarea_label">
-					               <area>20,7,420,30</area>
-					               <value>Played track:</value>
-					           </textarea>	
-			                 <textarea name="tracknum" from="textarea_info">
-			                     <area>20,32,696,30</area>
-			                     <template>%TRACKNUM% - %TITLE% %(|LENGTH|)%</template>
-			                 </textarea>
-			            </state>
-			            <state name="selectedactive">
-			                 <imagetype name="Listpanel_selectbar">
-			                     <area>0,0,736,70</area>
-			                     <filename>images/shared/listpanel_selectbar.png</filename>
-			                 </imagetype>
-					           <textarea name="listitemlbl" from="textarea_label">
-					               <area>20,7,420,30</area>
-					               <font>Font_Label_List_Selected</font>
-					               <value>Played track:</value>
-					           </textarea>	
-			                 <textarea name="tracknum" from="textarea_info">
-			                     <area>20,32,696,30</area>
-			                     <font>Font_Info_Selected</font>
-			                     <scroll direction="horizontal"/>
-			                     <template>%TRACKNUM% - %TITLE% - %ARTIST% %(|LENGTH|)%</template>
-			                 </textarea>
-			             </state>
-			             <state name="inactive" from="active"/>
-			             <state name="selectedinactive" from="active"/>
-			         </statetype>
-			     </buttonlist>
-
-		        <textarea name="bufferstatus" from="nexttitle">
-		            <position>20,235</position>
-		        </textarea>
-		
-		        <progressbar name="bufferprogress" from="baseprogressbar">
-		           <area>30,310,676,30</area>
-			        <layout>horizontal</layout>
-			        <style>reveal</style>
-			        <imagetype name="background">
-			            <area>0,0,100%,100%</area>
-			            <filename>images/shared/progress_back.png</filename>
-			        </imagetype>
-			        <imagetype name="progressimage">
-			            <area>0,0,100%,100%</area>
-			            <filename>images/shared/progress_fill.png</filename>
-			        </imagetype>
-		        </progressbar>
-		
-		        <group name="controlbuttons" from="basegroupcontrolbuttons">
-		           <area>0,365,700,150</area>
-		        </group>
-		 
-		     </group>
-		
-           <group name="playinfo" from="basegroupplayinfo">
-              <area>1222,58,455,540</area>
-           </group>
-
-        </group>
-
-        <group name="multiplextabletlistgroup">
-           <area>0,687,1920,400</area>
-
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="1920,687" end="0,687" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
-
-<!-- Fix me: This does not work will when a recording has played and one returns to the main recording screen
-	        
 	        <animation trigger="AboutToHide">
 	            <section duration="1200" centre="middle">
-	                <position start="0,755" end="-1920,755" easingcurve="OutInBack" />
+	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
 	            </section>
 	        </animation>       
 -->
-	        <buttonlist name="streamlist" from="buttonlist_multiplexstream">
-	             <position>0,0</position>
-	        </buttonlist>
-	        
-        </group>             
+        </group>
 
     </window>
 
