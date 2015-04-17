@@ -253,7 +253,7 @@
 	     </group>
 
         <group name="listpanel1">
-           <area>54,107,860,1003</area>
+           <area>54,107,876,1003</area>
            
 	        <animation trigger="AboutToShow">
 	            <section duration="1200" centre="middle">
@@ -270,12 +270,12 @@
 	        </animation>       
 -->
 	        <imagetype name="listpanelbgd">
-	            <area>0,0,860,1003</area>
+	            <area>0,0,876,1003</area>
 	            <filename>images/shared/wall/wall_bg.png</filename>
 	        </imagetype>
         	
 	        <imagetype name="listpanelglow">
-	            <area>0,0,860,1003</area>
+	            <area>0,0,876,1003</area>
 	            <alpha>64</alpha>
 	            <filename>images/shared/wall/wall_bg_glow.png</filename>
 	        </imagetype>

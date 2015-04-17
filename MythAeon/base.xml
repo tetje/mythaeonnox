@@ -42,6 +42,10 @@
         <pixelsize>25</pixelsize>
     </fontdef>
 
+    <fontdef name="Font_Submenu_Blue" from="Font_Submenu">
+        <color>#73B3D9</color>
+    </fontdef>
+
 
     <!-- Fonts for the main screens in recordings, video, music, etc -->
     <fontdef name="Font_Title" face="Aeon_Settings">
@@ -590,6 +594,10 @@
        <multiline>yes</multiline>
        <cutdown>yes</cutdown>
        <align>allcenter</align>
+   </textarea>
+
+   <textarea name="textarea_submenu_blue" from="textarea_submenu">   
+       <font>Font_Submenu_Blue</font>
    </textarea>
 
    <textarea name="textarea_list" from="textarea_info">
@@ -1155,7 +1163,7 @@
                </textarea>	  
            </state>
            <state name="selectedactive">
-               <textarea name="buttontext" from="textarea_submenu">
+               <textarea name="buttontext" from="textarea_submenu_blue">
                    <area>0,5,195,50</area>
 					    <cutdown>no</cutdown>
 					    <scroll direction="vertical" />                  
