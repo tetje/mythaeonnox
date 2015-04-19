@@ -67,7 +67,7 @@
            </group>
            
  		     <buttonlist name="playedtrackslist">
-		         <area>145,510,736,280</area>
+		         <area>145,510,736,275</area>
 		         <layout>vertical</layout>
 		         <spacing>0</spacing>
 		         <scrollstyle>freeplaylist</scrollstyle>
@@ -75,7 +75,7 @@
 		         <align>left</align>
 		         <wrapstyle>selection</wrapstyle>
 		         <showarrow>no</showarrow>
-		         <buttonarea>0,0,736,280</buttonarea>
+		         <buttonarea>0,0,736,275</buttonarea>
 		         <statetype name="buttonitem">
 		             <state name="active">
 		                 <area>0,0,736,70</area>
@@ -89,6 +89,7 @@
 		                 </textarea>
 		            </state>
 		            <state name="selectedactive">
+		                 <area>0,0,736,70</area>
 		                 <imagetype name="Listpanel_selectbar">
 		                     <area>-10,0,451,70</area>
 		                     <filename>images/shared/listpanel_selectbar.png</filename>
@@ -252,55 +253,16 @@
 	
 	     </group>
 
-        <group name="listpanel1">
-           <area>54,107,876,1003</area>
-           
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="-914,107" end="54,107" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
-
-<!-- Fix me: This does not work when a movie has played and one returns to the main screen
-
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
-	        <imagetype name="listpanelbgd">
-	            <area>0,0,876,1003</area>
-	            <filename>images/shared/wall/wall_bg.png</filename>
-	        </imagetype>
-        	
-	        <imagetype name="listpanelglow">
-	            <area>0,0,876,1003</area>
-	            <alpha>64</alpha>
-	            <filename>images/shared/wall/wall_bg_glow.png</filename>
-	        </imagetype>
-        
+        <group name="listpanel1" from="listpanel1base">
 	        <buttonlist name="streamlist" from="buttonlist_threepanel_stream">
-	            <area>7,52,850,800</area>
+	            <area>6,52,850,845</area>
+	            <buttonarea>0,0,850,845</buttonarea>
 	            <showarrow>no</showarrow>
 	            <showscrollbar>yes</showscrollbar>
 		         <scrollbar name="scrollbar" from="basescrollbarvert">
-		             <area>841,0,100%,80%</area>
+		             <area>841,0,100%,95%</area>
 		         </scrollbar>
 	        </buttonlist>
-<!--
-           <textarea name="playlistposition" from="textarea_label_list">
-               <area>30,843,800,30</area>
-           </textarea>
--->
-<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
-
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
         </group>
 
     </window>

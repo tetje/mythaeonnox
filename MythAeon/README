@@ -8,6 +8,9 @@ cp -a MythAeon* ~/.mythtv/themes/
 This theme is designed to work with a custom menu called MythAeon. To select this menu, go to 
 the 'theme & screensettings' menu in your frontend and set your Menu theme to 'MythAeon'.
 
+v028.4
+More Fixes for 3 panel list views
+
 v028.3
 Redesign of Radio Stream current playlist to match Music current playlist lay-out (3 panels)
 Changed highligh popup menu focus color to blue

@@ -604,49 +604,13 @@
 
 	     </group>
 
-        <group name="listpanel1">
-           <area>54,107,860,1003</area>
-           
-	        <animation trigger="AboutToShow">
-	            <section duration="1200" centre="middle">
-	                <position start="-914,107" end="54,107" easingcurve="InOutBack" />
-	            </section>
-	        </animation>
-
-<!-- Fix me: This does not work when a movie has played and one returns to the main screen
-
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
-	        <imagetype name="listpanelbgd">
-	            <area>0,0,860,1003</area>
-	            <filename>images/shared/wall/wall_bg.png</filename>
-	        </imagetype>
-        	
-	        <imagetype name="listpanelglow">
-	            <area>0,0,860,1003</area>
-	            <alpha>64</alpha>
-	            <filename>images/shared/wall/wall_bg_glow.png</filename>
-	        </imagetype>
-        
+        <group name="listpanel1" from="listpanel1base">
 	        <buttontree name="videos">
-	            <area>7,52,850,800</area>
+	            <area>6,52,850,845</area>
 	            <numlists>1</numlists>
 	            <spacing>0</spacing>
 	            <buttonlist name="listtemplate" from="buttonlist_threepanel_netvision" />
 	        </buttontree>
-
-<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
-
-	        <animation trigger="AboutToHide">
-	            <section duration="1200" centre="middle">
-	                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
-	            </section>
-	        </animation>       
--->
         </group>
 
     </window>

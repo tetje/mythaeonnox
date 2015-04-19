@@ -8415,7 +8415,7 @@
         </textarea>
 
         <textarea name="description" from="textarea_plot">
-            <area>105,290,465,600</area>
+            <area>105,290,465,570</area>
             <multiline>yes</multiline>
             <cutdown>yes</cutdown>
             <template>%"|SUBTITLE|"\n\n%%DESCRIPTION%</template>
@@ -8885,6 +8885,48 @@
         </imagetype>
     </group>
     
+     <group name="listpanel1base">
+        <area>54,99,860,1032</area>
+        
+        <animation trigger="AboutToShow">
+            <section duration="1200" centre="middle">
+                <position start="-914,99" end="54,99" easingcurve="InOutBack" />
+            </section>
+        </animation>
+
+<!-- Fix me: This does not work when a movie has played and one returns to the main screen
+
+        <animation trigger="AboutToHide">
+            <section duration="1200" centre="middle">
+                <position start="113,70" end="113,-916" easingcurve="OutInBack" />
+            </section>
+        </animation>       
+-->
+        <imagetype name="listpanelbgd">
+            <area>0,0,860,1032</area>
+            <filename>images/shared/wall/wall_bg.png</filename>
+        </imagetype>
+     	
+        <imagetype name="listpanelglow">
+            <area>0,0,860,1032</area>
+            <alpha>64</alpha>
+            <filename>images/shared/wall/wall_bg_glow.png</filename>
+        </imagetype>
+     
+        <textarea name="position" from="textarea_label_list">
+            <area>30,867,800,30</area>
+        </textarea>
+<!-- Fix me: This does not work will when a movie has played and one returns to the main screen
+
+        <animation trigger="AboutToHide">
+            <section duration="1200" centre="middle">
+                <position start="88,110" end="88,-1080" easingcurve="OutInBack" />
+            </section>
+        </animation>       
+-->
+     </group>
+
+
     <!-- Popup Dialogue Box -->
     <group name="basedialogwindow" >
         <area>0,0,700,300</area>
