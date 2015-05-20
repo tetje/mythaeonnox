@@ -2589,7 +2589,7 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_tvshowpanel_group">
-       <area>0,0,712,280</area>
+       <area>0,0,712,300</area>
        <layout>vertical</layout>
        <spacing>0</spacing>
        <scrollstyle>free</scrollstyle>
@@ -2597,7 +2597,7 @@
        <align>left</align>
        <wrapstyle>selection</wrapstyle>
        <showarrow>no</showarrow>
-       <buttonarea>0,0,712,280</buttonarea>
+       <buttonarea>0,0,712,300</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
                <area>0,0,670,70</area>
@@ -3144,7 +3144,7 @@
    </buttonlist>
 
    <buttonlist name="buttonlist_threepanel_music">
-       <area>0,0,850,800</area>
+       <area>0,0,850,845</area>
        <layout>vertical</layout>
        <spacing>0</spacing>
        <scrollstyle>free</scrollstyle>
@@ -3152,7 +3152,7 @@
        <align>left</align>
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
-       <buttonarea>0,0,850,800</buttonarea>
+       <buttonarea>0,0,850,845</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
                <area>0,0,850,50</area>
@@ -4093,7 +4093,7 @@
 
    <buttonlist name="buttonlist_wall_music">
        <spacing>0</spacing>
-       <area>0,0,1760,940</area>
+       <area>0,0,1755,940</area>
        <searchposition>-1,-1</searchposition>
        <layout>grid</layout>
        <scrollstyle>free</scrollstyle>
@@ -4102,7 +4102,7 @@
        <wrapstyle>items</wrapstyle>
        <showarrow>no</showarrow>
        <drawfrombottom>yes</drawfrombottom>
-       <buttonarea>0,0,1760,940</buttonarea>
+       <buttonarea>0,0,1755,940</buttonarea>
        <statetype name="buttonitem">
            <state name="active">
                <area>0,0,160,160</area>

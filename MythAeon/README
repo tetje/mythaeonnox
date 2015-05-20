@@ -8,6 +8,11 @@ cp -a MythAeon* ~/.mythtv/themes/
 This theme is designed to work with a custom menu called MythAeon. To select this menu, go to 
 the 'theme & screensettings' menu in your frontend and set your Menu theme to 'MythAeon'.
 
+v028.5
+Changed selected key of virtual keyboard to blue
+Fixed Music Playlist Editor Tree screen
+Added panel to Music Playlist Editor Gallery
+
 v028.4
 More Fixes for 3 panel list views
 

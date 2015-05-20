@@ -37,14 +37,14 @@
 	
 	     <fontdef name="key_blue" from="key_base">
 	        <weight>bold</weight>
-	        <color>#FFFFFF</color>
+	        <color>#73B3D9</color>
 <!--	        <color>#105B8F</color>  -->
 	    </fontdef>
 	
 	     <fontdef name="key_amber" from="key_base">
 	        <weight>normal</weight>
 	        <color>#E0991A</color>
-	    </fontdef>
+	     </fontdef>
 
         <!-- top row -->
         <button name="key_1">

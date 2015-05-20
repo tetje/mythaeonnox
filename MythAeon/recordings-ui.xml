@@ -239,7 +239,7 @@
 		        </group>
 		
 		        <textarea name="description" from="textarea_plot" depends="filesize_str">
-		            <area>33,320,672,258</area>
+		            <area>33,320,672,263</area>
 		            <align>left,top</align>
 		            <cutdown>no</cutdown>
 		            <scroll direction="vertical"/>
